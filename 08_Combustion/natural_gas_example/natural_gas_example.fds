@@ -1,0 +1,35 @@
+&HEAD CHID='natural_gas_example', TITLE='Specification of a complex fuel mixture'/
+
+&MESH IJK=20,20,30, XB=-1.0,1.0,-1.0,1.0,0.0,3.0/
+
+&TIME T_END=10.0/
+
+! tells FDS to allocate space for primitive species
+&SPEC ID='METHANE',        LUMPED_COMPONENT_ONLY=.TRUE./
+&SPEC ID='ETHYLENE',       LUMPED_COMPONENT_ONLY=.TRUE./
+&SPEC ID='NITROGEN',       LUMPED_COMPONENT_ONLY=.TRUE./
+&SPEC ID='CARBON DIOXIDE', LUMPED_COMPONENT_ONLY=.TRUE./
+
+&SPEC ID='natural gas'
+      SPEC_ID(1)='METHANE',        VOLUME_FRACTION(1)=92.2
+      SPEC_ID(2)='ETHYLENE',       VOLUME_FRACTION(2)= 3.3
+      SPEC_ID(3)='NITROGEN',       VOLUME_FRACTION(3)= 3.9
+      SPEC_ID(4)='CARBON DIOXIDE', VOLUME_FRACTION(4)= 0.6/
+
+&REAC FUEL='natural gas'
+      SOOT_YIELD=0.01/
+
+&SURF ID='burner',
+      COLOR='RED',
+      HRRPUA=500.0/
+
+&VENT MB='XMIN', SURF_ID='OPEN' /
+&VENT MB='XMAX', SURF_ID='OPEN' /
+&VENT MB='YMIN', SURF_ID='OPEN' /
+&VENT MB='YMAX', SURF_ID='OPEN' /
+&VENT MB='ZMAX', SURF_ID='OPEN' /
+&VENT XB=-0.5,0.5,-0.5,0.5,0.0,0.0, SURF_ID='burner' /
+
+&SLCF PBY=0.0, QUANTITY='TEMPERATURE', VECTOR=.TRUE. /
+
+&TAIL /
