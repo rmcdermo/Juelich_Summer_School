@@ -1,0 +1,95 @@
+&HEAD CHID='wood_cone_35',TITLE='CONE test at 35 kW/m2 heat flux' / 
+
+&MESH IJK=3,1,4, XB=-0.15,0.15,-0.05,0.05,0,0.4 / 
+
+&TIME T_END=1300. /
+
+&REAC FUEL='CELLULOSE', C=6, H=10, O=5, SOOT_YIELD=0.015
+      HEAT_OF_COMBUSTION=15000. /
+
+&SPEC ID='WATER VAPOR' /
+
+&VENT XB=-0.05,0.05,-0.05,0.05,0.0,0.0, SURF_ID='SAMPLE' /
+
+&SURF ID             = 'SAMPLE'
+      COLOR          = 'RED'
+      EXTERNAL_FLUX  = 35.
+      THICKNESS      = 0.02,0.015
+      MATL_ID(1,1) = 'wood'
+      MATL_ID(1,2) = 'water'
+      MATL_ID(2,1) = 'wool'
+      MATL_MASS_FRACTION(1,1) = 
+      MATL_MASS_FRACTION(1,2) =  /
+
+&MATL ID                    = 'wood'
+      EMISSIVITY            = 1.0
+      DENSITY 	            = 600.
+      CONDUCTIVITY          = 
+      SPECIFIC_HEAT         = 1.5
+      N_REACTIONS           = 1
+      REFERENCE_TEMPERATURE = 
+      REFERENCE_RATE        = 
+      HEATING_RATE          = 
+      NU_SPEC 	            = 
+      SPEC_ID               = 'CELLULOSE'
+      NU_MATL               = 
+      MATL_ID               = 'CHAR'
+      HEAT_OF_REACTION      =  /
+
+&MATL ID                    = 'CHAR'
+      EMISSIVITY            = 1.0
+      DENSITY 	            = 96.
+      CONDUCTIVITY          = 0.4
+      SPECIFIC_HEAT         = 2.0 /
+
+&MATL ID = 'water'
+      DENSITY = 1000.
+      CONDUCTIVITY = 0.1
+      SPECIFIC_HEAT= 4.184
+      N_REACTIONS = 1
+      REFERENCE_TEMPERATURE = 100.
+      REFERENCE_RATE = 0.005
+      HEATING_RATE = 10.
+      NU_SPEC = 1.0
+      SPEC_ID = 'WATER VAPOR'
+      HEAT_OF_REACTION= 2500. /
+
+&MATL ID='wool'
+      DENSITY=99.9
+      CONDUCTIVITY_RAMP='K_RAMP'
+      SPECIFIC_HEAT_RAMP='CP_RAMP'/
+
+&RAMP ID='K_RAMP',T= 20,F=0.0332/
+&RAMP ID='K_RAMP',T=100,F=0.0431/
+&RAMP ID='K_RAMP',T=200,F=0.0580/
+&RAMP ID='K_RAMP',T=300,F=0.0768/
+&RAMP ID='K_RAMP',T=400,F=0.1005/
+&RAMP ID='K_RAMP',T=500,F=0.1302/
+&RAMP ID='K_RAMP',T=600,F=0.1668/
+&RAMP ID='K_RAMP',T=700,F=0.2111/
+&RAMP ID='K_RAMP',T=800,F=0.2641/
+&RAMP ID='K_RAMP',T=900,F=0.3265/
+&RAMP ID='K_RAMP',T=1000,F=0.3993/
+
+&RAMP ID='CP_RAMP',T= 20,F=0.9962/
+&RAMP ID='CP_RAMP',T=100,F=1.0087/
+&RAMP ID='CP_RAMP',T=200,F=1.0244/
+&RAMP ID='CP_RAMP',T=300,F=1.0401/
+&RAMP ID='CP_RAMP',T=400,F=1.0558/
+&RAMP ID='CP_RAMP',T=500,F=1.0715/
+&RAMP ID='CP_RAMP',T=600,F=1.0873/
+&RAMP ID='CP_RAMP',T=700,F=1.1030/
+&RAMP ID='CP_RAMP',T=800,F=1.1187/
+&RAMP ID='CP_RAMP',T=900,F=1.1344/
+&RAMP ID='CP_RAMP',T=1000,F=1.1501/
+
+&VENT MB='ZMAX', SURF_ID='OPEN' /
+&VENT MB='XMIN', SURF_ID='OPEN' /
+&VENT MB='XMAX', SURF_ID='OPEN' /
+
+&DEVC XB = -0.15,0.15,-0.05,0.05,0.0,0.4 QUANTITY = 'HRR', CONVERSION_FACTOR = 100. /
+&DEVC XB = -0.05,0.05,-0.05,0.05,0.0,0.0, IOR = 3 QUANTITY = 'SURFACE DENSITY'
+      STATISTICS = 'SURFACE INTEGRAL' CONVERSION_FACTOR=100. /
+&DEVC XYZ = 0,0,0, IOR = 3 QUANTITY = 'WALL TEMPERATURE'/
+
+&TAIL /
