@@ -6,7 +6,7 @@ Documentation repository for the [Juelich Summer School on Fire Dynamics Modelin
 
 Simo Hostikka (Aalto University, Finland)  
 Bjarne Husted (DTU - Technical University of Denmark)  
-Susanne Kilian (HHP Berlin)  
+Susanne Kilian (hhpberlin)  
 Randall McDermott (NIST)  
 Marcos Vanella (NIST)  
 Lukas Arnold (Forschungszentrum Jülich GmbH)  
