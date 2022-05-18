@@ -1,0 +1,40 @@
+! Summer School 2019 : Example 2, examining a bad GEOM with open surface:
+! Run script as is. Open case in SMV. 
+!    - Hide/Show Geometry and External surfaces. Note issue with geometry.
+! Rerun file with T_END=1. 
+!    - Note the error message. 
+!    - At the start of the cut-cell definition algorithm a series of sanity tests are done on geometries.
+!      In this particular case an edge is found which is connected to only one triangle, a telltale sign
+!      of the GEOM surface being open.
+! ---------------------------------------------------------------------------------------------------------
+&HEAD CHID='Example_2' TITLE='Broken geometry open surface.' /
+
+&TIME T_END=0.0 /
+
+! 1000 mesh cells of size 0.400x0.400x0.400 m
+&MESH ID='Domain' IJK=10,10,10 XB=-2.000,2.000,-2.000,2.000,0.000,4.000 /
+
+! 1 surf_id, 8 vertices, 10 faces
+&GEOM ID='Cube_open' SURF_ID='INERT'
+      VERTS=
+            -1.000000, -1.000000, 2.000000,
+            1.000000, -1.000000, 2.000000,
+            -1.000000, 1.000000, 2.000000,
+            1.000000, 1.000000, 2.000000,
+            1.000000, 1.000000, 0.000000,
+            -1.000000, 1.000000, 0.000000,
+            1.000000, -1.000000, 0.000000,
+            -1.000000, -1.000000, 0.000000,
+      FACES=
+            7,1,8, 1,
+            8,3,6, 1,
+            2,3,1, 1,
+            6,7,8, 1,
+            6,4,5, 1,
+            7,2,1, 1,
+            8,1,3, 1,
+            2,4,3, 1,
+            6,5,7, 1,
+            6,3,4, 1, /
+&TAIL /
+

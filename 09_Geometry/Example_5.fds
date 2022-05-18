@@ -1,0 +1,73 @@
+! Example 5 : Specified mass flux out of sphere:
+! Study input file:
+!   - How is out tracer defined? What species is it composed of?
+!   - Why do we set RADIATION=F?
+!   - How is the specified mass flux on sphere GEOM defined?
+!   - Devices, mass balance:
+!       + How do we account for tracer mass into the domain?
+!       + How do we add the tracer mass that leaves the domain?
+!       + How do we get the remaining tracer mass in the domain?
+! Run case. Open Smokeview:
+!   - Visualize triangles in geometry. How fine is the mesh, why?
+!   - Load up Temperature Slice, what do we get?
+!   - Load up tracer mass fraction, note tracer leaving domain.
+! Open Example_5_devc.csv file:
+!   - What are the final number for mass in, mass out and mass left in domain?
+! 
+----------------------------------------------------------------------------------------------  
+
+&HEAD CHID='Example_5', TITLE='Test specified mass flux bc on sphere and mass conservation.' /
+
+&MESH IJK=32,32,32, XB=-1.4,1.4,-1.4,1.4,-1.4,1.4 /
+&TIME T_END=1. /
+&RADI RADIATION=.FALSE. /
+&MISC SIMULATION_MODE='LES', STRATIFICATION=F /
+&PRES SOLVER='UGLMAT' /
+
+
+! We leave the top of domain OPEN:
+&VENT MB='ZMAX', SURF_ID='OPEN' /
+
+! Define Species:
+&SPEC ID='AIR', BACKGROUND=T /
+&SPEC ID='PROPANE', LUMPED_COMPONENT_ONLY=T /
+&SPEC ID='TRACER', SPEC_ID(1)='PROPANE', MASS_FRACTION(1)=1.0 /
+
+! Define Surface BCs:
+&SURF ID='WALLS', COLOR='GRAY', ADIABATIC=T, DEFAULT=T /
+! Sphere : Total mass = 10 kg/m2/s * 12.6 m2 * 1 s = 125.6 kg
+&SURF ID='SPHERE', COLOR='RED', MASS_FLUX(1)=10, SPEC_ID(1)='TRACER', TAU_MF(1)=0 /
+
+! Define output:
+! Slices:
+&SLCF PBY=0, QUANTITY='VELOCITY', VECTOR=T /
+&SLCF PBY=0, QUANTITY='TEMPERATURE' /
+&SLCF PBY=0, QUANTITY='MASS FRACTION', SPEC_ID='TRACER' /
+&SLCF PBY=0, QUANTITY='BACKGROUND PRESSURE' /
+! Boundary slices:
+&BNDF QUANTITY='MASS FLUX WALL', SPEC_ID='TRACER' /
+&BNDF QUANTITY='NORMAL VELOCITY' /
+
+! Devices:
+! Mass into domain:
+&DEVC ID='MF IN TRACER', XB=-1.4,1.4,-1.4,1.4,-1.4,1.4, QUANTITY='MASS FLUX WALL', 
+      SPEC_ID='TRACER', SURF_ID='SPHERE', STATISTICS='SURFACE INTEGRAL'/
+&CTRL ID='PID IN TRACER', FUNCTION_TYPE='PID', INPUT_ID='MF IN TRACER', 
+      PROPORTIONAL_GAIN=0, DIFFERENTIAL_GAIN=0, INTEGRAL_GAIN=1/
+&DEVC XYZ=0.5,0.5,0.5, ID='MASS IN TRACER', QUANTITY='CONTROL VALUE', CTRL_ID='PID IN TRACER'/
+
+! Mass out of domain (OPEN boundary):
+&DEVC ID='MF OUT TRACER', XB=-1.4,1.4,-1.4,1.4,-1.4,1.4, QUANTITY='MASS FLUX WALL', 
+      SPEC_ID='TRACER', SURF_ID='OPEN', STATISTICS='SURFACE INTEGRAL'/
+&CTRL ID='PID OUT TRACER', FUNCTION_TYPE='PID', INPUT_ID='MF OUT TRACER', 
+      PROPORTIONAL_GAIN=0, DIFFERENTIAL_GAIN=0, INTEGRAL_GAIN=1/
+&DEVC XYZ=0.5,0.5,0.5, ID='MASS OUT TRACER', QUANTITY='CONTROL VALUE', CTRL_ID='PID OUT TRACER'/
+
+! Mass left in volume:
+&DEVC ID='MASS VOL TRACER', XB=-1.4,1.4,-1.4,1.4,-1.4,1.4, QUANTITY='DENSITY', 
+      SPEC_ID='TRACER', STATISTICS='VOLUME INTEGRAL'/
+
+# Geometries:
+&GEOM ID='SPHERE', SURF_ID='SPHERE', SPHERE_ORIGIN=0,0,0, SPHERE_RADIUS=1.0, N_LEVELS=4 /
+
+&TAIL /

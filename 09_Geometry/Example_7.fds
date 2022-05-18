@@ -1,0 +1,140 @@
+! Example 7 : Spherical burner:
+!
+! Run Case.
+!
+! Study input file:
+! - Assume the physical fire diameter (cross section) for the sphere burner is D= 1 m, the 
+!   diameter of the sphere.
+! - Take Q*=(D*/D)^(5/2) = 1, so D*=D and Qd = rho_inf * Cp * T_inf * sqrt(g) * D*^(5/2) ~ 1120 kW 
+!   where rho_inf = 1.196 kg/m^3
+!         Cp      = 1.02  kJ/(kg K)
+!         T_inf   = 293   K
+!         g       = 9.81  m/s^2
+!   To get this Qd -> what should be the HRRPUA for the SURF_ID='SPHERE'?    
+! - What devices have we defined?
+! - What is TRNZ_ID='MY TRANSFORM'?
+!
+! Open Smokeview:
+! - Visualize smoke and HRRPUV.
+! - The Heskestad plume correlation gives an Lf = 0.235 Qd^(2/5) - 1.02 D -> Lf = 2.87 m
+!   How does this compare to the spherical burner flame height?
+! - Slice files (Temperature, mass fraction).
+! - Boundary files. Default BC cold wall for Burner. Radiative heat flux, sphere and floor.
+!
+! Open Example_7.out, Example_7_hrr.csv and Example_7_devc.csv files:
+!
+! - Find Propane Heat of Combustion Hc.
+! - In Example_7_hrr.csv, how does HRR compare to MLR*Hc?
+! - In Example_7_hrr.csv, what is the ratio Q_RADI/HRR? 
+!   (the specified value for Propane in simple combustion model is XR=0.3)
+! - What would happen setting &RADI RTE_SOURCE_CORRECTION=F? 
+! 
+! Open puffing_freq script:
+! - Script contains procedure to obtain the important frequencies defining the soot mass fraction
+!   signal recorded by DEVC ='SOOT SAMPLE'. We can do spectral analysis on this signal to
+!   find said frequencies.
+! - Study script.
+! - Run script. Visualize graphs : Time series of Y_SOOT and PSD of said signal. 
+!   Note puffing frequency estimated from the signal. 
+! - The strouhal number for buoyant plumes is defined by St = f D / sqrt(g D). 
+!   For pool fires St~0.5. Using St=0.5 -> for D = 1 m we have f ~ 1.5 Hz.
+!   What puffing frequency estimate do we get for this run of the spherical burner? 
+! 
+! ----------------------------------------------------------------------------------------------  
+&HEAD CHID='Example_7', TITLE='Spherical Burner.' /
+
+! 1 Mesh:
+&MESH IJK=35,35,50, XB=-1.75,1.75,-1.75,1.75,-1.,6.5, TRNZ_ID='MY TRANSFORM' /
+
+! Parameters:
+&TIME T_END=12. /
+
+! OPEN boundaries:
+&VENT MB='XMIN', SURF_ID='OPEN' /
+&VENT MB='XMAX', SURF_ID='OPEN' /
+&VENT MB='YMIN', SURF_ID='OPEN' /
+&VENT MB='YMAX', SURF_ID='OPEN' /
+&VENT MB='ZMAX', SURF_ID='OPEN' /
+
+! Define Species:
+&REAC FUEL='PROPANE', SOOT_YIELD=0.02 /
+
+! Define Surface BCs:
+&SURF ID='WALLS', COLOR='GRAY', ADIABATIC=T, DEFAULT=T /
+! Burner Surf:    
+&SURF ID='BURNER SPHERE', HRRPUA=356.5, COLOR='RED' /
+
+! Define output:
+! Slices:
+&SLCF PBY=0, QUANTITY='VELOCITY', VECTOR=T /
+&SLCF PBY=0, QUANTITY='TEMPERATURE' /
+&SLCF PBY=0, QUANTITY='MASS FRACTION', SPEC_ID='PROPANE' /
+
+! Boundary slices:
+&BNDF QUANTITY='MASS FLUX WALL', SPEC_ID='PROPANE' /
+&BNDF QUANTITY='RADIATIVE HEAT FLUX' /
+&BNDF QUANTITY='WALL TEMPERATURE' / 
+
+! Devices:
+! Radiative heat flux into sphere:
+&DEVC ID='RAD SPHERE', XB=-1.,1.,-1.,1.,-1.,1., QUANTITY='RADIATIVE HEAT FLUX', 
+      SURF_ID='BURNER SPHERE', STATISTICS='SURFACE INTEGRAL'/
+
+&DEVC ID='SOOT SAMPLE', XB=-.5,.5,-.5,.5,1.95,2.05, QUANTITY='DENSITY', SPEC_ID='SOOT', STATISTICS='VOLUME INTEGRAL' /
+
+
+# Geometries:
+&GEOM ID='SPHERE', SURF_ID='BURNER SPHERE', SPHERE_ORIGIN=0,0,0, SPHERE_RADIUS=0.5, N_LEVELS=3 /
+
+! Stretching function in Z:
+&TRNZ ID='MY TRANSFORM', CC=  -0.850000000000000, PC=  -0.900000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=  -0.700000000000000, PC=  -0.800000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=  -0.550000000000000, PC=  -0.700000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=  -0.400000000000000, PC=  -0.600000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=  -0.250000000000000, PC=  -0.500000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=  -0.100000000000000, PC=  -0.400000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   0.050000000000000, PC=  -0.300000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   0.200000000000000, PC=  -0.200000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   0.350000000000000, PC=  -0.100000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   0.500000000000000, PC=   0.000000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   0.650000000000000, PC=   0.100000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   0.800000000000000, PC=   0.200000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   0.950000000000000, PC=   0.300000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   1.100000000000000, PC=   0.400000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   1.250000000000000, PC=   0.500000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   1.400000000000000, PC=   0.600000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   1.550000000000000, PC=   0.700000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   1.700000000000000, PC=   0.800000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   1.850000000000000, PC=   0.900000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   2.000000000000000, PC=   1.000000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   2.150000000000000, PC=   1.100000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   2.300000000000000, PC=   1.200000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   2.450000000000000, PC=   1.300000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   2.600000000000000, PC=   1.400000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   2.750000000000000, PC=   1.500000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   2.900000000000000, PC=   1.600000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   3.050000000000000, PC=   1.700000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   3.200000000000000, PC=   1.800000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   3.350000000000000, PC=   1.900000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   3.500000000000000, PC=   2.000000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   3.650000000000000, PC=   2.100000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   3.800000000000000, PC=   2.200000000000000 /
+&TRNZ ID='MY TRANSFORM', CC=   3.950000000000000, PC=   2.308572900792174 /
+&TRNZ ID='MY TRANSFORM', CC=   4.100000000000000, PC=   2.426453648656444 /
+&TRNZ ID='MY TRANSFORM', CC=   4.250000000000000, PC=   2.554440196088191 /
+&TRNZ ID='MY TRANSFORM', CC=   4.400000000000000, PC=   2.693398903258589 /
+&TRNZ ID='MY TRANSFORM', CC=   4.550000000000000, PC=   2.844270402536791 /
+&TRNZ ID='MY TRANSFORM', CC=   4.700000000000000, PC=   3.008075965771779 /
+&TRNZ ID='MY TRANSFORM', CC=   4.850000000000000, PC=   3.185924417434962 /
+&TRNZ ID='MY TRANSFORM', CC=   5.000000000000000, PC=   3.379019640419646 /
+&TRNZ ID='MY TRANSFORM', CC=   5.150000000000000, PC=   3.588668725305233 /
+&TRNZ ID='MY TRANSFORM', CC=   5.300000000000000, PC=   3.816290818249760 /
+&TRNZ ID='MY TRANSFORM', CC=   5.450000000000000, PC=   4.063426727403490 /
+&TRNZ ID='MY TRANSFORM', CC=   5.600000000000000, PC=   4.331749352870804 /
+&TRNZ ID='MY TRANSFORM', CC=   5.750000000000000, PC=   4.623075010822386 /
+&TRNZ ID='MY TRANSFORM', CC=   5.900000000000000, PC=   4.939375728412302 /
+&TRNZ ID='MY TRANSFORM', CC=   6.050000000000000, PC=   5.282792592726134 /
+&TRNZ ID='MY TRANSFORM', CC=   6.200000000000000, PC=   5.655650244121183 /
+&TRNZ ID='MY TRANSFORM', CC=   6.350000000000000, PC=   6.060472612066357 /
+
+&TAIL /
