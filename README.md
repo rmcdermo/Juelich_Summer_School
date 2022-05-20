@@ -12,4 +12,10 @@ Marcos Vanella (NIST)
 Lukas Arnold (Forschungszentrum Jülich GmbH)  
 Emanuele Gissi (Corpo Nazionale dei Vigili del Fuoco)  
 
+# Presentation Template
+
+A beamer presentation template has been set up in Overleaf.  Feel free to use this for preparing talks.  It is much easier to put the .tex source files under version control than Power Point presentations.
+
+[Juelich Summer School Presentation Template](https://www.overleaf.com/read/vqkjkttyvnvn)
+
 
