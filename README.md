@@ -8,8 +8,8 @@ Simo Hostikka (Aalto University, Finland)
 Bjarne Husted (DTU - Technical University of Denmark)  
 Susanne Kilian (hhpberlin)  
 Randall McDermott (NIST)  
-Marcos Vanella (NIST)
-Lukas Arnold (Forschungszentrum Jülich GmbH)
-Emanuele Gissi (Corpo Nazionale dei Vigili del Fuoco)
+Marcos Vanella (NIST)  
+Lukas Arnold (Forschungszentrum Jülich GmbH)  
+Emanuele Gissi (Corpo Nazionale dei Vigili del Fuoco)  
 
 
