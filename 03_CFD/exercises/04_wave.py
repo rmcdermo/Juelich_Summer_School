@@ -19,7 +19,7 @@ c = 1.0
 
 # time step size
 # default: 0.01
-dt = 0.05
+dt = 0.01
 
 # mesh spacing
 # default: 0.1
@@ -27,7 +27,7 @@ dx = 0.1
 
 # time integration scheme: euler_backward, euler_forward, theta, leap
 # default: euler_forward
-scheme = "theta"
+scheme = "euler_forward"
 
 # set theta value for theta scheme: 0 - explicit, 1 - implicit, 0.5 - semi-implicit
 # default: 0.5
