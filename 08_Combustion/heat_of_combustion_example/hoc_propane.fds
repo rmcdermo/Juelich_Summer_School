@@ -1,0 +1,6 @@
+&HEAD CHID='hoc_propane', TITLE='Find heats of formation for propane reaction'/
+&MESH IJK=4,4,4, XB=0,1,0,1,0,1/
+&TIME T_END=0/
+&MISC Y_CO2_INFTY=0,HUMIDITY=0/
+&REAC FUEL='PROPANE'/
+&TAIL/
