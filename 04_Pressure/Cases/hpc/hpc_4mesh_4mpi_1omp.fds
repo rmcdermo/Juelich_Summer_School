@@ -1,0 +1,33 @@
+Simple 4-mesh geometry from HPC-part of slides:
+Mesh 1 has a finer grid resolution then the others and thus more work load
+Every Mesh is assigned to an own MPI process
+OMP_NUM_THREADS should be set to 1 before
+
+&HEAD CHID='hpc_4mesh_4mpi_1omp',TITLE='Simple 4-mesh case assigned to 4 MPI-processes using 1 OpenMP thread'/
+
+&MESH ID='mesh1', IJK= 128,1,128, XB=0.0,1.6,-0.01,0.01,0.0,1.6 /
+&MESH ID='mesh2', IJK=  32,1, 96, XB=1.6,2.4,-0.01,0.01,0.0,2.4 /
+&MESH ID='mesh3', IJK=  48,1, 32, XB=2.4,3.6,-0.01,0.01,0.0,0.8 /
+&MESH ID='mesh4', IJK=  32,1, 48, XB=2.4,3.2,-0.01,0.01,0.8,2.0 /
+
+&MISC NOISE = .FALSE., DNS = .TRUE./
+
+&TIME T_END=2.0 /
+
+&SURF ID='INFLOW',VEL=-2.0, RAMP_V='IN' /
+
+&VENT XB=0.0,0.0,-0.01,0.01,0.7,0.9, SURF_ID='INFLOW' /
+&VENT XB=3.6,3.6,-0.01,0.01,0.2,0.4, SURF_ID='OPEN'   /
+&VENT XB=2.0,2.2,-0.01,0.01,2.4,2.4, SURF_ID='OPEN'   /
+
+&SLCF PBY=0.0,QUANTITY='VELOCITY',VECTOR=.TRUE. /
+&SLCF PBY=0.0,QUANTITY='PRESSURE' /
+&SLCF PBY=0.0,QUANTITY='H' /
+
+&DEVC XYZ=0.0,0.0,0.0, QUANTITY='CPU TIME', ID='cpu' /
+
+&RAMP ID='IN',T=0.0, F=0.0 /
+&RAMP ID='IN',T=0.1, F=1.0 / 
+&RAMP ID='IN',T=1.0, F=1.0 / 
+ 
+&TAIL /

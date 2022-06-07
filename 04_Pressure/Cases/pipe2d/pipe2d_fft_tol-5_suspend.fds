@@ -1,0 +1,55 @@
+&HEAD CHID='pipe2d_fft_tol-5_suspend', TITLE='Flow through a 4-mesh pipe with obstruction - UGLMAT tol=1E-5 suspended'/
+
+&MESH IJK=16,1,16  XB=0.0,0.4,-0.01,0.01,0.0,0.4 /
+&MESH IJK=16,1,16  XB=0.4,0.8,-0.01,0.01,0.0,0.4 /
+&MESH IJK=16,1,16  XB=0.4,0.8,-0.01,0.01,0.4,0.8 /
+&MESH IJK=16,1,16  XB=0.8,1.2,-0.01,0.01,0.4,0.8 /
+
+&MISC NOISE = .FALSE. 
+      DNS   = .TRUE./
+
+&TIME T_END=0.5, DT=0.002 /
+
+&PRES VELOCITY_TOLERANCE = 0.00001, MAX_PRESSURE_ITERATIONS = 1000, SUSPEND_PRESSURE_ITERATIONS = .TRUE./   default for suspending
+
+&SURF ID='INFLOW',VEL=-2.0, RAMP_V='IN' /
+
+&VENT XB=0.0,0.0,-0.01,0.01,0.15,0.25 SURF_ID='INFLOW', COLOR = 'GREEN' /
+&VENT XB=1.2,1.2,-0.01,0.01,0.40,0.80 SURF_ID='OPEN',   COLOR = 'GREEN' /
+
+&OBST XB=0.15,0.25,-0.01,0.01,0.15,0.25, COLOR='GRAY' /
+
+&SLCF PBY=0.0,QUANTITY='VELOCITY',VECTOR=.TRUE. /
+&SLCF PBY=0.0,QUANTITY='PRESSURE' /
+&SLCF PBY=0.0,QUANTITY='H' /
+
+&DEVC XB=0.000,0.025,-0.01,0.01,0.00,0.40, QUANTITY='U-VELOCITY', STATISTICS="VOLUME MEAN", ID='U-mean left' , TIME_AVERAGED=.FALSE./
+&DEVC XB=1.175,1.200,-0.01,0.01,0.40,0.80, QUANTITY='U-VELOCITY', STATISTICS="VOLUME MEAN", ID='U-mean right', TIME_AVERAGED=.FALSE./
+
+&DEVC XYZ=0.00,0.00,0.00, QUANTITY='MAXIMUM VELOCITY ERROR', ID='Velocity Error' /
+&DEVC XYZ=0.00,0.00,0.00, QUANTITY='PRESSURE ITERATIONS', ID='Pressure Iterations' /
+&DEVC XYZ=0.64,0.00,0.41, QUANTITY='PRESSURE', ID='Pressure' /
+
+&RAMP ID='IN', T=  0.00,  F=  0.00 /
+&RAMP ID='IN', T=  0.05,  F=  0.31 /
+&RAMP ID='IN', T=  0.10,  F=  0.59 /
+&RAMP ID='IN', T=  0.15,  F=  0.81 /
+&RAMP ID='IN', T=  0.20,  F=  0.95 /
+&RAMP ID='IN', T=  0.25,  F=  1.00 /
+&RAMP ID='IN', T=  0.30,  F=  0.95 /
+&RAMP ID='IN', T=  0.35,  F=  0.81 /
+&RAMP ID='IN', T=  0.40,  F=  0.59 /
+&RAMP ID='IN', T=  0.45,  F=  0.31 /
+&RAMP ID='IN', T=  0.50,  F=  0.00 /
+&RAMP ID='IN', T=  0.55,  F=  0.31 /
+&RAMP ID='IN', T=  0.60,  F=  0.59 /
+&RAMP ID='IN', T=  0.65,  F=  0.81 /
+&RAMP ID='IN', T=  0.70,  F=  0.95 /
+&RAMP ID='IN', T=  0.75,  F=  1.00 /
+&RAMP ID='IN', T=  0.80,  F=  0.95 /
+&RAMP ID='IN', T=  0.85,  F=  0.81 /
+&RAMP ID='IN', T=  0.90,  F=  0.59 /
+&RAMP ID='IN', T=  0.95,  F=  0.31 /
+&RAMP ID='IN', T=  1.00,  F=  0.00 /
+ 
+&TAIL /
