@@ -1,0 +1,56 @@
+&HEAD CHID =  'suppression_example' TITLE =  'Based on LN02_1.fds from VTT_Sprays' /
+
+&MESH IJK= 10 10 15 XB=-0.5 0.5 -0.5 0.5 -0.5 1 /
+
+&TIME T_END = 5 /
+
+&MISC PARTICLE_CFL=T/
+
+&REAC FUEL='PROPANE', SOOT_YIELD=0.01/
+
+&SPEC ID = 'WATER VAPOR' /
+
+&VENT MB='XMIN' SURF_ID='OPEN' /
+&VENT MB='XMAX' SURF_ID='OPEN' /
+&VENT MB='YMIN' SURF_ID='OPEN' /
+&VENT MB='YMAX' SURF_ID='OPEN' /
+&VENT MB='ZMIN' SURF_ID='OPEN' /
+&VENT MB='ZMAX' SURF_ID='OPEN' /
+
+&SURF ID='burner', HRRPUA=625, COLOR='RED'/
+&OBST XB=-0.2,0.2,-0.2,0.2,-0.5,-0.4, SURF_IDS='burner','INERT','INERT'/
+
+&DEVC XYZ=0.0, 0.0, 0.8
+       QUANTITY='TIME'
+       SETPOINT=0.0
+       PROP_ID='ln02'
+       ID='Scale 3 nozzle'  /
+
+Pressure 20 bar
+K-factor = 4.09E-6 kg/s/Pa^1/2 
+
+&PROP ID='ln02'
+      OFFSET=0.08
+      PART_ID='water drops'
+      FLOW_RATE=0.347
+      PARTICLE_VELOCITY=60.
+      PARTICLES_PER_SECOND=1E5
+      SPRAY_ANGLE=0. 45.
+      SPRAY_PATTERN_SHAPE='GAUSSIAN'
+      SPRAY_PATTERN_MU=14.
+      SPRAY_PATTERN_BETA=20. /
+
+&PART ID='water drops'
+      SPEC_ID = 'WATER VAPOR'
+      QUANTITIES(1:1)='PARTICLE DIAMETER'
+      DIAMETER=72.
+      MINIMUM_DIAMETER = 1.
+      GAMMA_D=2.1
+      SAMPLING_FACTOR=100
+      AGE=30. /
+
+&SLCF PBX=0.0 QUANTITY='VELOCITY', VECTOR=T /
+&SLCF PBX=0.0 QUANTITY='MPUV', PART_ID = 'water drops', CELL_CENTERED=T /
+&SLCF PBX=0.0 QUANTITY='EXTINCTION', CELL_CENTERED=T /
+
+&TAIL /
