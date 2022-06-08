@@ -2,13 +2,8 @@
 #McDermott
 #2017-07-31 20:52:39
 
-from __future__ import division # for Python 2.7 make floating point division default as in Matlab, e.g., 1/2=0.5
-import math
 import numpy as np
-import scipy.special as sp
 import matplotlib.pyplot as plt
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica'],'size':16})
 
 W_C3H8 = 44.
 W_O2   = 32.
