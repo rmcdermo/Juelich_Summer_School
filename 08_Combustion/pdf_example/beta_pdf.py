@@ -2,13 +2,10 @@
 #McDermott
 #2016-02-01 20:52:39
 
-from __future__ import division # make floating point division default as in Matlab, e.g., 1/2=0.5
 import math
 import numpy as np
 import scipy.special as sp
 import matplotlib.pyplot as plt
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica'],'size':16})
 
 np.seterr(divide='ignore', invalid='ignore')
 
@@ -43,8 +40,8 @@ plt.plot(Z,f3, label='$\\tilde{Z}=0.6, \gamma=0.5$', **marker_style_3)
 plt.plot(Z,f4, label='$\\tilde{Z}=0.8, \gamma=2$' ,  **marker_style_4)
 
 #plt.axis([-2, 2, -.1, 1.5])
-plt.xlabel('$Z$',size=30)
-plt.ylabel('$f(Z)$',size=30)
+plt.xlabel('$Z$',size=16)
+plt.ylabel('$f(Z)$',size=16)
 plt.legend(loc='upper left', numpoints=1, frameon=False)
 
 plt.gcf().subplots_adjust(bottom=0.15, top=0.95, left=0.15, right=0.95)

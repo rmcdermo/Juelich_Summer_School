@@ -2,14 +2,9 @@
 #McDermott
 #2016-02-01 20:52:39
 
-from __future__ import division # make floating point division default as in Matlab, e.g., 1/2=0.5
 import math
 import numpy as np
-import scipy.special as sp
 import matplotlib.pyplot as plt
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica'],'size':16})
-
 
 V = np.linspace(-1,1,1000)
 
@@ -36,8 +31,8 @@ plt.plot(V,f2, label='$\mu=0, \sigma=0.2$', **marker_style_2)
 plt.plot(V,f3, label='$\mu=0, \sigma=0.5$', **marker_style_3)
 
 #plt.axis([-2, 2, -.1, 1.5])
-plt.xlabel('$V$',size=30)
-plt.ylabel('$f(V)$',size=30)
+plt.xlabel('$V$',size=16)
+plt.ylabel('$f(V)$',size=16)
 plt.legend(loc='upper right', numpoints=1, frameon=False)
 
 plt.gcf().subplots_adjust(bottom=0.15, top=0.95, left=0.15, right=0.95)
