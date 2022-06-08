@@ -2,16 +2,12 @@
 #McDermott
 #2016-02-01 20:52:39
 
-#from __future__ import division # make floating point division default as in Matlab, e.g., 1/2=0.5
-import math
+import pandas as pd
 import numpy as np
-import scipy.special as sp
 import matplotlib.pyplot as plt
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica'],'size':16})
 
 # read data from _devc file
-M = np.genfromtxt('hrrpuv_reac_simple_devc.csv', delimiter=',', skip_header=1, names=True)
+M = pd.read_csv("hrrpuv_reac_simple_devc.csv", header=1)
 t = M['Time']
 hrrpuv = M['hrrpuv']
 q1 = M['q1']

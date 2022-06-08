@@ -2,11 +2,12 @@
 #McDermott
 #2016-02-01 20:52:39
 
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
 # read data from _hrr file
-M = np.genfromtxt('hrrpuv_reac_simple_hrr.csv', delimiter=',', skip_header=1, names=True)
+M = pd.read_csv("hrrpuv_reac_simple_hrr.csv", header=1)
 t = M['Time']
 Q = M['HRR']
 
