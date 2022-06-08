@@ -2,16 +2,12 @@
 #McDermott
 #2016-02-01 20:52:39
 
-from __future__ import division # make floating point division default as in Matlab, e.g., 1/2=0.5
-import math
+import pandas as pd
 import numpy as np
-import scipy.special as sp
 import matplotlib.pyplot as plt
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica'],'size':16})
 
 # read data from _devc file
-M = np.genfromtxt('reactionrate_arrhenius_2order_1step_devc.csv', delimiter=',', skip_header=1, names=True)
+M = pd.read_csv('reactionrate_arrhenius_2order_1step_devc.csv', header=1)
 t = M['Time']
 Y_O2   = M['O2']
 Y_C3H8 = M['C3H8']
@@ -33,7 +29,7 @@ plt.plot(t,Y_H2O, label='H2O', **marker_style_4)
 plt.axis([min(t), max(t), 0, 0.3])
 plt.xlabel('Time (s)')
 plt.ylabel('Mass Fraction')
-plt.legend(loc='upper right', numpoints=1, frameon=False)
+plt.legend(loc='upper right', numpoints=1)
 #plt.show()
 plt.savefig('reaction_species.pdf', format='pdf')
 plt.close()
