@@ -1,0 +1,158 @@
+/****************************************************************************************
+/
+/                   ---------------------------------------------
+/                   *        Roomcorner Research Model          *
+/                   ---------------------------------------------
+/
+/		    Input file for assigment 3, LTH, August 2017	
+/                   Modified by Bjarne Husted
+/
+/		    The characteristic fire diameter D* is 0.382
+/		    coarse 10   cm grid: D*/dx= 3,82
+/		    coarse  5   cm grid: D*/dx= 7.64
+/		    coarse  2.5 cm grid: D*/dx=15.28
+/
+-/********************  GENERALITIES  ****************************************************
+
+&HEAD CHID= 'rc01_fine_fft', TITLE= 'With measuring devices - fine grid - 16mesh' /  
+
+
+&TIME DT=0.004,T_END=120.00/
+
+&PRES   MAX_PRESSURE_ITERATIONS=200,
+	VELOCITY_TOLERANCE=0.0001   /
+
+
+/*******************  COMPUTATIONAL GRID  ***********************************************
+
+&MESH IJK= 64, 24, 96, XB= 0.00, 1.60, 0.00, 0.60, 0.00, 2.40, mult_id='mesh_mult' / 100 grid,   36.864 cells,  General grid
+&MULT ID='mesh_mult', DX=1.6, DY=0.6, I_LOWER=0, I_UPPER=3, J_LOWER=0, J_UPPER=3 /
+
+/*********************** Obstructions *******************************************
+
+&OBST XB= 3.6, 3.7, 0.0, 2.4, 0.0, 2.4, SURF_ID= 'WALL'/ Roomwall
+
+&HOLE XB= 3.5, 3.8, 0.8, 1.6, 0.0, 2.0,/ Door, be sure that the hole punched through the wall
+
+/********************* Passive ventilations openings: *******************************************
+&VENT XB=3.7, 6.4, 0.0, 0.0, 0.0, 2.4, SURF_ID='OPEN',/ Opening of exhaust duct front
+&VENT XB=3.7, 6.4, 2.4, 2.4, 0.0, 2.4, SURF_ID='OPEN',/ Opening of exhaust duct back
+&VENT XB=6.4, 6.4, 0.0, 2.4, 0.0, 2.4, SURF_ID='OPEN',/ Opening of exhaust duct right
+&VENT XB=3.7, 6.4, 0.0, 2.4, 2.4, 2.4, SURF_ID='OPEN',/ Opening of exhaust duct top
+
+/*********************** Fire *********************************************
+
+&REAC ID = 	'PROPANE'
+		FUEL='PROPANE'
+		SOOT_YIELD = 0.01
+		C = 3.
+		H = 8.
+		HEAT_OF_COMBUSTION = 46460.
+		IDEAL = .TRUE. /
+
+/Data from FDS 5.2 user guide
+
+&SURF ID='FIRE1',HRRPUA=1111, COLOR='RED'/ 
+&OBST XB= 0.00, 0.30, 0.00, 0.30, 0.00, 0.30, SURF_ID= 'BURNER'/ Box for the fire
+&VENT XB= 0.00, 0.30, 0.00, 0.30, 0.30, 0.30, SURF_ID= 'FIRE1',/ Constant 100 kW fire
+
+/*********************** Output *******************************************
+
+&DUMP DT_RESTART=10, DT_SLCF=1.0, DT_DEVC = 0.004,DT_HRR = 0.004 DT_ISOF=5,
+	DT_PL3D=5, DT_BNDF=5., PLOT3D_QUANTITY(5)='VISIBILITY'/
+
+&DEVC ID='T1', QUANTITY='TEMPERATURE', XYZ=  0.151,  0.151, 1.31/
+&DEVC ID='T2', QUANTITY='TEMPERATURE', XYZ=  1.811,  1.211, 2.01/
+&DEVC ID='T3', QUANTITY='TEMPERATURE', XYZ=  3.651,  1.211, 0.31/
+&DEVC ID='T4', QUANTITY='TEMPERATURE', XYZ=  3.651,  1.211, 1.81/
+
+****************Subgrid Kinetic Energy*************************************
+
+&DEVC ID='SKE1', QUANTITY='SUBGRID KINETIC ENERGY', XYZ=  0.151,  0.151, 1.31/
+&DEVC ID='SKE2', QUANTITY='SUBGRID KINETIC ENERGY', XYZ=  1.811,  1.211, 2.01/
+&DEVC ID='SKE3', QUANTITY='SUBGRID KINETIC ENERGY', XYZ=  3.651,  1.211, 0.31/
+&DEVC ID='SKE4', QUANTITY='SUBGRID KINETIC ENERGY', XYZ=  3.651,  1.211, 1.81/
+
+****************U, V, W velocity components *******************************
+
+&DEVC ID='U1', QUANTITY='U-VELOCITY', XYZ=  0.151,  0.151, 1.31/
+&DEVC ID='V1', QUANTITY='V-VELOCITY', XYZ=  0.151,  0.151, 1.31/
+&DEVC ID='W1', QUANTITY='W-VELOCITY', XYZ=  0.151,  0.151, 1.31/
+
+&DEVC ID='U2', QUANTITY='U-VELOCITY', XYZ=  1.811,  1.211, 2.01/
+&DEVC ID='V2', QUANTITY='V-VELOCITY', XYZ=  1.811,  1.211, 2.01/
+&DEVC ID='W2', QUANTITY='W-VELOCITY', XYZ=  1.811,  1.211, 2.01/
+
+&DEVC ID='U3', QUANTITY='U-VELOCITY', XYZ=  3.651,  1.211, 0.31/
+&DEVC ID='V3', QUANTITY='V-VELOCITY', XYZ=  3.651,  1.211, 0.31/
+&DEVC ID='W3', QUANTITY='W-VELOCITY', XYZ=  3.651,  1.211, 0.31/
+
+&DEVC ID='U4', QUANTITY='U-VELOCITY', XYZ=  3.651,  1.211, 1.81/
+&DEVC ID='V4', QUANTITY='V-VELOCITY', XYZ=  3.651,  1.211, 1.81/
+&DEVC ID='W4', QUANTITY='W-VELOCITY', XYZ=  3.651,  1.211, 1.81/
+
+&DEVC ID='U1-rms', QUANTITY='U-VELOCITY', XYZ=  0.151,  0.151, 1.31, STATISTICS_START=100.,STATISTICS='RMS'/
+&DEVC ID='V1-rms', QUANTITY='V-VELOCITY', XYZ=  0.151,  0.151, 1.31, STATISTICS_START=100.,STATISTICS='RMS'/
+&DEVC ID='W1-rms', QUANTITY='W-VELOCITY', XYZ=  0.151,  0.151, 1.31, STATISTICS_START=100.,STATISTICS='RMS'/
+
+&DEVC ID='U2-rms', QUANTITY='U-VELOCITY', XYZ=  1.811,  1.211, 2.01, STATISTICS_START=100.,STATISTICS='RMS'/
+&DEVC ID='V2-rms', QUANTITY='V-VELOCITY', XYZ=  1.811,  1.211, 2.01, STATISTICS_START=100.,STATISTICS='RMS'/
+&DEVC ID='W2-rms', QUANTITY='W-VELOCITY', XYZ=  1.811,  1.211, 2.01, STATISTICS_START=100.,STATISTICS='RMS'/
+
+&DEVC ID='U3-rms', QUANTITY='U-VELOCITY', XYZ=  3.651,  1.211, 0.31, STATISTICS_START=100.,STATISTICS='RMS'/
+&DEVC ID='V3-rms', QUANTITY='V-VELOCITY', XYZ=  3.651,  1.211, 0.31, STATISTICS_START=100.,STATISTICS='RMS'/
+&DEVC ID='W3-rms', QUANTITY='W-VELOCITY', XYZ=  3.651,  1.211, 0.31, STATISTICS_START=100.,STATISTICS='RMS'/
+
+&DEVC ID='U4-rms', QUANTITY='U-VELOCITY', XYZ=  3.651,  1.211, 1.81, STATISTICS_START=100.,STATISTICS='RMS'/
+&DEVC ID='V4-rms', QUANTITY='V-VELOCITY', XYZ=  3.651,  1.211, 1.81, STATISTICS_START=100.,STATISTICS='RMS'/
+&DEVC ID='W4-rms', QUANTITY='W-VELOCITY', XYZ=  3.651,  1.211, 1.81, STATISTICS_START=100.,STATISTICS='RMS'/
+
+
+
+
+&SLCF PBY= 1.2, QUANTITY='VELOCITY',VECTOR=.TRUE., /Velocity through centre line
+&SLCF PBY= 1.2, QUANTITY='TEMPERATURE', /Temperature Slice gennem centerlinien
+
+&SLCF PBX= 0.2, QUANTITY='TEMPERATURE',VECTOR=.TRUE., /Slice through fire in X plane
+
+&SLCF PBZ= 1.8, QUANTITY='VISIBILITY',VECTOR=.TRUE., /Slice at Z=1.8 m showing visibility
+
+
+&ISOF QUANTITY='TEMPERATURE', VALUE(1)=80, VALUE(2)=400,/ 3D files showing were the temperature are  80°C and 400°C 
+
+
+&BNDF QUANTITY='RADIATIVE HEAT FLUX', /	3D files showing surface properties
+&BNDF QUANTITY='WALL TEMPERATURE', /	3D files showing surface properties
+
+/*********************** MATERIAL & SURFACE *********************************************
+
+
+
+&MATL ID                 = 'LIGHT-CONCRETE'
+      DENSITY            = 1200.
+      CONDUCTIVITY       = 1.0
+      SPECIFIC_HEAT      = 0.88 /
+
+&MATL ID                 = 'STEEL'
+      EMISSIVITY         = 0.5
+      DENSITY            = 7850.
+      CONDUCTIVITY       = 45.8
+      SPECIFIC_HEAT      = 0.46 /
+
+&SURF ID                 = 'WALL'
+      RGB                = 170,170,170
+      MATL_ID            = 'LIGHT-CONCRETE'
+      THICKNESS          = 0.1 /
+
+&SURF ID                 = 'BURNER'
+      COLOR              = 'BLACK'
+      MATL_ID            = 'STEEL'
+      THICKNESS          = 0.005 /
+
+
+
+&TAIL /
+/*********************** End *******************************************
+
+
+
