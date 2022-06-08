@@ -2,18 +2,16 @@
 #McDermott
 #2016-02-01 20:52:39
 
-import math
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Bitstream Vera Sans'],'size':16})
 
 # read data from _line file
-M = np.genfromtxt('Qs=1_RI=05_line.csv', delimiter=',', skip_header=1, names=True)
+M = pd.read_csv('Qs=1_RI=05_line.csv', header=1)
 z1 = M['Height']
 hrrpul1 = M['HRRPUL']
 
-M = np.genfromtxt('zeta_0_line.csv', delimiter=',', skip_header=1, names=True)
+M = pd.read_csv('zeta_0_line.csv', header=1)
 z2 = M['Height']
 hrrpul2 = M['HRRPUL']
 
