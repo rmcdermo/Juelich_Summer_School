@@ -2,13 +2,8 @@
 #McDermott
 #2016-02-01 20:52:39
 
-# from __future__ import division # make floating point division default as in Matlab, e.g., 1/2=0.5
-import math
 import numpy as np
-import scipy.special as sp
 import matplotlib.pyplot as plt
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica'],'size':16})
 
 # read data from _devc file
 M = np.genfromtxt('realizable_mass_fractions_devc.csv', delimiter=',', skip_header=1, names=True)
