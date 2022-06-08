@@ -2,13 +2,8 @@
 #McDermott
 #2016-02-01 20:52:39
 
-from __future__ import division # make floating point division default as in Matlab, e.g., 1/2=0.5
-import math
 import numpy as np
-import scipy.special as sp
 import matplotlib.pyplot as plt
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica'],'size':16})
 
 # see S.B. Pope (2000) p. 232
 
@@ -52,8 +47,8 @@ marker_style_2 = dict(color='black', linestyle='--', linewidth=3, marker='', fil
 plt.loglog(np.array([k[60], k[60]]),np.array([np.min(E), np.max(E)]), label='', **marker_style_2)
 
 #plt.axis([-.1, 1.1, -.1, 1.5])
-plt.xlabel('$k$',size=30)
-plt.ylabel('$E(k)$',size=30)
+plt.xlabel('$k$',size=16)
+plt.ylabel('$E(k)$',size=16)
 #plt.legend(loc='upper center', numpoints=1, frameon=False)
 
 plt.gcf().subplots_adjust(bottom=0.15, top=0.95, left=0.15, right=0.95)
