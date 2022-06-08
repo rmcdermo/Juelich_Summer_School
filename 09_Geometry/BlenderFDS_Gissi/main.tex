@@ -124,10 +124,11 @@ Fire Dynamics Modeling}
         \item<1-> Developed in Python as an addon to Blender, since 2009.
         \item<2-> Free, open source, and multi platform
             {\small \linebreak Linux, MacOS, and MS Windows versions.}
-        \item<3-> Importing/exporting FDS cases to/from Blender files.
-        \item<3-> Importing geometries from your preferred CAD/BIM tools.
+        \item<3-> Importing/exporting
+            {\small \linebreak FDS cases to/from Blender files.
+            \linebreak Geometries from your preferred CAD/BIM tools.}
         \item<4-> \emph{Full control} over all the input parameters,
-            \linebreak FDS complexity and flexibility are not hidden from your eyes.
+            {\small \linebreak FDS complexity and flexibility are not hidden from your eyes. }
     \end{vfilleditems}  
 \end{frame}
 
@@ -174,11 +175,11 @@ Fire Dynamics Modeling}
 
 \begin{frame}[fragile]{What we learned so far: \linebreak Blender Modes and keyboard shortcuts}
     \begin{vfilleditems}
-        \item Object Mode (tab)
+        \item Object Mode [tab]
         {\small \linebreak transform the Object
         \linebreak with grab [G], rotate [R], and scale [S],
         \linebreak along the axis [X] [Y] [Z].}
-        \item Edit Mode (tab)
+        \item Edit Mode [tab]
         {\small \linebreak create and modify its shape,
         \linebreak by selecting vertices [1], edges [2], faces [3]
         \linebreak and then grab [G], rotate [R], scale [S], extrude [E], ...}
@@ -259,7 +260,7 @@ Fire Dynamics Modeling}
     \end{minipage}};
     % Text Node
     \draw    (48.5,69) .. controls (48.5,63.48) and (52.98,59) .. (58.5,59) -- (112.5,59) .. controls (118.02,59) and (122.5,63.48) .. (122.5,69) -- (122.5,83) .. controls (122.5,88.52) and (118.02,93) .. (112.5,93) -- (58.5,93) .. controls (52.98,93) and (48.5,88.52) .. (48.5,83) -- cycle  ;
-    \draw (85.5,76) node   [align=left] {\begin{minipage}[lt]{47.6pt}\setlength\topsep{0pt}
+    \draw (85.5,76) node   [align=left] {\begin{minipage}[lt]{55pt}\setlength\topsep{0pt}
     \begin{center}
     Collection
     \end{center}
@@ -267,7 +268,7 @@ Fire Dynamics Modeling}
     \end{minipage}};
     % Text Node
     \draw    (138.5,69) .. controls (138.5,63.48) and (142.98,59) .. (148.5,59) -- (202.5,59) .. controls (208.02,59) and (212.5,63.48) .. (212.5,69) -- (212.5,83) .. controls (212.5,88.52) and (208.02,93) .. (202.5,93) -- (148.5,93) .. controls (142.98,93) and (138.5,88.52) .. (138.5,83) -- cycle  ;
-    \draw (175.5,76) node   [align=left] {\begin{minipage}[lt]{47.6pt}\setlength\topsep{0pt}
+    \draw (175.5,76) node   [align=left] {\begin{minipage}[lt]{55pt}\setlength\topsep{0pt}
     \begin{center}
     Collection
     \end{center}
@@ -350,10 +351,12 @@ Fire Dynamics Modeling}
   \vfill
 \end{frame}
 
-\begin{frame}[plain, noframenumbering]
+\begin{frame}[fragile]{A room with two burners}
+  \vfill
+  {\tiny Feel free to choose the missing data!}
   \centering
   \vfill
-  \includegraphics[width=\linewidth]{images/case.png}
+  \includegraphics[width=.7\linewidth]{images/case.png}
   \vfill
 \end{frame}
 
@@ -371,50 +374,59 @@ Fire Dynamics Modeling}
 
 \begin{frame}[fragile]{What we learned so far: \linebreak FDS $\leftrightarrow$ Blender}
     \begin{vfilleditems}
-        \item FDS case $\leftrightarrow$ Blender Scene
+        \item<1-> FDS case $\leftrightarrow$ Blender Scene
         {\small \linebreak HEAD, TIME, MISC, REAC, RADI, PRES, DUMP}
-        \item Geometric FDS namelist $\leftrightarrow$ Blender Object
+        \item<2-> Geometric FDS namelist $\leftrightarrow$ Blender Object
         {\small \linebreak MESH, OBST, VENT, HOLE, GEOM, DEVC, SLCF, ...}
-        \item FDS boundary condition $\leftrightarrow$ Blender Material
+        \item<3-> FDS boundary condition $\leftrightarrow$ Blender Material
         {\small \linebreak SURF}
-        \item  Other FDS namelists $\leftrightarrow$ Blender Text, inserted verbatim
+        \item<4-> Other FDS namelists $\leftrightarrow$ Blender Text, inserted verbatim
         {\small \linebreak MATL, PART, BNDF, ...}
     \end{vfilleditems}
 \end{frame}
 
-\begin{frame}[fragile]{What we learned so far: \linebreak FDS $\leftrightarrow$ Blender geometric transformations}
+\begin{frame}[fragile]{What we learned so far:
+\linebreak Blender geometry $\rightarrow$ FDS notation}
     \begin{figure}[H]
         \centering
         \begin{columns}[T]
             \begin{column}{.3\linewidth}
                 \includegraphics[width=\linewidth]{images/T_BBOX.png}
-                \caption{XB $\leftrightarrow$ Bounding Box}
+                \caption{Bounding Box $\rightarrow$ XB}
             \end{column}
             \begin{column}{.3\linewidth}
                 \includegraphics[width=\linewidth]{images/T_VOXELS.png}
-                \caption{XB $\leftrightarrow$ Voxels}
+                \caption{Voxels $\rightarrow$ XBs}
             \end{column}
             \begin{column}{.3\linewidth}
                 \includegraphics[width=\linewidth]{images/T_FACES.png}
-                \caption{XB $\leftrightarrow$ Faces}
+                \caption{Faces $\rightarrow$ XBs}
             \end{column}
         \end{columns}
     \end{figure}
 \end{frame}
 
-\begin{frame}[fragile]{What we learned so far: \linebreak FDS $\leftrightarrow$ Blender geometric transformations}
+\begin{frame}[fragile]{What we learned so far:
+\linebreak Blender geometry $\rightarrow$ FDS notation}
     \begin{vfilleditems}
-        \item XB $\leftrightarrow$ Bounding Box, Voxels, Faces, Pixels, Edges
-        \item XYZ $\leftrightarrow$ Vertices, Center
-        \item PBX, PBY, PBZ $\leftrightarrow$ Planes
-        \item GEOM VERTS FACES or bingeom $\leftrightarrow$ Blender Mesh, triangulated surface
+        \item Bounding Box, Voxels, Faces, Pixels, Edges $\rightarrow$ XBs
+        \item Vertices, Center $\rightarrow$ XYZs
+        \item Planes $\rightarrow$ PBXs, PBYs, PBZs
+        \item Blender Mesh (triangulated surface) $\rightarrow$ GEOM bingeom file
     \end{vfilleditems}
 \end{frame}
 
-\begin{frame}[plain, noframenumbering]
+\begin{frame}[fragile]{A room with two burners, in BlenderFDS}
   \centering
   \vfill
-  \includegraphics[width=\linewidth]{images/smv_case.png}
+  \includegraphics[width=.75\linewidth]{images/blend_case.png}
+  \vfill
+\end{frame}
+
+\begin{frame}[fragile]{A room with two burners, in Smokeview}
+  \centering
+  \vfill
+  \includegraphics[width=.6\linewidth]{images/smv_case.png}
   \vfill
 \end{frame}
 
