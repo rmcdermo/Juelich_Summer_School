@@ -4,12 +4,11 @@
 # subgrid_variance_2.py
 
 import sys
-import math
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy import misc as spm
 
-data = spm.imread('transport_vs_mixing_0461_b.png',flatten=True)
+data = plt.imread('transport_vs_mixing_0461_a.png')
+# data = plt.imread('transport_vs_mixing_0461_b.png')
 # normalize data
 data = data/np.max(data)
 data = data - np.min(data)
@@ -27,8 +26,7 @@ fig=plt.figure(figsize=(12,6))
 
 #https://matplotlib.org/users/colormaps.html
 ax1 = plt.subplot(1, 2, 1)
-cax = ax1.imshow(data, interpolation='nearest', \
-    cmap=plt.cm.get_cmap('inferno'), vmin=0, vmax=1)
+cax = ax1.imshow(data, interpolation='nearest', cmap=plt.cm.get_cmap('inferno'), vmin=0, vmax=1)
 cbar = fig.colorbar(cax, ticks=[0, 0.5, 1], fraction=0.045, pad=.05)
 
 #plt.axis('off') # remove ticks and labels
