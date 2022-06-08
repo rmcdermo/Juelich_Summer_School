@@ -6,10 +6,13 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
-#data = np.random.randint(2,size=(10,10))
+# data = np.random.randint(2,size=(10,10))
 
-data = np.ones([10,10]) * 0.5
-data[:,5:10] = np.ones([10,5]) * 0.5
+# play with Z1 and Z2 and observe the change in the resulting histogram
+Z1=0.5
+Z2=0.5
+data = np.ones([10,10]) * Z1
+data[:,5:10] = np.ones([10,5]) * Z2
 
 print(np.var(data))
 
