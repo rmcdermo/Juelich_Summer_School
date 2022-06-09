@@ -1,0 +1,55 @@
+&HEAD CHID='wood_tga',TITLE='TGA test at 10 K/min heating rate of wood' / 
+
+&MESH IJK=3,1,4, XB=-2,2,-0.5,0.5,0,1 / 
+
+&TIME T_END=60. /
+
+&REAC FUEL='CELLULOSE', C=6, H=10, O=5, SOOT_YIELD=0.015 /
+&SPEC ID='WATER VAPOR' /
+
+&VENT XB=-1,1,-0.5,0.5,0.0,0.0, SURF_ID='SAMPLE' /
+
+&SURF ID             = 'SAMPLE'
+      TGA_ANALYSIS   = .TRUE.
+      TGA_HEATING_RATE = 10.
+      COLOR          = 'RED'
+      THICKNESS      = 0.01
+      MATL_ID(1,1) = 'wood'
+      MATL_ID(1,2) = 'water'
+      MATL_MASS_FRACTION(1,1) = 
+      MATL_MASS_FRACTION(1,2) =  /
+
+&MATL ID                    = 'wood'
+      EMISSIVITY            = 1
+      DENSITY 	            = 600.
+      CONDUCTIVITY          = 1
+      SPECIFIC_HEAT         = 1
+      N_REACTIONS           = 1
+      REFERENCE_TEMPERATURE = 
+      REFERENCE_RATE        = 
+      HEATING_RATE          = 
+      NU_SPEC 	            = 
+      SPEC_ID               = 'CELLULOSE'
+      NU_MATL               = 
+      MATL_ID               = 'CHAR'
+      HEAT_OF_REACTION      = 1 /  
+
+&MATL ID                    = 'CHAR'
+      EMISSIVITY            = 1.0
+      DENSITY 	            = 96.
+      CONDUCTIVITY          = 0.40
+      SPECIFIC_HEAT         = 1.0  /
+
+&MATL ID = 'water'
+      DENSITY = 1000.
+      CONDUCTIVITY = 0.1
+      SPECIFIC_HEAT= 4.184
+      N_REACTIONS = 1
+      REFERENCE_TEMPERATURE = 100.
+      REFERENCE_RATE = 0.005
+      HEATING_RATE = 10.
+      NU_SPEC = 1.0
+      SPEC_ID = 'WATER VAPOR'
+      HEAT_OF_REACTION= 2500. /
+
+&TAIL /
