@@ -1,0 +1,67 @@
+! Summer School 2022 : Example 3, examining intersecting GEOMs:
+! Run script as is. Open case in SMV. 
+!    - Hide/Show Geometry and External surfaces. Note intersecting geometries.
+! Rerun file with T_END=2. 
+!    - Does the case Run?
+!    - Open smv and hit "q". What does the intersection region between geometries look like? 
+! ---------------------------------------------------------------------------------------------------------
+&HEAD CHID='Example_3' TITLE='Intersecting geometries.' /
+&TIME T_END=0.0 /
+
+&MESH ID='Domain' IJK=10,10,10 XB=-2.000,2.000,-2.000,2.000,0.000,4.000 /
+
+&SURF ID='HOT', TMP_FRONT=150., TAU_T=1., COLOR='RED'/
+
+! Cube_1 : 1 surf_id, 8 vertices, 12 faces
+&GEOM ID='Cube_1' SURF_ID='INERT'
+      VERTS=
+            -1.000000, -1.000000, 2.000000,
+            1.000000, -1.000000, 2.000000,
+            -1.000000, 1.000000, 2.000000,
+            1.000000, 1.000000, 2.000000,
+            1.000000, 1.000000, 0.000000,
+            -1.000000, 1.000000, 0.000000,
+            1.000000, -1.000000, 0.000000,
+            -1.000000, -1.000000, 0.000000,
+      FACES=
+            6,4,5, 1,
+            7,1,8, 1,
+            5,2,7, 1,
+            8,3,6, 1,
+            2,3,1, 1,
+            6,7,8, 1,
+            6,3,4, 1,
+            7,2,1, 1,
+            5,4,2, 1,
+            8,1,3, 1,
+            2,4,3, 1,
+            6,5,7, 1, /
+
+! Cube_2 : 1 surf_id, 8 vertices, 12 faces
+&GEOM ID='Cube_2' SURF_ID='HOT'
+      VERTS=
+            -0.500000, -0.500000, 2.500000,
+            1.500000, -0.500000, 2.500000,
+            -0.500000, 1.500000, 2.500000,
+            1.500000, 1.500000, 2.500000,
+            1.500000, 1.500000, 0.500000,
+            -0.500000, 1.500000, 0.500000,
+            1.500000, -0.500000, 0.500000,
+            -0.500000, -0.500000, 0.500000,
+      FACES=
+            6,4,5, 1,
+            7,1,8, 1,
+            5,2,7, 1,
+            8,3,6, 1,
+            2,3,1, 1,
+            6,7,8, 1,
+            6,3,4, 1,
+            7,2,1, 1,
+            5,4,2, 1,
+            8,1,3, 1,
+            2,4,3, 1,
+            6,5,7, 1, /
+
+&BNDF QUANTITY='WALL TEMPERATURE' /
+
+&TAIL /

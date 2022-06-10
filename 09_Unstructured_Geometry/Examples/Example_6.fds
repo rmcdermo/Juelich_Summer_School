@@ -1,0 +1,50 @@
+! Summer School 2022 : Example 6, specified heat flux out of sphere: 
+!
+! Run case. Open SMV:
+!   - Open convective Heat Flux boundary file (geometry). Looks fine?
+!   - Open temperature Slice file. Examine.
+!   - Open Background Pressure. What do we get? why?
+! Open Example_6_devc.csv file:
+!   - How does the total Heat flux IN from sphere 'TOTAL HF IN' compare to
+!     'TOT INTERNAL ENERGY' in the gas phase?
+!   - Bonus : Use Python to plot background pressure provided by the device ID='BKGP'. 
+! ---------------------------------------------------------------------------------
+&HEAD CHID='Example_6', TITLE='Test specified heat flux out of sphere.' /
+
+! 1 MESH:
+&MESH IJK=28,28,28, XB=-1.4,1.4,-1.4,1.4,-1.4,1.4 /
+
+! Parameters:
+&TIME T_END=20. /
+&RADI RADIATION=.FALSE. /
+&MISC SIMULATION_MODE='LES' /
+
+! Surface BCs:
+&SURF ID='WALLS', COLOR='GRAY', ADIABATIC=T, DEFAULT=T /
+&SURF ID='SPHERE', COLOR='RED', CONVECTIVE_HEAT_FLUX=10, HEAT_TRANSFER_COEFFICIENT=10,  TAU_Q=0 /
+
+! Output:
+! Slices:
+&SLCF PBY=0, QUANTITY='VELOCITY', VECTOR=T /
+&SLCF PBY=0, QUANTITY='TEMPERATURE', CELL_CENTERED=T /
+&SLCF PBY=0, QUANTITY='BACKGROUND PRESSURE', CELL_CENTERED=T /
+! Boundary files:
+&BNDF QUANTITY='CONVECTIVE HEAT FLUX' /
+
+! Devices:
+! Heat flux out of sphere:
+&DEVC ID='HF SPHERE', XB=-1.4,1.4,-1.4,1.4,-1.4,1.4, QUANTITY='NET HEAT FLUX', 
+      SURF_ID='SPHERE', STATISTICS='SURFACE INTEGRAL'/
+&CTRL ID='PID IN TRACER', FUNCTION_TYPE='PID', INPUT_ID='HF SPHERE', 
+      PROPORTIONAL_GAIN=0, DIFFERENTIAL_GAIN=0, INTEGRAL_GAIN=1/
+&DEVC XYZ=0.5,0.5,0.5, ID='TOTAL HF IN', QUANTITY='CONTROL VALUE', CTRL_ID='PID IN TRACER'/
+! Total internal energy in domain:
+&DEVC ID='TOT INTERNAL ENERGY', XB=-1.4,1.4,-1.4,1.4,-1.4,1.4, QUANTITY='INTERNAL ENERGY', ID='U', 
+      STATISTICS='VOLUME INTEGRAL', RELATIVE=T /
+! Background pressure:
+&DEVC ID='BKGP', XYZ=1.2,1.2,1.2, QUANTITY='BACKGROUND PRESSURE' /
+
+# Geometries:
+&GEOM ID='SPHERE', SURF_ID='SPHERE', SPHERE_ORIGIN=0,0,0, SPHERE_RADIUS=1.0, N_LEVELS=4 /
+
+&TAIL /
