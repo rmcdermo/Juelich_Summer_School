@@ -5,13 +5,13 @@ Documentation repository for the [Juelich Summer School on Fire Dynamics Modelin
 # Lecture Team
 
 Simo Hostikka (Aalto University, Finland)  
-Bjarne Husted (DTU - Technical University of Denmark)
-Kevin McGrattan (NIST)
-Randall McDermott (NIST)  
-Marcos Vanella (NIST)
-Jason Floyd (Fire Safety Research Institute, UL Research Institutes)
-Lukas Arnold (Forschungszentrum Jülich GmbH)
-Alexander Belt (Forschungszentrum Jülich GmbH)
+Bjarne Husted (DTU - Technical University of Denmark)  
+Kevin McGrattan (NIST)  
+Randall McDermott (NIST)    
+Marcos Vanella (NIST)  
+Jason Floyd (Fire Safety Research Institute, UL Research Institutes)  
+Lukas Arnold (Forschungszentrum Jülich GmbH)  
+Alexander Belt (Forschungszentrum Jülich GmbH)  
 Emanuele Gissi (Corpo Nazionale dei Vigili del Fuoco)  
 
 # Presentation Template
