@@ -23,7 +23,7 @@ plt.plot(t,q1,label='q1',**marker_style)
 
 plt.axis([min(t), max(t), min(q1), 1.1*max(q1)])
 plt.xlabel('time (s)')
-plt.ylabel('$\dot{q}^{\prime\prime\prime}$ (kW/m$^3$)')
+plt.ylabel('$\\dot{q}^{\\prime\\prime\\prime}$ (kW/m$^3$)')
 plt.legend(loc='upper right', numpoints=1, frameon=True)
 #plt.show()
 plt.savefig('hrrpuv_reac_simple.pdf', format='pdf')

@@ -26,7 +26,7 @@ plt.plot(t,50*np.ones_like(t),label='exact',**marker_style)
 
 plt.axis([min(t), max(t), min(Q), 1.1*max(Q)])
 plt.xlabel('time (s)')
-plt.ylabel('$\dot{Q}$ (kW)')
+plt.ylabel('$\\dot{Q}$ (kW)')
 plt.legend(loc='lower right', numpoints=1, frameon=True)
 #plt.show()
 plt.savefig('hrr_simple.pdf', format='pdf')

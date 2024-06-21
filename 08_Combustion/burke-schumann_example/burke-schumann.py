@@ -79,7 +79,7 @@ plt.plot(f,T-T0,**marker_style)
 
 plt.axis([0, 1, 20, 2200])
 plt.xlabel('mixture fraction')
-plt.ylabel('temperature ($^\circ$C)')
+plt.ylabel('temperature ($^\\circ$C)')
 #plt.show()
 plt.savefig('temperature.pdf', format='pdf')
 plt.close()

@@ -16,7 +16,7 @@ W_Cl = 35.453
 
 # define hydrogen atomic fraction in soot
 
-X_H = 0.1
+X_H = 0.0 # default as of v6.8.0
 
 # define CO and soot yields
 
