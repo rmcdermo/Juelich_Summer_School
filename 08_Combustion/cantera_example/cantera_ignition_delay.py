@@ -87,9 +87,13 @@ for i in range(caseCount):
 csvdata.to_csv(Chemistry_DIR+"cantera_ignition_delay.csv",index=False)
 
 print(csvdata)
-plt.plot(csvdata['Time1'].values[:2500],csvdata['TMP1'].values[:2500])
-plt.ylabel('Time (s)')
-plt.xlabel('Temperature (K)')
+imax = np.argmin(np.abs(csvdata['Time1'].values-.1))
+tplt = csvdata['Time1'].values[0:imax]
+Tplt = csvdata['TMP1'].values[0:imax]
+plt.plot(tplt*1000,Tplt)
+plt.title('GRI Mech 3.0 Ignition Delay, 1200 K, $\\phi=1$')
+plt.ylabel('Temperature (K)')
+plt.xlabel('Time (ms)')
 plt.savefig('ignition_delay_T1200_phi1p0.pdf')
 
 
