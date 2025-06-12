@@ -1,5 +1,5 @@
 ---
-title: "Turbulence -- Phenomena, Equations and Models"
+title: "Turbulence in Fire -- Phenomena, Equations and Models"
 subtite: "A custom presentation for you to adapt as you see fit"
 format: 
   revealjs:
@@ -16,17 +16,23 @@ format:
 editor: visual
 author:
   - name: "Lukas Arnold"
-    id: jb
+    id: la
     orcid: 0000-0000-0000-0001
     email: l.arnold@fz-juelich.de
     affiliation: 
       - name: Forschungszentrum Jülich & <br>University of Wuppertal
-  - name: "Randall McDermott"
-    id: mm
+  - name: "Bjarne Husted"
+    id: bh
     orcid: 0000-0000-0000-0002
-    email: xxx@nist.com
+    email: bphu@dtu.dk
+    affiliation:
+      - name: Danmarks Tekniske Universitet
+  - name: "Randall McDermott"
+    id: rm
+    orcid: 0000-0003-3815-3400
+    email: randall.mcdermott@nist.gov
     affiliation: 
-      - name: National Institute for <br> Standards and Technology
+      - name: National Institute of <br> Standards and Technology
 # logo: /content/rdsvs.png
 footer: "Turbulence -- Summer School Padua"
 # bibliography: references.bib
