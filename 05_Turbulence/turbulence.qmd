@@ -121,7 +121,7 @@ Example, estimate Re for a candle and a pool fire
 
 The simulation geometry is a 2D domain with a main object (plate) and a small object to destroy the symmetry. There is an fixed inflow boundary condition at $x_{\text{min}}$ and an open boundary condition at $x_{\text{max}}$. Both boundaries in z-direction are solid walls.
 
-![](./exercises/exercise_02/Geometry_Sketch.png)
+![](./exercises/vortex_street/Geometry_Sketch.png)
 
 ## Exercise 02 -- Tasks
 
