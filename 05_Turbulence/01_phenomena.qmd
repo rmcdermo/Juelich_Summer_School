@@ -1,0 +1,38 @@
+# Phenomena
+
+## Example -- From a laminar to a turbulent flow
+
+Example of a candle plume, which transits from a laminar to a turbulent flow.
+
+## Macroscopic impact
+
+In general: 
+
+- Intermittency
+- Scalar Mixing
+- Eddies
+- Cascade
+- Dissipation at small scales
+- Chaotic, yet structured
+
+In fire dynamics:
+
+- mixing for combustion
+- fire plume dynamics
+- enhance of heat and mass transfer
+
+## Example?
+
+pipe flow
+
+magnitude velocity profile
+
+non trivial normal velocities
+
+instantanious velocity values (maybe from our plume measurements?)
+
+## Exercise -- Compute fluctuation spectrum?
+
+given instantanious velocity data, compute fluctuations
+
+![](./figs/Fluctuations-Results.png)

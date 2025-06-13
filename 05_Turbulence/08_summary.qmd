@@ -1,0 +1,26 @@
+# Summary
+
+## Simulation modes in FDS
+
+| **Key Parameter**              | **'DNS'**    | **'LES'**    | **'VLES'**      | **'SVLES'**     |
+|--------------------------------|--------------|--------------|-----------------|-----------------|
+| `CFL_VELOCITY_NORM`            | 1            | 1            | 2               | 3               |
+| `CHECK_VN`                     | T            | T            | T               | F               |
+| `FLUX_LIMITER`                 | 'CHARM'      | 'CHARM'      | 'SUPERBEE'      | 'SUPERBEE'      |
+| `CONSTANT_SPECIFIC_HEAT_RATIO` | F            | F            | F               | T               |
+| `EXTINCTION_MODEL`             | 2            | 2            | 1               | 1               |
+
+
+## FDS user perspective on turbulence
+
+## Not Covered
+
+- Boundary layers
+- Wall functions
+- Interaction of Turbulence with chemistry and radiation
+
+## Summary
+
+## Exercise -- Mixing??
+
+## Exercise -- Lukas naive plume

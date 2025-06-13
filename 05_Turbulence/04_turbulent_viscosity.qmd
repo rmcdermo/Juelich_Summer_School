@@ -1,0 +1,36 @@
+# LES Turbulent Viscosity Models 
+
+## General Idea
+
+## Smagorinski
+
+## Deardorff
+
+## Exercise -- Decay of Resolved Kinetic Energy 
+
+Use FDS case as basis
+
+add analysis to estimate the evolution of kinetic energy as a function of time
+
+
+![](./figs/EnergyDecay-sim-IC.png){height=150}
+
+## Exercise -- Results
+
+![](./figs/EnergyDecay-sim-Result.png)
+
+## Exercise -- Shear Flow
+
+setup: shear flow, 2D, bounded, periodic
+
+creation of vortices and kinetic energy
+
+goal: ??
+
+## Exercise -- Results
+
+![](./figs/ShearFlow-sim-Result.png)
+
+## Thermal and material diffusivity
+
+
