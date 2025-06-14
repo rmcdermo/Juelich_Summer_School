@@ -34,32 +34,55 @@ Example pipe flow?
 
 Example, estimate Re for a candle and a pool fire 
 
-## Exercise 02 -- Kármán Vortex Street
+## Exercise -- Kármán Vortex Street
 
 **Description:** One of the impact parameters on the flow structure behind an object is the Reynolds number (Re). A classical phenomenon is the Kármán vortex street. In this example, the impact of Re is qualitatively investigated. 
 
-The simulation geometry is a 2D domain with a main object (plate) and a small object to destroy the symmetry. There is an fixed inflow boundary condition at $x_{\text{min}}$ and an open boundary condition at $x_{\text{max}}$. Both boundaries in z-direction are solid walls.
+The simulation geometry is a 2D domain with a main object (plate) and a small object to disturbe the symmetry. There is an fixed inflow $v_0$ boundary condition at $x_{\text{min}}$ and an open boundary condition at $x_{\text{max}}$. Both boundaries in z-direction are solid walls.
 
 ![](./exercises/vortex_street/Geometry_Sketch.png)
 
-## Exercise 02 -- Tasks
+## Exercise -- Tasks
 
-1. Run the execution of the provided FDS input file (vortex_street.fds). 
-2. Visuailize the result.
+1. Open the input file [vortex_street.fds](./exercises/vortex_street/vortex_street.fds) and check for the values of inflow velocity $v_0$, the geometry parameters $H_D$ and $H_O$, and the viscosity $\nu$ of the fluid.
+1. Calculate the Reynolds number for this setup.
+1. Run the execution of the provided FDS input file. 
+1. Visuailize the result, e.g. the y-component of the vorticity.
+1. Adjust the Reynolds number by a factor of 0.5 and 10 by adjusting the viscosity.
+1. Compare the results. What do you observe?
 
-FDS example, dancing eddies
-
-run provided example case
-
-estimate Re, change Re
 
 ## Exercise -- Results
 
-![low Re, nu=1.2e-4](./figs/VortexStreet-sim-lowRe.png){height=125}
+$$
+v_0 = 0.5 m/s
+$$
 
-![mid Re, nu=1.2e-5](./figs/VortexStreet-sim-midRe.png){height=125}
+$$
+H_O = 0.01 m
+$$
 
-![high Re, nu=1.2e-6](./figs/VortexStreet-sim-highRe.png){height=125}
+$$
+Re = \frac{v\, L}{\nu} = \frac{v_0\, H_O}{\nu} = \frac{5\cdot 10^{-3}}{\nu}
+$$
+
+## Exercise -- Results
+
+$$\nu = 12\cdot 10^{-6} \Rightarrow Re \approx 416$$
+
+![](./exercises/vortex_street/result_nu_12e-6.png){}
+
+## Exercise -- Results
+
+$$\nu = 12\cdot 10^{-5} \Rightarrow Re \approx 42$$
+
+![](./exercises/vortex_street/result_nu_12e-5.png){}
+
+## Exercise -- Results
+
+$$\nu = 6\cdot 10^{-6} \Rightarrow Re \approx 833$$
+
+![](./exercises/vortex_street/result_nu_6e-6.png){}
 
 
 ## Scales in Turbulence
