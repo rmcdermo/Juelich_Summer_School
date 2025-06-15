@@ -2,16 +2,21 @@
 
 ## Example -- From a laminar to a turbulent flow
 
-Example of a candle plume, which transits from a laminar to a turbulent flow.
+{{< video https://youtu.be/xvoTSCBaPNM?feature=shared width="100%" height="70%">}}
+
+Source: [YouTube](https://youtu.be/v5IoP9Pc-Y0?feature=shared)
 
 ## Macroscopic impact
 
+:::: {.columns}
+
+::: {.column width="50%"}
 In general: 
 
 - Intermittency
 - Scalar Mixing
 - Eddies
-- Cascade
+- structure and energy Cascade
 - Dissipation at small scales
 - Chaotic, yet structured
 
@@ -20,6 +25,21 @@ In fire dynamics:
 - mixing for combustion
 - fire plume dynamics
 - enhance of heat and mass transfer
+:::
+
+::: {.column width="50%"}
+![Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Laminar-turbulent_transition.jpg)](https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Laminar-turbulent_transition.jpg/960px-Laminar-turbulent_transition.jpg){height=500}
+:::
+
+::::
+
+
+
+
+
+
+
+
 
 ## Example?
 
