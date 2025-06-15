@@ -9,3 +9,61 @@ Source: [YouTube](https://youtu.be/e1TbkLIDWys?feature=shared)
 ## Structure of a Boundary Layer
 
 ![](./figs/Boundary-Layer_overview.png)
+
+## Viscous Scales
+
+Note: adjust consistent writing, e.g. $u$ vs. $v$
+
+In the region near the wall, the shear stress is only due to the viscous part:
+
+$$
+\tau_w = \left. \rho \nu \left( \frac{\text{d}\langle u \rangle}{\text{d}y}\right)\right|_{y=0}
+$$
+
+The velocity scale (friction velocity)
+
+$$
+u_\tau \equiv \sqrt{\frac{\tau_w}{\rho}}
+$$
+
+and the length scale (viscous lengthscale)
+
+$$
+\delta_\nu \equiv \nu \sqrt{\frac{\rho}{\tau_w}} = \frac{\nu}{u_\tau}
+$$
+
+## Scaling
+
+Based on the viscous sclaes, velocity and distance is scaled as
+
+$$
+u^+ \equiv \frac{\langle u \rangle}{u_\tau} \quad \text{and} \quad y^+ \equiv \frac{y}{\delta_\nu}
+$$
+
+Note: add plot with $u^+$ as a function of $y^+$
+
+## Wall Regions
+
+Note: add figure, add numbers
+
+Regions:
+
+- Inner layer
+- Viscous wall region
+- Viscous sublayer
+- Outer layer
+- Overlap region
+- Log-law region
+- Buffer layer
+
+## Law of the Wall
+
+## Wall Roughness
+
+## Thermal Boundary Layer
+
+## Nusselt and Rayleigh Numbers
+
+## Near-wall Model for Heat Transfer Coefficient
+
+
