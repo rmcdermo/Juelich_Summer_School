@@ -136,12 +136,59 @@ $$
 \delta_T(x)_{\text{turbulent}} \approx \delta_v(x)_{\text{turbulent}}
 $$ 
 
+## Convective Heat Transfer
+
+In general, the convective heat transfer is dependent on the temperature gradient in the wall normal direction ($\partial T / \partial n$) and thermal conductivity:
+
+$$
+\dot{q}''_c = -k \frac{\partial T}{\partial n}
+$$
+
+In DNS simulations, this gradient can be directly estimated as
+
+$$
+\dot{q}''_c = -k \frac{T_w - T_g}{\delta n / 2}
+$$
+
+with the wall surface ($T_w$) and the gas temperature ($T_g$) at the first gas cell, with a normal cell width $\delta n$.
 
 ## Empirical Convection Models
 
+If, like in LES, the gradient can not be computed, empirical corelations can be used to compute the convective heat transfer via a heat transfer coefficient $h$:
 
+$$
+\dot{q}_c'' = h (T_g - T_w)
+$$
 
-## Nusselt and Rayleigh Numbers
+This coefficient can be estimated with the Nusselt number (Nu) by
+
+$$
+h = \frac{k}{L} \max \left( \text{Nu}_{\text{free}}, \text{Nu}_{\text{forced}}\right)
+$$
+
+In FDS, the characteristic length is chosen as $L=1 m$.
+
+## Nusselt Number (Nu)
+
+$$
+\text{Nu}_{\text{free}} = 
+\left\{
+\begin{array}{ll}
+\left( 0.825 + 0.324 \, \text{Ra}^{1/6} \right)^2 & \text{Vertical plate or cylinder} \\
+0.54 \, \text{Ra}^{1/4} & \text{Horizontal hot plate facing up or cold plate facing down, } \text{Ra} \leq 10^7 \\
+0.15 \, \text{Ra}^{1/3} & \text{Horizontal hot plate facing up or cold plate facing down, } \text{Ra} > 10^7 \\
+0.52 \, \text{Ra}^{1/5} & \text{Horizontal hot plate facing down or cold plate facing up} \\
+\left( 0.60 + 0.321 \, \text{Ra}^{1/6} \right)^2 & \text{Horizontal cylinder} \\
+2 + 0.454 \, \text{Ra}^{1/4} & \text{Sphere}
+\end{array}
+\right.
+$$
+
+$$
+\text{Nu}_{\text{forced}} = C_0 + \left( C_1 \text{Re}^n - C_2 \right) \text{Pr}^{\frac{1}{3}}
+\quad \text{with} \quad 
+\text{Re} = \frac{\rho |\mathbf{u}| L}{\mu} 
+$$
 
 
 ## Temperature Scaling
