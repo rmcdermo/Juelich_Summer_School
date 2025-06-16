@@ -98,7 +98,51 @@ with $B_2=8.5$ and $\tilde{B}_{\text{max}} = 9.5$.
 
 ![](./figs/Boundary-Layer_thermal.png)
 
+## Prandtl Number (Pr)
+
+The Prandtl number (Pr) is defined as the ratio of momentum to thermal diffussivity: 
+
+$$
+Pr = \frac{c_p\, \mu}{k}
+$$
+
+with the thermal conductivity $k$.
+
+Regimes:
+
+- $Pr \ll 1$, e.g. liquid metals, thermal diffusivity dominates
+- $Pr \approx \mathcal{O}(1)$, e.g. gases, balance of both processes
+- $Pr \gg 1$, e.g. oils, thermal diffusivity is negligible
+
+## Boundary Layer Thickness
+
+Boundary layer thickness for the velocity $\delta_v(x)$ can be estimated with $Re_x = u_0\, x / \nu$ by: 
+
+$$
+\delta_v(x)_{\text{laminar}} \approx 5.0 \cdot x \cdot Re_x^{-\frac{1}{2}}
+$$
+$$
+\delta_v(x)_{\text{turbulent}} \approx 0.37 \cdot x \cdot Re_x^{-\frac{1}{5}}
+$$ 
+
+Using Pr, the thermal boundary thickness can be related to the velocity in a laminar flow:
+
+$$
+\delta_T(x)_{\text{laminar}} = \delta_v(x)_{\text{laminar}} \cdot Pr_x^{-\frac{1}{3}}
+$$
+
+In the tublulent case, the thermal boundary thickness does not depend on the thermal diffusion, but only on the flow properties (Re):
+$$
+\delta_T(x)_{\text{turbulent}} \approx \delta_v(x)_{\text{turbulent}}
+$$ 
+
+
+## Empirical Convection Models
+
+
+
 ## Nusselt and Rayleigh Numbers
+
 
 ## Temperature Scaling
 
