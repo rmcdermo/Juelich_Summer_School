@@ -65,7 +65,34 @@ $$
 
 ![](./figs/Boundary-Layer_regions.png)
 
+## Wall Regions
+
+- **Inner Layer** -- velocity profile depends only on $u_\tau$ and $y^+$, but not on $u_0$ and $\delta$
+- **Viscous Wall Region** -- significant viscous contribution to the shear stress
+- **Viscous Sublayer** -- viscous stress is dominating
+- **Outer Layer** -- no direct impact of viscosity on velocity profile
+- **Log-law Region** -- approximation of log-law valid
+
 ## Wall Roughness
+
+So far, smooth walls have been assumed. The impact of a wall with a roughness $s$ can be included in the law of the wall as
+
+$$
+u^+ = \frac{1}{\kappa} \ln\left( \frac{y}{s} \right) + \tilde{B}(s^+)
+$$
+
+with the scaled roughness $s^+ = s / \delta_\nu$ and $y = \Delta y / 2$. The parameter $\tilde{B}$ is given as
+
+$$
+\tilde{B} = 
+\begin{cases}
+B + (1/\kappa) \ln(s^+) & \text{for } s^+ < 5.83 \\
+\tilde{B}_{\text{max}} & \text{for } 5.83 \leq s^+ < 30.0 \\
+B_2 & \text{for } s^+ \geq 30.0
+\end{cases}
+$$
+
+with $B_2=8.5$ and $\tilde{B}_{\text{max}} = 9.5$.
 
 ## Thermal Boundary Layer
 
