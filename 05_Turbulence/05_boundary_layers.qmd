@@ -42,21 +42,28 @@ $$
 
 Note: add plot with $u^+$ as a function of $y^+$
 
-## Wall Regions
+## $u^+$ vs $y^+$
 
-Note: add figure, add numbers
-
-Regions:
-
-- Inner layer
-- Viscous wall region
-- Viscous sublayer
-- Outer layer
-- Overlap region
-- Log-law region
-- Buffer layer
+![](./figs/Boundary-Layer_u_vs_y.png)
 
 ## Law of the Wall
+
+In FDS, two pproximations for the law of the wall, i.e. $u^+ = f(y^+)$, in the inner layer ($y < 0.1\delta$) are used:
+
+Close to the wall, i.e. $y^+ < 11.81$,
+$$ 
+u^+ = y^+
+$$
+
+and further away, i.e. $y^+ > 11.81$:
+
+$$
+u^+ = \frac{1}{\kappa}\ln(y^+) + B \quad \text{with} \quad \kappa=0.41, \, B=5.2
+$$
+
+## Wall Regions
+
+![](./figs/Boundary-Layer_regions.png)
 
 ## Wall Roughness
 
