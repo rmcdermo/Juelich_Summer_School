@@ -50,12 +50,12 @@ Note: add plot with $u^+$ as a function of $y^+$
 
 In FDS, two pproximations for the law of the wall, i.e. $u^+ = f(y^+)$, in the inner layer ($y < 0.1\delta$) are used:
 
-Close to the wall, i.e. $y^+ < 11.81$,
+Close to the wall, i.e. $y^+ \leq 11.81$,
 $$ 
 u^+ = y^+
 $$
 
-and further away, i.e. $y^+ > 11.81$:
+and further away, i.e. $y^+ \geq 11.81$:
 
 $$
 u^+ = \frac{1}{\kappa}\ln(y^+) + B \quad \text{with} \quad \kappa=0.41, \, B=5.2
@@ -69,8 +69,45 @@ $$
 
 ## Thermal Boundary Layer
 
+![](./figs/Boundary-Layer_thermal.png)
+
 ## Nusselt and Rayleigh Numbers
+
+## Temperature Scaling
+
+As with the velocity boundary layer, the temperature difference between the gas phase ($T_g$) and the wall surface temperature ($T_w$) can be scaled as
+
+$$
+T^+ = \frac{T_g - T_w}{T_\tau}
+$$
+
+The used model for $T^+$ as a function of $y^+$ is
+
+$$ 
+T^+ = Pr\, y^+ \quad \text{for}\quad y^+ \leq 11.81
+$$
+
+and
+
+$$ 
+T^+ = \frac{Pr_t}{\kappa}\ln(y^+) + B_T(Pr) \quad \text{with} \quad \text{for}\quad y^+ \leq 11.81
+$$
 
 ## Near-wall Model for Heat Transfer Coefficient
 
+The temperature scale is defined as 
 
+$$
+T_\tau \equiv \frac{\dot{q_c}''}{\rho\, c_p \, u_\tau}
+$$
+
+With this, the heat transfer coefficent $h$ can be rearranged to 
+
+$$
+h = \frac{\dot{q_c}''}{T_g - T_w} = \frac{\rho\, c_p \, u_\tau}{T^+}
+$$
+
+## Exercise -- Heat Transfer to Compartment Ceiling
+
+- use Steckler compartment 
+- output various boundary data of ceiling
