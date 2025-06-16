@@ -2,4 +2,31 @@
 
 ## Teaching goals
 
-xxx
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid black; text-align: center; padding: 6px;">Turbulence in Fire</th>
+    <th style="border: 1px solid black; text-align: center; padding: 6px;">Previous Knowledge</th>
+    <th style="border: 1px solid black; text-align: center; padding: 6px;" colspan="3">Course Learning Outcomes</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;"></td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Knows Before</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Must Know</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Should Know</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Nice to Know</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Scientific competence; what does the student know about theory</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Basic fluid mechanics</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Can identify and describe three main types of modeling in CFD</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Can identify the relevant length and time scales in a flow scenario and relate these to turbulence scales</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Dynamic models, etc.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Professional competence and skills; what the student knows and can do in practice</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Run FDS simulations</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Specify FDS inputs for turbulence models</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Estimate resolution requirements for a practical fire scenario</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Derive closure models</td>
+  </tr>
+</table>
