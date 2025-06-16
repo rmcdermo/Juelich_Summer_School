@@ -47,7 +47,7 @@ The simulation geometry is a 2D domain with a main object (plate) and a small ob
 1. Open the input file [vortex_street.fds](./exercises/vortex_street/vortex_street.fds) and check for the values of inflow velocity $v_0$, the geometry parameters $H_D$ and $H_O$, and the viscosity $\nu$ of the fluid.
 1. Calculate the Reynolds number for this setup.
 1. Run the execution of the provided FDS input file. 
-1. Visuailize the result, e.g. the y-component of the vorticity.
+1. Visualize the result, e.g., the y-component of the vorticity.
 1. Adjust the Reynolds number by a factor of 0.5 and 10 by adjusting the viscosity.
 1. Compare the results. What do you observe?
 
