@@ -38,7 +38,7 @@ Example, estimate Re for a candle and a pool fire
 
 **Description:** One of the impact parameters on the flow structure behind an object is the Reynolds number (Re). A classical phenomenon is the Kármán vortex street. In this example, the impact of Re is qualitatively investigated. 
 
-The simulation geometry is a 2D domain with a main object (plate) and a small object to disturbe the symmetry. There is an fixed inflow $v_0$ boundary condition at $x_{\text{min}}$ and an open boundary condition at $x_{\text{max}}$. Both boundaries in z-direction are solid walls.
+The simulation geometry is a 2D domain with a main object (plate) and a small object to disturb the symmetry. There is an fixed inflow $v_0$ boundary condition at $x_{\text{min}}$ and an open boundary condition at $x_{\text{max}}$. Both boundaries in z-direction are solid walls.
 
 ![](./exercises/vortex_street/Geometry_Sketch.png)
 
