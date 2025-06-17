@@ -14,7 +14,7 @@ definition, illustrative figure with u(t) = u_mean + u_fluct
 
 ## Spatial Filtering
 
-using a filter width $\Delta$, define filtered quantity $\overline{\phi}$
+using a filter width $\Delta$, define a "box" filtered quantity $\overline{\phi}$
 
 $$ 
 \overline{\phi}(x, y, z, t) \equiv \frac{1}{V_c}
@@ -24,7 +24,7 @@ $$
 \phi(x', y', z', t) \, \mathrm{d}x' \, \mathrm{d}y' \, \mathrm{d}z'
 $$
 
-mean of the square vs. sqare of the mean
+mean of the square vs. square of the mean
 
 Favre averaging for variable density
 
