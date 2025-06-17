@@ -79,35 +79,35 @@ Use Favre filter: $\overline{\rho} \, \widetilde{{u}_i {u}_j}$
 ## LES Momentum Equation (II)
 
 $$
-\frac{\partial \overline{\rho} \, \widetilde{u}_i}{\partial t}
+\frac{\partial \overline{\rho} \, \tilde{u}_i}{\partial t}
 + \frac{\partial}{\partial x_j} \left( \overline{\rho} \, \widetilde{{u}_i {u}_j} \right)
 = -\frac{\partial \overline{p}}{\partial x_i}
 - \frac{\partial \overline{\tau}_{ij}}{\partial x_j}
 + \overline{\rho} \, g_i
 + \overline{f}_{d,i}
-+ \overline{\dot{m}'''_b} \, \widetilde{u}_{b,i}
++ \overline{\dot{m}'''_b} \, \tilde{u}_{b,i}
 $$
 
 
-all primitve variables, but $\widetilde{{u}_i {u}_j} \neq\widetilde{{u}_i}\widetilde{{u}_j}$
+all primitve variables, but $\widetilde{{u}_i {u}_j} \neq\tilde{u}_i\tilde{u}_j$
 
 find closure, but defining a sub-grid scale stress $\tau_{ij}^{\text{sgs}}$
 
 $$
-\tau_{ij}^{\text{sgs}} \equiv \overline{\rho} \left( \widetilde{u_i u_j} - \widetilde{u}_i \widetilde{u}_j \right)
+\tau_{ij}^{\text{sgs}} \equiv \overline{\rho} \left( \widetilde{u_i u_j} - \tilde{u}_i \tilde{u}_j \right)
 $$
 
 this leads to the LES momentum equation
 
 $$
-\frac{\partial \overline{\rho} \, \widetilde{u}_i}{\partial t}
-+ \frac{\partial}{\partial x_j} \left( \overline{\rho} \, \widetilde{u}_i \widetilde{u}_j \right)
+\frac{\partial \overline{\rho} \, \tilde{u}_i}{\partial t}
++ \frac{\partial}{\partial x_j} \left( \overline{\rho} \, \tilde{u}_i \tilde{u}_j \right)
 = -\frac{\partial \overline{p}}{\partial x_i}
 - \frac{\partial \overline{\tau}_{ij}}{\partial x_j}
 - \frac{\partial \tau^{\mathrm{sgs}}_{ij}}{\partial x_j}
 + \overline{\rho} \, g_i
 + \overline{f}_{\mathrm{d},i}
-+ \overline{\dot{m}'''_{\mathrm{b}}} \, \widetilde{u}_{\mathrm{b},i}
++ \overline{\dot{m}'''_{\mathrm{b}}} \, \tilde{u}_{\mathrm{b},i}
 $$
 
 ## Turbulent Viscosity
