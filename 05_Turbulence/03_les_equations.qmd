@@ -194,6 +194,37 @@ $$
 J_{\alpha,j}^{sgs} \equiv \overline{\rho} (\widetilde{Z_\alpha u_j} - \tilde{Z}_\alpha \tilde{u}_j)
 $$
 
+## Transport of Sensible Enthalpy
+
+$$
+\frac{\partial (\rho h_s)}{\partial t}
++ \frac{(\rho h_s u_j)}{\partial x_j}
+= \frac{\mathrm{D} \bar{p}}{\mathrm{D} t}
+- \frac{\partial \dot{q}_j''}{\partial x_j}
+- \frac{\partial \dot{q}_{r,j}''}{\partial x_j}
++ \dot{q}''' + \dot{q}_b'''
+$$
+
+$$
+\frac{\partial (\overline{\rho} \tilde{h}_s)}{\partial t}
++ \frac{(\overline{\rho} \tilde{h}_s \tilde{u}_j)}{\partial x_j}
+= \frac{\mathrm{D} \bar{p}}{\mathrm{D} t}
+- \frac{\partial \dot{q}_j''^{sgs}}{\partial x_j}
+- \frac{\partial \overline{\dot{q}_j''}}{\partial x_j}
+- \frac{\partial \overline{\dot{q}_{r,j}''}}{\partial x_j}
++ \overline{\dot{q}'''} + \overline{\dot{q}_b'''}
+$$
+
+where
+
+$$
+\dot{q}_j''^{sgs} \equiv \overline{\rho}\left(\widetilde{h_s u_j}-\tilde{h}_s \tilde{u}_j\right)
+$$
+
+$$
+\overline{\dot{q}_j''} = - \overline{k \frac{\partial T}{\partial x_j}} - \overline{ \sum_\alpha h_{s,\alpha} \rho D_\alpha[T] \frac{\partial Z_\alpha}{\partial x_j}}
+$$
+
 ## Thermal Coduction and Species Diffusion 
 
 $$
