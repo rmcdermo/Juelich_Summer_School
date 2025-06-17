@@ -117,7 +117,7 @@ decompose $\tau_{ij}^{\text{sgs}}$
 $$
 \tau_{ij}^{\mathrm{dev}} \equiv \overline{\tau}_{ij} + \tau^{\mathrm{sgs}}_{ij} 
 - \frac{1}{3} \tau^{\mathrm{sgs}}_{kk} \delta_{ij}
-= -2 (\mu + \mu_t) \left( \widetilde{S}_{ij} - \frac{1}{3} (\nabla \cdot \widetilde{\mathbf{u}}) \delta_{ij} \right)
+= -2 (\mu + \mu_t) \left( \widetilde{S}_{ij} - \frac{1}{3} (\nabla \cdot \tilde{\mathbf{u}}) \delta_{ij} \right)
 $$
 
 turbulent viscosity $\mu_t$ must be modelled
@@ -137,34 +137,61 @@ $$
 leads to apparently same equations as DNS
 
 $$
-\frac{\partial \overline{\rho} \, \widetilde{u}_i}{\partial t}
-+ \frac{\partial}{\partial x_j} \left( \overline{\rho} \, \widetilde{u}_i \widetilde{u}_j \right)
+\frac{\partial \overline{\rho} \, \tilde{u}_i}{\partial t}
++ \frac{\partial}{\partial x_j} \left( \overline{\rho} \, \tilde{u}_i \tilde{u}_j \right)
 = -\frac{\partial \bar{p}}{\partial x_i}
 - \frac{\partial \tau^{\mathrm{dev}}_{ij}}{\partial x_j}
 + \overline{\rho} \, g_i
 + \overline{f}_{\mathrm{d},i}
-+ \overline{\dot{m}'''_{\mathrm{b}}} \, \widetilde{u}_{\mathrm{b},i}
++ \overline{\dot{m}'''_{\mathrm{b}}} \, \tilde{u}_{\mathrm{b},i}
 $$
 
 ## Transport of Kinetic Energy
 
-resolved kinetic energy: $K \equiv \frac{1}{2} \widetilde{u}_i \widetilde{u}_i$
+resolved kinetic energy: $K \equiv \frac{1}{2} \tilde{u}_i \tilde{u}_i$
 
 $$
 \overline{\rho} \,\frac{D K}{D t}
-= -\widetilde{u}_i \frac{\partial \bar{p}}{\partial x_i}
-- \widetilde{u}_i \frac{\partial \tau^{\mathrm{dev}}_{ij}}{\partial x_j}
-+ (\overline{\rho} \, g_i + \overline{f}_{\mathrm{b},i}) \widetilde{u}_i
+= -\tilde{u}_i \frac{\partial \bar{p}}{\partial x_i}
+- \tilde{u}_i \frac{\partial \tau^{\mathrm{dev}}_{ij}}{\partial x_j}
++ (\overline{\rho} \, g_i + \overline{f}_{\mathrm{b},i}) \tilde{u}_i
 $$
 
 and
 
 $$
 \overline{\rho} \, \frac{D K}{D t}
-+ \frac{\partial}{\partial x_j} \left( \left[ \bar{p} \, \delta_{ij} + \tau^{\mathrm{dev}}_{ij} \right] \widetilde{u}_i \right)
-= \bar{p} \, \frac{\partial \widetilde{u}_i}{\partial x_i}
-+ \tau^{\mathrm{dev}}_{ij} \, \frac{\partial \widetilde{u}_i}{\partial x_j}
-+ (\overline{\rho} \, g_i + \overline{f}_{\mathrm{b},i}) \widetilde{u}_i
++ \frac{\partial}{\partial x_j} \left( \left[ \bar{p} \, \delta_{ij} + \tau^{\mathrm{dev}}_{ij} \right] \tilde{u}_i \right)
+= \bar{p} \, \frac{\partial \tilde{u}_i}{\partial x_i}
++ \tau^{\mathrm{dev}}_{ij} \, \frac{\partial \tilde{u}_i}{\partial x_j}
++ (\overline{\rho} \, g_i + \overline{f}_{\mathrm{b},i}) \tilde{u}_i
+$$
+
+## Transport of Chemical Species
+
+$$
+\frac{(\rho Z_\alpha)}{\partial t} + \frac{\partial (\rho Z_\alpha u_j)}{\partial x_j}
+= \frac{\partial}{\partial x_j}\left(\rho D_\alpha \frac{\partial Z_\alpha}{\partial x_j}\right)
++ \dot{m}_\alpha''' + \dot{m}_{\rm b,\alpha}'''
+$$
+
+$$
+\frac{(\overline{\rho} \tilde{Z}_\alpha)}{\partial t} + \frac{\partial (\overline{\rho} \widetilde{Z_\alpha u_j})}{\partial x_j}
+= \frac{\partial}{\partial x_j}\left(\overline{\rho} D_\alpha[\tilde{T}] \frac{\partial \tilde{Z}_\alpha}{\partial x_j}\right)
++ \overline{\dot{m}_\alpha'''} + \overline{\dot{m}_{\rm b,\alpha}'''}
+$$
+
+$$
+\frac{(\overline{\rho} \tilde{Z}_\alpha)}{\partial t} + \frac{\partial (\overline{\rho} \tilde{Z}_\alpha \tilde{u}_j)}{\partial x_j}
+= - \frac{\partial J_{\alpha,j}^{sgs}}{\partial x_j}
++ \frac{\partial}{\partial x_j}\left(\overline{\rho} D_\alpha[\tilde{T}] \frac{\partial \tilde{Z}_\alpha}{\partial x_j}\right)
++ \overline{\dot{m}_\alpha'''} + \overline{\dot{m}_{\rm b,\alpha}'''}
+$$
+
+where
+
+$$
+J_{\alpha,j}^{sgs} \equiv \overline{\rho} (\widetilde{Z_\alpha u_j} - \tilde{Z}_\alpha \tilde{u}_j)
 $$
 
 ## Thermal Coduction and Species Diffusion 
