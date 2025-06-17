@@ -14,7 +14,7 @@ definition, illustrative figure with u(t) = u_mean + u_fluct
 
 ## Spatial Filtering
 
-using a filter widht $\Delta$, define filtered quantity $\overline{\phi}$
+using a filter width $\Delta$, define filtered quantity $\overline{\phi}$
 
 $$ 
 \overline{\phi}(x, y, z, t) \equiv \frac{1}{V_c}
