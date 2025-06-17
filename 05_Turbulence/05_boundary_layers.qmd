@@ -100,10 +100,10 @@ with $B_2=8.5$ and $\tilde{B}_{\text{max}} = 9.5$.
 
 ## Prandtl Number (Pr)
 
-The Prandtl number (Pr) is defined as the ratio of momentum to thermal diffussivity: 
+The Prandtl number (Pr) is defined as the ratio of momentum to thermal diffussivity ($\alpha$): 
 
 $$
-Pr = \frac{c_p\, \mu}{k}
+Pr = \frac{\nu}{\alpha} = \frac{c_p\, \mu}{k} \quad \text{with} \quad \alpha = \frac{k}{c_p \rho}
 $$
 
 with the thermal conductivity $k$.
@@ -168,28 +168,39 @@ $$
 
 In FDS, the characteristic length is chosen as $L=1 m$.
 
-## Nusselt Number (Nu)
+## Nusselt Number (Nu) -- Free Flow
+
+The Nusselt number (Nu) is the ratio of the total heat transfer to the conductive heat transfer at a boundary. For various configurations, follwoing correlations for the free flow: 
 
 $$
 \text{Nu}_{\text{free}} = 
 \left\{
 \begin{array}{ll}
 \left( 0.825 + 0.324 \, \text{Ra}^{1/6} \right)^2 & \text{Vertical plate or cylinder} \\
-0.54 \, \text{Ra}^{1/4} & \text{Horizontal hot plate facing up or cold plate facing down, } \text{Ra} \leq 10^7 \\
-0.15 \, \text{Ra}^{1/3} & \text{Horizontal hot plate facing up or cold plate facing down, } \text{Ra} > 10^7 \\
-0.52 \, \text{Ra}^{1/5} & \text{Horizontal hot plate facing down or cold plate facing up} \\
+0.54 \, \text{Ra}^{1/4} & \text{Horizontal hot plate facing up, } Ra \leq 10^7 \\
+0.15 \, \text{Ra}^{1/3} & \text{Horizontal hot plate facing up, } Ra > 10^7 \\
+0.52 \, \text{Ra}^{1/5} & \text{Horizontal hot plate facing down} \\
 \left( 0.60 + 0.321 \, \text{Ra}^{1/6} \right)^2 & \text{Horizontal cylinder} \\
 2 + 0.454 \, \text{Ra}^{1/4} & \text{Sphere}
 \end{array}
 \right.
 $$
 
+With the Rayleigh number (Ra) defined as 
+
 $$
-\text{Nu}_{\text{forced}} = C_0 + \left( C_1 \text{Re}^n - C_2 \right) \text{Pr}^{\frac{1}{3}}
-\quad \text{with} \quad 
-\text{Re} = \frac{\rho |\mathbf{u}| L}{\mu} 
+\text{Ra} = \frac{2g \left| T_g - T_w \right| L^3}{(T_g + T_w) \nu \alpha}
 $$
 
+## Nusselt Number (Nu) -- Forced Flow
+
+In case of a forced flow, the Nusselt number is a function of Re and Pr:
+
+$$
+\text{Nu}_{\text{forced}} = C_0 + \left( C_1 \text{Re}^n - C_2 \right) \text{Pr}^{\frac{1}{3}}
+$$
+
+With the coefficients $C_0$, $C_1$, $C_2$ and $n$ depending on the geometry and Re.
 
 ## Temperature Scaling
 
