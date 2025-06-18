@@ -61,7 +61,7 @@ plt.legend()
 plt.grid()
 
 # Nyquist wavelength
-plt.axvline(x = k0 * n / 2)
+plt.axvline(x = k0 * n / 2, ls='--', color='black', lw=0.5)
 
 # Plot reference data
 ref_data = np.loadtxt('cbcdata.txt')
