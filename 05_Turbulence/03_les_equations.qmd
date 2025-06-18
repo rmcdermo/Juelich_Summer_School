@@ -144,15 +144,11 @@ $$
 
 turbulent viscosity $\mu_t$ must be modelled
 
-sub-grid scale kinetic energy $k_{sgs}$
+we absorb the trace of the sub-grid stress, which is related to the sub-grid kinetic energy, $k_{sgs}$, into the pressure as follows
 
 $$
 k_{\mathrm{sgs}} \equiv \frac{1}{2} \tau_{kk}^{\mathrm{sgs}}
-$$
-
-pressure
-
-$$
+\quad ; \quad
 \bar{p} \equiv \overline{p} + \frac{2}{3} k_{\mathrm{sgs}}
 $$
 
@@ -259,4 +255,4 @@ $$
 (\rho D)_t = \frac{\mu_t}{\mathrm{Sc}_t}
 $$
 
-with the assumption / choice of Pr_t = Sc_t = const. = 0.5
+with the assumption / choice of $\mathrm{Pr}_t = \mathrm{Sc}_t$ = const. = 0.5
