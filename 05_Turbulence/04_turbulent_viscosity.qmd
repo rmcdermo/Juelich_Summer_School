@@ -6,18 +6,70 @@
 
 ## Deardorff
 
-## Exercise -- Decay of Resolved Kinetic Energy 
+## Exercise -- Decay of Isotropic Turbulence
 
-Use FDS case as basis
+**Description:** An initial velocity field (file [cbc32_uvw.csv](./exercises/decaying_turbulence/cbc32_uvw.csv)) in a periodic cubid domain (length $L$) is used to compute the decay of the kinetic energy due to turbulence. The number of grid points $n$ in all directions is 32.
 
-add analysis to estimate the evolution of kinetic energy as a function of time
+:::: {.columns}
+::: {.column width="50%"}
+![](./exercises/decaying_turbulence/initial_v_field.png){width=75% fig-align="center"}
+:::
+::: {.column width="50%"}
+$$
+L = 0.56549\ m
+$$
+
+$$
+k_0 = \frac{2\pi}{L} = 11.11\ m^{-1}
+$$
+
+$$
+k_{\text{Nq}} = \frac{k_0 \cdot n}{2} = 177.77\ m^{-1}
+$$
+:::
+::::
 
 
-![](./figs/EnergyDecay-sim-IC.png){height=150}
+## Exercise -- Task (I)
+
+1. Use the FDS input file template ([dec_turb_template.fds](./exercises/decaying_turbulence/dec_turb_template.fds)).
+1. Run the provided input file and visualise the velocity field (slices at domain boundary).
+1. Add a device to monitor the mean kinetic energy in the whole volume. 
+```
+ID = 'KE'
+QUANTITY = 'KINETIC ENERGY'
+SPATIAL_STATISTIC = 'MEAN'
+```
+4. Plot the development of the mean kinetic energy as a function of time.
+1. Create two additional cases:
+- molecular viscosity only
+- no turbulent and no molecular viscosity
+6. Plot the development in all cases and add the following reference data:
+```
+ref_x = [0.0, 0.28, 0.67]
+ref_y = [0.048, 0.0175, 0.0093]
+```
 
 ## Exercise -- Results
 
-![](./figs/EnergyDecay-sim-Result.png)
+![](./exercises/decaying_turbulence/KE.png)
+
+## Exercise -- Task (II)
+
+The provided input file outputs the full velocity field at three selected times. 
+
+```
+&DUMP RAMP_UVW='times' /
+&RAMP ID='times', T=0.00 /
+&RAMP ID='times', T=0.28 /
+&RAMP ID='times', T=0.67 /
+```
+
+Use the script [plot_spectrum.py](./exercises/decaying_turbulence/plot_spectrum.py) to compute and visualise the kinetic energy spectrum. Eventually, paths in the script need to be adjusted.
+
+## Exercise -- Results
+
+![](./exercises/decaying_turbulence/KE_spectrum.png)
 
 ## Exercise -- Shear Flow
 
