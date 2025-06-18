@@ -185,6 +185,8 @@ $$
 + (\overline{\rho} \, g_i + \overline{f}_{\mathrm{b},i}) \tilde{u}_i
 $$
 
+Here let's put an image of the Kolmogorov spectrum with intetral of resolved $K$ and subgrid $k_{sgs}$.
+
 ## Transport of Chemical Species
 
 $$
