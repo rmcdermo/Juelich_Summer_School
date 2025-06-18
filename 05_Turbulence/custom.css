@@ -6,3 +6,7 @@
   padding: 5;  /* You can use px, %, em, etc. */
   margin: 0 !important;
 }
+
+.reveal section div.center-h {
+	text-align: center;
+}
