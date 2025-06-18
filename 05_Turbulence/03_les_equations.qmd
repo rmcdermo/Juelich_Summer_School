@@ -24,8 +24,6 @@ $$
 \phi(x', y', z', t) \, \mathrm{d}x' \, \mathrm{d}y' \, \mathrm{d}z'
 $$
 
-mean of the square vs. square of the mean
-
 Favre averaging for variable density
 
 $$
@@ -33,6 +31,30 @@ $$
 $$
 
 needed, when density is not constant, as otherwise conservation properties may not be conserved
+
+## Filtered Fields -- Order Matters
+
+mean (filter) of the square vs. square of the mean (filter)
+
+::: columns
+::: {.column width="50%"}
+- Filtering and squaring do **not** commute.
+- This matters in turbulence modeling.
+- We filtered a high-frequency periodic field:
+  - Gaussian filter
+  - $$\Delta = 0.1\,L$$
+  - $$\overline{u^2} \neq \bar{u}^2$$
+- Therefore we cannot simply use resolved quantities for nonlinear terms
+- We require a "subgrid model" to account for the residual
+:::
+
+::: {.column width="50%"}
+<div style="text-align: center;">
+  <img src="./figs/mean_square_vs_square_mean.png" width="100%">
+  <div style="font-size: 90%; margin-top: 0.5em;">Filtered Comparison</div>
+</div>
+:::
+:::
 
 ## Exercise -- Filter a Given Function
 
