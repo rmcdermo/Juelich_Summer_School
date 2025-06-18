@@ -235,6 +235,10 @@ $$
 
 where
 
+<div style="display: flex; align-items: center;">
+
+<div style="flex: 1; padding-right: 1em;">
+
 $$
 \dot{q}_j''^{sgs} \equiv \overline{\rho}\left(\widetilde{h_s u_j}-\tilde{h}_s \tilde{u}_j\right)
 $$
@@ -242,6 +246,15 @@ $$
 $$
 \overline{\dot{q}_j''} = - \overline{k \frac{\partial T}{\partial x_j}} - \overline{ \sum_\alpha h_{s,\alpha} \rho D_\alpha[T] \frac{\partial Z_\alpha}{\partial x_j}}
 $$
+
+</div>
+
+<div style="flex: 1; text-align: center;">
+- $\dot{q}_j''^{sgs}$ is unclosed
+- $\overline{\dot{q}_j''}$ is unclosed and important at the wall
+</div>
+
+</div>
 
 ## Thermal Coduction and Species Diffusion 
 
