@@ -208,9 +208,22 @@ $$
 
 where
 
+<div style="display: flex; align-items: center;">
+
+<div style="flex: 1; padding-right: 1em;">
+
 $$
 J_{\alpha,j}^{sgs} \equiv \overline{\rho} (\widetilde{Z_\alpha u_j} - \tilde{Z}_\alpha \tilde{u}_j)
 $$
+
+</div>
+
+<div style="flex: 1; text-align: center;">
+- $J_{\alpha,j}^{sgs}$ is unclosed
+- $\overline{\dot{m}_\alpha'''}$ is unclosed and determines heat release rate!
+</div>
+
+</div>
 
 ## Transport of Sensible Enthalpy
 
