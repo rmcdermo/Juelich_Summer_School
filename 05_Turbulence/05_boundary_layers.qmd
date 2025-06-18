@@ -238,5 +238,51 @@ $$
 
 ## Exercise -- Heat Transfer to Compartment Ceiling
 
-- use Steckler compartment 
-- output various boundary data of ceiling
+**Description**: Stecker compartment.
+
+![](./exercises/compartment/geometry.png)
+
+## Exercise -- Tasks
+
+1. Run the provided input file ([steckler.fds](./exercises/compartment/steckler.fds)).
+2. Visualise the boundary data.
+
+## Exercise -- Results
+
+![](./exercises/compartment/bnd_y+_t100.png)
+
+:::{.center-h}
+t = 100 s
+:::
+
+## Exercise -- Results
+
+![](./exercises/compartment/bnd_y+_t300.png)
+
+:::{.center-h}
+t = 300 s
+:::
+
+## Exercise -- Results
+
+![](./exercises/compartment/bnd_y+_t500.png)
+
+:::{.center-h}
+t = 500 s
+:::
+
+## Exercise -- Results
+
+![](./exercises/compartment/bnd_stat_y+.png)
+
+## Exercise -- Results
+
+![](./exercises/compartment/bnd_stat_h.png)
+
+## Exercise -- Results
+
+![](./exercises/compartment/bnd_stat_con.png)
+
+## Exercise -- Results
+
+![](./exercises/compartment/bnd_stat_temp.png)
