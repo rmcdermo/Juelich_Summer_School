@@ -1,3 +1,18 @@
 # Turbulent Combustion
 
-## EDC
+## Also known as Turbulence-Chemistry-Interaction
+
+- But no one every says, "TCI", for whatever reason
+- In LES, composition (species and temperature) fields are under resolved
+- This means gradients are under estimated and hence mixing rates are under estimated
+- Another way to say this is, without a subgrid model the scalar dissipation rates would be under estimated
+- This means that the rate at which the scalar variance decays would be too slow
+- Reaction rates would be too slow and heat release rates would be inaccurate
+
+## Eddy Dissipation Concept (EDC)
+
+- The workhorse turbulent combustion model for fire is, technically, the "Eddy Disspation Model" (EDM)
+- First proposed by Bj\orn Magnussen in 1976
+- This is the classic "mixed is burnt" model
+- Another way to think of this is that EDM is EDC with infinitely fast chemistry
+- The rate of combustion (heat release) is completely determined by availability of fuel and air and the rate of mixing
