@@ -11,14 +11,27 @@
 
 ## Eddy Dissipation Concept (EDC)
 
+::: columns
+::: {.column width="60%"}
 - The workhorse turbulent combustion model for fire is, technically, the "Eddy Disspation Model" (EDM)
 - First proposed by Bjørn Magnussen in 1976
 - This is the classic "mixed is burnt" model
 - Another way to think of this is that EDM is EDC with infinitely fast chemistry
 - The rate of combustion (heat release) is completely determined by availability of fuel and air and the rate of mixing
+:::
+
+::: {.column width="40%"}
+<div style="text-align: center;">
+  <img src="./figs/Magnussen.png" width="60%">
+  <div style="font-size: 90%; margin-top: 0.5em;">Prof. Bjørn Magnussen</div>
+</div>
+:::
+:::
 
 ## Turbulent Batch Reactor Model
 
+::: columns
+::: {.column width="60%"}
 - The FDS flavor of EDC is call the "Turbulent Batch Reactor" model
 - There are subtle differences between EDC and TBR but they are essentially the same idea
 - TBR thinks of a grid cell as a time evolving batch reactor with
@@ -26,3 +39,12 @@
   - an initial state of mixing
   - a mixing time scale
   - a set of chemical kinetics (potentially infinitely fast)
+:::
+
+::: {.column width="40%"}
+<div style="text-align: center;">
+  <img src="./figs/transport_vs_mixing_1.png" width="75%">
+  <div style="font-size: 90%; margin-top: 0.5em;">subgrid composition</div>
+</div>
+:::
+:::
