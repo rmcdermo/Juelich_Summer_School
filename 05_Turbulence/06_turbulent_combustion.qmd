@@ -2,12 +2,23 @@
 
 ## Also known as Turbulence-Chemistry-Interaction
 
-- But no one every says, "TCI", for whatever reason
+- But no one ever says, "TCI", for whatever reason
 - In LES, composition (species and temperature) fields are under resolved
 - This means gradients are under estimated and hence mixing rates are under estimated
 - Another way to say this is, without a subgrid model the scalar dissipation rates would be under estimated
 - This means that the rate at which the scalar variance decays would be too slow
 - Reaction rates would be too slow and heat release rates would be inaccurate
+
+<div style="text-align: center;">
+<div style="font-size: 80%; margin-top: 0.5em;">
+$$
+\frac{(\overline{\rho} \tilde{Z}_\alpha)}{\partial t} + \frac{\partial (\overline{\rho} \tilde{Z}_\alpha \tilde{u}_j)}{\partial x_j}
+= - \frac{\partial J_{\alpha,j}^{sgs}}{\partial x_j}
++ \frac{\partial}{\partial x_j}\left(\overline{\rho} D_\alpha[\tilde{T}] \frac{\partial \tilde{Z}_\alpha}{\partial x_j}\right)
++ \underbrace{\overline{\dot{m}_\alpha'''}}_{\mathrm{mean\;chemical\;source\;term}} + \overline{\dot{m}_{\rm b,\alpha}'''}
+$$
+</div>
+</div>
 
 ## Eddy Dissipation Concept (EDC)
 
