@@ -100,18 +100,40 @@ $$
 
 ::: {.column width="40%"}
 $$
-\tau_{\mathrm{d}} = \frac{\Delta^2}{D_{\mathrm{F}}}
+\tau_{\text{d}} = \frac{\Delta^2}{D_{\mathrm{F}}}
 $$
 
 $$
-\tau_{\mathrm{u}} = \frac{C_{\mathrm{u}} \Delta}{\sqrt{(2/3)k_{\mathrm{sgs}}}}
+\tau_{\text{u}} = \frac{C_{\mathrm{u}} \Delta}{\sqrt{(2/3)k_{\mathrm{sgs}}}}
 $$
 
 $$
-\tau_{\mathrm{d}} = \sqrt{\frac{2\Delta}{g}}
+\tau_{\text{g}} = \sqrt{\frac{2\Delta}{g}}
 $$
 :::
 ::::
+
+## Exercise -- Estimate $\tau_\text{u}$
+
+Estimate $\tau_\text{u}$ using the model inertial energy spectrum to derive the following scaling law:
+
+$$
+\tau_\text{u} \sim \Delta ^ {2/3}
+$$
+
+Use the inertial range engery spectrum:
+
+$$
+E(k) \sim k^{-5/3}
+$$
+
+in
+
+$$
+\tau_u \sim \frac{\Delta}{\sqrt{k_\text{sgs}}}
+$$
+
+Use the Nyquist wave number for $\Delta$, i.e. $k_{Nq} = \pi / \Delta$, as the start of the unresolved sub-grid scale.
 
 ## Exercise -- Turbulent Mixing Time
 
