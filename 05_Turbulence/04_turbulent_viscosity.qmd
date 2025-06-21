@@ -2,9 +2,54 @@
 
 ## General Idea
 
-## Smagorinski
+- Multiple models available
+- Selection is based on comparision with validation experiments
 
-## Deardorff
+## Constant Coefficient Smagorinski Model
+
+The turbulent viscosity in this model is estimated as
+
+$$
+\mu_{\mathrm{t}} = \rho \left(C_{\text{S}} \Delta \right)^2 |S|
+$$
+
+with 
+
+$$
+|S| = \left( 2 S_{ij} S_{ij} - \frac{2}{3} \left( \nabla \cdot \mathbf{u} \right)^2 \right)^{\frac{1}{2}}
+$$
+
+and the Smagorinski constant $C_\text{S} = 0.2$.
+
+This model was default in old versions of FDS.
+
+## Deardorff Model
+
+This is the current default model in FDS. It computes the turbulent viscosity as 
+
+$$
+\mu_{\mathrm{t}} = \rho\, C_{V} \Delta \sqrt{k_{\mathrm{sgs}}}
+$$
+
+using the following approximation for $k_{\mathrm{sgs}}$
+
+$$
+k_{\mathrm{sgs}} = \frac{1}{2} \left( (\bar{u} - \hat{\bar{u}})^2 + (\bar{v} - \hat{\bar{v}})^2 + (\bar{w} - \hat{\bar{w}})^2 \right)
+$$
+
+Where $\bar{u}$ is the cell average at the cell center -- filtered velocity at $\Delta$ length scale. 
+
+<!-- $$
+\bar{u}_{ijk} = \frac{u_{ijk} + u_{i-1,jk}}{2}
+$$ -->
+
+And a weighted averaged velocity $\hat{\bar{u}}$ at the test filter length scale $2\Delta$.
+
+<!-- $$
+\hat{\bar{u}}_{ijk} = \frac{\bar{u}_{ijk}}{2} + \frac{\bar{u}_{i-1,jk} + \bar{u}_{i+1,jk}}{4}
+$$ -->
+
+The Deardorff constant $C_V$ is set to 0.1, based on literature.
 
 ## Exercise -- Decay of Isotropic Turbulence
 
