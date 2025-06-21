@@ -60,6 +60,59 @@ $$
 :::
 :::
 
+## Mixing
+
+- Cell mean mass fraction $\tilde{Y}_\alpha(t)$, with $\tilde{Y}_\alpha^0 = \tilde{Y}_\alpha(0)$
+- Two mixing states: unmixed and mixed
+- Mass fraction in the mixed zone: $\hat{Y}_\alpha(t)$, with $\hat{Y}_\alpha(0) = \tilde{Y}_\alpha^0$
+- Unmixed fraction in a cell denoted by $\zeta(t)$, which evolves in time as 
+
+$$
+\frac{\mathrm{d}\zeta}{\mathrm{d}t} = -\frac{\zeta}{\tau_{\text{mix}}}\quad \Rightarrow \quad \zeta(t) = \zeta_0 \cdot e^{-t/\tau_{\text{mix}}} \quad \text{and} \quad \zeta_0 = 1
+$$
+
+![](./figs/Mixing-Evolution.png){fig-align="center"}
+
+## Evolution of the Chemical Source Term
+
+The composition of the two zones in a cell is given by
+
+$$
+\tilde{Y}_\alpha(t) = \zeta(t)\tilde{Y}_\alpha^0 + \left(1 - \zeta(t)\right)\hat{Y}_\alpha(t)
+$$
+
+and leads to the following source term for the mass
+
+$$
+\dot{m}'''_\alpha = \rho \frac{\mathrm{d}\tilde{Y}_\alpha}{\mathrm{d}t} = \rho \left[ \frac{\zeta}{\tau_{\text{mix}}} \left(\hat{Y}_\alpha - \tilde{Y}_\alpha^0 \right) + (1 - \zeta) \frac{\mathrm{d}\hat{Y}_\alpha}{\mathrm{d}t} \right]
+$$
+
+## Mixing Time Scales
+
+$$
+\tau_{\text{mix}} = \max\left( \tau_{\text{chem}}, \min(\tau_\text{d}, \tau_\text{u}, \tau_\text{g}, \tau_{\text{flame}}) \right)
+$$
+
+:::: {.columns}
+::: {.column width="60%"}
+![](./figs/Reaction-Time-Scales.png)
+:::
+
+::: {.column width="40%"}
+$$
+\tau_{\mathrm{d}} = \frac{\Delta^2}{D_{\mathrm{F}}}
+$$
+
+$$
+\tau_{\mathrm{u}} = \frac{C_{\mathrm{u}} \Delta}{\sqrt{(2/3)k_{\mathrm{sgs}}}}
+$$
+
+$$
+\tau_{\mathrm{d}} = \sqrt{\frac{2\Delta}{g}}
+$$
+:::
+::::
+
 ## Exercise -- Turbulent Mixing Time
 
 **Description**: In a simple pool fire, the impact of the turbulent mixing time $\tau_{\text{mix}}$ on the flame height shall be investigated.
