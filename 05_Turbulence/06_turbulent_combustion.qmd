@@ -59,3 +59,38 @@ $$
 </div>
 :::
 :::
+
+## Exercise -- Turbulent Mixing Time
+
+**Description**: In a simple pool fire, the impact of the turbulent mixing time $\tau_{\text{mix}}$ on the flame height shall be investigated.
+
+:::: {.columns}
+::: {.column width="30%"}
+![](./exercises/mixing_times/geometry.png){width="50%" fig-align="center"}
+:::
+::: {.column width="70%"}
+$$A_{\text{fire}} = 1\ m \times 1\ m$$
+
+$$\dot{Q}_{\text{max}} = 1512\ kW$$
+
+Heskestad flame height $L_f$ (50% visible flame intermittency)
+$$
+L_f = 0.235\cdot \dot{Q}^{2/5} - 1.02\cdot D
+$$
+:::
+::::
+
+## Exercise -- Tasks
+
+1. Compute the Heskestad flame height.
+1. Use the FDS inputfile ([mixing_times.fds](./exercises/mixing_times/mixing_times.fds)) for the exercise. Adjust the mixing time by setting the `FIXED_MIX_TIME` in the `&COMB` line. 
+1. Create a `rundir` directory and according subdirectories.
+1. Use the plotting script [plot_flame_height.py](./exercises/mixing_times/plot_flame_height.py) to illustrate the `HRRPUL` values.
+
+## Exercise -- Results
+
+![](./exercises/mixing_times/HRR.png)
+
+## Exercise -- Results
+
+![](./exercises/mixing_times/flame_height.png)
