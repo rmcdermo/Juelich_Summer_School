@@ -1,3 +1,62 @@
 # Turbulence Radiation Interaction
 
-## TRI
+## Radiation Source Term
+
+$$
+-\overline{\nabla\cdot\mathbf{\dot{q}^{''}}_r}
+=\int_{0}^{\infty} \left(\overline{\kappa_\eta U_\eta }-\overline{4\pi\kappa_{\eta}I_{b\eta}} \right) \mbox{d} \eta
+$$
+
+<div style="margin-top: 2em;"></div>
+
+::: columns
+::: {.column width="50%"}
+$$
+\overline{\kappa(\mathbf{Y},T) I_b(T)} = \kappa(\widetilde{\mathbf{Y}},\widetilde T)I_b(\widetilde T)
+$$
+$$
++ [\overline{\kappa(\mathbf{Y},T)}-\kappa(\widetilde {\mathbf{Y}}, \widetilde T)]I_b(\widetilde T)
+$$
+$$
++ \overline{\kappa(\mathbf{Y},T)}[\overline{I_b(T)}-I_b(\widetilde T)]
+$$
+$$
++ \overline{\kappa(\mathbf{Y},T) I_b(T)}-\overline{\kappa(\mathbf{Y},T)} \,\overline{I_b(T)}
+$$
+:::
+
+::: {.column width="50%"}
+- Subgrid correlation for absorption usually ignored, hence $\overline{\kappa_\eta U_\eta} \approx \overline{\kappa}_\eta \overline{U}_\eta$
+- Emission TRI is decomposed into
+  - Resolved emission
+  - Absorption self-correlation
+  - Temperature self-correlation
+  - Absorption-Temperature cross-correlation
+:::
+:::
+
+## EDC Consistent Flame Zone Model
+
+<div style="text-align: center;">
+  <img src="./figs/tmp_zones.png" width="25%">
+  <div style="font-size: 90%; margin-top: 0.5em;">Two Zone Flame Model</div>
+</div>
+
+$$
+\overline{\kappa(\mathbf{Y},T) I_b(T)}
+\approx \kappa(\widetilde{\mathbf{Y}},\widetilde T)I_b(\widetilde T)
++ \overline{\kappa(\mathbf{Y},T)}[ \overline{I_b(T)}-I_b(\widetilde T)]
+$$
+$$
+\approx \frac{\sigma}{\pi}\kappa(\mathbf{Y}_u,T_u)(X_u \,T_u^4 + X_f \,T_f^4)
+$$
+
+See Rashidzadeh et al. (FISJ 2023) for details.
+
+## TRI Discussion
+
+- TRI is very much still a research problem
+- In practice, we still rely on prescribing a radiant fraction, but this is may not be sufficient locally, which is important for fire growth and flame spread prediction
+- In practice, "gray gas" models are usually used for the absorption coefficient and RADCAL, for example, requires a path length, which is user specified.  Unfortunately, the sensitivity to path length is on the same order as the effects of TRI with varying grid resolution (temperature and species resolution).  Hence, it is very difficult to separate the effects of TRI and models for $\kappa$
+
+
