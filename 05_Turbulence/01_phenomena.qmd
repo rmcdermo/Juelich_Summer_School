@@ -16,15 +16,15 @@ In general:
 - Intermittency
 - Scalar Mixing
 - Eddies
-- structure and energy Cascade
+- Structure and energy Cascade
 - Dissipation at small scales
 - Chaotic, yet structured
 
 In fire dynamics:
 
-- mixing for combustion
-- fire plume dynamics
-- enhance of heat and mass transfer
+- Mixing for combustion
+- Fire plume dynamics
+- Enhance of heat and mass transfer
 :::
 
 ::: {.column width="50%"}
@@ -34,14 +34,36 @@ In fire dynamics:
 ::::
 
 
+## Example -- Buoyant Plume
 
+:::: {.columns}
 
+::: {.column width='50%'}
+![](./figs/Fluctuations_Experimental_Setup_Photo.jpg){height="400" fig-align="center"}
+:::
 
+::: {.column width='50%'}
+![](./figs/Fluctuations_Schematics_PIV.jpg){height="400" fig-align="center"}
+:::
+::::
 
+- Compartment size: $735\ \text{mm} \times 575\ \text{mm} \times 65\ \text{mm}$
+- Heating block size: $60\ \text{mm} \times 60\ \text{mm} \times 40\ \text{mm}$
+- Four heating rates
 
+## Example -- PIV Instantanious Velocity Field
 
+![](./figs/Fluctuations_PIV_Field.png){fig-align="center"}
 
-## Example?
+## Example -- PIV Instantanious Velocity Field
+
+![](./figs/Fluctuations_Time_Series.png){fig-align="center"}
+
+## Example -- PIV Instantanious Velocity Field
+
+![](./figs/Fluctuations_Distribution.png){fig-align="center"}
+
+## 
 
 pipe flow
 
@@ -50,9 +72,3 @@ magnitude velocity profile
 non trivial normal velocities
 
 instantanious velocity values (maybe from our plume measurements?)
-
-## Exercise -- Compute fluctuation spectrum?
-
-given instantanious velocity data, compute fluctuations
-
-![](./figs/Fluctuations-Results.png)
