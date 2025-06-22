@@ -8,6 +8,10 @@ resolved vs. modeled sub-grid scale quantites, e.g. k_sgs and K for kinetic ener
 
 ![](./figs/Scales-DNS-LES.png)
 
+## Resolution of the Energy Spectrum
+
+![](./figs/Energy-Spectrum_Nq.png){fig-align="center"}
+
 ## Temporal Averaging
 
 Decomposition of $\phi(t)$ into an time averaged part $\langle \phi(t) \rangle$ and a fluctuating part $\phi'(t)$.

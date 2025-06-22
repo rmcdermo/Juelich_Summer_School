@@ -109,13 +109,17 @@ $$
 
 ## Energy Spectrum
 
-$$E(k) = C \, \varepsilon^{2/3} \, k^{-5/3}$$
+Energy spectrum in the inertial range, as a function of the wave number $k=2\pi/\lambda$:
 
-![](./figs/Energy-Spectrum.png)
+$$
+E(k) = C \, \varepsilon^{2/3} \, k^{-5/3}
+$$
+
+![](./figs/Energy-Spectrum.png){fig-align="center"}
 
 ## Numerical Resolution
 
-![](./figs/Numerical-Resolution.png)
+![](./figs/Numerical-Resolution.png){fig-align="center"}
 
 ## Exercise -- Estimate Kolmogorov Scale $\eta$
 
