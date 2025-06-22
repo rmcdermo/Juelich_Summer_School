@@ -119,6 +119,40 @@ $$E(k) = C \, \varepsilon^{2/3} \, k^{-5/3}$$
 
 ![](./figs/Numerical-Resolution.png)
 
+## Exercise -- Estimate Kolmogorov Scale $\eta$
+
+1. Given the following approximation for $\varepsilon$ with $U$ and $L$ at large scale
+$$
+\varepsilon \sim U^3 L
+$$
+express the Kolmogorov scale $\eta$ as a function of the Reynolds number.
+
+1. Estimate $\eta$ for a 1 m pool fire.
+
+$$
+\eta = \left( \frac{\nu^3}{\varepsilon} \right)^{1/4}
+$$
+
+## Exercise -- Result
+
+$$
+\eta \sim \left( \frac{\nu^3 L}{U^3} \right)^{1/4} = \left( L\frac{\nu^3}{U^3} \right)^{1/4}
+$$
+
+with 
+
+$$
+Re = \frac{U\, L}{\nu} \Leftrightarrow \frac{\nu}{U} = \frac{L}{Re}
+$$
+
+leads to
+
+$$
+\eta = \left( L \frac{L^3}{Re^3} \right)^{1/4} = L\, Re^{-3/4}
+$$
+
+With $Re = 10^5$ and $L=1\ m$, the Kolmogorov length scale is $\eta \approx 0.2\ mm$. This is the length scale, which needs to be resolved to capture the dissipation scale. 
+
 ## DNS
 
 direct numerical simulation of the Navier-Stokes equations, no subgrid turbulence model
@@ -145,14 +179,3 @@ S_{ij} \equiv \frac{1}{2} \left( \frac{\partial u_i}{\partial x_j} + \frac{\part
 $$
 
 
-## Exercise -- Estimate $\eta$
-
-Use estimation of dissipation rate eps = U^3 / L
-
-U, L at large scale
-
-eta approx L * Re^-3/4
-
-do the small scales matter?
-
-High numerical resolution needed down to $\eta$
