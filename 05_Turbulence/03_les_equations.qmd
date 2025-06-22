@@ -20,7 +20,7 @@ $$
 
 ## Spatial Filtering
 
-using a filter width $\Delta$, define a "box" filtered quantity $\overline{\phi}$
+Create a filtered field $\overline{\phi}$ using a filter with a width of $\Delta$. E.g. using a "box" filter:
 
 $$ 
 \overline{\phi}(x, y, z, t) \equiv \frac{1}{V_c}
@@ -30,53 +30,76 @@ $$
 \phi(x', y', z', t) \, \mathrm{d}x' \, \mathrm{d}y' \, \mathrm{d}z'
 $$
 
-Favre averaging for variable density
+Additinally, Favre averaging $\widetilde{\phi}$ for variable density
 
 $$
 \overline{\rho} \, \widetilde{\phi} \equiv \overline{\rho \phi} \quad \Rightarrow \quad \widetilde{\phi} \equiv \frac{\overline{\rho \phi}}{\overline{\rho}}
 $$
 
-needed, when density is not constant, as otherwise conservation properties may not be conserved
-
-## Filtered Fields -- Order Matters
-
-mean (filter) of the square vs. square of the mean (filter)
-
-::: columns
-::: {.column width="50%"}
-- Filtering and squaring do **not** commute.
-- This matters in turbulence modeling.
-- We filtered a high-frequency periodic field:
-  - Gaussian filter
-  - $$\Delta = 0.1\,L$$
-  - $$\overline{u^2} \neq \bar{u}^2$$
-- Therefore we cannot simply use resolved quantities for nonlinear terms
-- We require a "subgrid model" to account for the residual
-:::
-
-::: {.column width="50%"}
-<div style="text-align: center;">
-  <img src="./figs/mean_square_vs_square_mean.png" width="100%">
-  <div style="font-size: 90%; margin-top: 0.5em;">Filtered Comparison</div>
-</div>
-:::
-:::
+is needed, when density is not constant, as otherwise conservation properties may not be conserved.
 
 ## Exercise -- Filter a Given Function
 
-is this a good / needed exercise?
+The following three cell field for $u$ and $\rho$ is given:
 
-exercise with simple numbers, done on paper
+| $\sf{Cell\ ID}$ | $\rho \,/\, (\sf{kg/m^3})$ | $u \,/\, (\sf{m/s})$ |
+| ---- | --------------- | --------- |
+| 1    | 1.0             | 10.0      |
+| 2    | 10.0            | 1.0       |
+| 3    | 1.0             | 10.0      |
 
-given (e.g. three value pairs) u and rho, compute u_bar and u_tilde and u_rho_bar
-
-check for for total momentum with / without favre filter
-
-| Cell | $\rho$ (kg/m^3) | $u$ (m/s) | $\rho u$ (kg/m^2/s) |
+<!-- | $\sf{Cell ID}$ | $\rho \,/\, (\sf{kg/m^3})$ | $u \,/\, (\sf{m/s})$ | $\rho\,u \,/\,(\sf{kg/m^2/s})$ |
 | ---- | --------------- | --------- | ------------------- |
 | 1    | 1.0             | 10.0      | 10.0                |
 | 2    | 10.0            | 1.0       | 10.0                |
-| 3    | 1.0             | 10.0      | 10.0                |
+| 3    | 1.0             | 10.0      | 10.0                | -->
+
+Compute the following expressions (using $\bar{\phi} = \frac{1}{n}\sum_i{\phi_i}$):
+
+1. $\rho\cdot u$
+1. $\bar{u}$ and $\bar{\rho}$
+1. $\overline{\rho\cdot u}$ and $\bar{\rho}\cdot\bar{u}$
+1. $\tilde{u}$ and $\bar{\rho}\cdot\tilde{u}$
+
+## Exercise -- Results
+
+1. $(\rho\cdot u)_i = 10\ \sf{kg/m/s}$ 
+1. - $\bar{u} = \sf{21/3 \ m/s = 7\ m/s}$
+   - $\bar{\rho} = \sf{12/3 \ kg/m^3 = 4 \ kg/m^3}$
+1. - $\overline{\rho\cdot u} = \sf{10\ kg/m/s}$ 
+   - $\bar{\rho}\cdot\bar{u} = \sf{28\ kg/m/s}$
+   - $\overline{\rho\cdot u} \neq \bar{\rho}\cdot\bar{u}$
+1. - $\tilde{u} = \sf{10 / 4\ kg/m/s = 2.5\ kg/m/s}$ 
+   - $\bar{\rho}\cdot\tilde{u} = \sf{4 \cdot 2.5\ kg/m/s = 10\ kg/m/s}$
+   - $\overline{\rho\cdot u} = \bar{\rho}\cdot\tilde{u}$, per construction
+
+## Filtered Fields -- Order Matters
+
+:::: {.columns}
+::: {.column width="50%"}
+- Filtering and squaring do **not** commute
+- This matters in turbulence modeling
+- We filtered a high-frequency periodic field:
+  - Gaussian filter
+  - $\Delta = 0.1\,L$
+  - $\overline{u^2} \neq \bar{u}^2$
+- Therefore we cannot simply use resolved quantities for nonlinear terms
+- A "subgrid model" is needed to account for the residual
+:::
+
+::: {.column width="50%"}
+<!-- <div style="text-align: center;">
+  <img src="./figs/mean_square_vs_square_mean.png" width="100%">
+  <div style="font-size: 90%; margin-top: 0.5em;">Filtered Comparison</div>
+</div> -->
+![](./figs/mean_square_vs_square_mean.png)
+
+<!-- ::: {.center-h}
+Filtered Comparison
+::: -->
+
+:::
+::::
 
 
 ## LES Momentum Equation (I)
