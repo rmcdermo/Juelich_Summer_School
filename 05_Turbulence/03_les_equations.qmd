@@ -10,7 +10,13 @@ resolved vs. modeled sub-grid scale quantites, e.g. k_sgs and K for kinetic ener
 
 ## Temporal Averaging
 
-definition, illustrative figure with u(t) = u_mean + u_fluct
+Decomposition of $\phi(t)$ into an time averaged part $\langle \phi(t) \rangle$ and a fluctuating part $\phi'(t)$.
+
+$$
+\phi(t) = \langle \phi(t) \rangle + \phi'(t)
+$$
+
+![](./figs/time_average_illustration.png){fig-align="center"}
 
 ## Spatial Filtering
 
