@@ -53,23 +53,22 @@ The Deardorff constant $C_V$ is set to 0.1, based on literature.
 
 ## Exercise -- Decay of Isotropic Turbulence
 
-**Description:** An initial velocity field (file [cbc32_uvw.csv](./exercises/decaying_turbulence/cbc32_uvw.csv)) in a periodic cubic domain (length $L$) is used to compute the decay of the kinetic energy due to turbulence. The number of grid points $n$ in all directions is 32.
+**Description:** An initial velocity field (file [cbc32_uvw.csv](./exercises/decaying_turbulence/cbc32_uvw.csv)) in a periodic cubic domain (length $L$) is used to compute the decay of the kinetic energy due to turbulence. The number of grid points in all directions is 32.
 
 :::: {.columns}
 ::: {.column width="50%"}
 ![](./exercises/decaying_turbulence/initial_v_field.png){width=75% fig-align="center"}
 :::
 ::: {.column width="50%"}
-$$
-L = 0.56549\ m
-$$
 
 $$
-k_0 = \frac{2\pi}{L} = 11.11\ m^{-1}
-$$
-
-$$
-k_{\text{Nq}} = \frac{k_0 \cdot n}{2} = 177.77\ m^{-1}
+\begin{align}
+n &= 32 \\
+L &= 0.56549\ m \\
+k_0 &= \frac{2\pi}{L} = 11.11\ m^{-1}\\
+k_{\text{Nq}} &= \frac{2\pi}{\lambda_\text{min}} = \frac{2\pi}{2\Delta}\\
+&= \frac{k_0 \cdot n}{2} = 177.77\ m^{-1}
+\end{align}
 $$
 :::
 ::::
