@@ -133,7 +133,23 @@ $$
 \tau_u \sim \frac{\Delta}{\sqrt{k_\text{sgs}}}
 $$
 
-Use the Nyquist wave number for $\Delta$, i.e. $k_{Nq} = \pi / \Delta$, as the start of the unresolved sub-grid scale.
+Hint: Use the Nyquist wave number for $\Delta$, as the start of the unresolved sub-grid scale.
+
+## Exercise -- Result
+
+$$
+\tau_u^2 \sim \frac{\Delta}{\sqrt{k_{\text{sgs}}}}
+$$
+$$
+E(k) \sim k^{-5/3}
+$$
+$$
+k_{\text{Nq}} = \frac{2\pi}{\lambda_\text{min}} = \frac{2\pi}{2\Delta} = \frac{\pi}{\Delta}
+$$
+$$
+k_{\text{sgs}} \equiv \int_{\text{Nq}}^{\infty} E(k) \, \text{d}k 
+= \int_{\frac{\pi}{\Delta}}^{\infty} k^{-5/3} \, \text{d}k
+$$
 
 ## Exercise -- Turbulent Mixing Time
 
