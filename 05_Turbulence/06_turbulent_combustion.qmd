@@ -133,12 +133,12 @@ $$
 \tau_u \sim \frac{\Delta}{\sqrt{k_\text{sgs}}}
 $$
 
-Hint: Use the Nyquist wave number for $\Delta$, as the start of the unresolved sub-grid scale.
+Hint: Use the Nyquist wave number for the filter width $\Delta$, as the start of the unresolved sub-grid scale.
 
 ## Exercise -- Result
 
 $$
-\tau_u^2 \sim \frac{\Delta}{\sqrt{k_{\text{sgs}}}}
+\tau_u \sim \frac{\Delta}{\sqrt{k_{\text{sgs}}}}
 $$
 $$
 E(k) \sim k^{-5/3}
@@ -147,8 +147,17 @@ $$
 k_{\text{Nq}} = \frac{2\pi}{\lambda_\text{min}} = \frac{2\pi}{2\Delta} = \frac{\pi}{\Delta}
 $$
 $$
-k_{\text{sgs}} \equiv \int_{\text{Nq}}^{\infty} E(k) \, \text{d}k 
-= \int_{\frac{\pi}{\Delta}}^{\infty} k^{-5/3} \, \text{d}k
+\begin{align}
+k_{\text{sgs}} &\equiv \int_{\text{Nq}}^{\infty} E(k) \, \text{d}k 
+= \int_{\frac{\pi}{\Delta}}^{\infty} k^{-5/3} \, \text{d}k \\
+&= -\frac{3}{2} \left|k^{-2/3} \right|_{\frac{\pi}{\Delta}}^{\infty} = - \frac{3}{2}\left(0 - \left(\frac{\pi}{\Delta}\right)^{-2/3}\right) \sim \left(\frac{1}{\Delta}\right)^{-2/3} = \Delta^{2/3}
+\end{align}
+$$
+
+$$
+\tau_u \sim \frac{\Delta}{\sqrt{k_{\text{sgs}}}} 
+= \frac{\Delta}{\Delta^{\frac{2}{3} \cdot \frac{1}{2}}}
+= \Delta^{2/3}
 $$
 
 ## Exercise -- Turbulent Mixing Time
