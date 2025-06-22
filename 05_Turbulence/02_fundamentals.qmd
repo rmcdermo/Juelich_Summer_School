@@ -19,7 +19,7 @@ With:
 - the fluid density $\rho$, in $\sf kg/m^3$
 - the flow velocity $v$, in $\sf m/s$
 - a characteristic length scale $L$, in $\sf m$
-- the dynamic $\mu$ and kinematic $\nu$ viscosity of the fluid, in $\sf kg/(ms)$ and $\sf m^2/s$
+- the dynamic $\mu$ and kinematic $\nu$ viscosity of the fluid, in $\sf kg/(m\,s)$ and $\sf m^2/s$
 
 ## Turbulence Characterisation with the Reynolds Number
 
@@ -51,15 +51,19 @@ The simulation geometry is a 2D domain with a main object (plate) and a small ob
 ## Exercise -- Results
 
 $$
-v_0 = 0.5 m/s
+v_0 = \sf{0.5\ m/s}
 $$
 
 $$
-H_O = 0.01 m
+H_O = \sf{0.01\ m}
 $$
 
 $$
-Re = \frac{v\, L}{\nu} = \frac{v_0\, H_O}{\nu} = \frac{5\cdot 10^{-3}}{\nu}
+\nu = \sf{1.2\cdot 10^{-5}\ m^2/s}
+$$
+
+$$
+Re = \frac{v\, L}{\nu} = \frac{v_0\, H_O}{\nu} = \frac{5\cdot 10^{-3}}{\nu} = 416
 $$
 
 ## Exercise -- Results
@@ -85,12 +89,6 @@ $$\nu = 6\cdot 10^{-6} \Rightarrow Re \approx 833$$
 
 ![](./figs/Scales-Overview.png)
 
-Integral scale 
-
-Intertial scale
-
-Kolmogorov scale
-
 ## Kolmogorov theory
 
 Assumptions:
@@ -101,9 +99,13 @@ Assumptions:
 
 Kolmogorov Scales:
 
-- length: $\eta = \left( \frac{\nu^3}{\varepsilon} \right)^{1/4}$
-- time: $\tau_\eta = \left( \frac{\nu}{\varepsilon} \right)^{1/2}$
-- velocity: $u_\eta = (\nu \varepsilon)^{1/4}$
+$$
+\begin{aligned}
+\text{length:} \quad \eta &= \left( \frac{\nu^3}{\varepsilon} \right)^{1/4} \\
+\text{time:} \quad \tau_\eta &= \left( \frac{\nu}{\varepsilon} \right)^{1/2} \\
+\text{velocity:} \quad u_\eta &= (\nu \varepsilon)^{1/4} 
+\end{aligned}
+$$
 
 ## Energy Spectrum
 
