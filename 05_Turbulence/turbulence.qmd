@@ -21,7 +21,7 @@ author:
       - name: Forschungszentrum Jülich & <br>University of Wuppertal
   - name: "Bjarne Husted"
     id: bh
-    orcid: 0000-0000-0000-0002
+    orcid: 0000-0001-6314-1677
     email: bphu@dtu.dk
     affiliation:
       - name: Danmarks Tekniske Universitet
