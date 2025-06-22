@@ -2,15 +2,16 @@
 
 ## Idea: Subgrid Scale (SGS) Modelling
 
-figure with energy specturm illustrating the resolved and modelled parts
+![](./figs/Scales-DNS-LES.png){fig-align="center"}
 
-resolved vs. modeled sub-grid scale quantites, e.g. k_sgs and K for kinetic energy
-
-![](./figs/Scales-DNS-LES.png)
+- Not the full energy spectrum is resolved, but only down to a spatial scale $\Delta > \eta$
+- The non-resolved part, at the subgrid scale (SGS), must be modelled 
 
 ## Resolution of the Energy Spectrum
 
 ![](./figs/Energy-Spectrum_Nq.png){fig-align="center"}
+
+The resolved kinetic energy $K$ covers the part up to a wave number of $k_{\text{Nq}}$, while $k_{\text{sgs}} represents the modelled not resolved part above $k_{\text{Nq}}$.
 
 ## Temporal Averaging
 
@@ -108,7 +109,7 @@ Filtered Comparison
 
 ## LES Momentum Equation (I)
 
-DNS equation (without mass source, external forces)
+Starting with the DNS momentum equation,
 
 $$ 
 \frac{\partial \rho u_i}{\partial t} + \frac{\partial}{\partial x_j} (\rho u_i u_j) 
@@ -117,7 +118,7 @@ $$
 $$
 
 
-use spatial filter, derivatives and filtering commute
+a spatial filter leads to (derivatives and filtering commute):
 
 $$
 \frac{\partial \overline{\rho u_i}}{\partial t}
@@ -127,11 +128,12 @@ $$
 + \overline{\rho} g_i + \overline{f_{d,i}} + \overline{\dot{m}'''_{\text{b}} u_{\text{b},i}}
 $$
 
-Problem: $\overline{\rho u_i u_j}$
-
-Use Favre filter: $\overline{\rho} \, \widetilde{{u}_i {u}_j}$
+Non-linear term, which can not be further reduced: $\overline{\rho u_i u_j}$
 
 ## LES Momentum Equation (II)
+
+Now, use Favre filter: $\overline{\rho} \, \widetilde{{u}_i {u}_j}$
+
 
 $$
 \frac{\partial \overline{\rho} \, \tilde{u}_i}{\partial t}
@@ -144,15 +146,15 @@ $$
 $$
 
 
-all primitve variables, but $\widetilde{{u}_i {u}_j} \neq\tilde{u}_i\tilde{u}_j$
+This leads to all primitve variables (e.g. $u_i \rightarrow \tilde{u}_i$), but for $\widetilde{{u}_i {u}_j} \neq\tilde{u}_i\tilde{u}_j$.
 
-find closure, but defining a sub-grid scale stress $\tau_{ij}^{\text{sgs}}$
+To find closure, a sub-grid scale stress $\tau_{ij}^{\text{sgs}}$ is defined with only primitve variables
 
 $$
 \tau_{ij}^{\text{sgs}} \equiv \overline{\rho} \left( \widetilde{u_i u_j} - \tilde{u}_i \tilde{u}_j \right)
 $$
 
-this leads to the LES momentum equation
+which leads to the LES momentum equation
 
 $$
 \frac{\partial \overline{\rho} \, \tilde{u}_i}{\partial t}
@@ -304,7 +306,7 @@ $$
 
 </div>
 
-## Thermal Coduction and Species Diffusion 
+<!-- ## Thermal Coduction and Species Diffusion 
 
 $$
 k_t = \frac{\mu_t c_p}{\mathrm{Pr}_t}
@@ -316,4 +318,4 @@ $$
 (\rho D)_t = \frac{\mu_t}{\mathrm{Sc}_t}
 $$
 
-with the assumption / choice of $\mathrm{Pr}_t = \mathrm{Sc}_t$ = const. = 0.5
+with the assumption / choice of $\mathrm{Pr}_t = \mathrm{Sc}_t$ = const. = 0.5 -->
