@@ -62,13 +62,3 @@ In fire dynamics:
 ## Example -- PIV Instantanious Velocity Field
 
 ![](./figs/Fluctuations_Distribution.png){fig-align="center"}
-
-## 
-
-pipe flow
-
-magnitude velocity profile
-
-non trivial normal velocities
-
-instantanious velocity values (maybe from our plume measurements?)

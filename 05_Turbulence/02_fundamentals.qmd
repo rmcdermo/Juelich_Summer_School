@@ -1,16 +1,12 @@
 # Fundamentals Turbulence
 
-## Governing Equations -- needed at this point?
-
-Navier Stokes equation
-
-species equation
-
-energy equation
-
 ## Reynolds Experiment (1883)
 
-![](./figs/Flows_from_Reynolds_1883_paper.jpg)
+![Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Reynolds_fluid_turbulence_experiment_1883.jpg)](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Reynolds_fluid_turbulence_experiment_1883.jpg/1059px-Reynolds_fluid_turbulence_experiment_1883.jpg)
+
+## Reynolds Experiment -- Results
+
+![Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/Reynolds_number#/media/File:Flows_from_Reynolds_1883_paper.jpg)](https://upload.wikimedia.org/wikipedia/commons/d/d3/Flows_from_Reynolds_1883_paper.jpg)
 
 ## Reynolds Number
 
@@ -20,10 +16,10 @@ $$ \text{Re} = \frac{vL}{\nu} = \frac{\rho v L}{\mu} $$
 
 With: 
 
-- the fluid density $\rho$, in $kg/m^3$
-- the flow velocity $v$, in $m/s$
-- a characteristic length scale $L$, in $m$
-- the dynamic $\mu$ and kinematic $\nu$ viscosity of the fluid, in $kg/(ms)$ and $m^2/s$
+- the fluid density $\rho$, in $\sf kg/m^3$
+- the flow velocity $v$, in $\sf m/s$
+- a characteristic length scale $L$, in $\sf m$
+- the dynamic $\mu$ and kinematic $\nu$ viscosity of the fluid, in $\sf kg/(ms)$ and $\sf m^2/s$
 
 ## Turbulence Characterisation with the Reynolds Number
 

@@ -13,14 +13,4 @@
 
 ## FDS user perspective on turbulence
 
-## Not Covered
-
-- Boundary layers
-- Wall functions
-- Interaction of Turbulence with chemistry and radiation
-
 ## Summary
-
-## Exercise -- Mixing??
-
-## Exercise -- Lukas naive plume
