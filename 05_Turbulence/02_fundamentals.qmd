@@ -46,6 +46,7 @@ The simulation geometry is a 2D domain with a main object (plate) and a small ob
 1. Visualize the result, e.g., the y-component of the vorticity.
 1. Adjust the Reynolds number by a factor of 0.5 and 10 by adjusting the viscosity.
 1. Compare the results. What do you observe?
+1. (Optional) Create plots of the vorticity field with the script [plot_results.py](./exercises/vortex_street/plot_results.py). To run it without adoption, the script assumes the results to be located in the following directory structure: `rundir/nu*`.
 
 
 ## Exercise -- Results
