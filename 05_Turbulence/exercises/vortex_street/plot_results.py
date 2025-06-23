@@ -5,7 +5,7 @@ import os
 
 import fdsreader
 
-rdirs = glob.glob("rundir/nu*")
+rdirs = sorted(glob.glob("rundir/nu*"))
 
 for d in rdirs:
     nu = os.path.split(d)[-1]

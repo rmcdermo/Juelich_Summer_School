@@ -44,10 +44,28 @@ The simulation geometry is a 2D domain with a main object (plate) and a small ob
 1. Calculate the Reynolds number for this setup.
 1. Run the execution of the provided FDS input file. 
 1. Visualize the result, e.g., the y-component of the vorticity.
-1. Adjust the Reynolds number by a factor of 0.5 and 10 by adjusting the viscosity.
+1. Adjust the Reynolds number by a factor of 10 and 0.5 by adjusting the viscosity.
 1. Compare the results. What do you observe?
 1. (Optional) Create plots of the vorticity field with the script [plot_results.py](./exercises/vortex_street/plot_results.py). To run it without adoption, the script assumes the results to be located in the following directory structure: `rundir/nu*`.
 
+## Exercise -- Files
+
+::: {.panel-tabset}
+
+### vortex_street.fds
+
+```{.python}
+{{< include ./exercises/vortex_street/vortex_street.fds >}}
+```
+
+
+### plot_results.py
+
+```{.python}
+{{< include ./exercises/vortex_street/plot_results.py >}}
+```
+
+:::
 
 ## Exercise -- Results
 
