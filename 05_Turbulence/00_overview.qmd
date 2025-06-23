@@ -1,6 +1,6 @@
 # Introduction and Overview
 
-## Teaching goals
+## Teaching Goals
 
 <table style="border-collapse: collapse; width: 100%;">
   <tr>
@@ -18,7 +18,7 @@
   <tr>
     <td style="border: 1px solid black; text-align: left; padding: 6px;">Scientific competence; what does the student know about theory</td>
     <td style="border: 1px solid black; text-align: left; padding: 6px;">Basic fluid mechanics</td>
-    <td style="border: 1px solid black; text-align: left; padding: 6px;">Can identify and describe three main types of modeling in CFD</td>
+    <td style="border: 1px solid black; text-align: left; padding: 6px;">Can identify and describe the main types of turbulnce modeling in CFD</td>
     <td style="border: 1px solid black; text-align: left; padding: 6px;">Can identify the relevant length and time scales in a flow scenario and relate these to turbulence scales</td>
     <td style="border: 1px solid black; text-align: left; padding: 6px;">Dynamic models, etc.</td>
   </tr>
