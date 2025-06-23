@@ -7,7 +7,7 @@ format:
     # theme: solarized
     slide-number: "c"
     css: custom.css
-    margin: 0.05
+    margin: 0.075
     html-math-method: 
       method: mathjax
       url: https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-mml-chtml.min.js
