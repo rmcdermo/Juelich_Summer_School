@@ -148,13 +148,13 @@ $$
 
 This leads to all primitve variables (e.g. $u_i \rightarrow \tilde{u}_i$), but for $\widetilde{{u}_i {u}_j} \neq\tilde{u}_i\tilde{u}_j$.
 
-To find closure, a sub-grid scale stress $\tau_{ij}^{\text{sgs}}$ is defined with only primitve variables
+To find closure, a sub-grid scale stress $\tau_{ij}^{\text{sgs}}$ is defined 
 
 $$
 \tau_{ij}^{\text{sgs}} \equiv \overline{\rho} \left( \widetilde{u_i u_j} - \tilde{u}_i \tilde{u}_j \right)
 $$
 
-which leads to the LES momentum equation
+which leads to the LES momentum equation with only primitve variables
 
 $$
 \frac{\partial \overline{\rho} \, \tilde{u}_i}{\partial t}
