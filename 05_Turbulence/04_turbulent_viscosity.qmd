@@ -2,6 +2,12 @@
 
 ## General Idea
 
+- Gradient diffusion idea: turbulence enhances fluxes, which are oriented by the concentration gradient and a diffusivity 
+
+$$
+\overline{\textbf{u}\, \phi} = -D_t \nabla\bar{\phi}
+$$
+
 - Multiple models available
 - Selection is based on comparision with validation experiments
 
@@ -16,7 +22,7 @@ $$
 with 
 
 $$
-|S| = \left( 2 S_{ij} S_{ij} - \frac{2}{3} \left( \nabla \cdot \mathbf{u} \right)^2 \right)^{\frac{1}{2}}
+|S| = \sqrt{ 2 S_{ij} S_{ij} - \frac{2}{3} \left( \nabla \cdot \mathbf{u} \right)^2 }
 $$
 
 and the Smagorinski constant $C_\text{S} = 0.2$.
@@ -115,7 +121,7 @@ Use the script [plot_spectrum.py](./exercises/decaying_turbulence/plot_spectrum.
 
 ![](./exercises/decaying_turbulence/KE_spectrum.png)
 
-## Exercise -- Shear Flow
+<!-- ## Exercise -- Shear Flow
 
 setup: shear flow, 2D, bounded, periodic
 
@@ -127,6 +133,6 @@ goal: ??
 
 ![](./figs/ShearFlow-sim-Result.png)
 
-## Thermal and material diffusivity
+## Thermal and material diffusivity -->
 
 
