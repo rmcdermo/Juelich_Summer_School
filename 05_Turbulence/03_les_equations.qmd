@@ -11,7 +11,7 @@
 
 ![](./figs/Energy-Spectrum_Nq.png){fig-align="center"}
 
-The resolved kinetic energy $K$ covers the part up to a wave number of $k_{\text{Nq}}$, while $k_{\text{sgs}} represents the modelled not resolved part above $k_{\text{Nq}}$.
+The resolved kinetic energy $K$ covers the part up to a wave number of $k_{\text{Nq}}$, while $k_{\text{sgs}}$ represents the modelled not resolved part above $k_{\text{Nq}}$.
 
 ## Temporal Averaging
 
