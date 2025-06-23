@@ -150,7 +150,7 @@ $$
 \begin{align}
 k_{\text{sgs}} &\equiv \int_{\text{Nq}}^{\infty} E(k) \, \text{d}k 
 = \int_{\frac{\pi}{\Delta}}^{\infty} k^{-5/3} \, \text{d}k \\
-&= -\frac{3}{2} \left|k^{-2/3} \right|_{\frac{\pi}{\Delta}}^{\infty} = - \frac{3}{2}\left(0 - \left(\frac{\pi}{\Delta}\right)^{-2/3}\right) \sim \left(\frac{1}{\Delta}\right)^{-2/3} = \Delta^{2/3}
+&= -\frac{3}{2} \left[k^{-2/3} \right]_{\frac{\pi}{\Delta}}^{\infty} = - \frac{3}{2}\left(0 - \left(\frac{\pi}{\Delta}\right)^{-2/3}\right) \sim \left(\frac{1}{\Delta}\right)^{-2/3} = \Delta^{2/3}
 \end{align}
 $$
 
