@@ -238,14 +238,15 @@ $$
 
 ## Exercise -- Heat Transfer to Compartment Ceiling
 
-**Description**: Stecker compartment.
+**Description**: The geometry is a simple compartment with a single opening. There is a pool fire located in the center. The goal is to qualitatively observe some data at the ceiling boundary.
 
-![](./exercises/compartment/geometry.png)
+![](./exercises/compartment/geometry.png){fig-align="center"}
 
 ## Exercise -- Tasks
 
 1. Run the provided input file ([steckler.fds](./exercises/compartment/steckler.fds)).
-2. Visualise the boundary data.
+2. Visualise the boundary data (e.g. $y^+$, $h$).
+3. (Optional) Look at some of the slice data at the y-plane.
 
 ## Exercise -- Results
 
