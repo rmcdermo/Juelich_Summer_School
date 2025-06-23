@@ -54,7 +54,7 @@ The simulation geometry is a 2D domain with a main object (plate) and a small ob
 
 ### vortex_street.fds
 
-```{.python}
+```{.fortran}
 {{< include ./exercises/vortex_street/vortex_street.fds >}}
 ```
 
