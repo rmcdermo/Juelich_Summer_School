@@ -1,6 +1,6 @@
 # Summary
 
-## Simulation modes in FDS
+## Simulation Modes in FDS
 
 | **Key Parameter**              | **'DNS'**    | **'LES'**    | **'VLES'**      | **'SVLES'**     |
 |--------------------------------|--------------|--------------|-----------------|-----------------|
@@ -11,6 +11,14 @@
 | `EXTINCTION_MODEL`             | 2            | 2            | 1               | 1               |
 
 
-## FDS user perspective on turbulence
-
 ## Summary
+
+- Turbulence is a complex phenomena, not only in fires
+- Turbulence has an impact not only on the fluid dynamcis only
+- Turbulence effects have to be modelled, as the small scales matter
+
+- In general, no need to adjust turbulence models and its parameters for practical applications
+
+## Now, just enjoy
+
+{{< video ./figs/small_compartment_demo.mp4 >}}
