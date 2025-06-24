@@ -169,7 +169,7 @@ $$
 
 ## Turbulent Viscosity
 
-decompose $\tau_{ij}^{\text{sgs}}$
+Decompose $\tau_{ij}^{\text{sgs}}$
 
 $$
 \tau_{ij}^{\mathrm{dev}} \equiv \overline{\tau}_{ij} + \tau^{\mathrm{sgs}}_{ij} 
@@ -177,9 +177,9 @@ $$
 = -2 (\mu + \mu_t) \left( \widetilde{S}_{ij} - \frac{1}{3} (\nabla \cdot \tilde{\mathbf{u}}) \delta_{ij} \right)
 $$
 
-turbulent viscosity $\mu_t$ must be modelled
+here, the turbulent viscosity $\mu_t$ must be modelled.
 
-we absorb the trace of the sub-grid stress, which is related to the sub-grid kinetic energy, $k_{sgs}$, into the pressure as follows
+The trace of the sub-grid stress, which is related to the sub-grid kinetic energy, $k_{sgs}$, is absorbed into the pressure as follows
 
 $$
 k_{\mathrm{sgs}} \equiv \frac{1}{2} \tau_{kk}^{\mathrm{sgs}}
@@ -187,7 +187,7 @@ k_{\mathrm{sgs}} \equiv \frac{1}{2} \tau_{kk}^{\mathrm{sgs}}
 \bar{p} \equiv \overline{p} + \frac{2}{3} k_{\mathrm{sgs}}
 $$
 
-leads to apparently same equations as DNS
+This leads to apparently same equations as DNS:
 
 $$
 \frac{\partial \overline{\rho} \, \tilde{u}_i}{\partial t}
@@ -201,7 +201,7 @@ $$
 
 ## Transport of Kinetic Energy
 
-resolved kinetic energy: $K \equiv \frac{1}{2} \tilde{u}_i \tilde{u}_i$
+The resolved kinetic energy is $K \equiv \frac{1}{2} \tilde{u}_i \tilde{u}_i$ and is transpored as
 
 $$
 \overline{\rho} \,\frac{D K}{D t}
@@ -220,7 +220,7 @@ $$
 + (\overline{\rho} \, g_i + \overline{f}_{\mathrm{b},i}) \tilde{u}_i
 $$
 
-Here let's put an image of the Kolmogorov spectrum with intetral of resolved $K$ and subgrid $k_{sgs}$.
+<!-- Here let's put an image of the Kolmogorov spectrum with intetral of resolved $K$ and subgrid $k_{sgs}$. -->
 
 ## Transport of Chemical Species
 
