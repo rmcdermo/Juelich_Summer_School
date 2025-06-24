@@ -244,7 +244,7 @@ $$
 
 ## Exercise -- Tasks
 
-1. Run the provided input file ([steckler.fds](./exercises/compartment/steckler.fds)).
+1. Run the provided input file ([compartment.fds](./exercises/compartment/compartment.fds)).
 2. Visualise the boundary data (e.g. $y^+$, $h$).
 3. (Optional) Look at some of the slice data at the y-plane.
 
