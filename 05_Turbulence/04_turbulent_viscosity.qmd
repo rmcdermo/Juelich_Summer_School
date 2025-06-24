@@ -113,7 +113,7 @@ $$
 ## Exercise -- Task (I)
 
 1. Use the FDS input file template ([dec_turb_template.fds](./exercises/decaying_turbulence/dec_turb_template.fds)).
-1. Run the provided input file and visualize the velocity field (slices at domain boundary).
+1. Run the provided input file (e.g. in subdirectories of `rundir`) and visualize the velocity field (slices at domain boundary).
 1. Add a device to monitor the mean kinetic energy in the whole volume. 
 ```
 ID = 'KE'
@@ -121,9 +121,7 @@ QUANTITY = 'KINETIC ENERGY'
 SPATIAL_STATISTIC = 'MEAN'
 ```
 4. Plot the development of the mean kinetic energy as a function of time.
-1. Create two additional cases:
-- molecular viscosity only
-- no turbulent and no molecular viscosity
+1. Create two additional cases: (A) molecular viscosity only and (B) no turbulent and no molecular viscosity.
 6. Plot the development in all cases and add the following reference data:
 ```
 ref_x = [0.0, 0.28, 0.67]
