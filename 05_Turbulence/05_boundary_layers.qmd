@@ -252,7 +252,7 @@ $$
 
 ::: {.panel-tabset}
 
-### cbc32_uvw.csv
+### compartment.fds
 
 ```{.fortran}
 {{< include ./exercises/compartment/compartment.fds >}}
