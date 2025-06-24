@@ -21,14 +21,9 @@ With:
 - a characteristic length scale $L$, in $\sf m$
 - the dynamic $\mu$ and kinematic $\nu$ viscosity of the fluid, in $\sf kg/(m\,s)$ and $\sf m^2/s$
 
-## Turbulence Characterisation with the Reynolds Number
+## Turbulence Characterisation with Re
 
-Example pipe flow?
-
-- Re < xxx : laminar
-- Re > xxx : turbulent
-
-Example, estimate Re for a candle and a pool fire 
+![Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Moody_EN.svg)](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Moody_EN.svg/1280px-Moody_EN.svg.png)
 
 ## Exercise -- Kármán Vortex Street
 
@@ -203,9 +198,9 @@ $$
 
 With $Re = 10^5$ and $L=1\ m$, the Kolmogorov length scale is $\eta \approx 0.2\ mm$. This is the length scale, which needs to be resolved to capture the dissipation scale. 
 
-## DNS
+## DNS -- Direct Numerical Simulation
 
-direct numerical simulation of the Navier-Stokes equations, no subgrid turbulence model
+Direct numerical simulation of the Navier-Stokes equations
 
 $$ 
 \frac{\partial \rho u_i}{\partial t} + \frac{\partial}{\partial x_j} (\rho u_i u_j) 
@@ -213,13 +208,13 @@ $$
 + \rho g_i + f_{d,i} + \dot{m}'''_{\text{b}} u_{\text{b},i}
 $$
 
-the Kolmogorov scale, $\eta$, needs to be resolved
+no subgrid turbulence model needed, as the Kolmogorov scale, $\eta$, must to be resolved
 
 $$
 \eta = \left( \frac{\nu^3}{\varepsilon} \right)^{1/4}
 $$
 
-dissipation rate and strain rate tensor
+with the following dissipation rate and strain rate tensor
 
 $$
 \varepsilon \equiv \tau_{ij} \frac{\partial u_i}{\partial x_j}
