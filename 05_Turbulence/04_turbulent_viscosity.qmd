@@ -79,6 +79,36 @@ $$
 :::
 ::::
 
+## Exercise -- Files
+
+::: {.panel-tabset}
+
+<!-- ### cbc32_uvw.csv
+
+```{.csv}
+{{< include ./exercises/decaying_turbulence/cbc32_uvw.csv >}}
+``` -->
+
+
+### dec_turb_template.fds
+
+```{.fortran}
+{{< include ./exercises/decaying_turbulence/dec_turb_template.fds >}}
+```
+
+### plot_spectrum.py
+
+```{.python}
+{{< include ./exercises/decaying_turbulence/plot_spectrum.py >}}
+```
+
+### plot_ke.py
+
+```{.python}
+{{< include ./exercises/decaying_turbulence/plot_ke.py >}}
+```
+
+:::
 
 ## Exercise -- Task (I)
 
@@ -100,6 +130,8 @@ ref_x = [0.0, 0.28, 0.67]
 ref_y = [0.048, 0.0175, 0.0093]
 ```
 
+Hint: If needed, use the plotting script [plot_ke.py](./exercises/decaying_turbulence/plot_ke.py), which expects data in subdirectories of `rundir`.
+
 ## Exercise -- Results
 
 ![](./exercises/decaying_turbulence/KE.png)
@@ -115,7 +147,7 @@ The provided input file outputs the full velocity field at three selected times.
 &RAMP ID='times', T=0.67 /
 ```
 
-Use the script [plot_spectrum.py](./exercises/decaying_turbulence/plot_spectrum.py) to compute and visualize the kinetic energy spectrum. Eventually, paths in the script need to be adjusted.
+Use the script [plot_spectrum.py](./exercises/decaying_turbulence/plot_spectrum.py) to compute and visualize the kinetic energy spectrum, and to compare it with reference data [cbcdata.txt](./exercises/decaying_turbulence/cbcdata.txt). Eventually, paths in the script need to be adjusted, default is `rundir/deardorff`.
 
 ## Exercise -- Results
 
