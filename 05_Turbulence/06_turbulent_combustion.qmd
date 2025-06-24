@@ -180,12 +180,30 @@ $$
 :::
 ::::
 
+## Exercise -- Files
+
+::: {.panel-tabset}
+
+### mixing_times.fds
+
+```{.fortran}
+{{< include ./exercises/mixing_times/mixing_times.fds >}}
+```
+
+### plot_flame_height.py
+
+```{.fortran}
+{{< include ./exercises/mixing_times/plot_flame_height.py >}}
+```
+
+:::
+
 ## Exercise -- Tasks
 
 1. Compute the Heskestad flame height.
 1. Use the FDS inputfile ([mixing_times.fds](./exercises/mixing_times/mixing_times.fds)) for the exercise. Adjust the mixing time by setting the `FIXED_MIX_TIME` in the `&COMB` line. 
-1. Create a `rundir` directory and according subdirectories.
-1. Use the plotting script [plot_flame_height.py](./exercises/mixing_times/plot_flame_height.py) to illustrate the `HRRPUL` values.
+1. Create a `rundir` directory and according subdirectories (`tau*`).
+1. Use the plotting script [plot_flame_height.py](./exercises/mixing_times/plot_flame_height.py) to illustrate the `HRRPUL` values. It assumes simulation data in subdirectories `rundir/tau*`.
 
 ## Exercise -- Results
 
