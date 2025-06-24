@@ -248,6 +248,17 @@ $$
 2. Visualise the boundary data (e.g. $y^+$, $h$).
 3. (Optional) Look at some of the slice data at the y-plane.
 
+## Exercise -- Files
+
+::: {.panel-tabset}
+
+### cbc32_uvw.csv
+
+```{.fortran}
+{{< include ./exercises/compartment/compartment.fds >}}
+```
+:::
+
 ## Exercise -- Results
 
 ![](./exercises/compartment/bnd_y+_t100.png)
