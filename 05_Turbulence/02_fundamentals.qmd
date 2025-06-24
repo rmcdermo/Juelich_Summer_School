@@ -34,7 +34,7 @@ Example, estimate Re for a candle and a pool fire
 
 **Description:** One of the impact parameters on the flow structure behind an object is the Reynolds number (Re). A classical phenomenon is the Kármán vortex street. In this example, the impact of Re is qualitatively investigated. 
 
-The simulation geometry is a 2D domain with a main object (plate) and a small object to disturb the symmetry. There is an fixed inflow $v_0$ boundary condition at $x_{\text{min}}$ and an open boundary condition at $x_{\text{max}}$. Both boundaries in z-direction are solid walls.
+The simulation geometry is a 2D domain with a main object (plate) and a small object to disturb the symmetry. There is an fixed inflow $v_0$ boundary condition at $x_{\text{min}}$ and an open boundary condition at $x_{\text{max}}$. At the lower quarter of the $x_{\text{min}}$, 'tagged' air (species `AIR1`) is induced. Both boundaries in z-direction are solid walls.
 
 ![](./exercises/vortex_street/Geometry_Sketch.png)
 
@@ -43,10 +43,10 @@ The simulation geometry is a 2D domain with a main object (plate) and a small ob
 1. Open the input file [vortex_street.fds](./exercises/vortex_street/vortex_street.fds) and check for the values of inflow velocity $v_0$, the geometry parameters $H_D$ and $H_O$, and the viscosity $\nu$ of the fluid.
 1. Calculate the Reynolds number for this setup.
 1. Run the execution of the provided FDS input file. 
-1. Visualize the result, e.g., the y-component of the vorticity.
-1. Adjust the Reynolds number by a factor of 10 and 0.5 by adjusting the viscosity.
+1. Visualize the result, e.g., the velocity, y-component of the vorticity and the `AIR1` mass fraction.
+1. Adjust the Reynolds number by a factor of 10 (up and down) by adjusting the viscosity.
 1. Compare the results. What do you observe?
-1. (Optional) Create plots of the vorticity field with the script [plot_results.py](./exercises/vortex_street/plot_results.py). To run it without adoption, the script assumes the results to be located in the following directory structure: `rundir/nu*`.
+1. (Optional) Create plots of various scripts with the script [plot_results.py](./exercises/vortex_street/plot_results.py). To run it without adoption, the script assumes the results to be located in the following directory structure: `rundir/nu*`.
 
 ## Exercise -- Files
 
@@ -85,24 +85,53 @@ $$
 Re = \frac{v\, L}{\nu} = \frac{v_0\, H_O}{\nu} = \frac{5\cdot 10^{-3}}{\nu} = 416
 $$
 
+$$
+\nu = 12\cdot 10^{-6} \Rightarrow Re \approx 416
+$$
+
+$$
+\nu = 12\cdot 10^{-5} \Rightarrow Re \approx 42
+$$
+
+$$
+\nu = 6\cdot 10^{-6} \Rightarrow Re \approx 4160
+$$
+
 ## Exercise -- Results
-
-$$\nu = 12\cdot 10^{-6} \Rightarrow Re \approx 416$$
-
-![](./exercises/vortex_street/result_nu_12e-6.png){}
+![](./exercises/vortex_street/result_vel_nu_12e-6.png)
 
 ## Exercise -- Results
-
-$$\nu = 12\cdot 10^{-5} \Rightarrow Re \approx 42$$
-
-![](./exercises/vortex_street/result_nu_12e-5.png){}
+![](./exercises/vortex_street/result_vel_nu_12e-5.png)
 
 ## Exercise -- Results
+![](./exercises/vortex_street/result_vel_nu_12e-7.png)
 
-$$\nu = 6\cdot 10^{-6} \Rightarrow Re \approx 833$$
+## Exercise -- Results
+![](./exercises/vortex_street/result_z-vel_nu_12e-6.png)
 
-![](./exercises/vortex_street/result_nu_6e-6.png){}
+## Exercise -- Results
+![](./exercises/vortex_street/result_z-vel_nu_12e-5.png)
 
+## Exercise -- Results
+![](./exercises/vortex_street/result_z-vel_nu_12e-7.png)
+
+## Exercise -- Results
+![](./exercises/vortex_street/result_vorticity_nu_12e-6.png)
+
+## Exercise -- Results
+![](./exercises/vortex_street/result_vorticity_nu_12e-5.png)
+
+## Exercise -- Results
+![](./exercises/vortex_street/result_vorticity_nu_12e-7.png)
+
+## Exercise -- Results
+![](./exercises/vortex_street/result_mf1_nu_12e-6.png)
+
+## Exercise -- Results
+![](./exercises/vortex_street/result_mf1_nu_12e-5.png)
+
+## Exercise -- Results
+![](./exercises/vortex_street/result_mf1_nu_12e-7.png)
 
 ## Scales in Turbulence
 
