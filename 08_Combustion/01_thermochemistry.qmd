@@ -1,0 +1,1104 @@
+# Thermochemistry
+
+## Stoichiometry {.stoichiometry-slide}
+
+::: {.stoichiometry-layout}
+
+::: {.stoichiometry-generic}
+
+$$\mathit{Fuel} + \mathit{Air} \longrightarrow \mathit{Products}$$
+
+:::
+
+::: {.stoichiometry-complete}
+
+COMPLETE COMBUSTION
+
+:::
+
+::: {.stoichiometry-reactants}
+
+$$\mathrm{C_3H_8} + 5\left[\mathrm{O_2} + (0.79/0.21)\mathrm{N_2}\right] \longrightarrow$$
+
+:::
+
+::: {.stoichiometry-products}
+
+$$3\mathrm{CO_2} + 4\mathrm{H_2O} + 5(0.79/0.21)\mathrm{N_2}$$
+
+:::
+
+::: {.stoichiometry-molecule}
+
+![](figs/thermochemistry/source/slide-006-picture-01.png){.stoichiometry-molecule-image fig-alt="Ball-and-stick model of a propane molecule."}
+
+:::
+
+::: {.stoichiometry-structural}
+
+<svg class="stoichiometry-structural-diagram" viewBox="0 0 600 360" role="img" aria-labelledby="propane-structure-title propane-structure-description">
+  <title id="propane-structure-title">Structural formula of propane</title>
+  <desc id="propane-structure-description">Three carbon atoms in a chain, with eight attached hydrogen atoms.</desc>
+  <g stroke="currentColor" stroke-width="7" stroke-linecap="square">
+    <line x1="76" y1="180" x2="112" y2="180" />
+    <line x1="168" y1="180" x2="252" y2="180" />
+    <line x1="348" y1="180" x2="432" y2="180" />
+    <line x1="488" y1="180" x2="524" y2="180" />
+    <line x1="140" y1="84" x2="140" y2="132" />
+    <line x1="300" y1="84" x2="300" y2="132" />
+    <line x1="460" y1="84" x2="460" y2="132" />
+    <line x1="140" y1="228" x2="140" y2="276" />
+    <line x1="300" y1="228" x2="300" y2="276" />
+    <line x1="460" y1="228" x2="460" y2="276" />
+  </g>
+  <g fill="currentColor" font-family="Arial, Helvetica, sans-serif" font-size="78" text-anchor="middle" dominant-baseline="central">
+    <text x="36" y="180">H</text>
+    <text x="140" y="180">C</text>
+    <text x="300" y="180">C</text>
+    <text x="460" y="180">C</text>
+    <text x="564" y="180">H</text>
+  </g>
+  <g fill="currentColor" font-family="Arial, Helvetica, sans-serif" font-size="68" text-anchor="middle" dominant-baseline="central">
+    <text x="140" y="46">H</text>
+    <text x="300" y="46">H</text>
+    <text x="460" y="46">H</text>
+    <text x="140" y="314">H</text>
+    <text x="300" y="314">H</text>
+    <text x="460" y="314">H</text>
+  </g>
+</svg>
+
+:::
+
+::: {.stoichiometry-structural-label}
+
+Propane, C₃H₈
+
+:::
+
+::: {.stoichiometry-source}
+
+Propane model: [Ben Mills / Wikimedia Commons (public domain)](https://commons.wikimedia.org/wiki/File:Propane-3D-balls-B.png)
+
+:::
+
+:::
+
+## Complex Fuels {.complex-fuels-slide}
+
+::: {.complex-fuels-layout}
+
+::: {.complex-fuels-fire}
+
+![](figs/thermochemistry/source/slide-007-picture-02.png){.complex-fuels-fire-image fig-alt="Logs burning in a wood fire."}
+
+:::
+
+::: {.complex-fuels-fire-source}
+
+Source: [“Why Doesn’t Wood Melt?”, *Today I Found Out* (2013)](https://www.todayifoundout.com/index.php/2013/08/why-doesnt-wood-melt/)
+
+:::
+
+::: {.complex-fuels-cellulose}
+
+![](figs/thermochemistry/source/slide-007-picture-01.png){.complex-fuels-cellulose-image fig-alt="Cellulose chains showing glucose repeat units and hydrogen bonds between strands."}
+
+:::
+
+::: {.complex-fuels-formula}
+
+$$\mathrm{CH_2O}$$
+
+:::
+
+::: {.complex-fuels-reference}
+
+[D. Drysdale (1998), Table 5.14](https://books.google.com/books?id=djtRAAAAMAAJ)
+
+:::
+
+::: {.complex-fuels-arrow aria-hidden="true"}
+
+<svg viewBox="0 0 100 220" focusable="false" aria-hidden="true">
+  <path d="M20 30 L17.7 60.8 L27 57.3 L77.2 191.1 L82.8 189 L32.6 55.2 L42 51.7 Z" />
+</svg>
+
+:::
+
+::: {.complex-fuels-label}
+
+Cellulose
+
+:::
+
+::: {.complex-fuels-cellulose-source}
+
+[Laghi.l, “Cellulose strand”](https://commons.wikimedia.org/wiki/File:Cellulose_strand.svg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons
+
+:::
+
+:::
+
+## Complex chemistry {.thermo-two-column}
+
+:::: {.columns}
+
+::: {.column width="42%"}
+
+GRI-Mech 3.0
+
+53 species
+
+400+ reactions
+
+:::
+
+::: {.column width="58%"}
+
+![](figs/thermochemistry/source/slide-008-picture-02.png){.thermo-source-figure fig-alt="Large smoke-producing fire illustrating the practical consequences of complex combustion chemistry."}
+
+:::
+
+::::
+
+## Heat release rate {.heat-release-rate-slide}
+
+::: {.heat-release-rate-layout}
+
+::: {.heat-release-rate-plot}
+
+![](figs/thermochemistry/source/slide-009-picture-04.png){fig-alt="Heskestad flame-height correlation compared with FDS calculations at three grid resolutions."}
+
+:::
+
+::: {.heat-release-rate-heading}
+
+Heskestad Flame Height
+
+:::
+
+::: {.heat-release-rate-correlation}
+
+$$\frac{L_f}{D}=3.7\left(\dot Q^*\right)^{2/5}-1.02$$
+
+:::
+
+::: {.heat-release-rate-unit}
+
+heat release rate [W]
+
+:::
+
+::: {.heat-release-rate-qstar}
+
+$$\dot Q^* = \frac{\dot Q}{\rho_\infty c_p T_\infty\sqrt{gD}\,D^2}$$
+
+:::
+
+::: {.heat-release-rate-mccaffrey}
+
+![](figs/thermochemistry/source/slide-009-picture-01.png){fig-alt="McCaffrey flame-height data."}
+
+:::
+
+:::
+
+## Local heat release rate per unit volume (HRRPUV) {.hrrpuv-slide}
+
+::: {.hrrpuv-layout}
+
+::: {.hrrpuv-equation}
+
+$$\dot q'''=-\dot m_F'''\,\Delta h_{c,F}$$
+
+:::
+
+::: {.hrrpuv-output-unit}
+
+$$[\dot q''']=\mathrm{W/m^3}$$
+
+:::
+
+::: {.hrrpuv-fuel-unit}
+
+$$\left[\dot m_F'''\right]=\frac{\mathrm{kg\text{-}F}}{\mathrm{m^3\,s}}$$
+
+:::
+
+::: {.hrrpuv-enthalpy-unit}
+
+$$\left[\Delta h_{c,F}\right]=\frac{\mathrm{J}}{\mathrm{kg\text{-}F}}$$
+
+:::
+
+:::
+
+## Chemical + sensible enthalpy {.enthalpy-slide}
+
+::: {.enthalpy-layout}
+
+::: {.enthalpy-species}
+
+$$h_\alpha(T)=\Delta h_{f,\alpha}^{\circ}+\int_{T_0}^{T}c_{p,\alpha}(T')\,\mathrm{d}T'$$
+
+:::
+
+::: {.enthalpy-formation-label}
+
+heat of formation
+
+:::
+
+::: {.enthalpy-formation-unit}
+
+$$[\mathrm{J/kg\text{-}\alpha}]$$
+
+:::
+
+::: {.enthalpy-sensible-label}
+
+sensible enthalpy
+
+:::
+
+::: {.enthalpy-mixture-label}
+
+enthalpy of a mixture:
+
+:::
+
+::: {.enthalpy-mixture}
+
+$$h=\sum_\alpha Y_\alpha h_\alpha$$
+
+:::
+
+::: {.enthalpy-sources}
+
+NASA  
+NIST-JANAF Tables  
+NIST Webbook
+
+:::
+
+:::
+
+## Heat of combustion {.heat-of-combustion-slide}
+
+::: {.heat-of-combustion-layout}
+
+::: {.heat-of-combustion-equation}
+
+$$\Delta h_{c,i}=-\sum_\alpha\nu_{\alpha,i}\left(\frac{W_\alpha}{W_F}\right)\Delta h_{f,\alpha}^{\circ}$$
+
+:::
+
+::: {.heat-of-combustion-formation}
+
+heat of formation $[\mathrm{J/kg\text{-}\alpha}]$
+
+:::
+
+::: {.heat-of-combustion-coefficient}
+
+stoichiometric coefficient for  
+species $\alpha$ in reaction $i$  
+reactants negative  
+products positive
+
+:::
+
+::: {.heat-of-combustion-note}
+
+stoichiometric coefficients represent moles of $\alpha$  
+produced per mole of fuel reacted
+
+:::
+
+::: {.heat-of-combustion-reaction-label}
+
+for reaction $i$
+
+:::
+
+:::
+
+## Heat of combustion -- oxygen basis {.heat-of-combustion-oxygen-slide}
+
+::: {.heat-of-combustion-oxygen-layout}
+
+::: {.heat-of-combustion-oxygen-equation}
+
+$$\Delta h_{c,O_2}=\Delta h_{c,F}\frac{\nu_F}{\nu_{O_2}}\frac{W_F}{W_{O_2}}$$
+
+:::
+
+::: {.heat-of-combustion-oxygen-epumo2}
+
+EPUMO2
+
+:::
+
+::: {.heat-of-combustion-oxygen-hoc}
+
+HEAT_OF_COMBUSTION
+
+:::
+
+:::
+
+## Example: heat of combustion for propane {.heat-of-combustion-example-slide}
+
+::: {.heat-of-combustion-example-layout}
+
+::: {.heat-of-combustion-example-table}
+
+| Species | Molecular Weight ($\mathrm{kg/kmol}$) | Enthalpy of Formation ($\mathrm{J/kg}$) |
+|---|---:|---:|
+| Propane, $\mathrm{C_3H_8}$ | 44.09562 | $-2.37\times10^6$ |
+| Oxygen, $\mathrm{O_2}$ | 31.99880 | $0$ |
+| Carbon Dioxide, $\mathrm{CO_2}$ | 44.00950 | $-8.94\times10^6$ |
+| Water Vapor, $\mathrm{H_2O}$ | 18.01528 | $-1.34\times10^7$ |
+
+:::
+
+::: {.heat-of-combustion-example-run}
+
+Run HOC.py
+
+:::
+
+::: {.heat-of-combustion-example-output}
+
+![](figs/thermochemistry/source/slide-014-picture-01.png){fig-alt="Original HOC.py output for propane."}
+
+:::
+
+::: {.heat-of-combustion-example-result}
+
+approx 13,000 $\mathrm{kJ/kg\ O_2}$
+
+:::
+
+:::
+
+## Ideal gas equation of state {.ideal-gas-slide}
+
+::: {.ideal-gas-layout}
+
+::: {.ideal-gas-density}
+
+$$\rho=\frac{p_0\overline W}{RT}$$
+
+:::
+
+::: {.ideal-gas-temperature}
+
+$$T=\frac{p_0\overline W}{\rho R}$$
+
+:::
+
+::: {.ideal-gas-molecular-weight}
+
+$$\overline W=\left(\sum_\alpha\frac{Y_\alpha}{W_\alpha}\right)^{-1}$$
+
+:::
+
+::: {.ideal-gas-density-label}
+
+mass density $[\mathrm{kg/m^3}]$
+
+:::
+
+::: {.ideal-gas-pressure-label}
+
+background pressure $[\mathrm{Pa}]$
+
+:::
+
+::: {.ideal-gas-molecular-weight-label}
+
+mixture molecular weight $[\mathrm{kg\text{-}mixture/kmol\text{-}mixture}]$
+
+:::
+
+::: {.ideal-gas-gas-constant-label}
+
+universal gas constant $[8314.5\ \mathrm{Pa\cdot m^3/(kmol\cdot K)}]$
+
+:::
+
+::: {.ideal-gas-temperature-label}
+
+temperature $[\mathrm{K}]$
+
+:::
+
+:::
+
+## Mixture molecular weight
+
+$$
+\overline W = \sum_\alpha X_\alpha W_\alpha
+$$
+
+$$
+\frac{\mathrm{kg\text{-}mixture}}{\mathrm{kmol\text{-}mixture}}
+=
+\frac{\mathrm{kmol\text{-}\alpha}}{\mathrm{kmol\text{-}mixture}}
+\frac{\mathrm{kg\text{-}\alpha}}{\mathrm{kmol\text{-}\alpha}}
+$$
+
+## Mixture molecular weight from mass fractions
+
+$$
+Y_\alpha = X_\alpha \frac{W_\alpha}{\overline W}
+$$
+
+$$
+\frac{\overline W}{W_\alpha} =
+\frac{X_\alpha}{Y_\alpha}
+$$
+
+
+## Mixture molecular weight derivation
+
+$$
+\sum_\alpha
+\left(
+Y_\alpha\frac{\overline W}{W_\alpha}
+\right)
+=
+\sum_\alpha X_\alpha = 1
+$$
+
+$$
+\boxed{
+\overline W =
+\left(
+\sum_\alpha\frac{Y_\alpha}{W_\alpha}
+\right)^{-1}
+}
+$$
+
+## Oxygen-consumption calorimetry {.thermo-two-column}
+
+:::: {.columns}
+
+::: {.column width="54%"}
+
+$$
+\dot Q =
+\Delta h_{c,O_2}
+\left(
+\dot m_{O_2,\mathrm{in}}
+-
+\dot m_{O_2,\mathrm{out}}
+\right)
+$$
+
+:::
+
+::: {.column width="46%"}
+
+![](figs/thermochemistry/source/slide-019-picture-01.png){.thermo-source-figure fig-alt="Schematic of a large-fire calorimetry exhaust-hood and duct system."}
+
+:::
+
+::::
+
+## Fire tests with real materials {.thermo-two-column .fire-tests-slide}
+
+:::: {.columns}
+
+::: {.column width="53%"}
+
+Measured
+
+:::
+
+::: {.column width="47%"}
+
+![](figs/thermochemistry/source/slide-019-picture-02.png){.thermo-source-figure fig-alt="Example large-fire calorimetry experiment and heat-release-rate measurement."}
+
+:::
+
+::::
+
+## Heat release rate in FDS {.thermo-two-column}
+
+:::: {.columns}
+
+::: {.column width="53%"}
+
+FDS computes HRR both ways, but first method is what gets used in energy equation.
+
+~~~~text
+hrrpuv_example/hrrpuv_reac_simple.fds
+~~~~
+
+1. plot hrr
+2. plot hrrpuv and hrrpuv reac
+
+:::
+
+::: {.column width="47%"}
+
+![](figs/thermochemistry/source/slide-021-picture-01.png){.thermo-source-figure fig-alt="Time history comparing two FDS heat-release-rate calculations."}
+
+:::
+
+::::
+
+## Adiabatic flame temperature
+
+First Law of Thermodynamics
+
+$$
+\Delta U = Q + W
+$$
+
+Recall the definition of enthalpy:
+
+$$
+\Delta H = \Delta U + P\Delta V = 0
+$$
+
+
+## Adiabatic flame temperature: propane in dry air
+
+$$
+T_0 = 20^\circ\mathrm{C},
+\qquad
+\Delta H_c =
+2.04\times10^6\ \mathrm{kJ/kmol\ C_3H_8}
+$$
+
+$$
+c_p = 37\ \mathrm{kJ/(kmol\,K)}
+$$
+
+$$
+T_f
+=
+T_0+\frac{\dot Q}{n c_p}
+=
+293+
+\frac{(1)(2.04\times10^6)}
+{\left[3+4+5(0.79/0.21)\right](37)}
+\approx 2429\ \mathrm{K}
+$$
+
+
+## Equivalence ratio {.thermo-two-column}
+
+:::: {.columns}
+
+::: {.column width="58%"}
+
+$$
+\Phi =
+\frac{Y_F/Y_A}
+{(Y_F/Y_A)_\mathrm{stoich}}
+$$
+
+Generally, fuel rich conditions are responsible for producing CO and soot.
+
+:::
+
+::: {.column width="42%"}
+
+![](figs/thermochemistry/source/slide-024-picture-04.png){.thermo-source-figure fig-alt="Candle flame with fuel-rich and fuel-lean regions."}
+
+:::
+
+::::
+
+## Types of combustion {.thermo-two-column}
+
+:::: {.columns}
+
+::: {.column width="48%"}
+
+Diffusion  
+Premixed
+
+Premixed  
+Partially premixed  
+Diffusion flame
+
+Types of Chemistry
+
+Infinitely fast  
+Equilibrium  
+Finite rate (Arrhenius)
+
+:::
+
+::: {.column width="52%"}
+
+![](figs/thermochemistry/source/slide-025-picture-01.jpeg){.thermo-source-figure fig-alt="Bunsen-burner flames showing changes in combustion mode with air entrainment."}
+
+:::
+
+::::
+
+## Mixture fraction for non-premixed flames {.thermo-two-column}
+
+:::: {.columns}
+
+::: {.column width="44%"}
+
+$$
+f =
+\frac{\text{mass originating from fuel stream}}
+{\text{total mass of mixture}}
+$$
+
+$$
+f=1 \quad \text{in fuel}
+$$
+
+$$
+f=0 \quad \text{in air}
+$$
+
+:::
+
+::: {.column width="56%"}
+
+![](figs/thermochemistry/source/slide-026-picture-01.png){.thermo-source-figure fig-alt="Turbulent non-premixed flame produced by a fuel stream mixing with surrounding air."}
+
+:::
+
+::::
+
+## Mixture fraction and product formation
+
+$$
+1\ \mathrm{kg\ Fuel}
++
+s\ \mathrm{kg\ Air}
+\rightarrow
+(1+s)\ \mathrm{kg\ Products}
+$$
+
+$$
+f =
+Y_F+\frac{1}{1+s}Y_P
+$$
+
+
+## Mixture fraction is a conserved scalar
+
+The mixture fraction is neither created nor destroyed locally, only transported.
+Assuming all species have equal diffusivities, $D$ $[\mathrm{m^2/s}]$, the mixture fraction evolves by
+
+$$
+\frac{\partial(\rho f)}{\partial t}
++
+\nabla\cdot(\rho f\mathbf u)
+=
+\nabla\cdot(\rho D\nabla f)
+$$
+
+No source term!
+
+Question: Is mixture fraction a passive scalar?
+
+## Infinitely fast chemistry
+
+Imagine that the rate of chemical kinetics is much much faster than the rate of mixing. In such a scenario, (for now ignoring the possibility of extinction) fuel and air cannot coexist because all of the limiting reactant is immediately converted to products.
+
+The local value of mixture fraction directly determines the local composition (mass fractions of Fuel, Air, and Products).
+
+## Burke--Schumann solution: stoichiometric condition
+
+$$
+f=f_\mathrm{st},
+\qquad
+Y_P=1,
+\qquad
+f_\mathrm{st}=\frac{1}{1+s}
+$$
+
+Question: How do you determine $s$?
+
+## Burke--Schumann solution: fuel-rich mixture
+
+$$
+Y_A=0,
+\qquad
+Y_F+Y_P=1
+$$
+
+$$
+Y_P = \left(\frac{1+s}{s}\right)(1-f)
+$$
+
+$$
+Y_F = \frac{(1+s)f-1}{s}
+$$
+
+## Burke--Schumann solution: fuel-lean mixture
+
+$$
+Y_F=0,
+\qquad
+Y_A+Y_P=1
+$$
+
+$$
+Y_P=(1+s)f
+$$
+
+$$
+Y_A=1-(1+s)f
+$$
+
+## Burke--Schumann solution: temperature
+
+$$
+mC_p(T_f-T_0)=\Delta m_F\Delta h_c
+$$
+
+$$
+\boxed{
+T_f =
+T_0+
+\frac{\Delta m_F\Delta h_c}{mC_p}
+}
+$$
+
+## Burke--Schumann solution: generated plots
+
+(See burke-schumann.py)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](figs/thermochemistry/burke-schumann-species.png){fig-alt="Fuel, air, and product mass fractions versus mixture fraction."}
+
+:::
+
+::: {.column width="50%"}
+
+![](figs/thermochemistry/burke-schumann-temperature.png){fig-alt="Temperature rise versus mixture fraction for the Burke-Schumann solution."}
+
+:::
+
+::::
+
+## Equilibrium chemistry {.thermo-two-column}
+
+:::: {.columns}
+
+::: {.column width="53%"}
+
+NASA CEA code
+
+https://chem.libretexts.org
+
+:::
+
+::: {.column width="47%"}
+
+![](figs/thermochemistry/source/slide-035-picture-01.png){.thermo-source-figure fig-alt="Mass-fraction history converging to an equilibrium composition."}
+
+:::
+
+::::
+
+## Finite-rate chemistry
+
+$$
+aA+bB\rightarrow cC+dD
+$$
+
+$$
+\frac{\mathrm{d}C_A}{\mathrm{d}t}
+=
+-k C_A^a C_B^b
+$$
+
+$$
+k=A\,T^n\exp\left(-\frac{E_a}{RT}\right)
+$$
+
+Arrhenius rate constant $[\text{appropriate units}]$  
+pre-exponential factor $[\text{appropriate units}]$  
+activation energy $[\mathrm{J/(mol\ K)}]$
+
+## Finite-rate chemistry: mass fractions
+
+primitive species
+
+$$
+C_\alpha =
+\frac{\rho Y_\alpha}{W_\alpha}
+$$
+
+$$
+\frac{\mathrm{d}Y_\alpha}{\mathrm{d}t}
+=
+\frac{1}{\rho}
+\sum_i r_{\alpha,i}
+$$
+
+
+## Example: Westbrook and Dryer {.thermo-two-column}
+
+:::: {.columns}
+
+::: {.column width="52%"}
+
+~~~~text
+Run reactionrate_arrhenius_2order_1step.fds
+~~~~
+
+1. Plot the time history of species mass fractions.
+2. Modify the `fds/Flowfields/realizable_mass_fractions.fds` case to use the Westbrook and Dryer propane reaction parameters (see FDS User Guide example).
+3. Plot the global combustion efficiency as a function of time.
+
+:::
+
+::: {.column width="48%"}
+
+![](figs/thermochemistry/source/slide-038-picture-01.png){.thermo-source-figure fig-alt="Species mass-fraction histories from a finite-rate propane reaction example."}
+
+:::
+
+::::
+
+## Rate laws
+
+Stoichiometry:
+
+$$
+F+sA\rightarrow(1+s)P
+$$
+
+$$
+Y_F+Y_A+Y_P=1
+$$
+
+Mixture fraction (still):
+
+$$
+f=Y_F+\frac{1}{1+s}Y_P
+$$
+
+reaction model
+
+But now need 2 transport equations, because Fuel and Air can coexist.
+
+## Reaction progress variables
+
+In general, the system can be defined in terms of the mixture fraction and a reaction progress variable.
+
+In FDS, we choose to use lumped species mass fractions as progress variables.
+
+This avoids complications related to defining boundary conditions for the generalized progress variable approach.
+
+## Lumped species
+
+Let’s go back to our propane reaction and write it two equivalent ways:
+
+$$
+\mathrm{C_3H_8+
+5\left[O_2+\left(\frac{0.79}{0.21}\right)N_2\right]
+\rightarrow
+3CO_2+4H_2O+
+5\left(\frac{0.79}{0.21}\right)N_2}
+$$
+
+$$
+\mathrm{
+C_3H_8+
+N_A\left[X_{O_2,A}O_2+X_{N_2,A}N_2\right]
+\rightarrow
+N_P\left[X_{CO_2,P}CO_2+X_{H_2O,P}H_2O+X_{N_2,P}N_2\right]
+}
+$$
+
+Air  
+Products  
+Fuel
+
+Question: How do you determine $N_A$, $N_P$?
+
+## Lumped-species definition
+
+Lumped species are groups of primitive species that transport and react together, implying equal diffusivities for the primitive species within the group.
+
+## Lumped-species molecular weights
+
+Question: What is $N_A W_A/W_F$?
+
+## Lumped-species mass fractions {.thermo-tight}
+
+$$
+Y_\alpha=X_\alpha\frac{W_\alpha}{\overline W}
+$$
+
+Recall:  
+Fuel  
+Air  
+Products  
+elements of $A$:
+
+## Example: lumped species to primitive species {.thermo-two-column .thermo-compact}
+
+:::: {.columns}
+
+::: {.column width="100%"}
+
+(See Z2Y.py)
+
+:::
+
+::::
+
+## Specified CO and soot yields
+
+$$
+y_\mathrm{CO}
+=
+N_P X_{\mathrm{CO},P}
+\frac{W_\mathrm{CO}}{W_F}
+$$
+
+$$
+y_S
+=
+N_P X_{S,P}
+\frac{W_S}{W_F}
+$$
+
+$\mathrm{C_{0.9}H_{0.1}}$  
+$W_S=10.9\ \mathrm{kg/kmol}$  
+SOOT_YIELD
+
+## Complete simple hydrocarbon chemistry
+
+![](figs/thermochemistry/source/slide-047-picture-01.png){.thermo-source-figure fig-alt="Original simple hydrocarbon chemistry reaction diagram."}
+
+![](figs/thermochemistry/source/slide-047-picture-02.png){.thermo-source-figure fig-alt="Original FDS output for simple hydrocarbon chemistry."}
+
+## Example: simple chemistry with FORMULA
+
+1. Run simple_chemistry_methane.fds.
+2. Modify input file for $\mathrm{CH_2O}$ using FORMULA.
+3. Add HEAT_OF_COMBUSTION.
+4. Add a CO_YIELD and a SOOT_YIELD.
+5. Examine the `.out` file for each case.
+
+## Example: custom fuel mixture
+
+Create a test case with the following natural gas fuel composition.
+
+![](figs/thermochemistry/source/slide-049-picture-01.png){.thermo-source-figure fig-alt="Natural-gas fuel mixture input from the original lecture."}
+
+Replace NITROGEN with CHLORINE. What happens?
+
+## Example: complex stoichiometry
+
+1. Define primitive species in the FDS input file.
+2. Define AIR and PRODUCT lumped species.
+3. Determine PRODUCT volume fractions and reaction coefficients.
+4. Add slice output for HCl.
+
+(See fds_complex_stoichiometry.py)
+
+## Two-step chemistry for CO and soot {.thermo-tight}
+
+$$
+\mathrm{C_3H_8+3O_2
+\rightarrow
+2CO+C+4H_2O}
+$$
+
+$$
+\mathrm{2CO+C+2O_2
+\rightarrow
+3CO_2}
+$$
+
+$$
+\mathrm{C_3H_8+5O_2
+\rightarrow
+3CO_2+4H_2O}
+$$
+
+FAST R1  
+FAST R2
+
+In this example, soot is treated as carbon (in general, “soot” can be more complex).  
+Both reactions are treated as “fast”, but R1 is given priority for $\mathrm{O_2}$.  
+CO:C ratio is a parameter in the model, 2:1 is arbitrary.  
+In this example, post-flame soot yield is zero, but that need not be the case.  
+If sufficient $\mathrm{O_2}$ is present, the model recovers the 1-step reaction by construction.
+
+## FDS propane visualization {.fds-propane-slide .source-slide-title}
+
+::: {.fds-propane-layout}
+
+::: {.fds-propane-video-poster}
+
+![](figs/thermochemistry/source/slide-052-media-01.png){fig-alt="Still image from the FDS propane-flame visualization."}
+
+:::
+
+::: {.fds-propane-scalar-fields}
+
+![](figs/thermochemistry/source/slide-052-picture-01.png){fig-alt="FDS propane-flame scalar-field visualization."}
+
+:::
+
+::: {.fds-propane-legend}
+
+FDS Propane: Orange = Soot $>600\ ^\circ\mathrm{C}$, Blue = $\mathrm{CO_2}>600\ ^\circ\mathrm{C}$
+
+:::
+
+::: {.fds-propane-reference}
+
+James White, PhD Thesis, UMD, 2016.
+
+:::
+
+:::
+
+## UMD line burner: radiative fraction {.thermo-two-column .thermo-compact}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+Exp data from MaCFP database, J. White, PhD Thesis, UMD, 2016.
+
+:::
+
+::: {.column width="70%"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](figs/thermochemistry/source/slide-053-picture-01.png){.thermo-source-figure fig-alt="Methane line-burner radiative-fraction measurements and FDS predictions."}
+
+:::
+
+::: {.column width="50%"}
+
+![](figs/thermochemistry/source/slide-053-picture-02.png){.thermo-source-figure fig-alt="Propane line-burner radiative-fraction measurements and FDS predictions."}
+
+:::
+
+::::
+
+:::
+
+::::
