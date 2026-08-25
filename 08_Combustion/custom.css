@@ -148,7 +148,6 @@
 .reveal .slides section.stoichiometry-slide {
   font-family: Calibri, Arial, Helvetica, sans-serif;
   height: 100%;
-  position: relative;
 }
 
 .reveal .slides section.stoichiometry-slide > h2 {
@@ -289,6 +288,163 @@
 }
 
 .reveal .slides .stoichiometry-source a {
+  color: #222;
+  text-decoration: none;
+}
+
+/* Thermochemistry: Complex Fuels */
+
+.reveal .slides section.complex-fuels-slide {
+  color: #000;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  overflow: visible;
+}
+
+.reveal .slides section.complex-fuels-slide.present,
+.reveal .slides section.complex-fuels-slide.present > h2,
+.reveal .slides section.complex-fuels-slide.present .complex-fuels-layout {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.reveal .slides section.complex-fuels-slide > h2 {
+  color: #000;
+  font-family: "Calibri Light", Calibri, Arial, Helvetica, sans-serif;
+  font-size: 2.1em;
+  font-weight: 300;
+  left: 6.875%;
+  line-height: 1;
+  margin: 0;
+  position: absolute;
+  top: 5.325%;
+  z-index: 2;
+}
+
+.reveal .slides .complex-fuels-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  opacity: 1;
+  position: absolute;
+  visibility: visible;
+  width: 1600px;
+  z-index: 1;
+}
+
+.reveal .slides .complex-fuels-layout > div {
+  display: block;
+  margin: 0;
+  opacity: 1;
+  position: absolute;
+  visibility: visible;
+}
+
+.reveal .slides .complex-fuels-layout p,
+.reveal .slides .complex-fuels-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .complex-fuels-fire {
+  left: 3.34%;
+  top: 25.12%;
+  width: 48.35%;
+}
+
+.reveal .slides .complex-fuels-fire img.complex-fuels-fire-image,
+.reveal .slides .complex-fuels-cellulose img.complex-fuels-cellulose-image {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .complex-fuels-fire-source {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 0.31em;
+  left: 3.34%;
+  line-height: 1.1;
+  text-align: center;
+  top: 93.1%;
+  white-space: nowrap;
+  width: 48.35%;
+}
+
+.reveal .slides .complex-fuels-cellulose {
+  left: 57.44%;
+  top: 34.14%;
+  width: 35.29%;
+}
+
+.reveal .slides .complex-fuels-formula {
+  font-size: 1.45em;
+  left: 57.82%;
+  line-height: 1;
+  text-align: left;
+  top: 9.42%;
+  width: 7.64%;
+}
+
+.reveal .slides .complex-fuels-formula mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .complex-fuels-reference {
+  font-size: 1.25em;
+  left: 68.63%;
+  line-height: 1;
+  top: 9.87%;
+  white-space: nowrap;
+}
+
+.reveal .slides .complex-fuels-reference a {
+  color: #000;
+  text-decoration: none;
+}
+
+.reveal .slides .complex-fuels-arrow {
+  height: 12.29%;
+  left: 62.76%;
+  top: 17.05%;
+  width: 3.05%;
+}
+
+.reveal .slides .complex-fuels-arrow svg {
+  display: block;
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+}
+
+.reveal .slides .complex-fuels-arrow path {
+  fill: #5b9bd5;
+}
+
+.reveal .slides .complex-fuels-label {
+  font-size: 1.45em;
+  left: 69.32%;
+  line-height: 1;
+  top: 25.53%;
+  white-space: nowrap;
+}
+
+.reveal .slides .complex-fuels-cellulose-source {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 0.28em;
+  left: 54.2%;
+  line-height: 1.1;
+  text-align: center;
+  top: 92.9%;
+  white-space: nowrap;
+  width: 42%;
+}
+
+.reveal .slides .complex-fuels-fire-source a,
+.reveal .slides .complex-fuels-cellulose-source a {
   color: #222;
   text-decoration: none;
 }
