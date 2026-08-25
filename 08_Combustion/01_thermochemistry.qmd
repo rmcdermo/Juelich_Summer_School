@@ -140,13 +140,13 @@ Cellulose
 
 :::
 
-## Complex chemistry {.thermo-two-column}
+## Complex Chemistry {.complex-chemistry-slide}
 
-:::: {.columns}
+::: {.complex-chemistry-layout}
 
-::: {.column width="42%"}
+::: {.complex-chemistry-gri-summary}
 
-GRI-Mech 3.0
+[GRI-Mech 3.0](https://combustion.berkeley.edu/gri-mech/version30/text30.html)
 
 53 species
 
@@ -154,13 +154,55 @@ GRI-Mech 3.0
 
 :::
 
-::: {.column width="58%"}
+::: {.complex-chemistry-mechanism}
 
-![](figs/thermochemistry/source/slide-008-picture-02.png){.thermo-source-figure fig-alt="Large smoke-producing fire illustrating the practical consequences of complex combustion chemistry."}
+![](figs/thermochemistry/source/slide-008-picture-01.png){fig-alt="Comparison of dominant methane oxidation pathways in GRI-Mech 3.0 and AramcoMech 1.3; the slide shows the GRI-Mech portion."}
 
 :::
 
-::::
+::: {.complex-chemistry-mechanism-source}
+
+[A. M. Dmitriev et al., *Combustion and Flame* 162 (2015), 3946–3959](https://doi.org/10.1016/j.combustflame.2015.07.032)
+
+:::
+
+::: {.complex-chemistry-soot-pathway}
+
+![](figs/thermochemistry/source/slide-008-picture-03.png){fig-alt="Schematic of soot evolution from molecular precursors through particle inception, surface growth, and coagulation."}
+
+:::
+
+::: {.complex-chemistry-soot-source}
+
+[S. Shuai, Z. Wang, and H. Xu, “Internal Combustion Engine Simulation” (2015)](https://doi.org/10.1002/9781118991978.hces152)
+
+:::
+
+::: {.complex-chemistry-fire}
+
+![](figs/thermochemistry/source/slide-008-picture-02.png){fig-alt="Large industrial fire producing a dense plume of black smoke."}
+
+:::
+
+::: {.complex-chemistry-fire-source}
+
+Legacy lecture photograph; original attribution unresolved
+
+:::
+
+::: {.complex-chemistry-tem}
+
+![](figs/thermochemistry/source/slide-008-picture-04.png){fig-alt="Transmission electron micrographs of an aircraft-combustor soot aggregate and the layered surface structure of its primary particles."}
+
+:::
+
+::: {.complex-chemistry-tem-caption}
+
+TEM image of a typical aircraft-combustor soot aggregate: (a) aggregate and (b) surface detail. Adapted from [Popovitcheva et al. (2000)](https://doi.org/10.1039/B004345L).
+
+:::
+
+:::
 
 ## Heat release rate {.heat-release-rate-slide}
 

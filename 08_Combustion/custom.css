@@ -448,3 +448,146 @@
   color: #222;
   text-decoration: none;
 }
+
+/* Thermochemistry: Complex Chemistry */
+
+.reveal .slides section.complex-chemistry-slide {
+  color: #000;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  overflow: visible;
+}
+
+.reveal .slides section.complex-chemistry-slide > h2 {
+  color: #000;
+  font-family: "Calibri Light", Calibri, Arial, Helvetica, sans-serif;
+  font-size: 2.1em;
+  font-weight: 300;
+  left: 6.875%;
+  line-height: 1;
+  margin: 0;
+  position: absolute;
+  top: 5.325%;
+  z-index: 2;
+}
+
+.reveal .slides .complex-chemistry-layout {
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .complex-chemistry-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .complex-chemistry-layout p {
+  margin: 0;
+}
+
+.reveal .slides .complex-chemistry-layout a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reveal .slides .complex-chemistry-gri-summary {
+  color: #4472c4;
+  font-size: 1.18em;
+  left: 7.25%;
+  line-height: 1.28;
+  top: 22.85%;
+  width: 18%;
+}
+
+.reveal .slides .complex-chemistry-mechanism {
+  height: 43.54%;
+  left: 0.85%;
+  overflow: hidden;
+  top: 42.16%;
+  width: 33.46%;
+}
+
+.reveal .slides .complex-chemistry-mechanism img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+}
+
+.reveal .slides .complex-chemistry-mechanism-source {
+  font-size: 0.34em;
+  left: 2.66%;
+  line-height: 1.08;
+  text-align: left;
+  top: 89.64%;
+  white-space: nowrap;
+  width: 29%;
+}
+
+.reveal .slides .complex-chemistry-soot-pathway {
+  height: 63.27%;
+  left: 35.40%;
+  top: 24.65%;
+  width: 29.21%;
+}
+
+.reveal .slides .complex-chemistry-soot-pathway img,
+.reveal .slides .complex-chemistry-fire img,
+.reveal .slides .complex-chemistry-tem img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: fill;
+  width: 100%;
+}
+
+.reveal .slides .complex-chemistry-soot-source {
+  font-size: 0.34em;
+  left: 35.77%;
+  line-height: 1.08;
+  text-align: left;
+  top: 89.64%;
+  white-space: nowrap;
+  width: 29%;
+}
+
+.reveal .slides .complex-chemistry-fire {
+  height: 46.78%;
+  left: 66.77%;
+  top: 3.04%;
+  width: 31.67%;
+}
+
+.reveal .slides .complex-chemistry-fire-source {
+  color: #555;
+  font-size: 0.25em;
+  left: 66.77%;
+  line-height: 1;
+  text-align: right;
+  top: 50.25%;
+  width: 31.67%;
+}
+
+.reveal .slides .complex-chemistry-tem {
+  height: 39.60%;
+  left: 66.77%;
+  top: 52.11%;
+  width: 31.67%;
+}
+
+.reveal .slides .complex-chemistry-tem-caption {
+  font-size: 0.35em;
+  left: 67.14%;
+  line-height: 1.08;
+  text-align: left;
+  top: 92.15%;
+  width: 29.5%;
+}
