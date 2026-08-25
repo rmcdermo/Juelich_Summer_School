@@ -142,3 +142,153 @@
 .reveal .underline {
   text-decoration: underline;
 }
+
+/* Thermochemistry: Stoichiometry */
+
+.reveal .slides section.stoichiometry-slide {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 100%;
+  position: relative;
+}
+
+.reveal .slides section.stoichiometry-slide > h2 {
+  color: #000;
+  font-family: "Calibri Light", Calibri, Arial, Helvetica, sans-serif;
+  font-size: 2.1em;
+  font-weight: 300;
+  left: 6.875%;
+  line-height: 1;
+  margin: 0;
+  position: absolute;
+  top: 5.3%;
+  z-index: 2;
+}
+
+.reveal .slides .stoichiometry-layout {
+  height: 100%;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.reveal .slides .stoichiometry-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .stoichiometry-layout p,
+.reveal .slides .stoichiometry-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .stoichiometry-generic {
+  font-size: 1.9em;
+  left: 7.49%;
+  text-align: left;
+  top: 29.5%;
+  width: 41.67%;
+}
+
+.reveal .slides .stoichiometry-generic mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .stoichiometry-complete {
+  color: #4472c4;
+  font-size: 1.55em;
+  font-weight: 400;
+  left: 7.49%;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  top: 46.9%;
+  white-space: nowrap;
+}
+
+.reveal .slides .stoichiometry-reactants,
+.reveal .slides .stoichiometry-products {
+  font-size: 1.55em;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+  width: 53%;
+}
+
+.reveal .slides .stoichiometry-reactants mjx-container[display="true"],
+.reveal .slides .stoichiometry-products mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .stoichiometry-reactants {
+  left: 7.49%;
+  top: 63.4%;
+}
+
+.reveal .slides .stoichiometry-products {
+  left: 7.49%;
+  text-align: right;
+  top: 74.7%;
+  width: 49.72%;
+}
+
+.reveal .slides .stoichiometry-products mjx-container[display="true"] {
+  text-align: right !important;
+}
+
+.reveal .slides .stoichiometry-molecule {
+  left: 61.05%;
+  top: 1.2%;
+  width: 38.4%;
+}
+
+.reveal .slides .stoichiometry-molecule img.stoichiometry-molecule-image {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .stoichiometry-structural {
+  left: 66.6%;
+  top: 48.2%;
+  width: 27.2%;
+}
+
+.reveal .slides .stoichiometry-structural svg.stoichiometry-structural-diagram {
+  color: #000;
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .stoichiometry-structural-label {
+  font-size: 1.55em;
+  font-weight: 400;
+  left: 68.4%;
+  line-height: 1;
+  text-align: center;
+  top: 79.1%;
+  white-space: nowrap;
+  width: 23.5%;
+}
+
+.reveal .slides .stoichiometry-source {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.3em;
+  left: 68.7%;
+  line-height: 1;
+  top: 94.4%;
+  white-space: nowrap;
+}
+
+.reveal .slides .stoichiometry-source a {
+  color: #222;
+  text-decoration: none;
+}

@@ -9,6 +9,8 @@ date: 2026-09-28
 date-format: "[September 28-October 2, 2026]"
 format:
   revealjs:
+    width: 1600
+    height: 900
     slide-number: "c"
     css: custom.css
     margin: 0.02
