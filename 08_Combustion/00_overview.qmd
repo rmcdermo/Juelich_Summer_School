@@ -1,0 +1,88 @@
+# Overview
+
+## Course rubric {.rubric-slide-title}
+
+::: {.rubric}
+
++----------------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
+|**COMBUSTION (0.5 DAYS)**               |**PREVIOUS KNOWLEDGE**            |**COURSE LEARNING OUTCOMES**                                                                        |
++========================================+==================================+==================================+==================================+==============================+
+|                                        |**KNOWS BEFORE**                  |**MUST KNOW**                     |**SHOULD KNOW**                   |**NICE TO KNOW**              |
+|                                        |                                  |                                  |                                  |                              |
+|                                        |Refers to previous knowledge that |Refers to knowledge and skills    |Includes the details and          |Supplements the core content  |
+|                                        |is assumed.                       |that are absolutely necessary.    |extensions to core content        |and should be known with      |
+|                                        |                                  |                                  |theories, models and principles.  |details.                      |
++----------------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
+|Scientific competence; what does the    |Basic chemistry and               |1. Can [explain]{.underline} how  |- Can [define]{.underline} the    |- [Understands]{.underline}   |
+|student know about theory?              |thermodynamics, including:        |   the fuel properties affect a   |  chemical heat-release rate per  |  the difference between      |
+|                                        |                                  |   fire's heat-release rate.      |  unit volume.                    |  scalar mixing and turbulent |
+|                                        |1. Stoichiometry                  |2. Can [write]{.underline}        |- [Understands]{.underline} the   |  transport.                  |
+|                                        |2. Ideal-gas equation of state    |   chemical reactions in terms of |  concept of mixture fraction and |- [Understands]{.underline}   |
+|                                        |3. First Law of Thermodynamics    |   lumped species.                |  its relationship to local       |  the concept of a subgrid    |
+|                                        |4. Internal energy, sensible and  |3. Can [explain]{.underline} how  |  species composition and flame   |  PDF.                        |
+|                                        |   chemical enthalpy              |   turbulence affects the         |  temperature.                    |- Can [discuss]{.underline}   |
+|                                        |5. Simple ODEs and basic linear   |   heat-release rate (EDC model). |- Can [describe]{.underline} how  |  the relationship between    |
+|                                        |   algebra                        |4. Can [describe]{.underline} the |  the mixing time scale changes   |  Damköhler number and flame  |
+|                                        |                                  |   various modes of flame         |  with grid resolution.           |  extinction.                 |
+|                                        |                                  |   suppression.                   |- Can [explain]{.underline} the   |                              |
+|                                        |                                  |                                  |  concept of the critical flame   |                              |
+|                                        |                                  |                                  |  temperature.                    |                              |
++----------------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
+|Professional competence and skills; what|- Can run FDS-simulations.        |- Can [specify]{.underline} FDS   |Can [discuss]{.underline} various |Can [solve]{.underline} a     |
+|the student knows and can do in         |- Can use Matlab or Python to     |  inputs for the combustion model.|methods of generating CO and soot |system of ODEs for finite-rate|
+|practice.                               |  analyze FDS output.             |- Can [modify]{.underline} the FDS|in FDS.                           |kinetics using FDS.           |
+|                                        |                                  |  verification tests.             |                                  |                              |
++----------------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
+
+:::
+
+## Outline {.outline-slide}
+
+:::: {.columns .outline-grid}
+
+::: {.column width="48%"}
+
+1. Thermochemistry
+
+   1. stoichiometry
+   2. thermodynamics
+   3. calorimetry
+   4. chemistry
+
+      1. infinitely fast
+      2. equilibrium
+      3. finite-rate
+
+   5. mixture fraction / lumped species
+   6. specified product yields
+   7. complex fuel mixtures
+
+:::
+
+::: {.column width="48%"}
+
+2. Eddy Dissipation Concept
+
+   1. subgrid distributions in species and temperature
+   2. rate of turbulent mixing
+   3. mixing vs. transport
+
+3. Flame Extinction
+
+   1. critical flame temperature / ignition temperature
+   2. droplet evaporation
+   3. strained laminar flames (flamelets)
+   4. Damköhler number
+
+:::
+
+::::
+
+## Recommended reading
+
+- Douglas Drysdale, *An Introduction to Fire Dynamics*, Wiley, 1998.
+- H. Scott Fogler, *Elements of Chemical Reaction Engineering*, Prentice-Hall, 1992.
+- Stephen R. Turns, *An Introduction to Combustion*, McGraw-Hill, 2000.
+- Norbert Peters, *Turbulent Combustion*, Cambridge, 2000.
+- Rodney O. Fox, *Computational Models for Turbulent Reacting Flows*, Cambridge, 2003.
+- Thierry Poinsot and Denis Veynante, *Theoretical and Numerical Combustion*, Edwards, 2005.

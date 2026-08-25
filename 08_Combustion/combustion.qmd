@@ -1,0 +1,31 @@
+---
+title: "(Turbulent) Combustion"
+subtitle: "Jülich Summer School in Fire Dynamics Modeling"
+author:
+  - "Randy McDermott"
+  - "Jason Floyd"
+  - "Chandan Paul"
+date: 2026-09-28
+date-format: "[September 28-October 2, 2026]"
+format:
+  revealjs:
+    slide-number: "c"
+    css: custom.css
+    margin: 0.02
+    transition: none
+    html-math-method:
+      method: mathjax
+      url: https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-mml-chtml.min.js
+editor: visual
+footer: "(Turbulent) Combustion"
+---
+
+{{< include 00_overview.qmd >}}
+
+{{< include 01_thermochemistry.qmd >}}
+
+{{< include 02_eddy_dissipation_concept.qmd >}}
+
+{{< include 03_flame_extinction.qmd >}}
+
+{{< include 04_review.qmd >}}

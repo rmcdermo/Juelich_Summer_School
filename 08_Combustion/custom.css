@@ -1,0 +1,144 @@
+.reveal {
+  font-size: 28px;
+}
+
+.reveal .slides section {
+  padding: 5px;
+  margin: 0 !important;
+}
+
+.reveal .slides section img.reference-slide {
+  display: block;
+  max-width: 100%;
+  max-height: 94vh;
+  margin: 0 auto;
+}
+
+.reveal .slides section h2.source-slide-title {
+  display: none;
+}
+
+.reveal .slides section.rubric-slide-title > h2 {
+  display: none;
+}
+
+.reveal .slides section.outline-slide > h2 {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 1.45em;
+  font-weight: 400;
+  margin: 1.35em 0 0.7em 7%;
+}
+
+.reveal .slides .outline-grid {
+  column-gap: 5%;
+  display: grid;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 0.72em;
+  grid-template-columns: 1fr 1fr;
+  line-height: 1.2;
+  margin: 0 auto;
+  text-align: left;
+  width: 86%;
+}
+
+.reveal .slides .outline-grid > .column {
+  flex: initial;
+  padding: 0;
+  width: auto !important;
+}
+
+.reveal .slides .outline-grid ol {
+  list-style-type: upper-roman;
+  margin: 0;
+  padding-left: 1.15em;
+}
+
+.reveal .slides .outline-grid ol p {
+  margin: 0;
+}
+
+.reveal .slides .outline-grid ol ol {
+  list-style-type: upper-alpha;
+  margin: 0.25em 0 0;
+  padding-left: 1.5em;
+}
+
+.reveal .slides .outline-grid ol ol ol {
+  list-style-type: lower-alpha;
+  margin: 0.18em 0 0.7em;
+  padding-left: 1.5em;
+}
+
+.reveal .slides .outline-grid ol ol ol > li::marker {
+  content: counter(list-item, lower-alpha) ")  ";
+}
+
+.reveal .slides .outline-grid > .column > ol > li {
+  padding-left: 0.25em;
+}
+
+.reveal .slides .outline-grid > .column > ol > li + li {
+  margin-top: 1em;
+}
+
+.reveal .rubric table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 3px solid #000;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.52em;
+}
+
+.reveal .rubric table th,
+.reveal .rubric table td {
+  border: 1px solid #4a4a4a;
+  padding: 0.35em;
+  text-align: left;
+  vertical-align: top;
+}
+
+.reveal .rubric table th {
+  text-align: center;
+}
+
+.reveal .rubric table thead th:nth-child(2) {
+  color: #c55a11;
+}
+
+.reveal .rubric table thead th:last-child {
+  color: #7030a0;
+}
+
+.reveal .rubric table tbody td:last-child {
+  background-color: #f2f2f2;
+}
+
+.reveal .rubric table ul {
+  margin: 0;
+  padding-left: 1.1em;
+}
+
+.reveal .rubric table ol {
+  counter-reset: rubric-item;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reveal .rubric table ol li {
+  counter-increment: rubric-item;
+  padding-left: 1.35em;
+  position: relative;
+}
+
+.reveal .rubric table ol li::before {
+  content: counter(rubric-item) ")";
+  left: 0;
+  position: absolute;
+}
+
+.reveal .underline {
+  text-decoration: underline;
+}
