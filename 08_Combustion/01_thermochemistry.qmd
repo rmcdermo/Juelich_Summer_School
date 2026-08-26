@@ -523,31 +523,37 @@ $$\overline W=\left(\sum_\alpha\frac{Y_\alpha}{W_\alpha}\right)^{-1}$$
 
 ::: {.ideal-gas-density-label}
 
-mass density $[\mathrm{kg/m^3}]$
+[$\rho$]{.ideal-gas-symbol} mass density $[\mathrm{kg/m^3}]$
 
 :::
 
 ::: {.ideal-gas-pressure-label}
 
-background pressure $[\mathrm{Pa}]$
+[$p_0$]{.ideal-gas-symbol} background pressure $[\mathrm{Pa}]$
 
 :::
 
 ::: {.ideal-gas-molecular-weight-label}
 
-mixture molecular weight $[\mathrm{kg\text{-}mixture/kmol\text{-}mixture}]$
+[$\overline W$]{.ideal-gas-symbol} mixture molecular weight $[\mathrm{kg\text{-}mixture/kmol\text{-}mixture}]$
 
 :::
 
 ::: {.ideal-gas-gas-constant-label}
 
-universal gas constant $[8314.5\ \mathrm{Pa\cdot m^3/(kmol\cdot K)}]$
+[$R$]{.ideal-gas-symbol} universal gas constant $[8314.5\ \mathrm{Pa\cdot m^3/(kmol\cdot K)}]$
 
 :::
 
 ::: {.ideal-gas-temperature-label}
 
-temperature $[\mathrm{K}]$
+[$T$]{.ideal-gas-symbol} temperature $[\mathrm{K}]$
+
+:::
+
+::: {.ideal-gas-arrow aria-hidden="true"}
+
+![](figs/thermochemistry/ideal-gas-arrow.svg){fig-alt=""}
 
 :::
 
