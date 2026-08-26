@@ -718,3 +718,118 @@
 .reveal .slides .hoc-console-prompt {
   color: #553be8;
 }
+
+/* Thermochemistry: Local heat release rate per unit volume */
+
+.reveal .slides section.hrrpuv-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .hrrpuv-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .hrrpuv-layout > div {
+  display: block;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .hrrpuv-layout p,
+.reveal .slides .hrrpuv-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .hrrpuv-integral {
+  font-size: 1.62em;
+  left: 37.87%;
+  line-height: 1;
+  top: 25.44%;
+  width: 21.67%;
+}
+
+.reveal .slides .hrrpuv-equation {
+  font-size: 1.58em;
+  left: 35.62%;
+  line-height: 1;
+  top: 67.95%;
+  width: 28.75%;
+}
+
+.reveal .slides .hrrpuv-integral mjx-container[display="true"],
+.reveal .slides .hrrpuv-equation mjx-container[display="true"],
+.reveal .slides .hrrpuv-output-unit mjx-container[display="true"],
+.reveal .slides .hrrpuv-fuel-unit mjx-container[display="true"],
+.reveal .slides .hrrpuv-enthalpy-unit mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.reveal .slides .hrrpuv-output-unit,
+.reveal .slides .hrrpuv-fuel-unit,
+.reveal .slides .hrrpuv-enthalpy-unit {
+  color: #5b9bd5;
+  font-size: 1.12em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.reveal .slides .hrrpuv-output-unit {
+  left: 22.28%;
+  top: 68.21%;
+  width: 9.68%;
+}
+
+.reveal .slides .hrrpuv-fuel-unit {
+  left: 42.32%;
+  top: 50%;
+  width: 15.27%;
+}
+
+.reveal .slides .hrrpuv-enthalpy-unit {
+  left: 54.72%;
+  top: 83.05%;
+  width: 9.63%;
+}
+
+.reveal .slides .hrrpuv-output-arrow {
+  height: 2.6%;
+  left: 31.1%;
+  top: 71.1%;
+  width: 4.8%;
+}
+
+.reveal .slides .hrrpuv-fuel-arrow {
+  height: 7.03%;
+  left: 49.65%;
+  top: 59.23%;
+  width: 1.5%;
+}
+
+.reveal .slides .hrrpuv-enthalpy-arrow {
+  height: 6.42%;
+  left: 59.05%;
+  top: 76.05%;
+  width: 1.5%;
+}
+
+.reveal .slides .hrrpuv-output-arrow svg,
+.reveal .slides .hrrpuv-fuel-arrow svg,
+.reveal .slides .hrrpuv-enthalpy-arrow svg {
+  display: block;
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+}
+
+.reveal .slides .hrrpuv-output-arrow path,
+.reveal .slides .hrrpuv-fuel-arrow path,
+.reveal .slides .hrrpuv-enthalpy-arrow path {
+  fill: #5b9bd5;
+}

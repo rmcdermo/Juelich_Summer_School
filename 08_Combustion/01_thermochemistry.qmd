@@ -263,6 +263,12 @@ $$\dot Q^* = \frac{\dot Q}{\rho_\infty c_p T_\infty\sqrt{gD}\,D^2}$$
 
 ::: {.hrrpuv-layout}
 
+::: {.hrrpuv-integral}
+
+$$\dot Q=\int_V \dot q'''\,\mathrm{d}V$$
+
+:::
+
 ::: {.hrrpuv-equation}
 
 $$\dot q'''=-\dot m_F'''\,\Delta h_{c,F}$$
@@ -271,19 +277,43 @@ $$\dot q'''=-\dot m_F'''\,\Delta h_{c,F}$$
 
 ::: {.hrrpuv-output-unit}
 
-$$[\dot q''']=\mathrm{W/m^3}$$
+$$[\mathrm{W/m^3}]$$
+
+:::
+
+::: {.hrrpuv-output-arrow aria-hidden="true"}
+
+<svg viewBox="0 0 100 24" role="img" focusable="false">
+  <path d="M0 10H78V2L100 12L78 22V14H0Z"></path>
+</svg>
 
 :::
 
 ::: {.hrrpuv-fuel-unit}
 
-$$\left[\dot m_F'''\right]=\frac{\mathrm{kg\text{-}F}}{\mathrm{m^3\,s}}$$
+$$[\mathrm{kg\text{-}F/(m^3\,s)}]$$
+
+:::
+
+::: {.hrrpuv-fuel-arrow aria-hidden="true"}
+
+<svg viewBox="0 0 24 100" role="img" focusable="false">
+  <path d="M10 0H14V78H22L12 100L2 78H10Z"></path>
+</svg>
 
 :::
 
 ::: {.hrrpuv-enthalpy-unit}
 
-$$\left[\Delta h_{c,F}\right]=\frac{\mathrm{J}}{\mathrm{kg\text{-}F}}$$
+$$[\mathrm{J/kg\text{-}F}]$$
+
+:::
+
+::: {.hrrpuv-enthalpy-arrow aria-hidden="true"}
+
+<svg viewBox="0 0 24 100" role="img" focusable="false">
+  <path d="M12 0L22 22H14V100H10V22H2Z"></path>
+</svg>
 
 :::
 
