@@ -29,7 +29,7 @@
 |                                        |                                  |                                  |  temperature.                    |                              |
 +----------------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
 |Professional competence and skills; what|- Can run FDS-simulations.        |- Can [specify]{.underline} FDS   |Can [discuss]{.underline} various |Can [solve]{.underline} a     |
-|the student knows and can do in         |- Can use Matlab or Python to     |  inputs for the combustion model.|methods of generating CO and soot |system of ODEs for finite-rate|
+|the student knows and can do in         |- Can use Python to               |  inputs for the combustion model.|methods of generating CO and soot |system of ODEs for finite-rate|
 |practice.                               |  analyze FDS output.             |- Can [modify]{.underline} the FDS|in FDS.                           |kinetics using FDS.           |
 |                                        |                                  |  verification tests.             |                                  |                              |
 +----------------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
