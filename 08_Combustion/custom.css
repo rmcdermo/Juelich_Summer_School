@@ -277,7 +277,7 @@
   width: 27.2%;
 }
 
-.reveal .slides .stoichiometry-structural svg.stoichiometry-structural-diagram {
+.reveal .slides .stoichiometry-structural img.stoichiometry-structural-diagram {
   color: #000;
   display: block;
   height: auto;
@@ -421,15 +421,11 @@
   width: 3.05%;
 }
 
-.reveal .slides .complex-fuels-arrow svg {
+.reveal .slides .complex-fuels-arrow img {
   display: block;
   height: 100%;
   overflow: visible;
   width: 100%;
-}
-
-.reveal .slides .complex-fuels-arrow path {
-  fill: #5b9bd5;
 }
 
 .reveal .slides .complex-fuels-label {
@@ -670,21 +666,11 @@
   width: 9.14%;
 }
 
-.reveal .slides .heat-release-rate-arrow svg {
+.reveal .slides .heat-release-rate-arrow img {
   display: block;
   height: 100%;
   overflow: visible;
   width: 100%;
-}
-
-.reveal .slides .heat-release-rate-arrow line {
-  stroke: #5b9bd5;
-  stroke-linecap: round;
-  stroke-width: 2.5;
-}
-
-.reveal .slides .heat-release-rate-arrow path {
-  fill: #5b9bd5;
 }
 
 .reveal .slides .heat-release-rate-qstar {
@@ -713,10 +699,6 @@
   margin: 0;
   padding: 0.18em 0.28em;
   white-space: pre;
-}
-
-.reveal .slides .hoc-console-prompt {
-  color: #553be8;
 }
 
 /* Thermochemistry: Local heat release rate per unit volume */
@@ -750,7 +732,7 @@
   font-size: 1.62em;
   left: 37.87%;
   line-height: 1;
-  top: 25.44%;
+  top: 18.5%;
   width: 21.67%;
 }
 
@@ -758,7 +740,7 @@
   font-size: 1.58em;
   left: 35.62%;
   line-height: 1;
-  top: 67.95%;
+  top: 60%;
   width: 28.75%;
 }
 
@@ -782,54 +764,305 @@
 
 .reveal .slides .hrrpuv-output-unit {
   left: 22.28%;
-  top: 68.21%;
+  top: 61%;
   width: 9.68%;
 }
 
 .reveal .slides .hrrpuv-fuel-unit {
-  left: 42.32%;
-  top: 50%;
+  left: 42.78%;
+  top: 42%;
   width: 15.27%;
 }
 
 .reveal .slides .hrrpuv-enthalpy-unit {
-  left: 54.72%;
-  top: 83.05%;
+  left: 52.69%;
+  top: 79%;
   width: 9.63%;
 }
 
 .reveal .slides .hrrpuv-output-arrow {
-  height: 2.6%;
-  left: 31.1%;
-  top: 71.1%;
-  width: 4.8%;
+  height: 2.13%;
+  left: 31.9%;
+  top: 61.34%;
+  width: 5%;
 }
 
 .reveal .slides .hrrpuv-fuel-arrow {
-  height: 7.03%;
-  left: 49.65%;
-  top: 59.23%;
-  width: 1.5%;
+  height: 8.89%;
+  left: 49.8%;
+  top: 48.8%;
+  width: 1.2%;
 }
 
 .reveal .slides .hrrpuv-enthalpy-arrow {
-  height: 6.42%;
-  left: 59.05%;
-  top: 76.05%;
-  width: 1.5%;
+  height: 8.89%;
+  left: 56.9%;
+  top: 66%;
+  width: 1.2%;
 }
 
-.reveal .slides .hrrpuv-output-arrow svg,
-.reveal .slides .hrrpuv-fuel-arrow svg,
-.reveal .slides .hrrpuv-enthalpy-arrow svg {
+.reveal .slides .hrrpuv-output-arrow img,
+.reveal .slides .hrrpuv-fuel-arrow img,
+.reveal .slides .hrrpuv-enthalpy-arrow img {
   display: block;
   height: 100%;
   overflow: visible;
   width: 100%;
 }
 
-.reveal .slides .hrrpuv-output-arrow path,
-.reveal .slides .hrrpuv-fuel-arrow path,
-.reveal .slides .hrrpuv-enthalpy-arrow path {
-  fill: #5b9bd5;
+/* Thermochemistry: Chemical + Sensible Enthalpy */
+
+.reveal .slides section.enthalpy-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .enthalpy-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .enthalpy-layout > div {
+  display: block;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .enthalpy-layout p,
+.reveal .slides .enthalpy-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .enthalpy-species {
+  font-size: 1.98em;
+  left: 28.42%;
+  line-height: 1;
+  top: 30.87%;
+  width: 55%;
+}
+
+.reveal .slides .enthalpy-species mjx-container[display="true"],
+.reveal .slides .enthalpy-formation-unit mjx-container[display="true"],
+.reveal .slides .enthalpy-mixture mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.reveal .slides .enthalpy-formation-unit {
+  color: #82c943;
+  font-size: 1.22em;
+  left: 10.34%;
+  line-height: 1;
+  top: 36.21%;
+  width: 12.82%;
+}
+
+.reveal .slides .enthalpy-formation-label,
+.reveal .slides .enthalpy-sensible-label,
+.reveal .slides .enthalpy-mixture-label {
+  font-size: 1.08em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.reveal .slides .enthalpy-formation-label {
+  left: 36.77%;
+  text-align: center;
+  top: 57.17%;
+  width: 18.75%;
+}
+
+.reveal .slides .enthalpy-sensible-label {
+  left: 63.0%;
+  text-align: left;
+  top: 57.17%;
+  width: 32%;
+}
+
+.reveal .slides .enthalpy-sensible-label mjx-container {
+  font-size: 1.25em !important;
+}
+
+.reveal .slides .enthalpy-formation-arrow,
+.reveal .slides .enthalpy-sensible-arrow {
+  height: 12.3%;
+  top: 43.1%;
+  width: 1.5%;
+}
+
+.reveal .slides .enthalpy-formation-arrow {
+  left: 45.47%;
+}
+
+.reveal .slides .enthalpy-sensible-arrow {
+  left: 69.81%;
+}
+
+.reveal .slides .enthalpy-mixture-label {
+  left: 10.34%;
+  top: 77.84%;
+  width: 23.28%;
+}
+
+.reveal .slides .enthalpy-mixture {
+  font-size: 1.78em;
+  left: 37.17%;
+  line-height: 1;
+  top: 77.45%;
+  width: 37.50%;
+}
+
+.reveal .slides .enthalpy-sources {
+  border: 1px solid #5b9bd5;
+  font-size: 0.92em;
+  left: 78.5%;
+  line-height: 1.32;
+  padding: 0.12em 0.2em;
+  top: 9.5%;
+  width: 19.40%;
+}
+
+.reveal .slides .enthalpy-source-arrows {
+  height: 20.5%;
+  left: 49.5%;
+  top: 17.2%;
+  width: 29.5%;
+}
+
+.reveal .slides .enthalpy-source-arrows img,
+.reveal .slides .enthalpy-formation-arrow img,
+.reveal .slides .enthalpy-sensible-arrow img {
+  display: block;
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+}
+
+/* Thermochemistry: Heat of Combustion */
+
+.reveal .slides section.heat-of-combustion-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .heat-of-combustion-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .heat-of-combustion-layout > div {
+  display: block;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .heat-of-combustion-layout p,
+.reveal .slides .heat-of-combustion-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .heat-of-combustion-reaction {
+  font-size: 1.72em;
+  left: 15%;
+  line-height: 1;
+  top: 27.83%;
+  width: 70%;
+}
+
+.reveal .slides .heat-of-combustion-equation {
+  font-size: 1.78em;
+  left: 22.66%;
+  line-height: 1;
+  top: 42.59%;
+  width: 54.69%;
+}
+
+.reveal .slides .heat-of-combustion-fuel-coefficient {
+  font-size: 1.45em;
+  left: 4.71%;
+  line-height: 1;
+  top: 50.99%;
+  width: 13.33%;
+}
+
+.reveal .slides .heat-of-combustion-unit {
+  font-size: 1.30em;
+  left: 20.25%;
+  line-height: 1;
+  top: 62.59%;
+  width: 17.80%;
+}
+
+.reveal .slides .heat-of-combustion-reaction mjx-container[display="true"],
+.reveal .slides .heat-of-combustion-equation mjx-container[display="true"],
+.reveal .slides .heat-of-combustion-fuel-coefficient mjx-container[display="true"],
+.reveal .slides .heat-of-combustion-unit mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.reveal .slides .heat-of-combustion-formation,
+.reveal .slides .heat-of-combustion-coefficient,
+.reveal .slides .heat-of-combustion-note,
+.reveal .slides .heat-of-combustion-reaction-label {
+  font-size: 1.02em;
+  line-height: 1.25;
+}
+
+.reveal .slides .heat-of-combustion-formation {
+  left: 65.58%;
+  top: 62.87%;
+  white-space: nowrap;
+  width: 31.40%;
+}
+
+.reveal .slides .heat-of-combustion-coefficient {
+  left: 65.58%;
+  top: 71.98%;
+  width: 30.58%;
+}
+
+.reveal .slides .heat-of-combustion-signs {
+  color: #4472c4;
+}
+
+.reveal .slides .heat-of-combustion-note {
+  border: 2px solid #0070c0;
+  left: 5%;
+  padding: 0.25em 0.45em;
+  top: 81.1%;
+  width: 36%;
+}
+
+.reveal .slides .heat-of-combustion-reaction-label {
+  align-items: center;
+  display: flex !important;
+  height: 14.81%;
+  left: 80.73%;
+  top: 42.59%;
+  white-space: nowrap;
+  width: 13.84%;
+}
+
+.reveal .slides .heat-of-combustion-arrows {
+  height: 100%;
+  inset: 0;
+  pointer-events: none;
+  width: 100%;
+  z-index: 2;
+}
+
+.reveal .slides .heat-of-combustion-arrows img {
+  display: block;
+  height: 100%;
+  overflow: visible;
+  width: 100%;
 }

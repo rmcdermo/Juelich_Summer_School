@@ -36,37 +36,7 @@ $$3\mathrm{CO_2} + 4\mathrm{H_2O} + 5(0.79/0.21)\mathrm{N_2}$$
 
 ::: {.stoichiometry-structural}
 
-<svg class="stoichiometry-structural-diagram" viewBox="0 0 600 360" role="img" aria-labelledby="propane-structure-title propane-structure-description">
-  <title id="propane-structure-title">Structural formula of propane</title>
-  <desc id="propane-structure-description">Three carbon atoms in a chain, with eight attached hydrogen atoms.</desc>
-  <g stroke="currentColor" stroke-width="7" stroke-linecap="square">
-    <line x1="76" y1="180" x2="112" y2="180" />
-    <line x1="168" y1="180" x2="252" y2="180" />
-    <line x1="348" y1="180" x2="432" y2="180" />
-    <line x1="488" y1="180" x2="524" y2="180" />
-    <line x1="140" y1="84" x2="140" y2="132" />
-    <line x1="300" y1="84" x2="300" y2="132" />
-    <line x1="460" y1="84" x2="460" y2="132" />
-    <line x1="140" y1="228" x2="140" y2="276" />
-    <line x1="300" y1="228" x2="300" y2="276" />
-    <line x1="460" y1="228" x2="460" y2="276" />
-  </g>
-  <g fill="currentColor" font-family="Arial, Helvetica, sans-serif" font-size="78" text-anchor="middle" dominant-baseline="central">
-    <text x="36" y="180">H</text>
-    <text x="140" y="180">C</text>
-    <text x="300" y="180">C</text>
-    <text x="460" y="180">C</text>
-    <text x="564" y="180">H</text>
-  </g>
-  <g fill="currentColor" font-family="Arial, Helvetica, sans-serif" font-size="68" text-anchor="middle" dominant-baseline="central">
-    <text x="140" y="46">H</text>
-    <text x="300" y="46">H</text>
-    <text x="460" y="46">H</text>
-    <text x="140" y="314">H</text>
-    <text x="300" y="314">H</text>
-    <text x="460" y="314">H</text>
-  </g>
-</svg>
+![](figs/thermochemistry/propane-structural-formula.svg){.stoichiometry-structural-diagram fig-alt="Structural formula of propane: three carbon atoms in a chain with eight attached hydrogen atoms."}
 
 :::
 
@@ -120,9 +90,7 @@ $$\mathrm{CH_2O}$$
 
 ::: {.complex-fuels-arrow aria-hidden="true"}
 
-<svg viewBox="0 0 100 220" focusable="false" aria-hidden="true">
-  <path d="M20 30 L17.7 60.8 L27 57.3 L77.2 191.1 L82.8 189 L32.6 55.2 L42 51.7 Z" />
-</svg>
+![](figs/thermochemistry/arrow-complex-fuels.svg){fig-alt=""}
 
 :::
 
@@ -234,14 +202,7 @@ heat release rate [W]
 
 ::: {.heat-release-rate-arrow aria-hidden="true"}
 
-<svg viewBox="0 0 160 72" role="img" focusable="false">
-  <defs>
-    <marker id="heat-release-rate-arrowhead" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="strokeWidth">
-      <path d="M 0 0 L 9 4.5 L 0 9 Z"></path>
-    </marker>
-  </defs>
-  <line x1="4" y1="4" x2="150" y2="66" marker-end="url(#heat-release-rate-arrowhead)"></line>
-</svg>
+![](figs/thermochemistry/arrow-diagonal-down.svg){fig-alt=""}
 
 :::
 
@@ -283,9 +244,7 @@ $$[\mathrm{W/m^3}]$$
 
 ::: {.hrrpuv-output-arrow aria-hidden="true"}
 
-<svg viewBox="0 0 100 24" role="img" focusable="false">
-  <path d="M0 10H78V2L100 12L78 22V14H0Z"></path>
-</svg>
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
 
 :::
 
@@ -297,9 +256,7 @@ $$[\mathrm{kg\text{-}F/(m^3\,s)}]$$
 
 ::: {.hrrpuv-fuel-arrow aria-hidden="true"}
 
-<svg viewBox="0 0 24 100" role="img" focusable="false">
-  <path d="M10 0H14V78H22L12 100L2 78H10Z"></path>
-</svg>
+![](figs/thermochemistry/arrow-down.svg){fig-alt=""}
 
 :::
 
@@ -311,9 +268,7 @@ $$[\mathrm{J/kg\text{-}F}]$$
 
 ::: {.hrrpuv-enthalpy-arrow aria-hidden="true"}
 
-<svg viewBox="0 0 24 100" role="img" focusable="false">
-  <path d="M12 0L22 22H14V100H10V22H2Z"></path>
-</svg>
+![](figs/thermochemistry/arrow-up.svg){fig-alt=""}
 
 :::
 
@@ -335,6 +290,12 @@ heat of formation
 
 :::
 
+::: {.enthalpy-formation-arrow aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-up.svg){fig-alt=""}
+
+:::
+
 ::: {.enthalpy-formation-unit}
 
 $$[\mathrm{J/kg\text{-}\alpha}]$$
@@ -343,7 +304,13 @@ $$[\mathrm{J/kg\text{-}\alpha}]$$
 
 ::: {.enthalpy-sensible-label}
 
-sensible enthalpy
+sensible enthalpy $\quad h_{s,\alpha}(T)$
+
+:::
+
+::: {.enthalpy-sensible-arrow aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-up.svg){fig-alt=""}
 
 :::
 
@@ -355,7 +322,7 @@ enthalpy of a mixture:
 
 ::: {.enthalpy-mixture}
 
-$$h=\sum_\alpha Y_\alpha h_\alpha$$
+$$h(Y,T)=\sum_\alpha Y_\alpha h_\alpha(T)$$
 
 :::
 
@@ -367,15 +334,39 @@ NIST Webbook
 
 :::
 
+::: {.enthalpy-source-arrows aria-hidden="true"}
+
+![](figs/thermochemistry/enthalpy-source-arrows.svg){fig-alt=""}
+
+:::
+
 :::
 
 ## Heat of combustion {.heat-of-combustion-slide}
 
 ::: {.heat-of-combustion-layout}
 
+::: {.heat-of-combustion-reaction}
+
+$$\nu_{\mathrm{F}}\mathrm{C}_m\mathrm{H}_n+\nu_{\mathrm{O_2}}\mathrm{O}_2\longrightarrow\nu_{\mathrm{CO_2}}\mathrm{CO}_2+\nu_{\mathrm{H_2O}}\mathrm{H}_2\mathrm{O}$$
+
+:::
+
 ::: {.heat-of-combustion-equation}
 
-$$\Delta h_{c,i}=-\sum_\alpha\nu_{\alpha,i}\left(\frac{W_\alpha}{W_F}\right)\Delta h_{f,\alpha}^{\circ}$$
+$$\Delta h_{c,i}=-\sum_{\alpha\in i}\nu_{\mathrm{\alpha},\mathrm{i}}\left(\frac{W_\alpha}{W_{\mathrm{F}}}\right)\Delta h_{f,\alpha}^{\circ}$$
+
+:::
+
+::: {.heat-of-combustion-fuel-coefficient}
+
+$$\nu_{\mathrm{F}}=-1$$
+
+:::
+
+::: {.heat-of-combustion-unit}
+
+$$\left[\frac{\mathrm{J}}{\mathrm{kg\ fuel\ reacted}}\right]$$
 
 :::
 
@@ -389,8 +380,8 @@ heat of formation $[\mathrm{J/kg\text{-}\alpha}]$
 
 stoichiometric coefficient for  
 species $\alpha$ in reaction $i$  
-reactants negative  
-products positive
+[reactants negative  
+products positive]{.heat-of-combustion-signs}
 
 :::
 
@@ -407,6 +398,12 @@ for reaction $i$
 
 :::
 
+::: {.heat-of-combustion-arrows aria-hidden="true"}
+
+![](figs/thermochemistry/heat-of-combustion-arrows.svg){fig-alt=""}
+
+:::
+
 :::
 
 ## Heat of combustion -- oxygen basis {.heat-of-combustion-oxygen-slide}
@@ -415,7 +412,7 @@ for reaction $i$
 
 ::: {.heat-of-combustion-oxygen-equation}
 
-$$\Delta h_{c,O_2}=\Delta h_{c,F}\frac{\nu_F}{\nu_{O_2}}\frac{W_F}{W_{O_2}}$$
+$$\Delta h_{c,O_2}=\Delta h_{c,F}\frac{\nu_{\mathrm{F}}}{\nu_{\mathrm{O_2}}}\frac{W_{\mathrm{F}}}{W_{O_2}}$$
 
 :::
 
@@ -456,9 +453,11 @@ Run HOC.py
 
 ::: {.heat-of-combustion-example-output}
 
-<pre class="hoc-console-output"><span class="hoc-console-prompt">In [42]:</span> run HOC.py
+```{.hoc-console-output code-line-numbers="false"}
+In [42]: run HOC.py
 HOC Fuel Basis: 4.630e+07
-HOC O2 Basis:   1.276e+07</pre>
+HOC O2 Basis:   1.276e+07
+```
 
 :::
 
@@ -1022,7 +1021,7 @@ Lumped species are groups of primitive species that transport and react together
 
 ## Lumped-species molecular weights
 
-Question: What is $N_A W_A/W_F$?
+Question: What is $N_A W_A/W_{\mathrm{F}}$?
 
 ## Lumped-species mass fractions {.thermo-tight}
 
@@ -1054,14 +1053,14 @@ $$
 y_\mathrm{CO}
 =
 N_P X_{\mathrm{CO},P}
-\frac{W_\mathrm{CO}}{W_F}
+\frac{W_\mathrm{CO}}{W_{\mathrm{F}}}
 $$
 
 $$
 y_S
 =
 N_P X_{S,P}
-\frac{W_S}{W_F}
+\frac{W_S}{W_{\mathrm{F}}}
 $$
 
 $\mathrm{C_{0.9}H_{0.1}}$  
