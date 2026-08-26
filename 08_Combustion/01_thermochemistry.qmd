@@ -204,7 +204,7 @@ TEM image of a typical aircraft-combustor soot aggregate: (a) aggregate and (b) 
 
 :::
 
-## Heat release rate {.heat-release-rate-slide}
+## Heat Release Rate (HRR) {.heat-release-rate-slide}
 
 ::: {.heat-release-rate-layout}
 
@@ -229,6 +229,19 @@ $$\frac{L_f}{D}=3.7\left(\dot Q^*\right)^{2/5}-1.02$$
 ::: {.heat-release-rate-unit}
 
 heat release rate [W]
+
+:::
+
+::: {.heat-release-rate-arrow aria-hidden="true"}
+
+<svg viewBox="0 0 160 72" role="img" focusable="false">
+  <defs>
+    <marker id="heat-release-rate-arrowhead" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 9 4.5 L 0 9 Z"></path>
+    </marker>
+  </defs>
+  <line x1="4" y1="4" x2="150" y2="66" marker-end="url(#heat-release-rate-arrowhead)"></line>
+</svg>
 
 :::
 

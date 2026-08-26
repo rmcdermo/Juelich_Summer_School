@@ -164,19 +164,6 @@
   height: 100%;
 }
 
-.reveal .slides section.stoichiometry-slide > h2 {
-  color: #000;
-  font-family: "Calibri Light", Calibri, Arial, Helvetica, sans-serif;
-  font-size: 2.1em;
-  font-weight: 300;
-  left: 6.875%;
-  line-height: 1;
-  margin: 0;
-  position: absolute;
-  top: 5.3%;
-  z-index: 2;
-}
-
 .reveal .slides .stoichiometry-layout {
   height: 100%;
   inset: 0;
@@ -322,19 +309,6 @@
   visibility: visible !important;
 }
 
-.reveal .slides section.complex-fuels-slide > h2 {
-  color: #000;
-  font-family: "Calibri Light", Calibri, Arial, Helvetica, sans-serif;
-  font-size: 2.1em;
-  font-weight: 300;
-  left: 6.875%;
-  line-height: 1;
-  margin: 0;
-  position: absolute;
-  top: 5.325%;
-  z-index: 2;
-}
-
 .reveal .slides .complex-fuels-layout {
   display: block;
   height: 900px;
@@ -342,6 +316,7 @@
   margin: 0;
   opacity: 1;
   position: absolute;
+  transform: translateY(-3%);
   visibility: visible;
   width: 1600px;
   z-index: 1;
@@ -471,19 +446,6 @@
   overflow: visible;
 }
 
-.reveal .slides section.complex-chemistry-slide > h2 {
-  color: #000;
-  font-family: "Calibri Light", Calibri, Arial, Helvetica, sans-serif;
-  font-size: 2.1em;
-  font-weight: 300;
-  left: 6.875%;
-  line-height: 1;
-  margin: 0;
-  position: absolute;
-  top: 5.325%;
-  z-index: 2;
-}
-
 .reveal .slides .complex-chemistry-layout {
   height: 900px;
   inset: 0;
@@ -604,4 +566,118 @@
   text-align: left;
   top: 92.15%;
   width: 29.5%;
+}
+
+/* Thermochemistry: Heat Release Rate */
+
+.reveal .slides section.heat-release-rate-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .heat-release-rate-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .heat-release-rate-layout > div {
+  display: block;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .heat-release-rate-layout p,
+.reveal .slides .heat-release-rate-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .heat-release-rate-plot {
+  left: 1.32%;
+  top: 23.24%;
+  width: 54.74%;
+}
+
+.reveal .slides .heat-release-rate-plot img,
+.reveal .slides .heat-release-rate-mccaffrey img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .heat-release-rate-heading {
+  font-size: 1.28em;
+  font-weight: 600;
+  left: 61.39%;
+  line-height: 1;
+  text-align: left;
+  top: 11.50%;
+  white-space: nowrap;
+}
+
+.reveal .slides .heat-release-rate-correlation {
+  font-size: 1.22em;
+  left: 60.19%;
+  line-height: 1;
+  top: 22.17%;
+  width: 31.77%;
+}
+
+.reveal .slides .heat-release-rate-correlation mjx-container[display="true"],
+.reveal .slides .heat-release-rate-qstar mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.reveal .slides .heat-release-rate-unit {
+  color: #5b9bd5;
+  font-size: 1.18em;
+  left: 63.13%;
+  line-height: 1;
+  top: 31.34%;
+  white-space: nowrap;
+}
+
+.reveal .slides .heat-release-rate-arrow {
+  height: 7.38%;
+  left: 68.32%;
+  top: 38.64%;
+  width: 9.14%;
+}
+
+.reveal .slides .heat-release-rate-arrow svg {
+  display: block;
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+}
+
+.reveal .slides .heat-release-rate-arrow line {
+  stroke: #5b9bd5;
+  stroke-linecap: round;
+  stroke-width: 2.5;
+}
+
+.reveal .slides .heat-release-rate-arrow path {
+  fill: #5b9bd5;
+}
+
+.reveal .slides .heat-release-rate-qstar {
+  font-size: 1.08em;
+  left: 64.70%;
+  line-height: 1;
+  top: 45.11%;
+  width: 22.79%;
+}
+
+.reveal .slides .heat-release-rate-mccaffrey {
+  left: 58.17%;
+  top: 59.72%;
+  width: 38.57%;
 }
