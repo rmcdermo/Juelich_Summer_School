@@ -412,7 +412,7 @@ for reaction $i$
 
 ::: {.heat-of-combustion-oxygen-equation}
 
-$$\Delta h_{c,O_2}=\Delta h_{c,F}\frac{\nu_{\mathrm{F}}}{\nu_{\mathrm{O_2}}}\frac{W_{\mathrm{F}}}{W_{O_2}}$$
+$$\Delta h_{c,\mathrm{O_2}}=\Delta h_{c,\mathrm{F}}\frac{\nu_{\mathrm{F}}}{\nu_{\mathrm{O_2}}}\frac{W_{\mathrm{F}}}{W_{\mathrm{O_2}}}$$
 
 :::
 
@@ -425,6 +425,36 @@ EPUMO2
 ::: {.heat-of-combustion-oxygen-hoc}
 
 HEAT_OF_COMBUSTION
+
+:::
+
+::: {.heat-of-combustion-oxygen-unit}
+
+$$\frac{\mathrm{J}}{\mathrm{kg}_{\mathrm{O_2}}}$$
+
+:::
+
+::: {.heat-of-combustion-fuel-unit}
+
+$$\frac{\mathrm{J}}{\mathrm{kg}_{\mathrm{F}}}$$
+
+:::
+
+::: {.heat-of-combustion-stoich-units}
+
+$$\left(\frac{\dfrac{\mathrm{kmol}_{\mathrm{F}}}{\mathrm{kmol}_{\mathrm{F}}}}{\dfrac{\mathrm{kmol}_{\mathrm{O_2}}}{\mathrm{kmol}_{\mathrm{F}}}}\right)$$
+
+:::
+
+::: {.heat-of-combustion-molecular-weight-units}
+
+$$\left(\frac{\dfrac{\mathrm{kg}_{\mathrm{F}}}{\mathrm{kmol}_{\mathrm{F}}}}{\dfrac{\mathrm{kg}_{\mathrm{O_2}}}{\mathrm{kmol}_{\mathrm{O_2}}}}\right)$$
+
+:::
+
+::: {.heat-of-combustion-oxygen-arrows aria-hidden="true"}
+
+![](figs/thermochemistry/heat-of-combustion-oxygen-arrows.svg){fig-alt=""}
 
 :::
 

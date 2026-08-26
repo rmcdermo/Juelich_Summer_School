@@ -1066,3 +1066,116 @@
   overflow: visible;
   width: 100%;
 }
+
+/* Thermochemistry: Heat of Combustion -- Oxygen Basis */
+
+.reveal .slides section.heat-of-combustion-oxygen-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-layout > div {
+  display: block;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-layout p,
+.reveal .slides .heat-of-combustion-oxygen-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-equation {
+  font-size: 1.75em;
+  left: 22%;
+  line-height: 1;
+  top: 34%;
+  width: 56%;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-epumo2,
+.reveal .slides .heat-of-combustion-oxygen-hoc {
+  color: #4472c4;
+  font-size: 1.18em;
+  line-height: 1;
+  text-align: center;
+  top: 18.5%;
+  white-space: nowrap;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-epumo2 {
+  left: 17.6%;
+  width: 22%;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-hoc {
+  left: 41.6%;
+  width: 32%;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-unit,
+.reveal .slides .heat-of-combustion-fuel-unit {
+  font-size: 1.15em;
+  line-height: 1;
+  top: 58%;
+}
+
+.reveal .slides .heat-of-combustion-stoich-units,
+.reveal .slides .heat-of-combustion-molecular-weight-units {
+  font-size: 0.92em;
+  line-height: 1;
+  top: 55.5%;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-unit {
+  left: 29.9%;
+  width: 12.5%;
+}
+
+.reveal .slides .heat-of-combustion-fuel-unit {
+  left: 43.2%;
+  width: 12%;
+}
+
+.reveal .slides .heat-of-combustion-stoich-units {
+  left: 50.75%;
+  width: 13%;
+}
+
+.reveal .slides .heat-of-combustion-molecular-weight-units {
+  left: 60.75%;
+  width: 14%;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-equation mjx-container[display="true"],
+.reveal .slides .heat-of-combustion-oxygen-unit mjx-container[display="true"],
+.reveal .slides .heat-of-combustion-fuel-unit mjx-container[display="true"],
+.reveal .slides .heat-of-combustion-stoich-units mjx-container[display="true"],
+.reveal .slides .heat-of-combustion-molecular-weight-units mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-arrows {
+  height: 100%;
+  inset: 0;
+  pointer-events: none;
+  width: 100%;
+  z-index: 2;
+}
+
+.reveal .slides .heat-of-combustion-oxygen-arrows img {
+  display: block;
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+}
