@@ -1096,7 +1096,7 @@
 
 .reveal .slides .heat-of-combustion-oxygen-equation {
   font-size: 1.75em;
-  left: 22%;
+  left: 20%;
   line-height: 1;
   top: 34%;
   width: 56%;
@@ -1310,7 +1310,6 @@
 
 .reveal .slides .mixture-molecular-weight-equation {
   align-items: center;
-  border: 3px solid #4472c4;
   font-size: 1.8em;
   height: 22.5%;
   justify-content: center;
@@ -1318,6 +1317,17 @@
   line-height: 1;
   top: 16%;
   width: 30%;
+}
+
+.reveal .slides .mixture-molecular-weight-equation::before {
+  border: 3px solid #4472c4;
+  bottom: 12px;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: -12px;
 }
 
 .reveal .slides .mixture-molecular-weight-units {
@@ -1332,6 +1342,84 @@
 
 .reveal .slides .mixture-molecular-weight-equation mjx-container[display="true"],
 .reveal .slides .mixture-molecular-weight-units mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+/* Thermochemistry: Mixture Molecular Weight from Mass Fractions */
+
+.reveal .slides section.mixture-mass-fractions-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .mixture-mass-fractions-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .mixture-mass-fractions-layout > div {
+  display: flex;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .mixture-mass-fractions-definition {
+  align-items: center;
+  border: 3px solid #4472c4;
+  font-size: 1.72em;
+  height: 22.5%;
+  justify-content: center;
+  left: 22%;
+  line-height: 1;
+  top: 17.5%;
+  width: 26%;
+}
+
+.reveal .slides .mixture-mass-fractions-rearranged {
+  align-items: center;
+  font-size: 1.72em;
+  height: 22.5%;
+  justify-content: center;
+  left: 59.5%;
+  line-height: 1;
+  top: 17.5%;
+  width: 22%;
+}
+
+.reveal .slides .mixture-mass-fractions-arrow {
+  height: 7%;
+  left: 50.5%;
+  pointer-events: none;
+  top: 24.8%;
+  width: 15%;
+}
+
+.reveal .slides .mixture-mass-fractions-arrow img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  overflow: visible;
+  width: 100%;
+}
+
+.reveal .slides .mixture-mass-fractions-units {
+  align-items: center;
+  font-size: 1.35em;
+  justify-content: center;
+  left: 11.5%;
+  line-height: 1;
+  top: 51%;
+  width: 80%;
+}
+
+.reveal .slides .mixture-mass-fractions-definition mjx-container[display="true"],
+.reveal .slides .mixture-mass-fractions-rearranged mjx-container[display="true"],
+.reveal .slides .mixture-mass-fractions-units mjx-container[display="true"] {
   margin: 0 !important;
   text-align: center !important;
 }

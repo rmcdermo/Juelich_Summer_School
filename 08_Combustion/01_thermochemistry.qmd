@@ -584,16 +584,45 @@ $$
 
 :::
 
-## Mixture molecular weight from mass fractions
+## Mixture molecular weight from mass fractions {.mixture-mass-fractions-slide}
+
+::: {.mixture-mass-fractions-layout}
+
+::: {.mixture-mass-fractions-definition}
+
+$$Y_\alpha = X_\alpha \frac{W_\alpha}{\overline W}$$
+
+:::
+
+::: {.mixture-mass-fractions-arrow aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+
+:::
+
+::: {.mixture-mass-fractions-rearranged}
+
+$$\frac{\overline W}{W_\alpha}=\frac{X_\alpha}{Y_\alpha}$$
+
+:::
+
+::: {.mixture-mass-fractions-units}
 
 $$
-Y_\alpha = X_\alpha \frac{W_\alpha}{\overline W}
+\frac{\mathrm{kg\text{-}\alpha}}{\mathrm{kg\text{-}mix}}
+\quad \mathrel{\left[=\right]} \quad
+\frac{\mathrm{kmol\text{-}\alpha}}{\mathrm{kmol\text{-}mix}}
+\quad
+\frac{
+  \dfrac{\mathrm{kg\text{-}\alpha}}{\mathrm{kmol\text{-}\alpha}}
+}{
+  \dfrac{\mathrm{kg\text{-}mix}}{\mathrm{kmol\text{-}mix}}
+}
 $$
 
-$$
-\frac{\overline W}{W_\alpha} =
-\frac{X_\alpha}{Y_\alpha}
-$$
+:::
+
+:::
 
 
 ## Mixture molecular weight derivation
