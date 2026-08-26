@@ -1423,3 +1423,107 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: Mixture Molecular Weight Derivation */
+
+.reveal .slides section.mixture-derivation-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .mixture-derivation-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .mixture-derivation-layout > div {
+  display: flex;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .mixture-derivation-expanded {
+  align-items: center;
+  font-size: 1.55em;
+  height: 26%;
+  justify-content: center;
+  left: 4.5%;
+  line-height: 1;
+  top: 17.5%;
+  width: 43%;
+}
+
+.reveal .slides .mixture-derivation-summed {
+  align-items: center;
+  font-size: 1.55em;
+  height: 26%;
+  justify-content: center;
+  left: 54.5%;
+  line-height: 1;
+  top: 17.5%;
+  width: 41%;
+}
+
+.reveal .slides .mixture-derivation-arrow {
+  height: 6%;
+  left: 46%;
+  top: 27.25%;
+  width: 10%;
+}
+
+.reveal .slides .mixture-derivation-note {
+  display: block !important;
+  font-size: 1.55em;
+  left: 5.5%;
+  line-height: 1.2;
+  text-align: left;
+  top: 59%;
+  width: 43%;
+}
+
+.reveal .slides .mixture-derivation-left-pointer,
+.reveal .slides .mixture-derivation-right-pointer {
+  height: 22%;
+  top: 36%;
+  width: 8%;
+}
+
+.reveal .slides .mixture-derivation-left-pointer {
+  left: 18.5%;
+}
+
+.reveal .slides .mixture-derivation-right-pointer {
+  left: 31.2%;
+}
+
+.reveal .slides .mixture-derivation-left-pointer img,
+.reveal .slides .mixture-derivation-right-pointer img,
+.reveal .slides .mixture-derivation-arrow img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .mixture-derivation-result {
+  align-items: center;
+  border: 3px solid #00b050;
+  font-size: 1.65em;
+  height: 27%;
+  justify-content: center;
+  left: 58%;
+  line-height: 1;
+  top: 49%;
+  width: 34%;
+}
+
+.reveal .slides .mixture-derivation-expanded mjx-container[display="true"],
+.reveal .slides .mixture-derivation-summed mjx-container[display="true"],
+.reveal .slides .mixture-derivation-result mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}

@@ -625,25 +625,71 @@ $$
 :::
 
 
-## Mixture molecular weight derivation
+## Mixture molecular weight derivation {.mixture-derivation-slide}
+
+::: {.mixture-derivation-layout}
+
+::: {.mixture-derivation-expanded}
 
 $$
 \sum_\alpha
 \left(
 Y_\alpha\frac{\overline W}{W_\alpha}
-\right)
 =
-\sum_\alpha X_\alpha = 1
+\frac{X_\alpha}{Y_\alpha}Y_\alpha
+\right)
 $$
 
+:::
+
+::: {.mixture-derivation-arrow aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+
+:::
+
+::: {.mixture-derivation-summed}
+
 $$
-\boxed{
+\overline W\sum_\alpha\frac{Y_\alpha}{W_\alpha}
+=
+\sum_\alpha X_\alpha
+=1
+$$
+
+:::
+
+::: {.mixture-derivation-note}
+
+Multiply both sides by $Y_\alpha$  
+and sum.
+
+:::
+
+::: {.mixture-derivation-left-pointer aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-up-left.svg){fig-alt=""}
+
+:::
+
+::: {.mixture-derivation-right-pointer aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-up-right.svg){fig-alt=""}
+
+:::
+
+::: {.mixture-derivation-result}
+
+$$
 \overline W =
-\left(
+\left[
 \sum_\alpha\frac{Y_\alpha}{W_\alpha}
-\right)^{-1}
-}
+\right]^{-1}
 $$
+
+:::
+
+:::
 
 ## Oxygen-consumption calorimetry {.thermo-two-column}
 
