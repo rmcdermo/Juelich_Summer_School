@@ -78,7 +78,7 @@
 
 ::::
 
-## Recommended reading
+## Recommended reading {.reading-slide}
 
 - Douglas Drysdale, *An Introduction to Fire Dynamics*, Wiley, 1998.
 - H. Scott Fogler, *Elements of Chemical Reaction Engineering*, Prentice-Hall, 1992.

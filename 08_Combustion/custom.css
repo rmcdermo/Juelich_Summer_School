@@ -22,23 +22,16 @@
   display: none;
 }
 
-.reveal .slides section.outline-slide > h2 {
-  font-family: Calibri, Arial, Helvetica, sans-serif;
-  font-size: 1.45em;
-  font-weight: 400;
-  margin: 1.35em 0 0.7em 7%;
-}
-
 .reveal .slides .outline-grid {
-  column-gap: 5%;
+  column-gap: 4%;
   display: grid;
   font-family: Calibri, Arial, Helvetica, sans-serif;
-  font-size: 0.72em;
-  grid-template-columns: 1fr 1fr;
-  line-height: 1.2;
+  font-size: 0.92em;
+  grid-template-columns: 44% 52%;
+  line-height: 1.22;
   margin: 0 auto;
   text-align: left;
-  width: 86%;
+  width: 92%;
 }
 
 .reveal .slides .outline-grid > .column {
@@ -78,7 +71,18 @@
 }
 
 .reveal .slides .outline-grid > .column > ol > li + li {
-  margin-top: 1em;
+  margin-top: 0.8em;
+}
+
+.reveal .slides section.reading-slide > ul {
+  font-size: 1.12em;
+  margin: 1.35em 0 0 8%;
+  padding-left: 1.1em;
+  width: 86%;
+}
+
+.reveal .slides section.reading-slide > ul > li + li {
+  margin-top: 0.28em;
 }
 
 .reveal .rubric table {
