@@ -426,7 +426,9 @@ Run HOC.py
 
 ::: {.heat-of-combustion-example-output}
 
-![](figs/thermochemistry/source/slide-014-picture-01.png){fig-alt="Original HOC.py output for propane."}
+<pre class="hoc-console-output"><span class="hoc-console-prompt">In [42]:</span> run HOC.py
+HOC Fuel Basis: 4.630e+07
+HOC O2 Basis:   1.276e+07</pre>
 
 :::
 
