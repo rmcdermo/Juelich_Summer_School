@@ -559,18 +559,30 @@ $$\overline W=\left(\sum_\alpha\frac{Y_\alpha}{W_\alpha}\right)^{-1}$$
 
 :::
 
-## Mixture molecular weight
+## Mixture molecular weight {.mixture-molecular-weight-slide}
+
+::: {.mixture-molecular-weight-layout}
+
+::: {.mixture-molecular-weight-equation}
 
 $$
 \overline W = \sum_\alpha X_\alpha W_\alpha
 $$
 
+:::
+
+::: {.mixture-molecular-weight-units}
+
 $$
-\frac{\mathrm{kg\text{-}mixture}}{\mathrm{kmol\text{-}mixture}}
-=
-\frac{\mathrm{kmol\text{-}\alpha}}{\mathrm{kmol\text{-}mixture}}
+\frac{\mathrm{kg\text{-}mix}}{\mathrm{kmol\text{-}mix}}
+\mathrel{\left[=\right]}
+\frac{\mathrm{kmol\text{-}\alpha}}{\mathrm{kmol\text{-}mix}}
 \frac{\mathrm{kg\text{-}\alpha}}{\mathrm{kmol\text{-}\alpha}}
 $$
+
+:::
+
+:::
 
 ## Mixture molecular weight from mass fractions
 

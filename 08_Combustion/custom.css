@@ -1285,3 +1285,53 @@
   overflow: visible;
   width: 100%;
 }
+
+/* Thermochemistry: Mixture Molecular Weight */
+
+.reveal .slides section.mixture-molecular-weight-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .mixture-molecular-weight-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .mixture-molecular-weight-layout > div {
+  display: flex;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .mixture-molecular-weight-equation {
+  align-items: center;
+  border: 3px solid #4472c4;
+  font-size: 1.8em;
+  height: 22.5%;
+  justify-content: center;
+  left: 35%;
+  line-height: 1;
+  top: 16%;
+  width: 30%;
+}
+
+.reveal .slides .mixture-molecular-weight-units {
+  align-items: center;
+  font-size: 1.35em;
+  justify-content: center;
+  left: 11%;
+  line-height: 1;
+  top: 47.5%;
+  width: 78%;
+}
+
+.reveal .slides .mixture-molecular-weight-equation mjx-container[display="true"],
+.reveal .slides .mixture-molecular-weight-units mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
