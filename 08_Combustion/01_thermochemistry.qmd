@@ -923,29 +923,88 @@ $$
 :::
 
 
-## Adiabatic flame temperature: propane in dry air
+## Adiabatic flame temperature: propane in dry air {.aft-propane-slide}
+
+::: {.aft-propane-layout}
+
+::: {.aft-propane-reaction}
 
 $$
-T_0 = 20^\circ\mathrm{C},
-\qquad
-\Delta H_c =
-2.04\times10^6\ \mathrm{kJ/kmol\ C_3H_8}
+\mathrm{C_3H_8}
++5\left[\mathrm{O_2}+\left(\frac{0.79}{0.21}\right)\mathrm{N_2}\right]
+\rightarrow
+3\mathrm{CO_2}+4\mathrm{H_2O}
++5\left(\frac{0.79}{0.21}\right)\mathrm{N_2}
 $$
 
-$$
-c_p = 37\ \mathrm{kJ/(kmol\,K)}
-$$
+:::
+
+::: {.aft-propane-inputs}
+
+::: {.aft-propane-input-row}
 
 $$
+T_0 = 20\ ^\circ\mathrm{C}
+$$
+
+:::
+
+::: {.aft-propane-input-row}
+
+$$
+\Delta H_c = 2.04\times10^6\ \frac{\mathrm{kJ}}{\mathrm{kmol}\ \mathrm{C_3H_8}\ \mathrm{reacted}}
+$$
+
+:::
+
+::: {.aft-propane-input-row}
+
+$$
+c_p = 37\ \frac{\mathrm{kJ}}{\mathrm{kmol}\,\mathrm{K}}
+$$
+
+:::
+
+:::
+
+::: {.aft-propane-enthalpy}
+
+$$
+\Delta H = H_{\mathrm{prod}}-H_{\mathrm{react}}=0
+$$
+
+:::
+
+::: {.aft-propane-heat}
+
+$$
+Q=n c_p\left(T_f-T_0\right)
+$$
+
+:::
+
+::: {.aft-propane-arrow}
+
+![](figs/thermochemistry/arrow-aft-calculation.svg){fig-alt="Arrow connecting the heat balance to the flame-temperature calculation."}
+
+:::
+
+::: {.aft-propane-calculation}
+
+$$
+\begin{aligned}
 T_f
-=
-T_0+\frac{\dot Q}{n c_p}
-=
-293+
+&=T_0+\frac{Q}{n c_p} \\
+&=293+
 \frac{(1)(2.04\times10^6)}
-{\left[3+4+5(0.79/0.21)\right](37)}
-\approx 2429\ \mathrm{K}
+{\left[3+4+5(0.79/0.21)\right](37)} \\[0.55em]
+&={\color{red}\underline{{\color{black}2429\ \mathrm{K}}}}
+\end{aligned}
 $$
+
+:::
+
+:::
 
 
 ## Equivalence ratio {.thermo-two-column}

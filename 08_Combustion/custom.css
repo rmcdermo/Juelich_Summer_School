@@ -1995,3 +1995,115 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: Adiabatic flame temperature for propane in dry air */
+
+.reveal .slides section.aft-propane-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .aft-propane-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .aft-propane-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .aft-propane-reaction {
+  font-size: 1.18em;
+  left: 3.5%;
+  line-height: 1;
+  top: 17%;
+  width: 93%;
+}
+
+.reveal .slides .aft-propane-inputs {
+  border: 3px solid #0070c0;
+  box-sizing: border-box;
+  display: grid;
+  font-size: 0.86em;
+  grid-template-rows: repeat(3, 1fr);
+  height: 23.5%;
+  left: 4.25%;
+  line-height: 1.25;
+  padding: 0.45em 1.1em;
+  top: 31.5%;
+  width: 35.5%;
+}
+
+.reveal .slides .aft-propane-input-row {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  min-height: 0;
+  width: 100%;
+}
+
+.reveal .slides .aft-propane-input-row p {
+  margin: 0;
+}
+
+.reveal .slides .aft-propane-enthalpy {
+  font-size: 1.18em;
+  left: 5%;
+  line-height: 1;
+  top: 61%;
+  width: 36%;
+}
+
+.reveal .slides .aft-propane-heat {
+  font-size: 1.18em;
+  left: 5%;
+  line-height: 1;
+  top: 73%;
+  width: 36%;
+}
+
+.reveal .slides .aft-propane-arrow {
+  height: 44%;
+  left: 32%;
+  top: 36.5%;
+  width: 31%;
+}
+
+.reveal .slides .aft-propane-arrow p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .aft-propane-arrow img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: contain;
+  width: 100%;
+}
+
+.reveal .slides .aft-propane-calculation {
+  font-size: 1.08em;
+  left: 55.5%;
+  line-height: 1.35;
+  top: 39%;
+  width: 41.5%;
+}
+
+.reveal .slides .aft-propane-reaction mjx-container[display="true"],
+.reveal .slides .aft-propane-inputs mjx-container[display="true"],
+.reveal .slides .aft-propane-enthalpy mjx-container[display="true"],
+.reveal .slides .aft-propane-heat mjx-container[display="true"],
+.reveal .slides .aft-propane-calculation mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
