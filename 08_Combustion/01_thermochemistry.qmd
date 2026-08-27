@@ -691,31 +691,23 @@ $$
 
 :::
 
-## Oxygen-consumption calorimetry {.thermo-two-column}
+## Oxygen-consumption calorimetry {.oxygen-calorimetry-slide}
 
-:::: {.columns}
+::: {.oxygen-calorimetry-layout}
 
-::: {.column width="54%"}
+::: {.oxygen-calorimetry-facility}
 
-$$
-\dot Q =
-\Delta h_{c,O_2}
-\left(
-\dot m_{O_2,\mathrm{in}}
--
-\dot m_{O_2,\mathrm{out}}
-\right)
-$$
+![](figs/thermochemistry/source/slide-019-picture-01.png){fig-alt="Schematic of the Large Fire Research Facility exhaust hoods and duct system."}
 
 :::
 
-::: {.column width="46%"}
+::: {.oxygen-calorimetry-report}
 
-![](figs/thermochemistry/source/slide-019-picture-01.png){.thermo-source-figure fig-alt="Schematic of a large-fire calorimetry exhaust-hood and duct system."}
+![](figs/thermochemistry/source/slide-019-picture-02.png){fig-alt="Cover of NIST Special Publication 1007, Heat Release Rate Measurement Using Oxygen Consumption Calorimetry."}
 
 :::
 
-::::
+:::
 
 ## Fire tests with real materials {.thermo-two-column .fire-tests-slide}
 

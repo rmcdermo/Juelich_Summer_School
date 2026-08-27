@@ -1527,3 +1527,57 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: Oxygen-consumption calorimetry */
+
+.reveal .slides section.oxygen-calorimetry-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .oxygen-calorimetry-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .oxygen-calorimetry-layout > div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .oxygen-calorimetry-facility {
+  height: 73%;
+  left: 3.5%;
+  top: 14.5%;
+  width: 57%;
+}
+
+.reveal .slides .oxygen-calorimetry-report {
+  height: 73%;
+  left: 62.4%;
+  top: 14.5%;
+  width: 32.2%;
+}
+
+.reveal .slides .oxygen-calorimetry-layout p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .oxygen-calorimetry-layout img {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  max-height: none;
+  max-width: none;
+  object-fit: contain;
+  width: 100%;
+}
