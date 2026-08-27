@@ -709,23 +709,64 @@ $$
 
 :::
 
-## Fire tests with real materials {.thermo-two-column .fire-tests-slide}
+## Fire tests with real materials {.fire-tests-slide}
 
-:::: {.columns}
+::: {.fire-tests-layout}
 
-::: {.column width="53%"}
+::: {.fire-tests-photo}
 
-Measured
-
-:::
-
-::: {.column width="47%"}
-
-![](figs/thermochemistry/source/slide-019-picture-02.png){.thermo-source-figure fig-alt="Example large-fire calorimetry experiment and heat-release-rate measurement."}
+![](figs/thermochemistry/video/fire-tests-real-materials.mp4){controls="true" poster="figs/thermochemistry/source/slide-020-media-01.png" preload="metadata" fig-alt="Upholstered-chair fire test with synchronized heat-release-rate and mass-loss measurements."}
 
 :::
 
-::::
+::: {.fire-tests-credit}
+
+Courtesy Mauro Zammarano, Matt Bundy, Matt Hoehler, NIST
+
+:::
+
+::: {.fire-tests-hrr-equation}
+
+$$
+\require{enclose}
+\begin{aligned}
+\dot Q
+&= \Delta h_{c,\mathrm{O_2}}
+   \left(\dot m_{\mathrm{O_2}}^0-\dot m_{\mathrm{O_2}}\right) \\
+&= \Delta h_{c,\mathrm{O_2}}\,\dot m_e
+   \left(Y_{\mathrm{O_2}}^0-Y_{\mathrm{O_2}}\right) \\
+&= \Delta h_{c,\mathrm{O_2}}
+   \left(\frac{{\color{red}\enclose{circle}[padding="3px",thickness="2px"]{{\color{black}V}}}\,A}{\rho}\right)
+   \left(Y_{\mathrm{O_2}}^0-{\color{red}\enclose{circle}[padding="3px",thickness="2px"]{{\color{black}Y_{\mathrm{O_2}}}}}\right)
+\end{aligned}
+$$
+
+:::
+
+::: {.fire-tests-density-equation}
+
+$$
+\rho=\frac{p_0\overline W}{R\,{\color{red}\enclose{circle}[padding="3px",thickness="2px"]{{\color{black}T}}}}
+$$
+
+:::
+
+::: {.fire-tests-mixture-equation}
+
+$$
+\overline W=
+\left[\sum_\alpha\frac{{\color{red}\enclose{circle}[padding="3px",thickness="2px"]{{\color{black}Y_\alpha}}}}{W_\alpha}\right]^{-1}
+$$
+
+:::
+
+::: {.fire-tests-measured}
+
+[]{.fire-tests-measured-symbol} Measured
+
+:::
+
+:::
 
 ## Heat release rate in FDS {.thermo-two-column}
 

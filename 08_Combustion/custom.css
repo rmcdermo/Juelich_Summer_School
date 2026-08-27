@@ -1581,3 +1581,122 @@
   object-fit: contain;
   width: 100%;
 }
+
+/* Thermochemistry: Fire tests with real materials */
+
+.reveal .slides section.fire-tests-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .fire-tests-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .fire-tests-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .fire-tests-photo {
+  height: 53%;
+  left: 3.5%;
+  top: 18.5%;
+  width: 58%;
+}
+
+.reveal .slides .fire-tests-photo p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .fire-tests-photo img,
+.reveal .slides .fire-tests-photo video {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: contain;
+  width: 100%;
+}
+
+.reveal .slides .fire-tests-credit {
+  font-size: 0.78em;
+  font-weight: 600;
+  left: 4.5%;
+  line-height: 1.1;
+  text-align: left;
+  top: 74%;
+  width: 56%;
+}
+
+.reveal .slides .fire-tests-credit p,
+.reveal .slides .fire-tests-hrr-equation .math.display,
+.reveal .slides .fire-tests-density-equation .math.display,
+.reveal .slides .fire-tests-mixture-equation .math.display {
+  margin: 0;
+}
+
+.reveal .slides .fire-tests-hrr-equation {
+  font-size: 1.08em;
+  left: 61.5%;
+  line-height: 1;
+  top: 18%;
+  width: 36%;
+}
+
+.reveal .slides .fire-tests-density-equation {
+  font-size: 1.18em;
+  left: 65.5%;
+  line-height: 1;
+  top: 45.5%;
+  width: 22%;
+}
+
+.reveal .slides .fire-tests-mixture-equation {
+  font-size: 1.18em;
+  left: 64.5%;
+  line-height: 1;
+  top: 62%;
+  width: 25%;
+}
+
+.reveal .slides .fire-tests-hrr-equation mjx-container[display="true"],
+.reveal .slides .fire-tests-density-equation mjx-container[display="true"],
+.reveal .slides .fire-tests-mixture-equation mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.reveal .slides .fire-tests-measured {
+  align-items: center;
+  color: #f00;
+  display: flex;
+  font-size: 1.1em;
+  gap: 0.55em;
+  left: 70.5%;
+  top: 84%;
+  width: 23%;
+}
+
+.reveal .slides .fire-tests-measured p {
+  align-items: center;
+  display: flex;
+  gap: 0.55em;
+  margin: 0;
+}
+
+.reveal .slides .fire-tests-measured-symbol {
+  border: 2.5px solid #ff2d2d;
+  border-radius: 50%;
+  display: inline-block;
+  height: 1.55em;
+  width: 1.55em;
+}
