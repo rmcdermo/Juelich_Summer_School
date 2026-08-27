@@ -1007,29 +1007,55 @@ $$
 :::
 
 
-## Equivalence ratio {.thermo-two-column}
+## Equivalence Ratio {.equivalence-ratio-slide}
 
-:::: {.columns}
+::: {.equivalence-ratio-layout}
 
-::: {.column width="58%"}
+::: {.equivalence-ratio-equation}
 
 $$
-\Phi =
+\Phi \equiv
 \frac{Y_F/Y_A}
 {(Y_F/Y_A)_\mathrm{stoich}}
 $$
+
+:::
+
+::: {.equivalence-ratio-rich}
+
+$$
+\Phi > 1 \qquad \text{“fuel rich”}
+$$
+
+:::
+
+::: {.equivalence-ratio-lean}
+
+$$
+\Phi < 1 \qquad \text{“fuel lean”}
+$$
+
+:::
+
+::: {.equivalence-ratio-photo}
+
+![](figs/thermochemistry/source/slide-024-picture-04.png){fig-alt="A burning candle, illustrating a luminous diffusion flame with fuel-rich regions that can form soot."}
+
+:::
+
+::: {.equivalence-ratio-source}
+
+[Wikimedia Commons](https://commons.wikimedia.org/)
+
+:::
+
+::: {.equivalence-ratio-note}
 
 Generally, fuel rich conditions are responsible for producing CO and soot.
 
 :::
 
-::: {.column width="42%"}
-
-![](figs/thermochemistry/source/slide-024-picture-04.png){.thermo-source-figure fig-alt="Candle flame with fuel-rich and fuel-lean regions."}
-
 :::
-
-::::
 
 ## Types of combustion {.thermo-two-column}
 

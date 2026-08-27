@@ -2107,3 +2107,124 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: Equivalence ratio */
+
+.reveal .slides section.equivalence-ratio-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .equivalence-ratio-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .equivalence-ratio-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .equivalence-ratio-equation {
+  align-items: center;
+  border: 3px solid #0070c0;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1.55em;
+  height: 21.5%;
+  justify-content: center;
+  left: 11.8%;
+  line-height: 1;
+  top: 29.4%;
+  width: 33.4%;
+}
+
+.reveal .slides .equivalence-ratio-rich,
+.reveal .slides .equivalence-ratio-lean {
+  align-items: center;
+  display: flex;
+  font-size: 1.75em;
+  justify-content: flex-start;
+  left: 12.8%;
+  line-height: 1;
+  width: 34%;
+}
+
+.reveal .slides .equivalence-ratio-rich {
+  top: 58.2%;
+}
+
+.reveal .slides .equivalence-ratio-lean {
+  top: 70.1%;
+}
+
+.reveal .slides .equivalence-ratio-photo {
+  height: 58.5%;
+  left: 57.2%;
+  overflow: hidden;
+  top: 9.3%;
+  width: 35%;
+}
+
+.reveal .slides .equivalence-ratio-photo p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .equivalence-ratio-photo img {
+  display: block;
+  height: 107.5%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: fill;
+  object-position: top;
+  width: 100%;
+}
+
+.reveal .slides .equivalence-ratio-source {
+  font-size: 0.54em;
+  left: 57.8%;
+  line-height: 1;
+  text-align: left;
+  top: 69%;
+  width: 34%;
+}
+
+.reveal .slides .equivalence-ratio-source a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reveal .slides .equivalence-ratio-note {
+  font-size: 1.25em;
+  left: 57.8%;
+  line-height: 1.28;
+  text-align: left;
+  top: 74.5%;
+  width: 34.5%;
+}
+
+.reveal .slides .equivalence-ratio-note p,
+.reveal .slides .equivalence-ratio-source p,
+.reveal .slides .equivalence-ratio-equation .math.display,
+.reveal .slides .equivalence-ratio-rich .math.display,
+.reveal .slides .equivalence-ratio-lean .math.display {
+  margin: 0;
+}
+
+.reveal .slides .equivalence-ratio-equation mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.reveal .slides .equivalence-ratio-rich mjx-container[display="true"],
+.reveal .slides .equivalence-ratio-lean mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
