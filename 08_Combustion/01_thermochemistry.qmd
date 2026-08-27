@@ -1057,34 +1057,75 @@ Generally, fuel rich conditions are responsible for producing CO and soot.
 
 :::
 
-## Types of combustion {.thermo-two-column}
+## Types of Combustion {.types-combustion-slide}
 
-:::: {.columns}
+::: {.types-combustion-layout}
 
-::: {.column width="48%"}
+::: {.types-combustion-modes}
 
-Diffusion  
-Premixed
+- Premixed
+- Partially premixed
+- Diffusion flame
 
-Premixed  
-Partially premixed  
-Diffusion flame
+:::
+
+::: {.types-chemistry-heading}
 
 Types of Chemistry
 
-Infinitely fast  
-Equilibrium  
-Finite rate (Arrhenius)
+:::
+
+::: {.types-chemistry-modes}
+
+- Infinitely fast
+- Equilibrium
+- Finite rate (Arrhenius)
 
 :::
 
-::: {.column width="52%"}
+::: {.types-combustion-fuel}
 
-![](figs/thermochemistry/source/slide-025-picture-01.jpeg){.thermo-source-figure fig-alt="Bunsen-burner flames showing changes in combustion mode with air entrainment."}
+Methane
 
 :::
 
-::::
+::: {.types-combustion-photo}
+
+![](figs/thermochemistry/source/slide-025-picture-01.jpeg){fig-alt="Four methane flames progressing from a yellow diffusion flame to increasingly blue premixed flames."}
+
+:::
+
+::: {.types-combustion-source}
+
+[Wikimedia Commons](https://commons.wikimedia.org/)
+
+:::
+
+::: {.types-combustion-diffusion}
+
+Diffusion
+
+:::
+
+::: {.types-combustion-continuum-left aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+
+:::
+
+::: {.types-combustion-continuum-right aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+
+:::
+
+::: {.types-combustion-premixed}
+
+Premixed
+
+:::
+
+:::
 
 ## Mixture fraction for non-premixed flames {.thermo-two-column}
 

@@ -2228,3 +2228,177 @@
   margin: 0 !important;
   text-align: left !important;
 }
+
+/* Thermochemistry: Types of combustion */
+
+.reveal .slides section.types-combustion-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .types-combustion-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .types-combustion-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .types-combustion-modes,
+.reveal .slides .types-chemistry-modes {
+  font-size: 1.35em;
+  left: 6.9%;
+  line-height: 1.45;
+  text-align: left;
+  width: 42.5%;
+}
+
+.reveal .slides .types-combustion-modes {
+  top: 12.5%;
+}
+
+.reveal .slides .types-chemistry-modes {
+  top: 62.5%;
+}
+
+.reveal .slides .types-combustion-modes ul,
+.reveal .slides .types-chemistry-modes ul {
+  margin: 0;
+  padding-left: 0.9em;
+}
+
+.reveal .slides .types-combustion-modes li,
+.reveal .slides .types-chemistry-modes li {
+  padding-left: 0.05em;
+}
+
+.reveal .slides .types-combustion-modes li:nth-child(3),
+.reveal .slides .types-chemistry-modes li:first-child {
+  color: #ff0000;
+}
+
+.reveal .slides .types-chemistry-heading {
+  font-family: var(--r-heading-font);
+  font-size: var(--r-heading2-size);
+  font-weight: var(--r-heading-font-weight);
+  left: 0;
+  letter-spacing: var(--r-heading-letter-spacing);
+  line-height: var(--r-heading-line-height);
+  text-align: left;
+  text-transform: var(--r-heading-text-transform);
+  top: 51%;
+  width: 42.5%;
+}
+
+.reveal .slides .types-combustion-fuel {
+  font-size: 1.45em;
+  left: 64.75%;
+  line-height: 1;
+  text-align: center;
+  top: 10.3%;
+  width: 11.7%;
+}
+
+.reveal .slides .types-combustion-photo {
+  background: #000;
+  height: 60.65%;
+  left: 52.12%;
+  overflow: hidden;
+  top: 17.42%;
+  width: 36.94%;
+}
+
+.reveal .slides .types-combustion-photo p {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.reveal .slides .types-combustion-photo img {
+  display: block;
+  height: 108.1%;
+  left: 5%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: fill;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.reveal .slides .types-combustion-source {
+  font-size: 0.54em;
+  left: 52.2%;
+  line-height: 1;
+  text-align: left;
+  top: 79.05%;
+  width: 28.2%;
+}
+
+.reveal .slides .types-combustion-source a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reveal .slides .types-combustion-diffusion,
+.reveal .slides .types-combustion-premixed {
+  font-size: 1.42em;
+  line-height: 1;
+  text-align: center;
+  top: 82%;
+}
+
+.reveal .slides .types-combustion-diffusion {
+  left: 51.55%;
+  width: 11.5%;
+}
+
+.reveal .slides .types-combustion-premixed {
+  left: 77.8%;
+  width: 12%;
+}
+
+.reveal .slides .types-combustion-continuum-left,
+.reveal .slides .types-combustion-continuum-right {
+  height: 2.8%;
+  top: 83%;
+  width: 5.8%;
+}
+
+.reveal .slides .types-combustion-continuum-left {
+  left: 65%;
+  transform: rotate(180deg);
+}
+
+.reveal .slides .types-combustion-continuum-right {
+  left: 70.5%;
+}
+
+.reveal .slides .types-combustion-continuum-left p,
+.reveal .slides .types-combustion-continuum-right p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .types-combustion-continuum-left img,
+.reveal .slides .types-combustion-continuum-right img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .types-combustion-layout p {
+  margin: 0;
+}
