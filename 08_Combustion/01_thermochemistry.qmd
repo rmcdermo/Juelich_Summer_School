@@ -827,19 +827,100 @@ b) plot `hrrpuv` and `hrrpuv_reac`
 
 :::
 
-## Adiabatic flame temperature
+## Adiabatic flame temperature {.adiabatic-flame-slide}
 
-First Law of Thermodynamics
+::: {.adiabatic-flame-layout}
+
+::: {.adiabatic-first-law}
+
+First Law of  
+Thermodynamics
+
+:::
+
+::: {.adiabatic-main-equation}
 
 $$
 \Delta U = Q + W
 $$
 
-Recall the definition of enthalpy:
+:::
+
+::: {.adiabatic-zero}
+
+$$0$$
+
+:::
+
+::: {.adiabatic-zero-arrow}
+
+![](figs/thermochemistry/arrow-q-to-zero.svg){fig-alt="Arrow crossing through Q and pointing to zero for an adiabatic system."}
+
+:::
+
+::: {.adiabatic-internal-arrow}
+
+![](figs/thermochemistry/arrow-up-right.svg){fig-alt="Arrow connecting change in internal energy to delta U."}
+
+:::
+
+::: {.adiabatic-heat-arrow}
+
+![](figs/thermochemistry/arrow-up.svg){fig-alt="Arrow connecting heat transferred to Q."}
+
+:::
+
+::: {.adiabatic-work-arrow}
+
+![](figs/thermochemistry/arrow-up-left.svg){fig-alt="Arrow connecting work done on the system to W."}
+
+:::
+
+::: {.adiabatic-internal-label}
+
+change in  
+[internal energy]{.adiabatic-internal-energy}
+
+:::
+
+::: {.adiabatic-heat-label}
+
+heat transferred  
+*to the system*
+
+:::
+
+::: {.adiabatic-work-label}
+
+work done  
+*on the system*
+
+:::
+
+::: {.adiabatic-enthalpy-recall}
+
+Recall the definition of  
+*enthalpy:*
+
+:::
+
+::: {.adiabatic-enthalpy-definition}
 
 $$
-\Delta H = \Delta U + P\Delta V = 0
+H = U + PV
 $$
+
+:::
+
+::: {.adiabatic-enthalpy-balance}
+
+$$
+\Delta H = \Delta U + \underbrace{P\Delta V}_{-W} = 0
+$$
+
+:::
+
+:::
 
 
 ## Adiabatic flame temperature: propane in dry air

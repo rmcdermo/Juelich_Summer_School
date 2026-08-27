@@ -1831,3 +1831,167 @@
   transform: scale(0.92);
   transform-origin: 71% 2%;
 }
+
+/* Thermochemistry: Adiabatic flame temperature */
+
+.reveal .slides section.adiabatic-flame-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .adiabatic-flame-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .adiabatic-flame-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .adiabatic-first-law {
+  font-size: 1.12em;
+  font-weight: 600;
+  left: 7.5%;
+  line-height: 1.18;
+  text-align: left;
+  top: 26%;
+  width: 25%;
+}
+
+.reveal .slides .adiabatic-main-equation {
+  font-size: 1.7em;
+  left: 42%;
+  line-height: 1;
+  top: 19.5%;
+  width: 33%;
+}
+
+.reveal .slides .adiabatic-zero {
+  font-size: 1.38em;
+  left: 61.4%;
+  line-height: 1;
+  top: 16.05%;
+  width: 4%;
+}
+
+.reveal .slides .adiabatic-zero-arrow {
+  height: 8.76%;
+  left: 56.43%;
+  top: 19.62%;
+  width: 6.5%;
+}
+
+.reveal .slides .adiabatic-internal-arrow,
+.reveal .slides .adiabatic-work-arrow {
+  height: 14%;
+  top: 31.5%;
+  width: 7.5%;
+}
+
+.reveal .slides .adiabatic-internal-arrow {
+  left: 43.2%;
+}
+
+.reveal .slides .adiabatic-heat-arrow {
+  height: 12%;
+  left: 59.2%;
+  top: 32.5%;
+  width: 2.2%;
+}
+
+.reveal .slides .adiabatic-work-arrow {
+  left: 67.3%;
+}
+
+.reveal .slides .adiabatic-zero-arrow p,
+.reveal .slides .adiabatic-internal-arrow p,
+.reveal .slides .adiabatic-heat-arrow p,
+.reveal .slides .adiabatic-work-arrow p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .adiabatic-zero-arrow img,
+.reveal .slides .adiabatic-internal-arrow img,
+.reveal .slides .adiabatic-heat-arrow img,
+.reveal .slides .adiabatic-work-arrow img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: contain;
+  width: 100%;
+}
+
+.reveal .slides .adiabatic-zero-arrow img {
+  opacity: 0.72;
+}
+
+.reveal .slides .adiabatic-internal-label,
+.reveal .slides .adiabatic-heat-label,
+.reveal .slides .adiabatic-work-label {
+  font-size: 1.08em;
+  line-height: 1.22;
+  text-align: center;
+  top: 45.5%;
+}
+
+.reveal .slides .adiabatic-internal-label {
+  left: 36%;
+  width: 17%;
+}
+
+.reveal .slides .adiabatic-heat-label {
+  left: 51.5%;
+  width: 18%;
+}
+
+.reveal .slides .adiabatic-work-label {
+  left: 69.5%;
+  width: 18%;
+}
+
+.reveal .slides .adiabatic-internal-energy {
+  color: #f00;
+  font-style: italic;
+}
+
+.reveal .slides .adiabatic-enthalpy-recall {
+  font-size: 1.12em;
+  left: 7.5%;
+  line-height: 1.2;
+  text-align: left;
+  top: 67%;
+  width: 31%;
+}
+
+.reveal .slides .adiabatic-enthalpy-definition {
+  font-size: 1.62em;
+  left: 47%;
+  line-height: 1;
+  top: 62%;
+  width: 31%;
+}
+
+.reveal .slides .adiabatic-enthalpy-balance {
+  font-size: 1.55em;
+  left: 43.5%;
+  line-height: 1;
+  top: 73%;
+  width: 42%;
+}
+
+.reveal .slides .adiabatic-main-equation mjx-container[display="true"],
+.reveal .slides .adiabatic-zero mjx-container[display="true"],
+.reveal .slides .adiabatic-enthalpy-definition mjx-container[display="true"],
+.reveal .slides .adiabatic-enthalpy-balance mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
