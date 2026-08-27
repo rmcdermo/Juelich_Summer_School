@@ -1700,3 +1700,134 @@
   height: 1.55em;
   width: 1.55em;
 }
+
+/* Thermochemistry: Heat release rate in FDS */
+
+.reveal .slides section.heat-release-rate-fds-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .heat-release-rate-fds-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .heat-release-rate-fds-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .heat-release-rate-fds-units {
+  align-items: center;
+  display: flex;
+  font-size: 1.55em;
+  height: 23%;
+  justify-content: center;
+  left: 4.5%;
+  line-height: 1;
+  top: 19%;
+  width: 20%;
+}
+
+.reveal .slides .heat-release-rate-fds-equations {
+  align-items: center;
+  display: flex;
+  font-size: 1.55em;
+  height: 29%;
+  justify-content: center;
+  left: 25%;
+  line-height: 1.25;
+  top: 16%;
+  width: 40%;
+}
+
+.reveal .slides .heat-release-rate-fds-units mjx-container[display="true"],
+.reveal .slides .heat-release-rate-fds-equations mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.reveal .slides .heat-release-rate-fds-note {
+  color: #70ad47;
+  font-size: 1.38em;
+  font-weight: 500;
+  left: 4.5%;
+  line-height: 1.28;
+  text-align: left;
+  top: 47%;
+  width: 58%;
+}
+
+.reveal .slides .heat-release-rate-fds-example {
+  font-size: 1.14em;
+  left: 4.5%;
+  line-height: 1.15;
+  text-align: left;
+  top: 69%;
+  width: 55%;
+}
+
+.reveal .slides .heat-release-rate-fds-example p {
+  margin: 0 0 0.32em;
+}
+
+.reveal .slides .heat-release-rate-fds-example code {
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0;
+}
+
+.reveal .slides .heat-release-rate-fds-visual {
+  height: 43%;
+  left: 69%;
+  top: 10.5%;
+  width: 28%;
+}
+
+.reveal .slides .heat-release-rate-fds-plot {
+  height: 39%;
+  left: 68.5%;
+  top: 56%;
+  width: 29%;
+}
+
+.reveal .slides .heat-release-rate-fds-arrow {
+  height: 24.3%;
+  left: 77.62%;
+  pointer-events: none;
+  top: 38.15%;
+  width: 7.44%;
+  z-index: 4;
+}
+
+.reveal .slides .heat-release-rate-fds-visual p,
+.reveal .slides .heat-release-rate-fds-plot p,
+.reveal .slides .heat-release-rate-fds-arrow p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .heat-release-rate-fds-visual img,
+.reveal .slides .heat-release-rate-fds-plot img,
+.reveal .slides .heat-release-rate-fds-arrow img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: contain;
+  width: 100%;
+}
+
+.reveal .slides .heat-release-rate-fds-arrow img {
+  transform: scale(0.92);
+  transform-origin: 71% 2%;
+}

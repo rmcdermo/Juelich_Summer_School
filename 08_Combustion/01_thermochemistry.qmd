@@ -768,30 +768,64 @@ $$
 
 :::
 
-## Heat release rate in FDS {.thermo-two-column}
+## Heat release rate in FDS {.heat-release-rate-fds-slide}
 
-:::: {.columns}
+::: {.heat-release-rate-fds-layout}
 
-::: {.column width="53%"}
+::: {.heat-release-rate-fds-units}
+
+$$
+\left[\frac{\mathrm{J}}{\mathrm{m^3\,s}}\right]
+$$
+
+:::
+
+::: {.heat-release-rate-fds-equations}
+
+$$
+\begin{aligned}
+\dot q''' &= -\sum_\alpha \dot m_\alpha'''\,\Delta h_{f,\alpha}^{\circ} \\
+           &= -\dot m_{\mathrm{F}}'''\,\Delta h_{c,\mathrm{F}}
+\end{aligned}
+$$
+
+:::
+
+::: {.heat-release-rate-fds-note}
 
 FDS computes HRR both ways, but first method is what gets used in energy equation.
 
-~~~~text
-hrrpuv_example/hrrpuv_reac_simple.fds
-~~~~
+:::
 
-1. plot hrr
-2. plot hrrpuv and hrrpuv reac
+::: {.heat-release-rate-fds-example}
+
+Example: `hrrpuv_reac_simple.fds`
+
+a) plot `hrr`
+
+b) plot `hrrpuv` and `hrrpuv_reac`
 
 :::
 
-::: {.column width="47%"}
+::: {.heat-release-rate-fds-visual}
 
-![](figs/thermochemistry/source/slide-021-picture-01.png){.thermo-source-figure fig-alt="Time history comparing two FDS heat-release-rate calculations."}
+![](figs/thermochemistry/source/slide-021-picture-04.png){fig-alt="FDS visualization of the local heat release rate in a reacting flow."}
 
 :::
 
-::::
+::: {.heat-release-rate-fds-plot}
+
+![](figs/thermochemistry/source/slide-021-picture-01.png){fig-alt="Time history comparing the two FDS local heat-release-rate calculations."}
+
+:::
+
+::: {.heat-release-rate-fds-arrow}
+
+![](figs/thermochemistry/arrow-probe-to-plot.svg){fig-alt="Arrow connecting the green virtual measurement point to its HRRPUV time history."}
+
+:::
+
+:::
 
 ## Adiabatic flame temperature
 
