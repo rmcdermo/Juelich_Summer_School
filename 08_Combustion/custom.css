@@ -4329,7 +4329,7 @@
 .reveal .slides .soot-yield-keyword {
   color: #70ad47;
   font-size: 1.18em;
-  left: 39%;
+  left: 41%;
   line-height: 1;
   text-align: left;
   top: 17.5%;
@@ -4357,7 +4357,7 @@
   left: 49.5%;
   top: 22.2%;
   transform: rotate(18deg);
-  width: 9.8%;
+  width: 8.4%;
 }
 
 .reveal .slides .soot-yield-keyword-arrow::after {
@@ -4374,8 +4374,8 @@
   background: #5b9bd5;
   left: 76.5%;
   top: 15.5%;
-  transform: rotate(118deg);
-  width: 5.3%;
+  transform: rotate(123deg);
+  width: 5.1%;
 }
 
 .reveal .slides .soot-surrogate-arrow::after {
@@ -4396,4 +4396,14 @@
 .reveal .slides .co-soot-yields-layout mjx-container[display="true"] {
   margin: 0 !important;
   text-align: center !important;
+}
+
+/* Thermochemistry: complete simple hydrocarbon chemistry */
+
+.reveal .slides img.complete-simple-chemistry-table {
+  display: block;
+  height: auto;
+  margin: 0.65em auto 0;
+  max-width: 56%;
+  width: 56%;
 }

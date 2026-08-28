@@ -1993,7 +1993,7 @@ $W_S=10.9\ \mathrm{kg/kmol}$
 
 ![](figs/thermochemistry/source/slide-047-picture-01.png){.thermo-source-figure fig-alt="Original simple hydrocarbon chemistry reaction diagram."}
 
-![](figs/thermochemistry/source/slide-047-picture-02.png){.thermo-source-figure fig-alt="Original FDS output for simple hydrocarbon chemistry."}
+![](figs/thermochemistry/source/slide-047-picture-02.png){.thermo-source-figure .complete-simple-chemistry-table fig-alt="Original FDS output for simple hydrocarbon chemistry."}
 
 ## Example: simple chemistry with FORMULA
 
