@@ -1284,11 +1284,18 @@ Question: Is mixture fraction a [passive]{.conserved-scalar-passive} scalar?
 
 :::
 
-## Infinitely fast chemistry
+## Infinitely Fast Chemistry {.infinitely-fast-slide}
 
-Imagine that the rate of chemical kinetics is much much faster than the rate of mixing. In such a scenario, (for now ignoring the possibility of extinction) fuel and air cannot coexist because all of the limiting reactant is immediately converted to products.
+::: {.infinitely-fast-layout}
 
-The local value of mixture fraction directly determines the local composition (mass fractions of Fuel, Air, and Products).
+::: {.infinitely-fast-points}
+
+- Imagine that the rate of chemical kinetics is much much faster than the rate of mixing. In such a scenario, (for now ignoring the possibility of extinction) [fuel and air cannot coexist]{.infinitely-fast-emphasis} because all of the limiting reactant is immediately converted to products.
+- The local value of mixture fraction directly determines the local composition (mass fractions of Fuel, Air, and Products).
+
+:::
+
+:::
 
 ## Burke--Schumann solution: stoichiometric condition
 

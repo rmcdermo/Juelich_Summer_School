@@ -2833,6 +2833,51 @@
   margin: 0 !important;
 }
 
+/* Thermochemistry: Infinitely fast chemistry */
+
+.reveal .slides section.infinitely-fast-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.infinitely-fast-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .infinitely-fast-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .infinitely-fast-points {
+  font-size: 1.3em;
+  left: 5.1%;
+  line-height: 1.27;
+  margin: 0;
+  position: absolute;
+  text-align: left;
+  top: 22.5%;
+  width: 88%;
+}
+
+.reveal .slides .infinitely-fast-points ul {
+  margin: 0;
+  padding-left: 1.05em;
+}
+
+.reveal .slides .infinitely-fast-points li {
+  margin-bottom: 0.62em;
+  padding-left: 0.08em;
+}
+
+.reveal .slides .infinitely-fast-emphasis {
+  color: #70ad47;
+}
+
 .reveal .slides .mixture-fraction-definition mjx-container[display="true"] {
   margin: 0 !important;
   text-align: center !important;
