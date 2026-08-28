@@ -1297,33 +1297,61 @@ Question: Is mixture fraction a [passive]{.conserved-scalar-passive} scalar?
 
 :::
 
-## Burke--Schumann solution: stoichiometric condition
+## Burke--Schumann Solution -- Stoichiometric {.burke-stoich-slide}
 
+::: {.burke-stoich-layout}
+
+::: {.burke-stoich-equation}
 $$
+@\quad
 f=f_\mathrm{st},
 \qquad
 Y_P=1,
 \qquad
 f_\mathrm{st}=\frac{1}{1+s}
 $$
+:::
 
+::: {.burke-stoich-question}
 Question: How do you determine $s$?
+:::
 
-## Burke--Schumann solution: fuel-rich mixture
+:::
 
+## Burke--Schumann Solution -- Fuel Rich {.burke-fuel-rich-slide}
+
+::: {.burke-fuel-rich-layout}
+
+::: {.burke-fuel-rich-condition}
 $$
+@\quad
+f>f_\mathrm{st},
+\qquad
 Y_A=0,
 \qquad
 Y_F+Y_P=1
 $$
+:::
 
+::: {.burke-fuel-rich-derivation}
 $$
-Y_P = \left(\frac{1+s}{s}\right)(1-f)
+\begin{aligned}
+f &= Y_F+\frac{1}{1+s}Y_P \\[1.15em]
+  &= (1-Y_P)+\frac{1}{1+s}Y_P
+\end{aligned}
 $$
+:::
 
+::: {.burke-fuel-rich-results}
 $$
-Y_F = \frac{(1+s)f-1}{s}
+\begin{aligned}
+Y_P &= \left(\frac{1+s}{s}\right)(1-f) \\[1.35em]
+Y_F &= \frac{(1+s)f-1}{s}
+\end{aligned}
 $$
+:::
+
+:::
 
 ## Burke--Schumann solution: fuel-lean mixture
 

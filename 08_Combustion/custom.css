@@ -2878,6 +2878,135 @@
   color: #70ad47;
 }
 
+/* Thermochemistry: Burke-Schumann stoichiometric solution */
+
+.reveal .slides section.burke-stoich-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.burke-stoich-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .burke-stoich-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .burke-stoich-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .burke-stoich-equation {
+  font-size: 1.9em;
+  left: 5.2%;
+  line-height: 1;
+  text-align: left;
+  top: 22.5%;
+  width: 67%;
+}
+
+.reveal .slides .burke-stoich-equation mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .burke-stoich-question {
+  font-size: 1.35em;
+  left: 5.4%;
+  line-height: 1;
+  text-align: left;
+  top: 81%;
+  width: 60%;
+}
+
+.reveal .slides .burke-stoich-layout p,
+.reveal .slides .burke-stoich-layout .math.display {
+  margin: 0;
+}
+
+/* Thermochemistry: Burke-Schumann fuel-rich solution */
+
+.reveal .slides section.burke-fuel-rich-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.burke-fuel-rich-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .burke-fuel-rich-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .burke-fuel-rich-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .burke-fuel-rich-condition {
+  font-size: 1.85em;
+  left: 5.2%;
+  line-height: 1;
+  text-align: left;
+  top: 22.5%;
+  width: 62%;
+}
+
+.reveal .slides .burke-fuel-rich-condition mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .burke-fuel-rich-derivation {
+  font-size: 1.65em;
+  left: 9.3%;
+  line-height: 1;
+  text-align: left;
+  top: 43.2%;
+  width: 41%;
+}
+
+.reveal .slides .burke-fuel-rich-derivation mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .burke-fuel-rich-results {
+  align-items: center;
+  border: 3px solid #0070c0;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1.6em;
+  height: 42.1%;
+  justify-content: center;
+  left: 55.5%;
+  line-height: 1;
+  top: 44.7%;
+  width: 38.9%;
+}
+
+.reveal .slides .burke-fuel-rich-results mjx-container[display="true"] {
+  margin: 0 !important;
+}
+
+.reveal .slides .burke-fuel-rich-layout p,
+.reveal .slides .burke-fuel-rich-layout .math.display {
+  margin: 0;
+}
+
 .reveal .slides .mixture-fraction-definition mjx-container[display="true"] {
   margin: 0 !important;
   text-align: center !important;
