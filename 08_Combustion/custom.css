@@ -3083,6 +3083,78 @@
   margin: 0;
 }
 
+/* Thermochemistry: Burke-Schumann temperature solution */
+
+.reveal .slides section.burke-temperature-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.burke-temperature-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .burke-temperature-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .burke-temperature-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .burke-temperature-balance {
+  font-size: 1.85em;
+  left: 15.2%;
+  line-height: 1;
+  text-align: left;
+  top: 22.8%;
+  width: 52%;
+}
+
+.reveal .slides .burke-temperature-balance mjx-container[display="true"],
+.reveal .slides .burke-temperature-cases mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .burke-temperature-cases {
+  font-size: 1.65em;
+  left: 15.2%;
+  line-height: 1;
+  text-align: left;
+  top: 41.6%;
+  width: 58%;
+}
+
+.reveal .slides .burke-temperature-result {
+  align-items: center;
+  border: 3px solid #f00;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1.75em;
+  height: 23.6%;
+  justify-content: center;
+  left: 30.7%;
+  line-height: 1;
+  top: 69.7%;
+  width: 38.4%;
+}
+
+.reveal .slides .burke-temperature-result mjx-container[display="true"] {
+  margin: 0 !important;
+}
+
+.reveal .slides .burke-temperature-layout p,
+.reveal .slides .burke-temperature-layout .math.display {
+  margin: 0;
+}
+
 .reveal .slides .mixture-fraction-definition mjx-container[display="true"] {
   margin: 0 !important;
   text-align: center !important;

@@ -1385,19 +1385,34 @@ $$
 
 :::
 
-## Burke--Schumann solution: temperature
+## Burke--Schumann Solution -- Temperature {.burke-temperature-slide}
 
+::: {.burke-temperature-layout}
+
+::: {.burke-temperature-balance}
 $$
 mC_p(T_f-T_0)=\Delta m_F\Delta h_c
 $$
+:::
 
+::: {.burke-temperature-cases}
 $$
-\boxed{
+\begin{aligned}
+f<f_\mathrm{st},\ \text{fuel lean},\quad &\Delta m_F=f \\[1.25em]
+f>f_\mathrm{st},\ \text{fuel rich},\quad &\Delta m_F=f-Y_F
+\end{aligned}
+$$
+:::
+
+::: {.burke-temperature-result}
+$$
 T_f =
 T_0+
 \frac{\Delta m_F\Delta h_c}{mC_p}
-}
 $$
+:::
+
+:::
 
 ## Burke--Schumann solution: generated plots
 
