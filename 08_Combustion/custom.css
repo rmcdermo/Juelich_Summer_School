@@ -4583,3 +4583,108 @@
 .reveal .slides .complex-stoich-example-layout p {
   margin: 0;
 }
+
+/* Thermochemistry: two-step CO and soot chemistry */
+
+.reveal .slides section.two-step-chemistry-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.two-step-chemistry-slide > h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reveal .slides .two-step-chemistry-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .two-step-chemistry-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .two-step-equation-grid {
+  align-items: center;
+  display: grid;
+  font-size: 1.40em;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 0.42em;
+  left: 50%;
+  line-height: 1;
+  row-gap: 0.64em;
+  top: 19.5%;
+  transform: translateX(-50%);
+  width: max-content;
+}
+
+.reveal .slides .two-step-grid-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.69em;
+  justify-self: end;
+  margin-right: 1.7em;
+  white-space: nowrap;
+}
+
+.reveal .slides .two-step-grid-lhs {
+  justify-self: end;
+  white-space: nowrap;
+}
+
+.reveal .slides .two-step-grid-arrow {
+  justify-self: center;
+}
+
+.reveal .slides .two-step-grid-rhs {
+  justify-self: start;
+  white-space: nowrap;
+}
+
+.reveal .slides .two-step-grid-line {
+  align-self: center;
+  border-top: 2px solid #ed7d31;
+  grid-column: 2 / 5;
+  height: 0;
+  justify-self: stretch;
+  margin: 0.02em 0;
+  width: 100%;
+}
+
+.reveal .slides .two-step-grid-spacer {
+  min-width: 1px;
+}
+
+.reveal .slides .two-step-notes {
+  font-size: 0.90em;
+  left: 3.4%;
+  line-height: 1.30;
+  text-align: left;
+  top: 57.0%;
+  width: 90%;
+}
+
+.reveal .slides .two-step-notes ul {
+  margin: 0;
+  padding-left: 1.05em;
+}
+
+.reveal .slides .two-step-notes li {
+  margin: 0 0 0.34em;
+  padding-left: 0.15em;
+}
+
+.reveal .slides .two-step-chemistry-layout p,
+.reveal .slides .two-step-chemistry-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .two-step-chemistry-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}

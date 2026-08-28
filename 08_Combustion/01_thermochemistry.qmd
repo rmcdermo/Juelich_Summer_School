@@ -2047,34 +2047,38 @@ Examine the .out file for each case.
 
 :::
 
-## Two-step chemistry for CO and soot {.thermo-tight}
+## 2-Step Chemistry for CO and Soot {.two-step-chemistry-slide}
 
-$$
-\mathrm{C_3H_8+3O_2
-\rightarrow
-2CO+C+4H_2O}
-$$
+::: {.two-step-chemistry-layout}
 
-$$
-\mathrm{2CO+C+2O_2
-\rightarrow
-3CO_2}
-$$
+::: {.two-step-equation-grid}
+<div class="two-step-grid-label">FAST R1</div>
+<div class="two-step-grid-lhs">$\mathrm{C_3H_8+3O_2}$</div>
+<div class="two-step-grid-arrow">$\rightarrow$</div>
+<div class="two-step-grid-rhs">$\mathrm{{\color{red}2}CO+{\color{red}1}C+4H_2O}$</div>
 
-$$
-\mathrm{C_3H_8+5O_2
-\rightarrow
-3CO_2+4H_2O}
-$$
+<div class="two-step-grid-label">FAST R2</div>
+<div class="two-step-grid-lhs">$\mathrm{{\color{red}2}CO+{\color{red}1}C+2O_2}$</div>
+<div class="two-step-grid-arrow">$\rightarrow$</div>
+<div class="two-step-grid-rhs">$\mathrm{3CO_2}$</div>
 
-FAST R1  
-FAST R2
+<div class="two-step-grid-line"></div>
 
-In this example, soot is treated as carbon (in general, “soot” can be more complex).  
-Both reactions are treated as “fast”, but R1 is given priority for $\mathrm{O_2}$.  
-CO:C ratio is a parameter in the model, 2:1 is arbitrary.  
-In this example, post-flame soot yield is zero, but that need not be the case.  
-If sufficient $\mathrm{O_2}$ is present, the model recovers the 1-step reaction by construction.
+<div class="two-step-grid-spacer"></div>
+<div class="two-step-grid-lhs">$\mathrm{C_3H_8+5O_2}$</div>
+<div class="two-step-grid-arrow">$\rightarrow$</div>
+<div class="two-step-grid-rhs">$\mathrm{3CO_2+4H_2O}$</div>
+:::
+
+::: {.two-step-notes}
+- In this example, soot is treated as carbon (in general, “soot” can be more complex).
+- Both reactions are treated as “fast”, but R1 is given priority for $\mathrm{O_2}$.
+- CO:C ratio is a parameter in the model; 2:1 is arbitrary.
+- In this example, post-flame soot yield is zero, but that need not be the case.
+- If sufficient $\mathrm{O_2}$ is present, the model recovers the 1-step reaction by construction.
+:::
+
+:::
 
 ## FDS propane visualization {.fds-propane-slide .source-slide-title}
 
