@@ -1717,32 +1717,51 @@ But now need to solve 2<br>transport equations, because<br>Fuel and Air can coex
 
 :::
 
-## Lumped species
+## Lumped Species {.lumped-species-intro-slide}
 
+::: {.lumped-species-intro-layout}
+
+::: {.lumped-species-intro-text}
 Let’s go back to our propane reaction and write it two equivalent ways:
+:::
 
+::: {.lumped-species-molecular-reaction}
 $$
-\mathrm{C_3H_8+
-5\left[O_2+\left(\frac{0.79}{0.21}\right)N_2\right]
+\mathrm{C_3H_8}
++5\left[\mathrm{O_2}+\left(\frac{0.79}{0.21}\right)\mathrm{N_2}\right]
 \rightarrow
-3CO_2+4H_2O+
-5\left(\frac{0.79}{0.21}\right)N_2}
+3\mathrm{CO_2}+4\mathrm{H_2O}
++5\left(\frac{0.79}{0.21}\right)\mathrm{N_2}
 $$
+:::
 
+::: {.lumped-species-lumped-reaction}
 $$
-\mathrm{
-C_3H_8+
-N_A\left[X_{O_2,A}O_2+X_{N_2,A}N_2\right]
+\underbrace{\mathrm{C_3H_8}}_{\text{Fuel}}
++N_A\underbrace{\left[X_{\mathrm{O_2},A}\mathrm{O_2}+X_{\mathrm{N_2},A}\mathrm{N_2}\right]}_{\text{Air}}
 \rightarrow
-N_P\left[X_{CO_2,P}CO_2+X_{H_2O,P}H_2O+X_{N_2,P}N_2\right]
-}
+N_P\underbrace{\left[X_{\mathrm{CO_2},P}\mathrm{CO_2}+X_{\mathrm{H_2O},P}\mathrm{H_2O}+X_{\mathrm{N_2},P}\mathrm{N_2}\right]}_{\text{Products}}
 $$
+:::
 
-Air  
-Products  
-Fuel
+::: {.lumped-species-na-arrow aria-hidden="true"}
+![](figs/thermochemistry/arrow-diagonal-down.svg){fig-alt=""}
+:::
 
+::: {.lumped-species-na-relations}
+$$
+\begin{aligned}
+N_A X_{\mathrm{O_2},A} &= 5 \\[0.6em]
+N_A X_{\mathrm{N_2},A} &= 5\left(\frac{0.79}{0.21}\right)
+\end{aligned}
+$$
+:::
+
+::: {.lumped-species-question}
 Question: How do you determine $N_A$, $N_P$?
+:::
+
+:::
 
 ## Lumped-species definition
 

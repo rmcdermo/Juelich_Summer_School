@@ -3836,3 +3836,109 @@
   color: #4472c4;
   font-style: italic;
 }
+
+/* Thermochemistry: Lumped species introduction */
+
+.reveal .slides section.lumped-species-intro-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.lumped-species-intro-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .lumped-species-intro-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .lumped-species-intro-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .lumped-species-intro-text {
+  color: #7f7f7f;
+  font-size: 1.12em;
+  left: 4.8%;
+  line-height: 1.1;
+  text-align: left;
+  top: 15.7%;
+  width: 90%;
+}
+
+.reveal .slides .lumped-species-molecular-reaction,
+.reveal .slides .lumped-species-lumped-reaction,
+.reveal .slides .lumped-species-na-relations {
+  line-height: 1;
+  text-align: center;
+}
+
+.reveal .slides .lumped-species-molecular-reaction {
+  font-size: 1.12em;
+  left: 4%;
+  top: 29.2%;
+  width: 92%;
+}
+
+.reveal .slides .lumped-species-lumped-reaction {
+  font-size: 1.15em;
+  left: 0;
+  top: 44.2%;
+  width: 100%;
+}
+
+.reveal .slides .lumped-species-na-arrow {
+  border-top: 2px solid #5b9bd5;
+  height: 0;
+  left: 22.1%;
+  top: 54.5%;
+  transform: rotate(102deg);
+  transform-origin: left center;
+  width: 11%;
+}
+
+.reveal .slides .lumped-species-na-arrow::after {
+  border-bottom: 4px solid transparent;
+  border-left: 7px solid #5b9bd5;
+  border-top: 4px solid transparent;
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -5px;
+}
+
+.reveal .slides .lumped-species-na-arrow p {
+  display: none;
+}
+
+.reveal .slides .lumped-species-na-relations {
+  font-size: 1.12em;
+  left: 8.8%;
+  top: 76.2%;
+  width: 31%;
+}
+
+.reveal .slides .lumped-species-question {
+  font-size: 1.2em;
+  left: 45.8%;
+  line-height: 1.1;
+  text-align: left;
+  top: 79.4%;
+  width: 48%;
+}
+
+.reveal .slides .lumped-species-intro-layout p,
+.reveal .slides .lumped-species-intro-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .lumped-species-intro-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
