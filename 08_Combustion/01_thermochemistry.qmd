@@ -1127,11 +1127,59 @@ Premixed
 
 :::
 
-## Mixture fraction for non-premixed flames {.thermo-two-column}
+## Mixture Fraction (Non-premixed Flames) {.mixture-fraction-slide}
 
-:::: {.columns}
+::: {.mixture-fraction-layout}
 
-::: {.column width="44%"}
+::: {.mixture-fraction-air-upper-arrow aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+
+:::
+
+::: {.mixture-fraction-fuel-arrow aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+
+:::
+
+::: {.mixture-fraction-air-lower-arrow aria-hidden="true"}
+
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+
+:::
+
+::: {.mixture-fraction-air-upper}
+
+Air, f=0
+
+:::
+
+::: {.mixture-fraction-fuel}
+
+Fuel, f=1
+
+:::
+
+::: {.mixture-fraction-air-lower}
+
+Air, f=0
+
+:::
+
+::: {.mixture-fraction-photo}
+
+![](figs/thermochemistry/source/slide-026-picture-01.png){fig-alt="A turbulent non-premixed flame issuing horizontally from a fuel nozzle into surrounding air."}
+
+:::
+
+::: {.mixture-fraction-source}
+
+[Wikimedia Commons](https://commons.wikimedia.org/)
+
+:::
+
+::: {.mixture-fraction-definition}
 
 $$
 f =
@@ -1139,23 +1187,9 @@ f =
 {\text{total mass of mixture}}
 $$
 
-$$
-f=1 \quad \text{in fuel}
-$$
-
-$$
-f=0 \quad \text{in air}
-$$
-
 :::
 
-::: {.column width="56%"}
-
-![](figs/thermochemistry/source/slide-026-picture-01.png){.thermo-source-figure fig-alt="Turbulent non-premixed flame produced by a fuel stream mixing with surrounding air."}
-
 :::
-
-::::
 
 ## Mixture fraction and product formation
 

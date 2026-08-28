@@ -2402,3 +2402,160 @@
 .reveal .slides .types-combustion-layout p {
   margin: 0;
 }
+
+/* Thermochemistry: Mixture fraction for non-premixed flames */
+
+.reveal .slides section.mixture-fraction-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .mixture-fraction-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .mixture-fraction-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .mixture-fraction-photo {
+  background: #000;
+  height: 40.89%;
+  left: 16.54%;
+  overflow: hidden;
+  top: 26.43%;
+  width: 66.91%;
+  z-index: 1;
+}
+
+.reveal .slides .mixture-fraction-photo p {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.reveal .slides .mixture-fraction-photo img {
+  display: block;
+  height: 179.86%;
+  left: -14.94%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: fill;
+  position: absolute;
+  top: -39.87%;
+  width: 144.95%;
+}
+
+.reveal .slides .mixture-fraction-air-upper,
+.reveal .slides .mixture-fraction-fuel,
+.reveal .slides .mixture-fraction-air-lower {
+  font-size: 1.25em;
+  left: 3.4%;
+  line-height: 1;
+  text-align: left;
+  width: 9.5%;
+}
+
+.reveal .slides .mixture-fraction-air-upper {
+  top: 30.4%;
+}
+
+.reveal .slides .mixture-fraction-fuel {
+  top: 44.94%;
+}
+
+.reveal .slides .mixture-fraction-air-lower {
+  top: 60.2%;
+}
+
+.reveal .slides .mixture-fraction-air-upper-arrow,
+.reveal .slides .mixture-fraction-fuel-arrow,
+.reveal .slides .mixture-fraction-air-lower-arrow {
+  height: 2.8%;
+}
+
+.reveal .slides .mixture-fraction-air-upper-arrow,
+.reveal .slides .mixture-fraction-air-lower-arrow {
+  left: 11.5%;
+  width: 4.5%;
+}
+
+.reveal .slides .mixture-fraction-air-upper-arrow {
+  top: 30.94%;
+}
+
+.reveal .slides .mixture-fraction-fuel-arrow {
+  left: 13.55%;
+  top: 45.48%;
+  width: 5.8%;
+  z-index: 10;
+}
+
+.reveal .slides .mixture-fraction-air-lower-arrow {
+  top: 60.74%;
+}
+
+.reveal .slides .mixture-fraction-air-upper-arrow p,
+.reveal .slides .mixture-fraction-fuel-arrow p,
+.reveal .slides .mixture-fraction-air-lower-arrow p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .mixture-fraction-air-upper-arrow img,
+.reveal .slides .mixture-fraction-fuel-arrow img,
+.reveal .slides .mixture-fraction-air-lower-arrow img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .mixture-fraction-fuel-arrow img {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(98%) saturate(7450%) hue-rotate(358deg) brightness(104%) contrast(116%);
+  position: relative;
+  z-index: 10;
+}
+
+.reveal .slides .mixture-fraction-source {
+  font-size: 0.54em;
+  left: 17.25%;
+  line-height: 1;
+  text-align: left;
+  top: 68.3%;
+  width: 28.2%;
+}
+
+.reveal .slides .mixture-fraction-source a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reveal .slides .mixture-fraction-definition {
+  font-size: 1.55em;
+  left: 18.6%;
+  line-height: 1;
+  top: 73.4%;
+  width: 64%;
+}
+
+.reveal .slides .mixture-fraction-layout p,
+.reveal .slides .mixture-fraction-definition .math.display {
+  margin: 0;
+}
+
+.reveal .slides .mixture-fraction-definition mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
