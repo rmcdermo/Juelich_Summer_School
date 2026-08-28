@@ -1253,11 +1253,18 @@ $$
 :::
 
 
-## Mixture fraction is a conserved scalar
+## Mixture Fraction is a [Conserved Scalar]{.conserved-scalar-emphasis} {.conserved-scalar-slide}
 
-The mixture fraction is neither created nor destroyed locally, only transported.
-Assuming all species have equal diffusivities, $D$ $[\mathrm{m^2/s}]$, the mixture fraction evolves by
+::: {.conserved-scalar-layout}
 
+::: {.conserved-scalar-points}
+
+- The mixture fraction is neither created nor destroyed locally, only transported.
+- Assuming all species have equal diffusivities, $D$ $[\mathrm{m^2/s}]$, the mixture fraction evolves by
+
+:::
+
+::: {.conserved-scalar-equation}
 $$
 \frac{\partial(\rho f)}{\partial t}
 +
@@ -1265,10 +1272,17 @@ $$
 =
 \nabla\cdot(\rho D\nabla f)
 $$
+:::
 
+::: {.conserved-scalar-no-source}
 No source term!
+:::
 
-Question: Is mixture fraction a passive scalar?
+::: {.conserved-scalar-question}
+Question: Is mixture fraction a [passive]{.conserved-scalar-passive} scalar?
+:::
+
+:::
 
 ## Infinitely fast chemistry
 

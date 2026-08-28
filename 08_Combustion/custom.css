@@ -2739,6 +2739,100 @@
   margin: 0;
 }
 
+/* Thermochemistry: Mixture fraction is a conserved scalar */
+
+.reveal .slides section.conserved-scalar-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.conserved-scalar-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides section.conserved-scalar-slide > h2 .conserved-scalar-emphasis {
+  color: #888;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.reveal .slides .conserved-scalar-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .conserved-scalar-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .conserved-scalar-points {
+  font-size: 1.3em;
+  left: 5.1%;
+  line-height: 1.2;
+  text-align: left;
+  top: 22.5%;
+  width: 88%;
+}
+
+.reveal .slides .conserved-scalar-points ul {
+  margin: 0;
+  padding-left: 1.05em;
+}
+
+.reveal .slides .conserved-scalar-points li {
+  margin-bottom: 0.42em;
+  padding-left: 0.08em;
+}
+
+.reveal .slides .conserved-scalar-equation {
+  align-items: center;
+  display: flex;
+  font-size: 1.65em;
+  height: 16%;
+  left: 9.1%;
+  line-height: 1;
+  top: 46.5%;
+  width: 59.5%;
+}
+
+.reveal .slides .conserved-scalar-no-source {
+  align-items: center;
+  color: #f00;
+  display: flex;
+  font-size: 1.35em;
+  height: 16%;
+  left: 70.8%;
+  line-height: 1;
+  text-align: left;
+  top: 46.5%;
+  width: 23%;
+}
+
+.reveal .slides .conserved-scalar-question {
+  font-size: 1.35em;
+  left: 5.4%;
+  line-height: 1;
+  text-align: left;
+  top: 70.5%;
+  width: 74%;
+}
+
+.reveal .slides .conserved-scalar-passive {
+  color: #4472c4;
+  font-style: italic;
+}
+
+.reveal .slides .conserved-scalar-layout p,
+.reveal .slides .conserved-scalar-layout .math.display,
+.reveal .slides .conserved-scalar-layout mjx-container[display="true"] {
+  margin: 0 !important;
+}
+
 .reveal .slides .mixture-fraction-definition mjx-container[display="true"] {
   margin: 0 !important;
   text-align: center !important;
