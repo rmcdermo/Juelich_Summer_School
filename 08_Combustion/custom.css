@@ -3466,7 +3466,7 @@
   left: 26%;
   line-height: 1;
   text-align: center;
-  top: 17.2%;
+  top: 12%;
   width: 48%;
 }
 
@@ -3490,11 +3490,13 @@
 }
 
 .reveal .slides .finite-rate-primitive-arrow {
-  height: 7.4%;
-  left: 55.8%;
-  top: 23.2%;
-  transform: scaleX(-1);
-  width: 14.5%;
+  border-top: 2px solid #5b9bd5;
+  height: 0;
+  left: 66.1%;
+  top: 24.1%;
+  transform: rotate(152deg);
+  transform-origin: left center;
+  width: 6.5%;
 }
 
 .reveal .slides .finite-rate-prefactor {
@@ -3529,19 +3531,18 @@
   width: 38.4%;
 }
 
-.reveal .slides .finite-rate-primitive-arrow p {
-  height: 100%;
-  margin: 0;
-  width: 100%;
+.reveal .slides .finite-rate-primitive-arrow::after {
+  border-bottom: 4px solid transparent;
+  border-left: 7px solid #5b9bd5;
+  border-top: 4px solid transparent;
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -5px;
 }
 
-.reveal .slides .finite-rate-primitive-arrow img {
-  display: block;
-  height: 100%;
-  margin: 0;
-  max-height: none;
-  max-width: none;
-  width: 100%;
+.reveal .slides .finite-rate-primitive-arrow p {
+  display: none;
 }
 
 .reveal .slides .finite-rate-mass-fractions-layout p,

@@ -1557,7 +1557,7 @@ r^{\prime}_{\mathrm{F},i}
 -A^{\prime}_i\,
 \rho^{\sum_\alpha a_{\alpha,i}}
 T^{n_i}
-\exp\!\left(-\frac{E_i}{RT}\right)
+e^{-E_i/RT}
 \prod_\alpha Y_\alpha^{a_{\alpha,i}}
 \quad [=] \quad
 \left(\frac{\mathrm{kg\ F}}{\mathrm{m^3\,s}}\right)
@@ -1578,8 +1578,11 @@ A^{\prime}_i
 =
 A_i
 \left(\prod_\alpha [W_\alpha\times 1000]^{-a_{\alpha,i}}\right)
+\times
 \left(\frac{1\ \mathrm{kmol}}{10^3\ \mathrm{mol}}\right)
+\times
 \left(\frac{10^6\ \mathrm{cm^3}}{1\ \mathrm{m^3}}\right)
+\times
 W_{\mathrm F}
 $$
 :::
@@ -1590,7 +1593,7 @@ r^{\prime}_{\alpha,i}
 =
 \left(\frac{\nu_{\alpha,i}W_\alpha}{\nu_{\mathrm F,i}W_{\mathrm F}}\right)
 r^{\prime}_{\mathrm F,i}
-\quad [\equiv] \quad
+\quad [=] \quad
 \left(\frac{\mathrm{kg}\ \alpha}{\mathrm{m^3\,s}}\right)
 $$
 :::
