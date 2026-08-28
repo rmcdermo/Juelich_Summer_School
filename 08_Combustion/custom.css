@@ -4530,3 +4530,56 @@
 .reveal .slides .custom-fuel-example-layout p {
   margin: 0;
 }
+
+/* Thermochemistry: complex stoichiometry example */
+
+.reveal .slides section.complex-stoich-example-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.complex-stoich-example-slide > h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reveal .slides .complex-stoich-example-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .complex-stoich-example-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .complex-stoich-example-tasks {
+  font-size: 1.02em;
+  left: 0;
+  line-height: 1.18;
+  top: 20.3%;
+  width: 92%;
+}
+
+.reveal .slides .complex-stoich-example-task {
+  display: grid;
+  grid-template-columns: 1.65em minmax(0, 1fr);
+  margin: 0 0 0.42em;
+}
+
+.reveal .slides .complex-stoich-example-note {
+  color: #8a8a8a;
+  font-size: 1.08em;
+  left: 0;
+  line-height: 1;
+  top: 53.8%;
+  width: 65%;
+}
+
+.reveal .slides .complex-stoich-example-layout p {
+  margin: 0;
+}

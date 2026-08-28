@@ -2030,14 +2030,22 @@ Examine the .out file for each case.
 
 :::
 
-## Example: complex stoichiometry
+## Example: Complex Stoichiometry {.complex-stoich-example-slide}
 
-1. Define primitive species in the FDS input file.
-2. Define AIR and PRODUCT lumped species.
-3. Determine PRODUCT volume fractions and reaction coefficients.
-4. Add slice output for HCl.
+::: {.complex-stoich-example-layout}
 
+::: {.complex-stoich-example-tasks}
+<div class="complex-stoich-example-task"><span>a)</span><span>Define primitive species in FDS input file.</span></div>
+<div class="complex-stoich-example-task"><span>b)</span><span>Define AIR and PRODUCT species.</span></div>
+<div class="complex-stoich-example-task"><span>c)</span><span>Determine PRODUCT volume fractions and reaction coefficients.</span></div>
+<div class="complex-stoich-example-task"><span>d)</span><span>Add slice output for HCl.</span></div>
+:::
+
+::: {.complex-stoich-example-note}
 (See fds_complex_stoichiometry.py)
+:::
+
+:::
 
 ## Two-step chemistry for CO and soot {.thermo-tight}
 
