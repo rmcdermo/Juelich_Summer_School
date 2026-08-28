@@ -4460,3 +4460,73 @@
 .reveal .slides .formula-example-layout p {
   margin: 0;
 }
+
+/* Thermochemistry: custom fuel mixture example */
+
+.reveal .slides section.custom-fuel-example-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.custom-fuel-example-slide > h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reveal .slides .custom-fuel-example-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .custom-fuel-example-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .custom-fuel-example-prompt,
+.reveal .slides .custom-fuel-example-question {
+  display: block;
+  font-size: 1.02em;
+  left: 0;
+  line-height: 1.15;
+  text-align: left;
+  width: 92%;
+}
+
+.reveal .slides .custom-fuel-example-prompt p,
+.reveal .slides .custom-fuel-example-question p {
+  column-gap: 0.25em;
+  display: grid;
+  grid-template-columns: 1.65em minmax(0, 1fr);
+  width: 100%;
+}
+
+.reveal .slides .custom-fuel-example-prompt {
+  top: 18.2%;
+}
+
+.reveal .slides .custom-fuel-example-input {
+  left: 2.5%;
+  top: 27.2%;
+  width: 48%;
+}
+
+.reveal .slides .custom-fuel-example-input img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.reveal .slides .custom-fuel-example-question {
+  top: 74.5%;
+}
+
+.reveal .slides .custom-fuel-example-layout p {
+  margin: 0;
+}

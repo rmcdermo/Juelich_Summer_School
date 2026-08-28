@@ -2012,13 +2012,23 @@ Examine the .out file for each case.
 
 :::
 
-## Example: custom fuel mixture
+## Example: Custom Fuel Mixture {.custom-fuel-example-slide}
 
-Create a test case with the following natural gas fuel composition.
+::: {.custom-fuel-example-layout}
 
-![](figs/thermochemistry/source/slide-049-picture-01.png){.thermo-source-figure fig-alt="Natural-gas fuel mixture input from the original lecture."}
+::: {.custom-fuel-example-prompt}
+<span>a)</span><span>Create a test case with the following natural gas fuel composition.</span>
+:::
 
-Replace NITROGEN with CHLORINE. What happens?
+::: {.custom-fuel-example-input}
+![](figs/thermochemistry/source/slide-049-picture-01.png){fig-alt="Natural-gas fuel mixture input from the original lecture."}
+:::
+
+::: {.custom-fuel-example-question}
+<span>b)</span><span>Replace NITROGEN with CHLORINE. What happens?</span>
+:::
+
+:::
 
 ## Example: complex stoichiometry
 
