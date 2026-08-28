@@ -1611,29 +1611,32 @@ $$
 :::
 
 
-## Example: Westbrook and Dryer {.thermo-two-column}
+## Example: Westbrook and Dryer {.westbrook-dryer-slide}
 
-:::: {.columns}
+::: {.westbrook-dryer-layout}
 
-::: {.column width="52%"}
+::: {.westbrook-dryer-tasks}
 
-~~~~text
-Run reactionrate_arrhenius_2order_1step.fds
-~~~~
-
-1. Plot the time history of species mass fractions.
-2. Modify the `fds/Flowfields/realizable_mass_fractions.fds` case to use the Westbrook and Dryer propane reaction parameters (see FDS User Guide example).
-3. Plot the global combustion efficiency as a function of time.
+1. Run **reactionrate_arrhenius_2order_1step.fds**
+2. Plot the time history of species mass fractions.
+3. Modify the **fds/Flowfields/realizable_mass_fractions.fds** case to use the Westbrook and Dryer propane reaction parameters (see FDS User Guide example).
+4. Plot the global combustion efficiency as a function of time.
 
 :::
 
-::: {.column width="48%"}
+::: {.westbrook-dryer-mass-fractions}
 
-![](figs/thermochemistry/source/slide-038-picture-01.png){.thermo-source-figure fig-alt="Species mass-fraction histories from a finite-rate propane reaction example."}
+![](figs/thermochemistry/source/slide-038-picture-01.png){fig-alt="Species mass-fraction histories from a finite-rate propane reaction example."}
 
 :::
 
-::::
+::: {.westbrook-dryer-efficiency}
+
+![](figs/thermochemistry/source/slide-038-picture-02.png){fig-alt="Global combustion efficiency as a function of time for the finite-rate propane reaction example."}
+
+:::
+
+:::
 
 ## Rate laws
 

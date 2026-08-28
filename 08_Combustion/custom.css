@@ -3554,3 +3554,95 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: Westbrook and Dryer example */
+
+.reveal .slides section.westbrook-dryer-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.westbrook-dryer-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .westbrook-dryer-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .westbrook-dryer-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .westbrook-dryer-tasks {
+  font-size: 1.12em;
+  left: 6.2%;
+  line-height: 1.18;
+  text-align: left;
+  top: 20.5%;
+  width: 60.5%;
+}
+
+.reveal .slides .westbrook-dryer-tasks ol {
+  counter-reset: westbrook-task;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.7em;
+}
+
+.reveal .slides .westbrook-dryer-tasks li {
+  counter-increment: westbrook-task;
+  margin: 0 0 0.72em;
+  padding-left: 0.35em;
+  position: relative;
+}
+
+.reveal .slides .westbrook-dryer-tasks li::before {
+  content: counter(westbrook-task, lower-alpha) ")";
+  left: -1.7em;
+  position: absolute;
+  width: 1.45em;
+}
+
+.reveal .slides .westbrook-dryer-tasks strong {
+  font-weight: 700;
+}
+
+.reveal .slides .westbrook-dryer-mass-fractions,
+.reveal .slides .westbrook-dryer-efficiency {
+  height: 39.5%;
+  left: 69.2%;
+  width: 29.2%;
+}
+
+.reveal .slides .westbrook-dryer-mass-fractions {
+  top: 6.5%;
+}
+
+.reveal .slides .westbrook-dryer-efficiency {
+  top: 54.1%;
+}
+
+.reveal .slides .westbrook-dryer-mass-fractions p,
+.reveal .slides .westbrook-dryer-efficiency p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .westbrook-dryer-mass-fractions img,
+.reveal .slides .westbrook-dryer-efficiency img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: contain;
+  width: 100%;
+}
