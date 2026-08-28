@@ -1191,8 +1191,43 @@ $$
 
 :::
 
-## Mixture fraction and product formation
+## Mixture fraction and product formation {.product-formation-slide}
 
+::: {.product-formation-layout}
+
+::: {.product-formation-air-upper-arrow aria-hidden="true"}
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+:::
+
+::: {.product-formation-fuel-arrow aria-hidden="true"}
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+:::
+
+::: {.product-formation-air-lower-arrow aria-hidden="true"}
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
+:::
+
+::: {.product-formation-air-upper}
+Air, f=0
+:::
+
+::: {.product-formation-fuel}
+Fuel, f=1
+:::
+
+::: {.product-formation-air-lower}
+Air, f=0
+:::
+
+::: {.product-formation-photo}
+![](figs/thermochemistry/source/slide-026-picture-01.png){fig-alt="A turbulent non-premixed flame issuing horizontally from a fuel nozzle into surrounding air."}
+:::
+
+::: {.product-formation-source}
+[Wikimedia Commons](https://commons.wikimedia.org/)
+:::
+
+::: {.product-formation-reaction}
 $$
 1\ \mathrm{kg\ Fuel}
 +
@@ -1200,11 +1235,22 @@ s\ \mathrm{kg\ Air}
 \rightarrow
 (1+s)\ \mathrm{kg\ Products}
 $$
+:::
 
+::: {.product-formation-definition}
 $$
 f =
 Y_F+\frac{1}{1+s}Y_P
 $$
+:::
+
+::: {.product-formation-coefficient}
+$$
+s = \text{“mass stoichiometric coefficient”}
+$$
+:::
+
+:::
 
 
 ## Mixture fraction is a conserved scalar

@@ -2555,6 +2555,190 @@
   margin: 0;
 }
 
+/* Thermochemistry: Mixture fraction and product formation */
+
+.reveal .slides section.product-formation-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides .product-formation-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  transform: translateY(-9%);
+  width: 1600px;
+}
+
+.reveal .slides .product-formation-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .product-formation-photo {
+  background: #000;
+  height: 21.89%;
+  left: 31.67%;
+  overflow: hidden;
+  top: 24.56%;
+  width: 35.48%;
+  z-index: 1;
+}
+
+.reveal .slides .product-formation-photo p {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.reveal .slides .product-formation-photo img {
+  display: block;
+  height: 179.86%;
+  left: -14.94%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: fill;
+  position: absolute;
+  top: -39.87%;
+  width: 144.95%;
+}
+
+.reveal .slides .product-formation-air-upper,
+.reveal .slides .product-formation-fuel,
+.reveal .slides .product-formation-air-lower {
+  font-size: 0.78em;
+  left: 25.2%;
+  line-height: 1;
+  text-align: left;
+  width: 6.6%;
+}
+
+.reveal .slides .product-formation-air-upper {
+  top: 26.8%;
+}
+
+.reveal .slides .product-formation-fuel {
+  top: 34.3%;
+}
+
+.reveal .slides .product-formation-air-lower {
+  top: 42.1%;
+}
+
+.reveal .slides .product-formation-air-upper-arrow,
+.reveal .slides .product-formation-fuel-arrow,
+.reveal .slides .product-formation-air-lower-arrow {
+  height: 2.2%;
+}
+
+.reveal .slides .product-formation-air-upper-arrow,
+.reveal .slides .product-formation-air-lower-arrow {
+  left: 29.15%;
+  width: 2.7%;
+}
+
+.reveal .slides .product-formation-air-upper-arrow {
+  top: 26.9%;
+}
+
+.reveal .slides .product-formation-fuel-arrow {
+  left: 30.15%;
+  top: 34.4%;
+  width: 3.35%;
+  z-index: 10;
+}
+
+.reveal .slides .product-formation-air-lower-arrow {
+  top: 42.2%;
+}
+
+.reveal .slides .product-formation-air-upper-arrow p,
+.reveal .slides .product-formation-fuel-arrow p,
+.reveal .slides .product-formation-air-lower-arrow p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .product-formation-air-upper-arrow img,
+.reveal .slides .product-formation-fuel-arrow img,
+.reveal .slides .product-formation-air-lower-arrow img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .product-formation-fuel-arrow img {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(98%) saturate(7450%) hue-rotate(358deg) brightness(104%) contrast(116%);
+  position: relative;
+  z-index: 10;
+}
+
+.reveal .slides .product-formation-source {
+  font-size: 0.48em;
+  left: 32.05%;
+  line-height: 1;
+  text-align: left;
+  top: 47.1%;
+  width: 15%;
+}
+
+.reveal .slides .product-formation-source a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reveal .slides .product-formation-reaction {
+  font-size: 1.7em;
+  left: 10%;
+  line-height: 1;
+  top: 46.3%;
+  width: 80%;
+}
+
+.reveal .slides .product-formation-definition {
+  border: 3px solid #0070c0;
+  box-sizing: border-box;
+  font-size: 1.7em;
+  height: 18.9%;
+  left: 32.85%;
+  line-height: 1;
+  top: 63.9%;
+  width: 33.65%;
+}
+
+.reveal .slides .product-formation-definition .math.display {
+  align-items: center;
+  display: flex !important;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
+}
+
+.reveal .slides .product-formation-definition mjx-container[display="true"] {
+  margin: 0 !important;
+}
+
+.reveal .slides .product-formation-coefficient {
+  font-size: 1.45em;
+  left: 17%;
+  line-height: 1;
+  top: 82.3%;
+  width: 66%;
+}
+
+.reveal .slides .product-formation-layout p,
+.reveal .slides .product-formation-layout .math.display {
+  margin: 0;
+}
+
 .reveal .slides .mixture-fraction-definition mjx-container[display="true"] {
   margin: 0 !important;
   text-align: center !important;
