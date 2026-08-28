@@ -4201,3 +4201,67 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: lumped-to-primitive species example */
+
+.reveal .slides section.lumped-to-primitive-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.lumped-to-primitive-slide > h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reveal .slides .lumped-to-primitive-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .lumped-to-primitive-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .lumped-to-primitive-source {
+  color: #7f7f7f;
+  font-size: 1.08em;
+  left: 4.8%;
+  line-height: 1;
+  text-align: left;
+  top: 15.3%;
+  width: 35%;
+}
+
+.reveal .slides .lumped-to-primitive-z {
+  font-size: 1.55em;
+  left: 25%;
+  line-height: 1;
+  text-align: center;
+  top: 23.7%;
+  width: 50%;
+}
+
+.reveal .slides .lumped-to-primitive-conversion {
+  font-size: 1.02em;
+  left: 2%;
+  line-height: 1;
+  text-align: center;
+  top: 43.2%;
+  width: 96%;
+}
+
+.reveal .slides .lumped-to-primitive-layout p,
+.reveal .slides .lumped-to-primitive-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .lumped-to-primitive-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}

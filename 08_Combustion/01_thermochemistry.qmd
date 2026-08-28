@@ -1873,17 +1873,56 @@ $$
 
 :::
 
-## Example: lumped species to primitive species {.thermo-two-column .thermo-compact}
+## Example: Lumped Species to Primitive Species {.lumped-to-primitive-slide}
 
-:::: {.columns}
+::: {.lumped-to-primitive-layout}
 
-::: {.column width="100%"}
-
+::: {.lumped-to-primitive-source}
 (See Z2Y.py)
-
 :::
 
-::::
+::: {.lumped-to-primitive-z}
+$$
+\mathbf{Z}=\begin{bmatrix}0.3&0.2&0.5\end{bmatrix}^{T}
+$$
+:::
+
+::: {.lumped-to-primitive-conversion}
+$$
+\mathbf{Y}
+=
+\begin{bmatrix}
+Y_{\mathrm{C_3H_8}}\\
+Y_{\mathrm{O_2}}\\
+Y_{\mathrm{N_2}}\\
+Y_{\mathrm{CO_2}}\\
+Y_{\mathrm{H_2O}}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1&0&0\\
+0&0.2330&0\\
+0&0.7670&0.7208\\
+0&0&0.1806\\
+0&0&0.0985
+\end{bmatrix}
+\begin{bmatrix}
+0.3\\
+0.2\\
+0.5
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.3\\
+0.04660\\
+0.51380\\
+0.09033\\
+0.04927
+\end{bmatrix}
+$$
+:::
+
+:::
 
 ## Specified CO and soot yields
 
