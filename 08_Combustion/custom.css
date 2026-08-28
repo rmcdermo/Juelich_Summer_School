@@ -3790,3 +3790,49 @@
   margin: 0 !important;
   text-align: left !important;
 }
+
+/* Thermochemistry: Reaction progress variables */
+
+.reveal .slides section.reaction-progress-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.reaction-progress-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .reaction-progress-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .reaction-progress-points {
+  font-size: 1.2em;
+  left: 4.8%;
+  line-height: 1.28;
+  margin: 0;
+  position: absolute;
+  text-align: left;
+  top: 18.5%;
+  width: 89.5%;
+}
+
+.reveal .slides .reaction-progress-points ul {
+  margin: 0;
+  padding-left: 1.25em;
+}
+
+.reveal .slides .reaction-progress-points li {
+  margin: 0 0 0.55em;
+  padding-left: 0.12em;
+}
+
+.reveal .slides .reaction-progress-emphasis {
+  color: #4472c4;
+  font-style: italic;
+}

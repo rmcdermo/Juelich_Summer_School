@@ -1703,13 +1703,19 @@ But now need to solve 2<br>transport equations, because<br>Fuel and Air can coex
 
 :::
 
-## Reaction progress variables
+## Reaction Progress Variables {.reaction-progress-slide}
 
-In general, the system can be defined in terms of the mixture fraction and a reaction progress variable.
+::: {.reaction-progress-layout}
 
-In FDS, we choose to use lumped species mass fractions as progress variables.
+::: {.reaction-progress-points}
 
-This avoids complications related to defining boundary conditions for the generalized progress variable approach.
+- In general, the system can be defined in terms of the mixture fraction and a reaction progress variable.
+- In FDS, we choose to use [lumped species mass fractions]{.reaction-progress-emphasis} as progress variables.
+- This avoids complications related to defining boundary conditions for the generalized progress variable approach.
+
+:::
+
+:::
 
 ## Lumped species
 
