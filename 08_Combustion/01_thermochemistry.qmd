@@ -1924,25 +1924,70 @@ $$
 
 :::
 
-## Specified CO and soot yields
+## Specified CO and Soot Yields {.co-soot-yields-slide}
 
-$$
-y_\mathrm{CO}
-=
-N_P X_{\mathrm{CO},P}
-\frac{W_\mathrm{CO}}{W_{\mathrm{F}}}
-$$
+::: {.co-soot-yields-layout}
 
+::: {.co-yield-derivation}
 $$
+\begin{aligned}
+y_{\mathrm{CO}}
+&{}={}N_PX_{\mathrm{CO},P}\frac{W_{\mathrm{CO}}}{W_{\mathrm F}}\\[0.55em]
+\mathopen{[}&{}={}\mathclose{]}\;
+\frac{\mathrm{kmol\ CO}}{\mathrm{kmol\ F\ reacted}}
+\frac{\mathrm{kg\ CO}/\mathrm{kmol\ CO}}
+     {\mathrm{kg\ F}/\mathrm{kmol\ F}}\\[0.55em]
+\mathopen{[}&{}={}\mathclose{]}\;
+\frac{\mathrm{kg\ CO}}{\mathrm{kg\ F\ reacted}}
+\end{aligned}
+$$
+:::
+
+::: {.soot-yield-derivation}
+$$
+\begin{aligned}
 y_S
-=
-N_P X_{S,P}
-\frac{W_S}{W_{\mathrm{F}}}
+&{}={}N_PX_{S,P}\frac{W_S}{W_{\mathrm F}}\\[0.55em]
+\mathopen{[}&{}={}\mathclose{]}\;
+\frac{\mathrm{kmol\ S}}{\mathrm{kmol\ F\ reacted}}
+\frac{\mathrm{kg\ S}/\mathrm{kmol\ S}}
+     {\mathrm{kg\ F}/\mathrm{kmol\ F}}\\[0.55em]
+\mathopen{[}&{}={}\mathclose{]}\;
+\frac{\mathrm{kg\ S}}{\mathrm{kg\ F\ reacted}}
+\end{aligned}
 $$
+:::
 
-$\mathrm{C_{0.9}H_{0.1}}$  
-$W_S=10.9\ \mathrm{kg/kmol}$  
+::: {.co-yield-result}
+$$
+N_PX_{\mathrm{CO},P}
+=y_{\mathrm{CO}}\frac{W_{\mathrm F}}{W_{\mathrm{CO}}}
+$$
+:::
+
+::: {.soot-yield-result}
+$$
+N_PX_{S,P}
+=y_S\frac{W_{\mathrm F}}{W_S}
+$$
+:::
+
+::: {.soot-yield-keyword}
 SOOT_YIELD
+:::
+
+::: {.soot-yield-keyword-arrow}
+:::
+
+::: {.soot-surrogate-note}
+$\mathrm{C_{0.9}H_{0.1}}$  
+$W_S=10.9\ \mathrm{kg/kmol}$
+:::
+
+::: {.soot-surrogate-arrow}
+:::
+
+:::
 
 ## Complete simple hydrocarbon chemistry
 

@@ -4265,3 +4265,135 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: specified CO and soot yields */
+
+.reveal .slides section.co-soot-yields-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.co-soot-yields-slide > h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reveal .slides .co-soot-yields-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .co-soot-yields-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .co-yield-derivation,
+.reveal .slides .soot-yield-derivation {
+  font-size: 0.94em;
+  line-height: 1;
+  text-align: center;
+  top: 25.2%;
+  width: 47%;
+}
+
+.reveal .slides .co-yield-derivation {
+  left: 1.5%;
+}
+
+.reveal .slides .soot-yield-derivation {
+  left: 51.5%;
+}
+
+.reveal .slides .co-yield-result,
+.reveal .slides .soot-yield-result {
+  font-size: 1.15em;
+  line-height: 1;
+  text-align: center;
+  top: 72.2%;
+  width: 43%;
+}
+
+.reveal .slides .co-yield-result {
+  left: 2.5%;
+}
+
+.reveal .slides .soot-yield-result {
+  left: 54.5%;
+}
+
+.reveal .slides .soot-yield-keyword {
+  color: #70ad47;
+  font-size: 1.18em;
+  left: 39%;
+  line-height: 1;
+  text-align: left;
+  top: 17.5%;
+  width: 20%;
+}
+
+.reveal .slides .soot-surrogate-note {
+  color: #4472c4;
+  font-size: 1.05em;
+  left: 68.5%;
+  line-height: 1.22;
+  text-align: left;
+  top: 4.5%;
+  width: 29%;
+}
+
+.reveal .slides .soot-yield-keyword-arrow,
+.reveal .slides .soot-surrogate-arrow {
+  height: 2px;
+  transform-origin: left center;
+}
+
+.reveal .slides .soot-yield-keyword-arrow {
+  background: #70ad47;
+  left: 49.5%;
+  top: 22.2%;
+  transform: rotate(18deg);
+  width: 9.8%;
+}
+
+.reveal .slides .soot-yield-keyword-arrow::after {
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #70ad47;
+  border-top: 5px solid transparent;
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -4px;
+}
+
+.reveal .slides .soot-surrogate-arrow {
+  background: #5b9bd5;
+  left: 76.5%;
+  top: 15.5%;
+  transform: rotate(118deg);
+  width: 5.3%;
+}
+
+.reveal .slides .soot-surrogate-arrow::after {
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #5b9bd5;
+  border-top: 5px solid transparent;
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -4px;
+}
+
+.reveal .slides .co-soot-yields-layout p,
+.reveal .slides .co-soot-yields-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .co-soot-yields-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
