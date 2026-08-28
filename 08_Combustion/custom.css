@@ -3155,6 +3155,143 @@
   margin: 0;
 }
 
+/* Thermochemistry: Equilibrium chemistry */
+
+.reveal .slides section.equilibrium-chemistry-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.equilibrium-chemistry-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .equilibrium-chemistry-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .equilibrium-chemistry-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .equilibrium-chemistry-reaction {
+  font-size: 1.4em;
+  left: 5.4%;
+  line-height: 1;
+  text-align: left;
+  top: 17%;
+  width: 40%;
+}
+
+.reveal .slides .equilibrium-chemistry-kp {
+  font-size: 1.15em;
+  left: 6.6%;
+  line-height: 1;
+  text-align: left;
+  top: 31%;
+  width: 41%;
+}
+
+.reveal .slides .equilibrium-chemistry-reaction mjx-container[display="true"],
+.reveal .slides .equilibrium-chemistry-kp mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .equilibrium-chemistry-gibbs {
+  height: 30%;
+  left: 27.2%;
+  top: 59.5%;
+  width: 24.8%;
+}
+
+.reveal .slides .equilibrium-chemistry-species {
+  height: 38%;
+  left: 54.2%;
+  top: 13.4%;
+  width: 42%;
+}
+
+.reveal .slides .equilibrium-chemistry-pressure {
+  height: 37.5%;
+  left: 54.2%;
+  top: 51.5%;
+  width: 30.8%;
+}
+
+.reveal .slides .equilibrium-chemistry-gibbs p,
+.reveal .slides .equilibrium-chemistry-species p,
+.reveal .slides .equilibrium-chemistry-pressure p,
+.reveal .slides .equilibrium-chemistry-cea-arrow p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .equilibrium-chemistry-gibbs img,
+.reveal .slides .equilibrium-chemistry-species img,
+.reveal .slides .equilibrium-chemistry-pressure img,
+.reveal .slides .equilibrium-chemistry-cea-arrow img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .equilibrium-chemistry-species img,
+.reveal .slides .equilibrium-chemistry-pressure img {
+  object-fit: fill;
+}
+
+.reveal .slides .equilibrium-chemistry-gibbs img {
+  object-fit: contain;
+}
+
+.reveal .slides .equilibrium-chemistry-source {
+  font-size: 0.5em;
+  left: 13.1%;
+  line-height: 1;
+  text-align: left;
+  top: 91.3%;
+  width: 18%;
+}
+
+.reveal .slides .equilibrium-chemistry-source a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.reveal .slides .equilibrium-chemistry-cea {
+  font-size: 1.45em;
+  left: 78.5%;
+  line-height: 1;
+  text-align: left;
+  top: 3.8%;
+  width: 18%;
+}
+
+.reveal .slides .equilibrium-chemistry-cea-arrow {
+  height: 2.2%;
+  left: 87.9%;
+  top: 10.8%;
+  transform: rotate(48deg);
+  transform-origin: left center;
+  width: 5.3%;
+}
+
+.reveal .slides .equilibrium-chemistry-layout p,
+.reveal .slides .equilibrium-chemistry-layout .math.display {
+  margin: 0;
+}
+
 .reveal .slides .mixture-fraction-definition mjx-container[display="true"] {
   margin: 0 !important;
   text-align: center !important;

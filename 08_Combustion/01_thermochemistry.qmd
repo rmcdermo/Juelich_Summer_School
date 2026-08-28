@@ -1434,25 +1434,57 @@ $$
 
 ::::
 
-## Equilibrium chemistry {.thermo-two-column}
+## Equilibrium Chemistry {.equilibrium-chemistry-slide}
 
-:::: {.columns}
+::: {.equilibrium-chemistry-layout}
 
-::: {.column width="53%"}
+::: {.equilibrium-chemistry-reaction}
+$$
+\mathrm{CO}
++
+\frac{1}{2}\mathrm{O_2}
+\underset{k_r}{\stackrel{k_f}{\rightleftharpoons}}
+\mathrm{CO_2}
+$$
+:::
 
+::: {.equilibrium-chemistry-kp}
+$$
+\begin{aligned}
+K_p
+&= \frac{k_f}{k_r}
+= \exp\left(-\frac{\Delta G_T^\circ}{RT}\right) \\[0.85em]
+&= \frac{X_{\mathrm{CO}}X_{\mathrm{O_2}}^{0.5}}{X_{\mathrm{CO_2}}}
+   \left(\frac{P}{P_0}\right)^{0.5}
+\end{aligned}
+$$
+:::
+
+::: {.equilibrium-chemistry-gibbs}
+![](figs/thermochemistry/source/slide-035-picture-03.png){fig-alt="Gibbs function versus extent of reaction, showing the equilibrium minimum and negative Gibbs-energy change for the forward reaction."}
+:::
+
+::: {.equilibrium-chemistry-source}
+[https://chem.libretexts.org](https://chem.libretexts.org)
+:::
+
+::: {.equilibrium-chemistry-species}
+![](figs/thermochemistry/source/slide-035-picture-01.png){fig-alt="Species mass fractions converging to their equilibrium values."}
+:::
+
+::: {.equilibrium-chemistry-pressure}
+![](figs/thermochemistry/source/slide-035-picture-04.png){fig-alt="Pressure converging to its equilibrium value."}
+:::
+
+::: {.equilibrium-chemistry-cea}
 NASA CEA code
-
-https://chem.libretexts.org
-
 :::
 
-::: {.column width="47%"}
-
-![](figs/thermochemistry/source/slide-035-picture-01.png){.thermo-source-figure fig-alt="Mass-fraction history converging to an equilibrium composition."}
-
+::: {.equilibrium-chemistry-cea-arrow aria-hidden="true"}
+![](figs/thermochemistry/arrow-right.svg){fig-alt=""}
 :::
 
-::::
+:::
 
 ## Finite-rate chemistry
 
