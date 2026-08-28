@@ -1353,21 +1353,37 @@ $$
 
 :::
 
-## Burke--Schumann solution: fuel-lean mixture
+## Burke--Schumann Solution -- Fuel Lean {.burke-fuel-lean-slide}
 
+::: {.burke-fuel-lean-layout}
+
+::: {.burke-fuel-lean-condition}
 $$
+@\quad
+f<f_\mathrm{st},
+\qquad
 Y_F=0,
 \qquad
 Y_A+Y_P=1
 $$
+:::
 
+::: {.burke-fuel-lean-derivation}
 $$
-Y_P=(1+s)f
+f=\frac{1}{1+s}Y_P
 $$
+:::
 
+::: {.burke-fuel-lean-results}
 $$
-Y_A=1-(1+s)f
+\begin{aligned}
+Y_P &= (1+s)f \\[1.35em]
+Y_A &= 1-(1+s)f
+\end{aligned}
 $$
+:::
+
+:::
 
 ## Burke--Schumann solution: temperature
 

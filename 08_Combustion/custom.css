@@ -3007,6 +3007,82 @@
   margin: 0;
 }
 
+/* Thermochemistry: Burke-Schumann fuel-lean solution */
+
+.reveal .slides section.burke-fuel-lean-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.burke-fuel-lean-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .burke-fuel-lean-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .burke-fuel-lean-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .burke-fuel-lean-condition {
+  font-size: 1.85em;
+  left: 5.2%;
+  line-height: 1;
+  text-align: left;
+  top: 22.5%;
+  width: 62%;
+}
+
+.reveal .slides .burke-fuel-lean-condition mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .burke-fuel-lean-derivation {
+  font-size: 1.65em;
+  left: 9.3%;
+  line-height: 1;
+  text-align: left;
+  top: 43.2%;
+  width: 31%;
+}
+
+.reveal .slides .burke-fuel-lean-derivation mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .burke-fuel-lean-results {
+  align-items: center;
+  border: 3px solid #0070c0;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1.6em;
+  height: 27.6%;
+  justify-content: center;
+  left: 44.85%;
+  line-height: 1;
+  top: 44.7%;
+  width: 34%;
+}
+
+.reveal .slides .burke-fuel-lean-results mjx-container[display="true"] {
+  margin: 0 !important;
+}
+
+.reveal .slides .burke-fuel-lean-layout p,
+.reveal .slides .burke-fuel-lean-layout .math.display {
+  margin: 0;
+}
+
 .reveal .slides .mixture-fraction-definition mjx-container[display="true"] {
   margin: 0 !important;
   text-align: center !important;
