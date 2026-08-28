@@ -3646,3 +3646,147 @@
   object-fit: contain;
   width: 100%;
 }
+
+/* Thermochemistry: Rate laws */
+
+.reveal .slides section.rate-laws-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.rate-laws-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .rate-laws-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .rate-laws-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .rate-laws-reaction,
+.reveal .slides .rate-laws-mass-sum,
+.reveal .slides .rate-laws-conservation,
+.reveal .slides .rate-laws-stoich-equations,
+.reveal .slides .rate-laws-mixture-equation {
+  line-height: 1;
+  text-align: left;
+}
+
+.reveal .slides .rate-laws-reaction {
+  font-size: 1.48em;
+  left: 32.5%;
+  top: 4.3%;
+  width: 48%;
+}
+
+.reveal .slides .rate-laws-mass-sum {
+  font-size: 1.42em;
+  left: 32.5%;
+  top: 17.2%;
+  width: 48%;
+}
+
+.reveal .slides .rate-laws-conservation {
+  font-size: 1.38em;
+  left: 32.5%;
+  top: 29.2%;
+  width: 52%;
+}
+
+.reveal .slides .rate-laws-stoich-label,
+.reveal .slides .rate-laws-mixture-label {
+  align-items: center;
+  display: flex;
+  font-size: 1.2em;
+  left: 1.2%;
+  line-height: 1.1;
+  text-align: left;
+  width: 29%;
+}
+
+.reveal .slides .rate-laws-stoich-label {
+  height: 11.5%;
+  top: 47.8%;
+}
+
+.reveal .slides .rate-laws-stoich-equations {
+  font-size: 1.28em;
+  left: 32.5%;
+  top: 47.8%;
+  width: 60.5%;
+}
+
+.reveal .slides .rate-laws-reaction-label {
+  color: #4472c4;
+  font-size: 1.18em;
+  left: 80.6%;
+  line-height: 1.22;
+  text-align: center;
+  top: 22.8%;
+  width: 13%;
+}
+
+.reveal .slides .rate-laws-reaction-arrow {
+  border-top: 2px solid #5b9bd5;
+  height: 0;
+  left: 86%;
+  top: 37.8%;
+  transform: rotate(142.5deg);
+  transform-origin: left center;
+  width: 9.8%;
+}
+
+.reveal .slides .rate-laws-reaction-arrow::after {
+  border-bottom: 4px solid transparent;
+  border-left: 7px solid #5b9bd5;
+  border-top: 4px solid transparent;
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -5px;
+}
+
+.reveal .slides .rate-laws-reaction-arrow p {
+  display: none;
+}
+
+.reveal .slides .rate-laws-mixture-label {
+  height: 11.5%;
+  top: 66.2%;
+}
+
+.reveal .slides .rate-laws-mixture-equation {
+  font-size: 1.38em;
+  left: 32.5%;
+  top: 66.2%;
+  width: 28%;
+}
+
+.reveal .slides .rate-laws-conclusion {
+  color: #70ad47;
+  font-size: 1.16em;
+  left: 61.5%;
+  line-height: 1.34;
+  text-align: left;
+  top: 68.4%;
+  width: 34%;
+}
+
+.reveal .slides .rate-laws-layout p,
+.reveal .slides .rate-laws-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .rate-laws-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}

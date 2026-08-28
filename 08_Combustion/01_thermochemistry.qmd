@@ -1638,27 +1638,70 @@ $$
 
 :::
 
-## Rate laws
+## Rate Laws {.rate-laws-slide}
 
-Stoichiometry:
+::: {.rate-laws-layout}
 
+::: {.rate-laws-reaction}
 $$
 F+sA\rightarrow(1+s)P
 $$
+:::
 
+::: {.rate-laws-mass-sum}
 $$
 Y_F+Y_A+Y_P=1
 $$
+:::
 
+::: {.rate-laws-conservation}
+$$
+\frac{\mathrm dY_F}{\mathrm dt}
++
+\frac{\mathrm dY_A}{\mathrm dt}
++
+\frac{\mathrm dY_P}{\mathrm dt}
+=0
+$$
+:::
+
+::: {.rate-laws-stoich-label}
+Stoichiometry:
+:::
+
+::: {.rate-laws-stoich-equations}
+$$
+\frac{\mathrm dY_A}{\mathrm dt}
+=s\frac{\mathrm dY_F}{\mathrm dt}
+\ ,\qquad
+\frac{\mathrm dY_P}{\mathrm dt}
+=-(1+s)\frac{\mathrm dY_F}{\mathrm dt}
+$$
+:::
+
+::: {.rate-laws-reaction-label}
+reaction<br>model
+:::
+
+::: {.rate-laws-reaction-arrow aria-hidden="true"}
+![](figs/thermochemistry/arrow-diagonal-down.svg){fig-alt=""}
+:::
+
+::: {.rate-laws-mixture-label}
 Mixture fraction (still):
+:::
 
+::: {.rate-laws-mixture-equation}
 $$
 f=Y_F+\frac{1}{1+s}Y_P
 $$
+:::
 
-reaction model
+::: {.rate-laws-conclusion}
+But now need to solve 2<br>transport equations, because<br>Fuel and Air can coexist.
+:::
 
-But now need 2 transport equations, because Fuel and Air can coexist.
+:::
 
 ## Reaction progress variables
 
