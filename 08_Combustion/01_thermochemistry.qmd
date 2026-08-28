@@ -1995,13 +1995,22 @@ $W_S=10.9\ \mathrm{kg/kmol}$
 
 ![](figs/thermochemistry/source/slide-047-picture-02.png){.thermo-source-figure .complete-simple-chemistry-table fig-alt="Original FDS output for simple hydrocarbon chemistry."}
 
-## Example: simple chemistry with FORMULA
+## Example: Simple Chemistry with FORMULA {.formula-example-slide}
 
-1. Run simple_chemistry_methane.fds.
-2. Modify input file for $\mathrm{CH_2O}$ using FORMULA.
-3. Add HEAT_OF_COMBUSTION.
-4. Add a CO_YIELD and a SOOT_YIELD.
-5. Examine the `.out` file for each case.
+::: {.formula-example-layout}
+
+::: {.formula-example-tasks}
+<div class="formula-example-task"><span>a)</span><span>Run simple_chemistry_methane.fds</span></div>
+<div class="formula-example-task"><span>b)</span><span>Modify input file for CH2O using FORMULA</span></div>
+<div class="formula-example-task"><span>c)</span><span>Add specified HEAT_OF_COMBUSTION</span></div>
+<div class="formula-example-task"><span>d)</span><span>Add a CO_YIELD and a SOOT_YIELD</span></div>
+:::
+
+::: {.formula-example-examine}
+Examine the .out file for each case.
+:::
+
+:::
 
 ## Example: custom fuel mixture
 

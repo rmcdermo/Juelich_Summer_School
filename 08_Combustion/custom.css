@@ -4407,3 +4407,56 @@
   max-width: 56%;
   width: 56%;
 }
+
+/* Thermochemistry: simple chemistry with FORMULA example */
+
+.reveal .slides section.formula-example-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.formula-example-slide > h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reveal .slides .formula-example-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .formula-example-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .formula-example-tasks {
+  font-size: 1.02em;
+  left: 4.8%;
+  line-height: 1.18;
+  top: 20.3%;
+  width: 84%;
+}
+
+.reveal .slides .formula-example-task {
+  display: grid;
+  grid-template-columns: 1.6em auto;
+  margin: 0 0 0.42em;
+}
+
+.reveal .slides .formula-example-examine {
+  color: #8a8a8a;
+  font-size: 1.08em;
+  left: 4.8%;
+  line-height: 1;
+  top: 54.8%;
+  width: 65%;
+}
+
+.reveal .slides .formula-example-layout p {
+  margin: 0;
+}
