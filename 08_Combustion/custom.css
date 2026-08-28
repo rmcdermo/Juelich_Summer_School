@@ -3296,3 +3296,260 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: Finite-rate chemistry */
+
+.reveal .slides section.finite-rate-chemistry-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.finite-rate-chemistry-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .finite-rate-chemistry-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .finite-rate-chemistry-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .finite-rate-reaction {
+  font-size: 2.15em;
+  left: 24%;
+  line-height: 1;
+  text-align: center;
+  top: 17.8%;
+  width: 52%;
+}
+
+.reveal .slides .finite-rate-concentration-rate {
+  font-size: 1.95em;
+  left: 18%;
+  line-height: 1;
+  text-align: center;
+  top: 33.4%;
+  width: 64%;
+}
+
+.reveal .slides .finite-rate-arrhenius {
+  font-size: 2em;
+  left: 27%;
+  line-height: 1;
+  text-align: center;
+  top: 52.8%;
+  width: 46%;
+}
+
+.reveal .slides .finite-rate-k-label,
+.reveal .slides .finite-rate-a-label,
+.reveal .slides .finite-rate-e-label {
+  color: #4472c4;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.reveal .slides .finite-rate-k-label {
+  font-size: 1.62em;
+  left: 6.3%;
+  top: 73.7%;
+  width: 32%;
+}
+
+.reveal .slides .finite-rate-a-label {
+  font-size: 1.5em;
+  left: 33.1%;
+  top: 83.9%;
+  width: 34%;
+}
+
+.reveal .slides .finite-rate-e-label {
+  font-size: 1.5em;
+  left: 56.6%;
+  top: 77.6%;
+  width: 38%;
+}
+
+.reveal .slides .finite-rate-k-arrow {
+  border-top: 2px solid #5b9bd5;
+  height: 0;
+  left: 31.5%;
+  top: 72.1%;
+  transform: rotate(-58deg);
+  transform-origin: left center;
+  width: 8%;
+}
+
+.reveal .slides .finite-rate-a-arrow {
+  border-top: 2px solid #5b9bd5;
+  height: 0;
+  left: 43.1%;
+  top: 82.1%;
+  transform: rotate(-85deg);
+  transform-origin: left center;
+  width: 11.8%;
+}
+
+.reveal .slides .finite-rate-e-arrow {
+  border-top: 2px solid #5b9bd5;
+  height: 0;
+  left: 60.1%;
+  top: 75.2%;
+  transform: rotate(-107.3deg);
+  transform-origin: left center;
+  width: 9.3%;
+}
+
+.reveal .slides .finite-rate-k-arrow::after,
+.reveal .slides .finite-rate-a-arrow::after,
+.reveal .slides .finite-rate-e-arrow::after {
+  border-bottom: 4px solid transparent;
+  border-left: 7px solid #5b9bd5;
+  border-top: 4px solid transparent;
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -5px;
+}
+
+.reveal .slides .finite-rate-k-arrow p,
+.reveal .slides .finite-rate-a-arrow p,
+.reveal .slides .finite-rate-e-arrow p {
+  display: none;
+}
+
+.reveal .slides .finite-rate-chemistry-layout p,
+.reveal .slides .finite-rate-chemistry-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .finite-rate-chemistry-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+/* Thermochemistry: Finite-rate chemistry -- mass fractions */
+
+.reveal .slides section.finite-rate-mass-fractions-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.finite-rate-mass-fractions-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .finite-rate-mass-fractions-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .finite-rate-mass-fractions-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .finite-rate-concentration {
+  font-size: 1.28em;
+  left: 26%;
+  line-height: 1;
+  text-align: center;
+  top: 17.2%;
+  width: 48%;
+}
+
+.reveal .slides .finite-rate-fuel-rate {
+  font-size: 1.13em;
+  left: 11%;
+  line-height: 1;
+  text-align: center;
+  top: 27.5%;
+  width: 78%;
+}
+
+.reveal .slides .finite-rate-primitive-label {
+  color: #4472c4;
+  font-size: 1.08em;
+  left: 70.2%;
+  line-height: 1.05;
+  text-align: left;
+  top: 18.5%;
+  width: 22%;
+}
+
+.reveal .slides .finite-rate-primitive-arrow {
+  height: 7.4%;
+  left: 55.8%;
+  top: 23.2%;
+  transform: scaleX(-1);
+  width: 14.5%;
+}
+
+.reveal .slides .finite-rate-prefactor {
+  font-size: 0.98em;
+  left: 8%;
+  line-height: 1;
+  text-align: center;
+  top: 42.8%;
+  width: 84%;
+}
+
+.reveal .slides .finite-rate-species-rate {
+  font-size: 1.08em;
+  left: 20%;
+  line-height: 1;
+  text-align: center;
+  top: 59%;
+  width: 60%;
+}
+
+.reveal .slides .finite-rate-mass-rate {
+  align-items: center;
+  border: 3px solid #f00;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1.08em;
+  height: 16.5%;
+  justify-content: center;
+  left: 30.8%;
+  line-height: 1;
+  top: 75.8%;
+  width: 38.4%;
+}
+
+.reveal .slides .finite-rate-primitive-arrow p {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .slides .finite-rate-primitive-arrow img {
+  display: block;
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .finite-rate-mass-fractions-layout p,
+.reveal .slides .finite-rate-mass-fractions-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .finite-rate-mass-fractions-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
