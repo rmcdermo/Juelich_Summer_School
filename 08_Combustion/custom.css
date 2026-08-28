@@ -3942,3 +3942,113 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: Lumped species table */
+
+.reveal .slides section.lumped-species-table-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.lumped-species-table-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .lumped-species-table-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .lumped-species-table-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .lumped-species-table-reaction {
+  font-size: 0.96em;
+  left: 8%;
+  line-height: 1;
+  text-align: center;
+  top: 12.8%;
+  width: 84%;
+}
+
+.reveal .slides .lumped-species-table-definition {
+  font-size: 1.12em;
+  left: 4.7%;
+  line-height: 1.25;
+  text-align: left;
+  top: 24.2%;
+  width: 90.6%;
+}
+
+.reveal .slides .lumped-species-table-emphasis {
+  color: #70ad47;
+  font-style: italic;
+}
+
+.reveal .slides .lumped-species-table-wrap {
+  left: 16.5%;
+  top: 48.2%;
+  width: 67%;
+}
+
+.reveal .slides table.lumped-species-colored-table {
+  border-collapse: collapse;
+  color: #000;
+  font-family: inherit;
+  font-size: 0.82em;
+  line-height: 1;
+  margin: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.reveal .slides .lumped-species-colored-table th,
+.reveal .slides .lumped-species-colored-table td {
+  border: 1px solid #fff;
+  padding: 0.23em 0.28em;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.reveal .slides .lumped-species-colored-table thead th {
+  background: #5b9bd5;
+  color: #fff;
+  font-weight: 700;
+}
+
+.reveal .slides .lumped-species-colored-table .lumped-species-super-header th:not(.lumped-species-corner) {
+  text-align: center;
+}
+
+.reveal .slides .lumped-species-colored-table .lumped-species-corner {
+  background: transparent;
+  border-color: transparent;
+}
+
+.reveal .slides .lumped-species-colored-table tbody tr:nth-child(odd) td {
+  background: #e3eaf3;
+}
+
+.reveal .slides .lumped-species-colored-table tbody tr:nth-child(even) td {
+  background: #ccd9e8;
+}
+
+.reveal .slides .lumped-species-colored-table tbody tr.lumped-species-sum-row td {
+  background: #70ad47;
+}
+
+.reveal .slides .lumped-species-table-layout p,
+.reveal .slides .lumped-species-table-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .lumped-species-table-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}

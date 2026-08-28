@@ -1763,9 +1763,49 @@ Question: How do you determine $N_A$, $N_P$?
 
 :::
 
-## Lumped-species definition
+## Lumped Species {.lumped-species-table-slide}
 
-Lumped species are groups of primitive species that transport and react together, implying equal diffusivities for the primitive species within the group.
+::: {.lumped-species-table-layout}
+
+::: {.lumped-species-table-reaction}
+$$
+\mathrm{C_3H_8}
++N_A\left[X_{\mathrm{O_2},A}\mathrm{O_2}+X_{\mathrm{N_2},A}\mathrm{N_2}\right]
+\rightarrow
+N_P\left[X_{\mathrm{CO_2},P}\mathrm{CO_2}+X_{\mathrm{H_2O},P}\mathrm{H_2O}+X_{\mathrm{N_2},P}\mathrm{N_2}\right]
+$$
+:::
+
+::: {.lumped-species-table-definition}
+[Lumped]{.lumped-species-table-emphasis} species are groups of [primitive]{.lumped-species-table-emphasis} species that transport and react together, implying equal diffusivities for the primitive species within the group.
+:::
+
+::: {.lumped-species-table-wrap}
+<table class="lumped-species-colored-table">
+  <thead>
+    <tr class="lumped-species-super-header">
+      <th class="lumped-species-corner"></th>
+      <th colspan="3">Lumped Species</th>
+    </tr>
+    <tr>
+      <th>Primitive Species</th>
+      <th>Fuel</th>
+      <th>Air</th>
+      <th>Products</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>C<sub>3</sub>H<sub>8</sub></td><td>1</td><td>0</td><td>0</td></tr>
+    <tr><td>O<sub>2</sub></td><td>0</td><td><span class="math inline">&#92;(X_{&#92;mathrm{O_2},A}&#92;)</span></td><td>0</td></tr>
+    <tr><td>N<sub>2</sub></td><td>0</td><td><span class="math inline">&#92;(X_{&#92;mathrm{N_2},A}&#92;)</span></td><td><span class="math inline">&#92;(X_{&#92;mathrm{N_2},P}&#92;)</span></td></tr>
+    <tr><td>CO<sub>2</sub></td><td>0</td><td>0</td><td><span class="math inline">&#92;(X_{&#92;mathrm{CO_2},P}&#92;)</span></td></tr>
+    <tr><td>H<sub>2</sub>O</td><td>0</td><td>0</td><td><span class="math inline">&#92;(X_{&#92;mathrm{H_2O},P}&#92;)</span></td></tr>
+    <tr class="lumped-species-sum-row"><td>SUM</td><td>1</td><td>1</td><td>1</td></tr>
+  </tbody>
+</table>
+:::
+
+:::
 
 ## Lumped-species molecular weights
 
