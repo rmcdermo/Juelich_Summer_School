@@ -4052,3 +4052,38 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: Lumped species molecular weights */
+
+.reveal .slides section.lumped-species-mw-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.lumped-species-mw-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .lumped-species-mw-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .lumped-species-mw-question {
+  font-size: 1.22em;
+  left: 4.8%;
+  line-height: 1.1;
+  margin: 0;
+  position: absolute;
+  text-align: left;
+  top: 16.8%;
+  width: 80%;
+}
+
+.reveal .slides .lumped-species-mw-question p {
+  margin: 0;
+}

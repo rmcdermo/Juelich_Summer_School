@@ -1807,9 +1807,15 @@ $$
 
 :::
 
-## Lumped-species molecular weights
+## Lumped Species {.lumped-species-mw-slide}
 
+::: {.lumped-species-mw-layout}
+
+::: {.lumped-species-mw-question}
 Question: What is $N_A W_A/W_{\mathrm{F}}$?
+:::
+
+:::
 
 ## Lumped-species mass fractions {.thermo-tight}
 
