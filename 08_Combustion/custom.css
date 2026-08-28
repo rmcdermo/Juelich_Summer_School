@@ -4087,3 +4087,117 @@
 .reveal .slides .lumped-species-mw-question p {
   margin: 0;
 }
+
+/* Thermochemistry: Lumped species mass fractions */
+
+.reveal .slides section.lumped-species-mass-slide {
+  color: #000;
+  overflow: visible;
+}
+
+.reveal .slides section.lumped-species-mass-slide > h2 {
+  text-align: left;
+}
+
+.reveal .slides .lumped-species-mass-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .lumped-species-mass-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .lumped-species-mass-recall {
+  font-size: 1.18em;
+  left: 4.8%;
+  line-height: 1;
+  text-align: left;
+  top: 14.1%;
+  white-space: nowrap;
+  width: 42%;
+}
+
+.reveal .slides .lumped-species-mass-recall .math.inline {
+  font-size: 1.2em;
+  margin-left: 0.7em;
+}
+
+.reveal .slides .lumped-species-mass-fuel-label,
+.reveal .slides .lumped-species-mass-air-label,
+.reveal .slides .lumped-species-mass-products-label {
+  color: #4472c4;
+  font-size: 1.2em;
+  line-height: 1;
+  text-align: center;
+  top: 34.2%;
+  width: 15%;
+}
+
+.reveal .slides .lumped-species-mass-fuel-label {
+  left: 11.5%;
+}
+
+.reveal .slides .lumped-species-mass-air-label {
+  left: 23.8%;
+}
+
+.reveal .slides .lumped-species-mass-products-label {
+  left: 38.2%;
+}
+
+.reveal .slides .lumped-species-mass-matrix {
+  font-size: 1em;
+  left: 4.5%;
+  line-height: 1;
+  text-align: center;
+  top: 40.2%;
+  width: 52%;
+}
+
+.reveal .slides .lumped-species-mass-vector {
+  align-items: center;
+  border: 3px solid #70ad47;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1.7em;
+  height: 16%;
+  justify-content: center;
+  left: 66.2%;
+  line-height: 1;
+  top: 36.4%;
+  width: 20.5%;
+}
+
+.reveal .slides .lumped-species-mass-elements-label {
+  font-size: 1.18em;
+  left: 67.8%;
+  line-height: 1;
+  text-align: left;
+  top: 60.8%;
+  width: 24%;
+}
+
+.reveal .slides .lumped-species-mass-elements-equation {
+  font-size: 1.18em;
+  left: 64.2%;
+  line-height: 1;
+  text-align: center;
+  top: 69.2%;
+  width: 25.5%;
+}
+
+.reveal .slides .lumped-species-mass-layout p,
+.reveal .slides .lumped-species-mass-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .lumped-species-mass-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}

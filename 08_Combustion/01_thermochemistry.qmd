@@ -1817,17 +1817,61 @@ Question: What is $N_A W_A/W_{\mathrm{F}}$?
 
 :::
 
-## Lumped-species mass fractions {.thermo-tight}
+## Lumped Species Mass Fractions {.lumped-species-mass-slide}
 
-$$
-Y_\alpha=X_\alpha\frac{W_\alpha}{\overline W}
-$$
+::: {.lumped-species-mass-layout}
 
-Recall:  
-Fuel  
-Air  
-Products  
+::: {.lumped-species-mass-recall}
+<span class="lumped-species-mass-recall-word">Recall:</span> $\displaystyle Y_\alpha=X_\alpha\frac{W_\alpha}{\overline W}$
+:::
+
+::: {.lumped-species-mass-fuel-label}
+Fuel
+:::
+
+::: {.lumped-species-mass-air-label}
+Air
+:::
+
+::: {.lumped-species-mass-products-label}
+Products
+:::
+
+::: {.lumped-species-mass-matrix}
+$$
+A=
+\left[
+\begin{array}{c@{\qquad}c@{\qquad}c}
+1\,\dfrac{W_{\mathrm{C_3H_8}}}{W_{\mathrm F}} & 0 & 0 \\[0.35em]
+0 & X_{\mathrm{O_2},A}\dfrac{W_{\mathrm{O_2}}}{W_A} & 0 \\[0.35em]
+0 & X_{\mathrm{N_2},A}\dfrac{W_{\mathrm{N_2}}}{W_A} & X_{\mathrm{N_2},P}\dfrac{W_{\mathrm{N_2}}}{W_P} \\[0.35em]
+0 & 0 & X_{\mathrm{CO_2},P}\dfrac{W_{\mathrm{CO_2}}}{W_P} \\[0.35em]
+0 & 0 & X_{\mathrm{H_2O},P}\dfrac{W_{\mathrm{H_2O}}}{W_P}
+\end{array}
+\right]
+$$
+:::
+
+::: {.lumped-species-mass-vector}
+$$
+\mathbf{Y}=A\mathbf{Z}
+$$
+:::
+
+::: {.lumped-species-mass-elements-label}
 elements of $A$:
+:::
+
+::: {.lumped-species-mass-elements-equation}
+$$
+a_{\alpha i}
+=
+\frac{X_{\alpha i}W_\alpha}
+{\sum_\beta X_{\beta i}W_\beta}
+$$
+:::
+
+:::
 
 ## Example: lumped species to primitive species {.thermo-two-column .thermo-compact}
 
