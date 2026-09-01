@@ -387,23 +387,33 @@
   width: 35.29%;
 }
 
-.reveal .slides .complex-fuels-formula {
+.reveal .slides .complex-fuels-structure {
   font-size: 1.45em;
-  left: 57.82%;
+  left: 55.8%;
   line-height: 1;
-  text-align: left;
+  text-align: center;
   top: 9.42%;
-  width: 7.64%;
+  width: 12%;
 }
 
-.reveal .slides .complex-fuels-formula mjx-container[display="true"] {
+.reveal .slides .complex-fuels-structure mjx-container[display="true"] {
   margin: 0 !important;
-  text-align: left !important;
+  text-align: center !important;
+}
+
+.reveal .slides .complex-fuels-structure-label {
+  display: block;
+  font-size: 0.54em;
+  line-height: 1;
+  margin-top: 0.32em;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .reveal .slides .complex-fuels-reference {
   font-size: 1.25em;
-  left: 68.63%;
+  left: 70.2%;
   line-height: 1;
   top: 9.87%;
   white-space: nowrap;

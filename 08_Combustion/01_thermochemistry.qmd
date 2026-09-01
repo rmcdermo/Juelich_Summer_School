@@ -76,9 +76,11 @@ Source: [“Why Doesn’t Wood Melt?”, *Today I Found Out* (2013)](https://www
 
 :::
 
-::: {.complex-fuels-formula}
+::: {.complex-fuels-structure}
 
-$$\mathrm{CH_2O}$$
+$$\mathrm{H_2C{=}O}$$
+
+<div class="complex-fuels-structure-label">Formaldehyde</div>
 
 :::
 

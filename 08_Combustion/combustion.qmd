@@ -1,6 +1,6 @@
 ---
 title: "(Turbulent) Combustion"
-subtitle: "Jülich Summer School in Fire Dynamics Modeling"
+subtitle: "Jülich Summer School on Fire Dynamics Modeling"
 author:
   - "Randy McDermott"
   - "Jason Floyd"
