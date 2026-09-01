@@ -2086,15 +2086,15 @@ Examine the .out file for each case.
 
 ::: {.fds-propane-layout}
 
-::: {.fds-propane-video-poster}
+::: {.fds-propane-video}
 
-![](figs/thermochemistry/source/slide-052-media-01.png){fig-alt="Still image from the FDS propane-flame visualization."}
+![](figs/thermochemistry/video/umd-line-burner.mp4){controls="true" playsinline="true" preload="metadata" poster="figs/thermochemistry/source/slide-052-media-01.png" fig-alt="FDS simulation of the University of Maryland propane line burner showing hot soot and carbon dioxide fields."}
 
 :::
 
-::: {.fds-propane-scalar-fields}
+::: {.fds-propane-experiment}
 
-![](figs/thermochemistry/source/slide-052-picture-01.png){fig-alt="FDS propane-flame scalar-field visualization."}
+![](figs/thermochemistry/source/slide-052-picture-01.png){fig-alt="Simultaneous front- and end-view photographs of the University of Maryland propane line-burner flame under several oxygen concentrations."}
 
 :::
 

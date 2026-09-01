@@ -4698,3 +4698,82 @@
   margin: 0 !important;
   text-align: center !important;
 }
+
+/* Thermochemistry: UMD propane line burner */
+
+.reveal .slides section.fds-propane-slide {
+  color: #000;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  overflow: visible;
+}
+
+.reveal .slides .fds-propane-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .fds-propane-layout > div {
+  display: block;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .fds-propane-layout p {
+  margin: 0;
+}
+
+.reveal .slides .fds-propane-experiment {
+  left: 3.5%;
+  top: 12%;
+  width: 28%;
+}
+
+.reveal .slides .fds-propane-experiment img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .fds-propane-video {
+  aspect-ratio: 349 / 240;
+  background: #000;
+  left: 36%;
+  top: 12.5%;
+  width: 60%;
+}
+
+.reveal .slides .fds-propane-video video {
+  background: #000;
+  display: block;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+  width: 100%;
+}
+
+.reveal .slides .fds-propane-legend {
+  font-size: 1.08em;
+  left: 36%;
+  line-height: 1;
+  text-align: center;
+  top: 88.4%;
+  white-space: nowrap;
+  width: 60%;
+}
+
+.reveal .slides .fds-propane-reference {
+  font-size: 0.72em;
+  left: 3.5%;
+  line-height: 1;
+  text-align: center;
+  top: 88.5%;
+  white-space: nowrap;
+  width: 28%;
+}
