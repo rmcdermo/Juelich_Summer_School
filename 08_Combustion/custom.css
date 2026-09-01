@@ -4931,3 +4931,112 @@
   max-width: none;
   width: 100%;
 }
+
+/* Eddy Dissipation Concept: origin and later LES formulation */
+
+.reveal .slides section.edc-concept-slide {
+  color: #000;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  overflow: visible;
+}
+
+.reveal .slides section.edc-concept-slide > h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reveal .slides .edc-concept-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .edc-concept-layout > div {
+  display: block;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .edc-concept-layout p {
+  margin: 0;
+}
+
+.reveal .slides .edc-concept-magnussen-photo {
+  left: 7.52%;
+  top: 17.24%;
+  width: 19.64%;
+}
+
+.reveal .slides .edc-concept-magnussen-photo img,
+.reveal .slides .edc-concept-ertesvag-photo img,
+.reveal .slides .edc-concept-paper img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .edc-concept-magnussen-caption {
+  font-size: 0.92em;
+  left: 7.25%;
+  line-height: 1.24;
+  text-align: left;
+  top: 58.5%;
+  width: 22%;
+}
+
+.reveal .slides .edc-concept-citation {
+  font-size: 0.91em;
+  left: 29.46%;
+  line-height: 1.26;
+  text-align: left;
+  top: 16.5%;
+  width: 66%;
+}
+
+.reveal .slides .edc-concept-ertesvag-photo {
+  left: 29.55%;
+  top: 31.5%;
+  width: 21.65%;
+}
+
+.reveal .slides .edc-concept-ertesvag-caption {
+  font-size: 0.88em;
+  left: 29.46%;
+  line-height: 1.25;
+  text-align: left;
+  top: 70.5%;
+  width: 25%;
+}
+
+.reveal .slides .edc-concept-paper {
+  box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.28);
+  left: 54.81%;
+  top: 38.32%;
+  width: 42.82%;
+}
+
+.reveal .slides .edc-concept-paper-highlight {
+  border: 3px solid #f47b20;
+  box-sizing: border-box;
+  height: 12.0%;
+  left: 0;
+  position: absolute;
+  top: 50.2%;
+  width: 21.0%;
+}
+
+.reveal .slides .edc-concept-paper-caption {
+  font-size: 0.88em;
+  left: 57.5%;
+  line-height: 1;
+  text-align: center;
+  top: 76.5%;
+  white-space: nowrap;
+  width: 38%;
+}
