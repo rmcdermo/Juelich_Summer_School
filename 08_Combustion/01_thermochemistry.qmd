@@ -1,4 +1,4 @@
-# Thermochemistry
+# Module I: Thermochemistry
 
 ## Stoichiometry {.stoichiometry-slide}
 

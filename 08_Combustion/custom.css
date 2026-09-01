@@ -4843,3 +4843,91 @@
   white-space: nowrap;
   width: 50.78%;
 }
+
+/* Eddy Dissipation Concept: filtered species transport equation */
+
+.reveal .slides section.filtered-species-slide {
+  color: #000;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  overflow: visible;
+}
+
+.reveal .slides section.filtered-species-slide > h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reveal .slides .filtered-species-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .filtered-species-layout > div {
+  display: block;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .filtered-species-layout p,
+.reveal .slides .filtered-species-layout .math.display {
+  margin: 0;
+}
+
+.reveal .slides .filtered-species-equation {
+  font-size: 1.45em;
+  left: 4.5%;
+  line-height: 1;
+  top: 21.0%;
+  width: 91%;
+}
+
+.reveal .slides .filtered-species-equation mjx-container[display="true"],
+.reveal .slides .filtered-species-definition mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.reveal .slides .filtered-species-field-label {
+  font-size: 1.22em;
+  left: 3.5%;
+  line-height: 1;
+  top: 48.5%;
+  white-space: nowrap;
+}
+
+.reveal .slides .filtered-species-definition {
+  font-size: 1.42em;
+  left: 6.0%;
+  line-height: 1;
+  top: 59.5%;
+  width: 48%;
+}
+
+.reveal .slides .filtered-species-closure {
+  color: #f00000;
+  font-size: 1.28em;
+  left: 3.5%;
+  line-height: 1.28;
+  text-align: left;
+  top: 76.5%;
+  width: 51%;
+}
+
+.reveal .slides .filtered-species-kernel {
+  left: 57.5%;
+  top: 46.0%;
+  width: 38.5%;
+}
+
+.reveal .slides .filtered-species-kernel img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
