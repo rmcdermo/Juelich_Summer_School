@@ -4777,3 +4777,69 @@
   white-space: nowrap;
   width: 28%;
 }
+
+/* Thermochemistry: UMD line-burner radiative fraction */
+
+.reveal .slides section.umd-radiative-slide {
+  color: #000;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  overflow: visible;
+}
+
+.reveal .slides section.umd-radiative-slide > h2 {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reveal .slides .umd-radiative-layout {
+  display: block;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+
+.reveal .slides .umd-radiative-layout > div {
+  display: block;
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .umd-radiative-layout p {
+  margin: 0;
+}
+
+.reveal .slides .umd-radiative-methane,
+.reveal .slides .umd-radiative-propane {
+  top: 23.4%;
+  width: 48.75%;
+}
+
+.reveal .slides .umd-radiative-methane {
+  left: 0.05%;
+}
+
+.reveal .slides .umd-radiative-propane {
+  left: 48.42%;
+}
+
+.reveal .slides .umd-radiative-methane img,
+.reveal .slides .umd-radiative-propane img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+
+.reveal .slides .umd-radiative-reference {
+  font-size: 0.72em;
+  left: 7.32%;
+  line-height: 1;
+  text-align: left;
+  top: 89.29%;
+  white-space: nowrap;
+  width: 50.78%;
+}

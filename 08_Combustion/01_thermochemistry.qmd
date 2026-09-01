@@ -2112,34 +2112,26 @@ James White, PhD Thesis, UMD, 2016.
 
 :::
 
-## UMD line burner: radiative fraction {.thermo-two-column .thermo-compact}
+## UMD Line Burner: Radiative Fraction {.umd-radiative-slide .source-slide-title}
 
-:::: {.columns}
+::: {.umd-radiative-layout}
 
-::: {.column width="30%"}
+::: {.umd-radiative-methane}
+
+![](figs/thermochemistry/source/slide-053-picture-01.png){fig-alt="Methane line-burner radiative-fraction measurements and FDS predictions."}
+
+:::
+
+::: {.umd-radiative-propane}
+
+![](figs/thermochemistry/source/slide-053-picture-02.png){fig-alt="Propane line-burner radiative-fraction measurements and FDS predictions."}
+
+:::
+
+::: {.umd-radiative-reference}
 
 Exp data from MaCFP database, J. White, PhD Thesis, UMD, 2016.
 
 :::
 
-::: {.column width="70%"}
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-![](figs/thermochemistry/source/slide-053-picture-01.png){.thermo-source-figure fig-alt="Methane line-burner radiative-fraction measurements and FDS predictions."}
-
 :::
-
-::: {.column width="50%"}
-
-![](figs/thermochemistry/source/slide-053-picture-02.png){.thermo-source-figure fig-alt="Propane line-burner radiative-fraction measurements and FDS predictions."}
-
-:::
-
-::::
-
-:::
-
-::::
