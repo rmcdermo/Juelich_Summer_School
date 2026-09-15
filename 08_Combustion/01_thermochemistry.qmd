@@ -1930,6 +1930,14 @@ $$
 
 ::: {.co-soot-yields-layout}
 
+::: {.co-yield-keyword}
+`CO_YIELD`
+:::
+
+::: {.soot-yield-keyword}
+`SOOT_YIELD`
+:::
+
 ::: {.co-yield-derivation}
 $$
 \begin{aligned}
@@ -1974,21 +1982,28 @@ N_PX_{S,P}
 $$
 :::
 
-::: {.soot-yield-keyword}
-SOOT_YIELD
+::: {.soot-default-note}
+**Default SOOT: pure carbon** ($\mathrm{C}$)\
+$W_S=12.0107\ \mathrm{kg/kmol}$
 :::
 
-::: {.soot-yield-keyword-arrow}
+::: {.soot-custom-composition}
+**Custom SOOT: 90% C and 10% H** (atom fractions)
+
+`&SPEC ID='SOOT', FORMULA='C0.9H0.1' /`
+
+$\mathrm{C_{0.9}H_{0.1}}$, $W_S=10.9104\ \mathrm{kg/kmol}$
 :::
 
-::: {.soot-surrogate-note}
-$\mathrm{C_{0.9}H_{0.1}}$  
-$W_S=10.9\ \mathrm{kg/kmol}$
 :::
 
-::: {.soot-surrogate-arrow}
-:::
-
+::: {.notes}
+FDS User Guide, Species, Soot: the predefined SOOT species uses FORMULA='C'.
+The custom formula specifies atom fractions, not mass fractions. FDS computes
+the molecular weight from the formula. For simple chemistry without aerosol
+behaviors, add LUMPED_COMPONENT_ONLY=T to this SPEC line.
+Atomic weights follow FDS Source/data.f90 (C: 12.0107, H: 1.00794 kg/kmol).
+The custom molecular weight is 0.9(12.0107) + 0.1(1.00794) = 10.9104 kg/kmol.
 :::
 
 ## Complete simple hydrocarbon chemistry
