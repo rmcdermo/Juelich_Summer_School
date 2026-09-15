@@ -1,0 +1,456 @@
+/* Pressure module -- shared slide chrome.
+   Slides reproduce the source PowerPoint layout, so boxes are absolutely
+   positioned in percentages of the 1600x900 canvas. Percentages (not pixels)
+   keep the deck resolution independent. */
+
+.reveal {
+  font-size: 28px;
+}
+
+.reveal .slides section {
+  padding: 5px;
+  margin: 0 !important;
+}
+
+/* Every slide in this module uses one absolutely positioned layer. */
+.reveal .slides .slide-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 100%;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.reveal .slides .slide-layout > div {
+  margin: 0;
+  position: absolute;
+}
+
+.reveal .slides .slide-layout p,
+.reveal .slides .slide-layout .math.display {
+  margin: 0;
+}
+
+/* Lists inside a positioned box. The margin:0 rule above keeps equation boxes
+   from drifting, but it also strips the spacing a list needs, so restore it
+   here and make the marker explicit rather than relying on reveal's defaults. */
+.reveal .slides .slide-layout ul {
+  list-style: disc outside;
+  margin: 0;
+  padding-left: 1.05em;
+}
+
+.reveal .slides .slide-layout ul ul {
+  list-style: circle outside;
+  margin-top: 0.2em;
+}
+
+.reveal .slides .slide-layout li {
+  margin: 0 0 0.3em;
+  text-align: left;
+}
+
+.reveal .slides .slide-layout li > p {
+  margin: 0;
+}
+
+/* Display maths inside a positioned box must not be re-centred by MathJax --
+   the box itself already carries the position from the source slide. */
+.reveal .slides .slide-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.reveal .slides .slide-layout img,
+.reveal .slides .slide-layout video {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* Recurring roles across the module. */
+/* Deliberate deviation from the deck: the source sub-heads are black, but the
+   blue reads better on the web and the user prefers it. Bullet kept as in the
+   source. */
+.reveal .slides .sub-head {
+  color: #156082;
+  font-size: 1.15em;
+  font-weight: 700;
+  left: 2.3%;
+  top: 16.9%;
+}
+
+
+/* single lines that carry a '-' bullet in the deck */
+.reveal .slides .dash-item > p:first-child::before,
+.reveal .slides p.dash-item::before {
+  content: "\2013";
+  margin-right: 0.5em;
+}
+
+.reveal .slides .callout-label {
+  color: #ff0000;
+  font-size: 0.8em;
+  line-height: 1.15;
+}
+
+.reveal .slides .caption {
+  font-size: 0.62em;
+  line-height: 1.2;
+}
+
+.reveal .slides .footnote {
+  bottom: 1.5%;
+  font-size: 0.5em;
+  left: 2%;
+  line-height: 1.25;
+  opacity: 0.8;
+  position: absolute;
+  width: 90%;
+}
+
+.reveal .slides .eqn {
+  font-size: 0.95em;
+}
+
+.reveal .slides .eqn-lg {
+  font-size: 1.15em;
+}
+
+/* ---- Slide 004: Motivation ---------------------------------------------- */
+/* Two paragraphs in the source text frame, so they stack. .slide-layout p has
+   margin:0, which would butt the lines together -- restore a line gap here. */
+.reveal .slides .m-intro { left: 2.3%; top: 16.2%; width: 94.3%; }
+.reveal .slides .m-intro p + p { margin-top: 0.25em !important; }
+/* The source boxes (L1.4 W50.8 and L49.2 W50.8) overlap by 3%, which shows once
+   the videos fill their boxes. Narrowed to 46.5% each with a ~3% gutter; the
+   staggered tops are kept because they are what aligns the two bottom edges. */
+/* Bottoms aligned at 83%: the clips have different aspect ratios, so at equal
+   width their heights differ (55.8% vs 59.0%) and the tops must be staggered by
+   that difference to make the bottom edges meet. Captions sit just under them. */
+.reveal .slides .m-fig-l { left: 1.4%; top: 27.2%; width: 46.5%; }
+.reveal .slides .m-fig-r { left: 51.0%; top: 24.0%; width: 46.5%; }
+.reveal .slides .m-cap-l { left: 6.0%; top: 84.8%; width: 36%; }
+.reveal .slides .m-cap-r { left: 55.6%; top: 84.8%; width: 36%; }
+
+/* ---- Slide 005: Low Mach flows ------------------------------------------ */
+.reveal .slides .lm-mach  { left: 36.9%; top: 22.0%; width: 24%; }
+.reveal .slides .lm-defs  { left: 5.1%; top: 29.1%; width: 41.0%; }
+.reveal .slides .lm-fig   { left: 4.2%; top: 41.5%; width: 37.2%; }
+.reveal .slides .lm-cmp   { left: 5.1%; top: 65.0%; width: 50%; }
+.reveal .slides .lm-body  { left: 5.1%; top: 74.6%; width: 55.9%; }
+/* Portrait replacement figure: keep the source box centre (79.2%) but narrow
+   it so the taller image clears the footer instead of running off the slide. */
+.reveal .slides .lm-photo { left: 63.2%; top: 17.1%; width: 32%; }
+
+/* ---- Slide 006: Pressure decomposition ---------------------------------- */
+/* The source draws three rotated `leftBrace` shapes under labelled terms. Those
+   are structure, not decoration, so the equations are written as LaTeX with
+   \underbrace: the braces come for free, stay attached to their term at any
+   zoom, and the labels remain selectable text. Source label colour is FF0000. */
+.reveal .slides .pd-eq     { left: 16.0%; top: 24.0%; width: 44%; font-size: 1.45em; }
+.reveal .slides .pd-eos-h  { color: #ff0000; left: 63.3%; top: 26.4%; width: 16.6%; }
+.reveal .slides .pd-eos    { left: 78.0%; top: 23.2%; width: 16%; font-size: 1.3em; }
+.reveal .slides .pd-mass   { left: 27.5%; top: 68.0%; width: 60%; font-size: 1.2em; }
+.reveal .slides .pd-lab-st { color: #ff0000; left: 10.5%; top: 71.1%; width: 16%; text-align: center; }
+.reveal .slides .pd-mass-h { left: 3.2%; top: 57.4%; width: 43.8%; }
+
+/* ---- Slide 007: Momentum equation --------------------------------------- */
+/* F_A, F_B and H are \underbrace groups now, so the old standalone label boxes
+   (.mo-fa/.mo-fb/.mo-head) and the vector-identity image are gone -- the labels
+   ride with their terms and cannot drift out of alignment. */
+.reveal .slides .mo-eq     { left: 33.0%; top: 26.0%; width: 64%; font-size: 1.05em; }
+.reveal .slides .mo-lab    { color: #ff0000; left: 21.0%; top: 28.4%; width: 10.5%; text-align: right; }
+.reveal .slides .mo-ident  { left: 3.4%; top: 46.0%; width: 94%; font-size: 0.86em; }
+.reveal .slides .mo-comb   { left: 3.0%; top: 58.0%; width: 94%; font-size: 0.98em; }
+/* Centre this one in the lower region -- the shared rule left-aligns display
+   maths so positioned boxes keep their source x, but here the box spans the
+   slide and the equation should sit in the middle of it. */
+.reveal .slides .mo-comb mjx-container[display="true"] { text-align: center !important; }
+/* Sits directly under the H underbrace label (centre 68.9%, bottom 70.0%)
+   so it is read as annotating that equation rather than floating loose. */
+.reveal .slides .mo-headlb { color: #ff0000; left: 55.9%; top: 77.8%; width: 26%;
+                             text-align: center; }
+
+/* ---- Slide 008: Grouping the forces ------------------------------------- */
+.reveal .slides .gf-eq     { left: 32.8%; top: 29.6%; width: 40%; }
+.reveal .slides .gf-lab    { color: #ff0000; left: 19.7%; top: 32.9%; width: 11.8%; }
+.reveal .slides .gf-where  { left: 3.4%; top: 48.8%; width: 20%; }
+/* The three definitions read as a list, so they share one left edge (15.3%) and
+   their annotations share another (60.4%). The source boxes were each 1-1.5%
+   apart, which reads as misalignment rather than as intent. */
+.reveal .slides .gf-fa     { left: 15.3%; top: 53.4%; width: 47.0%; }
+.reveal .slides .gf-fa-lb  { left: 60.4%; top: 55.7%; width: 34.2%; }
+.reveal .slides .gf-fb     { left: 15.3%; top: 66.4%; width: 30%; }
+.reveal .slides .gf-fb-lb  { left: 60.4%; top: 68.7%; width: 26.5%; }
+.reveal .slides .gf-h      { left: 15.3%; top: 79.4%; width: 30%; }
+.reveal .slides .gf-h-lb   { left: 60.4%; top: 82.1%; width: 31.5%; }
+
+/* ---- Slide 009: Divergence constraint ----------------------------------- */
+/* Equation transcribed from the extracted SVG so the two source braces become
+   \underbrace groups; the labels then travel with their terms. */
+.reveal .slides .dc-label  { color: #ff0000; left: 4.0%; top: 17.9%; width: 14%;
+                             text-align: center; line-height: 1.25; }
+.reveal .slides .dc-eq     { left: 20.0%; top: 14.0%; width: 74%; font-size: 0.95em; }
+.reveal .slides .dc-q      { left: 1.5%; top: 44.6%; width: 30%; }
+.reveal .slides .dc-rows   { left: 8.7%; top: 55.5%; width: 40%; }
+/* The source colour-codes the three cases -- the colour is the meaning here
+   (expansion / neutral / compression), so it is carried over rather than
+   flattened to one ink. Only the description is coloured; the maths stays black,
+   as in the deck. */
+.reveal .slides .dc-rows li { margin: 0 0 1.1em; }
+.reveal .slides .dc-expand   { color: #ff0000; }
+.reveal .slides .dc-uniform  { color: #92d050; }
+.reveal .slides .dc-compress { color: #0070c0; }
+.reveal .slides .dc-fig    { left: 64.2%; top: 47.3%; width: 28.0%; }
+
+/* ---- Slide 010: Saddle point problem ------------------------------------ */
+/* The source groups each pair of equations with a tall left brace; \left\{ with
+   an aligned environment reproduces that and scales with the content. */
+.reveal .slides .sp-name   { color: #ff0000; left: 5.0%; top: 25.9%; width: 17%; text-align: center; }
+.reveal .slides .sp-sys    { left: 24.0%; top: 23.0%; width: 40%; font-size: 1.0em; }
+.reveal .slides .sp-bcs    { color: #ff0000; left: 58.0%; top: 28.0%; width: 20%; }
+.reveal .slides .sp-step   { left: 2.3%; top: 48.0%; width: 88%; }
+.reveal .slides .sp-solve  { color: #ff0000; left: 8.0%; top: 66.8%; width: 14%; text-align: center; }
+/* u^{n+1} and "subject to:" read as one phrase on the second equation's line,
+   so both are aligned to that row (centre 69.0%) rather than sitting below the
+   brace. The note box aligns with the FIRST equation, which is what the arrow
+   points at. */
+.reveal .slides .sp-arrow  { left: 56.0%; top: 68%; width: 7.2%; }
+.reveal .slides .sp-arrow svg { display: block; width: 100%; height: auto; }
+.reveal .slides .sp-disc   { left: 24.0%; top: 63%; width: 42%; font-size: 1.0em; }
+.reveal .slides .sp-note   { color: #ff0000; left: 63.4%; top: 61.8%; width: 24%; text-align: center;
+                             border: 1.5px solid #000; padding: 0.35em 0.5em; font-size: 0.9em; }
+.reveal .slides .sp-u      { left: 3.0%; top: 76.4%; width: 8%; }
+.reveal .slides .sp-subj   { color: #ff0000; left: 10.5%; top: 76.7%; width: 13%; }
+
+/* ---- Slide 011: Poisson equation for H ---------------------------------- */
+/* Source puts the annotation in a RED-bordered box with a blue arrow into the
+   equation, and runs the separable-operator expression inline with its bullet
+   rather than floating it in its own box. */
+.reveal .slides .pe-take   { left: 5.4%; top: 25.0%; width: 50%; }
+.reveal .slides .pe-eq     { left: 23.0%; top: 33%; width: 44%; font-size: 0.95em; }
+.reveal .slides .pe-arrow  { left: 64.5%; top: 35.8%; width: 7.5%; }
+.reveal .slides .pe-arrow svg { display: block; width: 100%; height: auto; }
+.reveal .slides .pe-lab    { color: #ff0000; left: 72.4%; top: 34.2%; width: 16%;
+                             text-align: center; border: 1.5px solid #ff0000;
+                             padding: 0.35em 0.4em; font-size: 0.9em; line-height: 1.25; }
+.reveal .slides .pe-head   { left: 5.4%; top: 45.0%; width: 40%; font-weight: 700; }
+.reveal .slides .pe-list   { left: 5.4%; top: 51.5%; width: 90%; font-size: 0.95em; }
+
+/* The deck uses en-dash bullets on this slide and on Structured Grids, where
+   elsewhere it uses discs -- keep both rather than flattening to one marker. */
+.reveal .slides .dash-list ul { list-style-type: "\2013\00a0\00a0"; }
+.reveal .slides .dash-list li { margin: 0 0 0.75em; }
+
+/* ---- Slide 012: Fractional step procedure ------------------------------- */
+/* Five numbered steps down the left; every equation shares ONE left edge (41%)
+   and sits on its own step's line. The "Intermediate velocity" note is an
+   \underbrace on step 5 rather than a floating label, so it cannot drift. */
+.reveal .slides .fs-head   { left: 5.8%; top: 28.4%; width: 20%; font-weight: 700; }
+.reveal .slides .fs-s1     { left: 7.3%; top: 35.0%; width: 33%; }
+.reveal .slides .fs-s2     { left: 7.3%; top: 44.3%; width: 40%; }
+.reveal .slides .fs-s3     { left: 7.3%; top: 54.7%; width: 33%; }
+.reveal .slides .fs-s4     { left: 7.3%; top: 67.0%; width: 33%; }
+.reveal .slides .fs-s5     { left: 7.3%; top: 80.0%; width: 33%; }
+.reveal .slides .fs-e1     { left: 46%; top: 34.8%; width: 53%; font-size: 0.95em; }
+.reveal .slides .fs-e3     { left: 46%; top: 54.6%; width: 53%; font-size: 0.95em; }
+.reveal .slides .fs-e4     { left: 46%; top: 66.1%; width: 53%; font-size: 0.95em; }
+/* Aligned on the equation's own row, not the group centre: the underbrace
+   label hangs below, so centring the group leaves the equation line high. */
+.reveal .slides .fs-e5     { left: 46%; top: 80.6%; width: 53%; font-size: 0.95em; }
+
+/* ---- Slide 013: Pressure iteration -------------------------------------- */
+/* Busiest slide in the section: a loop bracket spanning steps 3-4, two vertical
+   arrows dropping out of the Poisson equation, and two diagonals converging on
+   the final system. Arrows are inline SVG so they scale with the slide. */
+.reveal .slides .pi-red    { color: #ff0000; }
+.reveal .slides .pi-rel    { left: 29.0%; top: 17.5%; width: 24%; }
+.reveal .slides .pi-rel-eq { left: 53.0%; top: 15.7%; width: 24%; font-size: 0.95em; }
+.reveal .slides .pi-fp     { left: 5.4%; top: 27.0%; width: 32%; font-weight: 700; }
+.reveal .slides .pi-loop   { left: 0.6%; top: 45.5%; width: 8%; font-weight: 700; }
+
+/* The tall square bracket grouping the two loop steps. */
+.reveal .slides .pi-brace  { left: 7.4%; top: 35.5%; width: 1.6%; height: 26%;
+                             border: 2px solid #1f4e79; border-right: none; }
+
+.reveal .slides .pi-s3     { left: 9.6%; top: 38.6%; width: 28%; }
+.reveal .slides .pi-e3a    { left: 42%; top: 37.7%; width: 27%; font-size: 0.92em; }
+.reveal .slides .pi-e3b    { left: 69.5%; top: 38.1%; width: 24%; font-size: 0.92em; }
+.reveal .slides .pi-s4     { left: 9.6%; top: 53.4%; width: 28%; }
+.reveal .slides .pi-e4     { left: 44%; top: 52.6%; width: 55%; font-size: 0.92em; }
+
+.reveal .slides .pi-arr-l  { left: 47%; top: 62.0%; width: 1.3%; }
+.reveal .slides .pi-arr-r  { left: 80.6%; top: 62.0%; width: 1.3%; }
+.reveal .slides .pi-arr-l svg,
+.reveal .slides .pi-arr-r svg { display: block; width: 100%; height: auto; }
+
+.reveal .slides .pi-conv   { left: 4.8%; top: 69.5%; width: 24%; }
+.reveal .slides .pi-c1     { left: 38%; top: 67.5%; width: 24%; font-size: 0.92em; }
+.reveal .slides .pi-c2     { left: 76.9%; top: 67.9%; width: 16%; font-size: 0.92em; }
+
+/* Tip lands on the first p-tilde in the final system (glyph at 58.3-59.3%,
+   top 84.2%), not just somewhere on the equation. */
+.reveal .slides .pi-diag-l { left: 44.9%; top: 76%; width: 12.7%; height: 6%; }
+/* Starts under the left edge of the -p-tilde term (81%) rather than under its
+   trailing (1/rho), so the arrow reads as coming from that expression. */
+.reveal .slides .pi-diag-r { left: 68.1%; top: 76%; width: 13.5%; height: 6%; }
+.reveal .slides .pi-diag-l svg,
+.reveal .slides .pi-diag-r svg { display: block; width: 100%; height: 100%; }
+
+.reveal .slides .pi-tail   { color: #ff0000; left: 4.0%; top: 86.0%; width: 40%; }
+.reveal .slides .pi-final  { left: 50.3%; top: 84.2%; width: 43%; font-size: 0.92em; }
+
+/* ---- Slide 014: Structured grids ---------------------------------------- */
+/* The lower half is a MAC-cell schematic the deck draws with autoshapes; it is
+   rebuilt as inline SVG (cells, velocity arrows, dx dimension) with the maths
+   labels kept as positioned MathJax so they stay selectable. */
+.reveal .slides .sg-red    { color: #ff0000; }
+/* Keep the text clear of the grid figure at 42.6%: at the source's 40.3%
+   width the line reached 43.3% and the closing paren of (I,J,K) was painted
+   over by the image. Narrower forces the same wrap the deck has. */
+.reveal .slides .sg-body   { left: 3.9%; top: 24.9%; width: 36%; line-height: 1.45; }
+.reveal .slides .sg-sub    { color: #ff0000; margin-top: 0.4em; line-height: 1.35; }
+.reveal .slides .sg-fig    { left: 42.6%; top: 3.8%; width: 57.4%; }
+.reveal .slides .sg-lab-i  { color: #ff0000; left: 50.16%; top: 53.4%; width: 3%; font-weight: 700;
+                             text-align: center; }
+.reveal .slides .sg-lab-j  { color: #ff0000; left: 41.6%; top: 43.0%; width: 3%; font-weight: 700;
+                             text-align: center; }
+.reveal .slides .sg-marker { left: 43.0%; top: 42.0%; width: 12%; height: 14%; }
+.reveal .slides .sg-marker svg { display: block; width: 100%; height: 100%; }
+
+.reveal .slides .sg-cell   { left: 12.0%; top: 58%; width: 40%; height: 35%; }
+.reveal .slides .sg-cell svg { display: block; width: 100%; height: 100%; }
+
+.reveal .slides .sg-v      { left: 23.3%; top: 56.3%; width: 6%; }
+.reveal .slides .sg-f      { left: 29.8%; top: 69.8%; width: 8%; }
+.reveal .slides .sg-u      { left: 29.9%; top: 76.8%; width: 6%; }
+.reveal .slides .sg-h1     { left: 17.4%; top: 77.6%; width: 13%; }
+.reveal .slides .sg-h2     { left: 35.5%; top: 77.6%; width: 9%; }
+.reveal .slides .sg-dx     { left: 27.5%; top: 86.2%; width: 5%; }
+.reveal .slides .sg-x      { left: 47.7%; top: 86.4%; width: 3%; }
+
+.reveal .slides .sg-having { left: 53.0%; top: 64.5%; width: 36%; }
+.reveal .slides .sg-eq     { left: 51.8%; top: 72.0%; width: 47%; font-size: 0.9em; }
+
+/* ---- Slide 015: FD Laplacian -------------------------------------------- */
+/* Five-point stencil drawn as inline SVG (box 36%,2% 56x80); labels stay as
+   positioned MathJax. SVG maps slide% -> viewBox by vx=(x-36)*16, vy=(y-2)*9. */
+.reveal .slides .fd-red    { color: #ff0000; }
+.reveal .slides .fd-cell   { left: 4.0%; top: 35.6%; width: 34%; }
+.reveal .slides .fd-op     { left: 4.0%; top: 73.0%; width: 36%; }
+.reveal .slides .fd-stencil { left: 36%; top: 2%; width: 56%; height: 80%; }
+.reveal .slides .fd-stencil svg { display: block; width: 100%; height: 100%; }
+
+.reveal .slides .fd-hc     { left: 57.15%; top: 44.0%; width: 8%; text-align: center; }
+.reveal .slides .fd-hl     { left: 41.65%; top: 44.5%; width: 8%; text-align: center; }
+.reveal .slides .fd-hr     { left: 72.8%; top: 44.5%; width: 8%; text-align: center; }
+.reveal .slides .fd-ht     { left: 57.15%; top: 9.9%; width: 8%; text-align: center; }
+.reveal .slides .fd-hb     { left: 57.15%; top: 66.8%; width: 8%; text-align: center; }
+.reveal .slides .fd-qy     { left: 54.6%; top: 17.8%; width: 11%; font-size: 0.72em; text-align: center; }
+.reveal .slides .fd-qx     { left: 69%; top: 33.5%; width: 11%; font-size: 0.72em; text-align: center; }
+.reveal .slides .fd-dx     { left: 69.2%; top: 54.0%; width: 5%; text-align: center; }
+.reveal .slides .fd-dy     { left: 87.9%; top: 28.6%; width: 5%; text-align: center; }
+.reveal .slides .fd-ax     { left: 83.6%; top: 68.4%; width: 3%; text-align: center; }
+.reveal .slides .fd-ay     { left: 82.0%; top: 60.9%; width: 3%; text-align: center; }
+
+.reveal .slides .fd-eq     { left: 13.5%; top: 84.8%; width: 82%; font-size: 0.82em; }
+
+/* ---- Slide 016: 5-point stencil ----------------------------------------- */
+/* Source annotates the derivation in red and links the two equations with a
+   "Discretize" arrow; none of that survived the first conversion. */
+.st-red, .reveal .slides .st-pts, .reveal .slides .st-cont-lab,
+.reveal .slides .st-discretize, .reveal .slides .st-sys-lab { color: #ff0000; }
+
+.reveal .slides .st-if     { left: 3.9%; top: 24.9%; width: 34%; }
+.reveal .slides .st-eq     { left: 13.0%; top: 32.6%; width: 65%; font-size: 0.92em; }
+.reveal .slides .st-pts    { left: 69.5%; top: 31.6%; width: 26%; font-size: 0.9em; }
+.reveal .slides .st-disc   { left: 3.9%; top: 45.2%; width: 40%; }
+.reveal .slides .st-cont   { left: 14.7%; top: 55.5%; width: 30%; }
+.reveal .slides .st-sys mjx-container[display="true"],
+.reveal .slides .st-cont mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .st-cont-lab { left: 41.2%; top: 54.3%; width: 14%; text-align: center; line-height: 1.2; }
+.reveal .slides .st-arrow  { left: 28.6%; top: 62.5%; width: 2.2%; height: 17%; }
+.reveal .slides .st-arrow svg { display: block; width: 100%; height: 100%; }
+.reveal .slides .st-discretize { left: 15.0%; top: 68.5%; width: 13%; text-align: center; }
+.reveal .slides .st-sys    { left: 13.35%; top: 80.8%; width: 32.7%; }
+.reveal .slides .st-sys-lab { left: 42.0%; top: 76.0%; width: 14%; text-align: center; line-height: 1.2; }
+
+.reveal .slides .st-fig    { left: 63.7%; top: 45.0%; width: 30%; }
+.reveal .slides .st-ny     { left: 61.0%; top: 66.1%; width: 5.4%; text-align: right; }
+.reveal .slides .st-nx     { left: 76.4%; top: 88.3%; width: 5.4%; text-align: center; }
+.reveal .slides .st-h1     { left: 64.4%; top: 75.40%; width: 3.1%; text-align: right; }
+.reveal .slides .st-h2     { left: 69.65%; top: 86.3%; width: 3.1%; text-align: center; }
+
+/* ---- Slide 017: Discrete system ----------------------------------------- */
+/* The A H = R diagram is autoshape art in the deck (purple brackets + dotted
+   bands). Rebuilt as inline SVG spanning 6%,18% 52x66; entries stay MathJax.
+   Map: vx=(x-6)*16, vy=(y-18)*9. */
+.reveal .slides .ds-dims   { left: 3.2%; top: 17.4%; width: 20%; line-height: 1.45; }
+.reveal .slides .ds-coef   { left: 3.6%; top: 45.3%; width: 8.4%; }
+.reveal .slides .ds-matrix { left: 6%; top: 18%; width: 52%; height: 66%; }
+.reveal .slides .ds-matrix svg { display: block; width: 100%; height: 100%; }
+
+.reveal .slides .ds-e1     { left: 8.45%; top: 47.85%; width: 8.2%; text-align: center; }
+.reveal .slides .ds-e2     { left: 18.82%; top: 47.85%; width: 3.1%; text-align: center; }
+.reveal .slides .ds-e3     { left: 20.58%; top: 47.72%; width: 4.4%; text-align: center; }
+.reveal .slides .ds-e4     { left: 23.50%; top: 47.85%; width: 3.1%; text-align: center; }
+.reveal .slides .ds-e5     { left: 31.51%; top: 47.85%; width: 3.1%; text-align: center; }
+.reveal .slides .ds-alab   { left: 20.9%; top: 73.1%; width: 8.2%; text-align: center; }
+.reveal .slides .ds-h      { left: 37.9%; top: 48.0%; width: 10.4%; text-align: center; font-size: 0.80em; }
+.reveal .slides .ds-eq     { left: 45.6%; top: 47.5%; width: 6.1%; text-align: center; }
+.reveal .slides .ds-r      { left: 49.0%; top: 48.3%; width: 10.4%; text-align: center; font-size: 0.80em; }
+
+.reveal .slides .ds-fig    { left: 62.7%; top: 15.4%; width: 35.6%; }
+.reveal .slides .ds-fig img { width: 100% !important; max-width: 100% !important; margin: 0 !important;
+                              padding: 0 !important; border: 0 !important; }
+.reveal .slides .ds-cap    { left: 77.8%; top: 22.4%; width: 19.5%; font-size: 0.8em; }
+.reveal .slides .ds-props  { color: #ff0000; left: 3.6%; top: 81.0%; width: 88%;
+                             font-size: 0.78em; line-height: 1.28; }
+
+/* ---- Slides 018-019: Boundary conditions -------------------------------- */
+.reveal .slides .bc-head   { left: 9.3%; top: 22.4%; width: 60.6%; }
+
+/* DIRICHLET BC / NEUMANN BC heading, centred over the middle column.
+   Deviation from the deck, which sets it black: blue to match the sub-heads. */
+.reveal .slides .bc-title  { color: #156082; font-weight: 700; left: 41.8%; top: 27.4%;
+                             width: 20%; text-align: center; }
+
+/* Green callout naming the prescribed quantity. accent6 at lumMod 75%.
+   The deck keeps it on one line and draws it last, over the figure's grey
+   margin -- hence nowrap and the z-index. */
+.reveal .slides .bc-hpres  { color: #3a7d22; font-weight: 600;
+                             white-space: nowrap; z-index: 2; }
+.reveal .slides .bc-dirichlet-slide .bc-hpres { left: 25.1%; top: 28.5%; width: 12.2%; }
+.reveal .slides .bc-neumann-slide   .bc-hpres { left: 1.2%;  top: 37.7%; width: 12.7%; }
+
+.reveal .slides .bc-dirichlet-slide .bc-fig-l { left: 8.5%;  top: 33.9%; width: 36.5%; }
+.reveal .slides .bc-dirichlet-slide .bc-fig-m { left: 41.1%; top: 37.7%; width: 20.4%; }
+.reveal .slides .bc-dirichlet-slide .bc-fig-r { left: 62.8%; top: 33.2%; width: 37.2%; }
+.reveal .slides .bc-neumann-slide   .bc-fig-l { left: 6.8%;  top: 33.2%; width: 37.6%; }
+.reveal .slides .bc-neumann-slide   .bc-fig-m { left: 43.4%; top: 43.4%; width: 16.3%; }
+.reveal .slides .bc-neumann-slide   .bc-fig-r { left: 60.2%; top: 34.1%; width: 37.1%; }
+
+/* Legend under the middle figure. "Internal value" wraps at the deck's own box
+   width; our web font is narrower than the deck's, so "Ghost Value" needs a
+   tighter box (6.5% vs the deck's 10.07%) to break onto two lines the same way. */
+.reveal .slides .bc-dirichlet-slide .bc-lab-ghost { left: 41.1%; top: 45.7%; width: 6.5%; }
+.reveal .slides .bc-dirichlet-slide .bc-lab-bc    { left: 50.0%; top: 46%; width: 4.6%; }
+.reveal .slides .bc-dirichlet-slide .bc-lab-int   { left: 56.1%; top: 45.7%; width: 7.8%; }
+.reveal .slides .bc-neumann-slide   .bc-lab-ghost { left: 51.9%; top: 36.3%; width: 6.5%; }
+.reveal .slides .bc-neumann-slide   .bc-lab-bc    { left: 55.6%; top: 52.8%; width: 4.6%; }
+.reveal .slides .bc-neumann-slide   .bc-lab-int   { left: 43.1%; top: 36.0%; width: 7.8%; }
+
+/* straightConnector1, accent1, 1.5pt, triangle tail; line centre at 67.92%. */
+.reveal .slides .bc-arrow  { left: 46.15%; top: 62.81%; width: 10.81%; }
+.reveal .slides .bc-arrow svg { display: block; width: 100%; height: auto; }
+
+.reveal .slides .bc-dirichlet-slide .bc-note { left: 45.0%; top: 68.3%; width: 15.8%; text-align: center; }
+.reveal .slides .bc-neumann-slide   .bc-note { left: 43.6%; top: 67.3%; width: 15.8%; text-align: center; }
+
+/* Section divider: the topics this module covers, laid out as on the deck's
+   agenda slide -- grey heading with the sub-topics indented beneath it. */
+.reveal .slides section:not(.quarto-title-block) > h1 { color: #808080; }
+.reveal .slides .section-topics { margin: 1.4em 0 0 6%; }
+.reveal .slides .section-topics p { margin: 0 0 0.6em 0; font-size: 1.05em; }
