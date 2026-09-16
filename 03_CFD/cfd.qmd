@@ -1,0 +1,28 @@
+---
+title: "Computational Fluid Dynamics"
+subtitle: "Summer School on Fire Dynamics Modeling"
+format: 
+  revealjs:
+    slide-number: "c"
+    css: custom.css
+    margin: 0.075
+    html-math-method: 
+      method: mathjax
+      url: https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+editor: visual
+author:
+  - name: "Lukas Arnold"
+    id: la
+    orcid: 0000-0002-5939-8995
+    email: l.arnold@fz-juelich.de
+    affiliation: 
+      - name: Forschungszentrum Jülich & <br>University of Wuppertal
+footer: "Computational Fluid Dynamics"
+
+---
+
+{{< include 01_cfd.qmd >}}
+
+{{< include 02_finite_difference_method.qmd >}}
+
+{{< include 03_scalar_transport.qmd >}}

@@ -1,0 +1,33 @@
+.reveal {
+  font-size: 28px;
+}
+
+.reveal .slides section {
+  padding: 5;  /* You can use px, %, em, etc. */
+  margin: 0 !important;
+}
+
+.reveal section div.center-h {
+	text-align: center;
+}
+/* Keep the slide title at the top and centre only the body vertically.
+   Use as `## Title {.center-body}`. */
+.reveal .slides section.center-body {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* PDF export: reveal forces display:block on slides with a more specific
+   selector, so repeat the flex rule at that specificity. */
+html.reveal-print .reveal .slides section.center-body {
+  display: flex !important;
+}
+
+.reveal .slides section.center-body > :nth-child(2) {
+  margin-top: auto;
+}
+
+.reveal .slides section.center-body > :last-child {
+  margin-bottom: auto;
+}
