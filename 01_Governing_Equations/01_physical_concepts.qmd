@@ -1,0 +1,73 @@
+# Physical Concepts
+
+## Introduction
+
+Fluid dynamics describes the movement of liquids or gases.
+
+The following aspects may (have to) be taken into account:
+
+- boundary conditions, e.g. walls
+- compressibility
+- turbulence
+- heat transfer
+- chemical reactions
+- multiple species and states of matter
+
+## Important quantities
+
+**density** $\rho$, $[\rho] = {\sf kg/m^3}$, scalar field
+
+**velocity** $\vec{v}=(u,v,w)$, $[\vec{v}] = {\sf m/s}$, vector field
+
+**vorticity** $\vec{\omega}=\nabla\times\vec{v}$, $[\vec{\omega}] = {\sf 1/s}$, vector field
+
+**momentum density** $\vec{u} = \rho\vec{v}$, $[\vec{u}]={\sf kg/(m^2\ s)}$, vector field
+
+**pressure** $p$, $[p] = {\sf Pa = kg/(m\ s^2)}$, scalar field
+
+**temperature** $T$, $[T] = {\sf K}$, scalar field
+
+**sensible enthalpy** $h_s=\int_{T_0}^T c_P(T')\ dT'$, $[h_s]={\sf J/kg=m^2/s^2}$, scalar field
+
+## Conservation laws and fluid equations
+
+The fluid dynamics is based on the following three physical conservation laws:
+
+- mass conservation
+- momentum conservation
+- energy conservation
+
+From these laws the basic fluid flow equations may be derived:
+
+- continuity equation
+- equation of motion
+- energy equation
+
+In general, beside these equations a closure, e.g. via an equation of state, is needed. In many cases the ideal gas law can be used.
+
+## Conservation of mass
+
+The conservation of mass predicts, that the total mass of a control volume does change only if there is a net flow (non balanced in and out flow) across the boundaries. Incompressible flows always have zero net flow.
+
+In fire simulations, multiple species have to be considered (e.g. oxygen, fuel and products). Their masses are individually conserved. However, they are strongly coupled to each other via source terms. E.g. during combustion, oxygen and fuel are consumed to produce products.
+
+## Conservation of momentum
+
+The momentum of a fluid element changes only due to:
+
+- momentum advection
+- gradients of pressure
+- diffusion and stresses, i.e. due to finite viscosity
+- external forces, e.g. gravitation, drag of water droplets
+
+In turbulent simulations, the diffusion is of special interest. This is the phenomenon that must be covered by turbulence models.
+
+## Conservation of energy
+
+Changes in energy of a control volume are due to:
+
+- energy advection
+- heat conduction
+- heating and cooling processes, e.g. radiation, friction, combustion
+
+In combination with the conservation of energy, an equation of state is needed to determine the gas temperature.

@@ -1,0 +1,16 @@
+# Summary
+
+## Summary
+
+General remarks:
+
+- PDEs are the mathematical description of macroscopic flow quantities
+- boundary conditions are as important as the equations themselves
+- fire simulations are about describing the source terms and boundary conditions
+
+Next steps:
+
+- numerical solution of the PDEs -- computational fluid dynamics (CFD)
+- complex geometries, pressure solver and turbulent flows
+- source terms: combustion and radiation
+- solid phase and pyrolysis

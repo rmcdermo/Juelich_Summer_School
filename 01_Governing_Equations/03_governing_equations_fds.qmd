@@ -1,0 +1,54 @@
+# Governing Equations in FDS
+
+## Conservation of mass
+
+The transport of the species $\alpha$ is given by the change of its mass fraction $Z_\alpha$
+
+$$
+\partial_t(\rho Z_\alpha) + \underbrace{\nabla\cdot\left(\rho Z_\alpha \vec{v}\right)}_{\text{advection}} = \underbrace{\nabla\cdot \left(\rho D_\alpha \nabla Z_\alpha\right)}_{\text{diffusion}} + \underbrace{\dot{m}'''_\alpha}_{\text{generation, reactions}} + \underbrace{\dot{m}'''_{b,\alpha}}_{\text{generation, particles}}
+$$
+
+with the following constraints
+
+$$
+\begin{aligned}
+\sum Z_\alpha &= 1 \quad \text{(sum of all mass fractions)} \\
+\sum \dot{m}'''_\alpha &= 0 \quad \text{(sum of all reaction productions)} \\
+\sum \rho D_\alpha \nabla Z_\alpha &= 0 \quad \text{(sum of all diffusion terms)}
+\end{aligned}
+$$
+
+The total density $\rho$ is described with
+
+$$
+\partial_t \rho + \nabla \cdot (\rho \vec{v}) = \dot{m}'''_b = \sum \dot{m}'''_{b, \alpha}
+$$
+
+## Conservation of momentum {.center-body}
+
+The momentum equation is given by
+
+$$
+\partial_t (\rho\vec{v}) + \underbrace{\nabla\cdot(\rho\vec{v}\vec{v})}_{\text{convection}} = \underbrace{-\nabla p}_{\text{pressure}} + \underbrace{\rho\vec{g}}_{\text{gravity}} + \underbrace{\vec{f}_b}_{\text{particle drag}} + \underbrace{\nabla\cdot\tau_{ij}}_{\text{viscosity}}
+$$
+
+## Conservation of energy {.center-body}
+
+The energy equation is as follows
+
+$$
+\partial_t (\rho h_s) + \underbrace{\nabla\cdot(\rho h_s\vec{v})}_{\text{advection}} = \underbrace{\frac{D\bar{p}}{Dt}}_{\text{pressure work}} + \underbrace{\dot{q}'''}_{\text{The Fire!}} + \underbrace{\nabla\cdot\vec{q}''}_{\text{heat conduction}}
+$$
+
+## Final set of fluid equations
+
+$$
+\begin{aligned}
+\partial_t \rho + \nabla \cdot (\rho \vec{v}) &= \dot{m}'''_b \\
+\partial_t(\rho Z_\alpha) + \nabla\cdot\left(\rho Z_\alpha \vec{v}\right) &= \nabla\cdot \left(\rho D_\alpha \nabla Z_\alpha\right) + \dot{m}'''_\alpha + \dot{m}'''_{b,\alpha} \\
+\partial_t (\rho\vec{v}) + \nabla\cdot(\rho\vec{v}\vec{v}) &= -\nabla p + \rho\vec{g} + \vec{f}_b + \nabla\cdot\tau_{ij} \\
+\partial_t (\rho h_s) + \nabla\cdot(\rho h_s\vec{v}) &= \frac{D\bar{p}}{Dt} + \dot{q}''' + \nabla\cdot\vec{q}''
+\end{aligned}
+$$
+
+Plus equation of state closure as well as initial and boundary conditions.

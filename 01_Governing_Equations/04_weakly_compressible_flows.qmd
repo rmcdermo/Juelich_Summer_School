@@ -1,0 +1,147 @@
+# Weakly Compressible Flows
+
+## Speed of sound {.smaller}
+
+In fluids and solids, information (flow changes, perturbations) propagates with a finite speed: the speed of sound.
+
+Sound waves are longitudinal compression waves. Typical travel speeds are 343 m/s in air, 1484 m/s in water and 5120 m/s in steel.
+
+In general the speed of sound $c$ in an ideal gas is given by:
+
+$$
+c = \sqrt{\frac{\gamma k T}{m}}
+$$
+
+where $\gamma$ is the heat capacity ratio, $k$ is the Boltzmann constant, $T$ the gas temperature, and $m$ the mass of a single molecule.
+
+In general the speed of sound depends on the temperature. For dry air, it takes the following dependency:
+
+$$
+c_{\text{air}} = \left(331.3 + 0.606\cdot \theta\right)\ {\sf m/s}
+$$
+
+where $\theta$ is the air temperature in $^\circ\text{C}$.
+
+## Compressibility {.smaller}
+
+Fluctuations in the pressure are balanced on a scale, which is determined by the speed of sound.
+
+Depending on the relation of the speed of sound and reference flow velocity $v_{\text{ref}}$, this process can lead to compressible or incompressible flows.
+
+For the characterisation, the Mach number can be used:
+
+$$
+M = \frac{v_{\text{ref}}}{c}
+$$
+
+- (fully) incompressible $M=0$
+- weakly compressible $0 < M \ll 1$
+- compressible flow $M \gtrsim 0.3$
+
+In common compartment fires:
+
+$$
+v_{\text{ref}} \approx 10\ {\sf m/s} \quad \Rightarrow \quad M\approx 0.03
+$$
+
+## Low-Mach number assumption
+
+Key observation for Low-Mach limit $M\rightarrow 0$
+
+- flow mainly driven by slower convection terms
+- pressure and density are more or less decoupled (no compressibility effects anymore)
+
+Objectives to simplify the modelled system
+
+- decouple sound waves from equations
+- focus on quasi-incompressible, variable density flow
+- get rid of the dependence of CFL-condition on speed of sound
+
+## Pressure decomposition
+
+Pressure is decomposed into two parts with different physical meaning:
+
+$$
+p(\vec{x}, t) = \bar{p}(z,t) + \tilde{p}(\vec{x}, t)
+$$
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.center-h}
+**thermodynamic** background pressure
+
+$$
+\bar{p}(z,t)
+$$
+
+Large scale fluctuations
+:::
+:::
+
+::: {.column width="50%"}
+::: {.center-h}
+**hydrodynamic** perturbation pressure
+
+$$
+\tilde{p}(\vec{x}, t)
+$$
+
+Small scale fluctuations
+:::
+:::
+
+::::
+
+<!--
+## Momentum equation
+
+The pressure decomposition leads to the following pressure gradient with $M\rightarrow 0$
+
+$$
+\nabla p(\vec{x}, t) = \nabla \bar{p}(z,t) + \nabla\tilde{p}(\vec{x}, t)=\rho_0\vec{g}+ \nabla\tilde{p}(\vec{x}, t)
+$$
+
+- hydrostatic pressure gradient: $\rho_0\vec{g}$
+- balancing pressure gradient, major driver: $\nabla\tilde{p}(\vec{x}, t)$
+
+Rearranging of the momentum equation leads to
+
+$$
+\partial_t (\rho\vec{v}) + \nabla\cdot(\rho\vec{v}\vec{v}) = -\nabla\tilde{ p} +(\rho-\rho_0)\vec{g} + \vec{f}_b+\nabla\cdot\tau_{ij}
+$$
+-->
+
+## Energy equation
+
+In general, the internal energy is given by
+
+$$
+\rho e = \frac{p}{\gamma - 1} + \frac{1}{2}\rho\vec{v}^2 \quad \text{and} \quad p=\frac{\rho T R}{\overline{W}}
+$$
+
+With $M\rightarrow 0$:
+
+<!--
+- kinetic energy vanishes: $\frac{1}{2}\rho\vec{v}^2 \rightarrow 0$
+- hydrodynamic pressure can be neglected, thermodynamic pressure is the driver : $p=\bar{p}$
+-->
+
+- energy equation is written in terms of sensible enthalpy
+- internal energy and enthalpy are related only via background pressure:
+
+$$
+h = e + \bar{p}/\rho \quad \text{and} \quad \bar{p}=\frac{\rho T R}{\overline{W}}
+$$
+
+<!--
+## Summary of the simplified Low-Mach number equations
+
+Limit of Navier-Stokes equations for $M\rightarrow 0$ leads to
+
+- new set of equations with focus on advective transport of smoke, heat and momentum
+- momentum and energy equations are decoupled
+- energy equation defines a divergence constraint for the velocity field
+- divergence constraint defines elliptic equation for the pressure
+- if divergence constraint is fulfilled, sensible enthalpy equation is satisfied by construction
+-->
