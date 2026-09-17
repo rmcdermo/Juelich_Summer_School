@@ -22,3 +22,5 @@ footer: "FDS Fluid Solver: Pressure"
 ---
 
 {{< include 01_time_integration_basics.qmd >}}
+
+{{< include 02_internal_boundaries.qmd >}}

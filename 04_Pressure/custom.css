@@ -62,18 +62,27 @@
   text-align: left !important;
 }
 
+/* reveal.js caps section images at max-width:95% AND max-height:95%. Every box
+   here already carries the source slide's own geometry, so those caps silently
+   shrink every figure to 95% of the deck's size -- and any label positioned
+   against the deck's coordinates then misses the artwork. Override both. */
 .reveal .slides .slide-layout img,
 .reveal .slides .slide-layout video {
   display: block;
   height: auto;
+  max-height: 100%;
+  max-width: 100%;
   width: 100%;
 }
 
 /* Recurring roles across the module. */
 /* Deliberate deviation from the deck: the source sub-heads are black, but the
    blue reads better on the web and the user prefers it. Bullet kept as in the
-   source. */
-.reveal .slides .sub-head {
+   source. .sub-head2 is the second heading on a slide that has two -- the
+   Advantages/Disadvantages and Advective/Diffusive pairs -- and takes the same
+   styling; only its position differs, which the per-slide rules set. */
+.reveal .slides .sub-head,
+.reveal .slides .sub-head2 {
   color: #156082;
   font-size: 1.15em;
   font-weight: 700;
@@ -131,8 +140,10 @@
    that difference to make the bottom edges meet. Captions sit just under them. */
 .reveal .slides .m-fig-l { left: 1.4%; top: 27.2%; width: 46.5%; }
 .reveal .slides .m-fig-r { left: 51.0%; top: 24.0%; width: 46.5%; }
-.reveal .slides .m-cap-l { left: 6.0%; top: 84.8%; width: 36%; }
-.reveal .slides .m-cap-r { left: 55.6%; top: 84.8%; width: 36%; }
+/* Below the videos, which render to 86.8% / 87.0% -- at the deck's 84.8% the
+   captions were overlapped by the players' control bars. */
+.reveal .slides .m-cap-l { left: 6.0%; top: 86.6%; width: 36%; }
+.reveal .slides .m-cap-r { left: 55.6%; top: 86.6%; width: 36%; }
 
 /* ---- Slide 005: Low Mach flows ------------------------------------------ */
 .reveal .slides .lm-mach  { left: 36.9%; top: 22.0%; width: 24%; }
@@ -403,8 +414,7 @@
 .reveal .slides .ds-r      { left: 49.0%; top: 48.3%; width: 10.4%; text-align: center; font-size: 0.80em; }
 
 .reveal .slides .ds-fig    { left: 62.7%; top: 15.4%; width: 35.6%; }
-.reveal .slides .ds-fig img { width: 100% !important; max-width: 100% !important; margin: 0 !important;
-                              padding: 0 !important; border: 0 !important; }
+.reveal .slides .ds-fig img { margin: 0 !important; padding: 0 !important; border: 0 !important; }
 .reveal .slides .ds-cap    { left: 77.8%; top: 22.4%; width: 19.5%; font-size: 0.8em; }
 .reveal .slides .ds-props  { color: #ff0000; left: 3.6%; top: 81.0%; width: 88%;
                              font-size: 0.78em; line-height: 1.28; }
@@ -454,3 +464,507 @@
 .reveal .slides section:not(.quarto-title-block) > h1 { color: #808080; }
 .reveal .slides .section-topics { margin: 1.4em 0 0 6%; }
 .reveal .slides .section-topics p { margin: 0 0 0.6em 0; font-size: 1.05em; }
+
+/* ==================================================================
+   Module II -- Dealing with internal boundaries (source slides 20-50).
+   Every box carries the source slide's own L/T/W in percentages of the
+   1600x900 canvas. Rules are scoped by slide class so the short names
+   (body, fig, note) can repeat from slide to slide without colliding.
+   ================================================================== */
+
+/* Some deck pictures are stretched into a frame whose aspect differs from
+   the file's own -- a connector used as a blip fill, a swatch, a sketch
+   whose labels are placed against the stretched art. Those boxes carry
+   .fit plus the deck's own height, and the picture fills the frame rather
+   than keeping its aspect. Quarto wraps the image in a <p>, so the height
+   has to be handed down through it. */
+.reveal .slides .slide-layout .fit,
+.reveal .slides .slide-layout .fit > p { height: 100%; line-height: 0; margin: 0; }
+.reveal .slides .slide-layout .fit img { height: 100%; margin: 0; object-fit: fill; }
+
+/* Redrawn autoshape diagrams include the deck's opaque masking rectangles,
+   so they must sit behind every label regardless of document order. */
+.reveal .slides .slide-layout > div { z-index: 1; }
+.reveal .slides .slide-layout > div.behind { z-index: 0; }
+
+/* Footnote/citation blocks. The deck runs these to the very bottom edge;
+   this deck has a footer there, so they are set tight and lifted clear. */
+.reveal .slides .slide-layout .refs { line-height: 1.3; }
+
+/* Every table in this module uses the same pptx table style: an accent1
+   header band with white bold text, body rows banded in two greys, and
+   Courier throughout -- the deck sets parameter names in the same face as
+   the prose around them rather than colouring them. Colours are the deck's
+   own, sampled from its render: #156082 header, #CCD2D8 / #E7EAED bands.
+   Quarto's own table rules (thin lines, no fills) are replaced wholesale. */
+.reveal .slides .slide-layout .tbl table { border-collapse: collapse; width: 100%; }
+.reveal .slides .slide-layout .tbl th,
+.reveal .slides .slide-layout .tbl td { border: none; padding: 0.3em 0.55em; }
+/* Cells are centred unless a slide sets per-column alignment. Only the
+   &PRES parameter table is Courier in the deck; the others use the body
+   face, so monospace is opt-in per block rather than the default. */
+.reveal .slides .slide-layout .tbl td { text-align: center; }
+.reveal .slides .slide-layout .tbl th { background: #156082; color: #fff;
+                                        font-weight: 700; text-align: center; }
+.reveal .slides .slide-layout .tbl tbody tr:nth-child(odd)  { background: #CCD2D8; }
+.reveal .slides .slide-layout .tbl tbody tr:nth-child(even) { background: #E7EAED; }
+.reveal .slides .slide-layout .tbl td { color: #000; vertical-align: top; }
+/* The deck separates columns with a white hairline, about 1.5px on this
+   canvas. Set wider here so it still reads when projected. */
+.reveal .slides .slide-layout .tbl th + th,
+.reveal .slides .slide-layout .tbl td + td { border-left: 3px solid #fff; }
+.reveal .slides .slide-layout .tbl code { background: none; color: inherit;
+                                          font-size: inherit; }
+
+/* --- ibm-intro-slide --- */
+.reveal .slides .ibm-intro-slide .sub-head { left: 2.3%; top: 15.8%; width: 91%; }
+.reveal .slides .ibm-intro-slide .body { left: 2.4%; top: 21.5%; width: 91%; }
+.reveal .slides .ibm-intro-slide .force { left: 1.9%; top: 40.6%; width: 61%; }
+.reveal .slides .ibm-intro-slide .force2 { left: 1.9%; top: 57.7%; width: 61%; }
+.reveal .slides .ibm-intro-slide .fig { left: 66.4%; top: 31.3%; width: 31.2%; height: 51.6%; }
+.reveal .slides .ibm-intro-slide .art { left: 66.4%; top: 31.3%; width: 31.2%; height: 51.6%; }
+.reveal .slides .ibm-intro-slide .lab-sharp { left: 90.5%; top: 61.2%; width: 5.2%; font-size: 0.78em; }
+.reveal .slides .ibm-intro-slide .lab-diffuse { left: 69.6%; top: 61.6%; width: 7.2%; font-size: 0.78em; }
+.reveal .slides .ibm-intro-slide .sym-omega { left: 91.8%; top: 33.1%; width: 3.7%; }
+.reveal .slides .ibm-intro-slide .sym-f { left: 89.6%; top: 56.1%; width: 3.7%; }
+.reveal .slides .ibm-intro-slide .sym-b { left: 86%; top: 55%; width: 3.7%; }
+.reveal .slides .ibm-intro-slide .sym-fb { left: 74.1%; top: 55.8%; width: 3.7%; }
+.reveal .slides .ibm-intro-slide .refs { left: 2.4%; top: 83%; width: 82.7%; font-size: 0.46em; line-height: 1.15; }
+
+/* --- ibm-obst-slide --- */
+.reveal .slides .ibm-obst-slide .body { left: 2.4%; top: 15.8%; width: 90.8%; }
+.reveal .slides .ibm-obst-slide .obst { left: 52.5%; top: 16.4%; width: 47.5%; font-size: 0.95em; }
+.reveal .slides .ibm-obst-slide .eq1 { left: 8%; top: 30.8%; width: 34.8%; }
+.reveal .slides .ibm-obst-slide .lab-body { left: 44.3%; top: 32.7%; width: 14.9%; }
+.reveal .slides .ibm-obst-slide .iter { left: 4.4%; top: 43.2%; width: 49.4%; }
+.reveal .slides .ibm-obst-slide .eq2 { left: 2.2%; top: 49.2%; width: 44%; }
+.reveal .slides .ibm-obst-slide .art { left: 59.22%; top: 33.78%; width: 40.1%; height: 66.22%; }
+.reveal .slides .ibm-obst-slide .lg-marks { left: 62.31%; top: 50.38%; width: 1.76%; height: 17.31%; }
+.reveal .slides .ibm-obst-slide .lg-h { left: 64.2%; top: 49.76%; width: 22.8%; font-size: 0.62em; }
+.reveal .slides .ibm-obst-slide .lg-ibm { left: 64.2%; top: 55.18%; width: 22.8%; font-size: 0.62em; }
+.reveal .slides .ibm-obst-slide .lg-wm { left: 64.2%; top: 60.12%; width: 22.8%; font-size: 0.62em; }
+.reveal .slides .ibm-obst-slide .lg-tv { left: 64.2%; top: 64.55%; width: 22.8%; font-size: 0.62em; }
+.reveal .slides .ibm-obst-slide .sym-u { left: 88.2%; top: 60.6%; width: 3.4%; }
+.reveal .slides .ibm-obst-slide .sym-p { left: 86.1%; top: 60.9%; width: 3.4%; color: #ff0000; }
+.reveal .slides .ibm-obst-slide .eqpoisson { left: 7.94%; top: 64.5%; width: 53.9%; }
+.reveal .slides .ibm-obst-slide .eq3 { left: 8.15%; top: 79.5%; width: 47.2%; }
+.reveal .slides .ibm-obst-slide .conv { left: 51.8%; top: 82%; width: 47.2%; font-size: 0.88em; }
+
+/* --- ib-unstructured-bc-slide --- */
+.reveal .slides .ib-unstructured-bc-slide .body { left: 2.3%; top: 20%; width: 91%; }
+.reveal .slides .ib-unstructured-bc-slide .li1 { left: 5.8%; top: 36.1%; width: 45.4%; color: #ff0000; }
+.reveal .slides .ib-unstructured-bc-slide .eqn1 { left: 49.8%; top: 33.6%; width: 8.4%; }
+.reveal .slides .ib-unstructured-bc-slide .li2 { left: 5.8%; top: 47.5%; width: 45.4%; color: #ff0000; }
+.reveal .slides .ib-unstructured-bc-slide .eqn2 { left: 30%; top: 44.5%; width: 34.8%; }
+.reveal .slides .ib-unstructured-bc-slide .li3 { left: 5.9%; top: 59.8%; width: 45.4%; color: #ff0000; }
+.reveal .slides .ib-unstructured-bc-slide .eqn3 { left: 15.5%; top: 65.8%; width: 47.2%; }
+.reveal .slides .ib-unstructured-bc-slide .strike { left: 42.02%; top: 62.8%; width: 4.76%; height: 13.2%; }
+.reveal .slides .ib-unstructured-bc-slide .zero { left: 46.4%; top: 57.5%; width: 8.37%; color: #ff0000; }
+.reveal .slides .ib-unstructured-bc-slide .eqn4 { left: 15.6%; top: 77.5%; width: 47.2%; }
+.reveal .slides .ib-unstructured-bc-slide .art { left: 54.61%; top: 23.34%; width: 45.39%; height: 71.66%; }
+.reveal .slides .ib-unstructured-bc-slide .lg-marks { left: 66.58%; top: 55.12%; width: 1.76%; height: 17.31%; }
+.reveal .slides .ib-unstructured-bc-slide .lg-h { left: 69.2%; top: 54.47%; width: 22.8%; font-size: 0.62em; }
+.reveal .slides .ib-unstructured-bc-slide .lg-nv { left: 69.2%; top: 59.89%; width: 22.8%; font-size: 0.62em; }
+.reveal .slides .ib-unstructured-bc-slide .lg-wm { left: 69.2%; top: 64.82%; width: 22.8%; font-size: 0.62em; }
+.reveal .slides .ib-unstructured-bc-slide .lg-tv { left: 69.2%; top: 69.75%; width: 22.8%; font-size: 0.62em; }
+.reveal .slides .ib-unstructured-bc-slide .eqn5 { left: 82.2%; top: 50.1%; width: 8%; font-size: 0.7em; }
+.reveal .slides .ib-unstructured-bc-slide .note { left: 53.8%; top: 78.6%; width: 45.4%; font-size: 0.92em; color: #ff0000; }
+
+/* --- fft-intro-slide --- */
+.reveal .slides .fft-intro-slide .sub-head { left: 3.4%; top: 17.5%; width: 65.3%; }
+.reveal .slides .fft-intro-slide .body { left: 2.3%; top: 22.5%; width: 91%; }
+.reveal .slides .fft-intro-slide .fig { left: 14.75%; top: 32%; width: 70.5%; }
+
+/* --- fft-eigen-slide --- */
+.reveal .slides .fft-eigen-slide .sub-head { left: 3.4%; top: 17.5%; width: 65.3%; }
+.reveal .slides .fft-eigen-slide .body { left: 2.3%; top: 26.4%; width: 91%; }
+.reveal .slides .fft-eigen-slide .eq1 { left: 57%; top: 30.9%; width: 32.7%; font-size: 1.3em; }
+.reveal .slides .fft-eigen-slide .body2 { left: 2.3%; top: 39.6%; width: 91%; }
+.reveal .slides .fft-eigen-slide .eq2 { left: 11.6%; top: 49.3%; width: 32.7%; }
+.reveal .slides .fft-eigen-slide .lab1 { left: 44.3%; top: 51.7%; width: 22%; color: #ff0000; }
+.reveal .slides .fft-eigen-slide .eq3 { left: 13.3%; top: 62.3%; width: 18.3%; }
+.reveal .slides .fft-eigen-slide .lab2 { left: 44.3%; top: 62.6%; width: 35.6%; color: #ff0000; }
+.reveal .slides .fft-eigen-slide .eq4 { left: 12.6%; top: 73.7%; width: 23.4%; }
+.reveal .slides .fft-eigen-slide .lab3 { left: 44.3%; top: 74%; width: 38.2%; color: #ff0000; }
+.reveal .slides .fft-eigen-slide .ask { left: 12.6%; top: 85.5%; width: 74.6%; color: #ff0000; }
+
+/* --- fft-eigendecomp-slide --- */
+.reveal .slides .fft-eigendecomp-slide .sub-head { left: 3.4%; top: 17.5%; width: 65.3%; }
+.reveal .slides .fft-eigendecomp-slide .body { left: 3.4%; top: 25.9%; width: 40%; }
+.reveal .slides .fft-eigendecomp-slide .eqQ { left: 43.2%; top: 25.1%; width: 25%; }
+.reveal .slides .fft-eigendecomp-slide .withprop { left: 68.5%; top: 25.9%; width: 10%; }
+.reveal .slides .fft-eigendecomp-slide .eqOrth { left: 81%; top: 25.3%; width: 11.5%; }
+.reveal .slides .fft-eigendecomp-slide .recast { left: 3.4%; top: 35.1%; width: 21.2%; }
+.reveal .slides .fft-eigendecomp-slide .eqBig { left: 3.1%; top: 43.2%; width: 92.5%; font-size: 1.4em; }
+.reveal .slides .fft-eigendecomp-slide .aq-a { left: 10.44%; top: 64.2%; width: 6%; font-size: 1.3em; text-align: center; color: #ff0000; }
+.reveal .slides .fft-eigendecomp-slide .aq-a mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .fft-eigendecomp-slide .aq-q1 { left: 31.55%; top: 64.2%; width: 6%; font-size: 1.3em; text-align: center; color: #ff0000; }
+.reveal .slides .fft-eigendecomp-slide .aq-q1 mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .fft-eigendecomp-slide .aq-eq { left: 43.69%; top: 64.2%; width: 6%; font-size: 1.3em; text-align: center; color: #ff0000; }
+.reveal .slides .fft-eigendecomp-slide .aq-eq mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .fft-eigendecomp-slide .aq-q2 { left: 55.82%; top: 64.2%; width: 6%; font-size: 1.3em; text-align: center; color: #ff0000; }
+.reveal .slides .fft-eigendecomp-slide .aq-q2 mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .fft-eigendecomp-slide .aq-l { left: 77.38%; top: 64.2%; width: 6%; font-size: 1.3em; text-align: center; color: #ff0000; }
+.reveal .slides .fft-eigendecomp-slide .aq-l mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .fft-eigendecomp-slide .orlab { left: 7.4%; top: 82.05%; width: 4.1%; }
+.reveal .slides .fft-eigendecomp-slide .eqFact { left: 11.5%; top: 81.75%; width: 21.2%; color: #ff0000; }
+.reveal .slides .fft-eigendecomp-slide .wherelab { left: 35.1%; top: 82.05%; width: 8%; }
+.reveal .slides .fft-eigendecomp-slide .eqLam { left: 46.7%; top: 76.72%; width: 34.7%; font-size: 1.1em; }
+.reveal .slides .fft-eigendecomp-slide .lamlab { left: 74.5%; top: 82.05%; width: 23.8%; color: #ff0000; }
+
+/* --- fft-transform-slide --- */
+.reveal .slides .fft-transform-slide .sub-head { left: 3.4%; top: 17.5%; width: 65.3%; }
+.reveal .slides .fft-transform-slide .back { left: 3.4%; top: 25.9%; width: 27.5%; font-size: 1.19em; }
+.reveal .slides .fft-transform-slide .eqAH { left: 30.8%; top: 24.1%; width: 32.7%; font-size: 1.42em; }
+.reveal .slides .fft-transform-slide .recast { left: 3.4%; top: 35.1%; width: 19.6%; font-size: 1.07em; }
+.reveal .slides .fft-transform-slide .eqAQ { left: 8.26%; top: 41.17%; width: 21.24%; font-size: 1.42em; }
+.reveal .slides .fft-transform-slide .eqQLQ { left: 32.83%; top: 40.91%; width: 21.24%; font-size: 1.42em; }
+.reveal .slides .fft-transform-slide .wherelab { left: 55.73%; top: 42.16%; width: 19.64%; font-size: 1.19em; }
+.reveal .slides .fft-transform-slide .eqLam { left: 65.37%; top: 35.14%; width: 34.74%; font-size: 1.42em; }
+.reveal .slides .fft-transform-slide .orlab { left: 27.36%; top: 53.01%; width: 4.07%; font-size: 1.19em; }
+.reveal .slides .fft-transform-slide .eqLQ { left: 34.8%; top: 51.56%; width: 22.9%; font-size: 1.42em; }
+.reveal .slides .fft-transform-slide .acts { left: 5.91%; top: 65.71%; width: 34%; font-size: 1.19em; }
+.reveal .slides .fft-transform-slide .eqHhat { left: 39%; top: 66.09%; width: 14%; font-size: 1.1em; }
+.reveal .slides .fft-transform-slide .comma { left: 50.5%; top: 66.14%; width: 2%; font-size: 1.19em; }
+.reveal .slides .fft-transform-slide .eqRhat { left: 53.4%; top: 66.09%; width: 14%; font-size: 1.1em; }
+.reveal .slides .fft-transform-slide .modal { left: 66.78%; top: 65.96%; width: 31.72%; font-size: 1.02em; color: #ff0000; }
+.reveal .slides .fft-transform-slide .inlab { left: 6.15%; top: 80.57%; width: 25.48%; font-size: 1.19em; color: #ff0000; }
+.reveal .slides .fft-transform-slide .eqDiag { left: 35.99%; top: 78.55%; width: 13%; font-size: 1.42em; text-align: center; border: 2px solid #ff0000; padding: 0.15em 0.4em; }
+.reveal .slides .fft-transform-slide .eqDiag mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .fft-transform-slide .cheap { left: 61.52%; top: 79.53%; width: 38.48%; font-size: 1.19em; color: #ff0000; }
+
+/* --- fft-procedure-slide --- */
+.reveal .slides .fft-procedure-slide .sub-head { left: 3.4%; top: 17.5%; width: 65.3%; }
+.reveal .slides .fft-procedure-slide .body { left: 3.4%; top: 25.9%; width: 40%; }
+.reveal .slides .fft-procedure-slide .step1 { left: 25.58%; top: 40.09%; width: 12%; }
+.reveal .slides .fft-procedure-slide .eq1 { left: 37%; top: 39.02%; width: 14%; font-size: 1.2em; }
+.reveal .slides .fft-procedure-slide .cost1 { left: 49.5%; top: 39.36%; width: 32%; }
+.reveal .slides .fft-procedure-slide .step2 { left: 25.58%; top: 47.2%; width: 12%; }
+.reveal .slides .fft-procedure-slide .eq2 { left: 37%; top: 46.49%; width: 14%; font-size: 1.2em; }
+.reveal .slides .fft-procedure-slide .cost2 { left: 49.5%; top: 46.31%; width: 32%; }
+.reveal .slides .fft-procedure-slide .step3 { left: 25.58%; top: 54.99%; width: 12%; }
+.reveal .slides .fft-procedure-slide .eq3 { left: 37%; top: 53.92%; width: 14%; font-size: 1.2em; }
+.reveal .slides .fft-procedure-slide .cost3 { left: 49.5%; top: 54.26%; width: 32%; }
+.reveal .slides .fft-procedure-slide .need { left: 19.83%; top: 66.85%; width: 65.98%; font-size: 1.31em; color: #ff0000; }
+.reveal .slides .fft-procedure-slide .note { left: 5.57%; top: 82.13%; width: 88.85%; font-size: 1.3em; }
+
+/* --- fft-cost-slide --- */
+.reveal .slides .fft-cost-slide .sub-head { left: 3.4%; top: 17.5%; width: 65.3%; }
+.reveal .slides .fft-cost-slide .body { left: 4.73%; top: 32.27%; width: 88.85%; }
+.reveal .slides .fft-cost-slide .body3 { left: 4.73%; top: 50.07%; width: 88.85%; }
+.reveal .slides .fft-cost-slide .c2d { left: 12.73%; top: 57.98%; width: 87%; font-size: 0.92em; }
+.reveal .slides .fft-cost-slide .c3d { left: 12.73%; top: 63.75%; width: 87%; font-size: 0.92em; }
+.reveal .slides .fft-cost-slide .punch { left: 20%; top: 74%; width: 60%; font-size: 1.15em; text-align: center; color: #ff0000; }
+.reveal .slides .fft-cost-slide .punch mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .fft-cost-slide .refs { left: 4.73%; top: 91%; width: 67.07%; font-size: 0.5em; }
+
+/* --- ex1-input-slide --- */
+.reveal .slides .ex1-input-slide .file { left: 3.36%; top: 18.52%; width: 45%; font-size: 1.12em; }
+.reveal .slides .ex1-input-slide .step { left: 3.36%; top: 26.25%; width: 39.28%; }
+.reveal .slides .ex1-input-slide .sub-head { left: 3.36%; top: 35.01%; width: 31.77%; }
+.reveal .slides .ex1-input-slide .body { left: 3.36%; top: 45.68%; width: 53.11%; font-size: 1.12em; }
+.reveal .slides .ex1-input-slide .body li, .reveal .slides .ex1-input-slide .body > p { margin-bottom: 0.75em; }
+.reveal .slides .ex1-input-slide .body li::marker { color: #ff0000; }
+.reveal .slides .ex1-input-slide .fig { left: 57.36%; top: 19.51%; width: 40.75%; }
+
+/* --- ex1-default-slide --- */
+.reveal .slides .ex1-default-slide .file { left: 3.4%; top: 18.5%; width: 39.3%; font-size: 1.12em; }
+.reveal .slides .ex1-default-slide .step { left: 3.4%; top: 26.3%; width: 42.2%; }
+.reveal .slides .ex1-default-slide .body { left: 3.4%; top: 39.4%; width: 53.1%; font-size: 1.12em; }
+.reveal .slides .ex1-default-slide .body li, .reveal .slides .ex1-default-slide .body > p { margin-bottom: 0.75em; }
+.reveal .slides .ex1-default-slide .body li::marker { color: #ff0000; }
+.reveal .slides .ex1-default-slide .look { left: 3.4%; top: 66.2%; width: 47.5%; font-size: 0.9em; }
+.reveal .slides .ex1-default-slide .look li, .reveal .slides .ex1-default-slide .look > p { margin-bottom: 0.35em; }
+.reveal .slides .ex1-default-slide .look li::marker { color: #ff0000; }
+.reveal .slides .ex1-default-slide .look ol { list-style-type: lower-alpha; }
+.reveal .slides .ex1-default-slide .fig { left: 52%; top: 14.6%; width: 46.1%; }
+.reveal .slides .ex1-default-slide .lab-back { left: 65.46%; top: 21.56%; width: 20.98%; font-size: 1.19em; text-align: center; }
+.reveal .slides .ex1-default-slide .lab-back mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ex1-default-slide .arrow-back { left: 77.13%; top: 31.72%; width: 3.24%; }
+.reveal .slides .ex1-default-slide .lab-obst { left: 69.65%; top: 67.07%; width: 20.98%; font-size: 1.19em; text-align: center; }
+.reveal .slides .ex1-default-slide .lab-obst mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ex1-default-slide .arrow-obst { left: 70.91%; top: 60.76%; width: 2.02%; }
+
+/* --- ex1-stats-slide --- */
+.reveal .slides .ex1-stats-slide .sub-head { left: 3.4%; top: 16.3%; width: 48%; }
+.reveal .slides .ex1-stats-slide .fig { left: 16%; top: 23.6%; width: 76.3%; }
+.reveal .slides .ex1-stats-slide .ring-iter { left: 40.76%; top: 33.65%; width: 4.24%; }
+.reveal .slides .ex1-stats-slide .ring-err { left: 45.4%; top: 37.89%; width: 12.65%; }
+.reveal .slides .ex1-stats-slide .ring-idx { left: 71.32%; top: 37.89%; width: 12.7%; }
+.reveal .slides .ex1-stats-slide .arr-iter { left: 29.22%; top: 39.63%; width: 12.06%; }
+.reveal .slides .ex1-stats-slide .arr-err { left: 50.76%; top: 43.94%; width: 0.96%; }
+.reveal .slides .ex1-stats-slide .arr-idx { left: 78.23%; top: 43.94%; width: 0.7%; }
+.reveal .slides .ex1-stats-slide .lab-iter { left: 16%; top: 49.1%; width: 21.45%; font-size: 1.19em; text-align: center; color: #215F9A; }
+.reveal .slides .ex1-stats-slide .lab-iter mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ex1-stats-slide .lab-err { left: 40.82%; top: 49.1%; width: 21.45%; font-size: 1.19em; text-align: center; color: #215F9A; }
+.reveal .slides .ex1-stats-slide .lab-err mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ex1-stats-slide .lab-idx { left: 63.48%; top: 49.45%; width: 28.83%; font-size: 1.19em; text-align: center; color: #215F9A; }
+.reveal .slides .ex1-stats-slide .lab-idx mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ex1-stats-slide .body { left: 2%; top: 67.2%; width: 81.6%; }
+
+/* --- ex1-tol-slide --- */
+.reveal .slides .ex1-tol-slide .file { left: 3.4%; top: 18.5%; width: 39.3%; font-size: 1.12em; }
+.reveal .slides .ex1-tol-slide .step { left: 3.4%; top: 26.3%; width: 42.2%; }
+.reveal .slides .ex1-tol-slide .code { left: 3.4%; top: 34.4%; width: 71.1%; font-size: 0.8em; }
+.reveal .slides .ex1-tol-slide .redo { left: 3.4%; top: 38.2%; width: 71.1%; font-size: 0.8em; }
+.reveal .slides .ex1-tol-slide .ask { left: 2.7%; top: 41.7%; width: 81.6%; }
+.reveal .slides .ex1-tol-slide .fig-l { left: 11.35%; top: 45.5%; width: 28.31%; }
+.reveal .slides .ex1-tol-slide .fig-r { left: 52.95%; top: 45.5%; width: 28.31%; }
+.reveal .slides .ex1-tol-slide .cap-l { left: 30.35%; top: 83.32%; width: 7.28%; font-size: 0.72em; }
+.reveal .slides .ex1-tol-slide .cap-r { left: 59.12%; top: 83.32%; width: 20.19%; font-size: 0.72em; }
+
+/* --- pres-params-slide --- */
+.reveal .slides .pres-params-slide .body { left: 2.4%; top: 21.3%; width: 97.6%; font-size: 1.36em; }
+.reveal .slides .pres-params-slide .body li::marker { color: #ff0000; }
+.reveal .slides .pres-params-slide .tbl { left: 1.9%; top: 30.9%; width: 96.1%; font-size: 0.95em; }
+.reveal .slides .pres-params-slide .tbl, .reveal .slides .pres-params-slide .tbl th, .reveal .slides .pres-params-slide .tbl td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .pres-params-slide .tbl table { table-layout: fixed; }
+.reveal .slides .pres-params-slide .tbl col:nth-child(1) { width: 10.79% !important; }
+.reveal .slides .pres-params-slide .tbl td:nth-child(1) { text-align: center; }
+.reveal .slides .pres-params-slide .tbl col:nth-child(2) { width: 31.11% !important; }
+.reveal .slides .pres-params-slide .tbl td:nth-child(2) { text-align: left; }
+.reveal .slides .pres-params-slide .tbl col:nth-child(3) { width: 8.61% !important; }
+.reveal .slides .pres-params-slide .tbl td:nth-child(3) { text-align: center; }
+.reveal .slides .pres-params-slide .tbl col:nth-child(4) { width: 7.03% !important; }
+.reveal .slides .pres-params-slide .tbl td:nth-child(4) { text-align: center; }
+.reveal .slides .pres-params-slide .tbl col:nth-child(5) { width: 42.45% !important; }
+.reveal .slides .pres-params-slide .tbl td:nth-child(5) { text-align: left; }
+
+/* --- ulmat-intro-slide --- */
+.reveal .slides .ulmat-intro-slide .sub-head { left: 3.4%; top: 17.5%; width: 65.3%; }
+.reveal .slides .ulmat-intro-slide .body { left: 2.3%; top: 26.4%; width: 91%; }
+.reveal .slides .ulmat-intro-slide .fig { left: 19.75%; top: 39%; width: 66%; }
+.reveal .slides .ulmat-intro-slide .arr-a { left: 29.02%; top: 77.05%; width: 0.8%; }
+.reveal .slides .ulmat-intro-slide .arr-l { left: 52.9%; top: 77.05%; width: 0.8%; }
+.reveal .slides .ulmat-intro-slide .arr-sym { left: 77.17%; top: 77.05%; width: 0.8%; }
+.reveal .slides .ulmat-intro-slide .lab-a { left: 18.11%; top: 80.75%; width: 21.83%; font-size: 1em; text-align: center; }
+.reveal .slides .ulmat-intro-slide .lab-a mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ulmat-intro-slide .lab-l { left: 40.92%; top: 80.75%; width: 26.48%; font-size: 1em; text-align: center; }
+.reveal .slides .ulmat-intro-slide .lab-l mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ulmat-intro-slide .lab-sym { left: 65.09%; top: 80.75%; width: 26.48%; font-size: 1em; text-align: center; }
+.reveal .slides .ulmat-intro-slide .lab-sym mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ulmat-intro-slide .refs { left: 4.9%; top: 90.65%; width: 82.7%; font-size: 0.5em; }
+
+/* --- ulmat-solve-slide --- */
+.reveal .slides .ulmat-solve-slide .sub-head { left: 3.4%; top: 17.5%; width: 65.3%; }
+.reveal .slides .ulmat-solve-slide .body { left: 2.3%; top: 26.4%; width: 91%; }
+.reveal .slides .ulmat-solve-slide .back { left: 2.3%; top: 41.4%; width: 27.4%; }
+.reveal .slides .ulmat-solve-slide .eqAH { left: 29.7%; top: 41.22%; width: 32.7%; font-size: 1.15em; }
+.reveal .slides .ulmat-solve-slide .fromfac { left: 4.8%; top: 53.8%; width: 17%; }
+.reveal .slides .ulmat-solve-slide .eqLL { left: 29.7%; top: 53.5%; width: 32.7%; font-size: 1.15em; }
+.reveal .slides .ulmat-solve-slide .solve { left: 5.4%; top: 69.1%; width: 17%; color: #ff0000; }
+.reveal .slides .ulmat-solve-slide .n1 { left: 18.8%; top: 73.26%; width: 3%; font-size: 1.43em; }
+.reveal .slides .ulmat-solve-slide .eq1 { left: 22.5%; top: 73.71%; width: 32.7%; font-size: 1.15em; }
+.reveal .slides .ulmat-solve-slide .lab1 { left: 39.1%; top: 73.8%; width: 57.6%; font-size: 1.31em; color: #ff0000; }
+.reveal .slides .ulmat-solve-slide .n2 { left: 18.8%; top: 81.23%; width: 3%; font-size: 1.43em; }
+.reveal .slides .ulmat-solve-slide .eq2 { left: 22.5%; top: 81.75%; width: 32.7%; font-size: 1.15em; }
+.reveal .slides .ulmat-solve-slide .lab2 { left: 39.1%; top: 81.4%; width: 54.5%; font-size: 1.31em; color: #ff0000; }
+
+/* --- ulmat-reorder-slide --- */
+.reveal .slides .ulmat-reorder-slide .sub-head { left: 3.4%; top: 14%; width: 45%; }
+.reveal .slides .ulmat-reorder-slide .caption { left: 54.2%; top: 16.4%; width: 43.6%; font-size: 0.9em; }
+.reveal .slides .ulmat-reorder-slide .fig1 { left: 4.2%; top: 19.3%; width: 28.3%; }
+.reveal .slides .ulmat-reorder-slide .fig2 { left: 35.89%; top: 19.2%; width: 28.02%; }
+.reveal .slides .ulmat-reorder-slide .fig3 { left: 68.5%; top: 19.7%; width: 28.3%; }
+.reveal .slides .ulmat-reorder-slide .lab1 { left: 15.3%; top: 24.1%; width: 14.4%; font-size: 0.95em; }
+.reveal .slides .ulmat-reorder-slide .lab2 { left: 49.4%; top: 24.4%; width: 14.4%; font-size: 0.95em; }
+.reveal .slides .ulmat-reorder-slide .lab3 { left: 84.7%; top: 24.7%; width: 11.3%; font-size: 0.95em; }
+.reveal .slides .ulmat-reorder-slide .nz1 { left: 14.96%; top: 71.48%; width: 8.31%; }
+.reveal .slides .ulmat-reorder-slide .nz2 { left: 46.54%; top: 70.88%; width: 8.23%; }
+.reveal .slides .ulmat-reorder-slide .nz3 { left: 79.62%; top: 71.88%; width: 7.55%; }
+.reveal .slides .ulmat-reorder-slide .n1 { left: 18.8%; top: 76.08%; width: 3%; font-size: 1.07em; }
+.reveal .slides .ulmat-reorder-slide .eq1 { left: 22.5%; top: 76.38%; width: 32.7%; font-size: 0.85em; }
+.reveal .slides .ulmat-reorder-slide .cost1 { left: 38.5%; top: 75.3%; width: 45.2%; font-size: 1.07em; color: #ff0000; }
+.reveal .slides .ulmat-reorder-slide .n2 { left: 18.8%; top: 82.19%; width: 3%; font-size: 1.07em; }
+.reveal .slides .ulmat-reorder-slide .eq2 { left: 22.5%; top: 82.53%; width: 32.7%; font-size: 0.85em; }
+.reveal .slides .ulmat-reorder-slide .cost2 { left: 38.5%; top: 81.4%; width: 43.6%; font-size: 1.07em; color: #ff0000; }
+.reveal .slides .ulmat-reorder-slide .refs-note { left: 1.1%; top: 87.6%; width: 98%; font-size: 0.8em; color: #ff0000; }
+.reveal .slides .ulmat-reorder-slide .refs-url { left: 1.1%; top: 91.3%; width: 98%; font-size: 0.55em; }
+
+/* --- ex1-ulmat-slide --- */
+.reveal .slides .ex1-ulmat-slide .file { left: 3.4%; top: 18.5%; width: 39.3%; font-size: 1.12em; }
+.reveal .slides .ex1-ulmat-slide .step { left: 3.4%; top: 26.3%; width: 42.2%; }
+.reveal .slides .ex1-ulmat-slide .code { left: 3.4%; top: 34.4%; width: 71.1%; font-size: 0.8em; }
+.reveal .slides .ex1-ulmat-slide .body { left: 3.4%; top: 43.9%; width: 53.1%; font-size: 1.43em; }
+.reveal .slides .ex1-ulmat-slide .redo { left: 3.4%; top: 57.5%; width: 55%; font-size: 0.9em; }
+.reveal .slides .ex1-ulmat-slide .ask { left: 3.5%; top: 65.29%; width: 81.6%; }
+.reveal .slides .ex1-ulmat-slide .tbl { left: 20.5%; top: 70.8%; width: 66.7%; font-size: 0.85em; }
+.reveal .slides .ex1-ulmat-slide .fig { left: 61.3%; top: 12.9%; width: 35.7%; }
+
+/* --- ex1-fillin-slide --- */
+.reveal .slides .ex1-fillin-slide .file { left: 3.4%; top: 18.5%; width: 39.3%; font-size: 1.12em; }
+.reveal .slides .ex1-fillin-slide .step { left: 3.4%; top: 26.3%; width: 54.8%; }
+.reveal .slides .ex1-fillin-slide .body { left: 3.4%; top: 34.4%; width: 71.1%; }
+.reveal .slides .ex1-fillin-slide .tbl { left: 6.4%; top: 47.6%; width: 89.9%; font-size: 0.82em; }
+.reveal .slides .ex1-fillin-slide .arr-fill { left: 63.68%; top: 56%; width: 0.9%; }
+.reveal .slides .ex1-fillin-slide .scaling { left: 58.2%; top: 76.3%; width: 11.1%; }
+.reveal .slides .ex1-fillin-slide .note { left: 5.1%; top: 81.5%; width: 89.9%; font-size: 1.15em; color: #ff0000; }
+.reveal .slides .ex1-fillin-slide .note li::marker { color: #ff0000; }
+
+/* --- hypre-slide --- */
+.reveal .slides .hypre-slide .sub-head { left: 3.4%; top: 17.5%; width: 65.3%; }
+.reveal .slides .hypre-slide .body { left: 2.3%; top: 26.4%; width: 47.7%; }
+.reveal .slides .hypre-slide .body2 { left: 2.3%; top: 62.6%; width: 47.7%; }
+.reveal .slides .hypre-slide .fig { left: 54.5%; top: 6.4%; width: 41.5%; }
+.reveal .slides .hypre-slide .refs { left: 63.9%; top: 91%; width: 38.4%; font-size: 0.62em; }
+
+/* --- ex1-hypre-slide --- */
+.reveal .slides .ex1-hypre-slide .file { left: 3.4%; top: 18.5%; width: 39.3%; font-size: 1.12em; }
+.reveal .slides .ex1-hypre-slide .step { left: 3.4%; top: 26.3%; width: 42.2%; }
+.reveal .slides .ex1-hypre-slide .code { left: 3.4%; top: 34.4%; width: 71.1%; font-size: 0.8em; }
+.reveal .slides .ex1-hypre-slide .redo { left: 3.4%; top: 41%; width: 53%; font-size: 0.9em; }
+.reveal .slides .ex1-hypre-slide .tbl { left: 0.9%; top: 49.5%; width: 56.4%; font-size: 0.82em; }
+.reveal .slides .ex1-hypre-slide .fig { left: 58.2%; top: 29.2%; width: 39.7%; }
+
+/* --- solver-recap-slide --- */
+.reveal .slides .solver-recap-slide .body { left: 4.4%; top: 13.9%; width: 93%; font-size: 1.19em; line-height: 1.15; }
+.reveal .slides .solver-recap-slide .body li, .reveal .slides .solver-recap-slide .body > p { margin-bottom: 0.08em; }
+
+/* --- cutcell-intro-slide --- */
+.reveal .slides .cutcell-intro-slide .sub-head { left: 3.4%; top: 17.4%; width: 92.8%; }
+.reveal .slides .cutcell-intro-slide .body { left: 3.4%; top: 23.2%; width: 94.2%; }
+.reveal .slides .cutcell-intro-slide .fig-l { left: 13.2%; top: 39.9%; width: 27.3%; }
+.reveal .slides .cutcell-intro-slide .box-detail { left: 29.52%; top: 58.05%; width: 2.91%; }
+.reveal .slides .cutcell-intro-slide .fig-m { left: 32.63%; top: 60.63%; width: 25.5%; }
+.reveal .slides .cutcell-intro-slide .fig-r { left: 57.55%; top: 40.15%; width: 25.55%; }
+.reveal .slides .cutcell-intro-slide .refs { left: 6.4%; top: 91%; width: 61.5%; font-size: 0.5em; }
+
+/* --- cutcell-prosecons-slide --- */
+.reveal .slides .cutcell-prosecons-slide .sub-head { left: 3.4%; top: 16.3%; width: 45%; }
+.reveal .slides .cutcell-prosecons-slide .adv { left: 3.4%; top: 22%; width: 60%; font-size: 0.82em; }
+.reveal .slides .cutcell-prosecons-slide .sub-head2 { left: 3.4%; top: 54.7%; width: 45%; }
+.reveal .slides .cutcell-prosecons-slide .dis { left: 3.4%; top: 60.4%; width: 56%; font-size: 0.82em; }
+.reveal .slides .cutcell-prosecons-slide .fig-t { left: 68.1%; top: 8.9%; width: 28.2%; }
+.reveal .slides .cutcell-prosecons-slide .fig-b { left: 63.3%; top: 52.9%; width: 35.9%; height: 39.4%; }
+
+/* --- fv-species-slide --- */
+.reveal .slides .fv-species-slide .sub-head { left: 4.5%; top: 16.4%; width: 45%; }
+.reveal .slides .fv-species-slide .eq-lhs { left: 19.6%; top: 22.61%; width: 15.3%; }
+.reveal .slides .fv-species-slide .lab-conv { left: 36.9%; top: 23.9%; width: 18%; font-size: 0.72em; }
+.reveal .slides .fv-species-slide .lab-fick { left: 36.9%; top: 28.8%; width: 39.2%; font-size: 0.72em; }
+.reveal .slides .fv-species-slide .eq-full { left: 9.8%; top: 35.61%; width: 43.6%; }
+.reveal .slides .fv-species-slide .domain { left: 4.5%; top: 48.8%; width: 62.4%; font-size: 0.72em; }
+.reveal .slides .fv-species-slide .fv { left: 4.5%; top: 56.3%; width: 48.6%; font-size: 0.72em; }
+.reveal .slides .fv-species-slide .eq-fv { left: 5.8%; top: 61.34%; width: 47.8%; }
+.reveal .slides .fv-species-slide .lab-time { left: 4.5%; top: 75.2%; width: 12.5%; font-size: 0.72em; }
+.reveal .slides .fv-species-slide .lab-reac { left: 4.6%; top: 83.4%; width: 12.5%; font-size: 0.72em; }
+.reveal .slides .fv-species-slide .eq-terms { left: 16.2%; top: 72.85%; width: 33.8%; }
+.reveal .slides .fv-species-slide .domain-fig { left: 69.05%; top: 9.63%; width: 26.6%; }
+.reveal .slides .fv-species-slide .fig { left: 71.8%; top: 50.36%; width: 25%; }
+.reveal .slides .fv-species-slide .arr-v { left: 89.8%; top: 72.7%; width: 1.2%; }
+.reveal .slides .fv-species-slide .sym-v3 { left: 90.4%; top: 72.91%; width: 1.78%; }
+.reveal .slides .fv-species-slide .arr-n { left: 88.5%; top: 77.44%; width: 1.2%; }
+.reveal .slides .fv-species-slide .sym-n3 { left: 85.48%; top: 80.2%; width: 2.84%; }
+.reveal .slides .fv-species-slide .refs { left: 4.6%; top: 90.23%; width: 71.1%; font-size: 0.5em; }
+
+/* --- fv-terms-slide --- */
+.reveal .slides .fv-terms-slide .sub-head { left: 5.3%; top: 17.8%; width: 20%; }
+.reveal .slides .fv-terms-slide .eq-adv { left: 5.6%; top: 21.33%; width: 48.7%; }
+.reveal .slides .fv-terms-slide .andlab { left: 55.9%; top: 24.8%; width: 4.2%; }
+.reveal .slides .fv-terms-slide .eq-adv2 { left: 60.2%; top: 22.78%; width: 16.6%; }
+.reveal .slides .fv-terms-slide .lab-lim { left: 6.1%; top: 35.8%; width: 40%; font-size: 0.72em; }
+.reveal .slides .fv-terms-slide .cutface1 { left: 5.6%; top: 42.9%; width: 35%; font-size: 0.72em; }
+.reveal .slides .fv-terms-slide .eq-cf1 { left: 38.4%; top: 39.94%; width: 17.7%; }
+.reveal .slides .fv-terms-slide .sub-head2 { left: 5.2%; top: 48.07%; width: 20%; }
+.reveal .slides .fv-terms-slide .eq-diff { left: 9.6%; top: 54.59%; width: 54.8%; }
+.reveal .slides .fv-terms-slide .eq-diff2 { left: 9.3%; top: 63.53%; width: 43.4%; }
+.reveal .slides .fv-terms-slide .cutface2 { left: 5.2%; top: 75.76%; width: 31.3%; font-size: 0.72em; }
+.reveal .slides .fv-terms-slide .eq-cf2 { left: 20.6%; top: 78.15%; width: 21.8%; }
+.reveal .slides .fv-terms-slide .arr-interp { left: 29.85%; top: 86.52%; width: 1.15%; }
+.reveal .slides .fv-terms-slide .arr-numdiff { left: 39.64%; top: 86.92%; width: 1.46%; }
+.reveal .slides .fv-terms-slide .lab-interp { left: 22.5%; top: 89.34%; width: 13%; font-size: 0.72em; }
+.reveal .slides .fv-terms-slide .lab-numdiff { left: 35.2%; top: 89.3%; width: 22%; font-size: 0.72em; }
+.reveal .slides .fv-terms-slide .fig { left: 71.5%; top: 29.19%; width: 25%; }
+.reveal .slides .fv-terms-slide .arr-v { left: 89.46%; top: 51.53%; width: 1.2%; }
+.reveal .slides .fv-terms-slide .sym-v3 { left: 90.06%; top: 51.74%; width: 1.78%; }
+.reveal .slides .fv-terms-slide .arr-n { left: 88.17%; top: 56.27%; width: 1.2%; }
+.reveal .slides .fv-terms-slide .sym-n3 { left: 85.15%; top: 59.03%; width: 2.84%; }
+.reveal .slides .fv-terms-slide .inpractice { left: 58.4%; top: 72.4%; width: 12%; }
+.reveal .slides .fv-terms-slide .practice { left: 58.5%; top: 77.1%; width: 40.2%; font-size: 0.72em; }
+
+/* --- smallcell-slide --- */
+.reveal .slides .smallcell-slide .sub-head { left: 5.4%; top: 14.8%; width: 60%; }
+.reveal .slides .smallcell-slide .body { left: 5.1%; top: 20.5%; width: 87%; }
+.reveal .slides .smallcell-slide .lit { left: 5.2%; top: 26.4%; width: 65.4%; }
+.reveal .slides .smallcell-slide .fig { left: 19.75%; top: 32.03%; width: 65.1%; }
+.reveal .slides .smallcell-slide .note { left: 4.5%; top: 67.9%; width: 72.3%; }
+.reveal .slides .smallcell-slide .refs { left: 5.7%; top: 87%; width: 65.4%; font-size: 0.5em; }
+
+/* --- cc-poisson-slide --- */
+.reveal .slides .cc-poisson-slide .sub-head { left: 5.4%; top: 17.1%; width: 60%; }
+.reveal .slides .cc-poisson-slide .eq1 { left: 20.3%; top: 24.92%; width: 33.8%; }
+.reveal .slides .cc-poisson-slide .approx { left: 5.4%; top: 47.5%; width: 24.9%; }
+.reveal .slides .cc-poisson-slide .eq2 { left: 17.5%; top: 44.44%; width: 16.3%; }
+.reveal .slides .cc-poisson-slide .withlab { left: 5.4%; top: 57.3%; width: 50%; font-size: 0.82em; }
+.reveal .slides .cc-poisson-slide .fig { left: 67.97%; top: 14.88%; width: 25.2%; }
+.reveal .slides .cc-poisson-slide .steps { left: 5.8%; top: 67.8%; width: 91.4%; }
+
+/* --- ex2-input-slide --- */
+.reveal .slides .ex2-input-slide .sub-head { left: 5.9%; top: 15.1%; width: 44.5%; }
+.reveal .slides .ex2-input-slide .file { left: 6.1%; top: 23.7%; width: 39.3%; }
+.reveal .slides .ex2-input-slide .body { left: 6.1%; top: 30.1%; width: 44.5%; font-size: 0.82em; }
+.reveal .slides .ex2-input-slide .pid { left: 6.1%; top: 69.22%; width: 47.1%; }
+.reveal .slides .ex2-input-slide .fig-pid { left: 33.8%; top: 71.92%; width: 35%; }
+.reveal .slides .ex2-input-slide .arr-p { left: 40.29%; top: 81.55%; width: 1.77%; }
+.reveal .slides .ex2-input-slide .arr-i { left: 44.22%; top: 81.55%; width: 1.2%; }
+.reveal .slides .ex2-input-slide .arr-ig { left: 49.77%; top: 81.29%; width: 1.2%; }
+.reveal .slides .ex2-input-slide .arr-d { left: 62.3%; top: 82.1%; width: 3.93%; }
+.reveal .slides .ex2-input-slide .lab-p { left: 27.4%; top: 82.94%; width: 18.7%; font-size: 0.72em; }
+.reveal .slides .ex2-input-slide .lab-p, .reveal .slides .ex2-input-slide .lab-p th, .reveal .slides .ex2-input-slide .lab-p td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-input-slide .lab-i { left: 38.6%; top: 87.06%; width: 12%; font-size: 0.72em; }
+.reveal .slides .ex2-input-slide .lab-i, .reveal .slides .ex2-input-slide .lab-i th, .reveal .slides .ex2-input-slide .lab-i td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-input-slide .lab-ig { left: 48.6%; top: 85.96%; width: 16%; font-size: 0.72em; }
+.reveal .slides .ex2-input-slide .lab-ig, .reveal .slides .ex2-input-slide .lab-ig th, .reveal .slides .ex2-input-slide .lab-ig td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-input-slide .lab-d { left: 65.5%; top: 85.41%; width: 19.7%; font-size: 0.72em; }
+.reveal .slides .ex2-input-slide .lab-d, .reveal .slides .ex2-input-slide .lab-d th, .reveal .slides .ex2-input-slide .lab-d td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-input-slide .fig { left: 54.9%; top: 6.42%; width: 43.5%; }
+
+/* --- ex2-devc-slide --- */
+.reveal .slides .ex2-devc-slide .code { left: 3%; top: 12.2%; width: 96.1%; }
+.reveal .slides .ex2-devc-slide .lab-mf { left: 9.1%; top: 40.35%; width: 18%; font-size: 0.87em; }
+.reveal .slides .ex2-devc-slide .lab-mf, .reveal .slides .ex2-devc-slide .lab-mf th, .reveal .slides .ex2-devc-slide .lab-mf td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-devc-slide .arr-mf { left: 25.21%; top: 41.3%; width: 3.54%; }
+.reveal .slides .ex2-devc-slide .eq-mf { left: 31.3%; top: 35.94%; width: 16.3%; }
+.reveal .slides .ex2-devc-slide .lab-mass { left: 9.1%; top: 55.35%; width: 20%; font-size: 0.87em; }
+.reveal .slides .ex2-devc-slide .lab-mass, .reveal .slides .ex2-devc-slide .lab-mass th, .reveal .slides .ex2-devc-slide .lab-mass td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-devc-slide .arr-mass { left: 25.21%; top: 56%; width: 3.54%; }
+.reveal .slides .ex2-devc-slide .eq-mass { left: 31%; top: 50.56%; width: 20.1%; }
+.reveal .slides .ex2-devc-slide .csv { left: 8.6%; top: 67.4%; width: 39.3%; }
+.reveal .slides .ex2-devc-slide .bal-l { left: 9.8%; top: 75.8%; width: 18%; font-size: 0.87em; }
+.reveal .slides .ex2-devc-slide .bal-l, .reveal .slides .ex2-devc-slide .bal-l th, .reveal .slides .ex2-devc-slide .bal-l td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-devc-slide .bal-eq { left: 26.4%; top: 74.9%; width: 2.5%; }
+.reveal .slides .ex2-devc-slide .bal-r1 { left: 28.9%; top: 75.8%; width: 24%; font-size: 0.87em; }
+.reveal .slides .ex2-devc-slide .bal-r1, .reveal .slides .ex2-devc-slide .bal-r1 th, .reveal .slides .ex2-devc-slide .bal-r1 td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-devc-slide .bal-r2 { left: 29%; top: 83.1%; width: 22%; font-size: 0.87em; }
+.reveal .slides .ex2-devc-slide .bal-r2, .reveal .slides .ex2-devc-slide .bal-r2 th, .reveal .slides .ex2-devc-slide .bal-r2 td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-devc-slide .fig { left: 61.5%; top: 38.26%; width: 28.2%; }
+.reveal .slides .ex2-devc-slide .sym-a { left: 84.1%; top: 50.22%; width: 3.46%; }
+.reveal .slides .ex2-devc-slide .arr-s1 { left: 80.02%; top: 49.61%; width: 1.5%; }
+.reveal .slides .ex2-devc-slide .arr-s2 { left: 81.52%; top: 52.85%; width: 2.47%; }
+.reveal .slides .ex2-devc-slide .arr-s3 { left: 82.66%; top: 57.17%; width: 2.76%; }
+.reveal .slides .ex2-devc-slide .lab-a { left: 70.9%; top: 64.1%; width: 2.6%; color: #ffffff; }
+
+/* --- ex2-balance-slide --- */
+.reveal .slides .ex2-balance-slide .question { left: 3.4%; top: 17.3%; width: 62%; font-size: 0.82em; }
+.reveal .slides .ex2-balance-slide .fig { left: 4.2%; top: 25.42%; width: 33.4%; }
+.reveal .slides .ex2-balance-slide .arr-out { left: 18.91%; top: 26.49%; width: 1.2%; }
+.reveal .slides .ex2-balance-slide .arr-in1 { left: 28.42%; top: 44.07%; width: 1.97%; }
+.reveal .slides .ex2-balance-slide .arr-in2 { left: 29.46%; top: 48.49%; width: 2.22%; }
+.reveal .slides .ex2-balance-slide .arr-in3 { left: 29.77%; top: 53.15%; width: 2.22%; }
+.reveal .slides .ex2-balance-slide .lab-out { left: 20.4%; top: 25.2%; width: 22%; font-size: 0.87em; }
+.reveal .slides .ex2-balance-slide .lab-in { left: 32.2%; top: 43.1%; width: 15%; font-size: 0.87em; }
+.reveal .slides .ex2-balance-slide .lab-vol { left: 10.2%; top: 75.1%; width: 20%; font-size: 0.87em; }
+.reveal .slides .ex2-balance-slide .bal-l { left: 51.2%; top: 29.3%; width: 18%; font-size: 0.87em; }
+.reveal .slides .ex2-balance-slide .bal-l, .reveal .slides .ex2-balance-slide .bal-l th, .reveal .slides .ex2-balance-slide .bal-l td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-balance-slide .bal-eq { left: 67.8%; top: 28.5%; width: 2.5%; }
+.reveal .slides .ex2-balance-slide .bal-r1 { left: 70.3%; top: 29.3%; width: 24%; font-size: 0.87em; }
+.reveal .slides .ex2-balance-slide .bal-r1, .reveal .slides .ex2-balance-slide .bal-r1 th, .reveal .slides .ex2-balance-slide .bal-r1 td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-balance-slide .bal-r2 { left: 70.3%; top: 36.5%; width: 22%; font-size: 0.87em; }
+.reveal .slides .ex2-balance-slide .bal-r2, .reveal .slides .ex2-balance-slide .bal-r2 th, .reveal .slides .ex2-balance-slide .bal-r2 td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .ex2-balance-slide .num-l { left: 53.5%; top: 44.2%; width: 13%; }
+.reveal .slides .ex2-balance-slide .num-eq { left: 67.9%; top: 43.6%; width: 2.5%; }
+.reveal .slides .ex2-balance-slide .num-r1 { left: 71.2%; top: 44.2%; width: 18%; }
+.reveal .slides .ex2-balance-slide .num-r2 { left: 71.2%; top: 51.2%; width: 14%; }
+.reveal .slides .ex2-balance-slide .diff { left: 71.6%; top: 58.9%; width: 14.5%; color: #ff0000; border: 2px solid #ff0000; padding: 0.15em 0.4em; }
+.reveal .slides .ex2-balance-slide .bonus { left: 43.8%; top: 66.9%; width: 50%; font-size: 0.82em; }
+.reveal .slides .ex2-balance-slide .tbl { left: 45.2%; top: 74.5%; width: 50%; font-size: 0.68em; }
