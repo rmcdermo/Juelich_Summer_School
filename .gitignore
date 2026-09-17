@@ -2,3 +2,29 @@
 */*.html
 **/.DS_Store
 .venv
+
+# source decks and videos stay local
+*.pptx
+*.mp4
+*.mov
+
+# FDS run output. Worth keeping: the .out log and the CSVs the eval scripts
+# read (_devc.csv, _line.csv). Everything else a run writes is scratch --
+# Smokeview geometry and slice/boundary data, plus the run statistics. Each
+# case ignores its own results/ already; this is the net for runs made by hand
+# in a case directory.
+*.smv
+*.sf
+*.bf
+*.bnd
+*.q
+*.iso
+*.s3d
+*.prt5
+*.end
+*.restart
+*.stop
+*_cpu.csv
+*_hrr.csv
+*_steps.csv
+*_git.txt

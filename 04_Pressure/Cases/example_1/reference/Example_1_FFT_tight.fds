@@ -1,0 +1,69 @@
+! Example 1 : single mesh case.
+! Study input file:
+!   - Why do we set RADIATION=F?
+!   - What are we requesting in SLICEs, and Boundary SLICEs?
+!   - Look at the 2 &DEVC lines at the end, what are we requesting to output?
+!
+! Part a:
+! Run case. Open Smokeview:
+!   - Load up Temperature Slice, what do we get? Divergence? Density?
+!   - Load up Velocity Error Boundary slice. What do we have?
+! Open the run's device file (results/Example_1_FFT_devc.csv):
+!   - how do VDOT_IN and VDOT_OUT compare at every time step?
+! Comment (i.e with a #)
+!            &PRES SOLVER='FFT'/
+! Uncomment
+!           #&PRES VELOCITY_TOLERANCE=0.001, MAX_PRESSURE_ITERATIONS=50/
+! and rerun with ./run.sh FFT_tight. Is the velocity error reduced in smokeview?
+! What about volume flows in and out?
+!
+----------------------------------------------------------------------------------------------  
+
+&HEAD CHID='Example_1_FFT_tight', TITLE='Flow around confined Obstacle.' /
+
+&MESH IJK=32,16,16, XB=0.,3.2,-0.8,0.8,-0.8,0.8 /
+&TIME T_END=8. /
+&RADI RADIATION=.FALSE. /
+&MISC STRATIFICATION=F/
+
+! Exactly one of the four &PRES lines below is active. To switch solver, comment
+! the current one with a # and uncomment another, then pass the matching name to
+! run.sh. It reads the VARIANT tags below and refuses to run if the two disagree,
+! so a run can never be labelled with a solver it did not use.
+! FFT is the default solver, so the first line only makes it explicit.
+#&PRES SOLVER='FFT' /                                         ! VARIANT=FFT
+&PRES VELOCITY_TOLERANCE=0.001, MAX_PRESSURE_ITERATIONS=50/ ! VARIANT=FFT_tight
+#&PRES SOLVER='ULMAT', CHECK_POISSON=T/                      ! VARIANT=ULMAT        (PARDISO)
+#&PRES SOLVER='ULMAT HYPRE', CHECK_POISSON=T/                ! VARIANT=ULMAT_HYPRE
+
+! Define Surface BCs:
+&SURF ID='WALLS', COLOR='GRAY', ADIABATIC=T, DEFAULT=T /
+&SURF ID='INLET', COLOR='RED', VEL=-2.5 /
+
+! We leave a door in x=3.2 m OPEN:
+&VENT XB=3.2,3.2,-0.3,0.3,-0.8,0.6, SURF_ID='OPEN' /
+&VENT MB='XMIN', SURF_ID='INLET' /
+
+! Place an Obstable in the middle:
+&OBST XB=1.5,1.7,-0.8,0.8,-0.8,0.4 /
+
+! Define output:
+! Slices:
+&SLCF PBY=0, QUANTITY='VELOCITY', VECTOR=T /
+&SLCF PBY=0, QUANTITY='DIVERGENCE', CELL_CENTERED=T /
+&SLCF PBY=0, QUANTITY='TEMPERATURE', CELL_CENTERED=T /
+&SLCF PBY=0, QUANTITY='DENSITY', CELL_CENTERED=T /
+
+! Boundary slices:
+&BNDF QUANTITY='VELOCITY ERROR' /
+
+! Devices:
+! Volume flow into domain:
+&DEVC ID='VDOT_IN', XB=-0.1,0.1,-0.8,0.8,-0.8,0.8, QUANTITY='NORMAL VELOCITY', SURF_ID='INLET', STATISTICS='SURFACE INTEGRAL', TIME_AVERAGED=F/
+
+! Volume flow out of domain (OPEN boundary):
+&DEVC ID='VDOT_OUT', XB=3.1,3.3,-0.3,0.3,-0.8,0.6, QUANTITY='NORMAL VELOCITY', SURF_ID='OPEN', STATISTICS='SURFACE INTEGRAL', TIME_AVERAGED=F/
+
+&DUMP SIG_FIGS=15/
+
+&TAIL /
