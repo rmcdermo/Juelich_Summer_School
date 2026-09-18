@@ -1,0 +1,43 @@
+&HEAD CHID='HVAC_mt',TITLE='Example for Mass Transport'/
+
+&MESH XB=0,1,0,1,0,1,IJK=20,20,20/
+&MESH XB=11,12,0,1,0,1,IJK=20,20,20/
+&RADI RADIATION = F/
+
+&TIME T_END = 40./
+
+***********************************
+**** Example Set 3 Problem 1:  ****
+**** Run the case as is        ****
+***********************************
+
+&SPEC ID='SPEC 1'/
+&INIT XB=0,1,0,1,0,1,SPEC_ID='SPEC 1',VOLUME_FRACTION=1/
+
+&VENT XB=1.0,1.0,0.4,0.6,0.8,1.0,SURF_ID='HVAC',ID='TOP L'/
+&VENT XB=11.0,11.0,0.4,0.6,0.8,1.0,SURF_ID='HVAC',ID='TOP R'/
+
+&VENT XB=1.0,1.0,0.4,0.6,0.0,0.2,SURF_ID='HVAC',ID='BOT L'/
+&VENT XB=11.0,11.0,0.4,0.6,0.0,0.2,SURF_ID='HVAC',ID='BOT R'/
+
+******************************************
+**** Example Set 3 Problem 2:         ****
+**** Add N_CELLS = 25 to the top duct ****
+******************************************
+
+&HVAC TYPE_ID='NODE',ID='TOP L',VENT_ID='TOP L',DUCT_ID='TOP'/
+&HVAC TYPE_ID='NODE',ID='TOP R',VENT_ID='TOP R',DUCT_ID='TOP'/
+&HVAC TYPE_ID='DUCT',ID='TOP',NODE_ID='TOP L','TOP R',AREA=0.01,VOLUME_FLOW=0.03,LENGTH=10/
+
+*********************************************
+**** Example Set 3 Problem 3:            ****
+**** Add N_CELLS = 25 to the bottom duct ****
+*********************************************
+
+&HVAC TYPE_ID='NODE',ID='BOT L',VENT_ID='BOT L',DUCT_ID='BOT'/
+&HVAC TYPE_ID='NODE',ID='BOT R',VENT_ID='BOT R',DUCT_ID='BOT'/
+&HVAC TYPE_ID='DUCT',ID='BOT',NODE_ID='BOT L','BOT R',AREA=0.01,VOLUME_FLOW=-0.03,LENGTH=10/
+
+&HVAC TYPE_ID='DUCT QUANTITY LIST',QUANTITY='DUCT VOLUME FRACTION',QUANTITY_SPEC_ID(1)='SPEC 1'/
+
+&SLCF QUANTITY='VOLUME FRACTION',SPEC_ID='SPEC 1',PBY=0.5/

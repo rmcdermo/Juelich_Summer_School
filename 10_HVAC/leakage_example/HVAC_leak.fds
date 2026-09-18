@@ -1,0 +1,31 @@
+&HEAD CHID='HVAC_leak',TITLE='Example for Leakage'/
+
+&MESH XB=0,1,0,1,0,1,IJK=20,20,20/
+&RADI RADIATION = F/
+&TIME T_END = 50./
+&DUMP NFRAMES=50/
+
+***********************************
+**** Example Set 2 Problem 1:  ****
+**** Run the case as is        ****
+***********************************
+
+**************************************************************************************************
+**** Example Set 2 Problem 2:                                                                 ****
+**** Remove the ZONE and SURF input.                                                          ****
+**** Add two localized leakage inputs to ambient each with an area of 0.005 m2                ****
+**** First leakage path is one cell tall across the full width at the top of the -x wall.     ****
+**** Second leakage path is one cell tall across the full width at the bottom of the +x wall. ****
+**************************************************************************************************
+
+&ZONE LEAK_AREA(0)=0.01/
+
+&SURF ID='DEFAULT',LEAK_PATH=0,1,DEFAULT=T/
+
+&REAC FUEL='METHANE'/
+
+&SURF ID='FIRE',HRRPUA=1000,COLOR='RED'/
+&VENT XB=0.4,0.6,0.4,0.6,0.0,0.0,SURF_ID='FIRE'/
+
+&DEVC QUANTITY='DUCT VOLUME FLOW',DUCT_ID='LEAK 0 1'/
+&DEVC QUANTITY='NODE PRESSURE',NODE_ID='LEAK 1 0'/
