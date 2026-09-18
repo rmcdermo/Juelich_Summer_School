@@ -1,0 +1,59 @@
+&HEAD CHID='HVAC_loss',TITLE='Example for Setting Losses'/
+
+&MESH XB=0,1,0,1,0,1,IJK=20,20,20/
+&RADI RADIATION = F/
+&TIME T_END = 10./
+&DUMP NFRAMES=20/
+
+&VENT MB='XMIN',SURF_ID='OPEN'/
+&VENT MB='YMIN',SURF_ID='OPEN'/
+&VENT MB='ZMIN',SURF_ID='OPEN'/
+&VENT MB='XMAX',SURF_ID='OPEN'/
+&VENT MB='YMAX',SURF_ID='OPEN'/
+&VENT MB='ZMAX',SURF_ID='OPEN'/
+
+&OBST XB=0.0,1.0,0.0,1.0,0.45,0.55/
+
+&VENT XB=0.4,0.6,0.4,0.6,0.55,0.55,SURF_ID='HVAC',ID='SUPPLY 1',COLOR='BLUE'/
+
+&VENT XB=0.1,0.3,0.4,0.6,0.45,0.45,SURF_ID='HVAC',ID='EXHAUST 1',COLOR='RED'/
+&VENT XB=0.6,1.0,0.4,0.6,0.45,0.45,SURF_ID='HVAC',ID='EXHAUST 2',COLOR='ORANGE'/
+
+&HVAC TYPE_ID='NODE',ID='SUPPLY 1',VENT_ID='SUPPLY 1',DUCT_ID='SUPPLY 1'/
+
+&HVAC TYPE_ID='NODE',ID='EXHAUST 1',VENT_ID='EXHAUST 1',DUCT_ID='EXHAUST 1'/
+&HVAC TYPE_ID='NODE',ID='EXHAUST 2',VENT_ID='EXHAUST 2',DUCT_ID='EXHAUST 2'/
+
+
+******************************************************************************
+**** Example Set 1 Problem 2:                                             ****
+**** Comment out the first TEE input and uncomment the second.            ****
+**** Move the losses from the Exhaust 1 and 2 ducts to the new TEE input. ****
+******************************************************************************
+
+&HVAC TYPE_ID='NODE',ID='TEE',DUCT_ID='SUPPLY 1','EXHAUST 1','EXHAUST 2',XYZ=0.50,0.50,0.80/
+!&HVAC TYPE_ID='NODE',ID='TEE',DUCT_ID='SUPPLY 1','EXHAUST 1','EXHAUST 2',XYZ=0.50,0.50,0.80,LOSS(1,2)=XX,LOSS(1,3)=YY,LOSS(2,1)=XX,LOSS(3,1)=YY,LOSS(2,3)=1,LOSS(3,2)=1/
+
+&HVAC TYPE_ID='DUCT',ID='SUPPLY 1',NODE_ID='SUPPLY 1','TEE',AREA=0.01,VOLUME_FLOW=0.05,LENGTH=1.0/
+
+
+****************************************************************************************************
+**** Example Set 1 Problem 1:                                                                   ****
+**** Determine XX and YY so Exhaust 1 and 2 have flows of 0.02 m3/s and 0.03 m3/s respectively. ****
+****************************************************************************************************
+
+*************************************************************************
+**** Example Set 1 Problem 3:                                        ****
+**** Add damper to EXHAUST 2  that is open at t=0 and closes at t=5. ****
+*************************************************************************
+
+&HVAC TYPE_ID='DUCT',ID='EXHAUST 1',NODE_ID='TEE','EXHAUST 1',AREA=0.01,LENGTH=1.0,LOSS=XX,XX,WAYPOINTS(1,1:3)=0.20,0.50,0.80/
+&HVAC TYPE_ID='DUCT',ID='EXHAUST 2',NODE_ID='TEE','EXHAUST 2',AREA=0.01,LENGTH=1.0,LOSS=YY,YY,WAYPOINTS(1,1:3)=0.80,0.50,0.80/
+
+&HVAC TYPE_ID='DUCT QUANTITY LIST',QUANTITY='DUCT VOLUME FLOW'/
+
+&SLCF QUANTITY='VELOCITY',PBY=0.5, VECTOR=T/
+
+&DEVC QUANTITY='DUCT VOLUME FLOW',DUCT_ID='SUPPLY 1',ID='FDS 3 m/s duct'/
+&DEVC QUANTITY='DUCT VOLUME FLOW',DUCT_ID='EXHAUST 1',ID='FDS 1 m/s duct'/
+&DEVC QUANTITY='DUCT VOLUME FLOW',DUCT_ID='EXHAUST 2',ID='FDS 2 m/s duct'/

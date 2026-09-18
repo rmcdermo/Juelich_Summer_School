@@ -1,0 +1,59 @@
+&HEAD CHID='pattern', TITLE='Single Sprinkler Test Case' /
+
+&MESH IJK=50,50,25, XB=-5.0,5.0,-5.0,5.0,0.0,5.0/
+&RADI RADIATION=.FALSE./
+&TIME T_END=20. /
+&SPEC ID='WATER VAPOR',BACKGROUND=T/
+
+&PART ID='water drops', SPEC_ID='WATER VAPOR',DIAMETER=750., SAMPLING_FACTOR=1 /
+
+****************************************
+**** Example Set 1 and 3: Problem 1 ****
+**** Run case as is                 ****
+****************************************
+
+*********************************************************
+**** Example Set 1: Problem 2                        ****
+**** Make a copy of pattern.fds called pattern_1.fds ****
+**** Change SPRAY_PATTERN_SHAPE to UNIFORM           ****
+*********************************************************
+
+*********************************************************
+**** Example Set 1: Problem 3                        ****
+**** Make a copy of pattern.fds called pattern_2.fds ****
+**** Change SPRAY_ANGLE to 30,80                     ****
+*********************************************************
+
+*********************************************************
+**** Example Set 1: Problem 4                        ****
+**** Make a copy of pattern.fds called pattern_3.fds ****
+**** Change SPRAY_ANGLE to 0,80,0,30                 ****
+*********************************************************
+
+*********************************************************
+**** Example Set 3: Problem 2                        ****
+**** Make a copy of pattern.fds called pattern_4.fds ****
+**** RUNNING_AVERAGE+FACTOR = 0.01                   ****
+*********************************************************
+
+*********************************************************
+**** Example Set 3: Problem 2                        ****
+**** Make a copy of pattern.fds called pattern_4.fds ****
+**** RUNNING_AVERAGE+FACTOR = 0.9                    ****
+*********************************************************
+
+&PROP ID='K-11', QUANTITY='SPRINKLER LINK TEMPERATURE', OFFSET=0.15, PART_ID='water drops',
+      FLOW_RATE=180., PARTICLE_VELOCITY=10., SPRAY_ANGLE=0.,80., SMOKEVIEW_ID='sprinkler_upright' /
+
+&DEVC XYZ=0.0,0.0,4.5, PROP_ID='K-11', ID='Spr_1', QUANTITY='TIME', SETPOINT=0.  /
+
+&VENT MB='XMIN', SURF_ID='OPEN' /
+&VENT MB='XMAX', SURF_ID='OPEN' /
+&VENT MB='YMIN', SURF_ID='OPEN' /
+&VENT MB='YMAX', SURF_ID='OPEN' /
+
+&SLCF PBY=0.0,QUANTITY='MPUV', PART_ID='water drops' /
+
+&BNDF CELL_CENTERED=T,QUANTITY='AMPUA',PART_ID='water drops'/
+
+&TAIL /

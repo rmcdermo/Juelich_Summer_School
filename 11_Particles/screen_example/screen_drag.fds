@@ -1,0 +1,42 @@
+&HEAD CHID='screen_drag'/
+
+&MESH IJK=40,40,40,XB=0,2,0,2,0,2/
+
+&TIME T_END=4./
+&RADI RADIATION=.FALSE./
+
+&VENT MB='XMIN',SURF_ID='VELIN'/
+&VENT MB='XMAX',SURF_ID='OPEN'/
+&VENT MB='YMIN',SURF_ID='OPEN'/
+&VENT MB='YMAX',SURF_ID='OPEN'/
+&VENT MB='ZMIN',SURF_ID='OPEN'/
+&VENT MB='ZMAX',SURF_ID='OPEN'/
+
+&SURF ID='VELIN',VEL=-2/
+
+&SLCF PBY=1,QUANTITY='VELOCITY',CELL_CENTERED=T/
+
+&OBST XB=1.5,1.6,0.4,1.6,0.4,1.6/
+&HOLE XB=1.4,1.7,0.8,1.2,0.8,1.2/
+
+******************************
+**** Example Set 2: Problem 1 ****
+**** Run case as is                  ****
+******************************
+
+******************************
+**** Example Set 2: Problem 2 ****
+**** Uncomment lines              ****
+******************************
+
+******************************
+**** Example Set 2: Problem 3 ****
+**** Comment out HOLE          ****
+******************************
+
+!&SURF ID='SCREEN',THICKNESS=0.00015, GEOMETRY='CYLINDRICAL',MATL_ID='SCREEN'/
+!&MATL ID='SCREEN',DENSITY=1000.,CONDUCTIVITY=1,SPECIFIC_HEAT=1/
+!&PART DRAG_LAW='SCREEN',ID='SCREEN2',SURF_ID='SCREEN',FREE_AREA_FRACTION=0.50, STATIC=.TRUE.,ORIENTATION=1,0,0  /
+!&INIT N_PARTICLES_PER_CELL=1,CELL_CENTERED=.TRUE.,PART_ID='SCREEN1',XB=1.51,1.59,0.8,1.2,0.8,1.2/
+
+&TAIL /
