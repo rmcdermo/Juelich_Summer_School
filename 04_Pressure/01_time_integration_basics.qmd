@@ -3,9 +3,9 @@
 ::: {.section-topics}
 Review of Low-Mach Equations of Fluid Motion.
 
-Time integration : Pressure projection scheme.
+Time integration: Pressure projection scheme.
 
-Poisson equation : Spatial discretization.
+Poisson equation: Spatial discretization.
 :::
 
 ## Review of Low-Mach Equations of Fluid Motion {.motivation-slide}
@@ -18,7 +18,7 @@ Poisson equation : Spatial discretization.
 :::
 
 ::: {.m-fig-l}
-![](Section_1_assets/video/compartment-oxygen-deflagration.mp4){controls="true" playsinline="true" preload="metadata" poster="Section_1_assets/slide-004-media-02.png" fig-alt="Volume rendering of oxygen concentration showing deflagration in a hot scaled compartment, 3408 meshes."}
+![](Section_1_assets/video/compartment-oxygen-deflagration.mp4){controls="true" playsinline="true" preload="metadata" poster="Section_1_assets/compartment-oxygen-deflagration-poster.png" fig-alt="Volume rendering of oxygen concentration showing deflagration in a hot scaled compartment, 3408 meshes."}
 :::
 
 ::: {.m-fig-r}
@@ -131,7 +131,7 @@ $$\rho\left[\frac{\partial \mathbf{u}}{\partial t}+(\mathbf{u}\cdot\nabla)\mathb
 ::: {.mo-ident}
 Where we used the vector identity
 $(\mathbf{u}\cdot\nabla)\mathbf{u}=\nabla|\mathbf{u}|^{2}/2-\mathbf{u}\times\boldsymbol{\omega}$
-and $\frac{1}{\rho}\nabla(\tilde{\boldsymbol{p}})=\nabla\left(\frac{\tilde{\boldsymbol{p}}}{\rho}\right)-\tilde{\boldsymbol{p}}\nabla\left(\frac{1}{\rho}\right)$ :
+and $\frac{1}{\rho}\nabla(\tilde{\boldsymbol{p}})=\nabla\left(\frac{\tilde{\boldsymbol{p}}}{\rho}\right)-\tilde{\boldsymbol{p}}\nabla\left(\frac{1}{\rho}\right)$:
 :::
 
 ::: {.mo-comb}
@@ -291,7 +291,7 @@ Fluid Dynamics*, Oxford Univ. Press.
 
 :::
 
-## Time integration : Pressure projection scheme {.poisson-for-h-slide}
+## Time integration: Pressure projection scheme {.poisson-for-h-slide}
 
 ::: {.slide-layout}
 
@@ -338,7 +338,7 @@ Poisson Equation:
 
 :::
 
-## Time integration : Pressure projection scheme {.fractional-step-slide}
+## Time integration: Pressure projection scheme {.fractional-step-slide}
 
 ::: {.slide-layout}
 
@@ -389,7 +389,7 @@ $$\mathbf{u}^{n+1}=\underbrace{\mathbf{u}^{n}-\Delta t\left[\mathbf{F}_{A}^{n}+\
 
 :::
 
-## Time integration : Pressure projection scheme {.pressure-iteration-slide}
+## Time integration: Pressure projection scheme {.pressure-iteration-slide}
 
 ::: {.slide-layout}
 
@@ -488,7 +488,7 @@ $$\nabla\cdot\left[\nabla\left(\frac{\tilde{\boldsymbol{p}}}{\rho}\right)-\tilde
 
 :::
 
-## Poisson equation : Spatial discretization {.structured-grids-slide}
+## Poisson equation: Spatial discretization {.structured-grids-slide}
 
 ::: {.slide-layout}
 
@@ -591,7 +591,7 @@ $$u^{n+1}_{\mathrm{I,J}}=u^{n}_{\mathrm{I,J}}-\Delta t\left(F^{n}_{Ax,\mathrm{I,
 
 :::
 
-## Poisson equation : Spatial discretization {.fd-laplacian-slide}
+## Poisson equation: Spatial discretization {.fd-laplacian-slide}
 
 ::: {.slide-layout}
 
@@ -698,7 +698,7 @@ $$\nabla^{2}H=\nabla\cdot\nabla H\cong
 
 :::
 
-## Poisson equation : Spatial discretization {.stencil-slide}
+## Poisson equation: Spatial discretization {.stencil-slide}
 
 ::: {.slide-layout}
 
@@ -777,7 +777,7 @@ $h$
 
 :::
 
-## Poisson equation : Spatial discretization {.discrete-system-slide}
+## Poisson equation: Spatial discretization {.discrete-system-slide}
 
 ::: {.slide-layout}
 
@@ -868,7 +868,7 @@ Sparsity pattern for 6x6 grid.
 
 :::
 
-## Poisson equation : Spatial discretization {.bc-dirichlet-slide}
+## Poisson equation: Spatial discretization {.bc-dirichlet-slide}
 
 ::: {.slide-layout}
 
@@ -925,7 +925,7 @@ Change in A diagonal entry.
 
 :::
 
-## Poisson equation : Spatial discretization {.bc-neumann-slide}
+## Poisson equation: Spatial discretization {.bc-neumann-slide}
 
 ::: {.slide-layout}
 

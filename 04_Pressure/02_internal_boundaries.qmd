@@ -7,13 +7,13 @@ Unstructured meshes.
 
 FFT and ULMAT (PARDISO, HYPRE) Poisson Solvers – local single mesh. Velocity error in internal boundaries.
 
-Example 1 : Single mesh case.
+Example 1: Single mesh case.
 
 Unstructured discretization via cut-cell method - GEOMs in FDS.
 
 Unstructured Poisson solve on cut cells.
 
-Example 2 : Mass balance for sphere source.
+Example 2: Mass balance for sphere source.
 :::
 
 ## Structured meshes – Immersed Boundary Method {.ibm-intro-slide}
@@ -21,7 +21,7 @@ Example 2 : Mass balance for sphere source.
 ::: {.slide-layout}
 
 ::: {.sub-head}
-Boundary representation in structured meshes : Immersed boundary methods\*
+Boundary representation in structured meshes: Immersed boundary methods\*
 :::
 
 ::: {.body}
@@ -32,15 +32,15 @@ Boundary representation in structured meshes : Immersed boundary methods\*
 ::: {.force}
 Immersed Boundary Force defined in:
 
-- Continuous governing equations^+^ : IBM.
-- Discrete governing equations^o,x,^^ : Discrete Forcing IBM.
+- Continuous governing equations^+^: IBM.
+- Discrete governing equations^o,x,^^: Discrete Forcing IBM.
 :::
 
 ::: {.force2}
 Force is:
 
-- Computed on surface and spread on surrounding points^+,x^ : Diffuse Interface IBM.
-- Computed for each neighboring Cartesian point in the gas phase^o,#^ : Sharp interface IBM.
+- Computed on surface and spread on surrounding points^+,x^: Diffuse Interface IBM.
+- Computed for each neighboring Cartesian point in the gas phase^o,#^: Sharp interface IBM.
 :::
 
 ::: {.fig .fit}
@@ -474,7 +474,7 @@ $$\mathbf{Q}^{-1}=\mathbf{Q}^{T}$$
 :::
 
 ::: {.recast}
-Recast for all $\lambda_{i}$'s :
+Recast for all $\lambda_{i}$'s:
 :::
 
 ::: {.eqBig}
@@ -540,7 +540,7 @@ $$\mathbf{A}\boldsymbol{H}=\boldsymbol{R}$$
 :::
 
 ::: {.recast .dash-item}
-Recast for all $\lambda_{i}$'s :
+Recast for all $\lambda_{i}$'s:
 :::
 
 ::: {.eqAQ}
@@ -695,12 +695,12 @@ Fast trigonometric Solvers are the most efficient Poisson solvers for block-stru
 
 :::
 
-## Example 1 : Single Mesh Example using FFT, part (a). {.ex1-input-slide}
+## Example 1: Single Mesh Example using FFT, part (a). {.ex1-input-slide}
 
 ::: {.slide-layout}
 
 ::: {.file}
-**FDS Input file :** `Example_1.fds`{style='color:#222'}
+**FDS Input file:** `Example_1.fds`{style='color:#222'}
 :::
 
 ::: {.step}
@@ -725,12 +725,12 @@ Key FDS input file lines:
 
 :::
 
-## Example 1 : Single Mesh Example using FFT, part (a). {.ex1-default-slide}
+## Example 1: Single Mesh Example using FFT, part (a). {.ex1-default-slide}
 
 ::: {.slide-layout}
 
 ::: {.file}
-**FDS Input file :** `Example_1.fds`{style='color:#222'}
+**FDS Input file:** `Example_1.fds`{style='color:#222'}
 :::
 
 ::: {.step}
@@ -773,7 +773,7 @@ c. Run the case. The output file will be `Example_1_FFT.out`{style='color:#222'}
 
 :::
 
-## Example 1 : Single Mesh Example using FFT, part (a). {.ex1-stats-slide}
+## Example 1: Single Mesh Example using FFT, part (a). {.ex1-stats-slide}
 
 ::: {.slide-layout}
 
@@ -834,12 +834,12 @@ Run Time statistics (`Example_1_FFT.out` file):
 
 :::
 
-## Example 1 : Single Mesh Example using FFT, part (a). {.ex1-tol-slide}
+## Example 1: Single Mesh Example using FFT, part (a). {.ex1-tol-slide}
 
 ::: {.slide-layout}
 
 ::: {.file}
-**FDS Input file :** `Example_1.fds`{style='color:#222'}
+**FDS Input file:** `Example_1.fds`{style='color:#222'}
 :::
 
 ::: {.step}
@@ -1086,12 +1086,12 @@ Backward Substitution cost $\alpha N^{4/3}$ in 3D\*
 
 :::
 
-## Example 1 : Single Mesh Example using ULMAT PARDISO, part (b) {.ex1-ulmat-slide}
+## Example 1: Single Mesh Example using ULMAT PARDISO, part (b) {.ex1-ulmat-slide}
 
 ::: {.slide-layout}
 
 ::: {.file}
-**FDS Input file :** `Example_1.fds`{style='color:#222'}
+**FDS Input file:** `Example_1.fds`{style='color:#222'}
 :::
 
 ::: {.step}
@@ -1128,12 +1128,12 @@ Repeat steps **[a.]{style='color:#ff0000'}** **[b.]{style='color:#ff0000'}** **[
 
 :::
 
-## Example 1 : Single Mesh Example using ULMAT PARDISO, part (b) {.ex1-fillin-slide}
+## Example 1: Single Mesh Example using ULMAT PARDISO, part (b) {.ex1-fillin-slide}
 
 ::: {.slide-layout}
 
 ::: {.file}
-**FDS Input file :** `Example_1.fds`{style='color:#222'}
+**FDS Input file:** `Example_1.fds`{style='color:#222'}
 :::
 
 ::: {.step}
@@ -1186,7 +1186,7 @@ ULMAT HYPRE (Unstructured Local Matrix Solver)
 ::: {.body2}
 - Solution is essentially the same as with LU.
 - Solver can be slower than ULMAT PARDISO.
-- Memory : much more scalable for large problems.
+- Memory: much more scalable for large problems.
 :::
 
 ::: {.fig}
@@ -1199,12 +1199,12 @@ ULMAT HYPRE (Unstructured Local Matrix Solver)
 
 :::
 
-## Example 1 : Single Mesh Example using ULMAT HYPRE, part (c) {.ex1-hypre-slide}
+## Example 1: Single Mesh Example using ULMAT HYPRE, part (c) {.ex1-hypre-slide}
 
 ::: {.slide-layout}
 
 ::: {.file}
-**FDS Input file :** `Example_1.fds`{style='color:#222'}
+**FDS Input file:** `Example_1.fds`{style='color:#222'}
 :::
 
 ::: {.step}
@@ -1239,7 +1239,7 @@ Repeat steps **[a.]{style='color:#ff0000'}** **[b.]{style='color:#ff0000'}** **[
 ::: {.slide-layout}
 
 ::: {.body}
-**FFT :**
+**FFT:**
 
 - Exploits the space of solutions of the Poisson Equation.
 - Makes use of Fast trigonometric transforms.
@@ -1269,7 +1269,7 @@ Repeat steps **[a.]{style='color:#ff0000'}** **[b.]{style='color:#ff0000'}** **[
 ::: {.slide-layout}
 
 ::: {.sub-head}
-Boundary conforming : Cut-cell (embedded boundary) methods\*
+Boundary conforming: Cut-cell (embedded boundary) methods\*
 :::
 
 ::: {.body}
@@ -1445,7 +1445,7 @@ and
 :::
 
 ::: {.lab-lim}
-${\overline{[\rho Y_{\alpha}]}}^{fl}$ : Flux limited interpolation.
+${\overline{[\rho Y_{\alpha}]}}^{fl}$: Flux limited interpolation.
 :::
 
 ::: {.cutface1}
@@ -1601,7 +1601,7 @@ Steps:
 
 :::
 
-## Example 2 : Mass balance for sphere source. {.ex2-input-slide}
+## Example 2: Mass balance for sphere source. {.ex2-input-slide}
 
 ::: {.slide-layout}
 
@@ -1610,7 +1610,7 @@ Sphere blowing Propane (isothermal flow):
 :::
 
 ::: {.file}
-**FDS Input file :** `Example_2.fds`
+**FDS Input file:** `Example_2.fds`
 :::
 
 ::: {.body}
@@ -1672,7 +1672,7 @@ DIFFERENTIAL_GAIN
 
 :::
 
-## Example 2 : Mass balance for sphere source. {.ex2-devc-slide}
+## Example 2: Mass balance for sphere source. {.ex2-devc-slide}
 
 ::: {.slide-layout}
 
@@ -1754,7 +1754,7 @@ A
 
 :::
 
-## Example 2 : Mass balance for sphere source. {.ex2-balance-slide}
+## Example 2: Mass balance for sphere source. {.ex2-balance-slide}
 
 ::: {.slide-layout}
 

@@ -109,8 +109,12 @@
   line-height: 1.2;
 }
 
+/* Clear of the footer band. At the deck's own 1.5% the citation lands on top
+   of "FDS Fluid Solver: Pressure", which is only obvious on the longer ones --
+   the Chorin/Temam/Perot line on the projection scheme slide runs the full
+   width and straight through it. */
 .reveal .slides .footnote {
-  bottom: 1.5%;
+  bottom: 9%;
   font-size: 0.5em;
   left: 2%;
   line-height: 1.25;
@@ -214,7 +218,9 @@
 .reveal .slides .dc-expand   { color: #ff0000; }
 .reveal .slides .dc-uniform  { color: #92d050; }
 .reveal .slides .dc-compress { color: #0070c0; }
-.reveal .slides .dc-fig    { left: 64.2%; top: 47.3%; width: 28.0%; }
+/* 4.8 above the deck's own top: at 47.3 the figure runs to 96% and sits in
+   the footer band, beside the page number. */
+.reveal .slides .dc-fig    { left: 64.2%; top: 42.5%; width: 28.0%; }
 
 /* ---- Slide 010: Saddle point problem ------------------------------------ */
 /* The source groups each pair of equations with a tall left brace; \left\{ with
