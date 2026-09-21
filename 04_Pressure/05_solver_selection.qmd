@@ -1,0 +1,80 @@
+# Module V: Solver selection
+
+::: {.section-topics}
+Poisson solvers in FDS.
+
+Poisson solver selection tips.
+:::
+
+## Poisson Solvers in FDS: {.summary-table-slide}
+
+::: {.slide-layout}
+
+::: {.tbl .summary}
+<table>
+<thead>
+<tr>
+  <th rowspan="2" class="solver">Solver</th>
+  <th colspan="4">Allows</th>
+  <th colspan="3">Handling Errors</th>
+</tr>
+<tr>
+  <th>Refinement<sup>1</sup></th>
+  <th>Stretching</th>
+  <th>Add/Remove<sup>2</sup></th>
+  <th>Zones</th>
+  <th>Velocity @ Mesh<sup>3</sup></th>
+  <th>Velocity @ Solid<sup>4</sup></th>
+  <th>Inseparability<sup>5</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="solver">FFT (default)</td><td>✓</td><td>2 directions</td><td>✓</td><td>✓</td><td>iterative</td><td>iterative</td><td>iterative</td></tr>
+<tr><td class="solver">ULMAT PARDISO<sup>6</sup></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>iterative</td><td>exact</td><td>iterative</td></tr>
+<tr><td class="solver">ULMAT HYPRE<sup>7</sup></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>iterative</td><td>exact</td><td>iterative</td></tr>
+<tr><td class="solver">UGLMAT PARDISO</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>exact</td><td>exact</td><td>iterative</td></tr>
+<tr><td class="solver">UGLMAT HYPRE<sup>7,8</sup></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>exact</td><td>exact</td><td>iterative</td></tr>
+<tr><td class="solver">GLMAT</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>exact</td><td>iterative</td><td>iterative</td></tr>
+</tbody>
+</table>
+:::
+
+::: {.notes-block}
+**Notes:**
+
+<sup>1</sup> "Refinement" refers to allowing a change in mesh resolution for neighboring meshes.
+
+<sup>2</sup> "Add/Remove" refers to the ability of the solver to handle changes in geometry during the course of the simulation, either by adding or removing `OBST` or `GEOM` via `CTRL` functions.
+
+<sup>3</sup> "Velocity @ Mesh" refers to errors in the normal component of velocity at mesh boundaries, so-called "interpolated" boundaries in FDS. For inexact solvers, this error may be controlled using the parameter `VELOCITY_TOLERANCE`. Mass conservation errors are proportional to the velocity tolerance. Solvers listed as "exact" are *global* solvers. "Global" refers to a global matrix solution, one matrix for the whole domain, as opposed to one matrix per mesh. Thus, there are no mesh boundary errors for this type of solver.
+
+<sup>4</sup> "Velocity @ Solid" refers to errors in the normal component of velocity at solid boundaries, so-called "penetration" errors that are present in *immersed boundary methods* and lead to mass conservation errors. These errors are particularly important to control for tightly sealed pressure zones. For inexact solvers, this error may be controlled using the parameter `VELOCITY_TOLERANCE`. Mass conservation errors are proportional to the velocity tolerance. Solvers listed as "exact" are *unstructured* solvers. "Unstructured" means the solid boundaries (e.g., `OBST` boundaries) are treated as domain boundaries for the pressure Poisson equation. Unstructured solvers are the opposite of *immersed boundary methods*.
+
+<sup>5</sup> "Inseparability" refers to handling the error compared to the solution of the *inseparable* Poisson equation incurred by lagging the pressure in the baroclinic term. This error may be controlled using the parameter `PRESSURE_TOLERANCE`.
+
+<sup>6</sup> Default ULMAT solver, recommended number of cells per mesh less than 150,000.
+
+<sup>7</sup> ULMAT HYPRE and UGLMAT HYPRE use the HYPRE library developed at Lawrence Livermore National Laboratories (LLNL). Use this variant if the Intel MKL library is not available *or* if MKL runs out of memory or is too slow due to memory issues with large mesh blocks. Our implementation of HYPRE uses an algebraic multi-grid (AMG) preconditioned conjugate gradient (PCG) method, which does not require excessive amounts of memory.
+
+<sup>8</sup> Default UGLMAT solver, addresses cases where the total number of cells is greater than 1 million.
+:::
+
+::: {.source}
+FDS User's Guide, Table 21.1 (FDS-6.11.1).
+:::
+
+:::
+
+## Poisson Solver selection tips: {.selection-tips-slide}
+
+::: {.slide-layout}
+
+::: {.tbl .tips}
+| Case | Characteristics | Poisson Solver Option |
+|---|---|---|
+| External flow, fire plumes, smoke transport in large open compartments | Relatively forgiving about mesh interface and solid boundary errors | Use default FFT.<br>If needed increase velocity tolerance. |
+| Internal flows, complex geometrical scenarios, many potentially sealed compartments | Possibly high mesh interface and solid penetration errors when using IBM. | Increase velocity tolerance either with FFT or ULMAT. If problem/number of zones is small might consider UGLMAT. Large problem use UGLMAT HYPRE. |
+| Long sealed domains, tunnels. | Possibly high pressure fluctuations with large pressure fields between single steps. | Use tunnel preconditioner (FFT, or ULMAT if internal obstacles present).<br>Can also try UGLMAT. |
+:::
+
+:::
