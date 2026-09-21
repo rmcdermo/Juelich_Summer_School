@@ -52,18 +52,32 @@ by solver variant, `example_2` has nothing to rename. On macOS and Linux, a
 
 ```bash
 ./run.sh            # example_2
-./run.sh FFT        # example_1, labelling the run by solver variant
+./run.sh FFT        # example_1 and example_3, labelling the run by solver variant
+./run.sh FFT        # example_4 and example_5, where FFT names one of several
+                    # separate inputs
 ```
+
+`example_4` and `example_5` also have a `submit.sh`, which queues their runs as
+batch jobs, and `example_5` a `run_all.sh`, which does the same sequence one job
+at a time on the machine you are sitting at.
 
 ## Cases
 
-| case        | meshes / `-n` | runs in class | what it shows                                                         |
-| ----------- | ------------- | ------------- | --------------------------------------------------------------------- |
-| `example_1` | 1             | yes, seconds  | single mesh, flow past an obstacle; velocity error vs pressure solver |
-| `example_2` | 1             | yes, seconds  | cut-cell sphere with a specified mass flux; tracer mass conservation  |
+| case        | meshes / `-n` | runs in class | what it shows                                                          |
+| ----------- | ------------- | ------------- | ---------------------------------------------------------------------- |
+| `example_1` | 1             | yes, seconds  | single mesh, flow past an obstacle; velocity error vs pressure solver  |
+| `example_2` | 1             | yes, seconds  | cut-cell sphere with a specified mass flux; tracer mass conservation   |
+| `example_3` | 8             | yes, minutes  | duct across eight meshes; five solvers on flow, iterations and cost    |
+| `example_4` | 16            | no, cluster   | methane pool fire; same five solvers on cost and on predicted velocity |
+| `example_5` | 8             | no, hours     | fire in a sloped tunnel; the tunnel preconditioner, and UGLMAT         |
 
-The process count follows the number of `&MESH` lines in the input: a case with
-five meshes wants `mpirun -n 5`.
+The process count follows the number of meshes in the input: a case with five
+meshes wants `mpirun -n 5`. `example_4` and `example_5` reach theirs through a
+`&MULT` rather than a `&MESH` line each. Neither belongs in a classroom hour:
+`example_4` is two to sixteen hours a run on sixteen ranks, `example_5` a
+quarter of an hour to a couple of hours on eight. Both ship a `reference/` with
+every variant in it, so their figures can still be made on a laptop.
 
-Figures that appear on the slides live in `../Section_2_assets/`, not here, so
-the deck renders without anyone having run a case.
+Figures that appear on the slides live in `../Section_2_assets/`,
+`../Section_3_assets/` and `../Section_4_assets/`, not here, so the deck renders
+without anyone having run a case.
