@@ -1,0 +1,63 @@
+## Outline {.outline-slide}
+
+::: {.slide-layout}
+
+::: {.ol-l}
+**Module I — Time integration basics: Discretization**
+
+- Review of Low-Mach equations of fluid motion.
+- Time integration: pressure projection scheme.
+- Poisson equation: spatial discretization.
+
+**Module II — Dealing with internal boundaries**
+
+- Structured meshes, immersed boundary method, `OBST`s.
+- FFT and ULMAT solvers on a single mesh.
+- Unstructured meshes. Cut-cell method, `GEOM`s.
+- Examples 1–2: single mesh, sphere source.
+
+**Module III — Splitting the domain: parallel computing**
+
+- Spatial domain decomposition and parallelization.
+- Global solvers. UGLMAT. Intermesh error measures.
+- Examples 3–4: duct flow, fire plume.
+:::
+
+::: {.ol-r}
+**Module IV — Tunnels**
+
+- The tunnel preconditioner.
+- Example 5: tunnel fire case.
+
+**Module V — Solver selection**
+
+- Poisson solvers in FDS.
+- Solver selection tips.
+:::
+
+:::
+
+## What to take away from this class {.takeaway-slide}
+
+::: {.slide-layout}
+
+::: {.tk-need}
+**Need to know** — you should be able to answer:
+
+1. What are the model equations we are solving, and where does the pressure equation come from?
+2. What types of pressure solver does FDS have?
+3. What are the important parameters on the `&PRES` line?
+4. In which cases do we want a solver other than the default?
+:::
+
+::: {.tk-nice}
+**Nice to know** — if you want to go further:
+
+1. How is the pressure decomposed, and why does the inseparable part have to be lagged?
+2. How do you discretize the pressure equation on structured and on unstructured grids?
+3. Why is the FFT fast trigonometric solver "fast"?
+4. When is the PARDISO LU factorization solver faster than the HYPRE Preconditioned Conjugate Gradient solver?
+5. How does the FDS parallel speedup behave for MPI processes and OpenMP threads?
+:::
+
+:::

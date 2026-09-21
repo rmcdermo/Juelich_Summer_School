@@ -1,0 +1,42 @@
+/* ==================================================================
+   Front matter -- outline and takeaways. These two slides are ours,
+   not conversions: the deck opened with two agenda slides split by day
+   (Tuesday / Wednesday) rather than by module, and had nothing like
+   the takeaway slide.
+   The shared layout, heading and table rules live in custom.css.
+   ================================================================== */
+
+/* --- outline-slide --- */
+/* Two columns because five modules and fifteen topics do not fit one.
+   Modules I-III left, IV-V right, which is close to the deck's own split
+   across its two agenda slides. */
+.reveal .slides .outline-slide .ol-l { left: 3.5%; top: 12%; width: 52%;
+                                       font-size: 1.1em; }
+.reveal .slides .outline-slide .ol-r { left: 58%; top: 12%; width: 39%;
+                                       font-size: 1.1em; }
+/* The module names are the structure; the topics under them are indented
+   and set a shade lighter so the eye finds the five headings first. */
+.reveal .slides .outline-slide strong { color: #156082; }
+.reveal .slides .outline-slide p { margin: 0 0 0.35em; }
+.reveal .slides .outline-slide ul { margin: 0 0 1.1em 0; }
+.reveal .slides .outline-slide li { margin: 0 0 0.2em; color: #333; }
+.reveal .slides .outline-slide code { color: inherit; }
+
+/* --- takeaway-slide --- */
+/* Stacked, need-to-know first. Both are questions the student should be able
+   to answer coming out of the class, rather than statements -- which is what
+   makes the slide worth returning to at the end as well as setting it up at
+   the start, and reading them in order matters more than reading them against
+   each other. Wide enough that every question fits on one line: a numbered
+   list of questions is scanned rather than read, and a wrapped item reads as
+   two entries at a glance. Same 0.95em as the outline slide before it. */
+.reveal .slides .takeaway-slide .tk-need { left: 3.5%; top: 13%; width: 93%;
+                                           font-size: 0.95em; }
+.reveal .slides .takeaway-slide .tk-nice { left: 3.5%; top: 50%; width: 93%;
+                                           font-size: 0.95em; }
+.reveal .slides .takeaway-slide .tk-need strong { color: #ff0000; }
+.reveal .slides .takeaway-slide .tk-nice strong { color: #156082; }
+.reveal .slides .takeaway-slide p { margin: 0 0 0.5em; font-size: 1.15em; }
+.reveal .slides .takeaway-slide li { margin: 0 0 0.7em; }
+.reveal .slides .takeaway-slide ol { margin: 0.2em 0 0 0; padding-left: 1.2em; }
+.reveal .slides .takeaway-slide code { color: inherit; }
