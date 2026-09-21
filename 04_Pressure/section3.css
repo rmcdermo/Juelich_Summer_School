@@ -1,0 +1,210 @@
+/* ==================================================================
+   Module III -- Splitting the domain in several mesh blocks (source
+   slides 51-70). Hand-maintained; per-slide positions only.
+   The shared layout, heading and table rules live in custom.css.
+   ================================================================== */
+
+/* Editing notes, for anyone changing a position here.
+
+   Positions are percentages of the 1600x900 canvas and match the source
+   deck's own shape coordinates, with two adjustments that are not visible in
+   the numbers themselves:
+
+   1. Picture blocks sit 1.39 ABOVE the deck's top. Quarto wraps an image in a
+      <p>, and that paragraph's leading pushes the picture down by 1.39% of
+      the canvas. So a figure the deck places at top 30.4 is written here as
+      29.01. A block carrying .fit cancels the leading itself (line-height: 0
+      in custom.css) and takes the deck's top unadjusted.
+
+   2. Font sizes are about 84% of the deck's points, which is what matches
+      line lengths in this font -- the deck is set in Aptos, which is not
+      installed. 14pt -> 0.7em, 16pt -> 0.8em, 18pt -> 0.9em, 20pt -> 1.0em,
+      24pt -> 1.2em, 28pt -> 1.4em. 1em is 28px on this canvas.
+
+   Nudging something is one number. Adding a new picture means remembering
+   point 1; adding new text means point 2. */
+
+/* --- decomp-why-slide --- */
+.reveal .slides .decomp-why-slide .body { left: 3.4%; top: 18.2%; width: 61%; font-size: 1em; }
+.reveal .slides .decomp-why-slide .body li, .reveal .slides .decomp-why-slide .body > p { margin-bottom: 0.35em; }
+.reveal .slides .decomp-why-slide .aim { left: 3.4%; top: 39%; width: 61%; font-size: 1em; }
+.reveal .slides .decomp-why-slide .body2 { left: 3.4%; top: 49.4%; width: 61%; font-size: 1em; }
+.reveal .slides .decomp-why-slide .body2 li, .reveal .slides .decomp-why-slide .body2 > p { margin-bottom: 0.35em; }
+.reveal .slides .decomp-why-slide .fig { left: 66.9%; top: 9.99%; width: 32.9%; }
+.reveal .slides .decomp-why-slide .caption { left: 67%; top: 87.6%; width: 30.5%; text-align: center; }
+.reveal .slides .decomp-why-slide .caption mjx-container[display="true"] { text-align: center !important; }
+
+/* --- mpi-openmp-slide --- */
+.reveal .slides .mpi-openmp-slide .mpi { left: 1.4%; top: 23.1%; width: 61%; font-size: 1em; }
+.reveal .slides .mpi-openmp-slide .omp { left: 1.4%; top: 57.2%; width: 61%; font-size: 1em; }
+.reveal .slides .mpi-openmp-slide .fig { left: 62.8%; top: 15.21%; width: 34.9%; }
+.reveal .slides .mpi-openmp-slide .refs { left: 3.4%; top: 88.4%; width: 60%; font-size: 0.5em; line-height: 1.15; }
+
+/* --- parallel-req-slide --- */
+.reveal .slides .parallel-req-slide .req { left: 3.4%; top: 19.9%; width: 50%; font-size: 1em; }
+.reveal .slides .parallel-req-slide .req2 { left: 3.4%; top: 30.3%; width: 50%; font-size: 1em; }
+.reveal .slides .parallel-req-slide .req2 li, .reveal .slides .parallel-req-slide .req2 > p { margin-bottom: 0.35em; }
+.reveal .slides .parallel-req-slide .serial { left: 3.4%; top: 50.3%; width: 50%; font-size: 1em; }
+.reveal .slides .parallel-req-slide .serial2 { left: 3.4%; top: 60.7%; width: 50%; font-size: 1em; }
+.reveal .slides .parallel-req-slide .serial2 li, .reveal .slides .parallel-req-slide .serial2 > p { margin-bottom: 0.35em; }
+.reveal .slides .parallel-req-slide .fig { left: 53.36%; top: 37.26%; width: 46.64%; }
+.reveal .slides .parallel-req-slide .limit { left: 7%; top: 80.8%; width: 88.1%; font-size: 1.2em; color: #ff0000; }
+.reveal .slides .parallel-req-slide .limit code { color: inherit; }
+
+/* --- speedup-slide --- */
+/* Both assets were trimmed to their ink (trim_svg.py for the SVG, a PIL crop
+   for the PNG), which is what lets the two boxes share a top: the deck offset
+   them by 1.9 to compensate for the white space each carried above its axes,
+   and that space is gone. It is also why lab-np is 1em rather than the deck's
+   16pt/0.8em -- at 47 wide with a trimmed viewBox the figure's own text is
+   1.24x the deck's, and the label has to match the axis title it follows. */
+.reveal .slides .speedup-slide .limit { left: 9%; top: 14%; width: 86.4%; font-size: 1.2em; color: #ff0000; }
+.reveal .slides .speedup-slide .limit code { color: inherit; }
+.reveal .slides .speedup-slide .fig-l { left: 2%; top: 20.11%; width: 47%; height: 59.9%; }
+.reveal .slides .speedup-slide .lab-np { left: 33.9%; top: 76.2%; width: 14%; font-size: 1em; }
+.reveal .slides .speedup-slide .fig-r { left: 50%; top: 20.11%; width: 47%; }
+
+/* --- split-mesh-slide --- */
+.reveal .slides .split-mesh-slide .lead { left: 3.4%; top: 14.2%; width: 47.8%; font-size: 1em; }
+.reveal .slides .split-mesh-slide .mesh { left: 6.2%; top: 19.7%; width: 59.6%; font-size: 0.8em; line-height: 1.15; }
+.reveal .slides .split-mesh-slide .mesh, .reveal .slides .split-mesh-slide .mesh th, .reveal .slides .split-mesh-slide .mesh td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .split-mesh-slide .fig { left: 21.7%; top: 22.41%; width: 59.3%; height: 69.7%; }
+.reveal .slides .split-mesh-slide .lab-cut { left: 51.9%; top: 29%; width: 27.4%; font-size: 1em; }
+.reveal .slides .split-mesh-slide .lab-ghost { left: 79.3%; top: 43.3%; width: 16.3%; font-size: 1em; }
+
+/* --- mesh-boundaries-slide --- */
+.reveal .slides .mesh-boundaries-slide .lead { left: 3.4%; top: 14.2%; width: 47.8%; font-size: 1em; }
+.reveal .slides .mesh-boundaries-slide .fig-l { left: 11%; top: 20.01%; width: 39%; }
+.reveal .slides .mesh-boundaries-slide .fig-r { left: 58.3%; top: 20.01%; width: 39.8%; }
+.reveal .slides .mesh-boundaries-slide .lab-imb { left: 47.2%; top: 30.8%; width: 13.9%; font-size: 1em; text-align: center; }
+.reveal .slides .mesh-boundaries-slide .lab-imb mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .mesh-boundaries-slide .lab-exch { left: 47.2%; top: 70.5%; width: 13.9%; font-size: 1em; text-align: center; }
+.reveal .slides .mesh-boundaries-slide .lab-exch mjx-container[display="true"] { text-align: center !important; }
+
+/* --- stencil-slide --- */
+.reveal .slides .stencil-slide .lead { left: 3.4%; top: 14.2%; width: 65.3%; font-size: 1em; }
+.reveal .slides .stencil-slide .fig { left: 3.4%; top: 18.61%; width: 44.4%; }
+.reveal .slides .stencil-slide .arr-bc { left: 37.5%; top: 47.72%; width: 10.29%; }
+.reveal .slides .stencil-slide .note { left: 47.8%; top: 43.6%; width: 51%; font-size: 1em; }
+.reveal .slides .stencil-slide .note li, .reveal .slides .stencil-slide .note > p { margin-bottom: 0.35em; }
+
+/* --- local-solvers-slide --- */
+.reveal .slides .local-solvers-slide .sub-head { left: 3.4%; top: 16.7%; width: 45%; }
+.reveal .slides .local-solvers-slide .iterate { left: 3.6%; top: 24.5%; width: 48.6%; font-size: 0.95em; }
+.reveal .slides .local-solvers-slide .tol { left: 3.6%; top: 40.5%; width: 53.4%; font-size: 0.8em; }
+.reveal .slides .local-solvers-slide .tol li, .reveal .slides .local-solvers-slide .tol > p { margin-bottom: 0.2em; }
+.reveal .slides .local-solvers-slide .tol ul { margin-bottom: 0.8em; }
+.reveal .slides .local-solvers-slide .fig { left: 35.99%; top: 23.52%; width: 62.08%; height: 67.06%; }
+.reveal .slides .local-solvers-slide .mask { left: 79.03%; top: 58.78%; width: 20.04%; height: 30.1%; }
+.reveal .slides .local-solvers-slide .ls1 { left: 36.89%; top: 57.48%; width: 7.3%; font-size: 0.8em; }
+.reveal .slides .local-solvers-slide .ls2 { left: 57.32%; top: 57.22%; width: 7.3%; font-size: 0.8em; }
+.reveal .slides .local-solvers-slide .ls3 { left: 57.32%; top: 24.67%; width: 7.3%; font-size: 0.8em; }
+.reveal .slides .local-solvers-slide .ls4 { left: 77.32%; top: 24.62%; width: 7.3%; font-size: 0.8em; }
+.reveal .slides .local-solvers-slide .br-top { left: 67.75%; top: 18.52%; width: 31.32%; }
+.reveal .slides .local-solvers-slide .br-right { left: 98.47%; top: 19%; width: 1.2%; }
+.reveal .slides .local-solvers-slide .br-bot { left: 67.75%; top: 94.17%; width: 31.32%; }
+.reveal .slides .local-solvers-slide .br-in { left: 67.37%; top: 19.03%; width: 1.2%; }
+.reveal .slides .local-solvers-slide .br-out { left: 67.26%; top: 90%; width: 1.2%; }
+.reveal .slides .local-solvers-slide .lab-iter { left: 77.32%; top: 11.79%; width: 22.85%; font-size: 1.2em; color: #215F9A; }
+.reveal .slides .local-solvers-slide .lab-iter code { color: inherit; }
+.reveal .slides .local-solvers-slide .arr-ib { left: 71.36%; top: 57.57%; width: 9.15%; }
+.reveal .slides .local-solvers-slide .lab-ib { left: 80.51%; top: 66.75%; width: 14.89%; font-size: 1em; color: #215F9A; }
+.reveal .slides .local-solvers-slide .lab-ib code { color: inherit; }
+.reveal .slides .local-solvers-slide .arr-sb { left: 33.66%; top: 75.43%; width: 9.69%; }
+.reveal .slides .local-solvers-slide .lab-sb { left: 18.55%; top: 77.48%; width: 14.89%; font-size: 1em; text-align: center; color: #215F9A; }
+.reveal .slides .local-solvers-slide .lab-sb code { color: inherit; }
+.reveal .slides .local-solvers-slide .lab-sb mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .local-solvers-slide .refs { left: 3.6%; top: 93.9%; width: 34.1%; font-size: 0.65em; }
+
+/* --- global-direct-slide --- */
+.reveal .slides .global-direct-slide .sub-head { left: 3.4%; top: 16.7%; width: 45%; }
+.reveal .slides .global-direct-slide .steps { left: 3.4%; top: 23.9%; width: 53.4%; font-size: 0.8em; }
+.reveal .slides .global-direct-slide .steps li, .reveal .slides .global-direct-slide .steps > p { margin-bottom: 0.15em; }
+.reveal .slides .global-direct-slide .call { left: 3.4%; top: 35.6%; width: 53.4%; font-size: 1em; }
+.reveal .slides .global-direct-slide .pres-g { left: 5.4%; top: 48%; width: 50.5%; font-size: 0.9em; line-height: 1.15; color: #ff0000; }
+.reveal .slides .global-direct-slide .pres-g code { color: inherit; }
+.reveal .slides .global-direct-slide .pres-g, .reveal .slides .global-direct-slide .pres-g th, .reveal .slides .global-direct-slide .pres-g td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .global-direct-slide .note-g { left: 6.5%; top: 58.9%; width: 30.6%; font-size: 0.8em; }
+.reveal .slides .global-direct-slide .pres-u { left: 5.4%; top: 69.4%; width: 50.5%; font-size: 0.9em; line-height: 1.15; color: #ff0000; }
+.reveal .slides .global-direct-slide .pres-u code { color: inherit; }
+.reveal .slides .global-direct-slide .pres-u, .reveal .slides .global-direct-slide .pres-u th, .reveal .slides .global-direct-slide .pres-u td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .global-direct-slide .note-u { left: 6.7%; top: 82.6%; width: 30.6%; font-size: 0.8em; }
+.reveal .slides .global-direct-slide .fig { left: 40.4%; top: 19.91%; width: 58.5%; }
+
+/* --- global-hypre-slide --- */
+.reveal .slides .global-hypre-slide .sub-head { left: 3.4%; top: 16.7%; width: 45%; }
+.reveal .slides .global-hypre-slide .call { left: 3.4%; top: 28.3%; width: 53.4%; font-size: 1em; }
+.reveal .slides .global-hypre-slide .pres-g { left: 10.2%; top: 36.8%; width: 50.5%; font-size: 1em; color: #ff0000; }
+.reveal .slides .global-hypre-slide .pres-g code { color: inherit; }
+.reveal .slides .global-hypre-slide .pres-g, .reveal .slides .global-hypre-slide .pres-g th, .reveal .slides .global-hypre-slide .pres-g td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .global-hypre-slide .note-g { left: 6.7%; top: 45%; width: 64.3%; font-size: 0.8em; }
+.reveal .slides .global-hypre-slide .pres-u { left: 10.2%; top: 54.4%; width: 50.5%; font-size: 1em; color: #ff0000; }
+.reveal .slides .global-hypre-slide .pres-u code { color: inherit; }
+.reveal .slides .global-hypre-slide .pres-u, .reveal .slides .global-hypre-slide .pres-u th, .reveal .slides .global-hypre-slide .pres-u td { font-family: var(--r-code-font, monospace); }
+.reveal .slides .global-hypre-slide .note-u { left: 6.7%; top: 65.8%; width: 74.8%; font-size: 0.8em; }
+.reveal .slides .global-hypre-slide .note-u li, .reveal .slides .global-hypre-slide .note-u > p { margin-bottom: 0.3em; }
+
+/* --- pressit-slide --- */
+.reveal .slides .pressit-slide .sub-head { left: 3.4%; top: 17.5%; width: 45%; }
+.reveal .slides .pressit-slide .fig-dump { left: 42%; top: 14.01%; width: 45.4%; }
+.reveal .slides .pressit-slide .lead { left: 3.4%; top: 30.4%; width: 65.3%; font-size: 1em; }
+.reveal .slides .pressit-slide .fig { left: 0%; top: 38.31%; width: 99.9%; }
+
+/* --- ex3-input-slide --- */
+.reveal .slides .ex3-input-slide .file { left: 5%; top: 15.9%; width: 39.3%; font-size: 1em; }
+.reveal .slides .ex3-input-slide .body { left: 3.4%; top: 22.4%; width: 45.5%; font-size: 1em; }
+.reveal .slides .ex3-input-slide .body li, .reveal .slides .ex3-input-slide .body > p { margin-bottom: 0.3em; }
+.reveal .slides .ex3-input-slide .ask { left: 3.9%; top: 46.5%; width: 42.5%; font-size: 1.2em; color: #ff0000; }
+.reveal .slides .ex3-input-slide .ask code { color: inherit; }
+.reveal .slides .ex3-input-slide .runs { left: 3.4%; top: 64.4%; width: 42.5%; font-size: 1em; }
+.reveal .slides .ex3-input-slide .fig { left: 50.1%; top: 8.11%; width: 46.6%; }
+.reveal .slides .ex3-input-slide .cases { left: 5%; top: 73.5%; width: 93%; font-size: 0.85em; line-height: 1.15; }
+
+/* --- ex3-meshes-slide --- */
+.reveal .slides .ex3-meshes-slide .lab-l { left: 7.4%; top: 16.5%; width: 44%; font-size: 1em; }
+.reveal .slides .ex3-meshes-slide .lab-r { left: 54%; top: 16.7%; width: 44%; font-size: 1em; }
+.reveal .slides .ex3-meshes-slide .fig-l { left: 5.9%; top: 24.61%; width: 44%; }
+.reveal .slides .ex3-meshes-slide .fig-r { left: 53.1%; top: 24.41%; width: 44%; }
+.reveal .slides .ex3-meshes-slide .circ { left: 89.9%; top: 29.9%; width: 6%; }
+
+/* --- ex3-solvers-slide --- */
+.reveal .slides .ex3-solvers-slide .lab-l { left: 19.5%; top: 16.4%; width: 14%; font-size: 1em; text-align: center; }
+.reveal .slides .ex3-solvers-slide .lab-l mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ex3-solvers-slide .lab-r { left: 65.6%; top: 16.3%; width: 15.7%; font-size: 1em; text-align: center; }
+.reveal .slides .ex3-solvers-slide .lab-r mjx-container[display="true"] { text-align: center !important; }
+.reveal .slides .ex3-solvers-slide .fig-l { left: 4%; top: 18.51%; width: 45%; }
+.reveal .slides .ex3-solvers-slide .fig-r { left: 51%; top: 18.51%; width: 45%; }
+.reveal .slides .ex3-solvers-slide .note { left: 14.6%; top: 86.2%; width: 77.6%; font-size: 1.2em; }
+
+/* --- ex3-iterations-slide --- */
+.reveal .slides .ex3-iterations-slide .fig { left: 15%; top: 8.11%; width: 65.3%; }
+.reveal .slides .ex3-iterations-slide .lab-f1 { left: 58%; top: 25.2%; width: 8.7%; font-size: 0.9em; }
+.reveal .slides .ex3-iterations-slide .lab-u { left: 58.1%; top: 68.4%; width: 8.5%; font-size: 0.9em; }
+
+/* --- ex3-cost-slide --- */
+.reveal .slides .ex3-cost-slide .fig { left: 20.7%; top: 10.61%; width: 58.6%; }
+.reveal .slides .ex3-cost-slide .lab-f { left: 29%; top: 40.7%; width: 18.7%; font-size: 0.9em; }
+.reveal .slides .ex3-cost-slide .arr-f { left: 30%; top: 48%; width: 3%; }
+.reveal .slides .ex3-cost-slide .lab-g { left: 46%; top: 17.6%; width: 21%; font-size: 0.9em; }
+.reveal .slides .ex3-cost-slide .arr-g1 { left: 61.5%; top: 23.5%; width: 8.9%; }
+.reveal .slides .ex3-cost-slide .arr-g2 { left: 61.5%; top: 23.5%; width: 8.9%; }
+
+/* --- ex4-input-slide --- */
+.reveal .slides .ex4-input-slide .files { left: 5%; top: 15.9%; width: 43.5%; font-size: 0.9em; line-height: 1.15; }
+.reveal .slides .ex4-input-slide .body { left: 5%; top: 47%; width: 39.3%; font-size: 0.9em; }
+.reveal .slides .ex4-input-slide .body li, .reveal .slides .ex4-input-slide .body > p { margin-bottom: 0.3em; }
+.reveal .slides .ex4-input-slide .ask { left: 7%; top: 78%; width: 42.5%; font-size: 1.2em; color: #ff0000; }
+.reveal .slides .ex4-input-slide .ask code { color: inherit; }
+.reveal .slides .ex4-input-slide .fig { left: 43.7%; top: 6.91%; width: 55.2%; }
+
+/* --- ex4-iterations-slide --- */
+.reveal .slides .ex4-iterations-slide .fig { left: 1%; top: 18.61%; width: 98%; }
+.reveal .slides .ex4-iterations-slide .lab-l { left: 4.5%; top: 78.5%; width: 24.4%; font-size: 0.9em; }
+.reveal .slides .ex4-iterations-slide .lab-r { left: 58%; top: 78.5%; width: 40%; font-size: 0.9em; }
+
+/* --- ex4-profiles-slide --- */
+.reveal .slides .ex4-profiles-slide .lead { left: 5%; top: 16.5%; width: 39.3%; font-size: 1em; }
+.reveal .slides .ex4-profiles-slide .fig { left: 10%; top: 21.61%; width: 80%; }
+/* Wider than the deck's 40.3: the line now names the point it is making
+   and would otherwise wrap. */
+.reveal .slides .ex4-profiles-slide .note { left: 5%; top: 83%; width: 62%; font-size: 1em; }

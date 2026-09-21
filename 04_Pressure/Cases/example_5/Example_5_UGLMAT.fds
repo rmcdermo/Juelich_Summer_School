@@ -1,0 +1,49 @@
+! Example 5 : eight meshes, a fire in a sloped tunnel.
+! 128 m of tunnel, 4 m square in section, at 20 cm resolution: eight meshes of
+! 80x20x20 cells, 256k cells, 30 s of simulated time. Air enters at 5 m/s at
+! x=0 and the far end is open. The slope is put in through gravity rather than
+! through the mesh -- GVEC is rotated 10 degrees about y, so the tunnel stays
+! aligned with the grid and the domain stays a box.
+! An 8 MW fire sits 40 m in: a 2 m x 2 m vent at 2000 kW/m2.
+!
+! - The unstructured global solver, at its defaults. One matrix for all
+!   eight meshes means no velocity error at the mesh boundaries.
+! ----------------------------------------------------------------------
+&HEAD CHID='Example_5_UGLMAT', TITLE='Fire in a sloped tunnel' /
+
+&TIME T_END=30. /
+
+&MESH IJK=80,20,20, XB=0.0,16.0,-2.0,2.0,0.0,4.0, MULT_ID='mesh' /
+&MULT ID='mesh', DX=16., I_UPPER=7 / ! 8 meshes from 0 to 7 offset 16. m in x.
+
+! Gravity vector, rotated 10 degrees about y to slope the tunnel:
+&MISC GVEC=-1.70,0.0,-9.65 /
+
+&PRES SOLVER='UGLMAT' /
+
+&REAC FUEL='PROPANE', SOOT_YIELD=0.015 /
+
+! Boundary conditions:
+&SURF ID='Inlet', VEL=-5 /
+&SURF ID='fire', COLOR='RED', HRRPUA=2000.0 /
+&VENT SURF_ID='Inlet', XB=0.,0.,-2.0,2.0,0.0,4.0, COLOR='BLUE' /
+&VENT SURF_ID='fire', XB=40.,42.,-1.0,1.0,0.0,0.0, COLOR='RED' /
+&VENT SURF_ID='OPEN', PBX=128.0 /
+
+! Output:
+&SLCF QUANTITY='TEMPERATURE', VECTOR=.TRUE., PBY=0. /
+&SLCF QUANTITY='H', CELL_CENTERED=.TRUE., PBY=0. /
+
+! VELOCITY_ERROR_FILE writes a _pressit.csv alongside the usual output -- one
+! line per pressure iteration rather than one per time step, carrying the
+! velocity error and the pressure error and where in the domain each of them
+! is worst. That file, not _devc.csv, is what the velocity error against
+! iteration count figure is drawn from. FDS 6.10 and earlier called it
+! _vel_err.csv.
+&DUMP VELOCITY_ERROR_FILE=.TRUE. /
+
+&DEVC XYZ=0.5,0.5,0.5, QUANTITY='MAXIMUM VELOCITY ERROR', ID='error' /
+&DEVC XYZ=0.5,0.5,0.5, QUANTITY='PRESSURE ITERATIONS', ID='iter' /
+&DEVC XYZ=0.5,0.5,0.5, QUANTITY='CPU TIME', ID='cputime' /
+
+&TAIL /

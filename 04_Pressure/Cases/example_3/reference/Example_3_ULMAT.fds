@@ -1,0 +1,152 @@
+! Example 3 : eight meshes, flow around a duct that crosses every mesh boundary.
+!
+! The geometry is the FDS verification case Examples/Pressure_Solver/duct_flow.fds,
+! which is where the figures on the slides come from. Only the &PRES line and
+! the CHID differ.
+!
+! Study input file:
+!   - Eight meshes, written as one &MESH and a &MULT that repeats it twice in
+!     each direction: 16^3 cells of 0.2 m, 6.4 m to a side.
+!   - The duct is built from thin plates -- each &OBST below has one dimension
+!     of zero thickness, so FDS makes it one cell thick. Trace the 1 m x 1 m
+!     path: along +x low down, around to +y, back along -x, up the riser, and
+!     the same circuit again on the upper level.
+!   - Every leg of that path crosses an internal mesh boundary, at x, y or
+!     z = 3.0 m. Which leg crosses which?
+!   - The flow is driven by an &HVAC fan inside the duct, not by an inlet vent:
+!     it takes 1 m3/s off the x=1.0 face of a short block and blows it back in
+!     at x=1.1.
+!   - All six domain boundaries are OPEN. That is what makes the exercise work:
+!     the two flow devices only see what leaks through the duct walls if the
+!     leak has somewhere to go.
+!
+! Part a:
+! Run the case. Open Smokeview:
+!   - Load the velocity slices. Does the flow stay in the duct?
+!   - Load the VELOCITY ERROR boundary slice. Where is the error largest?
+! Open results/Example_3_FFT_devc.csv:
+!   - how do flow_in and flow_out compare once the flow is developed?
+!
+! Part b:
+! Work down the five &PRES lines below, one run each, and compare:
+!   - volume flow in vs out          (python eval.py flow)
+!   - pressure iterations and error  (python eval.py iterations)
+!   - wall clock time per step       (python eval.py cost)
+!
+----------------------------------------------------------------------------------------------
+
+&HEAD CHID='Example_3_ULMAT', TITLE='Flow through a duct across eight meshes.' /
+
+! 2 x 2 x 2 meshes of 16^3 cells, 0.2 m resolution, 6.4 m to a side.
+! One MPI process per mesh: mpirun -n 8.
+&MESH IJK=16,16,16, XB=-.2,3.0,-.2,3.0,-.2,3.0, MULT_ID='mesh' /
+&MULT ID='mesh', DX=3.2, DY=3.2, DZ=3.2, I_UPPER=1, J_UPPER=1, K_UPPER=1 /
+
+&TIME T_END=60.0 /
+&RADI RADIATION=.FALSE. /
+&MISC STRATIFICATION=.FALSE. /
+
+! Exactly one of the five &PRES lines below is active. To switch solver, comment
+! the current one with a # and uncomment another, then pass the matching name to
+! run.sh. It reads the VARIANT tags below and refuses to run if the two disagree,
+! so a run can never be labelled with a solver it did not use.
+! FFT is the default solver, so the first line only makes it explicit.
+#&PRES SOLVER='FFT' /                                                          ! VARIANT=FFT
+&PRES SOLVER='ULMAT' /                                                       ! VARIANT=ULMAT
+#&PRES SOLVER='FFT', VELOCITY_TOLERANCE=0.001, MAX_PRESSURE_ITERATIONS=1000 / ! VARIANT=FFT_tight
+#&PRES SOLVER='GLMAT' /                                                       ! VARIANT=GLMAT
+#&PRES SOLVER='UGLMAT' /                                                      ! VARIANT=UGLMAT
+! Nothing here is sealed, so there is one pressure zone and the two global
+! solvers default to HYPRE: writing SOLVER='GLMAT HYPRE' or 'UGLMAT HYPRE'
+! gives output identical to the bare form above, and 'GLMAT PARDISO' /
+! 'UGLMAT PARDISO' does not. Do not go by the "Global Pressure solver" line in
+! the .out -- it names the Intel MKL Cluster Sparse Solver either way.
+
+&SURF ID='DUCT', COLOR='GRAY 30', TRANSPARENCY=0.5 /
+
+&OBST XB=1.0,1.1,1.0,2.0,1.0,2.0, SURF_ID='DUCT', COLOR='RED',TRANSPARENCY=0.5 /
+&VENT XB=1.0,1.0,1.0,2.0,1.0,2.0, SURF_ID='HVAC', ID='SUCK', COLOR='RED',TRANSPARENCY=0.5/
+&VENT XB=1.1,1.1,1.0,2.0,1.0,2.0, SURF_ID='HVAC', ID='BLOW', COLOR='RED',TRANSPARENCY=0.5/
+&HVAC TYPE_ID='NODE',ID='SUCK',VENT_ID='SUCK',DUCT_ID='FAN'/
+&HVAC TYPE_ID='NODE',ID='BLOW',VENT_ID='BLOW',DUCT_ID='FAN'/
+&HVAC TYPE_ID='DUCT',ID='FAN',NODE_ID='SUCK','BLOW',VOLUME_FLOW=1.,AREA=1./
+
+&OBST XB=1.1,5.0,1.0,1.0,1.0,2.0, SURF_ID='DUCT' /
+&OBST XB=1.1,4.0,2.0,2.0,1.0,2.0, SURF_ID='DUCT' /
+&OBST XB=1.1,5.0,1.0,2.0,1.0,1.0, SURF_ID='DUCT' /
+&OBST XB=1.1,5.0,1.0,2.0,2.0,2.0, SURF_ID='DUCT' /
+
+&OBST XB=5.0,5.0,1.0,5.0,1.0,2.0, SURF_ID='DUCT' /
+&OBST XB=4.0,4.0,2.0,4.0,1.0,2.0, SURF_ID='DUCT' /
+&OBST XB=4.0,5.0,2.0,5.0,1.0,1.0, SURF_ID='DUCT' /
+&OBST XB=4.0,5.0,2.0,5.0,2.0,2.0, SURF_ID='DUCT' /
+
+&OBST XB=1.0,4.0,4.0,4.0,1.0,2.0, SURF_ID='DUCT' /
+&OBST XB=1.0,5.0,5.0,5.0,1.0,2.0, SURF_ID='DUCT' /
+&OBST XB=1.0,4.0,4.0,5.0,1.0,1.0, SURF_ID='DUCT' /
+&OBST XB=2.0,4.0,4.0,5.0,2.0,2.0, SURF_ID='DUCT' /
+
+&OBST XB=1.0,1.0,4.0,5.0,1.0,5.0, SURF_ID='DUCT' /
+&OBST XB=2.0,2.0,4.0,5.0,2.0,4.0, SURF_ID='DUCT' /
+&OBST XB=1.0,2.0,4.0,4.0,2.0,4.0, SURF_ID='DUCT' /
+&OBST XB=1.0,2.0,5.0,5.0,2.0,4.0, SURF_ID='DUCT' /
+
+&OBST XB=1.0,5.0,1.0,1.0,4.0,5.0, SURF_ID='DUCT' /
+&OBST XB=1.0,4.0,2.0,2.0,4.0,5.0, SURF_ID='DUCT' /
+&OBST XB=1.0,5.0,1.0,2.0,4.0,4.0, SURF_ID='DUCT' /
+&OBST XB=1.0,5.0,1.0,2.0,5.0,5.0, SURF_ID='DUCT' /
+
+&OBST XB=5.0,5.0,1.0,5.0,4.0,5.0, SURF_ID='DUCT' /
+&OBST XB=4.0,4.0,2.0,4.0,4.0,5.0, SURF_ID='DUCT' /
+&OBST XB=4.0,5.0,2.0,5.0,4.0,4.0, SURF_ID='DUCT' /
+&OBST XB=4.0,5.0,2.0,5.0,5.0,5.0, SURF_ID='DUCT' /
+
+&OBST XB=1.0,4.0,4.0,4.0,4.0,5.0, SURF_ID='DUCT' /
+&OBST XB=1.0,5.0,5.0,5.0,4.0,5.0, SURF_ID='DUCT' /
+&OBST XB=2.0,4.0,4.0,5.0,4.0,4.0, SURF_ID='DUCT' /
+&OBST XB=1.0,4.0,4.0,5.0,5.0,5.0, SURF_ID='DUCT' /
+
+&VENT MB='XMIN', SURF_ID='OPEN' /
+&VENT MB='XMAX', SURF_ID='OPEN' /
+&VENT MB='YMIN', SURF_ID='OPEN' /
+&VENT MB='YMAX', SURF_ID='OPEN' /
+&VENT MB='ZMIN', SURF_ID='OPEN' /
+&VENT MB='ZMAX', SURF_ID='OPEN' /
+
+&SLCF PBY=1.5,QUANTITY='VELOCITY',VECTOR=.TRUE. /
+&SLCF PBY=1.5,QUANTITY='H' /
+
+&SLCF PBY=4.5,QUANTITY='VELOCITY',VECTOR=.TRUE. /
+&SLCF PBY=4.5,QUANTITY='H' /
+
+&SLCF PBZ=1.5,QUANTITY='VELOCITY',VECTOR=.TRUE. /
+&SLCF PBZ=1.5,QUANTITY='H' /
+
+&SLCF PBZ=4.5,QUANTITY='VELOCITY',VECTOR=.TRUE. /
+&SLCF PBZ=4.5,QUANTITY='H' /
+
+&BNDF QUANTITY='VELOCITY ERROR' /
+
+&DEVC XB=1.0,1.0,1.0,2.0,1.0,2.0, QUANTITY='U-VELOCITY', SPATIAL_STATISTIC='AREA INTEGRAL', QUANTITY_RANGE(1)=0, ID='flow_in' /
+&DEVC XB=1.0,1.0,1.0,2.0,4.0,5.0, QUANTITY='U-VELOCITY', SPATIAL_STATISTIC='AREA INTEGRAL', QUANTITY_RANGE(2)=0, ID='flow_out', CONVERSION_FACTOR=-1. /
+! flow_in and flow_out above are the verification case's own devices. Each
+! integrates only one sign of the velocity -- QUANTITY_RANGE keeps the outgoing
+! half of the plane and drops the rest -- so when a vortex passing the duct
+! mouth briefly draws air back in, that back-flow is left out of the integral
+! and flow_out reads above the fan even for a solver that is conserving volume
+! exactly. in_net and out_net add the plain signed integral over the same two
+! planes, which is the net volume crossing them and the quantity eval.py plots.
+&DEVC XB=1.0,1.0,1.0,2.0,1.0,2.0, QUANTITY='U-VELOCITY', SPATIAL_STATISTIC='AREA INTEGRAL', ID='in_net' /
+&DEVC XB=1.0,1.0,1.0,2.0,4.0,5.0, QUANTITY='U-VELOCITY', SPATIAL_STATISTIC='AREA INTEGRAL', ID='out_net', CONVERSION_FACTOR=-1. /
+
+&DEVC XYZ=0.,0.,0., QUANTITY='MAXIMUM VELOCITY ERROR', ID='error' /
+&DEVC XYZ=0.,0.,0., QUANTITY='PRESSURE ITERATIONS', ID='iter' /
+
+! flow_in and flow_out are the &DEVC lines above; error and iter give the two
+! panels of the iterations figure straight from the device file.
+! SIG_FIGS is the one addition to the verification case: at the default six,
+! flow_in and flow_out agree to every digit printed under the global solvers
+! and their machine-precision agreement cannot be told from a rounding error.
+&DUMP SIG_FIGS=15 /
+
+&TAIL /
