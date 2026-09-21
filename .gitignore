@@ -28,3 +28,7 @@
 *_hrr.csv
 *_steps.csv
 *_git.txt
+
+# Python bytecode from importing the case eval.py scripts as modules
+__pycache__/
+*.pyc
