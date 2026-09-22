@@ -717,7 +717,7 @@ $$
 
 ::: {.fire-tests-photo}
 
-![](figs/thermochemistry/video/fire-tests-real-materials.mp4){controls="true" poster="figs/thermochemistry/source/slide-020-media-01.png" preload="metadata" fig-alt="Upholstered-chair fire test with synchronized heat-release-rate and mass-loss measurements."}
+![](https://github.com/rmcdermo/Juelich_Summer_School/releases/download/2026/fire-tests-real-materials.mp4){controls="true" poster="figs/thermochemistry/source/slide-020-media-01.png" preload="metadata" fig-alt="Upholstered-chair fire test with synchronized heat-release-rate and mass-loss measurements."}
 
 :::
 
@@ -2103,7 +2103,7 @@ Examine the .out file for each case.
 
 ::: {.fds-propane-video}
 
-![](figs/thermochemistry/video/umd-line-burner.mp4){controls="true" playsinline="true" preload="metadata" poster="figs/thermochemistry/source/slide-052-media-01.png" fig-alt="FDS simulation of the University of Maryland propane line burner showing hot soot and carbon dioxide fields."}
+![](https://github.com/rmcdermo/Juelich_Summer_School/releases/download/2026/umd-line-burner.mp4){controls="true" playsinline="true" preload="metadata" poster="figs/thermochemistry/source/slide-052-media-01.png" fig-alt="FDS simulation of the University of Maryland propane line burner showing hot soot and carbon dioxide fields."}
 
 :::
 
