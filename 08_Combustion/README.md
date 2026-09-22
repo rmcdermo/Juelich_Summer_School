@@ -23,6 +23,7 @@ Quarto 1.x is required. The deck uses revealjs and loads MathJax from the config
 ## Source layout
 
 - `combustion.qmd` is the presentation entry point.
+- `examples/` contains the Python examples and FDS input cases, grouped by topic. Run each example from its own subfolder so relative data paths resolve correctly.
 - `00_overview.qmd` contains the rubric, outline, and reading list.
 - `01_thermochemistry.qmd`, `02_eddy_dissipation_concept.qmd`, `03_flame_extinction.qmd`, and `04_review.qmd` are the lecture sections.
 - `figs/` contains the extracted PPTX raster assets and reference-slide images. See `figs/ASSETS.md` for details.
