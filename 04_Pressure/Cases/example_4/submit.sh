@@ -47,7 +47,7 @@ for VARIANT in FFT FFT_tight ULMAT UGLMAT_PARDISO UGLMAT_HYPRE; do
 #SBATCH --chdir=$(pwd)/results
 
 export OMP_NUM_THREADS=1
-srun -n 16 fds ${INPUT}
+mpirun -n 16 fds ${INPUT}
 SLURM
   echo "queued ${VARIANT}"
 done

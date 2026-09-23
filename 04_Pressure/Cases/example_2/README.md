@@ -22,8 +22,18 @@ One process, because the input has one `&MESH`. Running from inside `results/`
 keeps everything the run produced in one place — including the copy of the input
 that produced it — rather than loose in the case directory.
 
-On Windows the same steps work from the command prompt, with `copy` in place of
-`cp`.
+On Windows, run the same steps from the CMDfds prompt the FDS installer
+creates — a plain command prompt does not have FDS on its path — with `copy`
+in place of `cp` and `mpiexec` in place of `mpirun`:
+
+```bat
+copy Example_2.fds results\
+cd results
+mpiexec -n 1 fds Example_2.fds
+```
+
+If `mpiexec` fails, `where mpiexec` should list the copy that came with FDS
+first; a Microsoft MPI installed alongside it can take its place.
 
 ### run.sh — macOS and Linux
 

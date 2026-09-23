@@ -695,6 +695,62 @@ Fast trigonometric Solvers are the most efficient Poisson solvers for block-stru
 
 :::
 
+## Running the class examples {.run-examples-slide}
+
+::: {.slide-layout}
+
+::: {.sub-head}
+Every example is run the same way:
+:::
+
+::: {.steps}
+1. **Go to the case:** `cd 04_Pressure/Cases/example_1`
+2. **Pick the solver:** leave one `&PRES` line active in `Example_1.fds`.\
+   [Examples 4–5 have one input file per solver instead.]{.aside}
+3. **Copy the input into `results/`, named for the solver:**\
+   `cp Example_1.fds results/Example_1_FFT.fds`\
+   `cd results`, set [`CHID`]{.red}`='Example_1_FFT'` — **[don't forget!]{.red}**
+4. **Run it, one MPI process per mesh:**\
+   `mpirun -n 1 fds Example_1_FFT.fds`
+5. **Look at it:** `Example_1_FFT.out`; `smokeview Example_1_FFT` from `results/`; `python eval.py` from the case directory for the plots.
+:::
+
+::: {.shortcut}
+*macOS / Linux: `./run.sh FFT` does steps 3 and 4, and stops if the active `&PRES` line is not the one you named.*
+
+*Windows: the same steps in the CMDfds prompt, `copy` for `cp` and `mpiexec` for `mpirun`.*
+:::
+
+::: {.sub-head2}
+Each case directory:
+:::
+
+::: {.tree}
+<pre>example_1/
+  Example_1.fds   <span>the input</span>
+  README.md       <span>exact steps, what to look for</span>
+  run.sh          <span>steps 3–4 for you</span>
+  eval.py         <span>plots, into plots/</span>
+  results/        <span>your runs</span>
+  reference/      <span>our runs, made before class</span></pre>
+:::
+
+::: {.tbl .cases}
+| Case | MPI `-n` | Runs in class? |
+|---|---|---|
+| `example_1` | 1 | yes, seconds |
+| `example_2` | 1 | yes, seconds |
+| `example_3` | 8 | yes, minutes |
+| `example_4` | 16 | no, cluster |
+| `example_5` | 8 | no, hours |
+:::
+
+::: {.fallback}
+No run of your own? `eval.py` falls back to `reference/`, so every figure can be made on a laptop.
+:::
+
+:::
+
 ## Example 1: Single Mesh Example using FFT, part (a). {.ex1-input-slide}
 
 ::: {.slide-layout}
@@ -744,11 +800,9 @@ Key FDS input file lines:
 :::
 
 ::: {.look}
-a. Copy `Example_1.fds`{style='color:#222'} to `results/Example_1_FFT.fds`{style='color:#222'}
-b. `cd results`{style='color:#222'}, change `CHID`{style='color:#ff0000'} to `'Example_1_FFT'`{style='color:#222'} — **[don't forget!]{style='color:#ff0000'}**
-c. Run the case. The output file will be `Example_1_FFT.out`{style='color:#222'}
+Run it with steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*](#running-the-class-examples), with `CHID`{style='color:#ff0000'}`='Example_1_FFT'`{style='color:#222'} — **[don't forget!]{style='color:#ff0000'}**
 
-*On macOS or Linux, `./run.sh FFT`{style='color:#222'} run from `example_1/`{style='color:#222'} does all three.*
+The output file will be `Example_1_FFT.out`{style='color:#222'}.
 :::
 
 ::: {.fig}
@@ -851,7 +905,7 @@ Run Time statistics (`Example_1_FFT.out` file):
 :::
 
 ::: {.redo}
-Repeat steps **[a.]{style='color:#ff0000'}** **[b.]{style='color:#ff0000'}** **[c.]{style='color:#ff0000'}** with `CHID='Example_1_FFT_tight'`{style='color:#222'}.
+Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*](#running-the-class-examples) with `CHID='Example_1_FFT_tight'`{style='color:#222'}.
 :::
 
 ::: {.ask}
@@ -1107,7 +1161,7 @@ Backward Substitution cost $\alpha N^{4/3}$ in 3D\*
 :::
 
 ::: {.redo}
-Repeat steps **[a.]{style='color:#ff0000'}** **[b.]{style='color:#ff0000'}** **[c.]{style='color:#ff0000'}** of part (a) with `CHID='Example_1_ULMAT_PARDISO'`{style='color:#222'}.
+Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*](#running-the-class-examples) with `CHID='Example_1_ULMAT_PARDISO'`{style='color:#222'}.
 :::
 
 ::: {.ask}
@@ -1216,7 +1270,7 @@ ULMAT HYPRE (Unstructured Local Matrix Solver)
 :::
 
 ::: {.redo}
-Repeat steps **[a.]{style='color:#ff0000'}** **[b.]{style='color:#ff0000'}** **[c.]{style='color:#ff0000'}** of part (a) with `CHID='Example_1_ULMAT_HYPRE'`{style='color:#222'}.
+Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*](#running-the-class-examples) with `CHID='Example_1_ULMAT_HYPRE'`{style='color:#222'}.
 :::
 
 ::: {.tbl}
@@ -1614,11 +1668,10 @@ Sphere blowing Propane (isothermal flow):
 :::
 
 ::: {.body}
-**Study input file:**
+**Study the input file, then run it** with steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*](#running-the-class-examples), keeping `CHID='Example_2'`:
 
 - The solver is set to `&PRES SOLVER='ULMAT PARDISO'`: why not FFT? The `ULMAT`/`UGLMAT` variants are commented out below it — try them.
 - How is our tracer defined? What species is it composed of?
-- Why do we set `RADIATION=F`?
 - How is the specified mass flux on sphere GEOM defined?
 - Devices, mass balance:
     - How do we account for tracer mass into the domain?

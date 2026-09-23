@@ -60,8 +60,19 @@ other, and nothing has to be renamed afterwards. Running from inside `results/`
 also keeps everything the run produced in one place — including the copy of the
 input that produced it — rather than loose in the case directory.
 
-On Windows the same four steps work from the command prompt, with `copy` in
-place of `cp`.
+On Windows, run the same four steps from the CMDfds prompt the FDS installer
+creates — a plain command prompt does not have FDS on its path — with `copy`
+in place of `cp` and `mpiexec` in place of `mpirun`:
+
+```bat
+copy Example_3.fds results\Example_3_FFT.fds
+cd results
+rem then set CHID='Example_3_FFT' in the copy
+mpiexec -n 8 fds Example_3_FFT.fds
+```
+
+If `mpiexec` fails, `where mpiexec` should list the copy that came with FDS
+first; a Microsoft MPI installed alongside it can take its place.
 
 Each run takes on the order of a minute; the tighter FFT and the global solvers
 take longer.

@@ -517,12 +517,14 @@ I
 
 <!-- The (I,J) marker on the 2D grid: a cell-centre dot with dashed leader lines
      out to the I and J labels. These are shapes drawn over the picture in the
-     deck, so they are not in the extracted PNG. -->
+     deck, so they are not in the extracted PNG. The dot is on the centre of
+     the cell between the PNG's grid lines x 248.1/285.0 and y 603.5/640.2
+     (of 1604x940); the I and J labels sit on its column and row. -->
 ::: {.sg-marker}
 <svg viewBox="0 0 192 126" role="presentation" aria-hidden="true">
-<line x1="34" y1="27" x2="134" y2="27" stroke="#1f4e79" stroke-width="2.5" stroke-dasharray="9 7"/>
-<line x1="138.6" y1="31" x2="138.6" y2="97" stroke="#1f4e79" stroke-width="2.5" stroke-dasharray="9 7"/>
-<circle cx="138.6" cy="27" r="7" fill="#1f3864"/>
+<line x1="34" y1="24.61" x2="141.68" y2="24.61" stroke="#1f4e79" stroke-width="2.5" stroke-dasharray="9 7"/>
+<line x1="146.28" y1="28.61" x2="146.28" y2="97" stroke="#1f4e79" stroke-width="2.5" stroke-dasharray="9 7"/>
+<circle cx="146.28" cy="24.61" r="7" fill="#1f3864"/>
 </svg>
 :::
 
