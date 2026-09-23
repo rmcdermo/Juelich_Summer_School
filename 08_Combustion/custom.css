@@ -5251,3 +5251,15 @@
 }
 .reveal .slides .initially-unmixed-source { left: 9%; top: 23%; width: 85%; font-size: 1.4em; }
 .reveal .slides .initially-unmixed-fuel { left: 9%; top: 63%; width: 85%; font-size: 1.4em; }
+
+/* Basic Eddy Dissipation Model: centered native equation. */
+.reveal .slides .edm-slide > h2 { text-align: left; }
+.reveal .slides .edm-equation {
+  font-size: 1.9em;
+  left: 5%;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  width: 90%;
+}
+.reveal .slides .edm-equation mjx-container[display="true"] { margin: 0 !important; }

@@ -472,9 +472,14 @@ $$
 
 :::
 
-## Basic Eddy Dissipation Model {.source-slide-title}
+## Basic Eddy Dissipation Concept (Eddy Dissipation Model – EDM) {#basic-eddy-dissipation-model .edm-slide}
 
-![](figs/reference-slides/slide-065.png){.reference-slide fig-align="center"}
+::: {.edm-equation}
+$$
+\overline{\dot{m}_{\mathrm{F}}^{\prime\prime\prime}}
+= -\rho\,\frac{\min\!\left(\widetilde{Y}_{\mathrm{F}},\widetilde{Y}_{\mathrm{A}}/s\right)}{\tau_{\mathrm{mix}}}
+$$
+:::
 
 ## Example: Heskestad Flame Height {.source-slide-title}
 
