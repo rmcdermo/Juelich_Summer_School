@@ -4999,3 +4999,50 @@
   white-space: nowrap;
   width: 38%;
 }
+
+/* Turbulent Batch Reactor Model: editable labels and MathJax equation. */
+.reveal .slides .tbr-slide > h2 { text-align: left; }
+.reveal .slides .tbr-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .tbr-layout > div { margin: 0; position: absolute; }
+.reveal .slides .tbr-layout p { margin: 0; }
+.reveal .slides .tbr-subtitle { left: 10%; top: 10%; font-size: 1.35em; }
+.reveal .slides .tbr-true-field { left: 27%; top: 20%; width: 21%; }
+.reveal .slides .tbr-idealized-field { left: 50%; top: 20%; width: 21%; }
+.reveal .slides .tbr-true-field img,
+.reveal .slides .tbr-idealized-field img,
+.reveal .slides .tbr-scale img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+.reveal .slides .tbr-true-label,
+.reveal .slides .tbr-idealized-label { color: white; top: 52%; font-size: 0.95em; }
+.reveal .slides .tbr-true-label { left: 28.4%; }
+.reveal .slides .tbr-idealized-label { left: 51.4%; }
+.reveal .slides .tbr-scale-label { left: 69.7%; top: 15.2%; font-size: 0.95em; }
+.reveal .slides .tbr-scale { left: 72%; top: 19.5%; width: 4.7%; }
+.reveal .slides .tbr-unmixed-label {
+  color: #5b9bd5;
+  font-size: 1.15em;
+  left: 27%;
+  text-align: center;
+  top: 60%;
+  width: 44%;
+}
+.reveal .slides .tbr-equation {
+  font-size: 1.6em;
+  left: 5%;
+  top: 67%;
+  width: 90%;
+}
+.reveal .slides .tbr-equation mjx-container[display="true"] { margin: 0 !important; }

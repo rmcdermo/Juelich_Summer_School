@@ -1,0 +1,279 @@
+# Module II: Eddy Dissipation Concept
+
+## Filtered Species Transport Equation {.filtered-species-slide}
+
+::: {.filtered-species-layout}
+
+::: {.filtered-species-equation}
+$$
+\frac{\partial\bar{\rho}\widetilde{Y}_{\alpha}}{\partial t}
++
+\frac{\partial\!\left(\bar{\rho}\widetilde{Y}_{\alpha}\widetilde{u}_{i}\right)}{\partial x_i}
+=
+\frac{\partial}{\partial x_i}
+\left(
+\left[\rho D_{\alpha}+\frac{\mu_t}{\mathrm{Sc}_t}\right]
+\frac{\partial\widetilde{Y}_{\alpha}}{\partial x_i}
+\right)
++
+{\color{red}\overline{\dot{m}_{\alpha}^{\prime\prime\prime}}}
+$$
+:::
+
+::: {.filtered-species-field-label}
+Filtered field:
+:::
+
+::: {.filtered-species-definition}
+$$
+\overline{\phi(\mathbf{x},t)}
+\equiv
+\int G(\mathbf{r};\Delta)\,\phi(\mathbf{x}+\mathbf{r},t)\,\mathrm{d}\mathbf{r}
+$$
+:::
+
+::: {.filtered-species-closure}
+In LES, the filtered chemical source term\
+is *unclosed*.
+:::
+
+::: {.filtered-species-kernel}
+![](figs/eddy_dissipation_concept/tophat-kernel.svg){fig-alt="Top-hat spatial filter kernel, equal to one for distances within half the filter width and zero elsewhere."}
+:::
+
+:::
+
+## The Eddy Dissipation Concept {.edc-concept-slide}
+
+::: {.edc-concept-layout}
+
+::: {.edc-concept-magnussen-photo}
+![](figs/eddy_dissipation_concept/bjorn-magnussen.png){fig-alt="Portrait of Professor Bjørn F. Magnussen."}
+:::
+
+::: {.edc-concept-magnussen-caption}
+Prof. Bjørn F. Magnussen,\
+founder and Chairman of\
+the Board at ComputIT
+:::
+
+::: {.edc-concept-citation}
+B.F. Magnussen, B.H. Hjertager: On Mathematical Modeling of Turbulent\
+Combustion with Special Emphasis on Soot Formation and Combustion. *16^th^ Symp.\
+(Int.) on Combustion* (1976). Comb. Inst., Pittsburg, Pennsylvania, pp.719-729, 1976.
+:::
+
+::: {.edc-concept-ertesvag-photo}
+![](figs/eddy_dissipation_concept/ivar-ertesvag.png){fig-alt="Portrait of Professor Ivar S. Ertesvåg."}
+:::
+
+::: {.edc-concept-ertesvag-caption}
+Prof. Ivar S. Ertesvåg\
+Norwegian University of\
+Science and Technology,\
+Trondheim
+:::
+
+::: {.edc-concept-paper}
+![](figs/eddy_dissipation_concept/panjwani-edc-les-paper.png){fig-alt="Excerpt from the 2010 paper Turbulence combustion closure model based on the Eddy dissipation concept for large eddy simulation."}
+
+::: {.edc-concept-paper-highlight aria-hidden="true"}
+:::
+:::
+
+::: {.edc-concept-paper-caption}
+Advances in Fluid Mechanics VIII, 2010
+:::
+
+:::
+
+## Turbulent Batch Reactor Model {.tbr-slide}
+
+::: {.tbr-layout}
+
+::: {.tbr-subtitle}
+FDS flavor of EDC
+:::
+
+::: {.tbr-true-field}
+![](figs/eddy_dissipation_concept/tbr-true-mass-fraction.png){fig-alt="True mass-fraction field with continuous turbulent mixing."}
+:::
+
+::: {.tbr-idealized-field}
+![](figs/eddy_dissipation_concept/tbr-idealized-mass-fraction.png){fig-alt="Idealized mass-fraction field with three discrete composition levels."}
+:::
+
+::: {.tbr-true-label}
+True
+:::
+
+::: {.tbr-idealized-label}
+Idealized
+:::
+
+::: {.tbr-scale-label}
+Mass Fraction
+:::
+
+::: {.tbr-scale}
+![](figs/eddy_dissipation_concept/tbr-mass-fraction-scale.png){fig-alt="Grayscale mass-fraction scale from zero, black, to one, white."}
+:::
+
+::: {.tbr-unmixed-label}
+$\zeta$: Unmixed fraction
+:::
+
+::: {.tbr-equation}
+$$
+\overline{\dot{m}_{\alpha}^{\prime\prime\prime}}
+= \rho \Biggl[
+{\color{#70ad47}\underbrace{
+  {\color{black}\frac{{\color{#5b9bd5}\zeta}}{\tau_{\mathrm{mix}}}
+  \left(\widehat{Y}_{\alpha}-\widetilde{Y}_{\alpha}^{0}\right)}
+}_{\text{Mixing}}}
++
+{\color{red}\underbrace{
+  {\color{black}\left(1-{\color{#5b9bd5}\zeta}\right)
+  \frac{\mathrm{d}\widehat{Y}_{\alpha}}{\mathrm{d}t}}
+}_{\text{Reaction}}}
+\Biggr]
+$$
+:::
+
+:::
+
+## The Unmixed Fraction {.source-slide-title}
+
+![](figs/reference-slides/slide-058.png){.reference-slide fig-align="center"}
+
+## Evolution of the Unmixed Fraction {.source-slide-title}
+
+![](figs/reference-slides/slide-059.png){.reference-slide fig-align="center"}
+
+## Unmixed Fraction FAQ {.source-slide-title}
+
+![](figs/reference-slides/slide-060.png){.reference-slide fig-align="center"}
+
+## Mixing Time Scale {.source-slide-title}
+
+![](figs/reference-slides/slide-061.png){.reference-slide fig-align="center"}
+
+## Exercise: Kolmogorov Scaling {.source-slide-title}
+
+![](figs/reference-slides/slide-062.png){.reference-slide fig-align="center"}
+
+## Limiting Case: Initially Mixed {.source-slide-title}
+
+![](figs/reference-slides/slide-063.png){.reference-slide fig-align="center"}
+
+## Limiting Case: Initially Unmixed {.source-slide-title}
+
+![](figs/reference-slides/slide-064.png){.reference-slide fig-align="center"}
+
+## Basic Eddy Dissipation Model {.source-slide-title}
+
+![](figs/reference-slides/slide-065.png){.reference-slide fig-align="center"}
+
+## Example: Heskestad Flame Height {.source-slide-title}
+
+![](figs/reference-slides/slide-066.png){.reference-slide fig-align="center"}
+
+## Optional module: PDF methods {.source-slide-title}
+
+![](figs/reference-slides/slide-067.png){.reference-slide fig-align="center"}
+
+## Turbulence-Chemistry Closure Problem {.source-slide-title}
+
+![](figs/reference-slides/slide-068.png){.reference-slide fig-align="center"}
+
+## Probability Density Functions {.source-slide-title}
+
+![](figs/reference-slides/slide-069.png){.reference-slide fig-align="center"}
+
+## Beta PDF {.source-slide-title}
+
+![](figs/reference-slides/slide-070.png){.reference-slide fig-align="center"}
+
+## Example: Dirac Delta Function {.source-slide-title}
+
+![](figs/reference-slides/slide-071.png){.reference-slide fig-align="center"}
+
+## Multiple Delta Functions {.source-slide-title}
+
+![](figs/reference-slides/slide-072.png){.reference-slide fig-align="center"}
+
+## Lots of Deltas {.source-slide-title}
+
+![](figs/reference-slides/slide-073.png){.reference-slide fig-align="center"}
+
+## Lots of Deltas: Random Distribution {.source-slide-title}
+
+![](figs/reference-slides/slide-074.png){.reference-slide fig-align="center"}
+
+## The First Moment {.source-slide-title}
+
+![](figs/reference-slides/slide-075.png){.reference-slide fig-align="center"}
+
+## The Second Central Moment {.source-slide-title}
+
+![](figs/reference-slides/slide-076.png){.reference-slide fig-align="center"}
+
+## Example: Computing the Variance {.source-slide-title}
+
+![](figs/reference-slides/slide-077.png){.reference-slide fig-align="center"}
+
+## Example: Computing the Variance, Continued {.source-slide-title}
+
+![](figs/reference-slides/slide-078.png){.reference-slide fig-align="center"}
+
+## Interaction by Exchange with the Mean {.source-slide-title}
+
+![](figs/reference-slides/slide-079.png){.reference-slide fig-align="center"}
+
+## Example: Evolution of the Variance with IEM {.source-slide-title}
+
+![](figs/reference-slides/slide-080.png){.reference-slide fig-align="center"}
+
+## Three Environment Subgrid PDF {.source-slide-title}
+
+![](figs/reference-slides/slide-081.png){.reference-slide fig-align="center"}
+
+## Three Environment Subgrid PDF: Definition {.source-slide-title}
+
+![](figs/reference-slides/slide-082.png){.reference-slide fig-align="center"}
+
+## Cell Integral Constraints {.source-slide-title}
+
+![](figs/reference-slides/slide-083.png){.reference-slide fig-align="center"}
+
+## Exercise: Check Cell Integral Constraints {.source-slide-title}
+
+![](figs/reference-slides/slide-084.png){.reference-slide fig-align="center"}
+
+## Exercise: Derive Formula for Subgrid Variance {.source-slide-title}
+
+![](figs/reference-slides/slide-085.png){.reference-slide fig-align="center"}
+
+## Relating Unmixed Fraction and SGS Variance {.source-slide-title}
+
+![](figs/reference-slides/slide-086.png){.reference-slide fig-align="center"}
+
+## Relating Unmixed Fraction and SGS Variance: Case 2 {.source-slide-title}
+
+![](figs/reference-slides/slide-087.png){.reference-slide fig-align="center"}
+
+## Relating Unmixed Fraction and SGS Variance: Case 3 {.source-slide-title}
+
+![](figs/reference-slides/slide-088.png){.reference-slide fig-align="center"}
+
+## Relating Unmixed Fraction and SGS Variance: Case 4 {.source-slide-title}
+
+![](figs/reference-slides/slide-089.png){.reference-slide fig-align="center"}
+
+## Relating Unmixed Fraction and SGS Variance: Summary {.source-slide-title}
+
+![](figs/reference-slides/slide-090.png){.reference-slide fig-align="center"}
+
+## Fokker--Planck Equation {.source-slide-title}
+
+![](figs/reference-slides/slide-091.png){.reference-slide fig-align="center"}
