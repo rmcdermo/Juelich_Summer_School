@@ -244,9 +244,12 @@ $t/\tau_{\mathrm{mix}}$
 
 :::
 
-## Unmixed Fraction FAQ {.source-slide-title}
+## Unmixed Fraction FAQ {.unmixed-faq-slide}
 
-![](figs/reference-slides/slide-060.png){.reference-slide fig-align="center"}
+- Is the unmixed fraction the same as the mixture fraction?
+- Is the unmixed fraction related to the mixture fraction?
+- Why not work in terms of the “mixed fraction”?
+- Is the unmixed fraction related to the subgrid variance?
 
 ## Mixing Time Scale {.source-slide-title}
 

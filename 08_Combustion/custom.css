@@ -5118,3 +5118,18 @@
 }
 .reveal .slides .unmixed-evolution-arrow-first { left: 35%; }
 .reveal .slides .unmixed-evolution-arrow-second { left: 63%; }
+
+/* Unmixed Fraction FAQ: native Markdown questions. */
+.reveal .slides .unmixed-faq-slide > h2 { text-align: left; }
+.reveal .slides .unmixed-faq-slide > ul {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin: 0;
+  padding-left: 1.1em;
+  position: absolute;
+  left: 10%;
+  top: 27%;
+  width: 82%;
+}
+.reveal .slides .unmixed-faq-slide > ul > li { margin-bottom: 0.5em; }
