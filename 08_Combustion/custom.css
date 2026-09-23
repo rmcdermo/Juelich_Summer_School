@@ -5340,14 +5340,48 @@
 .reveal .slides .example-files p { margin: 0; }
 .reveal .slides .example-files code { color: inherit; background: transparent; }
 .reveal .slides .westbrook-dryer-slide > .example-files { left: 6.2%; width: 61%; }
-.reveal .slides section.has-example-files img.reference-slide {
+.reveal .slides section.has-example-files > .quarto-figure {
   height: 75%;
   left: 5%;
   margin: 0;
-  max-height: none;
-  max-width: none;
-  object-fit: contain;
   position: absolute;
   top: 12%;
   width: 90%;
 }
+.reveal .slides section.has-example-files > .quarto-figure figure,
+.reveal .slides section.has-example-files > .quarto-figure p { height: 100%; margin: 0; }
+.reveal .slides section.has-example-files img.reference-slide {
+  height: 100%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: contain;
+  width: 100%;
+}
+
+/* Normal distribution: native equations and labels around plotted curves. */
+.reveal .slides .normal-pdf-slide > h2 { text-align: left; }
+.reveal .slides .normal-pdf-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .normal-pdf-layout > div { margin: 0; position: absolute; }
+.reveal .slides .normal-pdf-layout p { margin: 0; }
+.reveal .slides .normal-pdf-layout mjx-container[display="true"] { margin: 0 !important; text-align: left !important; }
+.reveal .slides .normal-pdf-label { font-size: 1.4em; left: 6%; top: 25%; }
+.reveal .slides .normal-pdf-equation { font-size: 1.3em; left: 6%; top: 39%; width: 46%; }
+.reveal .slides .normal-pdf-normalization { font-size: 1.55em; left: 6%; top: 62%; width: 46%; }
+.reveal .slides .normal-pdf-script { color: #888; font-size: 1em; left: 57%; top: 18%; width: 40%; text-align: center; }
+.reveal .slides .normal-pdf-plot { left: 53%; top: 27%; width: 44%; }
+.reveal .slides .normal-pdf-plot img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .normal-pdf-plot > div { position: absolute; margin: 0; }
+.reveal .slides .normal-pdf-xlabel { left: 14%; top: 94%; width: 83%; text-align: center; font-size: 1.2em; }
+.reveal .slides .normal-pdf-ylabel { left: -3%; top: 43%; transform: rotate(-90deg); font-size: 1.2em; }
+.reveal .slides .normal-pdf-legend { left: 62%; top: 7%; font-size: 0.78em; line-height: 1.75; white-space: nowrap; }
+.reveal .slides .normal-pdf-blue { color: blue; }
+.reveal .slides .normal-pdf-red { color: red; }
+.reveal .slides .normal-pdf-green { color: green; }

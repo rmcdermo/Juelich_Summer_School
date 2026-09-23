@@ -38,9 +38,51 @@ $\underline{\psi}$: thermochemical composition vector
 
 :::
 
-## Probability Density Functions {.source-slide-title .has-example-files}
+## Probability Density Functions {.normal-pdf-slide .has-example-files}
 
-![](figs/reference-slides/slide-069.png){.reference-slide .nostretch fig-align="center"}
+::: {.normal-pdf-layout}
+
+::: {.normal-pdf-label}
+Normal distribution:
+:::
+
+::: {.normal-pdf-equation}
+$$
+f(V)=\frac{1}{\sigma\sqrt{2\pi}}
+\exp\!\left[-\frac{1}{2}\frac{(V-\mu)^2}{\sigma^2}\right]
+$$
+:::
+
+::: {.normal-pdf-normalization}
+$$
+\int_{-\infty}^{\infty} f(V)\,\mathrm{d}V=1
+$$
+:::
+
+::: {.normal-pdf-script}
+See [`normal_pdf.py`](examples/pdf_example/normal_pdf.py).
+:::
+
+::: {.normal-pdf-plot}
+![](figs/pdf_methods/normal-distribution.svg){fig-alt="Normal probability densities with mean zero and standard deviations 0.1, 0.2, and 0.5, shown in blue, red, and green."}
+
+::: {.normal-pdf-xlabel}
+$V$
+:::
+
+::: {.normal-pdf-ylabel}
+$f(V)$
+:::
+
+::: {.normal-pdf-legend}
+[— $\mu=0,\;\sigma=0.1$]{.normal-pdf-blue}\
+[— $\mu=0,\;\sigma=0.2$]{.normal-pdf-red}\
+[— $\mu=0,\;\sigma=0.5$]{.normal-pdf-green}
+:::
+
+:::
+
+:::
 
 ::: {.example-files}
 Files: `08_Combustion/examples/pdf_example/`
