@@ -25,7 +25,9 @@ has to remember a flag, and every case can be plotted on a laptop.
 
 ## Requirements
 
-`fds` and `mpirun` have to be on your PATH. `eval.py` also needs pandas and
+`fds` and `mpirun` have to be on your PATH. On Windows, work in the CMDfds
+prompt the FDS installer creates, which provides `fds` and `mpiexec`, and use
+`mpiexec` wherever these notes say `mpirun`. `eval.py` also needs pandas and
 matplotlib:
 
 ```bash

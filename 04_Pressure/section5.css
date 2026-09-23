@@ -1,6 +1,6 @@
 /* ==================================================================
-   Module V -- Solver selection (source slides 77-78). Hand-maintained;
-   per-slide positions only.
+   Module V -- Solver selection (source slides 77-78), plus the deck's
+   closing slide (79). Hand-maintained; per-slide positions only.
    The shared layout, heading and table rules live in custom.css.
    ================================================================== */
 
@@ -71,3 +71,18 @@
 /* Prose in every cell, so left aligned rather than the centred default. */
 .reveal .slides .slide-layout .tips td { text-align: left; }
 .reveal .slides .slide-layout .tips table { table-layout: fixed; }
+
+/* --- thank-you-slide --- */
+/* Closes the deck rather than Module V; it lives here because it follows
+   slide 78 in the source. No title, one 32pt line centred on the canvas both
+   ways (the deck's box, L41.87 W16.27, is sized to its text and centred).
+   Centred on the real canvas, not on 50%: the section's 5px padding makes the
+   positioned layer 1620px wide and starts it 5px in, so the layer's 50% lands
+   15px right of the slide's middle. Every other slide was tuned by eye with
+   that offset in place and it goes unnoticed there, but a single centred word
+   shows it. The canvas middle is 795/1620 = 49.07% of the layer, hence left
+   34.07 on a 30% box. The top is the deck's 45.74 plus 0.52, which puts the
+   line's centre on 450px. nowrap is the deck's wrap="none". */
+.reveal .slides .thank-you-slide .ty-text { left: 34.07%; top: 46.26%; width: 30%;
+                                            font-size: 1.6em; text-align: center;
+                                            white-space: nowrap; }
