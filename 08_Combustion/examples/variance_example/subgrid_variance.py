@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 # data = np.random.randint(2,size=(10,10))
 
 # play with Z1 and Z2 and observe the change in the resulting histogram
-Z1=0.5
-Z2=0.5
+Z1=0
+Z2=1
 data = np.ones([10,10]) * Z1
 data[:,5:10] = np.ones([10,5]) * Z2
 
@@ -21,7 +21,7 @@ fig=plt.figure(figsize=(12,6))
 #https://matplotlib.org/users/colormaps.html
 ax1 = plt.subplot(1, 2, 1)
 cax = ax1.imshow(data, interpolation='nearest', \
-    cmap=plt.cm.get_cmap('inferno'), vmin=0, vmax=1)
+    cmap='inferno', vmin=0, vmax=1)
 cbar = fig.colorbar(cax, ticks=[0, 0.5, 1], fraction=0.045, pad=.05)
 
 #plt.axis('off') # remove ticks and labels
