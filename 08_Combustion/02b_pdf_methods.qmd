@@ -148,9 +148,46 @@ $f(Z)$
 Files: `08_Combustion/examples/pdf_example/`
 :::
 
-## Example: Dirac Delta Function {.source-slide-title .has-example-files}
+## Example: Dirac Delta Function {.dirac-delta-slide .has-example-files}
 
-![](figs/reference-slides/slide-071.png){.reference-slide .nostretch fig-align="center"}
+::: {.dirac-delta-layout}
+
+::: {.dirac-delta-task-a}
+a\) Using [`normal_pdf.py`](examples/pdf_example/normal_pdf.py), decrease the variance and plot the results. What do you observe?
+:::
+
+::: {.dirac-delta-task-b}
+b\) The Dirac delta function is informally represented as
+:::
+
+::: {.dirac-delta-definition}
+$$
+\delta(x)=\begin{cases}
+\infty & \text{if }x=0 \\
+0 & \text{otherwise}
+\end{cases}
+$$
+:::
+
+::: {.dirac-delta-question}
+Given your observations from part (a), what is
+:::
+
+::: {.dirac-delta-integral}
+$$
+\int_{-\infty}^{\infty}\delta(x)\,\mathrm{d}x\;?
+$$
+:::
+
+::: {.dirac-delta-portrait}
+![](figs/pdf_methods/paul-dirac.png){fig-alt="Portrait of Paul Dirac."}
+:::
+
+::: {.dirac-delta-caption}
+Paul Dirac (1902–1984)
+:::
+
+:::
 
 ::: {.example-files}
 Files: `08_Combustion/examples/pdf_example/`

@@ -5415,6 +5415,28 @@
 .reveal .slides .beta-pdf-green { color: green; }
 
 .reveal .slides .beta-pdf-black { color: black; }
+
+/* Dirac delta exercise: native prompts and math beside the portrait. */
+.reveal .slides .dirac-delta-slide > h2 { text-align: left; }
+.reveal .slides .dirac-delta-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .dirac-delta-layout > div { margin: 0; position: absolute; }
+.reveal .slides .dirac-delta-layout p { margin: 0; }
+.reveal .slides .dirac-delta-layout mjx-container[display="true"] { margin: 0 !important; text-align: left !important; }
+.reveal .slides .dirac-delta-task-a { font-size: 1.2em; left: 8%; line-height: 1.4; top: 22%; width: 59%; }
+.reveal .slides .dirac-delta-task-b { font-size: 1.2em; left: 8%; line-height: 1.4; top: 38%; width: 61%; }
+.reveal .slides .dirac-delta-definition { font-size: 1.55em; left: 12%; top: 46%; width: 55%; }
+.reveal .slides .dirac-delta-question { font-size: 1.2em; left: 12%; line-height: 1.4; top: 64%; width: 55%; }
+.reveal .slides .dirac-delta-integral { font-size: 1.55em; left: 20%; top: 73%; width: 40%; }
+.reveal .slides .dirac-delta-portrait { left: 73%; top: 20%; width: 20%; }
+.reveal .slides .dirac-delta-portrait img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .dirac-delta-caption { font-size: 1.1em; left: 69%; top: 75%; width: 28%; text-align: center; }
 .reveal .slides .beta-pdf-legend > p > span::before {
   border-top: 3px solid currentColor;
   content: "";
