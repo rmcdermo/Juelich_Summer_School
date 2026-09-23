@@ -399,9 +399,41 @@ $E(k)$
 
 :::
 
-## Limiting Case: Initially Mixed {.source-slide-title}
+## Limiting Case: Initially Mixed {.initially-mixed-slide}
 
-![](figs/reference-slides/slide-063.png){.reference-slide fig-align="center"}
+::: {.initially-mixed-layout}
+
+::: {.initially-mixed-assumptions}
+Initially completely mixed, infinitely fast kinetics
+:::
+
+::: {.initially-mixed-source}
+$$
+\overline{\dot{m}_{\alpha}^{\prime\prime\prime}}
+= \rho\Biggl[
+\frac{\zeta}{\tau_{\mathrm{mix}}}
+\left(\widehat{Y}_{\alpha}-\widetilde{Y}_{\alpha}^{0}\right)
++ (1-\zeta)\frac{\mathrm{d}\widehat{Y}_{\alpha}}{\mathrm{d}t}
+\Biggr]
+$$
+:::
+
+::: {.initially-mixed-condition}
+$$
+\zeta_0 \equiv \zeta(t=0) = 0
+$$
+:::
+
+::: {.initially-mixed-mixture-fraction}
+$$
+{\color{#4472c4}\boxed{
+{\color{black}\widetilde{Z}
+= \widetilde{Y}_{\mathrm{F}} + \frac{1}{1+s}\widetilde{Y}_{\mathrm{P}}}
+}}
+$$
+:::
+
+:::
 
 ## Limiting Case: Initially Unmixed {.source-slide-title}
 

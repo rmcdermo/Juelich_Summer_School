@@ -5215,3 +5215,21 @@
 .reveal .slides .kolmogorov-plot-nyquist { background: transparent; color: #70ad47; left: 16%; top: 58%; width: 48%; font-size: 1em; text-align: center; }
 .reveal .slides .kolmogorov-plot-x-label { left: 48%; top: 90%; width: 14%; font-size: 1em; text-align: center; }
 .reveal .slides .kolmogorov-plot-y-label { left: -3%; top: 40%; width: 16%; font-size: 1em; text-align: center; transform: rotate(-90deg); }
+
+/* Initially mixed limiting case: native assumptions and equations. */
+.reveal .slides .initially-mixed-slide > h2 { text-align: left; }
+.reveal .slides .initially-mixed-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .initially-mixed-layout > div { margin: 0; position: absolute; }
+.reveal .slides .initially-mixed-layout p { margin: 0; }
+.reveal .slides .initially-mixed-layout mjx-container[display="true"] { margin: 0 !important; }
+.reveal .slides .initially-mixed-assumptions { left: 9%; top: 16%; width: 84%; font-size: 1.2em; }
+.reveal .slides .initially-mixed-source { left: 5%; top: 32%; width: 90%; font-size: 1.6em; }
+.reveal .slides .initially-mixed-condition { left: 15%; top: 54%; width: 70%; font-size: 1.7em; }
+.reveal .slides .initially-mixed-mixture-fraction { left: 15%; top: 68%; width: 70%; font-size: 1.7em; }
