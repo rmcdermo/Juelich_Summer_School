@@ -399,9 +399,43 @@ See [`particles.py`](examples/particle_example/particles.py).
 Cell: `08_Combustion/examples/particle_example/`
 :::
 
-## The Second Central Moment {.source-slide-title}
+## The Second Central Moment (Variance) {#the-second-central-moment .second-moment-slide .has-example-files}
 
-![](figs/reference-slides/slide-076.png){.reference-slide fig-align="center"}
+::: {.second-moment-layout}
+
+::: {.second-moment-pdf}
+$$
+f(V)=\sum_{i=1}^{N_p}w_i\,\delta(U_i-V)
+\quad ; \quad w_i=\frac{1}{N_p}
+$$
+:::
+
+::: {.second-moment-cell}
+![](figs/pdf_methods/random-particles.svg){fig-alt="Square CFD cell containing 50 blue and 50 red particles at random positions."}
+:::
+
+::: {.second-moment-derivation}
+$$
+\begin{aligned}
+\operatorname{var}(U)
+&=\int f(V)(V-\overline{U})^2\,\mathrm{d}V \\[0.55em]
+&=\int\sum_i w_i\,\delta(U_i-V)(V-\overline{U})^2\,\mathrm{d}V \\[0.55em]
+&=\sum_i w_i\int\delta(U_i-V)(V-\overline{U})^2\,\mathrm{d}V \\[0.55em]
+&=\sum_i w_i(U_i-\overline{U})^2 \\[0.55em]
+&=\frac{1}{N_p}\sum_i(U_i-\overline{U})^2
+\end{aligned}
+$$
+:::
+
+::: {.second-moment-script}
+See [`particles.py`](examples/particle_example/particles.py).
+:::
+
+:::
+
+::: {.example-files}
+Cell: `08_Combustion/examples/particle_example/`
+:::
 
 ## Example: Computing the Variance {.source-slide-title .has-example-files}
 

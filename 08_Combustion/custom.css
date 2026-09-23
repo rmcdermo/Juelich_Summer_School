@@ -5539,3 +5539,22 @@
 .reveal .slides .first-moment-derivation { font-size: 1.25em; left: 55%; top: 19%; width: 43%; }
 .reveal .slides .first-moment-sifting { color: #4472c4; font-size: 0.85em; left: 72%; top: 56%; width: 25%; line-height: 1.3; }
 .reveal .slides .first-moment-script { color: #888; font-size: 0.85em; left: 16%; top: 33%; width: 25%; text-align: center; }
+
+/* Second central moment: particle PDF and native variance derivation. */
+.reveal .slides .second-moment-slide > h2 { text-align: left; }
+.reveal .slides .second-moment-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .second-moment-layout > div { position: absolute; margin: 0; }
+.reveal .slides .second-moment-layout p { margin: 0; }
+.reveal .slides .second-moment-layout mjx-container[display="true"] { margin: 0 !important; text-align: left !important; }
+.reveal .slides .second-moment-pdf { font-size: 1.1em; left: 5%; top: 21%; width: 43%; }
+.reveal .slides .second-moment-cell { left: 13%; top: 39%; width: 25%; }
+.reveal .slides .second-moment-cell img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .second-moment-derivation { font-size: 1.1em; left: 49%; top: 19%; width: 49%; }
+.reveal .slides .second-moment-script { color: #888; font-size: 0.85em; left: 13%; top: 33%; width: 25%; text-align: center; }
