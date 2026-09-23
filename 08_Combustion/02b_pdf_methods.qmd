@@ -477,9 +477,31 @@ See [`subgrid_variance.py`](examples/variance_example/subgrid_variance.py).
 Files: `08_Combustion/examples/variance_example/`
 :::
 
-## Example: Computing the Variance, Continued {.source-slide-title .has-example-files}
+## Example: Computing the Variance, Continued {.variance-example-slide .has-example-files}
 
-![](figs/reference-slides/slide-078.png){.reference-slide .nostretch fig-align="center"}
+::: {.variance-example-layout}
+
+::: {.variance-example-unmixed}
+![](figs/pdf_methods/variance-nearly-mixed.svg){fig-alt="Square cell split equally between mixture fractions 0.4 and 0.6, with a histogram showing 50 samples at each value."}
+
+::: {.variance-example-xlabel}
+$Z$
+:::
+:::
+
+::: {.variance-example-partially-mixed}
+![](figs/pdf_methods/variance-fully-mixed.svg){fig-alt="Uniform square cell with mixture fraction 0.5 throughout, and a histogram showing all 100 samples at 0.5."}
+
+::: {.variance-example-xlabel}
+$Z$
+:::
+:::
+
+::: {.variance-example-script}
+See [`subgrid_variance.py`](examples/variance_example/subgrid_variance.py).
+:::
+
+:::
 
 ::: {.example-files}
 Files: `08_Combustion/examples/variance_example/`
