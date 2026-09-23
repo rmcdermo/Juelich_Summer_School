@@ -5579,3 +5579,23 @@
 .reveal .slides .variance-example-calculation { font-size: 1.05em; left: 55%; top: 29%; width: 43%; }
 .reveal .slides .variance-example-calculation mjx-container[display="true"] { margin: 0 !important; text-align: left !important; }
 .reveal .slides .variance-example-script { color: #888; font-size: 0.85em; left: 55%; top: 19%; width: 43%; text-align: center; }
+
+/* IEM: square particle cell and native relaxation equations. */
+.reveal .slides .iem-slide > h2 { text-align: left; }
+.reveal .slides .iem-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .iem-layout > div { position: absolute; margin: 0; }
+.reveal .slides .iem-layout p { margin: 0; }
+.reveal .slides .iem-layout mjx-container[display="true"] { margin: 0 !important; }
+.reveal .slides .iem-cell { left: 9%; top: 29%; width: 26%; }
+.reveal .slides .iem-cell img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .iem-cell-script { color: #888; font-size: 0.85em; left: 9%; top: 23%; width: 26%; text-align: center; }
+.reveal .slides .iem-rate { font-size: 1.7em; left: 43%; top: 26%; width: 54%; }
+.reveal .slides .iem-decay { font-size: 1.55em; left: 43%; top: 48%; width: 54%; }
+.reveal .slides .iem-solution { font-size: 1.4em; left: 43%; top: 67%; width: 54%; }

@@ -507,9 +507,44 @@ See [`subgrid_variance.py`](examples/variance_example/subgrid_variance.py).
 Files: `08_Combustion/examples/variance_example/`
 :::
 
-## Interaction by Exchange with the Mean {.source-slide-title}
+## Interaction by Exchange with the Mean (IEM) {#interaction-by-exchange-with-the-mean .iem-slide .has-example-files}
 
-![](figs/reference-slides/slide-079.png){.reference-slide fig-align="center"}
+::: {.iem-layout}
+
+::: {.iem-cell}
+![](figs/pdf_methods/random-particles.svg){fig-alt="Square CFD cell containing 50 blue and 50 red particles at random positions."}
+:::
+
+::: {.iem-cell-script}
+Cell figure: [`particles.py`](examples/particle_example/particles.py).
+:::
+
+::: {.iem-rate}
+$$
+\frac{\mathrm{d}\phi}{\mathrm{d}t}
+=\frac{1}{\tau_{\mathrm{mix}}}(\overline{\phi}-\phi)
+$$
+:::
+
+::: {.iem-decay}
+$$
+\overline{\phi}-\phi
+=(\overline{\phi}-\phi_0)\,e^{-t/\tau_{\mathrm{mix}}}
+$$
+:::
+
+::: {.iem-solution}
+$$
+\phi(t)=\phi_0+(\overline{\phi}-\phi_0)
+\left[1-e^{-t/\tau_{\mathrm{mix}}}\right]
+$$
+:::
+
+:::
+
+::: {.example-files}
+Cell: `08_Combustion/examples/particle_example/`
+:::
 
 ## Example: Evolution of the Variance with IEM {.source-slide-title}
 
