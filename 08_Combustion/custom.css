@@ -5639,3 +5639,21 @@
 .reveal .slides .three-environment-discrete { left: 51%; top: 27%; width: 46%; }
 .reveal .slides .three-environment-layout img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
 .reveal .slides .three-environment-script { color: #888; font-size: 0.85em; left: 5%; top: 75%; width: 90%; text-align: center; }
+
+/* Three-environment definition: generated figure and native PDF equation. */
+.reveal .slides .three-environment-definition-slide > h2 { text-align: left; }
+.reveal .slides .three-environment-definition-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .three-environment-definition-layout > div { position: absolute; margin: 0; }
+.reveal .slides .three-environment-definition-layout p { margin: 0; }
+.reveal .slides .three-environment-definition-figure { left: 21%; top: 19%; width: 58%; }
+.reveal .slides .three-environment-definition-figure img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .three-environment-definition-equation { font-size: 1.4em; left: 5%; top: 73%; width: 90%; }
+.reveal .slides .three-environment-definition-equation mjx-container[display="true"] { margin: 0 !important; }
+.reveal .slides .three-environment-definition-script { color: #888; font-size: 0.85em; left: 21%; top: 12%; width: 58%; text-align: center; }

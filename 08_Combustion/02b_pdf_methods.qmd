@@ -583,9 +583,32 @@ See [`plot-three-environment.py`](figs/pdf_methods/plot-three-environment.py).
 Files: `08_Combustion/examples/variance_example/`
 :::
 
-## Three Environment Subgrid PDF: Definition {.source-slide-title}
+## Three Environment Subgrid PDF: Definition {.three-environment-definition-slide .has-example-files}
 
-![](figs/reference-slides/slide-082.png){.reference-slide fig-align="center"}
+::: {.three-environment-definition-layout}
+
+::: {.three-environment-definition-figure}
+![](figs/pdf_methods/three-environment-discrete.svg){fig-alt="Square three-environment mixture-fraction field and its pixel-count histogram, generated from the tracked field image."}
+:::
+
+::: {.three-environment-definition-equation}
+$$
+f(\psi_{\alpha};t)
+=w_1\,\delta(0-\psi_{\alpha})
++w_2\,\delta(1-\psi_{\alpha})
++w_3\,\delta\!\left(\widehat{Y}_{\alpha}[t]-\psi_{\alpha}\right)
+$$
+:::
+
+::: {.three-environment-definition-script}
+See [`plot-three-environment.py`](figs/pdf_methods/plot-three-environment.py).
+:::
+
+:::
+
+::: {.example-files}
+Files: `08_Combustion/examples/variance_example/`
+:::
 
 ## Cell Integral Constraints {.source-slide-title}
 
