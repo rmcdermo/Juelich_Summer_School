@@ -5445,3 +5445,44 @@
   vertical-align: middle;
   width: 2em;
 }
+
+/* Multiple deltas: equations, schematic plot, and exact area fractions. */
+.reveal .slides .multiple-deltas-slide > h2 { text-align: left; }
+.reveal .slides .multiple-deltas-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .multiple-deltas-layout > div { position: absolute; margin: 0; }
+.reveal .slides .multiple-deltas-layout p { margin: 0; }
+.reveal .slides .multiple-deltas-layout mjx-container[display="true"] { margin: 0 !important; text-align: left !important; }
+.reveal .slides .multiple-deltas-equation { font-size: 1.5em; left: 7%; top: 19%; width: 55%; }
+.reveal .slides .multiple-deltas-question { color: #888; font-size: 1.25em; left: 7%; top: 31%; width: 55%; }
+.reveal .slides .multiple-deltas-constraint { font-size: 1.6em; left: 7%; top: 40%; width: 55%; }
+.reveal .slides .multiple-deltas-script { color: #888; font-size: 0.85em; left: 65.9%; top: 2%; width: 29.05%; text-align: center; }
+.reveal .slides .multiple-deltas-plot { left: 61%; top: 7%; width: 35%; }
+.reveal .slides .multiple-deltas-plot img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .multiple-deltas-plot > div { position: absolute; margin: 0; }
+.reveal .slides .multiple-deltas-xlabel { left: 14%; top: 94%; width: 83%; text-align: center; font-size: 1.1em; }
+.reveal .slides .multiple-deltas-ylabel { left: -3%; top: 43%; transform: rotate(-90deg); font-size: 1.1em; }
+.reveal .slides .multiple-deltas-legend { left: 49%; top: 6%; font-size: 0.85em; line-height: 1.6; white-space: nowrap; }
+.reveal .slides .multiple-deltas-blue { color: blue; }
+.reveal .slides .multiple-deltas-red { color: red; }
+.reveal .slides .multiple-deltas-legend > p > span::before {
+  border-top: 3px solid currentColor;
+  content: "";
+  display: inline-block;
+  margin-right: 0.55em;
+  vertical-align: middle;
+  width: 2em;
+}
+.reveal .slides .multiple-deltas-panels { display: flex; justify-content: space-between; left: 8%; top: 58%; width: 84%; }
+.reveal .slides .multiple-deltas-panel { font-size: 1.15em; text-align: center; width: 24%; }
+.reveal .slides .multiple-deltas-panel::after { content: ""; display: block; height: 220px; margin: 18px auto 0; width: 220px; }
+.reveal .slides .multiple-deltas-pure-blue::after { background: #5b9bd5; }
+.reveal .slides .multiple-deltas-half::after { background: linear-gradient(to right, #5b9bd5 50%, red 50%); }
+.reveal .slides .multiple-deltas-fifth::after { background: linear-gradient(to right, #5b9bd5 20%, red 20%); }
+.reveal .slides .multiple-deltas-pure-red::after { background: red; }
