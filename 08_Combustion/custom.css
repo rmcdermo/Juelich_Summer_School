@@ -5046,3 +5046,24 @@
   width: 90%;
 }
 .reveal .slides .tbr-equation mjx-container[display="true"] { margin: 0 !important; }
+
+/* The Unmixed Fraction reuses the TBR fields and aligns each mass ratio
+   beneath its corresponding term using a single MathJax array. */
+.reveal .slides .unmixed-fraction-slide > h2 { text-align: left; }
+.reveal .slides .unmixed-fraction-equation {
+  font-size: 1.4em;
+  left: 5%;
+  top: 59%;
+  width: 90%;
+}
+.reveal .slides .unmixed-fraction-equation mjx-container[display="true"] {
+  margin: 0 !important;
+}
+
+/* Lift this slide's content without changing the preceding TBR slide. */
+.reveal .slides .unmixed-fraction-slide .tbr-true-field,
+.reveal .slides .unmixed-fraction-slide .tbr-idealized-field { top: 16%; }
+.reveal .slides .unmixed-fraction-slide .tbr-true-label,
+.reveal .slides .unmixed-fraction-slide .tbr-idealized-label { top: 48%; }
+.reveal .slides .unmixed-fraction-slide .tbr-scale-label { top: 11.2%; }
+.reveal .slides .unmixed-fraction-slide .tbr-scale { top: 15.5%; }

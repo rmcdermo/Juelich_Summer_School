@@ -142,9 +142,59 @@ $$
 
 :::
 
-## The Unmixed Fraction {.source-slide-title}
+## The Unmixed Fraction {.unmixed-fraction-slide}
 
-![](figs/reference-slides/slide-058.png){.reference-slide fig-align="center"}
+::: {.tbr-layout}
+
+::: {.tbr-true-field}
+![](figs/eddy_dissipation_concept/tbr-true-mass-fraction.png){fig-alt="True mass-fraction field with continuous turbulent mixing."}
+:::
+
+::: {.tbr-idealized-field}
+![](figs/eddy_dissipation_concept/tbr-idealized-mass-fraction.png){fig-alt="Idealized mass-fraction field with three discrete composition levels."}
+:::
+
+::: {.tbr-true-label}
+True
+:::
+
+::: {.tbr-idealized-label}
+Idealized
+:::
+
+::: {.tbr-scale-label}
+Mass Fraction
+:::
+
+::: {.tbr-scale}
+![](figs/eddy_dissipation_concept/tbr-mass-fraction-scale.png){fig-alt="Grayscale mass-fraction scale from zero, black, to one, white."}
+:::
+
+::: {.unmixed-fraction-equation}
+$$
+\begin{array}{c@{\;}c@{\;}c@{\;}c@{\;}c@{\;}c@{\;}c}
+\widetilde{Y}_{\alpha}(t)
+& =
+& {\color{blue}\zeta(t)}
+& \widetilde{Y}_{\alpha}^{0}
+& +
+& {\color{red}\left(1-\zeta(t)\right)}
+& \widehat{Y}_{\alpha}(t)
+\\[0.45em]
+\displaystyle\frac{\mathrm{kg}\text{-}\alpha}{\mathrm{kg}\text{-}\mathrm{tot}}
+&
+& {\color{blue}\underbrace{
+  \displaystyle\frac{\mathrm{kg}\text{-}U}{\mathrm{kg}\text{-}\mathrm{tot}}
+}_{\substack{\text{Unmixed}\\\text{fraction}}}}
+& \displaystyle\frac{\mathrm{kg}\text{-}\alpha}{\mathrm{kg}\text{-}U}
+&
+& {\color{red}\displaystyle\frac{\mathrm{kg}\text{-}M}{\mathrm{kg}\text{-}\mathrm{tot}}}
+& \displaystyle\frac{\mathrm{kg}\text{-}\alpha}{\mathrm{kg}\text{-}M}
+\end{array}
+$$
+:::
+
+:::
 
 ## Evolution of the Unmixed Fraction {.source-slide-title}
 
