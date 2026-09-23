@@ -5203,8 +5203,9 @@
 .reveal .slides .kolmogorov-constant { left: 7%; width: 16%; }
 .reveal .slides .kolmogorov-dissipation { left: 24%; width: 17%; }
 .reveal .slides .kolmogorov-wavenumber { left: 42%; width: 13%; }
-.reveal .slides .kolmogorov-portrait { left: 69%; top: 10%; width: 17%; }
-.reveal .slides .kolmogorov-caption { left: 60%; top: 35%; width: 35%; font-size: 0.9em; line-height: 1.25; text-align: center; }
+/* Center on the axes box (x=248..1584 in the 1665px plot), not the image margins. */
+.reveal .slides .kolmogorov-portrait { left: 70.755%; top: 10%; width: 17%; }
+.reveal .slides .kolmogorov-caption { left: 61.755%; top: 35%; width: 35%; font-size: 0.9em; line-height: 1.25; text-align: center; }
 .reveal .slides .kolmogorov-plot { left: 60%; top: 43%; width: 35%; }
 .reveal .slides .kolmogorov-layout img { display: block; height: auto; margin: 0; max-height: none; max-width: none; width: 100%; }
 .reveal .slides .kolmogorov-plot > div { margin: 0; position: absolute; }
