@@ -5133,3 +5133,49 @@
   width: 82%;
 }
 .reveal .slides .unmixed-faq-slide > ul > li { margin-bottom: 0.5em; }
+
+/* Mixing Time Scale: original plot curves with native mathematical labels. */
+.reveal .slides .mixing-scale-slide > h2 { text-align: left; }
+.reveal .slides .mixing-scale-layout {
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .mixing-scale-layout > div { margin: 0; position: absolute; }
+.reveal .slides .mixing-scale-layout p { margin: 0; }
+.reveal .slides .mixing-scale-layout mjx-container[display="true"] { margin: 0 !important; }
+.reveal .slides .mixing-scale-selection { left: 7%; top: 17%; width: 86%; font-size: 1.5em; }
+.reveal .slides .mixing-scale-plot { left: 7%; top: 31%; width: 45%; }
+.reveal .slides .mixing-scale-plot img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+.reveal .slides .mixing-scale-plot > div {
+  font-size: 0.85em;
+  margin: 0;
+  position: absolute;
+  white-space: nowrap;
+}
+.reveal .slides .mixing-scale-eta { left: 18.9%; top: 29.4%; }
+.reveal .slides .mixing-scale-d-scaling { left: 28.1%; top: 66%; }
+.reveal .slides .mixing-scale-u-scaling { left: 44.2%; top: 52.8%; }
+.reveal .slides .mixing-scale-g-scaling { left: 68%; top: 34.2%; }
+.reveal .slides .mixing-scale-flame-label { left: 91.3%; top: 15.5%; }
+.reveal .slides .mixing-scale-chem-label { left: 91.3%; top: 72.3%; }
+.reveal .slides .mixing-scale-x-label { left: 40%; top: 94.8%; width: 25%; text-align: center; }
+.reveal .slides .mixing-scale-y-label { left: -2%; top: 45.5%; width: 12%; text-align: center; transform: rotate(-90deg); }
+.reveal .slides .mixing-scale-diffusion,
+.reveal .slides .mixing-scale-turbulence,
+.reveal .slides .mixing-scale-gravity { left: 56%; width: 39%; font-size: 1.6em; }
+.reveal .slides .mixing-scale-diffusion { top: 34%; }
+.reveal .slides .mixing-scale-turbulence { top: 53%; }
+.reveal .slides .mixing-scale-gravity { top: 75%; }
+.reveal .slides .mixing-scale-diffusion mjx-container[display="true"],
+.reveal .slides .mixing-scale-turbulence mjx-container[display="true"],
+.reveal .slides .mixing-scale-gravity mjx-container[display="true"] { text-align: left !important; }

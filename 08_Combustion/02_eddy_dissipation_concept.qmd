@@ -251,9 +251,74 @@ $t/\tau_{\mathrm{mix}}$
 - Why not work in terms of the “mixed fraction”?
 - Is the unmixed fraction related to the subgrid variance?
 
-## Mixing Time Scale {.source-slide-title}
+## Mixing Time Scale {.mixing-scale-slide}
 
-![](figs/reference-slides/slide-061.png){.reference-slide fig-align="center"}
+::: {.mixing-scale-layout}
+
+::: {.mixing-scale-selection}
+$$
+\tau_{\mathrm{mix}} = \max\Bigl(\tau_{\mathrm{chem}},
+\min\bigl(\tau_d,\tau_u,\tau_g,\tau_{\mathrm{flame}}\bigr)\Bigr)
+$$
+:::
+
+:::: {.mixing-scale-plot}
+![](figs/eddy_dissipation_concept/mixing-time-scale-curves.png){fig-alt="Log-log plot of mixing time versus grid size, bounded by chemical and flame time scales, with diffusion, turbulent, and gravitational scaling regimes."}
+
+::: {.mixing-scale-eta}
+$\Delta = \mathrm{O}(\eta)$
+:::
+
+::: {.mixing-scale-d-scaling}
+$\tau_d \sim \Delta^2$
+:::
+
+::: {.mixing-scale-u-scaling}
+$\tau_u \sim \Delta^{2/3}$
+:::
+
+::: {.mixing-scale-g-scaling}
+$\tau_g \sim \Delta^{1/2}$
+:::
+
+::: {.mixing-scale-flame-label}
+$\tau_{\mathrm{flame}}$
+:::
+
+::: {.mixing-scale-chem-label}
+$\tau_{\mathrm{chem}}$
+:::
+
+::: {.mixing-scale-x-label}
+$\Delta\ (\mathrm{m})$
+:::
+
+::: {.mixing-scale-y-label}
+$\tau_{\mathrm{mix}}\ (\mathrm{s})$
+:::
+
+::::
+
+::: {.mixing-scale-diffusion}
+$$
+\tau_d = \frac{\Delta^2}{D_{\mathrm{F}}}
+$$
+:::
+
+::: {.mixing-scale-turbulence}
+$$
+\tau_u = \frac{C_u\Delta}{u'}
+= \frac{C_u\Delta}{\sqrt{(2/3)\,k_{\mathrm{sgs}}}}
+$$
+:::
+
+::: {.mixing-scale-gravity}
+$$
+\tau_g = \sqrt{2\Delta/g}
+$$
+:::
+
+:::
 
 ## Exercise: Kolmogorov Scaling {.source-slide-title}
 
