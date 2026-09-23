@@ -5657,3 +5657,35 @@
 .reveal .slides .three-environment-definition-equation { font-size: 1.4em; left: 5%; top: 73%; width: 90%; }
 .reveal .slides .three-environment-definition-equation mjx-container[display="true"] { margin: 0 !important; }
 .reveal .slides .three-environment-definition-script { color: #888; font-size: 0.85em; left: 21%; top: 12%; width: 58%; text-align: center; }
+
+/* Cell integral constraints: native equations and a green weight box. */
+.reveal .slides .cell-integral-slide > h2 { text-align: left; }
+.reveal .slides .cell-integral-layout {
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .cell-integral-layout > div { position: absolute; margin: 0; }
+.reveal .slides .cell-integral-layout p { margin: 0; }
+.reveal .slides .cell-integral-layout mjx-container[display="true"] { margin: 0 !important; }
+.reveal .slides .cell-integral-pdf { font-size: 1.4em; left: 5%; top: 25%; width: 90%; }
+.reveal .slides .cell-integral-normalization { font-size: 1.5em; left: 10%; top: 46%; width: 45%; }
+.reveal .slides .cell-integral-mean { font-size: 1.5em; left: 10%; top: 63%; width: 45%; }
+.reveal .slides .cell-integral-normalization mjx-container[display="true"],
+.reveal .slides .cell-integral-mean mjx-container[display="true"] { text-align: left !important; }
+.reveal .slides .cell-integral-weights {
+  border: 2px solid #70ad47;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  height: 315px;
+  font-size: 1.65em;
+  left: 62%;
+  padding: 24px;
+  top: 43%;
+  width: 27%;
+}
+.reveal .slides .cell-integral-weights mjx-container[display="true"] { text-align: left !important; }

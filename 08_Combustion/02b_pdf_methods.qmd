@@ -610,9 +610,47 @@ See [`plot-three-environment.py`](figs/pdf_methods/plot-three-environment.py).
 Files: `08_Combustion/examples/variance_example/`
 :::
 
-## Cell Integral Constraints {.source-slide-title}
+## Cell Integral Constraints {.cell-integral-slide}
 
-![](figs/reference-slides/slide-083.png){.reference-slide fig-align="center"}
+::: {.cell-integral-layout}
+::: {.cell-integral-pdf}
+$$
+f(\psi_{\alpha};t)
+=w_1\,\delta(0-\psi_{\alpha})
++w_2\,\delta(1-\psi_{\alpha})
++w_3\,\delta\!\left(\widehat{Y}_{\alpha}[t]-\psi_{\alpha}\right)
+$$
+:::
+
+::: {.cell-integral-normalization}
+$$
+\int f(\psi_{\alpha};t)\,\mathrm{d}\psi_{\alpha}=1
+$$
+:::
+
+::: {.cell-integral-mean}
+$$
+\int f(\psi_{\alpha};t)\,\psi_{\alpha}\,\mathrm{d}\psi_{\alpha}
+=\widetilde{Y}_{\alpha}(t)
+$$
+:::
+
+::: {.cell-integral-weights}
+$$
+w_1=\zeta\left(1-\widetilde{Y}_{\alpha}^{0}\right)
+$$
+
+$$
+w_2=\zeta\widetilde{Y}_{\alpha}^{0}
+\vphantom{\zeta\left(1-\widetilde{Y}_{\alpha}^{0}\right)}
+$$
+
+$$
+w_3=1-\zeta
+\vphantom{\zeta\left(1-\widetilde{Y}_{\alpha}^{0}\right)}
+$$
+:::
+:::
 
 ## Exercise: Check Cell Integral Constraints {.source-slide-title}
 
