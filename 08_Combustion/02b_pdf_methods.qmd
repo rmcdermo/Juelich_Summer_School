@@ -652,13 +652,37 @@ $$
 :::
 :::
 
-## Exercise: Check Cell Integral Constraints {.source-slide-title}
+## Exercise: Check Cell Integral Constraints {.cell-integral-exercise-slide}
 
-![](figs/reference-slides/slide-084.png){.reference-slide fig-align="center"}
+::: {.cell-integral-exercise-prompt}
+Using the three-environment PDF and weights on the [previous slide](#cell-integral-constraints), verify the normalization and mean constraints:
+:::
 
-## Exercise: Derive Formula for Subgrid Variance {.source-slide-title}
+::: {.cell-integral-exercise-equations}
+$$
+\int f(\psi_{\alpha};t)\,\mathrm{d}\psi_{\alpha}=1
+$$
 
-![](figs/reference-slides/slide-085.png){.reference-slide fig-align="center"}
+$$
+\int f(\psi_{\alpha};t)\,\psi_{\alpha}\,\mathrm{d}\psi_{\alpha}
+=\widetilde{Y}_{\alpha}(t)
+$$
+:::
+
+## Exercise: Subgrid Variance from Unmixed Fraction (No Reaction) {#exercise-derive-formula-for-subgrid-variance .cell-integral-exercise-slide}
+
+::: {.cell-integral-exercise-prompt}
+Using the [three-environment PDF and weights](#cell-integral-constraints), derive an expression for the subgrid variance in terms of the unmixed fraction $\zeta$, assuming no reaction.
+:::
+
+::: {.cell-integral-exercise-equations}
+$$
+\widetilde{Y_{\alpha}^{\prime\prime 2}}(t)
+=\int f(\psi_{\alpha};t)
+\left[\psi_{\alpha}-\widetilde{Y}_{\alpha}(t)\right]^2
+\,\mathrm{d}\psi_{\alpha}
+$$
+:::
 
 ## Relating Unmixed Fraction and SGS Variance {.source-slide-title}
 

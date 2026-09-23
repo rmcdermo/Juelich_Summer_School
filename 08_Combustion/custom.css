@@ -5689,3 +5689,27 @@
   width: 27%;
 }
 .reveal .slides .cell-integral-weights mjx-container[display="true"] { text-align: left !important; }
+
+/* Explicit prompt for the originally title-only constraints exercise. */
+.reveal .slides .cell-integral-exercise-slide > h2 { text-align: left; }
+.reveal .slides .cell-integral-exercise-prompt {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 1.35em;
+  position: absolute;
+  left: 10%;
+  top: 24%;
+  width: 80%;
+  line-height: 1.4;
+}
+.reveal .slides .cell-integral-exercise-prompt p { margin: 0; }
+.reveal .slides .cell-integral-exercise-equations {
+  position: absolute;
+  left: 15%;
+  top: 43%;
+  width: 70%;
+  font-size: 1.6em;
+  display: grid;
+  gap: 45px;
+}
+.reveal .slides .cell-integral-exercise-equations p { margin: 0; }
+.reveal .slides .cell-integral-exercise-equations mjx-container[display="true"] { margin: 0 !important; }
