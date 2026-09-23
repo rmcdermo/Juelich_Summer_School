@@ -5263,3 +5263,21 @@
   width: 90%;
 }
 .reveal .slides .edm-equation mjx-container[display="true"] { margin: 0 !important; }
+
+/* Heskestad flame-height exercise: native lettered instructions. */
+.reveal .slides .heskestad-exercise-slide > h2 { text-align: left; }
+.reveal .slides .heskestad-exercise-slide > ol {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  left: 10%;
+  line-height: 1.4;
+  list-style-type: lower-alpha;
+  margin: 0;
+  padding-left: 1.4em;
+  position: absolute;
+  top: 25%;
+  width: 80%;
+}
+.reveal .slides .heskestad-exercise-slide > ol > li { margin-bottom: 0.65em; }
+.reveal .slides .heskestad-exercise-slide > ol > li::marker { content: counter(list-item, lower-alpha) ")  "; }
+.reveal .slides .heskestad-exercise-slide code { color: inherit; }

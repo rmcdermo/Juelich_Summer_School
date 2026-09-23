@@ -481,9 +481,11 @@ $$
 $$
 :::
 
-## Example: Heskestad Flame Height {.source-slide-title}
+## Example: Heskestad Flame Height {.heskestad-exercise-slide}
 
-![](figs/reference-slides/slide-066.png){.reference-slide fig-align="center"}
+a) Run [`Qs=1_RI=05.fds`](examples/flame_height_example/Qs=1_RI=05.fds) and visualize `HRRPUV` in Smokeview (modify `T_END` to 10 s).
+b) Modify the input file to use `ZETA_0 = 0` and rerun the case (check the FDS User Guide for syntax).
+c) Plot `HRRPUL` vs. `Z` for both cases.
 
 ## Optional module: PDF methods {.source-slide-title}
 
