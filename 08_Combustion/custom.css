@@ -5281,3 +5281,30 @@
 .reveal .slides .heskestad-exercise-slide > ol > li { margin-bottom: 0.65em; }
 .reveal .slides .heskestad-exercise-slide > ol > li::marker { content: counter(list-item, lower-alpha) ")  "; }
 .reveal .slides .heskestad-exercise-slide code { color: inherit; }
+
+/* Example folders: concise repository paths above the slide footer. */
+.reveal .slides .has-example-files > .example-files {
+  bottom: 5%;
+  color: #555;
+  font-size: 18px;
+  left: 5%;
+  line-height: 1.3;
+  margin: 0;
+  position: absolute;
+  text-align: left;
+  width: 90%;
+}
+.reveal .slides .example-files p { margin: 0; }
+.reveal .slides .example-files code { color: inherit; background: transparent; }
+.reveal .slides .westbrook-dryer-slide > .example-files { left: 6.2%; width: 61%; }
+.reveal .slides section.has-example-files img.reference-slide {
+  height: 75%;
+  left: 5%;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  object-fit: contain;
+  position: absolute;
+  top: 12%;
+  width: 90%;
+}

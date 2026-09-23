@@ -320,7 +320,7 @@ $$
 
 :::
 
-## Exercise: Kolmogorov Scaling {.kolmogorov-slide}
+## Exercise: Kolmogorov Scaling {.kolmogorov-slide .has-example-files}
 
 ::: {.kolmogorov-layout}
 
@@ -397,6 +397,10 @@ $E(k)$
 
 ::::
 
+:::
+
+::: {.example-files}
+Files: `08_Combustion/examples/kolmogorov_spectrum_example/`
 :::
 
 ## Limiting Case: Initially Completely Mixed, Infinitely Fast Kinetics {#limiting-case-initially-mixed .initially-mixed-slide}
@@ -481,11 +485,15 @@ $$
 $$
 :::
 
-## Example: Heskestad Flame Height {.heskestad-exercise-slide}
+## Example: Heskestad Flame Height {.heskestad-exercise-slide .has-example-files}
 
 a) Run [`Qs=1_RI=05.fds`](examples/flame_height_example/Qs=1_RI=05.fds) and visualize `HRRPUV` in Smokeview (modify `T_END` to 10 s).
 b) Modify the input file to use `ZETA_0 = 0` and rerun the case (check the FDS User Guide for syntax).
 c) Plot `HRRPUL` vs. `Z` for both cases.
+
+::: {.example-files}
+Files: `08_Combustion/examples/flame_height_example/`
+:::
 
 ## Optional module: PDF methods {.source-slide-title}
 
@@ -495,17 +503,29 @@ c) Plot `HRRPUL` vs. `Z` for both cases.
 
 ![](figs/reference-slides/slide-068.png){.reference-slide fig-align="center"}
 
-## Probability Density Functions {.source-slide-title}
+## Probability Density Functions {.source-slide-title .has-example-files}
 
-![](figs/reference-slides/slide-069.png){.reference-slide fig-align="center"}
+![](figs/reference-slides/slide-069.png){.reference-slide .nostretch fig-align="center"}
 
-## Beta PDF {.source-slide-title}
+::: {.example-files}
+Files: `08_Combustion/examples/pdf_example/`
+:::
 
-![](figs/reference-slides/slide-070.png){.reference-slide fig-align="center"}
+## Beta PDF {.source-slide-title .has-example-files}
 
-## Example: Dirac Delta Function {.source-slide-title}
+![](figs/reference-slides/slide-070.png){.reference-slide .nostretch fig-align="center"}
 
-![](figs/reference-slides/slide-071.png){.reference-slide fig-align="center"}
+::: {.example-files}
+Files: `08_Combustion/examples/pdf_example/`
+:::
+
+## Example: Dirac Delta Function {.source-slide-title .has-example-files}
+
+![](figs/reference-slides/slide-071.png){.reference-slide .nostretch fig-align="center"}
+
+::: {.example-files}
+Files: `08_Combustion/examples/pdf_example/`
+:::
 
 ## Multiple Delta Functions {.source-slide-title}
 
@@ -527,13 +547,21 @@ c) Plot `HRRPUL` vs. `Z` for both cases.
 
 ![](figs/reference-slides/slide-076.png){.reference-slide fig-align="center"}
 
-## Example: Computing the Variance {.source-slide-title}
+## Example: Computing the Variance {.source-slide-title .has-example-files}
 
-![](figs/reference-slides/slide-077.png){.reference-slide fig-align="center"}
+![](figs/reference-slides/slide-077.png){.reference-slide .nostretch fig-align="center"}
 
-## Example: Computing the Variance, Continued {.source-slide-title}
+::: {.example-files}
+Files: `08_Combustion/examples/variance_example/`
+:::
 
-![](figs/reference-slides/slide-078.png){.reference-slide fig-align="center"}
+## Example: Computing the Variance, Continued {.source-slide-title .has-example-files}
+
+![](figs/reference-slides/slide-078.png){.reference-slide .nostretch fig-align="center"}
+
+::: {.example-files}
+Files: `08_Combustion/examples/variance_example/`
+:::
 
 ## Interaction by Exchange with the Mean {.source-slide-title}
 

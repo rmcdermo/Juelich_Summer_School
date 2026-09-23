@@ -1,0 +1,105 @@
+# Module III: Flame Extinction
+
+## Fire Suppression versus Flame Extinction {.source-slide-title}
+
+![](figs/reference-slides/slide-093.png){.reference-slide fig-align="center"}
+
+## Binary Flame Extinction for EDC {.source-slide-title}
+
+![](figs/reference-slides/slide-094.png){.reference-slide fig-align="center"}
+
+## Continuous Flame Extinction for EDC {.source-slide-title}
+
+![](figs/reference-slides/slide-095.png){.reference-slide fig-align="center"}
+
+## Mechanisms of Flame Extinction {.source-slide-title}
+
+![](figs/reference-slides/slide-096.png){.reference-slide fig-align="center"}
+
+## Oxygen Criterion: Mowrer's Model {.source-slide-title}
+
+![](figs/reference-slides/slide-097.png){.reference-slide fig-align="center"}
+
+## Oxygen Criterion: Derivation {.source-slide-title}
+
+![](figs/reference-slides/slide-098.png){.reference-slide fig-align="center"}
+
+## Simple Models of Flame Extinction {.source-slide-title}
+
+![](figs/reference-slides/slide-099.png){.reference-slide fig-align="center"}
+
+## Example: Simple Extinction Model {.source-slide-title .has-example-files}
+
+![](figs/reference-slides/slide-100.png){.reference-slide .nostretch fig-align="center"}
+
+::: {.example-files}
+Files: `08_Combustion/examples/extinction_example/`
+:::
+
+## FDS Thermal Extinction Model {.source-slide-title}
+
+![](figs/reference-slides/slide-101.png){.reference-slide fig-align="center"}
+
+## Defining the Stoichiometric Pocket {.source-slide-title}
+
+![](figs/reference-slides/slide-102.png){.reference-slide fig-align="center"}
+
+## FDS Thermal Extinction Model: Dilution {.source-slide-title}
+
+![](figs/reference-slides/slide-103.png){.reference-slide fig-align="center"}
+
+## FDS Thermal Extinction Model: Criterion {.source-slide-title}
+
+![](figs/reference-slides/slide-104.png){.reference-slide fig-align="center"}
+
+## Example: FDS Thermal Extinction {.source-slide-title .has-example-files}
+
+![](figs/reference-slides/slide-105.png){.reference-slide .nostretch fig-align="center"}
+
+::: {.example-files}
+Files: `08_Combustion/examples/extinction_example/`
+:::
+
+## Simple Ignition Model {.source-slide-title}
+
+![](figs/reference-slides/slide-106.png){.reference-slide fig-align="center"}
+
+## Example: Cup Burner {.source-slide-title .has-example-files}
+
+![](figs/reference-slides/slide-107.png){.reference-slide .nostretch fig-align="center"}
+
+::: {.example-files}
+Files: `08_Combustion/examples/cup_burner_example/`
+:::
+
+## Pilot Ignition Model {.source-slide-title}
+
+![](figs/reference-slides/slide-108.png){.reference-slide fig-align="center"}
+
+## Example: Pilot Fuel Ignition {.source-slide-title .has-example-files}
+
+![](figs/reference-slides/slide-109.png){.reference-slide .nostretch fig-align="center"}
+
+::: {.example-files}
+Files: `08_Combustion/examples/pilot_fuel_example/`
+:::
+
+## Aerodynamic Quenching {.source-slide-title}
+
+![](figs/reference-slides/slide-110.png){.reference-slide fig-align="center"}
+
+## Steady Laminar Flamelet {.source-slide-title}
+
+![](figs/reference-slides/slide-111.png){.reference-slide fig-align="center"}
+
+## Steady Laminar Flamelet: Equations {.source-slide-title}
+
+![](figs/reference-slides/slide-112.png){.reference-slide fig-align="center"}
+
+## Damköhler Number {.source-slide-title}
+
+![](figs/reference-slides/slide-113.png){.reference-slide fig-align="center"}
+
+## Borghi Diagram {.source-slide-title}
+
+![](figs/reference-slides/slide-114.png){.reference-slide fig-align="center"}

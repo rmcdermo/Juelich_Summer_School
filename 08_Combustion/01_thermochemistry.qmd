@@ -462,7 +462,7 @@ $$\left(\frac{\dfrac{\mathrm{kg}_{\mathrm{F}}}{\mathrm{kmol}_{\mathrm{F}}}}{\dfr
 
 :::
 
-## Example: heat of combustion for propane {.heat-of-combustion-example-slide}
+## Example: heat of combustion for propane {.heat-of-combustion-example-slide .has-example-files}
 
 ::: {.heat-of-combustion-example-layout}
 
@@ -499,6 +499,10 @@ approx 13,000 $\mathrm{kJ/kg\ O_2}$
 
 :::
 
+:::
+
+::: {.example-files}
+Files: `08_Combustion/examples/heat_of_combustion_example/`
 :::
 
 ## Ideal gas equation of state {.ideal-gas-slide}
@@ -770,7 +774,7 @@ $$
 
 :::
 
-## Heat release rate in FDS {.heat-release-rate-fds-slide}
+## Heat release rate in FDS {.heat-release-rate-fds-slide .has-example-files}
 
 ::: {.heat-release-rate-fds-layout}
 
@@ -827,6 +831,10 @@ b) plot `hrrpuv` and `hrrpuv_reac`
 
 :::
 
+:::
+
+::: {.example-files}
+Files: `08_Combustion/examples/hrrpuv_example/`
 :::
 
 ## Adiabatic flame temperature {.adiabatic-flame-slide}
@@ -1416,7 +1424,7 @@ $$
 
 :::
 
-## Burke--Schumann solution: generated plots
+## Burke--Schumann solution: generated plots {.has-example-files}
 
 (See burke-schumann.py)
 
@@ -1435,6 +1443,10 @@ $$
 :::
 
 ::::
+
+::: {.example-files}
+Files: `08_Combustion/examples/burke-schumann_example/`
+:::
 
 ## Equilibrium Chemistry {.equilibrium-chemistry-slide}
 
@@ -1613,7 +1625,7 @@ $$
 :::
 
 
-## Example: Westbrook and Dryer {.westbrook-dryer-slide}
+## Example: Westbrook and Dryer {.westbrook-dryer-slide .has-example-files}
 
 ::: {.westbrook-dryer-layout}
 
@@ -1621,7 +1633,7 @@ $$
 
 1. Run **reactionrate_arrhenius_2order_1step.fds**
 2. Plot the time history of species mass fractions.
-3. Modify the **fds/Flowfields/realizable_mass_fractions.fds** case to use the Westbrook and Dryer propane reaction parameters (see FDS User Guide example).
+3. Modify the [`realizable_mass_fractions.fds`](examples/realizability_example/realizable_mass_fractions.fds) case to use the Westbrook and Dryer propane reaction parameters (see FDS User Guide example).
 4. Plot the global combustion efficiency as a function of time.
 
 :::
@@ -1638,6 +1650,11 @@ $$
 
 :::
 
+:::
+
+::: {.example-files}
+Files: `08_Combustion/examples/finite_rate_example/`\
+Files: `08_Combustion/examples/realizability_example/`
 :::
 
 ## Rate Laws {.rate-laws-slide}
@@ -1875,7 +1892,7 @@ $$
 
 :::
 
-## Example: Lumped Species to Primitive Species {.lumped-to-primitive-slide}
+## Example: Lumped Species to Primitive Species {.lumped-to-primitive-slide .has-example-files}
 
 ::: {.lumped-to-primitive-layout}
 
@@ -1924,6 +1941,10 @@ Y_{\mathrm{H_2O}}
 $$
 :::
 
+:::
+
+::: {.example-files}
+Files: `08_Combustion/examples/lumped_species_example/`
 :::
 
 ## Specified CO and Soot Yields {.co-soot-yields-slide}
@@ -2012,7 +2033,7 @@ The custom molecular weight is 0.9(12.0107) + 0.1(1.00794) = 10.9104 kg/kmol.
 
 ![](figs/thermochemistry/simple-chemistry-fds-output.png){.thermo-source-figure .complete-simple-chemistry-table fig-alt="Original FDS output for simple hydrocarbon chemistry."}
 
-## Example: Simple Chemistry with FORMULA {.formula-example-slide}
+## Example: Simple Chemistry with FORMULA {.formula-example-slide .has-example-files}
 
 ::: {.formula-example-layout}
 
@@ -2029,7 +2050,11 @@ Examine the .out file for each case.
 
 :::
 
-## Example: Custom Fuel Mixture {.custom-fuel-example-slide}
+::: {.example-files}
+Files: `08_Combustion/examples/simple_chemistry_example/`
+:::
+
+## Example: Custom Fuel Mixture {.custom-fuel-example-slide .has-example-files}
 
 ::: {.custom-fuel-example-layout}
 
@@ -2047,7 +2072,11 @@ Examine the .out file for each case.
 
 :::
 
-## Example: Complex Stoichiometry {.complex-stoich-example-slide}
+::: {.example-files}
+Files: `08_Combustion/examples/natural_gas_example/`
+:::
+
+## Example: Complex Stoichiometry {.complex-stoich-example-slide .has-example-files}
 
 ::: {.complex-stoich-example-layout}
 
@@ -2062,6 +2091,10 @@ Examine the .out file for each case.
 (See fds_complex_stoichiometry.py)
 :::
 
+:::
+
+::: {.example-files}
+Files: `08_Combustion/examples/chlorine_example/`
 :::
 
 ## 2-Step Chemistry for CO and Soot {.two-step-chemistry-slide}
