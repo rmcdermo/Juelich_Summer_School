@@ -5282,6 +5282,18 @@
 .reveal .slides .heskestad-exercise-slide > ol > li::marker { content: counter(list-item, lower-alpha) ")  "; }
 .reveal .slides .heskestad-exercise-slide code { color: inherit; }
 
+/* PDF methods module divider: a single native title. */
+.reveal .slides section.pdf-methods-title-slide > h2 {
+  font-size: 2.2em;
+  left: 5%;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 90%;
+}
+
 /* Example folders: concise repository paths above the slide footer. */
 .reveal .slides .has-example-files > .example-files {
   bottom: 5%;

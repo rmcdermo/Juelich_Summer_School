@@ -28,6 +28,8 @@ footer: "(Turbulent) Combustion"
 
 {{< include 02_eddy_dissipation_concept.qmd >}}
 
+{{< include 02b_pdf_methods.qmd >}}
+
 {{< include 03_flame_extinction.qmd >}}
 
 {{< include 04_review.qmd >}}
