@@ -320,9 +320,84 @@ $$
 
 :::
 
-## Exercise: Kolmogorov Scaling {.source-slide-title}
+## Exercise: Kolmogorov Scaling {.kolmogorov-slide}
 
-![](figs/reference-slides/slide-062.png){.reference-slide fig-align="center"}
+::: {.kolmogorov-layout}
+
+::: {.kolmogorov-prompt}
+Use a model inertial range energy spectrum to derive the scaling law.
+:::
+
+::: {.kolmogorov-scaling}
+$$
+\tau_u \sim \Delta^{2/3}
+$$
+:::
+
+::: {.kolmogorov-spectrum-intro}
+The inertial range spectrum is
+:::
+
+::: {.kolmogorov-spectrum-equation}
+$$
+E(k) = C_K\,\varepsilon^{2/3}\,k^{-5/3}
+$$
+:::
+
+::: {.kolmogorov-constant}
+$C_K = 1.5$\
+Kolmogorov constant
+:::
+
+::: {.kolmogorov-dissipation}
+$\varepsilon$\
+KE dissipation rate
+:::
+
+::: {.kolmogorov-wavenumber}
+$k$\
+Wavenumber
+:::
+
+::: {.kolmogorov-portrait}
+![](figs/eddy_dissipation_concept/andrey-kolmogorov.png){fig-alt="Andrey Nikolaevich Kolmogorov at a blackboard."}
+:::
+
+::: {.kolmogorov-caption}
+Andrey Nikolaevich Kolmogorov\
+(1903–1987)
+:::
+
+:::: {.kolmogorov-plot}
+![](figs/eddy_dissipation_concept/kolmogorov-energy-spectrum.png){fig-alt="Model energy spectrum with an inertial-range power-law decay and a vertical dashed line marking the grid Nyquist limit."}
+
+::: {.kolmogorov-plot-guides}
+![](figs/eddy_dissipation_concept/kolmogorov-spectrum-guides.svg){fig-alt=""}
+:::
+
+::: {.kolmogorov-plot-slope}
+$-5/3$
+:::
+
+::: {.kolmogorov-plot-cutoff}
+$k = \dfrac{\pi}{\Delta}$
+:::
+
+::: {.kolmogorov-plot-nyquist}
+grid Nyquist limit
+:::
+
+::: {.kolmogorov-plot-x-label}
+$k$
+:::
+
+::: {.kolmogorov-plot-y-label}
+$E(k)$
+:::
+
+::::
+
+:::
 
 ## Limiting Case: Initially Mixed {.source-slide-title}
 

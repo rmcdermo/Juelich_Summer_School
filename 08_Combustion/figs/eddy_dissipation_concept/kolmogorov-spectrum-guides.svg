@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1665" height="1248" viewBox="0 0 1665 1248">
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#333"/></marker></defs>
+  <path d="M900 195L1370 614" fill="none" stroke="#555" stroke-width="3"/>
+  <path d="M880 600L1038 650" fill="none" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

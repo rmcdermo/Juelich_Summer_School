@@ -5179,3 +5179,38 @@
 .reveal .slides .mixing-scale-diffusion mjx-container[display="true"],
 .reveal .slides .mixing-scale-turbulence mjx-container[display="true"],
 .reveal .slides .mixing-scale-gravity mjx-container[display="true"] { text-align: left !important; }
+
+/* Kolmogorov scaling exercise: preserve the prompt without adding a solution. */
+.reveal .slides .kolmogorov-slide > h2 { text-align: left; }
+.reveal .slides .kolmogorov-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .kolmogorov-layout > div { margin: 0; position: absolute; }
+.reveal .slides .kolmogorov-layout p { margin: 0; }
+.reveal .slides .kolmogorov-layout mjx-container[display="true"] { margin: 0 !important; }
+.reveal .slides .kolmogorov-prompt { left: 9%; top: 21%; width: 43%; font-size: 1.2em; line-height: 1.4; }
+.reveal .slides .kolmogorov-scaling { left: 9%; top: 36%; width: 43%; font-size: 1.75em; }
+.reveal .slides .kolmogorov-spectrum-intro { left: 9%; top: 49%; width: 43%; font-size: 1.2em; }
+.reveal .slides .kolmogorov-spectrum-equation { left: 7%; top: 59%; width: 47%; font-size: 1.55em; }
+.reveal .slides .kolmogorov-constant,
+.reveal .slides .kolmogorov-dissipation,
+.reveal .slides .kolmogorov-wavenumber { color: #5b9bd5; font-size: 0.95em; line-height: 1.35; top: 74%; text-align: center; }
+.reveal .slides .kolmogorov-constant { left: 7%; width: 16%; }
+.reveal .slides .kolmogorov-dissipation { left: 24%; width: 17%; }
+.reveal .slides .kolmogorov-wavenumber { left: 42%; width: 13%; }
+.reveal .slides .kolmogorov-portrait { left: 69%; top: 10%; width: 17%; }
+.reveal .slides .kolmogorov-caption { left: 60%; top: 35%; width: 35%; font-size: 0.9em; line-height: 1.25; text-align: center; }
+.reveal .slides .kolmogorov-plot { left: 60%; top: 43%; width: 35%; }
+.reveal .slides .kolmogorov-layout img { display: block; height: auto; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .kolmogorov-plot > div { margin: 0; position: absolute; }
+.reveal .slides .kolmogorov-plot-guides { inset: 0; width: 100%; }
+.reveal .slides .kolmogorov-plot-slope { left: 66%; top: 22%; font-size: 1em; }
+.reveal .slides .kolmogorov-plot-cutoff { left: 32%; top: 39%; font-size: 1em; }
+.reveal .slides .kolmogorov-plot-nyquist { background: transparent; color: #70ad47; left: 16%; top: 58%; width: 48%; font-size: 1em; text-align: center; }
+.reveal .slides .kolmogorov-plot-x-label { left: 48%; top: 90%; width: 14%; font-size: 1em; text-align: center; }
+.reveal .slides .kolmogorov-plot-y-label { left: -3%; top: 40%; width: 16%; font-size: 1em; text-align: center; transform: rotate(-90deg); }
