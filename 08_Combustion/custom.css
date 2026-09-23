@@ -5067,3 +5067,54 @@
 .reveal .slides .unmixed-fraction-slide .tbr-idealized-label { top: 48%; }
 .reveal .slides .unmixed-fraction-slide .tbr-scale-label { top: 11.2%; }
 .reveal .slides .unmixed-fraction-slide .tbr-scale { top: 15.5%; }
+
+/* Evolution of the Unmixed Fraction: decay law above the mixing sequence. */
+.reveal .slides .unmixed-evolution-slide > h2 { text-align: left; }
+.reveal .slides .unmixed-evolution-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .unmixed-evolution-layout > div { margin: 0; position: absolute; }
+.reveal .slides .unmixed-evolution-layout p { margin: 0; }
+.reveal .slides .unmixed-evolution-layout mjx-container[display="true"] { margin: 0 !important; }
+.reveal .slides .unmixed-evolution-rate { left: 10%; top: 20%; width: 35%; font-size: 1.7em; }
+.reveal .slides .unmixed-evolution-solution { left: 10%; top: 36%; width: 35%; font-size: 1.65em; }
+.reveal .slides .unmixed-evolution-plot { left: 55%; top: 15%; width: 26%; }
+.reveal .slides .unmixed-evolution-layout img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+}
+.reveal .slides .unmixed-evolution-y-label { left: 46%; top: 26%; width: 8%; text-align: right; font-size: 1.15em; }
+.reveal .slides .unmixed-evolution-x-label { left: 55%; top: 42%; width: 26%; text-align: center; font-size: 1.15em; }
+.reveal .slides .unmixed-evolution-initial,
+.reveal .slides .unmixed-evolution-intermediate,
+.reveal .slides .unmixed-evolution-mixed { top: 50%; width: 22%; }
+.reveal .slides .unmixed-evolution-initial { left: 13%; }
+.reveal .slides .unmixed-evolution-intermediate { left: 41%; }
+.reveal .slides .unmixed-evolution-mixed { left: 69%; }
+.reveal .slides .unmixed-evolution-arrow-first,
+.reveal .slides .unmixed-evolution-arrow-second {
+  height: 24px;
+  top: calc(50% + 176px - 12px);
+  width: 6%;
+}
+.reveal .slides .unmixed-evolution-arrow-first::before,
+.reveal .slides .unmixed-evolution-arrow-second::before {
+  background: #5b9bd5;
+  clip-path: polygon(0 37.5%, 72% 37.5%, 72% 0, 100% 50%, 72% 100%, 72% 62.5%, 0 62.5%);
+  content: "";
+  height: 100%;
+  left: 10%;
+  position: absolute;
+  width: 80%;
+}
+.reveal .slides .unmixed-evolution-arrow-first { left: 35%; }
+.reveal .slides .unmixed-evolution-arrow-second { left: 63%; }

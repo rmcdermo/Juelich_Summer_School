@@ -196,9 +196,53 @@ $$
 
 :::
 
-## Evolution of the Unmixed Fraction {.source-slide-title}
+## Evolution of the Unmixed Fraction {.unmixed-evolution-slide}
 
-![](figs/reference-slides/slide-059.png){.reference-slide fig-align="center"}
+::: {.unmixed-evolution-layout}
+
+::: {.unmixed-evolution-rate}
+$$
+\frac{\mathrm{d}\zeta}{\mathrm{d}t} = -\frac{\zeta}{\tau_{\mathrm{mix}}}
+$$
+:::
+
+::: {.unmixed-evolution-solution}
+$$
+\zeta(t) = \zeta_0\,\mathrm{e}^{-t/\tau_{\mathrm{mix}}}
+$$
+:::
+
+::: {.unmixed-evolution-plot}
+![](figs/eddy_dissipation_concept/unmixed-fraction-decay.svg){fig-alt="Exponential decay of the unmixed fraction from one toward zero over ten mixing times."}
+:::
+
+::: {.unmixed-evolution-y-label}
+$\zeta(t)$
+:::
+
+::: {.unmixed-evolution-x-label}
+$t/\tau_{\mathrm{mix}}$
+:::
+
+::: {.unmixed-evolution-initial}
+![](figs/eddy_dissipation_concept/unmixed-evolution-initial.png){fig-alt="Initially segregated turbulent mass-fraction field with strong light and dark variations."}
+:::
+
+::: {.unmixed-evolution-arrow-first aria-hidden="true"}
+:::
+
+::: {.unmixed-evolution-intermediate}
+![](figs/eddy_dissipation_concept/unmixed-evolution-intermediate.png){fig-alt="Partially mixed field with reduced mass-fraction variations."}
+:::
+
+::: {.unmixed-evolution-arrow-second aria-hidden="true"}
+:::
+
+::: {.unmixed-evolution-mixed}
+![](figs/eddy_dissipation_concept/unmixed-evolution-mixed.png){fig-alt="Fully mixed field with uniform mass fraction."}
+:::
+
+:::
 
 ## Unmixed Fraction FAQ {.source-slide-title}
 
