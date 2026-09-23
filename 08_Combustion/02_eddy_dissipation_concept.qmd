@@ -399,13 +399,9 @@ $E(k)$
 
 :::
 
-## Limiting Case: Initially Mixed {.initially-mixed-slide}
+## Limiting Case: Initially Completely Mixed, Infinitely Fast Kinetics {#limiting-case-initially-mixed .initially-mixed-slide}
 
 ::: {.initially-mixed-layout}
-
-::: {.initially-mixed-assumptions}
-Initially completely mixed, infinitely fast kinetics
-:::
 
 ::: {.initially-mixed-source}
 $$
@@ -435,9 +431,46 @@ $$
 
 :::
 
-## Limiting Case: Initially Unmixed {.source-slide-title}
+## Limiting Case: Initially Completely Unmixed, Infinitely Fast Kinetics {#limiting-case-initially-unmixed .initially-unmixed-slide}
 
-![](figs/reference-slides/slide-064.png){.reference-slide fig-align="center"}
+::: {.initially-unmixed-layout}
+
+::: {.initially-unmixed-source}
+$$
+\begin{aligned}
+\overline{\dot{m}_{\mathrm{F}}^{\prime\prime\prime}}
+&= \rho\Biggl[
+\frac{\zeta}{\tau_{\mathrm{mix}}}
+\left(\widehat{Y}_{\mathrm{F}}-\widetilde{Y}_{\mathrm{F}}^{0}\right)
++ (1-\zeta)\frac{\mathrm{d}\widehat{Y}_{\mathrm{F}}}{\mathrm{d}t}
+\Biggr]
+\\[0.6em]
+&= \rho\Biggl[
+\frac{1}{\tau_{\mathrm{mix}}}
+\left(\widehat{Y}_{\mathrm{F}}-\widetilde{Y}_{\mathrm{F}}^{0}\right)
+\Biggr]
+\end{aligned}
+$$
+:::
+
+::: {.initially-unmixed-fuel}
+$$
+\widehat{Y}_{\mathrm{F}} =
+\begin{cases}
+0,
+& \text{if }\widetilde{Y}_{\mathrm{F}}^{0}
+\leq \widetilde{Y}_{\mathrm{A}}^{0}/s
+\quad\text{(fuel lean)}
+\\[0.3em]
+\widetilde{Y}_{\mathrm{F}}^{0}-\widetilde{Y}_{\mathrm{A}}^{0}/s,
+& \text{if }\widetilde{Y}_{\mathrm{F}}^{0}
+> \widetilde{Y}_{\mathrm{A}}^{0}/s
+\quad\text{(fuel rich)}
+\end{cases}
+$$
+:::
+
+:::
 
 ## Basic Eddy Dissipation Model {.source-slide-title}
 

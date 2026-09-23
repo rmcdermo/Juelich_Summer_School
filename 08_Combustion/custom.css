@@ -5229,7 +5229,25 @@
 .reveal .slides .initially-mixed-layout > div { margin: 0; position: absolute; }
 .reveal .slides .initially-mixed-layout p { margin: 0; }
 .reveal .slides .initially-mixed-layout mjx-container[display="true"] { margin: 0 !important; }
-.reveal .slides .initially-mixed-assumptions { left: 9%; top: 16%; width: 84%; font-size: 1.2em; }
 .reveal .slides .initially-mixed-source { left: 5%; top: 32%; width: 90%; font-size: 1.6em; }
 .reveal .slides .initially-mixed-condition { left: 15%; top: 54%; width: 70%; font-size: 1.7em; }
 .reveal .slides .initially-mixed-mixture-fraction { left: 15%; top: 68%; width: 70%; font-size: 1.7em; }
+
+/* Initially unmixed limiting case: aligned source term and fuel cases. */
+.reveal .slides .initially-unmixed-slide > h2 { text-align: left; }
+.reveal .slides .initially-unmixed-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .initially-unmixed-layout > div { margin: 0; position: absolute; }
+.reveal .slides .initially-unmixed-layout p { margin: 0; }
+.reveal .slides .initially-unmixed-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+.reveal .slides .initially-unmixed-source { left: 9%; top: 23%; width: 85%; font-size: 1.4em; }
+.reveal .slides .initially-unmixed-fuel { left: 9%; top: 63%; width: 85%; font-size: 1.4em; }
