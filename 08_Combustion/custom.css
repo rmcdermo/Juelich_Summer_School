@@ -5294,6 +5294,37 @@
   width: 90%;
 }
 
+/* PDF methods: turbulence-chemistry closure with native equations. */
+.reveal .slides .pdf-closure-slide > h2 { text-align: left; }
+.reveal .slides .pdf-closure-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .pdf-closure-layout > div { margin: 0; position: absolute; }
+.reveal .slides .pdf-closure-layout p { margin: 0; }
+.reveal .slides .pdf-closure-layout mjx-container[display="true"] {
+  margin: 0 !important;
+  text-align: left !important;
+}
+.reveal .slides .pdf-closure-intro {
+  color: #888;
+  font-size: 1.25em;
+  left: 8%;
+  line-height: 1.35;
+  top: 21%;
+  width: 84%;
+}
+.reveal .slides .pdf-closure-inequality { font-size: 1.7em; left: 8%; top: 38%; width: 63%; }
+.reveal .slides .pdf-closure-explanation { font-size: 1.25em; left: 8%; line-height: 1.35; top: 53%; width: 62%; }
+.reveal .slides .pdf-closure-integral { font-size: 1.55em; left: 8%; top: 68%; width: 65%; }
+.reveal .slides .pdf-closure-composition-label { color: #4472c4; font-size: 1.1em; left: 8%; text-align: center; top: 83%; width: 65%; }
+.reveal .slides .pdf-closure-field { left: 73%; top: 38%; width: 23%; }
+.reveal .slides .pdf-closure-field img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+
 /* Example folders: concise repository paths above the slide footer. */
 .reveal .slides .has-example-files > .example-files {
   bottom: 5%;

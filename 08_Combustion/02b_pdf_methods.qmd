@@ -1,8 +1,42 @@
 ## Optional Module: PDF Methods {#optional-module-pdf-methods .pdf-methods-title-slide}
 
-## Turbulence-Chemistry Closure Problem {.source-slide-title}
+## Turbulence-Chemistry Closure Problem {.pdf-closure-slide}
 
-![](figs/reference-slides/slide-068.png){.reference-slide fig-align="center"}
+::: {.pdf-closure-layout}
+
+::: {.pdf-closure-intro}
+In general, for finite-rate chemistry the Arrhenius rate laws cannot be evaluated using Favre-filtered fields.
+:::
+
+::: {.pdf-closure-inequality}
+$$
+\overline{\dot{m}_{\alpha}^{\prime\prime\prime}(\mathbf{Y},T)}
+\neq
+\dot{m}_{\alpha}^{\prime\prime\prime}(\widetilde{\mathbf{Y}},\widetilde{T})
+$$
+:::
+
+::: {.pdf-closure-explanation}
+However, the mean may be computed from convolution over the subgrid PDF:
+:::
+
+::: {.pdf-closure-integral}
+$$
+\left\langle\dot{m}_{\alpha}^{\prime\prime\prime}(\mathbf{x},t)\right\rangle
+=\int f\!\left({\color{#4472c4}\underline{\psi}};\mathbf{x},t\right)
+\dot{m}_{\alpha}^{\prime\prime\prime}(\underline{\psi})\,\mathrm{d}\underline{\psi}
+$$
+:::
+
+::: {.pdf-closure-composition-label}
+$\underline{\psi}$: thermochemical composition vector
+:::
+
+::: {.pdf-closure-field}
+![](figs/pdf_methods/turbulent-composition-field.png){fig-alt="Turbulent composition field showing unresolved variations within a grid cell."}
+:::
+
+:::
 
 ## Probability Density Functions {.source-slide-title .has-example-files}
 
