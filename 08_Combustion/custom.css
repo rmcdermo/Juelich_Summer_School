@@ -5599,3 +5599,43 @@
 .reveal .slides .iem-rate { font-size: 1.7em; left: 43%; top: 26%; width: 54%; }
 .reveal .slides .iem-decay { font-size: 1.55em; left: 43%; top: 48%; width: 54%; }
 .reveal .slides .iem-solution { font-size: 1.4em; left: 43%; top: 67%; width: 54%; }
+
+/* IEM variance exercise: native prompt and starting equation. */
+.reveal .slides .iem-variance-exercise-slide > h2 { text-align: left; }
+.reveal .slides .iem-variance-exercise-prompt {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 1.35em;
+  left: 10%;
+  line-height: 1.4;
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  width: 80%;
+}
+.reveal .slides .iem-variance-exercise-prompt p { margin: 0; }
+.reveal .slides .iem-variance-exercise-equation {
+  font-size: 1.8em;
+  left: 10%;
+  margin: 0;
+  position: absolute;
+  top: 46%;
+  width: 80%;
+}
+.reveal .slides .iem-variance-exercise-equation mjx-container[display="true"] { margin: 0 !important; }
+
+/* Three-environment comparison: generated field images and histograms. */
+.reveal .slides .three-environment-slide > h2 { text-align: left; }
+.reveal .slides .three-environment-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .three-environment-layout > div { position: absolute; margin: 0; }
+.reveal .slides .three-environment-layout p { margin: 0; }
+.reveal .slides .three-environment-continuous { left: 3%; top: 27%; width: 46%; }
+.reveal .slides .three-environment-discrete { left: 51%; top: 27%; width: 46%; }
+.reveal .slides .three-environment-layout img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .three-environment-script { color: #888; font-size: 0.85em; left: 5%; top: 75%; width: 90%; text-align: center; }

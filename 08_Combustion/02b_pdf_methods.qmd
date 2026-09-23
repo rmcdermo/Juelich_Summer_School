@@ -546,13 +546,42 @@ $$
 Cell: `08_Combustion/examples/particle_example/`
 :::
 
-## Example: Evolution of the Variance with IEM {.source-slide-title}
+## Example: Evolution of the Variance with IEM {.iem-variance-exercise-slide}
 
-![](figs/reference-slides/slide-080.png){.reference-slide fig-align="center"}
+::: {.iem-variance-exercise-prompt}
+Using the result from the [previous slide](#interaction-by-exchange-with-the-mean), derive the evolution equation for the variance according to the IEM mixing model.
+:::
 
-## Three Environment Subgrid PDF {.source-slide-title}
+::: {.iem-variance-exercise-equation}
+$$
+\overline{\phi}-\phi
+=(\overline{\phi}-\phi_0)\,e^{-t/\tau_{\mathrm{mix}}}
+$$
+:::
 
-![](figs/reference-slides/slide-081.png){.reference-slide fig-align="center"}
+## Three Environment Subgrid PDF {.three-environment-slide .has-example-files}
+
+::: {.three-environment-layout}
+
+::: {.three-environment-continuous}
+![](figs/pdf_methods/three-environment-continuous.svg){fig-alt="Contrast-adjusted continuous mixture-fraction field in a square cell, with its color scale and a histogram of the same adjusted values."}
+
+:::
+
+::: {.three-environment-discrete}
+![](figs/pdf_methods/three-environment-discrete.svg){fig-alt="Three-environment representation in a square cell, with its color scale and histogram concentrated near mixture fractions zero, 0.6, and one."}
+
+:::
+
+::: {.three-environment-script}
+See [`plot-three-environment.py`](figs/pdf_methods/plot-three-environment.py).
+:::
+
+:::
+
+::: {.example-files}
+Files: `08_Combustion/examples/variance_example/`
+:::
 
 ## Three Environment Subgrid PDF: Definition {.source-slide-title}
 
