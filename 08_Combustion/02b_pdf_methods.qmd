@@ -684,9 +684,37 @@ $$
 $$
 :::
 
-## Relating Unmixed Fraction and SGS Variance {.source-slide-title}
+## Relating Unmixed Fraction and SGS Variance {.unmixed-sgs-slide}
 
-![](figs/reference-slides/slide-086.png){.reference-slide fig-align="center"}
+::: {.unmixed-sgs-layout}
+::: {.unmixed-sgs-case}
+$$
+\zeta=1\;;\qquad \langle\phi\rangle=0.5
+$$
+:::
+
+::: {.unmixed-sgs-relation}
+$$
+\begin{aligned}
+\langle\phi^{\prime 2}\rangle
+&=\langle\phi^2\rangle-\langle\phi\rangle^2\\[0.4em]
+&=\zeta\left(\langle\phi\rangle-\langle\phi\rangle^2\right)
+\end{aligned}
+$$
+:::
+
+::: {.unmixed-sgs-cell}
+![](figs/pdf_methods/unmixed-sgs-cell.svg){fig-alt="Scalar composition is one in half of the cell volume and zero in the other half."}
+:::
+
+::: {.unmixed-sgs-variance}
+![](figs/pdf_methods/unmixed-sgs-variance.svg){fig-alt="The fully unmixed case has mean composition 0.5 and SGS scalar variance 0.25."}
+:::
+
+::: {.unmixed-sgs-script}
+See [`plot-unmixed-sgs-variance.py`](figs/pdf_methods/plot-unmixed-sgs-variance.py).
+:::
+:::
 
 ## Relating Unmixed Fraction and SGS Variance: Case 2 {.source-slide-title}
 

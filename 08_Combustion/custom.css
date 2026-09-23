@@ -5713,3 +5713,23 @@
 }
 .reveal .slides .cell-integral-exercise-equations p { margin: 0; }
 .reveal .slides .cell-integral-exercise-equations mjx-container[display="true"] { margin: 0 !important; }
+
+/* Unmixed-fraction/variance relation: native math over generated plots. */
+.reveal .slides .unmixed-sgs-slide > h2 { text-align: left; }
+.reveal .slides .unmixed-sgs-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  position: absolute;
+  inset: 0;
+  width: 1600px;
+  height: 900px;
+  margin: 0;
+}
+.reveal .slides .unmixed-sgs-layout > div { position: absolute; margin: 0; }
+.reveal .slides .unmixed-sgs-layout p { margin: 0; }
+.reveal .slides .unmixed-sgs-layout mjx-container[display="true"] { margin: 0 !important; }
+.reveal .slides .unmixed-sgs-case { left: 14.2%; top: 21%; width: 31.6%; font-size: 1.4em; }
+.reveal .slides .unmixed-sgs-relation { left: 56%; top: 16%; width: 40%; font-size: 1.25em; }
+.reveal .slides .unmixed-sgs-cell { left: 7%; top: 32%; width: 40%; }
+.reveal .slides .unmixed-sgs-variance { left: 53%; top: 32%; width: 40%; }
+.reveal .slides .unmixed-sgs-layout img { display: block; width: 100%; margin: 0; max-width: none; max-height: none; }
+.reveal .slides .unmixed-sgs-script { left: 5%; top: 86.5%; width: 90%; text-align: center; color: #888; font-size: 0.85em; }
