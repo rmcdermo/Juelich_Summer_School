@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title description">
+  <title id="title">Structural formula of propane</title>
+  <desc id="description">Three carbon atoms in a chain, with eight attached hydrogen atoms.</desc>
+  <g stroke="#000" stroke-width="7" stroke-linecap="square">
+    <path d="M76 180h36m56 0h84m96 0h84m56 0h36M140 84v48m160-48v48m160-48v48M140 228v48m160-48v48m160-48v48"/>
+  </g>
+  <g fill="#000" font-family="Arial, Helvetica, sans-serif" font-size="78" text-anchor="middle" dominant-baseline="central">
+    <text x="36" y="180">H</text><text x="140" y="180">C</text><text x="300" y="180">C</text><text x="460" y="180">C</text><text x="564" y="180">H</text>
+  </g>
+  <g fill="#000" font-family="Arial, Helvetica, sans-serif" font-size="68" text-anchor="middle" dominant-baseline="central">
+    <text x="140" y="46">H</text><text x="300" y="46">H</text><text x="460" y="46">H</text><text x="140" y="314">H</text><text x="300" y="314">H</text><text x="460" y="314">H</text>
+  </g>
+</svg>

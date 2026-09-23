@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" aria-hidden="true">
+  <defs><marker id="arrowhead" viewBox="0 0 10 10" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path fill="#4472c4" d="M0 0 10 5 0 10Z"/></marker></defs>
+  <line x1="465" y1="260" x2="610" y2="260" stroke="#4472c4" stroke-width="3" marker-end="url(#arrowhead)"/>
+</svg>

@@ -30,7 +30,7 @@ $$3\mathrm{CO_2} + 4\mathrm{H_2O} + 5(0.79/0.21)\mathrm{N_2}$$
 
 ::: {.stoichiometry-molecule}
 
-![](figs/thermochemistry/source/slide-006-picture-01.png){.stoichiometry-molecule-image fig-alt="Ball-and-stick model of a propane molecule."}
+![](figs/thermochemistry/propane-ball-and-stick.png){.stoichiometry-molecule-image fig-alt="Ball-and-stick model of a propane molecule."}
 
 :::
 
@@ -60,7 +60,7 @@ Propane model: [Ben Mills / Wikimedia Commons (public domain)](https://commons.w
 
 ::: {.complex-fuels-fire}
 
-![](figs/thermochemistry/source/slide-007-picture-02.png){.complex-fuels-fire-image fig-alt="Logs burning in a wood fire."}
+![](figs/thermochemistry/wood-fire.png){.complex-fuels-fire-image fig-alt="Logs burning in a wood fire."}
 
 :::
 
@@ -72,7 +72,7 @@ Source: [“Why Doesn’t Wood Melt?”, *Today I Found Out* (2013)](https://www
 
 ::: {.complex-fuels-cellulose}
 
-![](figs/thermochemistry/source/slide-007-picture-01.png){.complex-fuels-cellulose-image fig-alt="Cellulose chains showing glucose repeat units and hydrogen bonds between strands."}
+![](figs/thermochemistry/cellulose-chains.png){.complex-fuels-cellulose-image fig-alt="Cellulose chains showing glucose repeat units and hydrogen bonds between strands."}
 
 :::
 
@@ -126,7 +126,7 @@ Cellulose
 
 ::: {.complex-chemistry-mechanism}
 
-![](figs/thermochemistry/source/slide-008-picture-01.png){fig-alt="Comparison of dominant methane oxidation pathways in GRI-Mech 3.0 and AramcoMech 1.3; the slide shows the GRI-Mech portion."}
+![](figs/thermochemistry/methane-oxidation-pathways.png){fig-alt="Comparison of dominant methane oxidation pathways in GRI-Mech 3.0 and AramcoMech 1.3; the slide shows the GRI-Mech portion."}
 
 :::
 
@@ -138,7 +138,7 @@ Cellulose
 
 ::: {.complex-chemistry-soot-pathway}
 
-![](figs/thermochemistry/source/slide-008-picture-03.png){fig-alt="Schematic of soot evolution from molecular precursors through particle inception, surface growth, and coagulation."}
+![](figs/thermochemistry/soot-evolution.png){fig-alt="Schematic of soot evolution from molecular precursors through particle inception, surface growth, and coagulation."}
 
 :::
 
@@ -150,7 +150,7 @@ Cellulose
 
 ::: {.complex-chemistry-fire}
 
-![](figs/thermochemistry/source/slide-008-picture-02.png){fig-alt="Large industrial fire producing a dense plume of black smoke."}
+![](figs/thermochemistry/industrial-fire-smoke.png){fig-alt="Large industrial fire producing a dense plume of black smoke."}
 
 :::
 
@@ -162,7 +162,7 @@ Legacy lecture photograph; original attribution unresolved
 
 ::: {.complex-chemistry-tem}
 
-![](figs/thermochemistry/source/slide-008-picture-04.png){fig-alt="Transmission electron micrographs of an aircraft-combustor soot aggregate and the layered surface structure of its primary particles."}
+![](figs/thermochemistry/soot-electron-micrographs.png){fig-alt="Transmission electron micrographs of an aircraft-combustor soot aggregate and the layered surface structure of its primary particles."}
 
 :::
 
@@ -180,7 +180,7 @@ TEM image of a typical aircraft-combustor soot aggregate: (a) aggregate and (b) 
 
 ::: {.heat-release-rate-plot}
 
-![](figs/thermochemistry/source/slide-009-picture-04.png){fig-alt="Heskestad flame-height correlation compared with FDS calculations at three grid resolutions."}
+![](figs/thermochemistry/heskestad-flame-height.png){fig-alt="Heskestad flame-height correlation compared with FDS calculations at three grid resolutions."}
 
 :::
 
@@ -216,7 +216,7 @@ $$\dot Q^* = \frac{\dot Q}{\rho_\infty c_p T_\infty\sqrt{gD}\,D^2}$$
 
 ::: {.heat-release-rate-mccaffrey}
 
-![](figs/thermochemistry/source/slide-009-picture-01.png){fig-alt="McCaffrey flame-height data."}
+![](figs/thermochemistry/mccaffrey-flame-height.png){fig-alt="McCaffrey flame-height data."}
 
 :::
 
@@ -699,13 +699,13 @@ $$
 
 ::: {.oxygen-calorimetry-facility}
 
-![](figs/thermochemistry/source/slide-019-picture-01.png){fig-alt="Schematic of the Large Fire Research Facility exhaust hoods and duct system."}
+![](figs/thermochemistry/large-fire-laboratory-exhaust.png){fig-alt="Schematic of the Large Fire Research Facility exhaust hoods and duct system."}
 
 :::
 
 ::: {.oxygen-calorimetry-report}
 
-![](figs/thermochemistry/source/slide-019-picture-02.png){fig-alt="Cover of NIST Special Publication 1007, Heat Release Rate Measurement Using Oxygen Consumption Calorimetry."}
+![](figs/thermochemistry/oxygen-calorimetry-nist-sp1007.png){fig-alt="Cover of NIST Special Publication 1007, Heat Release Rate Measurement Using Oxygen Consumption Calorimetry."}
 
 :::
 
@@ -717,7 +717,7 @@ $$
 
 ::: {.fire-tests-photo}
 
-![](https://github.com/rmcdermo/Juelich_Summer_School/releases/download/2026/fire-tests-real-materials.mp4){controls="true" poster="figs/thermochemistry/source/slide-020-media-01.png" preload="metadata" fig-alt="Upholstered-chair fire test with synchronized heat-release-rate and mass-loss measurements."}
+![](https://github.com/rmcdermo/Juelich_Summer_School/releases/download/2026/fire-tests-real-materials.mp4){controls="true" poster="figs/thermochemistry/fire-tests-real-materials-poster.png" preload="metadata" fig-alt="Upholstered-chair fire test with synchronized heat-release-rate and mass-loss measurements."}
 
 :::
 
@@ -811,13 +811,13 @@ b) plot `hrrpuv` and `hrrpuv_reac`
 
 ::: {.heat-release-rate-fds-visual}
 
-![](figs/thermochemistry/source/slide-021-picture-04.png){fig-alt="FDS visualization of the local heat release rate in a reacting flow."}
+![](figs/thermochemistry/hrr-fds-flame.png){fig-alt="FDS visualization of the local heat release rate in a reacting flow."}
 
 :::
 
 ::: {.heat-release-rate-fds-plot}
 
-![](figs/thermochemistry/source/slide-021-picture-01.png){fig-alt="Time history comparing the two FDS local heat-release-rate calculations."}
+[![](figs/thermochemistry/hrr-fds-comparison.svg){fig-alt="Time history comparing the two FDS local heat-release-rate calculations."}](figs/thermochemistry/hrr-fds-comparison.pdf)
 
 :::
 
@@ -1041,7 +1041,7 @@ $$
 
 ::: {.equivalence-ratio-photo}
 
-![](figs/thermochemistry/source/slide-024-picture-04.png){fig-alt="A burning candle, illustrating a luminous diffusion flame with fuel-rich regions that can form soot."}
+![](figs/thermochemistry/candle-diffusion-flame.png){fig-alt="A burning candle, illustrating a luminous diffusion flame with fuel-rich regions that can form soot."}
 
 :::
 
@@ -1093,7 +1093,7 @@ Methane
 
 ::: {.types-combustion-photo}
 
-![](figs/thermochemistry/source/slide-025-picture-01.jpeg){fig-alt="Four methane flames progressing from a yellow diffusion flame to increasingly blue premixed flames."}
+![](figs/thermochemistry/methane-flame-modes.jpeg){fig-alt="Four methane flames progressing from a yellow diffusion flame to increasingly blue premixed flames."}
 
 :::
 
@@ -1171,7 +1171,7 @@ Air, f=0
 
 ::: {.mixture-fraction-photo}
 
-![](figs/thermochemistry/source/slide-026-picture-01.png){fig-alt="A turbulent non-premixed flame issuing horizontally from a fuel nozzle into surrounding air."}
+![](figs/thermochemistry/turbulent-nonpremixed-flame.png){fig-alt="A turbulent non-premixed flame issuing horizontally from a fuel nozzle into surrounding air."}
 
 :::
 
@@ -1222,7 +1222,7 @@ Air, f=0
 :::
 
 ::: {.product-formation-photo}
-![](figs/thermochemistry/source/slide-026-picture-01.png){fig-alt="A turbulent non-premixed flame issuing horizontally from a fuel nozzle into surrounding air."}
+![](figs/thermochemistry/turbulent-nonpremixed-flame.png){fig-alt="A turbulent non-premixed flame issuing horizontally from a fuel nozzle into surrounding air."}
 :::
 
 ::: {.product-formation-source}
@@ -1463,7 +1463,7 @@ $$
 :::
 
 ::: {.equilibrium-chemistry-gibbs}
-![](figs/thermochemistry/source/slide-035-picture-03.png){fig-alt="Gibbs function versus extent of reaction, showing the equilibrium minimum and negative Gibbs-energy change for the forward reaction."}
+![](figs/thermochemistry/equilibrium-gibbs-function.png){fig-alt="Gibbs function versus extent of reaction, showing the equilibrium minimum and negative Gibbs-energy change for the forward reaction."}
 :::
 
 ::: {.equilibrium-chemistry-source}
@@ -1471,11 +1471,11 @@ $$
 :::
 
 ::: {.equilibrium-chemistry-species}
-![](figs/thermochemistry/source/slide-035-picture-01.png){fig-alt="Species mass fractions converging to their equilibrium values."}
+![](figs/thermochemistry/equilibrium-species.png){fig-alt="Species mass fractions converging to their equilibrium values."}
 :::
 
 ::: {.equilibrium-chemistry-pressure}
-![](figs/thermochemistry/source/slide-035-picture-04.png){fig-alt="Pressure converging to its equilibrium value."}
+![](figs/thermochemistry/equilibrium-pressure.png){fig-alt="Pressure converging to its equilibrium value."}
 :::
 
 ::: {.equilibrium-chemistry-cea}
@@ -1628,13 +1628,13 @@ $$
 
 ::: {.westbrook-dryer-mass-fractions}
 
-![](figs/thermochemistry/source/slide-038-picture-01.png){fig-alt="Species mass-fraction histories from a finite-rate propane reaction example."}
+![](figs/thermochemistry/finite-rate-propane-species.png){fig-alt="Species mass-fraction histories from a finite-rate propane reaction example."}
 
 :::
 
 ::: {.westbrook-dryer-efficiency}
 
-![](figs/thermochemistry/source/slide-038-picture-02.png){fig-alt="Global combustion efficiency as a function of time for the finite-rate propane reaction example."}
+![](figs/thermochemistry/finite-rate-propane-efficiency.png){fig-alt="Global combustion efficiency as a function of time for the finite-rate propane reaction example."}
 
 :::
 
@@ -2008,9 +2008,9 @@ The custom molecular weight is 0.9(12.0107) + 0.1(1.00794) = 10.9104 kg/kmol.
 
 ## Complete simple hydrocarbon chemistry
 
-![](figs/thermochemistry/source/slide-047-picture-01.png){.thermo-source-figure fig-alt="Original simple hydrocarbon chemistry reaction diagram."}
+![](figs/thermochemistry/simple-chemistry-reaction.png){.thermo-source-figure fig-alt="Original simple hydrocarbon chemistry reaction diagram."}
 
-![](figs/thermochemistry/source/slide-047-picture-02.png){.thermo-source-figure .complete-simple-chemistry-table fig-alt="Original FDS output for simple hydrocarbon chemistry."}
+![](figs/thermochemistry/simple-chemistry-fds-output.png){.thermo-source-figure .complete-simple-chemistry-table fig-alt="Original FDS output for simple hydrocarbon chemistry."}
 
 ## Example: Simple Chemistry with FORMULA {.formula-example-slide}
 
@@ -2038,7 +2038,7 @@ Examine the .out file for each case.
 :::
 
 ::: {.custom-fuel-example-input}
-![](figs/thermochemistry/source/slide-049-picture-01.png){fig-alt="Natural-gas fuel mixture input from the original lecture."}
+![](figs/thermochemistry/natural-gas-input.png){fig-alt="Natural-gas fuel mixture input from the original lecture."}
 :::
 
 ::: {.custom-fuel-example-question}
@@ -2103,13 +2103,13 @@ Examine the .out file for each case.
 
 ::: {.fds-propane-video}
 
-![](https://github.com/rmcdermo/Juelich_Summer_School/releases/download/2026/umd-line-burner.mp4){controls="true" playsinline="true" preload="metadata" poster="figs/thermochemistry/source/slide-052-media-01.png" fig-alt="FDS simulation of the University of Maryland propane line burner showing hot soot and carbon dioxide fields."}
+![](https://github.com/rmcdermo/Juelich_Summer_School/releases/download/2026/umd-line-burner.mp4){controls="true" playsinline="true" preload="metadata" poster="figs/thermochemistry/umd-line-burner-poster.png" fig-alt="FDS simulation of the University of Maryland propane line burner showing hot soot and carbon dioxide fields."}
 
 :::
 
 ::: {.fds-propane-experiment}
 
-![](figs/thermochemistry/source/slide-052-picture-01.png){fig-alt="Simultaneous front- and end-view photographs of the University of Maryland propane line-burner flame under several oxygen concentrations."}
+![](figs/thermochemistry/umd-line-burner-flame-views.png){fig-alt="Simultaneous front- and end-view photographs of the University of Maryland propane line-burner flame under several oxygen concentrations."}
 
 :::
 
@@ -2133,13 +2133,13 @@ James White, PhD Thesis, UMD, 2016.
 
 ::: {.umd-radiative-methane}
 
-![](figs/thermochemistry/source/slide-053-picture-01.png){fig-alt="Methane line-burner radiative-fraction measurements and FDS predictions."}
+![](figs/thermochemistry/methane-radiative-fraction.png){fig-alt="Methane line-burner radiative-fraction measurements and FDS predictions."}
 
 :::
 
 ::: {.umd-radiative-propane}
 
-![](figs/thermochemistry/source/slide-053-picture-02.png){fig-alt="Propane line-burner radiative-fraction measurements and FDS predictions."}
+![](figs/thermochemistry/propane-radiative-fraction.png){fig-alt="Propane line-burner radiative-fraction measurements and FDS predictions."}
 
 :::
 

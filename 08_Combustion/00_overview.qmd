@@ -38,45 +38,39 @@
 
 ## Outline {.outline-slide}
 
-:::: {.columns .outline-grid}
+::: {.slide-layout}
 
-::: {.column width="48%"}
+::: {.ol-l}
+**Module I — Thermochemistry**
 
-1. Thermochemistry
-
-   1. stoichiometry
-   2. thermodynamics
-   3. calorimetry
-   4. chemistry
-
-      1. infinitely fast
-      2. equilibrium
-      3. finite-rate
-
-   5. mixture fraction / lumped species
-   6. specified product yields
-   7. complex fuel mixtures
-
+- Stoichiometry
+- Thermodynamics
+- Calorimetry
+- Chemistry
+  - Infinitely fast
+  - Equilibrium
+  - Finite-rate
+- Mixture fraction / lumped species
+- Specified product yields
+- Complex fuel mixtures
 :::
 
-::: {.column width="48%"}
+::: {.ol-r}
+**Module II — Eddy Dissipation Concept**
 
-2. Eddy Dissipation Concept
+- Subgrid distributions in species and temperature
+- Rate of turbulent mixing
+- Mixing vs. transport
 
-   1. subgrid distributions in species and temperature
-   2. rate of turbulent mixing
-   3. mixing vs. transport
+**Module III — Flame Extinction**
 
-3. Flame Extinction
-
-   1. critical flame temperature / ignition temperature
-   2. droplet evaporation
-   3. strained laminar flames (flamelets)
-   4. Damköhler number
-
+- Critical flame temperature / ignition temperature
+- Droplet evaporation
+- Strained laminar flames (flamelets)
+- Damköhler number
 :::
 
-::::
+:::
 
 ## Recommended reading {.reading-slide}
 

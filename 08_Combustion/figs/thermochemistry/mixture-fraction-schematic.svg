@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Non-premixed mixing layer</title>
+  <desc id="desc">Original schematic of a fuel stream mixing with surrounding air in a non-premixed flame.</desc>
+  <style>
+    .label { font: 700 32px Arial, Helvetica, sans-serif; fill: #222; }
+    .small { font: 26px Arial, Helvetica, sans-serif; fill: #222; }
+    .stream { fill: none; stroke-width: 18; stroke-linecap: round; }
+  </style>
+  <defs>
+    <linearGradient id="mix" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C0392B"/>
+      <stop offset="0.38" stop-color="#E67E22"/>
+      <stop offset="0.70" stop-color="#F5C542"/>
+      <stop offset="1" stop-color="#5DADE2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="25" y="25" width="1150" height="510" rx="20" fill="#FFF" stroke="#D0D0D0" stroke-width="3"/>
+  <text x="600" y="82" text-anchor="middle" class="label">Non-premixed mixing layer</text>
+  <path d="M80 170 H520" class="stream" stroke="#5DADE2" marker-end="url(#arrow)"/>
+  <path d="M80 390 H520" class="stream" stroke="#5DADE2" marker-end="url(#arrow)"/>
+  <path d="M80 280 H1000" class="stream" stroke="url(#mix)" marker-end="url(#arrow)"/>
+  <path d="M520 170 C620 190 650 220 760 250" fill="none" stroke="#F5C542" stroke-width="8"/>
+  <path d="M520 390 C620 370 650 340 760 310" fill="none" stroke="#F5C542" stroke-width="8"/>
+  <path d="M760 250 C825 265 870 280 1000 280" fill="none" stroke="#E67E22" stroke-width="16"/>
+  <text x="110" y="145" class="small">air, $f=0$</text>
+  <text x="110" y="365" class="small">air, $f=0$</text>
+  <text x="110" y="255" class="small">fuel, $f=1$</text>
+  <text x="775" y="220" class="small">mixing layer</text>
+  <text x="870" y="350" class="small">products</text>
+</svg>

@@ -22,76 +22,47 @@
   display: none;
 }
 
-.reveal .slides .outline-grid {
-  column-gap: 4%;
-  display: grid;
+/* Match the Pressure outline: blue module headings above indented topics. */
+.reveal .slides .outline-slide .slide-layout {
   font-family: Calibri, Arial, Helvetica, sans-serif;
-  font-size: 1.18em;
-  grid-template-columns: 44% 52%;
-  line-height: 1.22;
-  margin: 0 auto;
-  text-align: left;
-  width: 92%;
-}
-
-.reveal .slides .outline-grid > .column {
-  flex: initial;
-  padding: 0;
-  width: auto !important;
-}
-
-.reveal .slides .outline-grid ol {
-  list-style-type: upper-roman;
+  height: 100%;
+  inset: 0;
   margin: 0;
-  padding-left: 1.15em;
-}
-
-.reveal .slides .outline-grid ol p {
-  margin: 0;
-}
-
-.reveal .slides .outline-grid ol ol {
-  list-style-type: upper-alpha;
-  margin: 0.25em 0 0;
-  padding-left: 1.5em;
-}
-
-.reveal .slides .outline-grid > .column > ol > li > ol {
-  counter-reset: outline-alpha;
-  list-style: none;
-}
-
-.reveal .slides .outline-grid > .column > ol > li > ol > li {
-  counter-increment: outline-alpha;
-  position: relative;
-}
-
-.reveal .slides .outline-grid > .column > ol > li > ol > li::before {
-  content: counter(outline-alpha, upper-alpha) ".";
-  font-family: Calibri, Arial, Helvetica, sans-serif;
   position: absolute;
-  right: 100%;
+  width: 100%;
+}
+
+.reveal .slides .outline-slide .ol-l,
+.reveal .slides .outline-slide .ol-r {
+  font-size: 1.1em;
+  margin: 0;
+  position: absolute;
   text-align: left;
-  width: 1.5em;
+  top: 12%;
 }
 
-.reveal .slides .outline-grid ol ol ol {
-  list-style-type: lower-alpha;
-  margin: 0.18em 0 0.7em;
-  padding-left: 1.5em;
+.reveal .slides .outline-slide .ol-l { left: 3.5%; width: 52%; }
+.reveal .slides .outline-slide .ol-r { left: 58%; width: 39%; }
+.reveal .slides .outline-slide strong { color: #156082; }
+.reveal .slides .outline-slide p { margin: 0 0 0.35em; }
+
+.reveal .slides .outline-slide ul {
+  list-style: disc outside;
+  margin: 0 0 1.1em;
+  padding-left: 1.05em;
 }
 
-.reveal .slides .outline-grid ol ol ol > li::marker {
-  content: counter(list-item, lower-alpha) ")  ";
+.reveal .slides .outline-slide ul ul {
+  list-style: circle outside;
+  margin: 0.2em 0 0;
 }
 
-.reveal .slides .outline-grid > .column > ol > li {
-  padding-left: 0.25em;
+.reveal .slides .outline-slide li {
+  color: #333;
+  margin: 0 0 0.2em;
 }
 
-.reveal .slides .outline-grid > .column > ol > li + li {
-  margin-top: 0.8em;
-}
+.reveal .slides .outline-slide li > p { margin: 0; }
 
 .reveal .slides section.reading-slide > ul {
   font-size: 1.12em;

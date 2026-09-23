@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Combustion modes</title>
+  <desc id="desc">Original schematic comparing diffusion, partially premixed, and premixed flames.</desc>
+  <style>
+    .label { font: 700 34px Arial, Helvetica, sans-serif; fill: #222; }
+    .small { font: 24px Arial, Helvetica, sans-serif; fill: #333; }
+    .box { fill: #F7F7F7; stroke: #8A8A8A; stroke-width: 3; }
+    .arrow { stroke: #333; stroke-width: 5; fill: none; marker-end: url(#arrowhead); }
+  </style>
+  <defs>
+    <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#B30000"/>
+      <stop offset="0.45" stop-color="#F47A20"/>
+      <stop offset="0.78" stop-color="#FFD34D"/>
+      <stop offset="1" stop-color="#FFF5B0"/>
+    </linearGradient>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="30" y="25" width="1140" height="500" rx="20" fill="#FFF" stroke="#D0D0D0" stroke-width="3"/>
+  <text x="600" y="85" text-anchor="middle" class="label">Combustion modes</text>
+  <rect x="80" y="140" width="300" height="280" rx="12" class="box"/>
+  <rect x="450" y="140" width="300" height="280" rx="12" class="box"/>
+  <rect x="820" y="140" width="300" height="280" rx="12" class="box"/>
+  <text x="230" y="190" text-anchor="middle" class="label">Diffusion</text>
+  <text x="600" y="190" text-anchor="middle" class="label">Partially premixed</text>
+  <text x="970" y="190" text-anchor="middle" class="label">Premixed</text>
+  <path d="M230 365 C140 330 180 250 230 215 C280 250 320 330 230 365 Z" fill="url(#flame)"/>
+  <path d="M600 365 C510 325 555 245 600 215 C645 245 690 325 600 365 Z" fill="url(#flame)"/>
+  <path d="M970 365 C900 315 925 240 970 205 C1015 240 1040 315 970 365 Z" fill="url(#flame)"/>
+  <path d="M140 385 H320" class="arrow"/>
+  <path d="M510 385 H690" class="arrow"/>
+  <path d="M880 385 H1060" class="arrow"/>
+  <text x="230" y="460" text-anchor="middle" class="small">Fuel and oxidizer meet at the flame</text>
+  <text x="600" y="460" text-anchor="middle" class="small">Mixed and unmixed regions coexist</text>
+  <text x="970" y="460" text-anchor="middle" class="small">Reactants mixed before ignition</text>
+</svg>
