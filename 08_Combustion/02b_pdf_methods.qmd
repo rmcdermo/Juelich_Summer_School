@@ -88,9 +88,61 @@ $f(V)$
 Files: `08_Combustion/examples/pdf_example/`
 :::
 
-## Beta PDF {.source-slide-title .has-example-files}
+## Beta PDF {.beta-pdf-slide .has-example-files}
 
-![](figs/reference-slides/slide-070.png){.reference-slide .nostretch fig-align="center"}
+::: {.beta-pdf-layout}
+
+::: {.beta-pdf-density}
+$$
+f(Z;a,b)=\frac{1}{B(a,b)}Z^{a-1}(1-Z)^{b-1}
+$$
+:::
+
+::: {.beta-pdf-function}
+$$
+B(a,b)=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}
+\qquad {\color{#4472c4}\text{“beta function”}}
+$$
+:::
+
+::: {.beta-pdf-parameters}
+$$
+a=\widetilde{Z}\gamma
+\qquad b=(1-\widetilde{Z})\gamma
+$$
+:::
+
+::: {.beta-pdf-gamma}
+$$
+\gamma=\frac{\widetilde{Z}(1-\widetilde{Z})}{\widetilde{Z^{\prime\prime 2}}}-1\geq 0
+$$
+:::
+
+::: {.beta-pdf-script}
+See [`beta_pdf.py`](examples/pdf_example/beta_pdf.py).
+:::
+
+::: {.beta-pdf-plot}
+![](figs/pdf_methods/beta-distribution.svg){fig-alt="Four beta probability densities showing peaked, broad, and endpoint-singular distributions for different mean and gamma values."}
+
+::: {.beta-pdf-xlabel}
+$Z$
+:::
+
+::: {.beta-pdf-ylabel}
+$f(Z)$
+:::
+
+::: {.beta-pdf-legend}
+[$\widetilde{Z}=0.6,\;\gamma=4$]{.beta-pdf-blue}\
+[$\widetilde{Z}=0.6,\;\gamma=10$]{.beta-pdf-red}\
+[$\widetilde{Z}=0.6,\;\gamma=0.5$]{.beta-pdf-green}\
+[$\widetilde{Z}=0.8,\;\gamma=2$]{.beta-pdf-black}
+:::
+
+:::
+
+:::
 
 ::: {.example-files}
 Files: `08_Combustion/examples/pdf_example/`

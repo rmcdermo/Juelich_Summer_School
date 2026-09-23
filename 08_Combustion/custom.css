@@ -5385,3 +5385,41 @@
 .reveal .slides .normal-pdf-blue { color: blue; }
 .reveal .slides .normal-pdf-red { color: red; }
 .reveal .slides .normal-pdf-green { color: green; }
+
+/* Beta distribution: native definitions and a four-curve plot. */
+.reveal .slides .beta-pdf-slide > h2 { text-align: left; }
+.reveal .slides .beta-pdf-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .beta-pdf-layout > div { margin: 0; position: absolute; }
+.reveal .slides .beta-pdf-layout p { margin: 0; }
+.reveal .slides .beta-pdf-layout mjx-container[display="true"] { margin: 0 !important; text-align: left !important; }
+.reveal .slides .beta-pdf-density { font-size: 1.3em; left: 6%; top: 23%; width: 47%; }
+.reveal .slides .beta-pdf-function { font-size: 1.2em; left: 6%; top: 38%; width: 47%; }
+.reveal .slides .beta-pdf-parameters { font-size: 1.4em; left: 6%; top: 53%; width: 47%; }
+.reveal .slides .beta-pdf-gamma { font-size: 1.3em; left: 6%; top: 66%; width: 47%; }
+.reveal .slides .beta-pdf-script { color: #888; font-size: 1em; left: 57%; top: 12%; width: 40%; text-align: center; }
+.reveal .slides .beta-pdf-plot { left: 53%; top: 21%; width: 44%; }
+.reveal .slides .beta-pdf-plot img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .beta-pdf-plot > div { position: absolute; margin: 0; }
+.reveal .slides .beta-pdf-xlabel { left: 14%; top: 94%; width: 83%; text-align: center; font-size: 1.2em; }
+.reveal .slides .beta-pdf-ylabel { left: -3%; top: 43%; transform: rotate(-90deg); font-size: 1.2em; }
+.reveal .slides .beta-pdf-legend { left: 18%; top: 6%; font-size: 0.78em; line-height: 1.75; white-space: nowrap; }
+.reveal .slides .beta-pdf-blue { color: blue; }
+.reveal .slides .beta-pdf-red { color: red; }
+.reveal .slides .beta-pdf-green { color: green; }
+
+.reveal .slides .beta-pdf-black { color: black; }
+.reveal .slides .beta-pdf-legend > p > span::before {
+  border-top: 3px solid currentColor;
+  content: "";
+  display: inline-block;
+  margin-right: 0.55em;
+  vertical-align: middle;
+  width: 2em;
+}
