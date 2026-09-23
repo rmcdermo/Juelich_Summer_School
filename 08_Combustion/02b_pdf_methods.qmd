@@ -716,21 +716,120 @@ See [`plot-unmixed-sgs-variance.py`](figs/pdf_methods/plot-unmixed-sgs-variance.
 :::
 :::
 
-## Relating Unmixed Fraction and SGS Variance: Case 2 {.source-slide-title}
+## Relating Unmixed Fraction and SGS Variance: Case 2 {.unmixed-sgs-slide}
 
-![](figs/reference-slides/slide-087.png){.reference-slide fig-align="center"}
+::: {.unmixed-sgs-layout}
+::: {.unmixed-sgs-case}
+$$
+\zeta=1\;;\qquad \langle\phi\rangle=0.25
+$$
+:::
 
-## Relating Unmixed Fraction and SGS Variance: Case 3 {.source-slide-title}
+::: {.unmixed-sgs-relation}
+$$
+\begin{aligned}
+\langle\phi^{\prime 2}\rangle
+&=\langle\phi^2\rangle-\langle\phi\rangle^2\\[0.4em]
+&=\zeta\left(\langle\phi\rangle-\langle\phi\rangle^2\right)
+\end{aligned}
+$$
+:::
 
-![](figs/reference-slides/slide-088.png){.reference-slide fig-align="center"}
+::: {.unmixed-sgs-cell}
+![](figs/pdf_methods/unmixed-sgs-cell-case-2.svg){fig-alt="Scalar composition is one in one quarter of the cell volume and zero in the remaining three quarters."}
+:::
 
-## Relating Unmixed Fraction and SGS Variance: Case 4 {.source-slide-title}
+::: {.unmixed-sgs-variance}
+![](figs/pdf_methods/unmixed-sgs-variance-case-2.svg){fig-alt="Cumulative case comparison including unmixed fraction 1, mean composition 0.25, and SGS scalar variance 0.1875."}
+:::
 
-![](figs/reference-slides/slide-089.png){.reference-slide fig-align="center"}
+::: {.unmixed-sgs-script}
+See [`plot-unmixed-sgs-variance.py`](figs/pdf_methods/plot-unmixed-sgs-variance.py).
+:::
+:::
 
-## Relating Unmixed Fraction and SGS Variance: Summary {.source-slide-title}
+## Relating Unmixed Fraction and SGS Variance: Case 3 {.unmixed-sgs-slide}
 
-![](figs/reference-slides/slide-090.png){.reference-slide fig-align="center"}
+::: {.unmixed-sgs-layout}
+::: {.unmixed-sgs-case}
+$$
+\zeta=0.5\;;\qquad \langle\phi\rangle=0.5
+$$
+:::
+
+::: {.unmixed-sgs-relation}
+$$
+\begin{aligned}
+\langle\phi^{\prime 2}\rangle
+&=\langle\phi^2\rangle-\langle\phi\rangle^2\\[0.4em]
+&=\zeta\left(\langle\phi\rangle-\langle\phi\rangle^2\right)
+\end{aligned}
+$$
+:::
+
+::: {.unmixed-sgs-cell}
+![](figs/pdf_methods/unmixed-sgs-cell-case-3.svg){fig-alt="Scalar composition is one in the first quarter, 0.5 in the middle half, and zero in the final quarter of the cell."}
+:::
+
+::: {.unmixed-sgs-variance}
+![](figs/pdf_methods/unmixed-sgs-variance-case-3.svg){fig-alt="Cumulative case comparison including unmixed fraction 0.5, mean composition 0.5, and SGS scalar variance 0.125."}
+:::
+
+::: {.unmixed-sgs-script}
+See [`plot-unmixed-sgs-variance.py`](figs/pdf_methods/plot-unmixed-sgs-variance.py).
+:::
+:::
+
+## Relating Unmixed Fraction and SGS Variance: Case 4 {.unmixed-sgs-slide}
+
+::: {.unmixed-sgs-layout}
+::: {.unmixed-sgs-case}
+$$
+\zeta=0.5\;;\qquad \langle\phi\rangle=0.25
+$$
+:::
+
+::: {.unmixed-sgs-relation}
+$$
+\begin{aligned}
+\langle\phi^{\prime 2}\rangle
+&=\langle\phi^2\rangle-\langle\phi\rangle^2\\[0.4em]
+&=\zeta\left(\langle\phi\rangle-\langle\phi\rangle^2\right)
+\end{aligned}
+$$
+:::
+
+::: {.unmixed-sgs-cell}
+![](figs/pdf_methods/unmixed-sgs-cell-case-4.svg){fig-alt="Scalar composition is one in the first eighth, 0.25 in the next half, and zero in the final three eighths of the cell."}
+:::
+
+::: {.unmixed-sgs-variance}
+![](figs/pdf_methods/unmixed-sgs-variance-case-4.svg){fig-alt="Cumulative case comparison including unmixed fraction 0.5, mean composition 0.25, and SGS scalar variance 0.09375."}
+:::
+
+::: {.unmixed-sgs-script}
+See [`plot-unmixed-sgs-variance.py`](figs/pdf_methods/plot-unmixed-sgs-variance.py).
+:::
+:::
+
+## Relating Unmixed Fraction and SGS Variance: Summary {.unmixed-sgs-slide}
+
+::: {.unmixed-sgs-layout}
+::: {.unmixed-sgs-summary-equation}
+$$
+\langle\phi^{\prime 2}\rangle
+=\zeta\left(\langle\phi\rangle-\langle\phi\rangle^2\right)
+$$
+:::
+
+::: {.unmixed-sgs-summary-figure}
+![](figs/pdf_methods/unmixed-sgs-summary.svg){fig-alt="SGS scalar variance versus mean composition for unmixed fractions 1, 0.75, 0.5, 0.25, and 0. Each curve is zero at means zero and one and reaches its maximum at mean 0.5."}
+:::
+
+::: {.unmixed-sgs-script}
+See [`plot-unmixed-sgs-variance.py`](figs/pdf_methods/plot-unmixed-sgs-variance.py).
+:::
+:::
 
 ## Fokker--Planck Equation {.source-slide-title}
 
