@@ -437,9 +437,41 @@ See [`particles.py`](examples/particle_example/particles.py).
 Cell: `08_Combustion/examples/particle_example/`
 :::
 
-## Example: Computing the Variance {.source-slide-title .has-example-files}
+## Example: Computing the Variance {.variance-example-slide .has-example-files}
 
-![](figs/reference-slides/slide-077.png){.reference-slide .nostretch fig-align="center"}
+::: {.variance-example-layout}
+
+::: {.variance-example-unmixed}
+![](figs/pdf_methods/variance-unmixed.svg){fig-alt="Square cell split equally between mixture fractions zero and one, with a histogram showing 50 samples at each value."}
+
+::: {.variance-example-xlabel}
+$Z$
+:::
+:::
+
+::: {.variance-example-partially-mixed}
+![](figs/pdf_methods/variance-partially-mixed.svg){fig-alt="Square cell split equally between mixture fractions 0.2 and 0.8, with a histogram showing 50 samples at each value."}
+
+::: {.variance-example-xlabel}
+$Z$
+:::
+:::
+
+::: {.variance-example-calculation}
+$$
+\begin{aligned}
+\operatorname{var}(Z)
+&=\frac{1}{2}(0-0.5)^2+\frac{1}{2}(1-0.5)^2 \\[0.7em]
+&=0.125+0.125=0.25
+\end{aligned}
+$$
+:::
+
+::: {.variance-example-script}
+See [`subgrid_variance.py`](examples/variance_example/subgrid_variance.py).
+:::
+
+:::
 
 ::: {.example-files}
 Files: `08_Combustion/examples/variance_example/`

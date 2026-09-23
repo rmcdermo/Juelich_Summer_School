@@ -5558,3 +5558,24 @@
 .reveal .slides .second-moment-cell img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
 .reveal .slides .second-moment-derivation { font-size: 1.1em; left: 49%; top: 19%; width: 49%; }
 .reveal .slides .second-moment-script { color: #888; font-size: 0.85em; left: 13%; top: 33%; width: 25%; text-align: center; }
+
+/* Variance exercise: square cell fields, count histograms, and native math. */
+.reveal .slides .variance-example-slide > h2 { text-align: left; }
+.reveal .slides .variance-example-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .variance-example-layout > div { position: absolute; margin: 0; }
+.reveal .slides .variance-example-layout p { margin: 0; }
+.reveal .slides .variance-example-unmixed { left: 5%; top: 16%; width: 46%; }
+.reveal .slides .variance-example-partially-mixed { left: 5%; top: 53%; width: 46%; }
+.reveal .slides .variance-example-unmixed img,
+.reveal .slides .variance-example-partially-mixed img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .variance-example-xlabel { position: absolute; left: 51%; top: 94%; width: 47%; text-align: center; font-size: 0.9em; }
+.reveal .slides .variance-example-calculation { font-size: 1.05em; left: 55%; top: 29%; width: 43%; }
+.reveal .slides .variance-example-calculation mjx-container[display="true"] { margin: 0 !important; text-align: left !important; }
+.reveal .slides .variance-example-script { color: #888; font-size: 0.85em; left: 55%; top: 19%; width: 43%; text-align: center; }
