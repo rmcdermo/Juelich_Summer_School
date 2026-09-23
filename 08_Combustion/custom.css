@@ -5519,3 +5519,23 @@
 }
 .reveal .slides .particle-deltas-equation { font-size: 1.7em; left: 8%; top: 69%; width: 84%; }
 .reveal .slides .particle-deltas-equation mjx-container[display="true"] { margin: 0 !important; }
+
+/* First moment: particle PDF and its native mean derivation. */
+.reveal .slides .first-moment-slide > h2 { text-align: left; }
+.reveal .slides .first-moment-layout {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  height: 900px;
+  inset: 0;
+  margin: 0;
+  position: absolute;
+  width: 1600px;
+}
+.reveal .slides .first-moment-layout > div { position: absolute; margin: 0; }
+.reveal .slides .first-moment-layout p { margin: 0; }
+.reveal .slides .first-moment-layout mjx-container[display="true"] { margin: 0 !important; text-align: left !important; }
+.reveal .slides .first-moment-pdf { font-size: 1.2em; left: 6%; top: 21%; width: 47%; }
+.reveal .slides .first-moment-cell { left: 16%; top: 39%; width: 25%; }
+.reveal .slides .first-moment-cell img { display: block; margin: 0; max-height: none; max-width: none; width: 100%; }
+.reveal .slides .first-moment-derivation { font-size: 1.25em; left: 55%; top: 19%; width: 43%; }
+.reveal .slides .first-moment-sifting { color: #4472c4; font-size: 0.85em; left: 72%; top: 56%; width: 25%; line-height: 1.3; }
+.reveal .slides .first-moment-script { color: #888; font-size: 0.85em; left: 16%; top: 33%; width: 25%; text-align: center; }

@@ -357,9 +357,47 @@ Cell: `08_Combustion/examples/particle_example/`\
 Plot: `08_Combustion/examples/pdf_example/`
 :::
 
-## The First Moment {.source-slide-title}
+## The First Moment (Mean) {#the-first-moment .first-moment-slide .has-example-files}
 
-![](figs/reference-slides/slide-075.png){.reference-slide fig-align="center"}
+::: {.first-moment-layout}
+
+::: {.first-moment-pdf}
+$$
+f(V)=\sum_{i=1}^{N_p}w_i\,\delta(U_i-V)
+\quad ; \quad w_i=\frac{1}{N_p}
+$$
+:::
+
+::: {.first-moment-cell}
+![](figs/pdf_methods/random-particles.svg){fig-alt="Square CFD cell containing 50 blue and 50 red particles at random positions."}
+:::
+
+::: {.first-moment-derivation}
+$$
+\begin{aligned}
+\overline{U}
+&=\int f(V)V\,\mathrm{d}V \\[0.45em]
+&=\int\sum_i w_i\,\delta(U_i-V)V\,\mathrm{d}V \\[0.45em]
+&=\sum_i w_i\,{\color{#4472c4}\int\delta(U_i-V)V\,\mathrm{d}V} \\[0.45em]
+&=\sum_i w_i U_i \\[0.45em]
+&=\frac{1}{N_p}\sum_i U_i
+\end{aligned}
+$$
+:::
+
+::: {.first-moment-sifting}
+The blue integral equals $U_i$ by the sifting property of the Dirac delta function.
+:::
+
+::: {.first-moment-script}
+See [`particles.py`](examples/particle_example/particles.py).
+:::
+
+:::
+
+::: {.example-files}
+Cell: `08_Combustion/examples/particle_example/`
+:::
 
 ## The Second Central Moment {.source-slide-title}
 
