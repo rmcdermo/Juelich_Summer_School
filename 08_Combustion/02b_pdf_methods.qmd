@@ -309,9 +309,53 @@ Cell: `08_Combustion/examples/particle_example/`\
 Plot: `08_Combustion/examples/pdf_example/`
 :::
 
-## Lots of Deltas: Random Distribution {.source-slide-title}
+## Lots of Deltas: Random Distribution {#lots-of-deltas-random-distribution .particle-deltas-slide .has-example-files}
 
-![](figs/reference-slides/slide-074.png){.reference-slide fig-align="center"}
+::: {.particle-deltas-layout}
+
+::: {.particle-deltas-cell-script}
+See [`particles.py`](examples/particle_example/particles.py).
+:::
+
+::: {.particle-deltas-cell}
+![](figs/pdf_methods/random-particles.svg){fig-alt="Square CFD cell containing 50 blue and 50 red particles at random positions."}
+:::
+
+::: {.particle-deltas-plot-script}
+See [`dirac_delta_function.py`](examples/pdf_example/dirac_delta_function.py).
+:::
+
+::: {.particle-deltas-plot}
+![](figs/pdf_methods/two-deltas.svg){fig-alt="Schematic delta locations at V equals zero in blue and V equals one in red."}
+
+::: {.particle-deltas-xlabel}
+$V$
+:::
+
+::: {.particle-deltas-ylabel}
+$f(V)$
+:::
+
+::: {.particle-deltas-legend}
+[$V=0$]{.multiple-deltas-blue}\
+[$V=1$]{.multiple-deltas-red}
+:::
+
+:::
+
+::: {.particle-deltas-equation}
+$$
+f(V)=\sum_{i=1}^{N_p} w_i\,\delta(U_i-V)
+\qquad ; \qquad w_i=\frac{1}{N_p}
+$$
+:::
+
+:::
+
+::: {.example-files}
+Cell: `08_Combustion/examples/particle_example/`\
+Plot: `08_Combustion/examples/pdf_example/`
+:::
 
 ## The First Moment {.source-slide-title}
 
