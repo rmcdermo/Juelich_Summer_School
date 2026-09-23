@@ -831,6 +831,74 @@ See [`plot-unmixed-sgs-variance.py`](figs/pdf_methods/plot-unmixed-sgs-variance.
 :::
 :::
 
-## Fokker--Planck Equation {.source-slide-title}
+## Fokker--Planck Equation {.fokker-planck-slide}
 
-![](figs/reference-slides/slide-091.png){.reference-slide fig-align="center"}
+::: {.fokker-planck-layout}
+::: {.fokker-heading-left}
+Derivation 1: Differentiate the mean mass fraction
+:::
+
+::: {.fokker-heading-right}
+Derivation 2: Transport of the subgrid PDF (Fokker–Planck)
+:::
+
+::: {.fokker-equations-left}
+$$
+\begin{aligned}
+\widetilde{Y}_{\alpha}(t)
+&=\zeta(t)\widetilde{Y}_{\alpha}^{0}
++\left(1-\zeta(t)\right)\widehat{Y}_{\alpha}(t)
+\vphantom{\rule[-1.6em]{0pt}{3.6em}}\\
+\frac{\mathrm{d}\widetilde{Y}_{\alpha}}{\mathrm{d}t}
+&=-\frac{\mathrm{d}\zeta}{\mathrm{d}t}
+\left(\widehat{Y}_{\alpha}-\widetilde{Y}_{\alpha}^{0}\right)
++(1-\zeta)\frac{\mathrm{d}\widehat{Y}_{\alpha}}{\mathrm{d}t}
+\vphantom{\rule[-1.6em]{0pt}{3.6em}}\\
+\overline{\dot{m}_{\alpha}^{\prime\prime\prime}}
+&=\overline{\rho}\frac{\mathrm{d}\widetilde{Y}_{\alpha}}{\mathrm{d}t}
+\vphantom{\rule[-1.6em]{0pt}{3.6em}}\\
+&=\overline{\rho}\left[
+\frac{\zeta}{\tau_{\mathrm{mix}}}
+\left(\widehat{Y}_{\alpha}-\widetilde{Y}_{\alpha}^{0}\right)
++(1-\zeta)\frac{\mathrm{d}\widehat{Y}_{\alpha}}{\mathrm{d}t}
+\right]
+\vphantom{\rule[-1.6em]{0pt}{3.6em}}
+\end{aligned}
+$$
+:::
+
+::: {.fokker-equations-right}
+$$
+\begin{aligned}
+\frac{\partial f}{\partial t}
+&=-\frac{\partial}{\partial\psi_{\alpha}}
+\left(f\left\langle\frac{\partial Y_{\alpha}}{\partial t}
+\,\middle|\,\psi_{\alpha}\right\rangle\right)
+\vphantom{\rule[-1.6em]{0pt}{3.6em}}\\
+{\color{red}\left\langle\frac{\partial Y_{\alpha}}{\partial t}
+\,\middle|\,\psi_{\alpha}\right\rangle}
+&\mathrel{\color{red}=}{\color{red}\frac{1}{\tau_{\mathrm{mix}}}\left(\widehat{Y}_{\alpha}-\psi_{\alpha}\right)
++\frac{\mathrm{d}\widehat{Y}_{\alpha}}{\mathrm{d}t}(\psi)}
+\vphantom{\rule[-1.6em]{0pt}{3.6em}}\\
+\int\psi_{\beta}\frac{\partial f}{\partial t}\,\mathrm{d}\psi_{\beta}
+&=-\int\psi_{\beta}\frac{\partial}{\partial\psi_{\alpha}}
+\left(f\left\langle\frac{\partial Y_{\alpha}}{\partial t}
+\,\middle|\,\psi_{\alpha}\right\rangle\right)\mathrm{d}\psi_{\beta}
+\vphantom{\rule[-1.6em]{0pt}{3.6em}}\\
+{\color{blue}\overline{\dot{m}_{\beta}^{\prime\prime\prime}}}
+&\mathrel{\color{blue}=}{\color{blue}\overline{\rho}\frac{\mathrm{d}\widetilde{Y}_{\beta}}{\mathrm{d}t}}
+\vphantom{\rule[-1.6em]{0pt}{3.6em}}\\
+&\mathrel{\color{blue}=}{\color{blue}\overline{\rho}\left[
+\frac{\zeta}{\tau_{\mathrm{mix}}}
+\left(\widehat{Y}_{\beta}-\widetilde{Y}_{\beta}^{0}\right)
++(1-\zeta)\frac{\mathrm{d}\widehat{Y}_{\beta}}{\mathrm{d}t}
+\right]}
+\vphantom{\rule[-1.6em]{0pt}{3.6em}}
+\end{aligned}
+$$
+:::
+:::
+
+::: {.notes}
+Both derivations lead to the same chemical source-term closure. The mixing model in the second derivation is interaction by exchange with the mixed mean (IEMM), a variant of traditional IEM.
+:::
