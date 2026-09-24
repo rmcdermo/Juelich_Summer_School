@@ -5772,3 +5772,125 @@
   border: 2px solid #4472c4;
   pointer-events: none;
 }
+
+/* Module III: shared native layouts, with space reserved for sources and footer. */
+.reveal .slides .ext-slide > h2 { text-align: left; }
+.reveal .slides .ext-content {
+  position: absolute;
+  left: 5%;
+  top: 145px;
+  width: 90%;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.35;
+  text-align: left;
+}
+.reveal .slides .ext-content p { margin: 0; }
+.reveal .slides .ext-content .ext-heading {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0 0 22px;
+  line-height: 1.25;
+}
+.reveal .slides .ext-content ul,
+.reveal .slides .ext-content ol { margin: 0; padding-left: 1.25em; display: block; }
+.reveal .slides .ext-content li + li { margin-top: 18px; }
+.reveal .slides .ext-content li > p { margin: 0; }
+.reveal .slides .ext-content mjx-container[display="true"] { margin: 0 !important; }
+.reveal .slides .ext-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.reveal .slides .ext-content figure,
+.reveal .slides .ext-content .quarto-figure { margin: 0; }
+.reveal .slides .ext-two {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 65px;
+  align-items: start;
+}
+.reveal .slides .ext-blue { color: #4472c4; }
+.reveal .slides .ext-small { font-size: .8em; line-height: 1.4; }
+.reveal .slides .ext-blue-box,
+.reveal .slides .ext-green-box,
+.reveal .slides .ext-red-box { border: 2px solid; padding: 22px 28px; box-sizing: border-box; }
+.reveal .slides .ext-blue-box { border-color: #4472c4; }
+.reveal .slides .ext-green-box { border-color: #70ad47; }
+.reveal .slides .ext-red-box { border-color: #ed7d31; }
+.reveal .slides .ext-source {
+  position: absolute;
+  left: 5%;
+  top: 792px;
+  width: 90%;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: .72em;
+  color: #666;
+  text-align: left;
+  line-height: 1.3;
+}
+.reveal .slides .ext-source p { margin: 0; }
+.reveal .slides .ext-suppression { grid-template-columns: 1.2fr 1fr; }
+.reveal .slides .ext-suppression .ext-heading:not(:first-child) { margin-top: 42px; }
+.reveal .slides .ext-photo-column { width: 400px; justify-self: center; text-align: center; }
+.reveal .slides .ext-photo-column > p + p { margin-top: 20px; font-size: .8em; }
+.reveal .slides .ext-equations { display: grid; gap: 70px; font-size: 1.4em; top: 165px; }
+.reveal .slides .ext-binary > p:first-child { font-size: .85em; }
+.reveal .slides .ext-factor-definition { display: grid; gap: 18px; text-align: center; }
+.reveal .slides .ext-factor-label { font-size: .8em; }
+.reveal .slides .ext-continuous { display: grid; gap: 50px; }
+.reveal .slides .ext-large-equation { font-size: 1.2em; }
+.reveal .slides .ext-continuous .ext-two { align-items: center; }
+.reveal .slides .ext-continuous .ext-blue { margin-top: 50px; }
+.reveal .slides .ext-islands { width: 365px; justify-self: center; }
+.reveal .slides .ext-list { top: 185px; left: 10%; width: 80%; font-size: 1.4em; }
+.reveal .slides .ext-list li + li { margin-top: 32px; }
+.reveal .slides .ext-list ul ul { margin-top: 24px; }
+.reveal .slides .ext-list ul ul li + li { margin-top: 18px; }
+.reveal .slides .ext-mowrer { display: grid; justify-items: center; gap: 40px; font-size: 1.35em; }
+.reveal .slides .ext-mowrer .ext-blue-box { width: 760px; }
+.reveal .slides .ext-comparison { gap: 90px; top: 130px; }
+.reveal .slides .ext-comparison > div { width: 560px; justify-self: center; }
+.reveal .slides .ext-comparison .ext-heading { text-align: center; margin: 0 0 8px 16.6%; width: 79.2%; }
+.reveal .slides .ext-exercise { left: 8%; width: 84%; top: 180px; font-size: 1.3em; }
+.reveal .slides .ext-exercise > * + * { margin-top: 38px; }
+.reveal .slides .ext-exercise li + li { margin-top: 28px; }
+.reveal .slides .ext-cup { top: 145px; font-size: 1.12em; }
+.reveal .slides .ext-cup > * + * { margin-top: 26px; }
+.reveal .slides .ext-cup li + li { margin-top: 20px; }
+.reveal .slides .ext-thermal-balance { display: grid; gap: 55px; }
+.reveal .slides .ext-labeled-equation { display: grid; grid-template-columns: 115px 1fr; gap: 15px; align-items: center; }
+.reveal .slides .ext-labeled-equation .ext-panel { font-size: .9em; }
+.reveal .slides .ext-temperatures { text-align: center; font-size: .9em; }
+.reveal .slides .ext-pocket { display: grid; gap: 35px; }
+.reveal .slides .ext-pocket-top { grid-template-columns: 1fr 300px; align-items: center; }
+.reveal .slides .ext-pocket-top .ext-panel { display: grid; gap: 30px; }
+.reveal .slides .ext-pocket-field { width: 270px; justify-self: center; }
+.reveal .slides .ext-dilution { display: grid; gap: 35px; font-size: 1.12em; }
+.reveal .slides .ext-dilution-top { grid-template-columns: 1fr 1.2fr; align-items: center; }
+.reveal .slides .ext-dilution-top img { width: 580px; }
+.reveal .slides .ext-dilution-top .ext-red-box { width: 480px; justify-self: center; font-size: 1.15em; }
+.reveal .slides .ext-ignition { top: 180px; align-items: center; }
+.reveal .slides .ext-ignition li + li { margin-top: 30px; }
+.reveal .slides .ext-pilot { align-items: center; grid-template-columns: 1.2fr 1fr; }
+.reveal .slides .ext-pilot li + li { margin-top: 28px; }
+.reveal .slides .ext-pilot .ext-small { margin-top: 40px; }
+.reveal .slides .ext-pilot-image { width: 400px; justify-self: center; }
+.reveal .slides .ext-aerodynamic { top: 135px; gap: 70px; }
+.reveal .slides .ext-aerodynamic ul { font-size: .9em; margin-top: 25px; }
+.reveal .slides .ext-jet-small { width: 370px; margin: 0 auto; }
+.reveal .slides .ext-flamelet { grid-template-columns: .85fr 1.15fr; gap: 65px; }
+.reveal .slides .ext-jet-column { width: 450px; justify-self: center; text-align: center; }
+.reveal .slides .ext-jet-column > p + p { margin-top: 25px; }
+.reveal .slides .ext-flamelet-equations { display: grid; gap: 27px; font-size: .94em; }
+.reveal .slides .ext-flamelet-equations > p:nth-child(odd) { color: #4472c4; }
+.reveal .slides .ext-flamelet-derivation { display: grid; gap: 30px; font-size: 1.02em; top: 140px; }
+.reveal .slides .ext-flamelet-result { align-items: center; gap: 65px; }
+.reveal .slides .ext-flamelet-result .ext-panel > p + p { margin-top: 20px; font-size: .85em; }
+.reveal .slides .ext-damkohler { top: 340px; font-size: 1.7em; }
+.reveal .slides .ext-borghi { top: 135px; }
+.reveal .slides .ext-borghi img { width: auto; height: 600px; margin: 0 auto; }
