@@ -3,6 +3,9 @@
 **/.DS_Store
 .venv
 
+# Ignore directories containing UNTRACKED at any depth.
+*UNTRACKED*/
+
 # source decks and videos stay local
 *.pptx
 *.mp4
