@@ -150,19 +150,35 @@ $$
 Extinction Model 1
 :::
 
-![](figs/flame_extinction/simple-extinction-comparison-a.png){fig-alt="Original FDS verification plot of burning and extinction versus oxygen volume fraction and temperature for Extinction Model 1, including its free-burn temperature cutoff."}
+::: {.ext-plot-overlay}
+![](figs/flame_extinction/extinction_1.png){.ext-plot-page width=560 height=560 fig-alt="Extinction Model 1: verification results"}
+
+::: {.ext-temperature-arrow .ext-free-arrow aria-hidden="true"}
+:::
+::: {.ext-temperature-label .ext-free-label}
+FREE_BURN_TEMPERATURE
+:::
+:::
 :::
 ::: {.ext-panel}
 ::: {.ext-heading}
 Extinction Model 2
 :::
 
-![](figs/flame_extinction/simple-extinction-comparison-b.png){fig-alt="Original FDS verification plot of burning and extinction versus oxygen volume fraction and temperature for Extinction Model 2."}
+::: {.ext-plot-overlay}
+![](figs/flame_extinction/extinction_2.png){.ext-plot-page width=560 height=560 fig-alt="Extinction Model 2: verification results"}
+
+::: {.ext-temperature-arrow .ext-critical-arrow aria-hidden="true"}
+:::
+::: {.ext-temperature-label .ext-critical-label}
+CRITICAL_FLAME_TEMPERATURE
+:::
+:::
 :::
 :::
 
 ::: {.ext-source}
-Original verification results retained from the lecture. See [FDS manuals](https://pages.nist.gov/fds-smv/manuals.html), User Guide, “Extinction.”
+See [FDS manuals](https://pages.nist.gov/fds-smv/manuals.html), User Guide, “Extinction.”
 :::
 
 ## Example: Simple Extinction Model {.ext-slide .has-example-files}

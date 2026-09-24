@@ -5853,9 +5853,48 @@
 .reveal .slides .ext-list ul ul li + li { margin-top: 18px; }
 .reveal .slides .ext-mowrer { display: grid; justify-items: center; gap: 40px; font-size: 1.35em; }
 .reveal .slides .ext-mowrer .ext-blue-box { width: 760px; }
-.reveal .slides .ext-comparison { gap: 90px; top: 130px; }
+.reveal .slides .ext-comparison { gap: 90px; top: 115px; }
 .reveal .slides .ext-comparison > div { width: 560px; justify-self: center; }
-.reveal .slides .ext-comparison .ext-heading { text-align: center; margin: 0 0 8px 16.6%; width: 79.2%; }
+.reveal .slides .ext-comparison .ext-heading { text-align: center; margin: 0 0 8px 18.75%; width: 75%; }
+/* Original PDF plots with independent, straight CSS annotation overlays. */
+.reveal .slides .ext-plot-overlay { position: relative; width: 560px; height: 615px; }
+.reveal .slides .ext-plot-page { display: block; width: 560px; height: 560px; border: 0; }
+.reveal .slides .ext-temperature-arrow {
+  position: absolute;
+  z-index: 2;
+  height: 0;
+  border-top: 2px solid #4472c4;
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+.reveal .slides .ext-temperature-arrow::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -5px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid #4472c4;
+}
+.reveal .slides .ext-free-arrow { left: 300px; top: 345px; width: 130.740px; transform: rotate(111.069deg); }
+.reveal .slides .ext-critical-arrow { left: 550px; top: 345px; width: 141.662px; transform: rotate(120.548deg); }
+.reveal .slides .ext-temperature-label {
+  position: absolute;
+  z-index: 3;
+  top: 300px;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #4472c4;
+  background: #fff;
+  color: #4472c4;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+}
+.reveal .slides .ext-free-label { left: 275px; width: 300px; }
+.reveal .slides .ext-critical-label { left: 325px; width: 350px; }
+
 .reveal .slides .ext-exercise { left: 8%; width: 84%; top: 180px; font-size: 1.3em; }
 .reveal .slides .ext-exercise > * + * { margin-top: 38px; }
 .reveal .slides .ext-exercise li + li { margin-top: 28px; }
