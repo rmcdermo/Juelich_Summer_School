@@ -253,7 +253,7 @@ $$
 $$
 :::
 ::: {.ext-pocket-field}
-![](figs/flame_extinction/stoichiometric-pocket-field.png){fig-alt="Square idealized field containing unmixed and mixed environments."}
+![](figs/flame_extinction/stoichiometric-pocket-field.png){fig-alt="Grayscale field with the original red hand-drawn markings identifying stoichiometric pockets."}
 :::
 :::
 

@@ -15,7 +15,7 @@ Source numbers below refer to `08_Combustion/Lecture_UNTRACKED/Combustion_lectur
 | 99 | Simple Models of Flame Extinction | `extinction_1.png`, `extinction_2.png`; 400 dpi page renders with separate native text boxes and straight CSS arrows | [FDS manuals](https://pages.nist.gov/fds-smv/manuals.html) |
 | 100 | Example: Simple Extinction Model | Native exercise | [`Qs=1_RI=05.fds`](../../examples/extinction_example/Qs=1_RI=05.fds) |
 | 101 | FDS Thermal Extinction Model | Native mass and enthalpy balances | — |
-| 102 | Defining the Stoichiometric Pocket | `stoichiometric-pocket-field.png`; native equations and pocket underbrace | — |
+| 102 | Defining the Stoichiometric Pocket | `stoichiometric-pocket-field.png` with restored original red ink annotations; native equations and pocket underbrace | — |
 | 103 | FDS Thermal Extinction Model: Dilution | `dilution-cells.svg`; native heat-release and sensible-enthalpy balance | — |
 | 104 | FDS Thermal Extinction Model: Criterion | `dilution-cells.svg`; native criterion and green box | — |
 | 105 | Example: FDS Thermal Extinction | Native exercise; physical temperatures and FDS input values | [`Qs=1_RI=05.fds`](../../examples/extinction_example/Qs=1_RI=05.fds) |
@@ -50,7 +50,7 @@ Embedded-media paths refer to the source PPTX ZIP archive. Extracted plots are p
 | `simple-extinction-comparison-b.png` | `ppt/media/image231.png`, unchanged original verification plot. |
 | `piloted-ignition-zone.png` | `ppt/media/image254.png`, unchanged original annotated Smokeview figure. |
 | `pilot-fuel-volume-fraction.png` | `ppt/media/image255.png`, unchanged original Smokeview figure. |
-| `stoichiometric-pocket-field.png` | `ppt/media/image237.png`, original square field; the pocket expression is now native math. |
+| `stoichiometric-pocket-field.png` | Source slide 102, Group 18: `ppt/media/image237.png` with the original red ink images `image238.png`–`image246.png` (nine overlays), composited in source order at their original DrawingML positions into an 800 × 800 PNG. The red markings are the original hand-drawn annotations, not computed contours; the pocket expression remains native math. |
 | `turbulent-composition-field.png` | `ppt/media/image144.png`, source field used as input to the flame-island schematic. |
 | `borghi-diagram.png` | `ppt/media/image15.tif`, converted to RGB PNG. The source deck does not supply the original diagram attribution. |
 | `flame-islands.svg` | Generated from the turbulent field and illustrative flame-island markers. |
