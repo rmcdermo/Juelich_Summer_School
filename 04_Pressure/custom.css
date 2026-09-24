@@ -283,7 +283,7 @@
    arrows dropping out of the Poisson equation, and two diagonals converging on
    the final system. Arrows are inline SVG so they scale with the slide. */
 .reveal .slides .pi-red    { color: #ff0000; }
-.reveal .slides .pi-rel    { left: 29.0%; top: 17.5%; width: 24%; }
+.reveal .slides .pi-rel    { left: 29.0%; top: 17.0%; width: 24%; }
 .reveal .slides .pi-rel-eq { left: 53.0%; top: 15.7%; width: 24%; font-size: 0.95em; }
 .reveal .slides .pi-fp     { left: 5.4%; top: 27.0%; width: 32%; font-weight: 700; }
 .reveal .slides .pi-loop   { left: 0.6%; top: 45.5%; width: 8%; font-weight: 700; }
@@ -541,8 +541,13 @@
 .reveal .slides .ibm-intro-slide .refs { left: 2.4%; top: 83%; width: 82.7%; font-size: 0.46em; line-height: 1.15; }
 
 /* --- ibm-obst-slide --- */
-.reveal .slides .ibm-obst-slide .body { left: 2.4%; top: 15.8%; width: 90.8%; }
-.reveal .slides .ibm-obst-slide .obst { left: 52.5%; top: 16.4%; width: 47.5%; font-size: 0.95em; }
+/* The lead-in line and the &OBST code sit 2 above the deck's tops, at the
+   user's request; the bullets under the lead-in keep their place (the lead-in's
+   margin gives back the 2), which sets it off from them. The code is lifted a
+   further 0.7 so its line centres on the lead-in's. */
+.reveal .slides .ibm-obst-slide .body { left: 2.4%; top: 13.8%; width: 90.8%; }
+.reveal .slides .ibm-obst-slide .body > p:first-child { margin-bottom: 0.65em; }
+.reveal .slides .ibm-obst-slide .obst { left: 52.5%; top: 13.7%; width: 47.5%; font-size: 0.95em; }
 .reveal .slides .ibm-obst-slide .eq1 { left: 8%; top: 30.8%; width: 34.8%; }
 .reveal .slides .ibm-obst-slide .lab-body { left: 44.3%; top: 32.7%; width: 14.9%; }
 .reveal .slides .ibm-obst-slide .iter { left: 4.4%; top: 43.2%; width: 49.4%; }

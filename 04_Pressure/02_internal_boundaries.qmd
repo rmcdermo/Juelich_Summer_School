@@ -100,6 +100,13 @@ x M. Uhlmann, "An immersed boundary method with direct forcing for particulate f
 
 :::
 
+::: {.notes}
+- Structured grids do not conform to general shaped solids; in immersed boundary methods (IBM) a force term in the momentum equation is used to represent these solid boundaries.
+- The force is chosen so the velocity next to the body matches its boundary condition.
+- Variants: force in the continuous or the discrete equations; spread over nearby points (diffuse) or applied at the nearest grid points (sharp).
+- FDS OBSTs use discrete, direct forcing at grid faces: next slide.
+:::
+
 ## Structured meshes – Immersed Boundary Method {.ibm-obst-slide}
 
 ::: {.slide-layout}
@@ -248,6 +255,13 @@ Use of one iteration is common in IBM codes.
 
 :::
 
+::: {.notes}
+- OBSTs are snapped to the grid, so solid faces coincide with cell faces.
+- H is solved everywhere, inside the obstacle too; the forcing drives the normal velocity at solid faces to the prescribed velocity u^d (velocity boundary condition, usually zero).
+- The force needs ΔH/Δx, known only after the Poisson solve, so we iterate the projection in k until |u^(n+1,k) − u^d| < ε (VELOCITY_TOLERANCE).
+- What remains is penetration error. One iteration is common in IBM codes; FDS iterates up to MAX_PRESSURE_ITERATIONS if the velocity error tolerance is not met.
+:::
+
 ## Unstructured meshes {.ib-unstructured-bc-slide}
 
 ::: {.slide-layout}
@@ -380,6 +394,12 @@ Allows for flow acceleration.
 
 :::
 
+::: {.notes}
+- Unstructured alternative: solve H only in gas cells; solid surfaces become domain boundaries with homogeneous Neumann, ΔH/Δx = 0.
+- The force at the boundary face is set to −(u^d − u^n)/Δt, so with zero H gradient there, u^(n+1) = u^d exactly.
+- No penetration error and no iteration needed for it; the cost is a general linear system solver, instead of fast solvers we can apply for structured meshes.
+:::
+
 ## Local Single Mesh Poisson Solvers {.fft-intro-slide}
 
 ::: {.slide-layout}
@@ -397,6 +417,13 @@ Fast trigonometric transform Solver FFT:
 ![](Section_2_assets/slide-023-picture-01.png){fig-alt="Structured box mesh with the same boundary condition on every side."}
 :::
 
+:::
+
+::: {.notes}
+- FFT is FDS's default solver, one solve per mesh. It needs the mesh to be a box with one boundary condition type per side; obstacles inside are invisible to it.
+- Continuum: on such a box the Laplacian's eigenfunctions are known, sines (Dirichlet), cosines (Neumann) or complex exponentials (periodic), and H is a Fourier series in them.
+- Discrete: the matrix inherits them. Its eigenvectors are the same sines/cosines sampled at cell centers, with eigenvalues −(4/Δx²)·sin²(kπ/2N) per direction, ≈ −(kπ/L)² for smooth modes. The Neumann k = 0 mode is the constant: H up to a constant.
+- That separability is what the fast transforms exploit.
 :::
 
 ## Local Single Mesh Poisson Solvers {.fft-eigen-slide}
@@ -447,6 +474,12 @@ Corresponding eigenvectors, real (SPD).
 How would I use them to solve my Poisson equation linear system?
 :::
 
+:::
+
+::: {.notes}
+- The linear algebra behind FFT: suppose we had all eigenvalues and eigenvectors of A.
+- A is symmetric and definite, so the eigenvalues are real and of one sign, the eigenvectors real and orthogonal.
+- Ask the class: how would you use them to solve A H = R? Answer over the next two slides.
 :::
 
 ## Local Single Mesh Poisson Solvers {.fft-eigendecomp-slide}
@@ -521,6 +554,12 @@ $$\boldsymbol{\Lambda}_{N\times N}=\left[ \begin{matrix} \lambda_{1} & \cdots & 
 Eigenvalue diagonal matrix.
 :::
 
+:::
+
+::: {.notes}
+- Stack the eigenvectors as columns of Q; they are orthonormal, so Q⁻¹ = Qᵀ.
+- All N eigenvalue problems at once: A Q = Q Λ, i.e. A = Q Λ Qᵀ, the eigendecomposition.
+- Λ is diagonal and holds the eigenvalues.
 :::
 
 ## Local Single Mesh Poisson Solvers {.fft-transform-slide}
@@ -601,6 +640,12 @@ System is diagonal! Very cheap to solve!
 
 :::
 
+::: {.notes}
+- Substitute A = Q Λ Qᵀ into A H = R and multiply by Qᵀ: Λ (Qᵀ H) = Qᵀ R.
+- Qᵀ maps H and R into transformed (modal, wave) space: Ĥ and R̂.
+- There the system is diagonal: each mode is solved with one division.
+:::
+
 ## Local Single Mesh Poisson Solvers {.fft-procedure-slide}
 
 ::: {.slide-layout}
@@ -660,6 +705,12 @@ Need to get eigen values/vectors and eigenvector matrix is full.
 
 :::
 
+::: {.notes}
+- Three steps: transform R, divide by the eigenvalues, transform back to get H in physical space.
+- With full matrices each transform costs N² operations, no better than a dense solve.
+- The rescue: for the Poisson operator on a box, eigenvalues and eigenvectors are known analytically, and A is never built.
+:::
+
 ## Local Single Mesh Poisson Solvers {.fft-cost-slide}
 
 ::: {.slide-layout}
@@ -693,6 +744,12 @@ Fast trigonometric Solvers are the most efficient Poisson solvers for block-stru
 \*<https://github.com/NCAR/NCAR-Classic-Libraries-for-Geophysics/tree/main/FishPack>
 :::
 
+:::
+
+::: {.notes}
+- Qᵀ is exactly a 2D or 3D discrete sine, cosine or Fourier transform, and Q its inverse.
+- Fast transforms cut each transform from ~N² to ~N log N operations.
+- The fastest Poisson solver for box-structured meshes; FDS's is based on FishPack. The price is having to iterate to reduce penetration errors in internal OBSTacles.
 :::
 
 ## Running the class examples {.run-examples-slide}
@@ -751,6 +808,13 @@ No run of your own? `eval.py` falls back to `reference/`, so every figure can be
 
 :::
 
+::: {.notes}
+- The same five steps for every example; Example 1 applies them on the next slides.
+- Name the copy and its CHID after the solver, so runs sit side by side instead of overwriting each other.
+- Run inside results/: Smokeview has to be started there to find the slice files.
+- Examples 4 and 5 are cluster runs; eval.py plots them from reference/.
+:::
+
 ## Example 1: Single Mesh Example using FFT, part (a). {.ex1-input-slide}
 
 ::: {.slide-layout}
@@ -779,6 +843,13 @@ Key FDS input file lines:
 ![](Section_2_assets/slide-029-picture-01.png){fig-alt="Smokeview view of the Example_1 case: a velocity slice through the box with a central obstruction."}
 :::
 
+:::
+
+::: {.notes}
+- Example 1: a 3.2 × 1.6 × 1.6 m box on one 32×16×16 mesh; inlet on the left at 2.5 m/s, open door on the right, an obstruction in the middle.
+- Isothermal (adiabatic walls, no fire), so ∇·u = 0 and the volume flow in should equal the flow out.
+- &PRES holds the solver controls: SOLVER, VELOCITY_TOLERANCE, MAX_PRESSURE_ITERATIONS.
+- All four variants are in the file; exactly one &PRES line is active.
 :::
 
 ## Example 1: Single Mesh Example using FFT, part (a). {.ex1-default-slide}
@@ -825,6 +896,12 @@ The output file will be `Example_1_FFT.out`{style='color:#222'}.
 <svg viewBox="0 0 32.32 70.20" width="100%" style="overflow:visible;display:block" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><marker id="ar30b" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#156082"/></marker></defs><line x1="32.32" y1="70.20" x2="0.00" y2="0.00" stroke="#156082" stroke-width="4.17" marker-end="url(#ar30b)"/></svg>
 :::
 
+:::
+
+::: {.notes}
+- Defaults: FFT, VELOCITY_TOLERANCE = Δx/2 = 0.05 m/s here (Δx = 0.1 m), up to 10 pressure iterations.
+- FFT solves H inside the obstacle too, so flow leaks through solid faces: penetration error at the obstacle and the back wall.
+- Run with steps 3–4; the output file is Example_1_FFT.out.
 :::
 
 ## Example 1: Single Mesh Example using FFT, part (a). {.ex1-stats-slide}
@@ -888,6 +965,13 @@ Run Time statistics (`Example_1_FFT.out` file):
 
 :::
 
+::: {.notes}
+- At each output step, the .out file reports the pressure iterations taken, the maximum velocity error, and the mesh and cell where it occurs.
+- Slices: isothermal, so temperature and density are uniform and the divergence is about zero.
+- The VELOCITY ERROR boundary file shows where the solver leaks: obstacle and back wall.
+- In the devc file, VDOT_IN and VDOT_OUT differ by that leak.
+:::
+
 ## Example 1: Single Mesh Example using FFT, part (a). {.ex1-tol-slide}
 
 ::: {.slide-layout}
@@ -930,6 +1014,12 @@ Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*
 
 :::
 
+::: {.notes}
+- Tighten: VELOCITY_TOLERANCE = 0.001 m/s, and allow up to 50 iterations.
+- More iterations per step, smaller penetration error.
+- Plots: with defaults the in and out traces separate (0.57% max difference); tightened they overlap (0.02%).
+:::
+
 ## Some important &PRES parameters: {.pres-params-slide}
 
 ::: {.slide-layout}
@@ -949,6 +1039,13 @@ Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*
 | | `TUNNEL_PRECONDITIONER` | F | | Use tunnel preconditioner? |
 :::
 
+:::
+
+::: {.notes}
+- VELOCITY_TOLERANCE and MAX_PRESSURE_ITERATIONS: the controls just used.
+- SUSPEND_PRESSURE_ITERATIONS stops early when an iteration no longer reduces the error by ITERATION_SUSPEND_FACTOR.
+- PRESSURE_TOLERANCE: the inseparable-residual criterion from Module I's pressure iteration.
+- TUNNEL_PRECONDITIONER comes in Module IV.
 :::
 
 ## Local Single Mesh Poisson Solvers {.ulmat-intro-slide}
@@ -997,6 +1094,13 @@ A symmetric, $U=L^{T}$
 \* T. Davis, "Direct Methods for Sparse Linear Systems," SIAM (2006). J. Saad, "Iterative Methods for Sparse Linear Systems," 2nd Ed, SIAM (2003).
 :::
 
+:::
+
+::: {.notes}
+- ULMAT, unstructured local matrix: H only in gas cells, per mesh; solids are boundaries, so no penetration error.
+- Direct solver: PARDISO from Intel MKL factors A = L Lᵀ (Cholesky).
+- One matrix per pressure zone, since separate zones are disconnected in the gas.
+- Figure: A is very sparse; L fills in with far more non-zeros.
 :::
 
 ## Local Single Mesh Poisson Solvers {.ulmat-solve-slide}
@@ -1056,6 +1160,12 @@ $$\mathbf{L}^{T}\boldsymbol{H}=\boldsymbol{Y}$$
 Backward Substitution of the order of non-zeros in L
 :::
 
+:::
+
+::: {.notes}
+- Factorize once at setup: the expensive part.
+- Each time step, only the solve: forward substitution L Y = R, then backward Lᵀ H = Y.
+- Both cost about the number of non-zeros in L.
 :::
 
 ## Local Single Mesh Poisson Solvers {.ulmat-reorder-slide}
@@ -1140,6 +1250,12 @@ Backward Substitution cost $\alpha N^{4/3}$ in 3D\*
 
 :::
 
+::: {.notes}
+- Fill-in (number of non-zeros) in L depends on the order of the unknowns. In the figures we see the number of non-zero entries resulting from applying 3 different reordering schemes.
+- Natural ordering vs approximate minimum degree vs nested dissection: nested dissection leaves the least fill.
+- With it, each substitution on a cubic mesh costs about α N^(4/3) in 3D.
+:::
+
 ## Example 1: Single Mesh Example using ULMAT PARDISO, part (b) {.ex1-ulmat-slide}
 
 ::: {.slide-layout}
@@ -1182,6 +1298,12 @@ Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*
 
 :::
 
+::: {.notes}
+- Same case with SOLVER='ULMAT PARDISO'; CHECK_POISSON=T writes solver diagnostics.
+- Solids are now domain boundaries: the in–out difference drops to 6E-13%, machine precision.
+- Compare 0.566% with FFT defaults and 0.02% tightened.
+:::
+
 ## Example 1: Single Mesh Example using ULMAT PARDISO, part (b) {.ex1-fillin-slide}
 
 ::: {.slide-layout}
@@ -1221,6 +1343,12 @@ $\sim N^{4.4/3}$
 
 :::
 
+::: {.notes}
+- CHECK_POISSON prints PARDISO's factorization statistics.
+- Each refinement multiplies N and the non-zeros of A by 8, but those of L by 8^(4.4/3) ≈ 21 (535k → 11.2m → 225.5m): L grows ~N^(4.4/3), and the fill ratio L/A goes 18 → 46 → 114.
+- Memory and solve time follow the non-zeros in L: keep meshes under ~50³ cells for PARDISO.
+:::
+
 ## Local Single Mesh Poisson Solvers {.hypre-slide}
 
 ::: {.slide-layout}
@@ -1251,6 +1379,13 @@ ULMAT HYPRE (Unstructured Local Matrix Solver)
 <https://hypre.readthedocs.io/en/latest/index.html>
 :::
 
+:::
+
+::: {.notes}
+- ULMAT HYPRE: the same unstructured matrix, solved iteratively instead of factorized.
+- Conjugate gradient with an algebraic multigrid preconditioner, from the HYPRE library.
+- Memory ~5–8× the non-zeros of A, with no fill-in: scales to large meshes.
+- Solution matches PARDISO to the solver tolerance; can be slower for small meshes.
 :::
 
 ## Example 1: Single Mesh Example using ULMAT HYPRE, part (c) {.ex1-hypre-slide}
@@ -1288,6 +1423,12 @@ Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*
 
 :::
 
+::: {.notes}
+- SOLVER='ULMAT HYPRE': in–out difference 2E-11%, set by the iterative tolerance on the equation residual L2 norm, still negligible.
+- For practical purposes the same result as PARDISO.
+- Compare the wall clock times in the two .out files.
+:::
+
 ## Local Single Mesh Poisson Solvers Recap: {.solver-recap-slide}
 
 ::: {.slide-layout}
@@ -1316,6 +1457,13 @@ Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*
 - Memory efficient, only option when PARDISO not available to compile FDS (ARM Mac builds).
 :::
 
+:::
+
+::: {.notes}
+- FFT: fastest, box meshes only; OBSTs need iterations to reduce velocity error.
+- ULMAT PARDISO: gas cells only, exact at solids; direct factorization, memory-heavy as meshes grow.
+- ULMAT HYPRE: gas cells only, iterative, memory-lean; the option on ARM Macs, where MKL isn't available.
+- All three work mesh by mesh: errors at mesh interfaces are Module III.
 :::
 
 ## Unstructured meshes – Cut-cell method for geometries {.cutcell-intro-slide}
@@ -1352,6 +1500,12 @@ Boundary conforming: Cut-cell (embedded boundary) methods\*
 \* M. Berger, "Cut Cells: Meshes and Solvers," *Handbook of Numerical Analysis* **18** (2017).
 :::
 
+:::
+
+::: {.notes}
+- For GEOMs FDS uses a cut-cell (embedded boundary) method.
+- A background Cartesian mesh; where the surface crosses it, cells are cut into polyhedra and the solid part is discarded.
+- The equations are discretized on the gas part of the cut cells, conforming to the boundary.
 :::
 
 ## Unstructured meshes – Cut-cell method for geometries {.cutcell-prosecons-slide}
@@ -1393,7 +1547,10 @@ Disadvantages:
 :::
 
 ::: {.notes}
-The three slides that follow -- the finite volume discretization and the small-cell treatment -- are for a longer sitting. If time is short, go straight from here to the unstructured Poisson solve.
+- Pros: conservative, complexity stays local to the surface, most cells remain regular and cheap.
+- Cons: very irregular and very small cells (stability, conditioning), no boundary-layer meshes, and expensive unstructured Poisson solvers.
+- Figure: a GEOM is a surface mesh (VERTS, FACES) with a SURF per face, independent of the grid.
+- The next three slides (finite volume discretization, small cells) are for a longer sitting. If time is short, go straight to the unstructured Poisson solve.
 :::
 
 ## Unstructured meshes – Cut-cell method for geometries {.fv-species-slide}
@@ -1475,7 +1632,9 @@ Reaction
 :::
 
 ::: {.notes}
-Optional, with the two slides after it: the finite volume machinery is developed here on species transport, and only then applied to the Poisson equation. The Poisson slide stands on its own if these are skipped.
+- Optional, with the next two: finite volumes developed on species transport first, then applied to the Poisson equation, whose slide stands on its own.
+- Integrate over each cell: time derivative and reaction become volume terms, advection and diffusion become fluxes through the faces by using the divergence theorem.
+- A cut cell simply has more, irregular faces; face 3 in the figure is a cut face.
 :::
 
 ## Unstructured meshes – Cut-cell method for geometries {.fv-terms-slide}
@@ -1578,6 +1737,13 @@ A given cut face k=3 adds to the ii equation:
 
 :::
 
+::: {.notes}
+- Advective flux per face: face velocity times a flux-limited interpolation of ρY_α.
+- Diffusive flux per face: gradient by numerical differentiation between cell centroids.
+- Assumptions: planar faces (constant unit normal) and a single flux value per face, identified by its index k and located at its centroid. Each face then adds its flux to the equations of the two cells sharing it.
+- In practice: number the unknowns, build face lists, assemble by looping over faces.
+:::
+
 ## Unstructured meshes – Cut-cell method for geometries {.smallcell-slide}
 
 ::: {.slide-layout}
@@ -1614,7 +1780,10 @@ Literature: (a) **Cell merging**\*, **cell linking**^+^ or **cell mixing**^#^ sc
 :::
 
 ::: {.notes}
-Last of the optional three. CCVOL_LINK comes back in Example 2 as the bonus exercise, so it is worth a word even when this slide is skipped.
+- Last of the optional three.
+- Small cut cells would force a tiny explicit time step.
+- FDS links a small cell to a large neighbor: same unknown, volumes and fluxes add, fluxes on the shared face cancel.
+- The threshold is &MISC CCVOL_LINK (0.5 default). It comes back in Example 2 as the bonus, so it is worth a word even if this slide is skipped.
 :::
 
 ## Unstructured meshes – Cut-cell method for geometries {.cc-poisson-slide}
@@ -1649,10 +1818,17 @@ With $\Delta x_{i}$ cell centroid to centroid distance in direction *i*.
 Steps:
 
 1. Build unstructured finite volume discretization matrix for H (face by face).
-2. Invoke [unstructured linear system solver]{style='color:#ff0000'} setup (default [UGLMAT&nbsp;HYPRE]{style='color:#ff0000'} for a single pressure zone, [ULMAT&nbsp;PARDISO]{style='color:#ff0000'} when there is more than one). Note we can't use FFT, why?
+2. Invoke [unstructured linear system solver]{style='color:#ff0000'} setup (default [UGLMAT&nbsp;HYPRE]{style='color:#ff0000'} (Module III) for a single pressure zone, [ULMAT&nbsp;PARDISO]{style='color:#ff0000'} when there is more than one). Note we can't use FFT, why?
 3. In time marching build unstructured Poisson RHS and call [unstructured solver]{style='color:#ff0000'} when needed.
 :::
 
+:::
+
+::: {.notes}
+- Integrate the Laplacian over a cut cell: the sum of face gradients times face areas.
+- Face gradient: the H difference between centroids over their distance.
+- Build the matrix face by face, then set up an unstructured solver: UGLMAT HYPRE (the global solver, next module) by default for one pressure zone, ULMAT PARDISO for more.
+- Why not FFT: cut cells break the box structure, so the operator is no longer separable.
 :::
 
 ## Example 2: Mass balance for sphere source. {.ex2-input-slide}
@@ -1723,6 +1899,13 @@ DIFFERENTIAL_GAIN
 ![](Section_2_assets/slide-048-picture-02.png){fig-alt="Smokeview view of the case: a triangulated sphere inside the domain with a slice of tracer mass fraction through it, red at the sphere surface falling to blue at the edges of the slice."}
 :::
 
+:::
+
+::: {.notes}
+- A 2.8 m cube on one 32³ mesh; a 1 m radius GEOM sphere blows propane tracer at 10 kg/m²/s for 1 s; the top is OPEN.
+- Expect about 10 × 4π × 1 ≈ 126 kg released, which must either leave or stay in the domain.
+- ULMAT PARDISO because the sphere is a GEOM: cut cells need an unstructured solver.
+- PID with only the integral gain returns the time integral of its input: a running total of mass.
 :::
 
 ## Example 2: Mass balance for sphere source. {.ex2-devc-slide}
@@ -1805,6 +1988,13 @@ $\cong$
 A
 :::
 
+:::
+
+::: {.notes}
+- MF IN TRACER: tracer mass flux integrated over the sphere surface, in kg/s.
+- The PID with INTEGRAL_GAIN=1, the others 0, turns it into MASS IN TRACER: total mass released, in kg.
+- The same at the OPEN boundary gives MASS OUT; a volume integral of tracer density gives MASS VOL.
+- Balance: MASS IN ≅ MASS OUT + MASS VOL.
 :::
 
 ## Example 2: Mass balance for sphere source. {.ex2-balance-slide}
@@ -1895,4 +2085,10 @@ Bonus: Try other values of `&MISC CCVOL_LINK`. Time steps? Mass difference?
 | 0.9 | 282 | 0.16 % |
 :::
 
+:::
+
+::: {.notes}
+- Reference run: 125.51 kg in ≅ 92.83 out + 32.56 still in the domain, a 0.1% difference.
+- The gap comes from the devices, not the solver: the PID integrates the fluxes in time with explicit Euler, while FDS advances the scalars with a second-order Runge–Kutta.
+- Bonus, CCVOL_LINK: a larger threshold links more cells, so fewer, larger time steps (704 → 282), and the gap grows in proportion to the step (0.06% → 0.16%), the first-order Euler signature.
 :::

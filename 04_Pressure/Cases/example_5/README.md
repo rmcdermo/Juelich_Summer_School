@@ -27,14 +27,45 @@ set. Nothing to comment in and out.
 | `FFT_TP`       | the same, plus `TUNNEL_PRECONDITIONER=T`                                      | the same solver, a few dozen iterations, tolerance reached        |
 | `UGLMAT`       | `SOLVER='UGLMAT'`                                                             | velocity error at machine zero — and still several iterations     |
 
-The tunnel preconditioner solves a one-dimensional problem along the tunnel
-axis first and hands the result to FFT as a starting point, so the long-range
-part of the pressure field is already there and the iteration only has to fix
-what is local to the fire. The first two rows are the same solver with the same
-tolerance and differ only in that.
+The tunnel preconditioner splits the pressure into its mean over each y-z
+cross-section, H̄(x), and the fluctuation about it. It does so in every pressure
+iteration, not just the first (`TUNNEL_POISSON_SOLVER` and `PRESSURE_SOLVER_FFT`
+in `pres.f90`):
+
+1. Each mesh averages its Poisson right-hand side R over every cross-section to
+   get R̄(x), and subtracts it from R.
+2. The R̄ values of all meshes are gathered on MPI rank 0, which solves the 1D
+   Poisson problem ∂²H̄/∂x² = R̄ for the whole tunnel as one tridiagonal system,
+   one unknown per x station, and broadcasts H̄ to every process.
+3. Each mesh solves its own 3D problem for the fluctuation with FFT and adds H̄
+   back: H = H̃ + H̄.
+
+The mean pressure therefore crosses the whole 128 m in every iteration, instead
+of one mesh boundary per iteration. The first two rows are the same solver with
+the same tolerance and differ only in that.
+
+The 1D problem takes its boundary conditions from the 3D ones:
+
+- At the two tunnel ends, the first and last mesh average their x-boundary
+  value over the cross-section and apply it through a ghost cell, as on the
+  boundary-condition slides of Module I: ghost = 2·H̄_bc − H̄₁ where the end is
+  Dirichlet, ghost = H̄₁ − Δx·∂H̄/∂x where it is Neumann (the x = 0 form; the
+  sign flips at the far end). A mesh face is Neumann unless it carries an
+  `OPEN` vent (`init.f90`), so here x = 0, covered by the inlet, is Neumann and
+  the `OPEN` end at x = 128 m is Dirichlet.
+- The same averages are subtracted from the 3D boundary values, so the 3D
+  solves only see the fluctuation.
+- Mesh interfaces need no condition in the 1D problem: its unknowns run
+  straight through them. Once H̄ is known, its value interpolated to each
+  interface is added back to the 3D solves' interface values.
+- With Neumann at both ends the 1D matrix is singular, and FDS fixes the free
+  constant by setting the mean of H̄ to zero.
+
+Switching the preconditioner on also raises `MAX_PRESSURE_ITERATIONS` to at
+least 20 (`read.f90`).
 
 The last row is the one to look at twice. UGLMAT assembles one unstructured
-matrix over all eight meshes and solves it directly, so it leaves no velocity
+matrix over all eight meshes and solves it, so it leaves no velocity
 error at the mesh boundaries to iterate away — its `error` device reads about
 1e-15 m/s. It nonetheless runs six or seven pressure iterations per half time
 step, because the velocity tolerance is not the only exit test: FDS also checks
@@ -70,7 +101,7 @@ cd results
 mpirun -n 8 fds Example_5_FFT_TP.fds
 ```
 
-### All four
+### All three
 
 ```bash
 ./run_all.sh          # one after another, on this machine
@@ -93,7 +124,7 @@ three runs are independent, so they can all sit in the queue at once.
 
 What has to travel to a cluster is only the three `.fds` files, `submit.sh` and
 `slice_pressit.sh` -- about 40 kB. What has to come back is each run's `.out`,
-its `_devc.csv` and its sliced `_pressit_step2500.csv`; see below for the
+its `_devc.csv` and its sliced `_pressit_step2462.csv`; see below for the
 slicing, which has to happen before the copy.
 
 ## Viewing

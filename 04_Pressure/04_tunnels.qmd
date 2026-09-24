@@ -27,6 +27,13 @@ Example 5: Tunnel fire case.
 
 :::
 
+::: {.notes}
+- Long, slender, wall-bounded domains are the hard case for a low Mach solver.
+- In low Mach, pressure information travels instantly through the Poisson equation; in reality acoustic waves take time.
+- A fire drives large pressure changes that the solution has to carry the full length at once; left unconverged, they grow into instabilities.
+- With local solvers, information crosses one mesh boundary per pressure iteration, so a row of meshes end to end needs many iterations that might span several time steps.
+:::
+
 ## Tunnel Preconditioner {.tp-decompose-slide}
 
 ::: {.slide-layout}
@@ -65,9 +72,16 @@ $R_{(x,y,z)} = \tilde{R}_{(x,y,z)} + \bar{R}_{(x)}$
 :::
 
 ::: {.lab-avg}
-Average values in x-y planes
+Average values in y-z planes
 :::
 
+:::
+
+::: {.notes}
+- &PRES TUNNEL_PRECONDITIONER=T: a cheap way to carry the mean pressure along the tunnel. Switching it on also raises MAX_PRESSURE_ITERATIONS to at least 20.
+- Split H into its mean over each tunnel cross-section (y-z plane), H̄(x), plus the fluctuation H̃ about it; the same for the source R.
+- Goal: fewer pressure iterations and fewer instabilities.
+- 1D boundary conditions: the cross-section average of the 3D ones at the two tunnel ends. Mesh interfaces need none: the 1D unknowns run straight through them.
 :::
 
 ## Tunnel Preconditioner {.tp-algorithm-slide}
@@ -79,7 +93,7 @@ For each pressure iteration:
 :::
 
 ::: {.steps}
-1. Compute x-y mean of $R$, $\bar{R}_{(x)}$. Filter out $\bar{R}_{(x)}$ from $R$ to get $\tilde{R}_{(x,y,z)} = R - \bar{R}_{(x)}$ in each mesh.
+1. Compute y-z mean of $R$, $\bar{R}_{(x)}$. Filter out $\bar{R}_{(x)}$ from $R$ to get $\tilde{R}_{(x,y,z)} = R - \bar{R}_{(x)}$ in each mesh.
 2. Solve 2 problems:
 :::
 
@@ -88,7 +102,7 @@ $\nabla^{2}\tilde{H}_{(x,y,z)} = \tilde{R}_{(x,y,z)}$
 :::
 
 ::: {.eq2}
-$\frac{\partial}{\partial x}\bar{H}_{(x)} = \bar{R}_{(x)}$
+$\frac{\partial^{2}}{\partial x^{2}}\bar{H}_{(x)} = \bar{R}_{(x)}$
 :::
 
 ::: {.lab-3d}
@@ -127,6 +141,13 @@ $H_{(x,y,z)} = \tilde{H}_{(x,y,z)} + \bar{H}_{(x)}$
 Meshes abut end to end in one direction, no open boundaries along the tunnel.
 :::
 
+:::
+
+::: {.notes}
+- Each mesh averages R over every y-z cross-section to get R̄(x) and removes it, leaving R̃; the mean is removed from its x-boundary conditions too.
+- 1D global solve: R̄ from all meshes is gathered on MPI rank 0, which solves ∂²H̄/∂x² = R̄ for the whole tunnel as one tridiagonal system (one unknown per x station) and broadcasts H̄ to every process. Then the 3D local solves for H̃, mesh by mesh.
+- Add them, H = H̃ + H̄. Both solves are repeated in every pressure iteration, so the mean pressure crosses the whole tunnel each iteration instead of one mesh per iteration.
+- Requires a single row of meshes along x with the same y-z bounds (ERROR 376 otherwise), and no open boundaries along the tunnel (User's Guide 21.3).
 :::
 
 ## Example 5: Tunnel fire case {.ex5-input-slide}
@@ -178,6 +199,13 @@ Test of tunnel preconditioner.
 
 :::
 
+::: {.notes}
+- 128 m tunnel, 4 m square in section: eight 80×20×20 meshes end to end, 256k cells of 20 cm, 30 s simulated.
+- Inlet at 5 m/s at x = 0, far end OPEN; an 8 MW fire 40 m in, a 2 × 2 m vent at 2000 kW/m².
+- The slope comes from gravity: GVEC rotated 10°, so the tunnel stays a box aligned with the grid.
+- Three runs: FFT, FFT with the tunnel preconditioner (FFT_TP), and UGLMAT.
+:::
+
 ## Example 5: Tunnel fire case {.ex5-cost-slide}
 
 ::: {.slide-layout}
@@ -208,6 +236,13 @@ Tunnel preconditioner is a must to achieve tolerance in reasonable time.
 
 :::
 
+::: {.notes}
+- FFT hits its 2000-iteration cap without reaching the tolerance; with the preconditioner about 35 iterations per half step, tolerance reached.
+- Wall clock on 8 ranks: FFT_TP 17 min, UGLMAT 60 min, FFT 169 min.
+- UGLMAT leaves no velocity error (~1e-14) yet still iterates about 6 times: it is working on the inseparable pressure residual (PRESSURE_TOLERANCE).
+- Capping UGLMAT at one iteration for this case leaves that residual far above tolerance, and the run was seen to go numerically unstable (ERROR 374, around 13–17 s of the 30).
+:::
+
 ## Example 5: Tunnel fire case {.ex5-iteration-slide}
 
 ::: {.slide-layout}
@@ -220,4 +255,10 @@ Tunnel preconditioner is a must to achieve tolerance in reasonable time.
 Similar behavior with pressure error.
 :::
 
+:::
+
+::: {.notes}
+- One time step (2462) taken apart: velocity error against pressure iteration, predictor then corrector, tolerance drawn across.
+- FFT: the full 2000 iterations in the predictor and again in the corrector, and it never reaches the tolerance.
+- With the preconditioner: about 70 iterations in all, roughly 35 per half, both reaching the tolerance. The pressure error behaves the same way.
 :::

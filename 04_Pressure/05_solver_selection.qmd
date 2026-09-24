@@ -65,6 +65,13 @@ FDS User's Guide, Table 21.1 (FDS-6.11.1).
 
 :::
 
+::: {.notes}
+- Table 21.1 of the FDS 6.11.1 User's Guide: what each solver allows and how it handles each kind of error.
+- "Exact" means no error of that kind; "iterative" means it is reduced by pressure iterations down to VELOCITY_TOLERANCE. Unstructured solvers are exact at solids, global ones at mesh interfaces; only UGLMAT is exact at both.
+- Inseparability is iterative for every solver (PRESSURE_TOLERANCE): why UGLMAT still iterated in the tunnel.
+- Sizes from the notes: ULMAT PARDISO below ~150,000 cells per mesh; UGLMAT HYPRE, the UGLMAT default, above ~1 million cells in total; HYPRE wherever MKL is missing or runs out of memory.
+:::
+
 ## Poisson Solver selection tips: {.selection-tips-slide}
 
 ::: {.slide-layout}
@@ -72,11 +79,18 @@ FDS User's Guide, Table 21.1 (FDS-6.11.1).
 ::: {.tbl .tips}
 | Case | Characteristics | Poisson Solver Option |
 |---|---|---|
-| External flow, fire plumes, smoke transport in large open compartments | Relatively forgiving about mesh interface and solid boundary errors | Use default FFT.<br>If needed increase velocity tolerance. |
-| Internal flows, complex geometrical scenarios, many potentially sealed compartments | Possibly high mesh interface and solid penetration errors when using IBM. | Increase velocity tolerance either with FFT or ULMAT. If problem/number of zones is small might consider UGLMAT. Large problem use UGLMAT HYPRE. |
+| External flow, fire plumes, smoke transport in large open compartments | Relatively forgiving about mesh interface and solid boundary errors | Use default FFT.<br>If needed tighten velocity tolerance. |
+| Internal flows, complex geometrical scenarios, many potentially sealed compartments | Possibly high mesh interface and solid penetration errors when using IBM. | Tighten velocity tolerance either with FFT or ULMAT. If problem/number of zones is small might consider UGLMAT. Large problem use UGLMAT HYPRE. |
 | Long sealed domains, tunnels. | Possibly high pressure fluctuations with large pressure fields between single steps. | Use tunnel preconditioner (FFT, or ULMAT if internal obstacles present).<br>Can also try UGLMAT. |
 :::
 
+:::
+
+::: {.notes}
+- Fire plumes and large open spaces: the default FFT, as Example 4 showed; tighten (lower) VELOCITY_TOLERANCE if needed.
+- Internal flows, complex geometry, sealed compartments: errors at solids matter (Examples 1–3). Tighten the tolerance with FFT or ULMAT, or use UGLMAT, with HYPRE for large problems.
+- Long sealed domains, tunnels: the tunnel preconditioner with FFT, or ULMAT with internal obstacles, as in Example 5; UGLMAT also works, at a higher cost there.
+- Whatever the choice, check the velocity error in the .out file and the mass or volume balance of your own case.
 :::
 
 ## {#thank-you .thank-you-slide}

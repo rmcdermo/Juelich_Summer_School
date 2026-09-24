@@ -21,26 +21,25 @@ to comment in and out — these are meant to be queued, not edited between runs.
 
 | input                          | `&PRES` line                                             | wall clock |
 | ------------------------------ | -------------------------------------------------------- | ---------- |
-| `Example_4_FFT.fds`            | `SOLVER='FFT'`                                           | 2.0 h      |
-| `Example_4_ULMAT.fds`          | `SOLVER='ULMAT'`                                         | 5.7 h      |
-| `Example_4_FFT_tight.fds`      | `SOLVER='FFT', VELOCITY_TOLERANCE=1E-4, MAX_PRESSURE_ITERATIONS=1000` | 5.8 h |
-| `Example_4_UGLMAT_HYPRE.fds`   | `SOLVER='UGLMAT HYPRE', MAX_PRESSURE_ITERATIONS=1`       | 6.2 h*     |
-| `Example_4_UGLMAT_PARDISO.fds` | `SOLVER='UGLMAT PARDISO', MAX_PRESSURE_ITERATIONS=1`     | 16.2 h*    |
+| `Example_4_FFT.fds`            | `SOLVER='FFT'`                                           | 2.2 h      |
+| `Example_4_ULMAT.fds`          | `SOLVER='ULMAT'`                                         | 7.2 h      |
+| `Example_4_FFT_tight.fds`      | `SOLVER='FFT', VELOCITY_TOLERANCE=1E-4, MAX_PRESSURE_ITERATIONS=1000` | 7.5 h |
+| `Example_4_UGLMAT_HYPRE.fds`   | `SOLVER='UGLMAT HYPRE', MAX_PRESSURE_ITERATIONS=1`       | 5.4 h*     |
+| `Example_4_UGLMAT_PARDISO.fds` | `SOLVER='UGLMAT PARDISO', MAX_PRESSURE_ITERATIONS=1`     | 11.7 h*    |
 
-The wall clock column is from the reference runs, 16 ranks with a core each.
-`UGLMAT_PARDISO` is the deck's `UGLMAT`, named for the backend it uses and
-asking for it explicitly rather than leaving it to the default, which has
-changed between FDS versions.
+The wall clock column is the total elapsed time in each reference run's `.out`,
+16 ranks with a core each. `UGLMAT_PARDISO` is the deck's `UGLMAT`, named for
+the backend it uses and asking for it explicitly rather than leaving it to the
+default, which has changed between FDS versions.
 
-\* The two global runs carry `MAX_PRESSURE_ITERATIONS=1`, which the reference
-runs did not, so expect them to come in faster than the table says. A global
+\* The two global runs carry `MAX_PRESSURE_ITERATIONS=1`, and so do their
+reference runs, which average exactly one pressure iteration a step. A global
 solve satisfies the velocity error in one pass — their `error` device reads
-exactly zero — but the reference runs still averaged about 2.5 iterations a
-step, because the iteration loop was still chasing the inseparable pressure
-residual after the velocity was already converged. Capping the loop at one says
-that in the input. Compare `iter` and `cputime` against the numbers above, and
-check the profiles on the other figure are unmoved: the velocity field the two
-settings produce should be the same.
+about 1e-15, round-off — so further iterations would only chase the inseparable
+pressure residual after the velocity has already converged. Earlier runs
+without the cap averaged about 2.5 iterations a step and took 6.2 h and 16.2 h
+for the same velocity profiles. The cap is harmless here; in the long tunnel of
+Example 5 it is not.
 
 ## Running
 
@@ -137,8 +136,8 @@ figure on the slide this replaces labels that axis in minutes, which it is not.
   at z = 0.3, 0.5 and 0.9 m. Not ours, and read from here whichever run
   directory is in use.
 - `reference/` — runs made ahead of the class, committed, so the figures can be
-  made without running anything. The two `UGLMAT` ones predate
-  `MAX_PRESSURE_ITERATIONS=1` and will be replaced once the capped runs land.
+  made without running anything. All five match the inputs here, the two
+  `UGLMAT` ones included, with `MAX_PRESSURE_ITERATIONS=1`.
 - `reference/plots/` — the figures already made from those runs.
 - `results/` — your FDS output. Ignored by git.
 - `plots/` — generated figures. Ignored by git.

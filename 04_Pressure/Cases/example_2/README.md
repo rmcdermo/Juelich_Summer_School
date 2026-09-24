@@ -135,7 +135,11 @@ it, and the mass balance from `eval.py`.
 `&MISC CCVOL_LINK` sets the size threshold below which a small cut cell is
 linked to a larger neighbour. The default is 0.5. Try 0.2 and 0.9 and watch what
 happens to the number of time steps and to the mass balance — link fewer cells
-and the smallest ones set the time step; link more and the balance loosens:
+and the smallest ones set the time step; link more and the steps get larger, and
+so does the measured difference. That difference comes from the `&CTRL` PID
+integrating the fluxes with explicit Euler rather than from the solver: it grows
+in proportion to the time step, as the table shows (difference × steps ≈ 42–45
+in all three rows).
 
 | CCVOL_LINK    | time steps | mass difference | time stepping |
 | ------------- | ---------- | --------------- | ------------- |

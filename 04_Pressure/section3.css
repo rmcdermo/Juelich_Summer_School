@@ -45,10 +45,14 @@
 .reveal .slides .parallel-req-slide .req2 { left: 3.4%; top: 30.3%; width: 50%; font-size: 1em; }
 .reveal .slides .parallel-req-slide .req2 li, .reveal .slides .parallel-req-slide .req2 > p { margin-bottom: 0.35em; }
 .reveal .slides .parallel-req-slide .serial { left: 3.4%; top: 50.3%; width: 50%; font-size: 1em; }
-.reveal .slides .parallel-req-slide .serial2 { left: 3.4%; top: 60.7%; width: 50%; font-size: 1em; }
+/* Wider than the deck's 50% so the added Amdahl's-law bullet stays on one line;
+   it runs under the figure (which ends at 70%), and the two bullets above are
+   short enough that they never reach it. */
+.reveal .slides .parallel-req-slide .serial2 { left: 3.4%; top: 60.7%; width: 80%; font-size: 1em; }
 .reveal .slides .parallel-req-slide .serial2 li, .reveal .slides .parallel-req-slide .serial2 > p { margin-bottom: 0.35em; }
 .reveal .slides .parallel-req-slide .fig { left: 53.36%; top: 37.26%; width: 46.64%; }
-.reveal .slides .parallel-req-slide .limit { left: 7%; top: 80.8%; width: 88.1%; font-size: 1.2em; color: #ff0000; }
+/* 4 below the deck's 80.8, at the user's request, clear of the added bullet. */
+.reveal .slides .parallel-req-slide .limit { left: 7%; top: 84.8%; width: 88.1%; font-size: 1.2em; color: #ff0000; }
 .reveal .slides .parallel-req-slide .limit code { color: inherit; }
 
 /* --- speedup-slide --- */
@@ -117,31 +121,36 @@
 .reveal .slides .local-solvers-slide .refs { left: 3.6%; top: 93.9%; width: 34.1%; font-size: 0.65em; }
 
 /* --- global-direct-slide --- */
+/* Bare 'GLMAT'/'UGLMAT' default to HYPRE in FDS 6.11, so this MKL slide lists
+   only the explicit PARDISO names; each code block is one line now, centred
+   in the space the two-line version used. */
 .reveal .slides .global-direct-slide .sub-head { left: 3.4%; top: 16.7%; width: 45%; }
 .reveal .slides .global-direct-slide .steps { left: 3.4%; top: 23.9%; width: 53.4%; font-size: 0.8em; }
 .reveal .slides .global-direct-slide .steps li, .reveal .slides .global-direct-slide .steps > p { margin-bottom: 0.15em; }
 .reveal .slides .global-direct-slide .call { left: 3.4%; top: 35.6%; width: 53.4%; font-size: 1em; }
-.reveal .slides .global-direct-slide .pres-g { left: 5.4%; top: 48%; width: 50.5%; font-size: 0.9em; line-height: 1.15; color: #ff0000; }
+.reveal .slides .global-direct-slide .pres-g { left: 5.4%; top: 49.35%; width: 50.5%; font-size: 0.9em; line-height: 1.15; color: #ff0000; }
 .reveal .slides .global-direct-slide .pres-g code { color: inherit; }
 .reveal .slides .global-direct-slide .pres-g, .reveal .slides .global-direct-slide .pres-g th, .reveal .slides .global-direct-slide .pres-g td { font-family: var(--r-code-font, monospace); }
 .reveal .slides .global-direct-slide .note-g { left: 6.5%; top: 58.9%; width: 30.6%; font-size: 0.8em; }
-.reveal .slides .global-direct-slide .pres-u { left: 5.4%; top: 69.4%; width: 50.5%; font-size: 0.9em; line-height: 1.15; color: #ff0000; }
+.reveal .slides .global-direct-slide .pres-u { left: 5.4%; top: 72.0%; width: 50.5%; font-size: 0.9em; line-height: 1.15; color: #ff0000; }
 .reveal .slides .global-direct-slide .pres-u code { color: inherit; }
 .reveal .slides .global-direct-slide .pres-u, .reveal .slides .global-direct-slide .pres-u th, .reveal .slides .global-direct-slide .pres-u td { font-family: var(--r-code-font, monospace); }
 .reveal .slides .global-direct-slide .note-u { left: 6.7%; top: 82.6%; width: 30.6%; font-size: 0.8em; }
 .reveal .slides .global-direct-slide .fig { left: 40.4%; top: 19.91%; width: 58.5%; }
 
 /* --- global-hypre-slide --- */
+/* The UGLMAT pair sits 3 lower than the deck's to make room for the added
+   'GLMAT will default to GLMAT HYPRE' line above it. */
 .reveal .slides .global-hypre-slide .sub-head { left: 3.4%; top: 16.7%; width: 45%; }
 .reveal .slides .global-hypre-slide .call { left: 3.4%; top: 28.3%; width: 53.4%; font-size: 1em; }
 .reveal .slides .global-hypre-slide .pres-g { left: 10.2%; top: 36.8%; width: 50.5%; font-size: 1em; color: #ff0000; }
 .reveal .slides .global-hypre-slide .pres-g code { color: inherit; }
 .reveal .slides .global-hypre-slide .pres-g, .reveal .slides .global-hypre-slide .pres-g th, .reveal .slides .global-hypre-slide .pres-g td { font-family: var(--r-code-font, monospace); }
 .reveal .slides .global-hypre-slide .note-g { left: 6.7%; top: 45%; width: 64.3%; font-size: 0.8em; }
-.reveal .slides .global-hypre-slide .pres-u { left: 10.2%; top: 54.4%; width: 50.5%; font-size: 1em; color: #ff0000; }
+.reveal .slides .global-hypre-slide .pres-u { left: 10.2%; top: 57.4%; width: 50.5%; font-size: 1em; color: #ff0000; }
 .reveal .slides .global-hypre-slide .pres-u code { color: inherit; }
 .reveal .slides .global-hypre-slide .pres-u, .reveal .slides .global-hypre-slide .pres-u th, .reveal .slides .global-hypre-slide .pres-u td { font-family: var(--r-code-font, monospace); }
-.reveal .slides .global-hypre-slide .note-u { left: 6.7%; top: 65.8%; width: 74.8%; font-size: 0.8em; }
+.reveal .slides .global-hypre-slide .note-u { left: 6.7%; top: 68.8%; width: 74.8%; font-size: 0.8em; }
 .reveal .slides .global-hypre-slide .note-u li, .reveal .slides .global-hypre-slide .note-u > p { margin-bottom: 0.3em; }
 
 /* --- pressit-slide --- */
