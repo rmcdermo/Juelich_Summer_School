@@ -1,0 +1,60 @@
+# Module IV: Review
+
+## Quiz: REAC Inputs {.review-slide}
+
+::: {.review-content}
+Name the input and give its value. Include units where needed.
+
+1. **Fuel:** Write the simplest `REAC` line for propane using simple chemistry.
+
+2. **Energy:** Which input specifies a heat of combustion of 46 MJ/kg? What value does FDS expect?
+
+3. **Products:** Specify CO and soot yields of 0.02 and 0.01 kg per kg of fuel consumed.
+
+4. **Extinction:** Set a critical flame temperature of 1700 K. How does this differ from an autoignition temperature?
+:::
+
+::: {.notes}
+Ask students to write their answers before consulting the FDS User Guide, Combustion chapter and REAC namelist table.
+
+1. `&REAC FUEL='PROPANE' /`. Propane is predefined; a separate SPEC line is not needed for this simplest case.
+2. `HEAT_OF_COMBUSTION=46000.` on REAC. FDS expects kJ/kg, not MJ/kg. This is a prescribed value for the exercise, not a claim about the default propane value.
+3. `CO_YIELD=0.02, SOOT_YIELD=0.01` on REAC. Both are mass ratios: kg of product per kg of fuel consumed. In simple chemistry these prescribe post-flame yields; they do not by themselves predict how yields change with ventilation.
+4. `CRITICAL_FLAME_TEMPERATURE=1426.85` on REAC. FDS temperature inputs here are in degrees Celsius. The critical flame temperature sets the extinction criterion; AUTO_IGNITION_TEMPERATURE sets the local gas-temperature threshold for ignition. They represent different physical conditions and should not be interchanged.
+
+The answers to questions 1–3 can be combined as:
+
+```fds
+&REAC FUEL='PROPANE', HEAT_OF_COMBUSTION=46000.,
+      CO_YIELD=0.02, SOOT_YIELD=0.01 /
+```
+
+These are namelist examples, not complete simulation input files.
+:::
+
+## Quiz: COMB Inputs {.review-slide}
+
+::: {.review-content}
+Write the input for each case and explain what changes in the model.
+
+1. **Mixing time:** Override the computed mixing time with a fixed value of 50 ms.
+
+2. **Initial mixing:** Start each combustion time step with fully mixed fuel and air. What value represents fully unmixed conditions?
+
+3. **Extinction model:** Select the model that uses a local flame-temperature calculation. Where do you set the critical flame temperature?
+
+4. **Suppression:** Disable gas-phase suppression for a comparison run. How would you use the results to assess the role of extinction in the predicted heat-release rate?
+:::
+
+::: {.notes}
+Ask students to identify both the keyword and its physical meaning. Refer to the FDS User Guide, Turbulent Combustion and Flame Extinction sections and COMB namelist table.
+
+1. `&COMB FIXED_MIX_TIME=0.05 /`. The unit is seconds. This overrides the computed mixing time; it is not the numerical time step or a chemical reaction time.
+2. `&COMB INITIAL_UNMIXED_FRACTION=0. /`. Zero represents fully mixed conditions; one represents fully unmixed conditions. Defaults depend on the simulation mode; DNS starts fully mixed. This sets the initial unmixed fraction at the beginning of each combustion time step. Fully mixed conditions can cause instabilities; the User Guide describes ramping this parameter with RAMP_ZETA_0.
+3. `&COMB EXTINCTION_MODEL='EXTINCTION 2' /`. Set CRITICAL_FLAME_TEMPERATURE on the REAC line, in degrees Celsius. EXTINCTION 2 uses species enthalpies to evaluate a local flame temperature and generally requires a relatively fine grid. EXTINCTION 1 uses cell temperature and oxygen concentration.
+4. `&COMB SUPPRESSION=F /`. Compare otherwise identical runs with suppression enabled and disabled, examining the heat-release-rate history and where burning occurs. Increased heat release with suppression disabled indicates that the extinction model is limiting combustion in the coupled simulation. Little change in total heat release does not rule out local extinction or a shift in the burning region. The comparison is a sensitivity study, not validation of the extinction model: changes in heat release can also feed back on flow, mixing, and fuel production.
+
+The COMB snippets above are separate answers. There can be only one COMB line in an input file; combine the desired parameters when using more than one setting. COMB settings apply to all reactions, whereas REAC describes an individual reaction. A COMB line is optional when its defaults are appropriate. Disabling suppression bypasses the extinction comparison, so do not combine questions 3 and 4 when testing differences between extinction models.
+:::
+
+## The End {.review-end}

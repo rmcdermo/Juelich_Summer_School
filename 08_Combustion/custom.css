@@ -5945,3 +5945,38 @@
 .reveal .slides .ext-damkohler { top: 340px; font-size: 1.7em; }
 .reveal .slides .ext-borghi { top: 135px; }
 .reveal .slides .ext-borghi img { width: auto; height: 600px; margin: 0 auto; }
+
+/* Module IV: student questions, with the answer key in speaker notes. */
+.reveal .slides .review-slide > h2 { text-align: left; }
+.reveal .slides .review-content {
+  position: absolute;
+  left: 5%;
+  top: 145px;
+  width: 90%;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4;
+  text-align: left;
+}
+.reveal .slides .review-content > p {
+  margin: 0 0 42px;
+  color: #555;
+}
+.reveal .slides .review-content ol {
+  display: block;
+  margin: 0;
+  padding-left: 1.3em;
+}
+.reveal .slides .review-content li + li { margin-top: 32px; }
+.reveal .slides .review-content li > p { margin: 0; }
+.reveal .slides .review-content strong { color: #156082; }
+.reveal .slides .review-content code { font-size: .92em; }
+.reveal .slides .review-end > h2 {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 2.6em;
+}
