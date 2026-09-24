@@ -105,6 +105,10 @@ Schematic: [`draw-extinction-diagrams.py`](figs/flame_extinction/draw-extinction
 - Kinetic chain breaking
 :::
 
+::: {.ext-source}
+J. Vaari, J. Floyd, and R. McDermott. [“CFD Simulations on Extinction of Co-Flow Diffusion Flames.”](https://doi.org/10.3801/IAFSS.FSS.10-781) *Fire Safety Science—Proceedings of the Tenth International Symposium*, pp. 781–794, 2011.
+:::
+
 ## Oxygen Criterion: Mowrer's Model {.ext-slide}
 
 ::: {.ext-content .ext-list}
