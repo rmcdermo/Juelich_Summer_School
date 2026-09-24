@@ -5858,7 +5858,7 @@
 .reveal .slides .ext-comparison .ext-heading { text-align: center; margin: 0 0 8px 18.75%; width: 75%; }
 /* Original PDF plots with independent, straight CSS annotation overlays. */
 .reveal .slides .ext-plot-overlay { position: relative; width: 560px; height: 615px; }
-.reveal .slides .ext-plot-page { display: block; width: 560px; height: 560px; border: 0; }
+.reveal .slides .ext-plot-page { display: block; width: 560px; height: 560px; max-width: none; max-height: none; border: 0; }
 .reveal .slides .ext-temperature-arrow {
   position: absolute;
   z-index: 2;
