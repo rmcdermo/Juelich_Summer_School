@@ -38,6 +38,13 @@ High resolution simulation of Heat transfer and soot deposition into a ceiling b
 
 :::
 
+::: {.notes}
+- Real problems can reach billions of cells and long, multi-scale simulations; one processor is too slow.
+- Domain decomposition: split the domain into meshes and solve them in parallel.
+- Goals: shorter wall clock time, larger problems, finer grids.
+- Figure: the ceiling-board case from slide 5, 2000 meshes of 45×45×30 = 121.5 million cells.
+:::
+
 ## Spatial Domain decomposition and Parallelization {.mpi-openmp-slide}
 
 ::: {.slide-layout}
@@ -68,6 +75,13 @@ High resolution simulation of Heat transfer and soot deposition into a ceiling b
 
 :::
 
+::: {.notes}
+- MPI: each mesh belongs to one process, which owns its memory; a process can hold several meshes, never the reverse.
+- Processes exchange mesh boundary data by messages: distributed memory, scales across the nodes of a cluster.
+- OpenMP: threads share one mesh's loops and memory, running in CPU cores associated to one MPI process (FDS instance).
+- Most of FDS's parallel speedup comes from MPI; OpenMP adds a modest factor per mesh (next slides).
+:::
+
 ## Spatial Domain decomposition and Parallelization {.parallel-req-slide}
 
 ::: {.slide-layout}
@@ -88,6 +102,7 @@ High resolution simulation of Heat transfer and soot deposition into a ceiling b
 ::: {.serial2 .dash-item}
 - S by definition cannot be done in parallel.
 - Only parallel portion P=(1-S) can be done simultaneously.
+- Amdahl's law: speedup $\le 1/(S+P/n) \to 1/S$ as the number of processes $n$ grows.
 :::
 
 ::: {.fig}
@@ -98,6 +113,12 @@ High resolution simulation of Heat transfer and soot deposition into a ceiling b
 Speedup with number of MPI processes or OpenMP threads always has a limit.
 :::
 
+:::
+
+::: {.notes}
+- Parallel work needs a task that splits into subtasks, plus synchronization (data exchange) between them.
+- Serial parts S can't be split; only the parallel fraction P = 1 − S speeds up.
+- Amdahl's law in numbers: with S = 5% serial, no number of processes gives more than 1/S = 20× speedup.
 :::
 
 ## Spatial Domain decomposition and Parallelization {.speedup-slide}
@@ -120,6 +141,12 @@ Speedup with number of MPI processes or OpenMP threads always has a limit.
 ![](Section_3_assets/slide-055-picture-02.png){fig-alt="Relative clock time against number of OpenMP threads, for 64-cubed and 128-cubed meshes."}
 :::
 
+:::
+
+::: {.notes}
+- Strong scaling, same problem on 32 → 2048 processes: total time falls to ~0.022 of its start, against an ideal 0.016, about 45× for 64× the processes.
+- The compute routines follow the ideal dotted lines; communication (COMM) flattens and grows past ~1000 processes: that is the limit.
+- OpenMP (right): 8 threads bring the time to ~29% (about 3.4×), with diminishing returns, similar for 64³ and 128³ meshes.
 :::
 
 ## Spatial Domain decomposition (MPI): {.split-mesh-slide}
@@ -150,6 +177,12 @@ Ghost cells on domain external boundaries.
 
 :::
 
+::: {.notes}
+- Two &MESH lines split Example 1's box into two 16³ meshes.
+- Each mesh is surrounded by ghost cells; on the outer boundary they carry the external BCs, as in Module I.
+- The cut creates a new, internal boundary between the meshes: next slide.
+:::
+
 ## Spatial Domain decomposition {.mesh-boundaries-slide}
 
 ::: {.slide-layout}
@@ -176,6 +209,12 @@ Ghost cells values need to be exchanged to compute stencils
 
 :::
 
+::: {.notes}
+- After the split each mesh has ghost cells along the cut: internal mesh boundaries.
+- Their values belong to the neighbor mesh and must be exchanged (MPI messages) before any stencil can be computed.
+- That exchange is the COMM cost in the scaling plot.
+:::
+
 ## Spatial Domain decomposition {.stencil-slide}
 
 ::: {.slide-layout}
@@ -198,6 +237,12 @@ Ghost cells values need to be exchanged to compute stencils
 - We need this for local mesh solvers.
 :::
 
+:::
+
+::: {.notes}
+- The Poisson stencil at a cell next to the cut reaches into a ghost cell owned by the other mesh.
+- Local solvers treat the cut as an interpolated boundary: Dirichlet, with H at the face the average of the latest internal and ghost values, the same average as Module I's Dirichlet BC.
+- Each mesh solves with its neighbor's last values, so the normal derivative of H doesn't match from the two sides: each side projects a different normal velocity on the interface, the velocity error at mesh interfaces.
 :::
 
 ## Poisson Solvers – Global solution {.local-solvers-slide}
@@ -299,6 +344,12 @@ Solid Boundary
 
 :::
 
+::: {.notes}
+- Local solvers (FFT, ULMAT) solve each mesh on its own, then update H at the mesh boundaries and iterate.
+- Stop when the velocity error is below VELOCITY_TOLERANCE, at solid and interpolated boundaries for FFT, interpolated only for ULMAT (solids are exact), or at MAX_PRESSURE_ITERATIONS.
+- Cheap per iteration and perfectly parallel, but information crosses one mesh per iteration, so many meshes in a row converge slowly.
+:::
+
 ## Poisson Solvers – Global solution {.global-direct-slide}
 
 ::: {.slide-layout}
@@ -318,8 +369,6 @@ Solving the Global Problem directly:
 :::
 
 ::: {.pres-g}
-`&PRES SOLVER='GLMAT'/` or
-
 `&PRES SOLVER='GLMAT PARDISO'/`
 :::
 
@@ -328,8 +377,6 @@ Solving the Global Problem directly:
 :::
 
 ::: {.pres-u}
-`&PRES SOLVER='UGLMAT'/` or
-
 `&PRES SOLVER='UGLMAT PARDISO'/`
 :::
 
@@ -341,6 +388,12 @@ Solving the Global Problem directly:
 ![](Section_3_assets/slide-060-picture-01.png){fig-alt="The same four meshes, now solved as one system: arrows run from every mesh into a single LU factorization."}
 :::
 
+:::
+
+::: {.notes}
+- Global alternative: one matrix for all meshes, unknowns numbered across meshes; each process builds the rows of its own meshes.
+- Solved with MKL's parallel direct solver (CLUSTER_SPARSE_SOLVER): no interpolated boundaries, no interface error.
+- GLMAT: structured, all cells, IBM on OBSTs, so it still iterates for the solid error. UGLMAT: unstructured, gas cells only, exact at solids and interfaces.
 :::
 
 ## Poisson Solvers – Global solution {.global-hypre-slide}
@@ -361,6 +414,7 @@ Solving the Global Problem directly:
 
 ::: {.note-g .dash-list}
 - Global for all meshes, structured, solves in all cells, IBM on internal Obstacles.
+- GLMAT will default to GLMAT HYPRE.
 :::
 
 ::: {.pres-u}
@@ -372,6 +426,12 @@ Solving the Global Problem directly:
 - UGLMAT will default to UGLMAT HYPRE.
 :::
 
+:::
+
+::: {.notes}
+- The same global matrices, solved iteratively: parallel conjugate gradient with AMG preconditioning from HYPRE.
+- GLMAT HYPRE: structured, IBM on obstacles. UGLMAT HYPRE: unstructured, gas cells only.
+- Bare GLMAT and UGLMAT default to HYPRE in FDS 6.11 (UGLMAT was PARDISO in 6.10); name the backend explicitly, since the default has changed between versions.
 :::
 
 ## Poisson Solvers – Global solution {.pressit-slide}
@@ -394,6 +454,12 @@ You get a ***CHID_pressit.csv*** file with:
 ![](Section_3_assets/slide-062-picture-02.png){fig-alt="The first rows of the pressure iteration file, annotated: time and time step, pressure iteration counts, then the mesh, cell indices and value of the largest velocity error, and the same three for the pressure error."}
 :::
 
+:::
+
+::: {.notes}
+- &DUMP VELOCITY_ERROR_FILE=T writes CHID_pressit.csv (called _vel_err.csv in FDS 6.10 and earlier).
+- Columns: time and step, iteration counts, then the mesh, cell and value of the largest velocity error, and the same for the pressure residual.
+- One row per pressure iteration, not per time step, so it grows fast: 754 MB for Example 5's FFT run.
 :::
 
 ## Example 3: Duct Flow {.ex3-input-slide}
@@ -432,6 +498,13 @@ e\) Use unstructured global solver UGLMAT: **`&PRES SOLVER='UGLMAT'/`{style='col
 
 :::
 
+::: {.notes}
+- A 6.4 m cube, eight 16³ meshes of 0.2 m cells; a 1 m duct runs a circuit that crosses every mesh boundary.
+- An HVAC fan drives 1 m³/s through it; the duct walls are thin OBSTs (zero thickness, sheets on cell faces), and the room around it is open.
+- What leaks through the walls leaves through the open boundaries, so in_net vs out_net measures the leak.
+- Five &PRES variants a–e; each run takes about a minute on 8 processes.
+:::
+
 ## Example 3: Duct Flow {.ex3-meshes-slide}
 
 ::: {.slide-layout}
@@ -456,6 +529,12 @@ Unstructured ULMAT (local), UGLMAT (global)
 <svg viewBox="0 0 96.00 46.80" width="100%" style="overflow:visible;display:block" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="48.00" cy="23.40" rx="48.00" ry="23.40" fill="none" stroke="#0070C0" stroke-width="6.67"/></svg>
 :::
 
+:::
+
+::: {.notes}
+- Left: the structured view used by FFT and GLMAT; the thin walls are IBM faces inside the grid. Note the velocity penetration error.
+- Right: the unstructured view used by ULMAT and UGLMAT; gas cells only, the walls are domain boundaries.
+- Thin walls are the hardest case for IBM: a single cell face separates duct and room, so any penetration error leaks straight through.
 :::
 
 ## Example 3: Duct Flow {.ex3-solvers-slide}
@@ -484,6 +563,12 @@ Thin obstacle boundary errors have the largest effect on volume flow
 
 :::
 
+::: {.notes}
+- Worst in–out gap over the second half: FFT −60%, GLMAT −79%, ULMAT −8%, FFT tight −4%, UGLMAT 2e-11%.
+- FFT and GLMAT: the default tolerance Δx/2 = 0.1 m/s is 10% of the 1 m/s duct flow, so they stop iterating while the walls still leak.
+- ULMAT fixes the walls but not the mesh interfaces; only UGLMAT fixes both.
+:::
+
 ## Example 3: Duct Flow {.ex3-iterations-slide}
 
 ::: {.slide-layout}
@@ -500,6 +585,12 @@ FFT Tight
 UGLMAT
 :::
 
+:::
+
+::: {.notes}
+- FFT tight needs hundreds of iterations early on (up to its 1000 cap), about 24 per step on average.
+- The others take 1–2 per step; UGLMAT exactly 1, with velocity error ~1e-16.
+- Right panel: the velocity error each solver settles for.
 :::
 
 ## Example 3: Duct Flow {.ex3-cost-slide}
@@ -530,6 +621,13 @@ GLMAT, UGLMAT more costly in steady region
 <svg viewBox="0 0 142.40 135.00" width="100%" style="overflow:visible;display:block" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><marker id="s67g2" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#156082"/></marker></defs><line x1="0.00" y1="0.00" x2="142.40" y2="135.00" stroke="#156082" stroke-width="3.75" marker-end="url(#s67g2)"/></svg>
 :::
 
+:::
+
+::: {.notes}
+- Wall clock: FFT 35 s, ULMAT 41 s, UGLMAT 59 s, FFT tight 68 s, GLMAT 81 s.
+- FFT tight pays up front, in the early iterations; GLMAT and UGLMAT pay every step, since a global solve costs more than a local one.
+- UGLMAT buys exact conservation for less than FFT tight; GLMAT costs the most and still leaks the most, since a global solve doesn't help IBM walls.
+- We only use GLMAT for FDS testing; users should choose UGLMAT: fewer unknowns (no solution inside obstacles) and no velocity errors.
 :::
 
 ## Example 4: Fire Plume {.ex4-input-slide}
@@ -566,6 +664,13 @@ How do the solvers compare predicting velocity profiles?
 
 :::
 
+::: {.notes}
+- Sandia 1 m methane pool fire, Test 14: 16 meshes of 48×48×32, 3 cm cells, 1.18 M cells, 20 s simulated.
+- Measured vertical and radial velocities at 0.3, 0.5 and 0.9 m above the pool.
+- Cluster runs, one input per solver; the reference runs let everyone plot the results. reference/ also has Example_4_FFT.sbatch, the Slurm script used to submit the FFT case on our cluster.
+- Unlike Examples 1–3, no solver is plainly wrong here: the question is cost.
+:::
+
 ## Example 4: Fire Plume {.ex4-iterations-slide}
 
 ::: {.slide-layout}
@@ -584,6 +689,12 @@ Run in **spark.el.nist.gov** Intel Cluster.
 
 :::
 
+::: {.notes}
+- Wall clock on 16 cores: FFT 2.2 h, UGLMAT HYPRE 5.4 h, ULMAT 7.2 h, FFT tight 7.5 h, UGLMAT PARDISO 11.7 h.
+- FFT tight (tolerance 1e-4) averages ~127 iterations per step; the UGLMAT runs one, at velocity error ~1e-15.
+- The UGLMAT runs use MAX_PRESSURE_ITERATIONS=1.
+:::
+
 ## Example 4: Fire Plume {.ex4-profiles-slide}
 
 ::: {.slide-layout}
@@ -600,4 +711,10 @@ Vertical and radial velocities at z=0.5m.
 Similar velocity profiles regardless of pressure solver employed.
 :::
 
+:::
+
+::: {.notes}
+- Profiles time-averaged from 10 s on, at z = 0.5 m, against Sandia's data.
+- All five solvers give practically the same profiles: in an open fire plume the pressure-solver errors don't matter.
+- So here the cheapest, default FFT is the right choice.
 :::

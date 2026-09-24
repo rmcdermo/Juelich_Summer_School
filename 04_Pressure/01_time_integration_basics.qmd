@@ -35,6 +35,13 @@ Heat transfer and soot deposition into a ceiling board. 2000 meshes.
 
 :::
 
+::: {.notes}
+- Why the pressure solver matters: meter-scale domains, millimeter cells, thousands of meshes, hundreds of millions of cells, potentially long run times.
+- Left: backdraft deflagration, 3408 meshes of 56×64×52 = 635 million cells; 2.5 mm in and just outside the compartment, 5 mm beyond.
+- Right: heat transfer and soot deposition into a ceiling board, 2000 meshes of 45×45×30 = 121.5 million cells.
+- Every time step of runs like these includes solving the pressure equation across all meshes: today's subject.
+:::
+
 ## Review of Low-Mach Equations of Fluid Motion {.lowmach-slide}
 
 ::: {.slide-layout}
@@ -74,6 +81,13 @@ pressure and density are decoupled (drop compressibility).
 
 :::
 
+::: {.notes}
+- M = flow speed / speed of sound. In fires ~10/340 m/s, so M ≈ 0.03.
+- Sound waves carry nothing we need, so we filter them out: the low Mach approximation.
+- Density can still vary strongly with temperature and composition, just not with pressure.
+- Payoff: the time step is set by the flow speed, not the sound speed.
+:::
+
 ## Review of Low-Mach Equations of Fluid Motion {.pressure-decomposition-slide}
 
 ::: {.slide-layout}
@@ -111,6 +125,13 @@ $$\frac{\partial \rho Y_{\alpha}}{\partial t}+\nabla\cdot\left(\rho Y_{\alpha}\m
 
 :::
 
+::: {.notes}
+- Pressure = background p̄(z,t) + small hydrodynamic perturbation p̃.
+- Only p̄ enters the equation of state: that is what decouples density from the flow's pressure.
+- p̄ carries stratification and, in sealed compartments, pressure rise over time (pressure zones).
+- Species: the usual advection–diffusion equation with a reaction source.
+:::
+
 ## Review of Low-Mach Equations of Fluid Motion {.momentum-slide}
 
 ::: {.slide-layout}
@@ -145,6 +166,12 @@ $$\frac{\partial \mathbf{u}}{\partial t}
 Head, we call it pressure too.
 :::
 
+:::
+
+::: {.notes}
+- Momentum with the perturbation, or hydrodynamic, pressure p̃ and buoyancy (ρ − ρ₀)g.
+- Two vector identities regroup it into F_A, F_B and ∇H.
+- The head H = p̃/ρ + |u|²/2, stagnation pressure over density, is the variable the pressure solver works with; we call it pressure too.
 :::
 
 ## Review of Low-Mach Equations of Fluid Motion {.grouping-forces-slide}
@@ -193,6 +220,13 @@ Head, we call it pressure too.
 
 :::
 
+::: {.notes}
+- Compact form: ∂u/∂t = −[F_A + F_B + ∇H].
+- F_A: advection (Lamb vector), buoyancy, viscous stress, all known from the current state.
+- F_B: baroclinic torque. It contains p̃, which ties it back to H (the pressure iteration, later).
+- That leaves H as the one unknown in the momentum equation. H has no evolution (time-derivative) equation; it acts more as a constraint, as we will see.
+:::
+
 ## Review of Low-Mach Equations of Fluid Motion {.divergence-slide}
 
 ::: {.slide-layout}
@@ -225,6 +259,13 @@ What does $\nabla\cdot\mathbf{u}$ mean?
 \* R. J. McDermott. *J. Comput. Phys.* **274**, pp. 413–431 (2014).
 :::
 
+:::
+
+::: {.notes}
+- The velocity divergence ∇·u can be factored from the energy equation (sensible enthalpy): heat release rate and transport define the expansion rate.
+- Not incompressible: ∇·u ≠ 0 wherever gas is heated or cooled.
+- Figure: expansion at the source (> 0), uniform flow (≈ 0), compression (< 0).
+- The velocity divergence is known at each step from thermodynamics; the velocity field has to match it.
 :::
 
 ## Review of Low-Mach Equations of Fluid Motion {.saddle-point-slide}
@@ -291,6 +332,13 @@ Fluid Dynamics*, Oxford Univ. Press.
 
 :::
 
+::: {.notes}
+- Momentum plus divergence constraint: a saddle-point problem. H is the Lagrange multiplier enforcing the constraint; the solution is a minimum in u and a maximum in H, like the center of a saddle.
+- Explicit predictor stage of FDS's 2-stage Runge–Kutta: the F terms at level n are known.
+- H is not: it must make u^(n+1) satisfy the constraint.
+- Next: fractional step, or projection methods for time integration turn this into a Poisson equation.
+:::
+
 ## Time integration: Pressure projection scheme {.poisson-for-h-slide}
 
 ::: {.slide-layout}
@@ -336,6 +384,13 @@ Poisson Equation:
 \+ Perot J. B., "An analysis of the Fractional step method," *J. Comput. Phys.* **108**(1), 51–58 (1993).
 :::
 
+:::
+
+::: {.notes}
+- Take the divergence of the discrete momentum equation and insert the constraint: we end up with a Poisson equation for H.
+- Elliptic: H at one point depends on the sources everywhere in the domain.
+- Separable operator, which is what makes fast (FFT) solvers possible later.
+- The most expensive part of the time step, and it needs boundary conditions for H.
 :::
 
 ## Time integration: Pressure projection scheme {.fractional-step-slide}
@@ -389,6 +444,13 @@ $$\mathbf{u}^{n+1}=\underbrace{\mathbf{u}^{n}-\Delta t\left[\mathbf{F}_{A}^{n}+\
 
 :::
 
+::: {.notes}
+- Per stage: forces, target divergence, baroclinic term, Poisson solve, projection.
+- Steps 1–3 are local and cheap; step 4 is the only global solve.
+- Step 5 corrects the intermediate velocity by −Δt∇H so it meets the constraint.
+- But there is a catch: F_B needs p̃, and p̃ comes from H.
+:::
+
 ## Time integration: Pressure projection scheme {.pressure-iteration-slide}
 
 ::: {.slide-layout}
@@ -421,7 +483,7 @@ Loop $k$
 :::
 
 ::: {.pi-e3a}
-$$\tilde{\boldsymbol{p}}^{k-1}=\rho\left(H^{k-1}-\frac{|\mathbf{u}|^{2}}{2}\right)$$
+$$\tilde{\boldsymbol{p}}^{k-1}=\rho\left(H^{k-1}-\frac{|\mathbf{u}^{n}|^{2}}{2}\right)$$
 :::
 
 ::: {.pi-e3b}
@@ -486,6 +548,13 @@ $$\nabla\cdot\left[\nabla\left(\frac{\tilde{\boldsymbol{p}}}{\rho}\right)-\tilde
 =\textcolor{red}{\nabla\cdot\left[\frac{1}{\rho}\nabla\tilde{\boldsymbol{p}}\right]}$$
 :::
 
+:::
+
+::: {.notes}
+- F_B needs p̃, p̃ needs H: iterate steps 3–4 in k.
+- Each pass recovers p̃ from the latest H, updates F_B and solves again.
+- Converged, the red terms combine into ∇·[(1/ρ)∇p̃]: the inseparable equation.
+- Inseparable accuracy from a separable solver; PRESSURE_TOLERANCE sets how far to iterate (Module II).
 :::
 
 ## Poisson equation: Spatial discretization {.structured-grids-slide}
@@ -591,6 +660,12 @@ $$u^{n+1}_{\mathrm{I,J}}=u^{n}_{\mathrm{I,J}}-\Delta t\left(F^{n}_{Ax,\mathrm{I,
 +\frac{H_{\mathrm{I+1,J}}-H_{\mathrm{I,J}}}{\Delta x}\right)$$
 :::
 
+:::
+
+::: {.notes}
+- Cartesian meshes: a cell is (I,J) in 2D, (I,J,K) in 3D.
+- Staggered (MAC) layout: H and ρ (scalar fields) at cell centers, velocity (vector field) components on the faces.
+- Velocity projection: the face velocity u(I,J) is updated with the H difference across that face (bottom right).
 :::
 
 ## Poisson equation: Spatial discretization {.fd-laplacian-slide}
@@ -700,6 +775,12 @@ $$\nabla^{2}H=\nabla\cdot\nabla H\cong
 
 :::
 
+::: {.notes}
+- Compact Laplacian: ∇·∇H in two steps — gradients on the faces, then their divergence at the center.
+- Each face gradient uses only the two cells sharing that face. It is a cell centered finite difference with 2nd order spatial accuracy in uniform grids.
+- So H at (I,J) couples only to its four neighbors in 2D in a 5 point stencil. 7 point stencil in 3D.
+:::
+
 ## Poisson equation: Spatial discretization {.stencil-slide}
 
 ::: {.slide-layout}
@@ -777,6 +858,12 @@ $h$
 $h$
 :::
 
+:::
+
+::: {.notes}
+- Uniform spacing h gives the 5-point stencil in 2D, 7-point in 3D.
+- Applied at each of the N cells, the PDE becomes the linear system A H = R.
+- N is the cell count, millions in real runs. Solving this accurately and fast is the rest of the lecture.
 :::
 
 ## Poisson equation: Spatial discretization {.discrete-system-slide}
@@ -870,6 +957,13 @@ Sparsity pattern for 6x6 grid.
 
 :::
 
+::: {.notes}
+- Discretization Matrix: one row per cell, −4 on the diagonal, 1 for each neighbor, times 1/h².
+- Symmetric and very sparse: at most 5 (2D) or 7 (3D) non-zeros per row.
+- Sparsity plot: bands at ±1 and ±N_x, come from the cell ordering.
+- Boundary conditions decide definiteness: all-Neumann leaves H defined only up to a constant.
+:::
+
 ## Poisson equation: Spatial discretization {.bc-dirichlet-slide}
 
 ::: {.slide-layout}
@@ -927,6 +1021,13 @@ Change in A diagonal entry.
 
 :::
 
+::: {.notes}
+- Boundary conditions enter through ghost cells just outside the mesh.
+- Dirichlet: H given on the boundary face, assumed to be the average of the ghost and internal values, H_bc = (H_ghost + H_internal)/2, so ghost = 2·H_bc − H_internal.
+- In the stencil the diagonal goes −4 → −5, and 2·H_bc moves to the right-hand side.
+- In FDS: OPEN boundaries.
+:::
+
 ## Poisson equation: Spatial discretization {.bc-neumann-slide}
 
 ::: {.slide-layout}
@@ -982,4 +1083,10 @@ Internal value
 Change in A diagonal entry.
 :::
 
+:::
+
+::: {.notes}
+- Neumann: the normal gradient of H is given, e.g. at solid walls where the normal velocity is known.
+- The boundary-face gradient is (H_internal − H_ghost)/Δx, so ghost = H_internal − Δx·∂H/∂x; the diagonal goes −4 → −3 and the gradient term moves to the right-hand side.
+- Neumann everywhere makes A singular: H is fixed only up to a constant.
 :::

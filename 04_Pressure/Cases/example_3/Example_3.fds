@@ -7,8 +7,9 @@
 ! Study input file:
 !   - Eight meshes, written as one &MESH and a &MULT that repeats it twice in
 !     each direction: 16^3 cells of 0.2 m, 6.4 m to a side.
-!   - The duct is built from thin plates -- each &OBST below has one dimension
-!     of zero thickness, so FDS makes it one cell thick. Trace the 1 m x 1 m
+!   - The duct is built from thin obstructions -- each &OBST below has one
+!     dimension of zero thickness, so FDS puts it on a cell face as a sheet
+!     with no cells of its own. Trace the 1 m x 1 m
 !     path: along +x low down, around to +y, back along -x, up the riser, and
 !     the same circuit again on the upper level.
 !   - Every leg of that path crosses an internal mesh boundary, at x, y or

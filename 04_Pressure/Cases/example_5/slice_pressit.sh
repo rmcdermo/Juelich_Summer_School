@@ -4,7 +4,7 @@
 #
 #   ./slice_pressit.sh [STEP]
 #
-# STEP defaults to 2500, the step the slide's figure is drawn from.
+# STEP defaults to 2462, the step the slide's figure is drawn from.
 #
 # The error figure needs one time step. The file it comes from holds every
 # pressure iteration of the whole run, which for the plain FFT variant is 2000
@@ -19,7 +19,7 @@
 set -e
 cd "$(dirname "$0")"
 
-STEP="${1:-2500}"
+STEP="${1:-2462}"
 
 shopt -s nullglob
 FILES=(results/*_pressit.csv)

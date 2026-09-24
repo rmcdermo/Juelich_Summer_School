@@ -11,9 +11,10 @@ again on the upper level. An `&HVAC` fan inside the duct drives 1 m³/s through
 it. Both ends of the duct, and all six domain boundaries, open into the room
 around it.
 
-The duct walls are thin plates — each `&OBST` has one dimension of zero
-thickness, so FDS makes it one cell thick. That is what the case is for: a
-one-cell wall is the hardest thing to hold flow inside, and how well the
+The duct walls are thin obstructions — each `&OBST` has one dimension of zero
+thickness, so FDS places it on a cell face as a sheet with no cells of its own
+(no `THICKEN_OBSTRUCTIONS` here). That is what the case is for: a wall a single
+face thick is the hardest thing to hold flow inside, and how well the
 pressure solver manages it is the difference between the five `&PRES` lines in
 `Example_3.fds`.
 
@@ -162,7 +163,7 @@ not, and writes PDFs to `plots/`.
 `flow` comes out as two figures, the local solvers and the global ones, as on
 the slide.
 
-The three figures are the ones on the slides, literally: slides 65, 66 and 67
+The three figures are the ones on the slides, literally: slides 68, 69 and 70
 show these PDFs' SVG twins. Remaking the slide artwork is
 
 ```bash
