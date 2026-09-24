@@ -308,14 +308,12 @@ Diluents include excess **fuel**, but not excess **air**.
 
 Extinction occurs when the available energy cannot reach the critical flame temperature:
 
-::: {.ext-green-box}
+::: {.ext-green-box .ext-criterion-box}
 $$
-\begin{aligned}
 m_{\mathrm F}h_{s,\mathrm F}(T_0)+m_{\mathrm A}h_{s,\mathrm A}(T_0)
-+m_{\mathrm D}h_{s,\mathrm D}(T_0)+Q\\[0.4em]
++m_{\mathrm D}h_{s,\mathrm D}(T_0)+Q
 < m_{\mathrm P}h_{s,\mathrm P}(T_{\mathrm{CFT}})
 +m_{\mathrm D}h_{s,\mathrm D}(T_{\mathrm{CFT}})
-\end{aligned}
 $$
 :::
 :::
