@@ -5935,6 +5935,12 @@
 .reveal .slides .ext-flamelet-equations > p:nth-child(odd) { color: #4472c4; }
 .reveal .slides .ext-flamelet-derivation { display: grid; gap: 30px; font-size: 1.02em; top: 140px; }
 .reveal .slides .ext-flamelet-result { align-items: center; gap: 65px; }
+.reveal .slides .ext-flamelet-result .ext-green-box {
+  width: max-content;
+  max-width: 100%;
+  justify-self: center;
+  padding: 14px 24px;
+}
 .reveal .slides .ext-flamelet-result .ext-panel > p + p { margin-top: 20px; font-size: .85em; }
 .reveal .slides .ext-damkohler { top: 340px; font-size: 1.7em; }
 .reveal .slides .ext-borghi { top: 135px; }
