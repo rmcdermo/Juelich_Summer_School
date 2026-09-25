@@ -10,6 +10,32 @@
 .reveal section div.center-h {
 	text-align: center;
 }
+
+/* Give default labels room while keeping the short alpha values compact. */
+.reveal .flux-limiter-schemes table {
+  width: 100%;
+}
+
+.reveal .flux-limiter-schemes th:first-child,
+.reveal .flux-limiter-schemes td:first-child {
+  width: 40%;
+  white-space: nowrap;
+}
+
+.reveal .flux-limiter-schemes th:nth-child(2),
+.reveal .flux-limiter-schemes td:nth-child(2) {
+  width: 34%;
+}
+
+.reveal .flux-limiter-schemes th:nth-child(3),
+.reveal .flux-limiter-schemes td:nth-child(3) {
+  width: 6%;
+}
+
+.reveal .flux-limiter-schemes th:nth-child(4),
+.reveal .flux-limiter-schemes td:nth-child(4) {
+  width: 20%;
+}
 /* Keep the slide title at the top and centre only the body vertically.
    Use as `## Title {.center-body}`. */
 .reveal .slides section.center-body {

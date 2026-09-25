@@ -154,7 +154,7 @@ $$
 \end{aligned}
 $$
 
-## Flux limiter
+## Flux limiter {.flux-limiter-schemes}
 
 The general representation of different limiter schemes can be expressed via the limiter function $B(r)$ with $r$ being the ratio of successive variations
 
@@ -170,9 +170,9 @@ $$
 |:--------------------|:------:|:--------:|---------------:|
 | central difference | 1 | loc | CENTRAL |
 | Godunov | 0 | loc | GUDONOV |
-| Superbee (*LES default) | max(0, min(2r,1), min(r,2)) | loc | SUPERBEE |
+| Superbee (VLES default) | max(0, min(2r,1), min(r,2)) | loc | SUPERBEE |
 | MINMOD | max(0, min(1,r)) | loc | MINMOD |
-| CHARM (DNS default) | $\left(3\frac{1}{r}+1\right) / \left(r(\frac{1}{r}+1)^2\right)$ | up | CHARM |
+| CHARM (LES and DNS default) | $\left(3\frac{1}{r}+1\right) / \left(r(\frac{1}{r}+1)^2\right)$ | up | CHARM |
 
 ## Example 6 -- Scalar transport with FDS
 
