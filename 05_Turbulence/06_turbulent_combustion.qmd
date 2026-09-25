@@ -166,7 +166,7 @@ $$
 
 :::: {.columns}
 ::: {.column width="30%"}
-![](./exercises/mixing_times/geometry.png){width="50%" fig-align="center"}
+![](./figs/turbulent_mixing_time_fire.png){.nostretch height="400" fig-align="center" fig-alt="Pool fire with visible flames and a rising smoke plume in the simulation domain."}
 :::
 ::: {.column width="70%"}
 $$A_{\text{fire}} = 1\,\mathrm{m} \times 1\,\mathrm{m}$$
@@ -175,7 +175,7 @@ $$\dot{Q}_{\text{max}} = 1512\,\mathrm{kW}$$
 
 Heskestad flame height $L_f$ (50% visible flame intermittency)
 $$
-L_f = 0.235\cdot \dot{Q}^{2/5} - 1.02\cdot D
+L_f = 0.235\,\dot{Q}^{2/5} - 1.02\,D
 $$
 :::
 ::::
