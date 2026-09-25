@@ -12,8 +12,6 @@ Source: [YouTube](https://youtu.be/e1TbkLIDWys?feature=shared)
 
 ## Viscous Scales
 
-Note: adjust consistent writing, e.g. $u$ vs. $v$
-
 In the region near the wall, the shear stress is only due to the viscous part:
 
 $$
@@ -32,15 +30,30 @@ $$
 \delta_\nu \equiv \nu \sqrt{\frac{\rho}{\tau_w}} = \frac{\nu}{u_\tau}
 $$
 
-## Scaling
+## Scaling {.wall-scaling}
 
-Based on the viscous sclaes, velocity and distance is scaled as
+:::: {.columns}
+::: {.column width="32%"}
+
+Based on the viscous scales, velocity and distance are scaled as
 
 $$
-u^+ \equiv \frac{\langle u \rangle}{u_\tau} \quad \text{and} \quad y^+ \equiv \frac{y}{\delta_\nu}
+u^+ \equiv \frac{\langle u \rangle}{u_\tau}
 $$
 
-Note: add plot with $u^+$ as a function of $y^+$
+$$
+y^+ \equiv \frac{y}{\delta_\nu}
+$$
+
+:::
+::: {.column width="68%"}
+
+```{=html}
+{{< include ./figs/log_law.svg >}}
+```
+
+:::
+::::
 
 ## $u^+$ vs $y^+$
 
