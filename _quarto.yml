@@ -1,0 +1,16 @@
+project:
+  type: default
+  output-dir: _site
+  render:
+    - index.qmd
+    - 01_Governing_Equations/governing_equations.qmd
+    - 03_CFD/cfd.qmd
+    - 04_Pressure/pressure.qmd
+    - 05_Turbulence/turbulence.qmd
+    - 08_Combustion/combustion.qmd
+  # Quarto does not automatically copy images referenced only by video posters.
+  resources:
+    - 04_Pressure/Section_1_assets/compartment-oxygen-deflagration-poster.png
+    - 04_Pressure/Section_1_assets/slide-004-media-01.png
+    - 08_Combustion/figs/thermochemistry/fire-tests-real-materials-poster.png
+    - 08_Combustion/figs/thermochemistry/umd-line-burner-poster.png

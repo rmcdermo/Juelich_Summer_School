@@ -35,3 +35,7 @@
 # Python bytecode from importing the case eval.py scripts as modules
 __pycache__/
 *.pyc
+
+# Quarto project cache and rendered website
+/.quarto/
+/_site/

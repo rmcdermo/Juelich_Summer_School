@@ -1,0 +1,26 @@
+---
+title: "Jülich Summer School on Fire Dynamics Modeling"
+format:
+  html:
+    theme: cosmo
+    toc: false
+    lang: en
+---
+
+## Talks
+
+Open a talk to view the slides in your browser. Use the arrow keys to move
+between slides, and press **Esc** for the slide overview.
+
+1. [Governing Equations](01_Governing_Equations/governing_equations.html)
+2. [Computational Fluid Dynamics](03_CFD/cfd.html)
+3. [FDS Fluid Solver: Pressure](04_Pressure/pressure.html)
+4. [Turbulence in Fire — Phenomena, Equations and Models](05_Turbulence/turbulence.html)
+5. [(Turbulent) Combustion](08_Combustion/combustion.html)
+
+## Course materials
+
+Exercises, input files, lecture sources, and materials for other topics are
+available in the [GitHub repository](https://github.com/rmcdermo/Juelich_Summer_School).
+
+[About the summer school](https://www.fz-juelich.de/en/ias/ias-7/research-1/divisions/fire-dynamics/intro/3rd-summer-school-on-fire-dynamics-modeling-2022)

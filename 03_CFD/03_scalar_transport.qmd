@@ -176,7 +176,7 @@ $$
 
 ## Example 6 -- Scalar transport with FDS
 
-**Input directory**: [06_fds_flux_limiter](./exercises/06_fds_flux_limiter)
+**Input directory**: [06_fds_flux_limiter](https://github.com/rmcdermo/Juelich_Summer_School/tree/main/03_CFD/exercises/06_fds_flux_limiter)
 
 **Input file**: [move_slug.fds](./exercises/06_fds_flux_limiter/move_slug.fds)
 
