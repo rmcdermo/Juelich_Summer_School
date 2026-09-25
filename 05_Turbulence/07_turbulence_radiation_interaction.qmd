@@ -3,7 +3,7 @@
 ## Radiation Source Term
 
 $$
--\overline{\nabla\cdot\mathbf{\dot{q}^{''}}_r}
+-\overline{\nabla\cdot\dot{\mathbf{q}}_r^{\prime\prime}}
 =\int_{0}^{\infty} \left(\overline{\kappa_\eta U_\eta }-\overline{4\pi\kappa_{\eta}I_{b\eta}} \right) \mbox{d} \eta
 $$
 
@@ -58,5 +58,4 @@ See Rashidzadeh et al. (FISJ 2023) for details.
 - TRI is very much still a research problem
 - In practice, we still rely on prescribing a radiant fraction, but this is may not be sufficient locally, which is important for fire growth and flame spread prediction
 - In practice, "gray gas" models are usually used for the absorption coefficient and RADCAL, for example, requires a path length, which is user specified.  Unfortunately, the sensitivity to path length is on the same order as the effects of TRI with varying grid resolution (temperature and species resolution).  Hence, it is very difficult to separate the effects of TRI and models for $\kappa$
-
 
