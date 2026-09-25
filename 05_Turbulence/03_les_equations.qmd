@@ -47,7 +47,7 @@ is needed, when density is not constant, as otherwise conservation properties ma
 
 The following three cell field for $u$ and $\rho$ is given:
 
-| $\sf{Cell\ ID}$ | $\rho \,/\, (\sf{kg/m^3})$ | $u \,/\, (\sf{m/s})$ |
+| $\sf{Cell\ ID}$ | $\rho \, (\sf{kg/m^3})$ | $u \, (\sf{m/s})$ |
 | ---- | --------------- | --------- |
 | 1    | 1.0             | 10.0      |
 | 2    | 10.0            | 1.0       |
