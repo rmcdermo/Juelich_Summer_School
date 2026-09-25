@@ -30,34 +30,15 @@ $$
 \delta_\nu \equiv \nu \sqrt{\frac{\rho}{\tau_w}} = \frac{\nu}{u_\tau}
 $$
 
-## Scaling {.wall-scaling}
-
-:::: {.columns}
-::: {.column width="32%"}
+## Scaling
 
 Based on the viscous scales, velocity and distance are scaled as
 
 $$
-u^+ \equiv \frac{\langle u \rangle}{u_\tau}
+u^+ \equiv \frac{\langle u \rangle}{u_\tau} \quad \text{and} \quad y^+ \equiv \frac{y}{\delta_\nu}
 $$
 
-$$
-y^+ \equiv \frac{y}{\delta_\nu}
-$$
-
-:::
-::: {.column width="68%"}
-
-```{=html}
-{{< include ./figs/log_law.svg >}}
-```
-
-:::
-::::
-
-## $u^+$ vs $y^+$
-
-![](./figs/Boundary-Layer_u_vs_y.png)
+![](./figs/Boundary-Layer_u_vs_y.png){.nostretch height="360" fig-align="center" fig-alt="Dimensionless mean velocity u+ as a function of wall distance y+, showing the viscous, buffer, logarithmic, and outer regions."}
 
 ## Law of the Wall
 
@@ -116,32 +97,32 @@ with $B_2=8.5$ and $\tilde{B}_{\text{max}} = 9.5$.
 The Prandtl number (Pr) is defined as the ratio of momentum to thermal diffussivity ($\alpha$): 
 
 $$
-Pr = \frac{\nu}{\alpha} = \frac{c_p\, \mu}{k} \quad \text{with} \quad \alpha = \frac{k}{c_p \rho}
+\mathrm{Pr} = \frac{\nu}{\alpha} = \frac{c_p\, \mu}{k} \quad \text{with} \quad \alpha = \frac{k}{c_p \rho}
 $$
 
 with the thermal conductivity $k$.
 
 Regimes:
 
-- $Pr \ll 1$, e.g. liquid metals, thermal diffusivity dominates
-- $Pr \approx \mathcal{O}(1)$, e.g. gases, balance of both processes
-- $Pr \gg 1$, e.g. oils, thermal diffusivity is negligible
+- $\mathrm{Pr} \ll 1$, e.g. liquid metals, thermal diffusivity dominates
+- $\mathrm{Pr} \approx \mathcal{O}(1)$, e.g. gases, balance of both processes
+- $\mathrm{Pr} \gg 1$, e.g. oils, thermal diffusivity is negligible
 
 ## Boundary Layer Thickness
 
-Boundary layer thickness for the velocity $\delta_v(x)$ can be estimated with $Re_x = u_0\, x / \nu$ by: 
+Boundary layer thickness for the velocity $\delta_v(x)$ can be estimated with $\mathrm{Re}_x = u_0\, x / \nu$ by:
 
 $$
-\delta_v(x)_{\text{laminar}} \approx 5.0 \cdot x \cdot Re_x^{-\frac{1}{2}}
+\delta_v(x)_{\text{laminar}} \approx 5.0 \cdot x \cdot \mathrm{Re}_x^{-\frac{1}{2}}
 $$
 $$
-\delta_v(x)_{\text{turbulent}} \approx 0.37 \cdot x \cdot Re_x^{-\frac{1}{5}}
+\delta_v(x)_{\text{turbulent}} \approx 0.37 \cdot x \cdot \mathrm{Re}_x^{-\frac{1}{5}}
 $$ 
 
 Using Pr, the thermal boundary thickness can be related to the velocity in a laminar flow:
 
 $$
-\delta_T(x)_{\text{laminar}} = \delta_v(x)_{\text{laminar}} \cdot Pr_x^{-\frac{1}{3}}
+\delta_T(x)_{\text{laminar}} = \delta_v(x)_{\text{laminar}} \cdot \mathrm{Pr}_x^{-\frac{1}{3}}
 $$
 
 In the tublulent case, the thermal boundary thickness does not depend on the thermal diffusion, but only on the flow properties (Re):
@@ -176,7 +157,7 @@ $$
 This coefficient can be estimated with the Nusselt number (Nu) by
 
 $$
-h = \frac{k}{L} \max \left( \text{Nu}_{\text{free}}, \text{Nu}_{\text{forced}}\right)
+h = \frac{k}{L} \max \left( \mathrm{Nu}_{\text{free}}, \mathrm{Nu}_{\text{forced}}\right)
 $$
 
 In FDS, the characteristic length is chosen as $L=1 m$.
@@ -186,15 +167,15 @@ In FDS, the characteristic length is chosen as $L=1 m$.
 The Nusselt number (Nu) is the ratio of the total heat transfer to the conductive heat transfer at a boundary. For various configurations, follwoing correlations for the free flow: 
 
 $$
-\text{Nu}_{\text{free}} = 
+\mathrm{Nu}_{\text{free}} =
 \left\{
 \begin{array}{ll}
-\left( 0.825 + 0.324 \, \text{Ra}^{1/6} \right)^2 & \text{Vertical plate or cylinder} \\
-0.54 \, \text{Ra}^{1/4} & \text{Horizontal hot plate facing up, } Ra \leq 10^7 \\
-0.15 \, \text{Ra}^{1/3} & \text{Horizontal hot plate facing up, } Ra > 10^7 \\
-0.52 \, \text{Ra}^{1/5} & \text{Horizontal hot plate facing down} \\
-\left( 0.60 + 0.321 \, \text{Ra}^{1/6} \right)^2 & \text{Horizontal cylinder} \\
-2 + 0.454 \, \text{Ra}^{1/4} & \text{Sphere}
+\left( 0.825 + 0.324 \, \mathrm{Ra}^{1/6} \right)^2 & \text{Vertical plate or cylinder} \\
+0.54 \, \mathrm{Ra}^{1/4} & \text{Horizontal hot plate facing up, } \mathrm{Ra} \leq 10^7 \\
+0.15 \, \mathrm{Ra}^{1/3} & \text{Horizontal hot plate facing up, } \mathrm{Ra} > 10^7 \\
+0.52 \, \mathrm{Ra}^{1/5} & \text{Horizontal hot plate facing down} \\
+\left( 0.60 + 0.321 \, \mathrm{Ra}^{1/6} \right)^2 & \text{Horizontal cylinder} \\
+2 + 0.454 \, \mathrm{Ra}^{1/4} & \text{Sphere}
 \end{array}
 \right.
 $$
@@ -202,7 +183,7 @@ $$
 With the Rayleigh number (Ra) defined as 
 
 $$
-\text{Ra} = \frac{2g \left| T_g - T_w \right| L^3}{(T_g + T_w) \nu \alpha}
+\mathrm{Ra} = \frac{2g \left| T_g - T_w \right| L^3}{(T_g + T_w) \nu \alpha}
 $$
 
 ## Nusselt Number (Nu) -- Forced Flow
@@ -210,7 +191,7 @@ $$
 In case of a forced flow, the Nusselt number is a function of Re and Pr:
 
 $$
-\text{Nu}_{\text{forced}} = C_0 + \left( C_1 \text{Re}^n - C_2 \right) \text{Pr}^{\frac{1}{3}}
+\mathrm{Nu}_{\text{forced}} = C_0 + \left( C_1 \mathrm{Re}^n - C_2 \right) \mathrm{Pr}^{\frac{1}{3}}
 $$
 
 With the coefficients $C_0$, $C_1$, $C_2$ and $n$ depending on the geometry and Re.
@@ -226,13 +207,13 @@ $$
 The used model for $T^+$ as a function of $y^+$ is
 
 $$ 
-T^+ = Pr\, y^+ \quad \text{for}\quad y^+ \leq 11.81
+T^+ = \mathrm{Pr}\, y^+ \quad \text{for}\quad y^+ \leq 11.81
 $$
 
 and
 
 $$ 
-T^+ = \frac{Pr_t}{\kappa}\ln(y^+) + B_T(Pr) \quad \text{with} \quad \text{for}\quad y^+ \leq 11.81
+T^+ = \frac{\mathrm{Pr}_t}{\kappa}\ln(y^+) + B_T(\mathrm{Pr}) \quad \text{with} \quad \text{for}\quad y^+ \leq 11.81
 $$
 
 ## Near-wall Model for Heat Transfer Coefficient

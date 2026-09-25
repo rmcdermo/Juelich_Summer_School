@@ -12,7 +12,7 @@
 
 The Reynolds number (Re) is the ratio of inertial to viscous forces in a fluid (element). 
 
-$$ \text{Re} = \frac{vL}{\nu} = \frac{\rho v L}{\mu} $$
+$$ \mathrm{Re} = \frac{vL}{\nu} = \frac{\rho v L}{\mu} $$
 
 With: 
 
@@ -77,19 +77,19 @@ $$
 $$
 
 $$
-Re = \frac{v\, L}{\nu} = \frac{v_0\, H_O}{\nu} = \frac{5\cdot 10^{-3}}{\nu} = 416
+\mathrm{Re} = \frac{v\, L}{\nu} = \frac{v_0\, H_O}{\nu} = \frac{5\cdot 10^{-3}}{\nu} = 416
 $$
 
 $$
-\nu = 12\cdot 10^{-6} \Rightarrow Re \approx 416
+\nu = 12\cdot 10^{-6} \Rightarrow \mathrm{Re} \approx 416
 $$
 
 $$
-\nu = 12\cdot 10^{-5} \Rightarrow Re \approx 42
+\nu = 12\cdot 10^{-5} \Rightarrow \mathrm{Re} \approx 42
 $$
 
 $$
-\nu = 6\cdot 10^{-6} \Rightarrow Re \approx 4160
+\nu = 6\cdot 10^{-6} \Rightarrow \mathrm{Re} \approx 4160
 $$
 
 ## Exercise -- Results
@@ -187,16 +187,16 @@ $$
 with 
 
 $$
-Re = \frac{U\, L}{\nu} \Leftrightarrow \frac{\nu}{U} = \frac{L}{Re}
+\mathrm{Re} = \frac{U\, L}{\nu} \Leftrightarrow \frac{\nu}{U} = \frac{L}{\mathrm{Re}}
 $$
 
 leads to
 
 $$
-\eta = \left( L \frac{L^3}{Re^3} \right)^{1/4} = L\, Re^{-3/4}
+\eta = \left( L \frac{L^3}{\mathrm{Re}^3} \right)^{1/4} = L\, \mathrm{Re}^{-3/4}
 $$
 
-With $Re = 10^5$ and $L=1\ m$, the Kolmogorov length scale is $\eta \approx 0.2\ mm$. This is the length scale, which needs to be resolved to capture the dissipation scale. 
+With $\mathrm{Re} = 10^5$ and $L=1\ m$, the Kolmogorov length scale is $\eta \approx 0.2\ mm$. This is the length scale, which needs to be resolved to capture the dissipation scale.
 
 ## DNS -- Direct Numerical Simulation
 

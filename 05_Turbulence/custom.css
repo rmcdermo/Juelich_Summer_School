@@ -10,15 +10,3 @@
 .reveal section div.center-h {
 	text-align: center;
 }
-
-/* Keep the wall-law figure tall and paint its SVG paths directly on the slide. */
-.reveal .wall-scaling .columns {
-  align-items: center;
-}
-
-.reveal .wall-scaling .column > svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 540px;
-}
