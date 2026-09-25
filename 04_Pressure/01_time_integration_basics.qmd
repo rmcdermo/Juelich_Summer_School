@@ -18,11 +18,11 @@ Poisson equation: Spatial discretization.
 :::
 
 ::: {.m-fig-l}
-![](Section_1_assets/video/compartment-oxygen-deflagration.mp4){controls="true" playsinline="true" preload="metadata" poster="Section_1_assets/compartment-oxygen-deflagration-poster.png" fig-alt="Volume rendering of oxygen concentration showing deflagration in a hot scaled compartment, 3408 meshes."}
+![](https://github.com/rmcdermo/Juelich_Summer_School/releases/download/2026/compartment-oxygen-deflagration.mp4){controls="true" playsinline="true" preload="metadata" poster="Section_1_assets/compartment-oxygen-deflagration-poster.png" fig-alt="Volume rendering of oxygen concentration showing deflagration in a hot scaled compartment, 3408 meshes."}
 :::
 
 ::: {.m-fig-r}
-![](Section_1_assets/video/ceiling-board-heat-soot.mp4){controls="true" playsinline="true" preload="metadata" poster="Section_1_assets/slide-004-media-01.png" fig-alt="Simulation of heat transfer and soot deposition into a ceiling board, 2000 meshes."}
+![](https://github.com/rmcdermo/Juelich_Summer_School/releases/download/2026/ceiling-board-heat-soot.mp4){controls="true" playsinline="true" preload="metadata" poster="Section_1_assets/slide-004-media-01.png" fig-alt="Simulation of heat transfer and soot deposition into a ceiling board, 2000 meshes."}
 :::
 
 ::: {.m-cap-l .caption}
