@@ -311,4 +311,4 @@ $$
 
 - The advection of scalar values is a generally challenging topic.
 - Limiting the flux, via TVD schemes like upwind or Superbee schemes, allows for stable solutions.
-- Still, fluctuations in density enforce correction methods.
+- Still, fluctuations in density require correction methods.
