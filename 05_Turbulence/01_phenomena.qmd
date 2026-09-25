@@ -47,8 +47,8 @@ In fire dynamics:
 :::
 ::::
 
-- Compartment size: $735\ \text{mm} \times 575\ \text{mm} \times 65\ \text{mm}$
-- Heating block size: $60\ \text{mm} \times 60\ \text{mm} \times 40\ \text{mm}$
+- Compartment size: $735\,\mathrm{mm} \times 575\,\mathrm{mm} \times 65\,\mathrm{mm}$
+- Heating block size: $60\,\mathrm{mm} \times 60\,\mathrm{mm} \times 40\,\mathrm{mm}$
 - Four heating rates
 
 ## Example -- PIV Instantanious Velocity Field

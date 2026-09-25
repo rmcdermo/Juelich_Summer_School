@@ -403,6 +403,41 @@ $E(k)$
 Files: `08_Combustion/examples/kolmogorov_spectrum_example/`
 :::
 
+::: {.notes}
+Solution: hold the dissipation rate $\varepsilon$ fixed while varying the filter width $\Delta$.
+
+The shortest resolved wavelength is $2\Delta$, so the grid Nyquist wavenumber is
+
+$$
+k_{\mathrm{Nq}} = \frac{2\pi}{2\Delta} = \frac{\pi}{\Delta}.
+$$
+
+Using the model inertial-range spectrum, integrate the unresolved kinetic energy above this cutoff:
+
+$$
+\begin{aligned}
+k_{\mathrm{sgs}}
+&\approx \int_{k_{\mathrm{Nq}}}^{\infty} E(k)\,\mathrm{d}k \\
+&= C_K\varepsilon^{2/3}\int_{\pi/\Delta}^{\infty} k^{-5/3}\,\mathrm{d}k \\
+&= -\frac{3}{2}C_K\varepsilon^{2/3}
+   \left[k^{-2/3}\right]_{\pi/\Delta}^{\infty} \\
+&= \frac{3}{2}C_K\varepsilon^{2/3}
+   \left(\frac{\Delta}{\pi}\right)^{2/3}
+\propto \Delta^{2/3}.
+\end{aligned}
+$$
+
+Substitute into the turbulent mixing-time estimate:
+
+$$
+\tau_u \sim \frac{\Delta}{\sqrt{k_{\mathrm{sgs}}}}
+\propto \frac{\Delta}{\varepsilon^{1/3}\Delta^{1/3}}
+= \varepsilon^{-1/3}\Delta^{2/3}.
+$$
+
+Thus, at fixed $\varepsilon$, $\tau_u \sim \Delta^{2/3}$. This scaling assumes that the grid cutoff lies in the inertial range; extending the model spectrum to infinity approximates the unresolved spectral integral.
+:::
+
 ## Limiting Case: Initially Completely Mixed, Infinitely Fast Kinetics {#limiting-case-initially-mixed .initially-mixed-slide}
 
 ::: {.initially-mixed-layout}

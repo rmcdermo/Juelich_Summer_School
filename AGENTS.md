@@ -1,3 +1,5 @@
+KEEP IT SIMPLE STUPID
+
 # Repository instructions
 
 ## Git staging

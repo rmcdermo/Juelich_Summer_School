@@ -16,10 +16,10 @@ $$ \mathrm{Re} = \frac{vL}{\nu} = \frac{\rho v L}{\mu} $$
 
 With: 
 
-- the fluid density $\rho$, in $\sf kg/m^3$
-- the flow velocity $v$, in $\sf m/s$
-- a characteristic length scale $L$, in $\sf m$
-- the dynamic $\mu$ and kinematic $\nu$ viscosity of the fluid, in $\sf kg/(m\,s)$ and $\sf m^2/s$
+- the fluid density $\rho$, in $\mathrm{kg/m^3}$
+- the flow velocity $v$, in $\mathrm{m/s}$
+- a characteristic length scale $L$, in $\mathrm{m}$
+- the dynamic $\mu$ and kinematic $\nu$ viscosity of the fluid, in $\mathrm{kg/(m\,s)}$ and $\mathrm{m^2/s}$
 
 ## Turbulence Characterisation with Re
 
@@ -65,15 +65,15 @@ The simulation geometry is a 2D domain with a main object (plate) and a small ob
 ## Exercise -- Results
 
 $$
-v_0 = \sf{0.5\ m/s}
+v_0 = 0.5\,\mathrm{m/s}
 $$
 
 $$
-H_O = \sf{0.01\ m}
+H_O = 0.01\,\mathrm{m}
 $$
 
 $$
-\nu = \sf{1.2\cdot 10^{-5}\ m^2/s}
+\nu = 1.2\cdot 10^{-5}\,\mathrm{m^2/s}
 $$
 
 $$
@@ -196,7 +196,7 @@ $$
 \eta = \left( L \frac{L^3}{\mathrm{Re}^3} \right)^{1/4} = L\, \mathrm{Re}^{-3/4}
 $$
 
-With $\mathrm{Re} = 10^5$ and $L=1\ m$, the Kolmogorov length scale is $\eta \approx 0.2\ mm$. This is the length scale, which needs to be resolved to capture the dissipation scale.
+With $\mathrm{Re} = 10^5$ and $L=1\,\mathrm{m}$, the Kolmogorov length scale is $\eta \approx 0.2\,\mathrm{mm}$. This is the length scale, which needs to be resolved to capture the dissipation scale.
 
 ## DNS -- Direct Numerical Simulation
 

@@ -70,10 +70,10 @@ The Deardorff constant $C_{\nu}$ is set to 0.1, based on literature.
 $$
 \begin{align}
 n &= 32 \\
-L &= 0.56549\ m \\
-k_0 &= \frac{2\pi}{L} = 11.11\ m^{-1}\\
+L &= 0.56549\,\mathrm{m} \\
+k_0 &= \frac{2\pi}{L} = 11.11\,\mathrm{m}^{-1}\\
 k_{\text{Nq}} &= \frac{2\pi}{\lambda_\text{min}} = \frac{2\pi}{2\Delta}\\
-&= \frac{k_0 \cdot n}{2} = 177.77\ m^{-1}
+&= \frac{k_0 \cdot n}{2} = 177.77\,\mathrm{m}^{-1}
 \end{align}
 $$
 :::

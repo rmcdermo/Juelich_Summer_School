@@ -160,7 +160,7 @@ $$
 h = \frac{k}{L} \max \left( \mathrm{Nu}_{\text{free}}, \mathrm{Nu}_{\text{forced}}\right)
 $$
 
-In FDS, the characteristic length is chosen as $L=1 m$.
+In FDS, the characteristic length is chosen as $L=1\,\mathrm{m}$.
 
 ## Nusselt Number (Nu) -- Free Flow
 

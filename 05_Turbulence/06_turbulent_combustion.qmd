@@ -113,15 +113,11 @@ $$
 :::
 ::::
 
-## Exercise -- Estimate $\tau_\text{u}$
+## Exercise -- Estimate $\tau_u$ {#exercise-estimate-tau_textu}
 
-Estimate $\tau_\text{u}$ using the model inertial energy spectrum to derive the following scaling law:
+Use the model inertial energy spectrum to determine how $\tau_u$ scales with the filter width $\Delta$.
 
-$$
-\tau_\text{u} \sim \Delta ^ {2/3}
-$$
-
-Use the inertial range engery spectrum:
+Use the inertial range energy spectrum:
 
 $$
 E(k) \sim k^{-5/3}
@@ -134,6 +130,8 @@ $$
 $$
 
 Hint: Use the Nyquist wave number for the filter width $\Delta$, as the start of the unresolved sub-grid scale.
+
+::: {.content-hidden}
 
 ## Exercise -- Result
 
@@ -160,6 +158,8 @@ $$
 = \Delta^{2/3}
 $$
 
+:::
+
 ## Exercise -- Turbulent Mixing Time
 
 **Description**: In a simple pool fire, the impact of the turbulent mixing time $\tau_{\text{mix}}$ on the flame height shall be investigated.
@@ -169,9 +169,9 @@ $$
 ![](./exercises/mixing_times/geometry.png){width="50%" fig-align="center"}
 :::
 ::: {.column width="70%"}
-$$A_{\text{fire}} = 1\ m \times 1\ m$$
+$$A_{\text{fire}} = 1\,\mathrm{m} \times 1\,\mathrm{m}$$
 
-$$\dot{Q}_{\text{max}} = 1512\ kW$$
+$$\dot{Q}_{\text{max}} = 1512\,\mathrm{kW}$$
 
 Heskestad flame height $L_f$ (50% visible flame intermittency)
 $$
