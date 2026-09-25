@@ -1,0 +1,20 @@
+#!/bin/bash -x
+# job name
+#SBATCH --job-name=FDS_bench_#NTASKS#
+
+# budget account where contingent is taken from
+#SBATCH --account=training2424
+
+# number of MPI processes
+#SBATCH --ntasks=#NTASKS#
+
+# wall clock time for the job hh:mm:ss
+#SBATCH --time=00:30:00
+
+# chose JURECA partition, here the CPU part
+#SBATCH --partition=dc-cpu
+
+
+module use -a /p/project1/cias-7/modules_fire
+module load FDS/6.9.1-IntelCompiler_2023.2.1_IntelMPI_2021.10.0
+srun fds pool.fds

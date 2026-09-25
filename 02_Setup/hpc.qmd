@@ -1,0 +1,31 @@
+---
+title: "High Performance Computing"
+subtitle: "Summer School on Fire Dynamics Modeling"
+format: 
+  revealjs:
+    slide-number: "c"
+    css: custom.css
+    margin: 0.075
+    smaller: true
+    html-math-method: 
+      method: mathjax
+      url: https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+editor: visual
+author:
+  - name: "Lukas Arnold"
+    id: la
+    orcid: 0000-0002-5939-8995
+    email: l.arnold@fz-juelich.de
+    affiliation: 
+      - name: Forschungszentrum Jülich & <br>University of Wuppertal
+footer: "High Performance Computing"
+
+---
+
+{{< include 01_hardware.qmd >}}
+
+{{< include 02_parallel_execution.qmd >}}
+
+{{< include 03_software.qmd >}}
+
+{{< include 04_scaling.qmd >}}

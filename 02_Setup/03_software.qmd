@@ -1,0 +1,101 @@
+# Software
+
+## Modules
+
+On modern (HPC) computer systems with a multitude of users, multiple versions of software must be provided.
+The module environment is able to provide an easy way to have parallel installations without interaction.
+Some common module commands are: 
+
+- `module avail`: list all available modules
+- `module load`: load a module
+- `module unload / purge`: unload target module / all modules
+
+On JURECA, in order to be able to use the FDS module, you have to use a custom module path. To include it into
+your environment use:
+
+```
+module use -a /p/project1/cias-7/modules_fire
+```
+
+To load FDS, use e.g.:
+```
+module load FDS/6.9.1-IntelCompiler_2023.2.1_IntelMPI_2021.10.0
+```
+
+## Example 02 -- FDS Module
+
+- Add the custom module path to your environment.
+- Load the FDS module and call FDS via `fds`. 
+- The output should show you something like:
+```
+arnold1@jrlogin09:~/Summer_School_2024/
+> fds
+
+ Fire Dynamics Simulator
+
+ Current Date     : June 22, 2024  13:10:03
+ Revision         : FDS-6.9.1-406-g92be8e5-master
+ Revision Date    : Mon Jun 17 14:52:57 2024 -0500
+ Compiler         : Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.10.0 Build 20230609_000000
+ Compilation Date : Jun 19, 2024 11:16:05
+
+
+ MPI version: 3.1
+ MPI library version: Intel(R) MPI Library 2021.10 for Linux* OS
+
+ Consult FDS Users Guide Chapter, Running FDS, for further instructions.
+```
+
+- *Optional*: Add the `module use` command to your `~/.bashrc` file.
+
+## Submission System -- General Idea
+
+
+The batch system manages the user requests and the available resources. A typical procedure is as follows:
+
+1. the user prepares the environment for a job
+1. the user defines the resources needed to run a job (wall-clock time, number of nodes)
+1. the user submits the job definition
+1. the batch system checks continuously if the requested resources are free
+1. if the requested resources are available, the batch system executes the job according the the job definition
+
+## SLURM Job Files
+
+```
+#!/bin/bash -x
+# budget account where contingent is taken from
+#SBATCH --account=training2424
+
+# number of MPI processes
+#SBATCH --ntasks=1
+
+# wall clock time for the job hh:mm:ss
+#SBATCH --time=00:30:00
+
+# chose JURECA partition, here the CPU part
+#SBATCH --partition=dc-cpu
+
+module use -a /p/project1/cias-7/modules_fire
+module load FDS/6.9.1-IntelCompiler_2023.2.1_IntelMPI_2021.10.0
+
+srun fds pool.fds
+```
+
+## SLURM Commands
+
+To submit and monitor jobs the following commands are used: 
+
+- `sbatch`: submit a job
+- `scancel`: chancel a job
+- `squeue`: show the job queues
+
+In addition, it is possible to define job chains, i.e. dependant jobs which will run in sequence.
+
+## Example 3 -- Submit your first Job
+
+- Create a directory, where FDS shall be executed.
+- Copy the FDS input file [03_first_job.fds](./exercises_hpc/03_first_job/03_first_job.fds) and the SLURM job file [03_jureca.job](./exercises_hpc/03_first_job/03_jureca.job) to that directory.
+- Adjust the job file to make use of 4 cores.
+- Submit your job with the `sbatch 03_jureca.job` command.
+- Watch the status of your job with `squeue -u $USER`.
+- Check the output.
