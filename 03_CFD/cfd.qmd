@@ -17,7 +17,7 @@ author:
     email: l.arnold@fz-juelich.de
     affiliation: 
       - name: Forschungszentrum Jülich & <br>University of Wuppertal
-footer: "Computational Fluid Dynamics"
+footer: "[Home](../index.html) · Computational Fluid Dynamics"
 
 ---
 

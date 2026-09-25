@@ -31,7 +31,7 @@ author:
     email: randall.mcdermott@nist.gov
     affiliation: 
       - name: National Institute of <br> Standards and Technology
-footer: "Turbulence in Fire"
+footer: "[Home](../index.html) · Turbulence in Fire"
 
 ---
 
