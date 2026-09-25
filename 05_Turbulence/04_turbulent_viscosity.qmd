@@ -34,7 +34,7 @@ This model was default in old versions of FDS.
 This is the current default model in FDS. It computes the turbulent viscosity as 
 
 $$
-\mu_{\mathrm{t}} = \rho\, C_{V} \Delta \sqrt{k_{\mathrm{sgs}}}
+\mu_{\mathrm{t}} = \rho\, C_{\nu} \Delta \sqrt{k_{\mathrm{sgs}}}
 $$
 
 using the following approximation for $k_{\mathrm{sgs}}$
@@ -55,7 +55,7 @@ And a weighted averaged velocity $\hat{\bar{u}}$ at the test filter length scale
 \hat{\bar{u}}_{ijk} = \frac{\bar{u}_{ijk}}{2} + \frac{\bar{u}_{i-1,jk} + \bar{u}_{i+1,jk}}{4}
 $$ -->
 
-The Deardorff constant $C_V$ is set to 0.1, based on literature.
+The Deardorff constant $C_{\nu}$ is set to 0.1, based on literature.
 
 ## Exercise -- Decay of Isotropic Turbulence
 
@@ -164,5 +164,4 @@ goal: ??
 ![](./figs/ShearFlow-sim-Result.png)
 
 ## Thermal and material diffusivity -->
-
 

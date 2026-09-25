@@ -17,3 +17,7 @@
 - When the user already has a Quarto preview running, leave it running and edit
   the source files. Do not start a duplicate preview or rebuild the full website
   unless requested or necessary to diagnose a stale preview.
+- Edits to included section `.qmd` files may not trigger the running preview.
+  After editing a section, touch the corresponding main talk `.qmd` file to
+  trigger its watcher, then verify that the changed text appears in `_site/`.
+  Do not assume that saving an included file refreshed the rendered slide.
