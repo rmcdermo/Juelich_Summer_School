@@ -1,0 +1,65 @@
+## The 1970s {#welcome-08 .decade-slide}
+
+The 1970’s
+
+$$Q^*$$
+
+## Dimensionless fire scaling {#welcome-09 .scaling-slide}
+
+Start with a very simple form of the energy transport equation:
+
+$$\rho c_p\frac{DT}{Dt}=\dot{q}^{\prime\prime\prime}+k\nabla^2T$$
+
+Write it in non-dimensional form:
+
+$$\rho^*\frac{DT^*}{Dt^*}=\frac{L}{\rho_\infty c_p T_\infty U}\dot{q}^{\prime\prime\prime}+\frac{1}{\mathrm{Re}\,\mathrm{Pr}}\nabla^2T^*$$
+
+Define the Froude number:
+
+$$\mathrm{Fr}=\frac{U}{\sqrt{gL}}\equiv Q^*=\frac{\dot{Q}}{\rho_\infty c_p T_\infty\sqrt{g}\,D^{5/2}}$$
+
+## Heskestad {#welcome-10 .welcome-slide}
+
+<!-- Source: History_of_Fire_Modeling_4.pptx, slide 10. -->
+
+```{=html}
+<div class="slide-canvas">
+<div class="ppt-text" style="left:5.0000%;top:4.0046%;width:90.0000%;height:8.0384%;padding:6.0px 12.0px 6.0px 12.0px;"><p style="text-align:left;"><span style="font-size:46.67px;">Heskestad</span><span style="font-size:46.67px;"> Flame Height Correlation</span></p></div>
+<img class="ppt-media" src="figs/image11.png" alt="Heskestad figure" style="left:4.5606%;top:35.8336%;width:28.6894%;height:28.2677%;">
+<img class="ppt-media" src="figs/image12.jpeg" alt="Heskestad figure" style="left:36.4167%;top:14.0573%;width:59.7873%;height:71.8203%;">
+<img class="ppt-media" src="figs/image13.jpeg" alt="Heskestad figure" style="left:80.7909%;top:85.8776%;width:15.4131%;height:12.5879%;">
+<img class="ppt-media" src="figs/image14.jpg" alt="Heskestad figure" style="left:36.4167%;top:85.8776%;width:12.4852%;height:12.4691%;">
+</div>
+```
+
+## McCaffrey’s Plume {#welcome-11 .welcome-slide}
+
+<!-- Source: History_of_Fire_Modeling_4.pptx, slide 11. -->
+
+```{=html}
+<div class="slide-canvas">
+<img class="ppt-media" src="figs/image16.png" alt="McCaffrey’s Plume figure" style="left:28.4567%;top:4.3333%;width:69.7776%;height:66.1389%;">
+<img class="ppt-media" src="figs/image17.png" alt="McCaffrey’s Plume figure" style="left:63.3455%;top:66.8020%;width:4.5798%;height:2.7560%;">
+<img class="ppt-media" src="figs/image18.png" alt="McCaffrey’s Plume figure" style="left:39.3046%;top:70.4722%;width:44.1954%;height:30.0422%;">
+<img class="ppt-media" src="figs/image19.png" alt="McCaffrey’s Plume figure" style="left:1.7629%;top:26.7546%;width:26.6939%;height:59.0303%;">
+<div class="ppt-text" style="left:1.5378%;top:6.8889%;width:25.4447%;height:10.3220%;padding:6.0px 12.0px 6.0px 12.0px;white-space:nowrap;"><p style="text-align:left;"><span style="font-size:33.33px;">McCaffrey’s Plume</span></p><p style="text-align:left;"><span style="font-size:33.33px;">Correlation</span></p></div>
+</div>
+```
+
+## MQH Correlation {#welcome-12 .mqh-slide}
+
+McCaffrey – Quintiere – Harkleroad
+
+$$
+\frac{T-T_\infty}{T_\infty}
+=1.6\left(\frac{\dot{Q}}{\rho_\infty c_p T_\infty\sqrt{g}\,A_0\sqrt{H_0}}\right)^{2/3}
+\left(\frac{h_k A_s}{\rho_\infty c_p\sqrt{g}\,A_0\sqrt{H_0}}\right)^{-1/3}
+$$
+
+::: {.mqh-annotations}
+
+Air supply to room: $A_0\sqrt{H_0}$
+
+Thermal penetration into walls: $h_k A_s$
+
+:::

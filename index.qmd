@@ -12,11 +12,12 @@ format:
 Open a talk to view the slides in your browser. Use the arrow keys to move
 between slides, and press **Esc** for the slide overview.
 
-1. [Governing Equations](01_Governing_Equations/governing_equations.html)
-2. [Computational Fluid Dynamics](03_CFD/cfd.html)
-3. [FDS Fluid Solver: Pressure](04_Pressure/pressure.html)
-4. [Turbulence in Fire — Phenomena, Equations and Models](05_Turbulence/turbulence.html)
-5. [(Turbulent) Combustion](08_Combustion/combustion.html)
+1. [Welcome: History of Fire Modeling](00_Welcome/welcome.html)
+2. [Governing Equations](01_Governing_Equations/governing_equations.html)
+3. [Computational Fluid Dynamics](03_CFD/cfd.html)
+4. [FDS Fluid Solver: Pressure](04_Pressure/pressure.html)
+5. [Turbulence in Fire — Phenomena, Equations and Models](05_Turbulence/turbulence.html)
+6. [(Turbulent) Combustion](08_Combustion/combustion.html)
 
 ## Course materials
 

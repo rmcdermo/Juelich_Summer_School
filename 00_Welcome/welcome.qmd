@@ -1,0 +1,30 @@
+---
+pagetitle: "Welcome: History of Fire Modeling"
+format:
+  revealjs:
+    width: 1200
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: "c"
+    transition: none
+    css: custom.css
+    html-math-method: mathjax
+footer: "[Home](../index.html) · History of Fire Modeling"
+---
+
+{{< include 00_nist_history.qmd >}}
+
+{{< include 01_fire_resistance.qmd >}}
+
+{{< include 02_correlations.qmd >}}
+
+{{< include 03_zone_models.qmd >}}
+
+{{< include 04_cfd.qmd >}}
+
+{{< include 05_practical_les.qmd >}}
+
+{{< include 06_under_ventilated_fires.qmd >}}
+
+{{< include 07_flame_spread.qmd >}}

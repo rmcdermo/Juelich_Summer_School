@@ -1,0 +1,48 @@
+## Fire Research at NIST {#welcome-01 .welcome-slide}
+
+<!-- Source: History_of_Fire_Modeling_4.pptx, slide 1. -->
+
+```{=html}
+<div class="slide-canvas">
+<img class="ppt-media" src="figs/image2.png" alt="Fire Research at NIST figure" style="left:26.8403%;top:2.0833%;width:46.3194%;height:95.8333%;">
+</div>
+```
+
+## History of Fire Modeling {#welcome-02 .welcome-slide}
+
+<!-- Source: History_of_Fire_Modeling_4.pptx, slide 2. -->
+
+```{=html}
+<div class="slide-canvas">
+<img class="ppt-media" src="figs/image3.svg" alt="History of Fire Modeling figure" style="left:0.0000%;top:-3.8314%;width:100.0000%;height:100.0000%;">
+</div>
+```
+
+## NIST and Fire {#welcome-03 .welcome-slide}
+
+<!-- Source: History_of_Fire_Modeling_4.pptx, slide 3. -->
+
+```{=html}
+<div class="slide-canvas">
+<div class="ppt-text" style="left:5.0000%;top:0.0000%;width:90.0000%;height:8.2629%;padding:6.0px 12.0px 6.0px 12.0px;"><p style="text-align:left;"><span style="font-size:60.00px;">NIST and Fire</span></p></div>
+<img class="ppt-media" src="figs/image4.jpg" alt="NIST and Fire figure" style="left:2.5508%;top:10.2348%;width:45.1253%;height:34.3140%;">
+<img class="ppt-media" src="figs/image5.png" alt="NIST and Fire figure" style="left:50.0000%;top:10.2348%;width:48.4966%;height:34.3140%;">
+<div class="ppt-crop" style="left:50.0000%;top:50.0000%;width:48.4966%;height:44.9118%;"><img src="figs/image6.jpg" alt="NIST and Fire figure" style="position:absolute;max-width:none;max-height:none;width:100.0%;height:109.59384520965303%;left:-0.0%;top:-0.0%;"></div>
+<div class="ppt-crop" style="left:2.5508%;top:50.0000%;width:45.1253%;height:44.9118%;"><img src="figs/image7.jpg" alt="NIST and Fire figure" style="position:absolute;max-width:none;max-height:none;width:104.8020289672808%;height:105.22771277043522%;left:-2.184074283678132%;top:-2.028790302213991%;"></div>
+<div class="ppt-text" style="left:5.8104%;top:44.0523%;width:38.6060%;height:4.9366%;padding:6.0px 12.0px 6.0px 12.0px;white-space:nowrap;"><p style="text-align:left;"><span style="font-size:26.67px;">Great Baltimore Fire aftermath, 1904</span></p></div>
+<div class="ppt-text" style="left:54.9762%;top:44.0523%;width:38.5443%;height:4.9366%;padding:6.0px 12.0px 6.0px 12.0px;white-space:nowrap;"><p style="text-align:left;"><span style="font-size:26.67px;">Present day, Gaithersburg, Maryland</span></p></div>
+<div class="ppt-text" style="left:59.3893%;top:94.9118%;width:29.7180%;height:4.9366%;padding:6.0px 12.0px 6.0px 12.0px;white-space:nowrap;"><p style="text-align:left;"><span style="font-size:26.67px;">Gaithersburg campus, 1964</span></p></div>
+<div class="ppt-text" style="left:13.1542%;top:94.9118%;width:25.1951%;height:4.9366%;padding:6.0px 12.0px 6.0px 12.0px;white-space:nowrap;"><p style="text-align:left;"><span style="font-size:26.67px;">NBS DC campus, 1920</span></p></div>
+</div>
+```
+
+## Staff photo, Center for Fire Research, 1985 {#welcome-04 .welcome-slide}
+
+<!-- Source: History_of_Fire_Modeling_4.pptx, slide 4. -->
+
+```{=html}
+<div class="slide-canvas">
+<img class="ppt-media" src="figs/image8.png" alt="Staff photo, Center for Fire Research, 1985 figure" style="left:1.5836%;top:15.1111%;width:96.4698%;height:72.9074%;">
+<div class="ppt-text" style="left:16.5653%;top:90.5556%;width:66.5064%;height:6.7318%;padding:6.0px 12.0px 6.0px 12.0px;white-space:nowrap;"><p style="text-align:left;"><span style="font-size:30.00px;">Staff photo, Center for Fire Research, 1985</span></p></div>
+</div>
+```

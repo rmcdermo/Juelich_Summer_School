@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="650" height="450">
+	<path fill="white" transform="scale(1.00157 1.00224)" d="M0 0L0 0L650.0025 0L650.0025 450.01688L0 450.01688L0 0Z"/>
+	<path fill="white" transform="scale(1.00157 1.00224)" d="M119.385 369.33749L119.385 369.33749L619.48682 369.33749L619.48682 30.436874L119.385 30.436874L119.385 369.33749Z"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 369L119 369L619 369"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 29.999998L119 29.999998L619 29.999998"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 369L119 369L119 364"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M286 369L286 369L286 364"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M453 369L453 369L453 364"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M619 369L619 369L619 364"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 29.999998L119 29.999998L119 35"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M286 29.999998L286 29.999998L286 35"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M453 29.999998L453 29.999998L453 35"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M619 29.999998L619 29.999998L619 35"/>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="1073, " y="3827.6687, ">
+			0
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="2673, " y="3827.6687, ">
+			5
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="4207, " y="3827.6687, ">
+			1
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="4313, " y="3827.6687, ">
+			0
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="5807, " y="3827.6687, ">
+			1
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="5913, " y="3827.6687, ">
+			5
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="2987, " y="4107.6689, ">
+			T
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="3117, " y="4107.6689, ">
+			i
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="3176, " y="4107.6689, ">
+			m
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="3341, " y="4107.6689, ">
+			e
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="3488, " y="4107.6689, ">
+			(
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="3559, " y="4107.6689, ">
+			m
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="3724, " y="4107.6689, ">
+			i
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="3783, " y="4107.6689, ">
+			n
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="3889, " y="4107.6689, ">
+			)
+	</text>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 369L119 369L119 29.999998"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M619 369L619 369L619 29.999998"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 369L119 369L124 369"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 302L119 302L124 302"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 234L119 234L124 234"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 166L119 166L124 166"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 98L119 98L124 98"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 29.999998L119 29.999998L124 29.999998"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M619 369L619 369L614 369"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M619 302L619 302L614 302"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M619 234L619 234L614 234"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M619 166L619 166L614 166"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M619 98L619 98L614 98"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-linecap="square" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M619 29.999998L619 29.999998L614 29.999998"/>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="931, " y="3625.6687, ">
+			0
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="597, " y="2974.6687, ">
+			0
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="703, " y="2974.6687, ">
+			.
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="756, " y="2974.6687, ">
+			0
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="862, " y="2974.6687, ">
+			5
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="731, " y="2323.6687, ">
+			0
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="837, " y="2323.6687, ">
+			.
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="890, " y="2323.6687, ">
+			1
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="597, " y="1673.6687, ">
+			0
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="703, " y="1673.6687, ">
+			.
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="756, " y="1673.6687, ">
+			1
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="862, " y="1673.6687, ">
+			5
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="731, " y="1022.6687, ">
+			0
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="837, " y="1022.6687, ">
+			.
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="890, " y="1022.6687, ">
+			2
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="597, " y="371.6687, ">
+			0
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="703, " y="371.6687, ">
+			.
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="756, " y="371.6687, ">
+			2
+	</text>
+	<text fill="#262626" transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="862, " y="371.6687, ">
+			5
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -236.034 341.468)" font-size="213" font-family="Times New Roman" x="504, " y="2765.6687, ">
+			V
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -219.964 325.387)" font-size="213" font-family="Times New Roman" x="504, " y="2611.6687, ">
+			o
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -208.799 314.213)" font-size="213" font-family="Times New Roman" x="504, " y="2504.6687, ">
+			l
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -202.642 308.052)" font-size="213" font-family="Times New Roman" x="504, " y="2445.6687, ">
+			u
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -191.477 296.879)" font-size="213" font-family="Times New Roman" x="504, " y="2338.6687, ">
+			m
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -174.156 279.544)" font-size="213" font-family="Times New Roman" x="504, " y="2172.6687, ">
+			e
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -158.712 264.089)" font-size="213" font-family="Times New Roman" x="504, " y="2024.6687, ">
+			F
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -146.295 251.663)" font-size="213" font-family="Times New Roman" x="504, " y="1905.6687, ">
+			r
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -138.886 244.249)" font-size="213" font-family="Times New Roman" x="504, " y="1834.6687, ">
+			a
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -129.078 234.433)" font-size="213" font-family="Times New Roman" x="504, " y="1740.6687, ">
+			c
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -119.165 224.513)" font-size="213" font-family="Times New Roman" x="504, " y="1645.6687, ">
+			t
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -113.008 218.351)" font-size="213" font-family="Times New Roman" x="504, " y="1586.6687, ">
+			i
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -106.747 212.086)" font-size="213" font-family="Times New Roman" x="504, " y="1526.6687, ">
+			o
+	</text>
+	<text fill="#262626" transform="matrix(6.38943e-18 -0.104424 0.104347 6.39415e-18 -95.6865 201.017)" font-size="213" font-family="Times New Roman" x="504, " y="1420.6687, ">
+			n
+	</text>
+	<path fill="none" stroke="black" stroke-width="1.3543837" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 369L119 369L121.99999 369L124.99999 369L128 369L130.99998 369L133 369L136 369L138.99998 369L142 369L144 369L147 369L150 369L152.99998 368L156 366L158 361L160.99998 357L164 353L167 350L168.99998 348L172 347L174.99998 345L178 344L181 343L182.99998 342L186 340L189 339L192 337L194 335L196.99998 334L200 332L203 331L205.99998 330L208 329L211 328L213.99998 328L217 328L219 328L221.99998 326.99997L225 326L227.99998 326L231 324L233 322.99997L235.99998 322L239 322L241.99998 320.99997L243.99998 320L247 319L249.99998 319L253 320L256 320L258 320L261 320L264 320L267 319L268.99997 320L272 320L275 319L277.99997 318L281 317L282.99997 316L286 315L289 313L291.99997 313L294 314L296.99997 314L300 314L303 313L305.99997 313L307.99997 313L311 312L314 310L317 308L319 306L321.99997 304L325 302L328 301L330.99997 301L333 301L335.99997 300L339 299L342 298L344 299L347 299L349.99997 298L353 297L356 297L358 296L360.99997 293.99997L363.99997 291.99997L367 289.99997L369 289L372 289L374.99997 289L378 289.99997L381 291L383 291.99997L386 293L388.99997 291.99997L392 291.99997L393.99997 293.99997L397 298L400 303L402.99997 308L406 313L408 318L411 324L413.99997 332L416.99997 342L418.99997 351L422 357.99997L425 359.99997L427.99997 362L430.99997 363L432.99997 364L436 365L439 366L441.99997 366L443.99997 367L446.99997 367L450 367L453 368L455.99997 368L457.99997 368L460.99997 368L464 368L467 368L469 368L471.99997 368L475 368L478 368L480.99997 368L483 368L485.99997 369L489 369L492 369L494 369L497 369L499.99997 369L503 369L506 369L508 369L510.99997 369L514 369L517 369L518.99994 369L522 369L525 369L528 369L531 369L532.99994 369L536 369L539 369L541.99994 369L544 369L546.99994 369L550 369L553 369L555.99994 369L558 369L560.99994 369L564 369L567 369L569 369L572 369L574.99994 369L578 369L581 369L583 369L586 369"/>
+	<path fill="none" stroke="red" stroke-width="1.3543837" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M119 369L119 369L121.99999 369L124.99999 369L128 369L130.99998 369L133 369L136 369L138.99998 369L142 369L144 369L147 368L150 365L152.99998 359.99997L156 355.99997L158 353L160.99998 350L164 348L167 347L168.99998 345L172 344L174.99998 342L178 342L181 342L182.99998 341L186 339L189 337L192 335L194 332L196.99998 332L200 331L203 331L205.99998 330L208 329L211 328L213.99998 326.99997L217 324.99997L219 322.99997L221.99998 322L225 322L227.99998 320.99997L231 320.99997L233 320.99997L235.99998 319L239 317L241.99998 315L243.99998 315L247 314L249.99998 314L253 314L256 313L258 312L261 310L264 308L267 306L268.99997 302L272 300L275 299L277.99997 299L281 298L282.99997 299L286 299L289 300L291.99997 300L294 299L296.99997 298L300 296L303 293.99997L305.99997 293.99997L307.99997 293L311 291.99997L314 289.99997L317 289L319 288L321.99997 288L325 289L328 288L330.99997 287L333 286L335.99997 285L339 284L342 283L344 282L347 282L349.99997 282L353 280L356 279L358 278L360.99997 277L363.99997 277L367 277L369 277L372 276L374.99997 275L378 274L381 273L383 272L386 272L388.99997 275L392 281L393.99997 289L397 296L400 303L402.99997 311L406 319L408 329L411 341L413.99997 351L416.99997 357L418.99997 359L422 361L425 363L427.99997 364L430.99997 365L432.99997 366L436 366L439 367L441.99997 367L443.99997 367L446.99997 368L450 368L453 368L455.99997 368L457.99997 368L460.99997 368L464 368L467 368L469 369L471.99997 369L475 369L478 369L480.99997 369L483 369L485.99997 369L489 369L492 369L494 369L497 369L499.99997 369L503 369L506 369L508 369L510.99997 369L514 369L517 369L518.99994 369L522 369L525 369L528 369L531 369L532.99994 369L536 369L539 369L541.99994 369L544 369L546.99994 369L550 369L553 369L555.99994 369L558 369L560.99994 369L564 369L567 369L569 369L572 369L574.99994 369L578 369L581 369L583 369L586 369"/>
+	<path fill="none" stroke="black" stroke-width="1.3543837" stroke-linejoin="bevel" transform="scale(1.00157 1.00224)" d="M119 369L119 369L121.99999 369L124.99999 369L128 369L130.99998 369L133 369M142 369L142 369L142 369L144 369L147 369L150 365L151 362M152.99998 353L152.99998 353L152.99998 353L156 351.99997L158 346L160.99998 348L160.99998 347M165 340L165 340L167 333L168.99998 330L171 328M175.99998 324.99997L175.99998 324.99997L178 322L181 322L182.99998 320L185 316M189.99998 311L189.99998 311L192 311L194 310L196.99998 310L200 305L201 305M208 301L208 301L208 301L211 303L213.99998 307L215 303M219 304L219 304L219 304L221.99998 305L225 304L227.99998 308L230 309M234.99998 302L234.99998 302L235.99998 301L239 304L241.99998 299L242.99998 299M248.99998 303L248.99998 303L249.99998 304L253 304L256 304L258 304L261 303L261.99997 304M267 308L267 308L268.99997 302L272 300L275 304L275 304M281 302L281 302L282.99997 302L286 307L289 307L291.99997 308L291.99997 308M296 304L296 304L296.99997 302L300 302L303 306L305 309M311 306L311 306L311 306L314 303L317 307L319 310L319.99997 310M328 307L328 307L330.99997 305L333 305L335.99997 301L337.99997 303M342.99997 309L342.99997 309L344 314L347 306L348 307M355 305L355 305L356 306L358 304L360.99997 304L363.99997 308L365 309M372.99997 309L372.99997 309L374.99997 313L378 306L379.99997 308M386.99997 311L386.99997 311L388.99997 310L392 306L393.99997 305L397 304L397 305M400 313L400 313L400 315L402.99997 324L406 324L406 324M411 320.99997L411 320.99997L413.99997 335M416.99997 343L416.99997 343L418.99997 353.99997L420 351M422 343L422 343L422 342L423.99997 353.99997M425 362L425 362L427.99997 369L430.99997 369L432.99997 369L434 369M441.99997 369L441.99997 369L443.99997 369L446.99997 369L450 369L453 369L455.99997 369L455.99997 369M464.99997 369L464.99997 369L467 369L469 369L471.99997 369L475 369L478 369L478.99997 369M487 369L487 369L489 369L492 369L494 369L497 369L499.99997 369L501 369M508.99997 369L508.99997 369L510.99997 369L514 369L517 369L518.99994 369L522 369L523 369M531 369L531 369L532.99994 369L536 369L539 369L541.99994 369L544 369L545 369M554 369L554 369L555.99994 369L558 369L560.99994 369L564 369L567 369L567 369M576 369L576 369L578 369L581 369L583 369L586 369"/>
+	<path fill="none" stroke="red" stroke-width="1.3543837" stroke-linejoin="bevel" transform="scale(1.00157 1.00224)" d="M119 369L119 369L121.99999 369L124.99999 369L128 369L130.99998 369L133 369M142 369L142 369L142 369L144 369L147 369L150 369L152 364M156 357L156 357L158 348L159 343M160.99998 335L160.99998 335L160.99998 334L164 328L166 322M172 317L172 317L172 317L174.99998 312L178 311L181 312L181.99998 310M188 305L188 305L189 302L192 303L194 299L196.99998 301L196.99998 300M203 300L203 300L203 300L205.99998 298L208 298L211 293.99997L213.99998 295M220.99998 295L220.99998 295L221.99998 296L225 293.99997L227.99998 293.99997L231 291.99997L233 293M239 295L239 295L241.99998 295L243.99998 295L247 293.99997L249.99998 298L250.99998 298M258 297L258 297L258 297L261 298L264 295L267 295L268.99997 293L270 293M275 293L275 293L275 293L277.99997 293L281 289.99997L282.99997 293.99997L284.99997 293M291 289.99997L291 289.99997L291.99997 289L294 289L296.99997 291.99997L300 291.99997L302 291M309 291.99997L309 291.99997L311 293L314 288L317 289L319 291L319.99997 291M326 293L326 293L328 296L330.99997 291L333 291.99997L335 293M342.99997 293L342.99997 293L344 293.99997L347 293.99997L349.99997 293L353 293.99997L355 293M362 295L362 295L363.99997 293.99997L367 297L369 293.99997L372 297M378 293L378 293L381 293.99997L383 293.99997L386 291.99997L388.99997 293L390 293M395 297L395 297L397 293.99997L400 297L402 302M409 307L409 307L411 310L413.99997 316L415 319M416 326.99997L416 326.99997L416.99997 331L418.99997 341M420 349L420 349L422 363M425.99997 369L425.99997 369L427.99997 369L430.99997 369L432.99997 369L436 369L439 369L439.99997 369M448 369L448 369L450 369L453 369L455.99997 369L457.99997 369L460.99997 369L462 369M471 369L471 369L471.99997 369L475 369L478 369L480.99997 369L483 369L485 369M492.99997 369L492.99997 369L494 369L497 369L499.99997 369L503 369L506 369L506.99997 369M514.99994 369L514.99994 369L517 369L518.99994 369L522 369L525 369L528 369L528.99994 369M537 369L537 369L539 369L541.99994 369L544 369L546.99994 369L550 369L551 369M560 369L560 369L560.99994 369L564 369L567 369L569 369L572 369L573 369M582 369L582 369L583 369L586 369"/>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="1387, " y="697.6687, ">
+			C
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="1529, " y="697.6687, ">
+			O
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="1683, " y="697.6687, ">
+			,
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="1789, " y="697.6687, ">
+			I
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="1860, " y="697.6687, ">
+			S
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="1978, " y="697.6687, ">
+			O
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="2132, " y="697.6687, ">
+			H
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="2286, " y="697.6687, ">
+			e
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="2380, " y="697.6687, ">
+			p
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="2486, " y="697.6687, ">
+			t
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="213" font-family="Times New Roman" x="2545, " y="697.6687, ">
+			9
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4027, " y="175.65698, ">
+			F
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4101, " y="175.65698, ">
+			D
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4197, " y="175.65698, ">
+			S
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4271, " y="175.65698, ">
+			6
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4337, " y="175.65698, ">
+			.
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4370, " y="175.65698, ">
+			7
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4436, " y="175.65698, ">
+			.
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4469, " y="175.65698, ">
+			1
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4535, " y="175.65698, ">
+			-
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4579, " y="175.65698, ">
+			0
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4645, " y="175.65698, ">
+			-
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4689, " y="175.65698, ">
+			g
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4755, " y="175.65698, ">
+			1
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4821, " y="175.65698, ">
+			4
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4887, " y="175.65698, ">
+			c
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="4946, " y="175.65698, ">
+			c
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="5005, " y="175.65698, ">
+			7
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="5071, " y="175.65698, ">
+			3
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="5137, " y="175.65698, ">
+			8
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="5203, " y="175.65698, ">
+			-
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="5247, " y="175.65698, ">
+			H
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="5343, " y="175.65698, ">
+			E
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="5424, " y="175.65698, ">
+			A
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="133" font-family="Times New Roman" x="5520, " y="175.65698, ">
+			D
+	</text>
+	<path fill="white" transform="scale(1.00157 1.00224)" d="M434.73938 134.62312L434.73938 134.62312L434.73938 44.296875L605.62689 44.296875L605.62689 134.62312L434.73938 134.62312Z"/>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4667, " y="611.02344, ">
+			E
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4764, " y="611.02344, ">
+			x
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4843, " y="611.02344, ">
+			p
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4961, " y="611.02344, ">
+			(
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5014, " y="611.02344, ">
+			C
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5120, " y="611.02344, ">
+			O
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5235, " y="611.02344, ">
+			F
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5323, " y="611.02344, ">
+			r
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5376, " y="611.02344, ">
+			o
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5455, " y="611.02344, ">
+			n
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5534, " y="611.02344, ">
+			t
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5578, " y="611.02344, ">
+			)
+	</text>
+	<path fill="none" stroke="black" stroke-width="1.3543837" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M439.99997 57L439.99997 57L482 57"/>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4667, " y="816.02344, ">
+			E
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4764, " y="816.02344, ">
+			x
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4843, " y="816.02344, ">
+			p
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4961, " y="816.02344, ">
+			(
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5014, " y="816.02344, ">
+			C
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5120, " y="816.02344, ">
+			O
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5235, " y="816.02344, ">
+			R
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5341, " y="816.02344, ">
+			e
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5412, " y="816.02344, ">
+			a
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5483, " y="816.02344, ">
+			r
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5536, " y="816.02344, ">
+			)
+	</text>
+	<path fill="none" stroke="red" stroke-width="1.3543837" stroke-linejoin="round" transform="scale(1.00157 1.00224)" d="M439.99997 79L439.99997 79L482 79"/>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4667, " y="1022.0234, ">
+			F
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4755, " y="1022.0234, ">
+			D
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4870, " y="1022.0234, ">
+			S
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4997, " y="1022.0234, ">
+			(
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5050, " y="1022.0234, ">
+			C
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5156, " y="1022.0234, ">
+			O
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5271, " y="1022.0234, ">
+			F
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5359, " y="1022.0234, ">
+			r
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5412, " y="1022.0234, ">
+			o
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5491, " y="1022.0234, ">
+			n
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5570, " y="1022.0234, ">
+			t
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5614, " y="1022.0234, ">
+			)
+	</text>
+	<path fill="none" stroke="black" stroke-width="1.3543837" stroke-linejoin="bevel" transform="scale(1.00157 1.00224)" d="M439.99997 100L439.99997 100L453.99997 100M462 100L462 100L476 100"/>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4667, " y="1227.0234, ">
+			F
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4755, " y="1227.0234, ">
+			D
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4870, " y="1227.0234, ">
+			S
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="4997, " y="1227.0234, ">
+			(
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5050, " y="1227.0234, ">
+			C
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5156, " y="1227.0234, ">
+			O
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5271, " y="1227.0234, ">
+			R
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5377, " y="1227.0234, ">
+			e
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5448, " y="1227.0234, ">
+			a
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5519, " y="1227.0234, ">
+			r
+	</text>
+	<text transform="scale(0.104347 0.104424)" font-size="160" font-family="Times New Roman" x="5572, " y="1227.0234, ">
+			)
+	</text>
+	<path fill="none" stroke="red" stroke-width="1.3543837" stroke-linejoin="bevel" transform="scale(1.00157 1.00224)" d="M439.99997 120.99999L439.99997 120.99999L453.99997 120.99999M462 120.99999L462 120.99999L476 120.99999"/>
+	<path fill="none" stroke="#262626" stroke-width="1" stroke-miterlimit="10" transform="scale(1.00157 1.00224)" d="M434.99997 135L434.99997 135L434.99997 43.999996L606 43.999996L606 135L434.99997 135Z"/>
+</svg>

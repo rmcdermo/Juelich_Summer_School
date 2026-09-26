@@ -47,7 +47,7 @@ quarto render combustion.qmd
 
 The talks website is deployed to
 [rmcdermo.github.io/Juelich_Summer_School](https://rmcdermo.github.io/Juelich_Summer_School/).
-The landing page links to the five current Quarto presentations. Other course
+The landing page links to the six current Quarto presentations. Other course
 materials remain available in this repository.
 
 The [Pages workflow](.github/workflows/pages.yml) builds the website on pull

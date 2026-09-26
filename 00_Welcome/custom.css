@@ -1,0 +1,23 @@
+/* The source deck is 4:3. Text and media remain separate editable elements. */
+.reveal .slides section.welcome-slide { padding: 0; height: 900px; }
+.reveal .welcome-slide > h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.slide-canvas { position: relative; width: 1200px; height: 900px; font-family: Arial, Helvetica, sans-serif; color: #000; text-align: left; }
+.reveal .slide-canvas .ppt-media, .ppt-crop, .ppt-text, .ppt-shape { position: absolute; box-sizing: border-box; margin: 0; max-width: none; max-height: none; }
+.reveal .slide-canvas img.ppt-media { object-fit: fill; }
+.reveal .slide-canvas video.ppt-media { object-fit: contain; background: #000; }
+.ppt-crop { overflow: hidden; }
+.reveal .slide-canvas .ppt-crop img { margin: 0; }
+.ppt-text { display: flex; flex-direction: column; font-size: 30px; line-height: 1.1; }
+.reveal .ppt-text p { margin: 0; line-height: 1.1; }
+.reveal .footer { font-size: 14px; }
+
+.reveal .decade-slide { text-align: center; padding-top: 240px; font-size: 64px; }
+.reveal .decade-slide > h2 { display: none; }
+.reveal .scaling-slide { font-size: 30px; }
+.reveal .scaling-slide h2 { font-size: 48px; margin-bottom: 55px; }
+.reveal .scaling-slide .math.display { margin: 30px 0 65px; }
+
+.reveal .mqh-slide { font-size: 34px; }
+.reveal .mqh-slide h2 { font-size: 58px; margin-top: 70px; }
+.reveal .mqh-slide .math.display { margin: 130px 0 90px; }
+.mqh-annotations { font-size: 32px; text-align: center; }
