@@ -109,3 +109,21 @@ In addition, it is possible to define job chains, i.e. dependant jobs which will
 - Submit your job with the `sbatch 03_jureca.job` command.
 - Watch the status of your job with `squeue -u $USER`.
 - Check the output.
+
+## (optional) While waiting -- Jupyter kernels
+
+We have prepared a Jupyter kernel with all needed modules. Run the [make_jupyter_kernel.sh](./make_jupyter_kernel.sh) script:
+
+`./make_jupyter_kernel.sh --link-only`
+
+This will (should) create a new Fire Summer School kernel.
+
+## (optional) While waiting -- fdsreader data explorer
+
+With the new kernel, create a Jupyter notebook with the following content:
+
+```
+from fdsreader.explorer import explore
+
+explorer = explore()
+```
