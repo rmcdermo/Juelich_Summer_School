@@ -25,4 +25,4 @@ between slides, and press **Esc** for the slide overview.
 Exercises, input files, lecture sources, and materials for other topics are
 available in the [GitHub repository](https://github.com/rmcdermo/Juelich_Summer_School).
 
-[About the summer school](https://www.fz-juelich.de/en/ias/ias-7/research-1/divisions/fire-dynamics/intro/3rd-summer-school-on-fire-dynamics-modeling-2022)
+[About the summer school](https://go.fzj.de/fire_summerschool)
