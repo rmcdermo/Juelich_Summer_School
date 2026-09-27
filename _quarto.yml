@@ -5,6 +5,7 @@ project:
     - index.qmd
     - 00_Welcome/welcome.qmd
     - 01_Governing_Equations/governing_equations.qmd
+    - 02_Setup/hpc.qmd
     - 03_CFD/cfd.qmd
     - 04_Pressure/pressure.qmd
     - 05_Turbulence/turbulence.qmd

@@ -1,4 +1,8 @@
 #!/bin/bash -x
+
+# name job
+#SBATCH --job-name=my_first_JURECA_job
+
 # budget account where contingent is taken from
 #SBATCH --account=training2424
 
@@ -12,6 +16,7 @@
 #SBATCH --partition=dc-cpu
 
 
-module use -a /p/project1/cias-7/modules_fire
-module load FDS/6.9.1-IntelCompiler_2023.2.1_IntelMPI_2021.10.0
+module load Stages/2025
+module load FDS/6.11.1
+
 srun fds pool.fds

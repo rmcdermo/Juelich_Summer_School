@@ -19,7 +19,7 @@ module use -a /p/project1/cias-7/modules_fire
 
 To load FDS, use e.g.:
 ```
-module load FDS/6.9.1-IntelCompiler_2023.2.1_IntelMPI_2021.10.0
+module load FDS/6.11.1
 ```
 
 ## Example 02 -- FDS Module
@@ -28,21 +28,30 @@ module load FDS/6.9.1-IntelCompiler_2023.2.1_IntelMPI_2021.10.0
 - Load the FDS module and call FDS via `fds`. 
 - The output should show you something like:
 ```
-arnold1@jrlogin09:~/Summer_School_2024/
+arnold1@jrlogin09:~/Summer_School_2026
+> module load Stages/2025
+
+  This stage is deprecated. Please consider moving to a new stage (2026 or newer)
+
+arnold1@jrlogin09:~/Summer_School_2026
+> ml FDS
+arnold1@jrlogin09:~/Summer_School_2026
 > fds
 
  Fire Dynamics Simulator
 
- Current Date     : June 22, 2024  13:10:03
- Revision         : FDS-6.9.1-406-g92be8e5-master
- Revision Date    : Mon Jun 17 14:52:57 2024 -0500
- Compiler         : Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.10.0 Build 20230609_000000
- Compilation Date : Jun 19, 2024 11:16:05
+ Current Date     : September 27, 2026  08:18:59
+ Revision         : FDS-6.11.1-0-gff928db-HEAD
+ Revision Date    : Thu Jul 9 17:24:07 2026 -0400
+ Compiler         : Intel(R) Fortran Compiler for applications running on Intel(R) 64, Version 2024.2.0 Build 20240602
+ Compilation Date : Sep 20, 2026 14:45:03
 
 
  MPI version: 3.1
- MPI library version: Intel(R) MPI Library 2021.10 for Linux* OS
+ MPI library version: Intel(R) MPI Library 2021.14 for Linux* OS
 
+ Hypre library version: v3.0.0
+ Sundials library version: v7.5.0
  Consult FDS Users Guide Chapter, Running FDS, for further instructions.
 ```
 
@@ -64,7 +73,7 @@ The batch system manages the user requests and the available resources. A typica
 ```
 #!/bin/bash -x
 # budget account where contingent is taken from
-#SBATCH --account=training2424
+#SBATCH --account=training2646
 
 # number of MPI processes
 #SBATCH --ntasks=1
@@ -76,7 +85,8 @@ The batch system manages the user requests and the available resources. A typica
 #SBATCH --partition=dc-cpu
 
 module use -a /p/project1/cias-7/modules_fire
-module load FDS/6.9.1-IntelCompiler_2023.2.1_IntelMPI_2021.10.0
+module load Stages/2025
+module load FDS/6.11.1
 
 srun fds pool.fds
 ```
