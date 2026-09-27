@@ -1,6 +1,6 @@
 # Jülich Summer School on Fire Dynamics Modeling
 
-Documentation repository for the [Jülich Summer School on Fire Dynamics Modeling](https://www.fz-juelich.de/en/ias/ias-7/research-1/divisions/fire-dynamics/intro/3rd-summer-school-on-fire-dynamics-modeling-2022)
+Documentation repository for the [Jülich Summer School on Fire Dynamics Modeling](https://go.fzj.de/fire_summerschool)
 
 ## Lecture Team
 
