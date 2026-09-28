@@ -112,12 +112,16 @@ def setup(cdx, cdt):
         A[nx + i, i + 1] = f
 
 
+    # Periodic ghost values must be coupled to the new-time interior values.
+    # Unknown ordering: [v, rho]. Each boundary row enforces ghost - interior = 0.
     A[0,0] = 1
-#     A[0,1] = f
-#     A[0,] = f
+    A[0, nx-2] = -1
     A[nx-1, nx-1] = 1
+    A[nx-1, 1] = -1
     A[nx, nx] = 1
+    A[nx, 2*nx-2] = -1
     A[-1,-1] = 1
+    A[-1, nx+1] = -1
 
     # rhs
     b = np.zeros(2*nx)
@@ -152,6 +156,7 @@ def update_euler_backward():
     # update rhs
     b[:nx] = v[:]
     b[nx:] = rho[:]
+    b[[0, nx-1, nx, 2*nx-1]] = 0  # Periodic constraint rows.
 
     # solve linear system
     sol = np.linalg.solve(A, b)
@@ -159,13 +164,6 @@ def update_euler_backward():
     # redistribute solution
     v[:] = sol[:nx]
     rho[:] = sol[nx:]
-
-    # set boundary conditions
-    v[0] = v[-2]
-    v[-1] = v[1]
-
-    rho[0] = rho[-2]
-    rho[-1] = rho[1]
 
 ############
 ## leap frog
@@ -198,6 +196,7 @@ def update_theta():
     # set rhs
     b[:nx] = v   + (1-theta) * vp
     b[nx:] = rho + (1-theta) * rhop
+    b[[0, nx-1, nx, 2*nx-1]] = 0  # Periodic constraint rows.
 
     # solve linear system
     sol = np.linalg.solve(A, b)
@@ -205,14 +204,6 @@ def update_theta():
     # redistribute solution
     v[:] = sol[:nx]
     rho[:] = sol[nx:]
-
-    # set boundary conditions
-    v[0] = v[-2]
-    v[-1] = v[1]
-
-    rho[0] = rho[-2]
-    rho[-1] = rho[1]
-
 
 ######################################
 ########## UPDATE ANIMATION ##########
