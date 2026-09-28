@@ -38,3 +38,22 @@
 ## Benchmark Results -- Speedup
 
 ![](./figs/benchmark_speedup.png)
+
+## Pressure Lecture, Example 4 -- A Cluster Run
+
+:::: {.columns}
+::: {.column width="56%"}
+- Methane pool fire: 16 meshes of 48×48×32 cells (3 cm), 1.18 million cells, 20 s.
+- Input file: [04_Pressure/Cases/example_4/reference/Example_4_FFT.fds](../04_Pressure/Cases/example_4/reference/Example_4_FFT.fds)
+- Job file used on the NIST cluster: [04_Pressure/Cases/example_4/reference/Example_4_FFT.sbatch](../04_Pressure/Cases/example_4/reference/Example_4_FFT.sbatch)
+- Adapt it to JURECA, as on the *SLURM Job Files* slide:
+    - add `--account=training2646`, use `--partition=dc-cpu`
+    - `module use`/`module load` instead of `source .../FDS6VARS.sh`
+    - `srun fds` instead of `mpirun -n 16 fds`
+    - your run directory instead of `YOUR_PATH_TO_EXAMPLE_4`
+- Keep `--ntasks=16`, one MPI process per mesh. The reference run took about 2 h.
+:::
+::: {.column width="44%"}
+![](../04_Pressure/Section_3_assets/slide-068-picture-01.png)
+:::
+::::
