@@ -5,8 +5,8 @@
 # Define which case you want to do by setting these logical variables 0 or 1
 PlotExact = 1
 PlotX = 1
-PlotY = 0
-PlotZ = 0
+PlotY = 1
+PlotZ = 1
 #
 #-------------------------
 
@@ -48,4 +48,4 @@ plt.xlabel("Position [m]")
 plt.ylabel("Heat flux [kW/m2]")
 plt.legend()
 plt.show()
-fig.clf()
+#fig.clf()

@@ -37,7 +37,7 @@ RADI NUMBER_RADIATION_ANGLES=1000
 RADI NUMBER_RADIATION_ANGLES=2000  
 
 ------------------------------------------------------------------------
-&HEAD CHID='radiation_box__50__100_y', TITLE='Test wall heat transfer in a box'/
+&HEAD CHID='radiation_box__50__100_z', TITLE='Test wall heat transfer in a box'/
 
 &MESH XB=0.0,1.0,0.0,1.0,0.0,1.0, IJK =50,50,50 /
 &MISC Y_CO2_INFTY=0.,HUMIDITY=0./
@@ -56,7 +56,7 @@ RADI NUMBER_RADIATION_ANGLES=2000
 &VENT MB='XMAX',SURF_ID='COLD' /
 &VENT MB='YMIN',SURF_ID='COLD' /
 &VENT MB='YMAX',SURF_ID='COLD' /
-&VENT MB='ZMIN',SURF_ID='COLD' /
+&VENT MB='ZMIN',SURF_ID='HOT' /
 &VENT MB='ZMAX',SURF_ID='COLD' /
 
 &BNDF QUANTITY='INCIDENT HEAT FLUX', CELL_CENTERED=.TRUE. /
