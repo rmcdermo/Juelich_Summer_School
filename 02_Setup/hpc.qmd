@@ -18,8 +18,7 @@ author:
     email: l.arnold@fz-juelich.de
     affiliation: 
       - name: Forschungszentrum Jülich & <br>University of Wuppertal
-footer: "High Performance Computing"
-
+footer: "[Home](../index.html) · High Performance Computing"
 ---
 
 {{< include 01_hardware.qmd >}}

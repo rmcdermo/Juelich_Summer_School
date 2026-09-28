@@ -39,3 +39,6 @@ __pycache__/
 # Quarto project cache and rendered website
 /.quarto/
 /_site/
+
+# the HPC timing example needs this FDS cpu file, keep it despite *_cpu.csv above
+!02_Setup/exercises_hpc/04_timing/04_out_pool_fire_cpu.csv

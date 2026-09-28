@@ -1,6 +1,6 @@
 # Jülich Summer School on Fire Dynamics Modeling
 
-Documentation repository for the [Jülich Summer School on Fire Dynamics Modeling](https://www.fz-juelich.de/en/ias/ias-7/research-1/divisions/fire-dynamics/intro/3rd-summer-school-on-fire-dynamics-modeling-2022)
+Documentation repository for the [Jülich Summer School on Fire Dynamics Modeling](https://go.fzj.de/fire_summerschool)
 
 ## Lecture Team
 
@@ -95,7 +95,6 @@ Currently, three referenced videos are not in Git and will not play on the site:
 
 - `04_Pressure/Section_1_assets/video/compartment-oxygen-deflagration.mp4`
 - `04_Pressure/Section_1_assets/video/ceiling-board-heat-soot.mp4`
-- `05_Turbulence/figs/small_compartment_demo.mp4`
 
 Upload these clips to a suitable host and update their slide references to the
 published URLs to make them available online. Video poster images are explicitly

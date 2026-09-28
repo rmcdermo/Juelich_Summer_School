@@ -21,4 +21,4 @@
 
 ## Now, just enjoy
 
-{{< video ./figs/small_compartment_demo.mp4 >}}
+{{< video https://github.com/rmcdermo/Juelich_Summer_School/releases/download/2026/small_compartment_demo.mp4 >}}
