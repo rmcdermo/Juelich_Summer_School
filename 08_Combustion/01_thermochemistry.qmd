@@ -1631,16 +1631,17 @@ $$
 
 ::: {.westbrook-dryer-tasks}
 
-1. Run **reactionrate_arrhenius_2order_1step.fds**
-2. Plot the time history of species mass fractions.
-3. Modify the [`realizable_mass_fractions.fds`](examples/realizability_example/realizable_mass_fractions.fds) case to use the Westbrook and Dryer propane reaction parameters (see FDS User Guide example).
-4. Plot the global combustion efficiency as a function of time.
+1. Run [`westbrook_dryer.fds`](examples/finite_rate_example/westbrook_dryer.fds): the realizability burner geometry with the FDS User Guide’s Westbrook and Dryer propane reaction.
+2. Run `python plot_devc.py` to plot species mass fractions at $(0,0,0.2)$ m.
+3. Run `python plot_hrr.py` to plot the global combustion efficiency as a function of time.
 
 :::
 
 ::: {.westbrook-dryer-mass-fractions}
 
-![](figs/thermochemistry/finite-rate-propane-species.png){fig-alt="Species mass-fraction histories from a finite-rate propane reaction example."}
+Species probe: $(x,y,z)=(0,0,0.2)$ m above the burner.
+
+Outputs: `reaction_species.pdf` and `comb_efficiency.pdf`.
 
 :::
 
@@ -1653,8 +1654,7 @@ $$
 :::
 
 ::: {.example-files}
-Files: `08_Combustion/examples/finite_rate_example/`\
-Files: `08_Combustion/examples/realizability_example/`
+Files: `08_Combustion/examples/finite_rate_example/`
 :::
 
 ## Rate Laws {.rate-laws-slide}
