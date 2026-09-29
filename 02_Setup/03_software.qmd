@@ -29,12 +29,16 @@ module load FDS/6.11.1
 - The output should show you something like:
 ```
 arnold1@jrlogin09:~/Summer_School_2026
+> module use -a /p/project1/cias-7/modules_fire
+
+arnold1@jrlogin09:~/Summer_School_2026
 > module load Stages/2025
 
   This stage is deprecated. Please consider moving to a new stage (2026 or newer)
 
 arnold1@jrlogin09:~/Summer_School_2026
 > ml FDS
+
 arnold1@jrlogin09:~/Summer_School_2026
 > fds
 
@@ -114,7 +118,7 @@ In addition, it is possible to define job chains, i.e. dependant jobs which will
 
 We have prepared a Jupyter kernel with all needed modules. Run the [make_jupyter_kernel.sh](./make_jupyter_kernel.sh) script:
 
-`./make_jupyter_kernel.sh --link-only`
+`sh make_jupyter_kernel.sh --link-only`
 
 This will (should) create a new Fire Summer School kernel.
 
@@ -126,4 +130,22 @@ With the new kernel, create a Jupyter notebook with the following content:
 from fdsreader.explorer import explore
 
 explorer = explore()
+```
+
+## fdsreader TUI explorer
+
+Install fdsreader in your home directory:
+
+```
+ml Python
+pip install --user fdsreader
+```
+
+Add this to your `.bashrc` to make it available at startup:
+
+```
+# Enable fdsreader TUI
+ml Python
+unset PYTHONNOUSERSITE
+export PATH=$PATH:$HOME/.local/bin
 ```
