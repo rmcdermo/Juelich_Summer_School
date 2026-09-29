@@ -21,15 +21,19 @@ HOC  = 46334 # kJ/kg
 ETA = np.divide(HRR,(MLR_FUEL*HOC))
 
 # plot fds results
-plt.figure()
+plt.figure(figsize=(5, 3.8))
+plt.rcParams.update({'font.size': 13, 'svg.fonttype': 'none'})
 
-marker_style_1 = dict(color='black', linestyle=':', marker='o', fillstyle='none', markersize=5)
+marker_style_1 = dict(color='black', linestyle=':', linewidth=0.6, marker='o',
+                      fillstyle='none', markersize=2.5, markeredgewidth=0.5)
 plt.plot(t,ETA, label='', **marker_style_1)
 
 plt.axis([min(t), max(t), 0, 2])
 plt.xlabel('time (s)')
-plt.ylabel('$\\eta$ = Q / (MLR $\\times$ HOC)')
+plt.ylabel(r'$\eta = \dot{Q}/(\dot{m}_f\,\Delta H_c)$')
 #plt.show()
-plt.savefig(base / 'comb_efficiency.pdf', format='pdf')
+plt.tight_layout()
+plt.savefig(base / 'comb_efficiency.pdf')
+plt.savefig(base / 'comb_efficiency.png', dpi=300)
 plt.close()
 

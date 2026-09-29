@@ -1641,13 +1641,13 @@ $$
 
 Species probe: $(x,y,z)=(0,0,0.2)$ m above the burner.
 
-Outputs: `reaction_species.pdf` and `comb_efficiency.pdf`.
+Outputs: `reaction_species` and `comb_efficiency` (PDF and PNG).
 
 :::
 
 ::: {.westbrook-dryer-efficiency}
 
-![](figs/thermochemistry/finite-rate-propane-efficiency.png){fig-alt="Global combustion efficiency as a function of time for the finite-rate propane reaction example."}
+![](examples/finite_rate_example/comb_efficiency.png){fig-alt="Global combustion efficiency as a function of time for the finite-rate propane reaction example."}
 
 :::
 

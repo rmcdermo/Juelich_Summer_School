@@ -34,5 +34,6 @@ plt.ylabel('Mass Fraction')
 plt.legend(loc='upper right', numpoints=1)
 #plt.show()
 plt.savefig(base / 'reaction_species.pdf', format='pdf')
+plt.savefig(base / 'reaction_species.png', dpi=300, bbox_inches='tight')
 plt.close()
 
