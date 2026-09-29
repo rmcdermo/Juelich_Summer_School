@@ -4,9 +4,11 @@
 # budget account where contingent is taken from
 #SBATCH --account=training2646
 
+# chose JURECA partition, here the CPU part
+#SBATCH --partition=dc-cpu
+
 #SBATCH -e results/Example_4_FFT.err
 #SBATCH -o results/Example_4_FFT.log
-#SBATCH --partition=batch
 #SBATCH --ntasks=16
 #SBATCH --cpus-per-task=1
 #SBATCH --time=24:00:00

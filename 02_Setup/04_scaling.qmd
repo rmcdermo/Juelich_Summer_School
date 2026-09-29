@@ -51,6 +51,7 @@
     - `module use`/`module load` instead of `source .../FDS6VARS.sh`
     - `srun fds` instead of `mpirun -n 16 fds`
     - your run directory instead of `YOUR_PATH_TO_EXAMPLE_4`
+    - OR, use the [Example_4_FFT.jureca.sbatch](../04_Pressure/Cases/example_4/reference/Example_4_FFT.jureca.sbatch) to run 
 - Keep `--ntasks=16`, one MPI process per mesh. The reference run took about 2 h.
 :::
 ::: {.column width="44%"}
