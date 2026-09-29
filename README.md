@@ -10,8 +10,8 @@ Kevin McGrattan (NIST)
 Randall McDermott (NIST)    
 Marcos Vanella (NIST)  
 Jason Floyd (Fire Safety Research Institute, UL Research Institutes)  
-Lukas Arnold (Forschungszentrum Jülich GmbH)  
-Alexander Belt (Forschungszentrum Jülich GmbH)  
+Lukas Arnold (Forschungszentrum Jülich / University of Wuppertal)  
+Alexander Belt (Forschungszentrum Jülich)
 Emanuele Gissi (Corpo Nazionale dei Vigili del Fuoco)  
 
 ## Quarto Presentations
