@@ -5,12 +5,6 @@
 # Plot gas emissivity, assuming RADIANCE ouput quantity
 #-------------------------
 
-# Choose what to read and plot
-Plot_RadCal_basic = 1
-Plot_RadCal_PATH = 0
-Plot_RadCal_PATH_RADTMP = 0
-Plot_WSGG = 0
-
 # File names
 LBL_file = 'H2O_emissivity_LBL.csv'
 FDS_RadCal_basic_file = 'H2O_array_devc.csv'
@@ -22,6 +16,7 @@ FDS_WSGG_file = 'H2O_array_wsgg_devc.csv'
 import matplotlib.pyplot as plt
 # load module for numerics, here used for data read-in
 import numpy as np
+import os.path
 
 T = np.array([300.,400.,500.,600.,800.,1000.,1200.,1600.,2000.,2273.15])
 TC = np.zeros(len(T))
@@ -37,7 +32,8 @@ for i in range(0,10):
 ax.plot(TC,E_LBL,'o',label='LBL',color='black')
 
 #Read and plot FDS basic data
-if (Plot_RadCal_basic):
+exists = os.path.isfile(FDS_RadCal_basic_file)
+if exists:
     data = np.loadtxt(FDS_RadCal_basic_file, delimiter=',', skiprows=2)
     E_FDS = np.zeros(len(T))
     for i in range(0,10):
@@ -46,7 +42,8 @@ if (Plot_RadCal_basic):
     ax.plot(TC,E_FDS,'-',label='FDS',color='blue')        
 
 #Read FDS with PATH lenght
-if (Plot_RadCal_PATH):
+exists = os.path.isfile(FDS_RadCal_PATH_file)
+if exists:
     data = np.loadtxt(FDS_RadCal_PATH_file, delimiter=',', skiprows=2)
     E_FDS = np.zeros(len(T))
     for i in range(0,10):
@@ -56,7 +53,8 @@ if (Plot_RadCal_PATH):
 
 
 #Read FDS with PATH lenght and RADTMP
-if (Plot_RadCal_PATH_RADTMP):
+exists = os.path.isfile(FDS_RadCal_PATH_RADTMP_file)
+if exists:
     data = np.loadtxt(FDS_RadCal_PATH_RADTMP_file, delimiter=',', skiprows=2)
     E_FDS = np.zeros(len(T))
     for i in range(0,10):
@@ -66,7 +64,8 @@ if (Plot_RadCal_PATH_RADTMP):
 
 
 #Read FDS with WSGG
-if (Plot_WSGG):
+exists = os.path.isfile(FDS_WSGG_file)
+if exists:
     data_wsgg = np.loadtxt(FDS_WSGG_file, delimiter=',', skiprows=2)
     E_FDS = np.zeros(len(T))
     for i in range(0,10):

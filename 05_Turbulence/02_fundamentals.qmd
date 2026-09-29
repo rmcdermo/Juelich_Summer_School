@@ -89,7 +89,7 @@ $$
 $$
 
 $$
-\nu = 6\cdot 10^{-6} \Rightarrow \mathrm{Re} \approx 4160
+\nu = 12\cdot 10^{-7} \Rightarrow \mathrm{Re} \approx 4160
 $$
 
 ## Exercise -- Results

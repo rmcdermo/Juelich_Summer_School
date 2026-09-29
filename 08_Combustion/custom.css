@@ -3562,12 +3562,12 @@
 }
 
 .reveal .slides .westbrook-dryer-tasks {
-  font-size: 1.12em;
+  font-size: 1.05em;
   left: 6.2%;
   line-height: 1.18;
   text-align: left;
   top: 20.5%;
-  width: 60.5%;
+  width: 47%;
 }
 
 .reveal .slides .westbrook-dryer-tasks ol {
@@ -3598,16 +3598,19 @@
 .reveal .slides .westbrook-dryer-mass-fractions,
 .reveal .slides .westbrook-dryer-efficiency {
   height: 39.5%;
-  left: 69.2%;
-  width: 29.2%;
+  left: 56%;
+  width: 42%;
 }
 
 .reveal .slides .westbrook-dryer-mass-fractions {
-  top: 6.5%;
+  top: 12%;
+  height: auto;
+  font-size: 0.9em;
 }
 
 .reveal .slides .westbrook-dryer-efficiency {
-  top: 54.1%;
+  top: 34%;
+  height: 56%;
 }
 
 .reveal .slides .westbrook-dryer-mass-fractions p,
@@ -3626,6 +3629,11 @@
   max-width: none;
   object-fit: contain;
   width: 100%;
+}
+
+.reveal .slides .westbrook-dryer-mass-fractions p {
+  height: auto;
+  margin-bottom: 0.6em;
 }
 
 /* Thermochemistry: Rate laws */
