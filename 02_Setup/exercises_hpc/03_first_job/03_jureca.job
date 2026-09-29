@@ -4,7 +4,7 @@
 #SBATCH --job-name=my_first_JURECA_job
 
 # budget account where contingent is taken from
-#SBATCH --account=training2424
+#SBATCH --account=training2646
 
 # number of MPI processes
 #SBATCH --ntasks=4
@@ -15,7 +15,7 @@
 # chose JURECA partition, here the CPU part
 #SBATCH --partition=dc-cpu
 
-
+module use -a /p/project1/cias-7/modules_fire
 module load Stages/2025
 module load FDS/6.11.1
 
