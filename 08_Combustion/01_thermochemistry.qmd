@@ -1634,6 +1634,7 @@ $$
 1. Run [`westbrook_dryer.fds`](examples/finite_rate_example/westbrook_dryer.fds): the realizability burner geometry with the FDS User Guide’s Westbrook and Dryer propane reaction.
 2. Run `python plot_devc.py` to plot species mass fractions at $(0,0,0.2)$ m.
 3. Run `python plot_hrr.py` to plot the global combustion efficiency as a function of time.
+4. Vary `TMP_FRONT` and `INITIAL_UNMIXED_FRACTION`, one at a time, and observe the effect on flame behavior.
 
 :::
 
