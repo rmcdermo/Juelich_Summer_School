@@ -1,4 +1,4 @@
-&HEAD CHID='H2O_array_path', TITLE='Emission of H2O column'/
+&HEAD CHID='H2O_array', TITLE='Emission of H2O column'/
 
 &MESH XB = 0,10, -.5,.5, -.5,.5, IJK = 50,5,5 MULT_ID = 'array'/
 &MULT ID = 'array' I_LOWER = 0,I_UPPER = 9 DX = 20.0 /
@@ -6,10 +6,10 @@
 &MISC Y_CO2_INFTY=0.,HUMIDITY=0./
 
 Edit and move this within RADI line to take into use
+      PATH_LENGTH = 
+      RADTMP = 
       WIDE_BAND_MODEL = T
       WSGG_MODEL = T
-      RADTMP = 
-      PATH_LENGTH = 
 &RADI NUMBER_RADIATION_ANGLES=300
       TIME_STEP_INCREMENT = 1
       ANGLE_INCREMENT = 1 /
