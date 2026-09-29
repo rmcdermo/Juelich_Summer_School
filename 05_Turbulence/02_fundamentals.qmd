@@ -168,7 +168,7 @@ $$
 
 1. Given the following approximation for $\varepsilon$ with $U$ and $L$ at large scale
 $$
-\varepsilon \sim U^3 L
+\varepsilon \sim \frac{U^3}{L}
 $$
 express the Kolmogorov scale $\eta$ as a function of the Reynolds number.
 
