@@ -21,7 +21,7 @@
 - Run these cases and plot the runtime.
 
 - *Optional*: Plot the data of the benchmark with 1 up to 256 cores in [05_benchmark.zip](./exercises_hpc/05_benchmark/05_benchmark.zip)
-- *Optional*: Have a look at the automated benchmark setup [05_automate](./exercises_hpc/05_benchmark/05_automate).
+- *Optional*: Have a look at the automated benchmark setup [05_automate.zip](./exercises_hpc/05_benchmark/05_automate.zip).
 
 ## Benchmark Results -- Time
 
