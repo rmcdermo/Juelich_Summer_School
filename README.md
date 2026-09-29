@@ -100,3 +100,7 @@ Upload these clips to a suitable host and update their slide references to the
 published URLs to make them available online. Video poster images are explicitly
 listed in `_quarto.yml` because Quarto does not automatically copy every poster;
 add new poster images to that resource list as needed.
+
+## Acknowledments
+
+The summer school in 2026 is financially supported by the International Association for Fire Safety Science (IAFSS).
