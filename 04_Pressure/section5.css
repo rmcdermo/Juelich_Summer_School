@@ -86,3 +86,17 @@
 .reveal .slides .thank-you-slide .ty-text { left: 34.07%; top: 46.26%; width: 30%;
                                             font-size: 1.6em; text-align: center;
                                             white-space: nowrap; }
+
+/* Strike out the retired solver rows while retaining the comparison. */
+.reveal .slides .summary-table-slide tr.solver-struck {
+  position: relative;
+}
+.reveal .slides .summary-table-slide tr.solver-struck::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 3px solid #e00000;
+  pointer-events: none;
+}

@@ -30,11 +30,11 @@ Poisson solver selection tips.
 </thead>
 <tbody>
 <tr><td class="solver">FFT (default)</td><td>✓</td><td>2 directions</td><td>✓</td><td>✓</td><td>iterative</td><td>iterative</td><td>iterative</td></tr>
-<tr><td class="solver">ULMAT PARDISO<sup>6</sup></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>iterative</td><td>exact</td><td>iterative</td></tr>
-<tr><td class="solver">ULMAT HYPRE<sup>7</sup></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>iterative</td><td>exact</td><td>iterative</td></tr>
+<tr class="solver-struck"><td class="solver">ULMAT PARDISO<sup>6</sup></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>iterative</td><td>exact</td><td>iterative</td></tr>
+<tr class="solver-struck"><td class="solver">ULMAT HYPRE<sup>7</sup></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>iterative</td><td>exact</td><td>iterative</td></tr>
 <tr><td class="solver">UGLMAT PARDISO</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>exact</td><td>exact</td><td>iterative</td></tr>
 <tr><td class="solver">UGLMAT HYPRE<sup>7,8</sup></td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>exact</td><td>exact</td><td>iterative</td></tr>
-<tr><td class="solver">GLMAT</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>exact</td><td>iterative</td><td>iterative</td></tr>
+<tr class="solver-struck"><td class="solver">GLMAT</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>exact</td><td>iterative</td><td>iterative</td></tr>
 </tbody>
 </table>
 :::
