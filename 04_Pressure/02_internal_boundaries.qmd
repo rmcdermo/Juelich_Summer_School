@@ -1033,8 +1033,6 @@ Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*
 |---|---|---|---|---|
 | `&PRES` | `VELOCITY_TOLERANCE` | dx/2 | m/s | Requested tolerance for velocity error. |
 | | `MAX_PRESSURE_ITERATIONS` | 10 | | Max number allowed for pressure iterations. |
-| | `SUSPEND_PRESSURE_ITERATIONS` | F | | Suspend iterations if progress too slow? |
-| | `ITERATION_SUSPEND_FACTOR` | 0.95 | | Suspend is new velocity is not smaller than this value of the old. |
 | | `PRESSURE_TOLERANCE` | 20/dx² | s⁻² | Tolerance for inseparable pressure equation residual. |
 | | `TUNNEL_PRECONDITIONER` | F | | Use tunnel preconditioner? |
 :::
@@ -1043,7 +1041,6 @@ Repeat steps **[3–4]{style='color:#ff0000'}** of [*Running the class examples*
 
 ::: {.notes}
 - VELOCITY_TOLERANCE and MAX_PRESSURE_ITERATIONS: the controls just used.
-- SUSPEND_PRESSURE_ITERATIONS stops early when an iteration no longer reduces the error by ITERATION_SUSPEND_FACTOR.
 - PRESSURE_TOLERANCE: the inseparable-residual criterion from Module I's pressure iteration.
 - TUNNEL_PRECONDITIONER comes in Module IV.
 :::
