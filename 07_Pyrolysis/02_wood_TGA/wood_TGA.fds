@@ -24,7 +24,7 @@
       DENSITY 	            = 600.
       CONDUCTIVITY          = 1
       SPECIFIC_HEAT         = 1
-      N_REACTIONS           = 1
+      N_REACTIONS           = 
       REFERENCE_TEMPERATURE = 
       REFERENCE_RATE        = 
       HEATING_RATE          = 
