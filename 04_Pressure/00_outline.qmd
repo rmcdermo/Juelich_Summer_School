@@ -32,7 +32,6 @@
 **Module V — Solver selection**
 
 - Poisson solvers in FDS.
-- Solver selection tips.
 :::
 
 :::
